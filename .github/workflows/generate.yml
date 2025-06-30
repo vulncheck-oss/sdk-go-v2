@@ -1,0 +1,59 @@
+---
+name: Generate SDK 📦
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-client:
+    runs-on: ubuntu-latest
+    name: Generate Go SDK
+    steps:
+      - uses: actions/create-github-app-token@v1
+        id: generate-token
+        with:
+          app-id: ${{ secrets.VULNCHECK_GITHUB_RELEASE_APP_ID }}
+          private-key: ${{ secrets.VULNCHECK_GITHUB_RELEASE_APP_KEY }}
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 1.24.4
+      - name: Generate new sdk
+        id: generate
+        run: |
+          ${{ github.workspace }}/scripts/generate.sh
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Tests
+        if: steps.generate.outputs.changes == 'true'
+        working-directory: tests
+        env:
+          VULNCHECK_API_TOKEN: ${{ secrets.VULNCHECK_TOKEN }}
+        run: go test integration_test.go
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.generate.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          branch: update-sdk
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          delete-branch: true
+          title: "Update Go SDK"
+          commit-message: "[bot](${{ steps.date.outputs.date }}) Sync SDK with OpenAPI spec"
+          body: "New [API](https://api.vulncheck.com/v3/openapi) changes have been detected."
