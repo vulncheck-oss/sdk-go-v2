@@ -25,7 +25,7 @@ import (
   "log"
   "os"
 
-  "github.com/vulncheck/sdk-go-v2/vulncheck"
+  "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
 )
 
 func main() {
