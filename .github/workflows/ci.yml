@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 1.24.4
+          cache-dependency-path: tests/go.sum
       - name: Test
         working-directory: tests
         env:

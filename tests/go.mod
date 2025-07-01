@@ -4,7 +4,7 @@ go 1.24.4
 
 require (
 	github.com/stretchr/testify v1.10.0
-	github.com/vulncheck-oss/sdk-go-v2/vulncheck v0.0.0-20250630202233-834cded5a458
+	github.com/vulncheck-oss/sdk-go-v2/vulncheck v0.0.0-20250701160439-9d17a3becb11
 )
 
 require (
