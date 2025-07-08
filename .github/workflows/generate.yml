@@ -22,9 +22,6 @@ jobs:
           private-key: ${{ secrets.VULNCHECK_GITHUB_RELEASE_APP_KEY }}
 
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
-        with:
-          go-version: 1.24.4
       - name: Generate new sdk
         id: generate
         run: |
@@ -35,6 +32,11 @@ jobs:
             echo "changes=false" >> $GITHUB_OUTPUT
           fi
 
+      - uses: actions/setup-go@v5
+        if: steps.generate.outputs.changes == 'true'
+        with:
+          go-version: 1.24.4
+          cache-dependency-path: tests/go.sum
       - name: Tests
         if: steps.generate.outputs.changes == 'true'
         working-directory: tests
@@ -43,9 +45,9 @@ jobs:
         run: go test integration_test.go
 
       - name: Get current date
+        if: steps.generate.outputs.changes == 'true'
         id: date
         run: echo "date=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
-
       - name: Create Pull Request
         if: steps.generate.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v7
