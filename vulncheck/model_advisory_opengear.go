@@ -15,39 +15,38 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryHoneywell type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryHoneywell{}
+// checks if the AdvisoryOpengear type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryOpengear{}
 
-// AdvisoryHoneywell struct for AdvisoryHoneywell
-type AdvisoryHoneywell struct {
+// AdvisoryOpengear struct for AdvisoryOpengear
+type AdvisoryOpengear struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Id *string `json:"id,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryHoneywell instantiates a new AdvisoryHoneywell object
+// NewAdvisoryOpengear instantiates a new AdvisoryOpengear object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryHoneywell() *AdvisoryHoneywell {
-	this := AdvisoryHoneywell{}
+func NewAdvisoryOpengear() *AdvisoryOpengear {
+	this := AdvisoryOpengear{}
 	return &this
 }
 
-// NewAdvisoryHoneywellWithDefaults instantiates a new AdvisoryHoneywell object
+// NewAdvisoryOpengearWithDefaults instantiates a new AdvisoryOpengear object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryHoneywellWithDefaults() *AdvisoryHoneywell {
-	this := AdvisoryHoneywell{}
+func NewAdvisoryOpengearWithDefaults() *AdvisoryOpengear {
+	this := AdvisoryOpengear{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetCve() []string {
+func (o *AdvisoryOpengear) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -57,7 +56,7 @@ func (o *AdvisoryHoneywell) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetCveOk() ([]string, bool) {
+func (o *AdvisoryOpengear) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -65,7 +64,7 @@ func (o *AdvisoryHoneywell) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasCve() bool {
+func (o *AdvisoryOpengear) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -74,12 +73,12 @@ func (o *AdvisoryHoneywell) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryHoneywell) SetCve(v []string) {
+func (o *AdvisoryOpengear) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetDateAdded() string {
+func (o *AdvisoryOpengear) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -89,7 +88,7 @@ func (o *AdvisoryHoneywell) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryOpengear) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -97,7 +96,7 @@ func (o *AdvisoryHoneywell) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasDateAdded() bool {
+func (o *AdvisoryOpengear) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -106,44 +105,12 @@ func (o *AdvisoryHoneywell) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryHoneywell) SetDateAdded(v string) {
+func (o *AdvisoryOpengear) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetId() string {
-	if o == nil || IsNil(o.Id) {
-		var ret string
-		return ret
-	}
-	return *o.Id
-}
-
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
-		return nil, false
-	}
-	return o.Id, true
-}
-
-// HasId returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
-		return true
-	}
-
-	return false
-}
-
-// SetId gets a reference to the given string and assigns it to the Id field.
-func (o *AdvisoryHoneywell) SetId(v string) {
-	o.Id = &v
-}
-
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetSummary() string {
+func (o *AdvisoryOpengear) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -153,7 +120,7 @@ func (o *AdvisoryHoneywell) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetSummaryOk() (*string, bool) {
+func (o *AdvisoryOpengear) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -161,7 +128,7 @@ func (o *AdvisoryHoneywell) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasSummary() bool {
+func (o *AdvisoryOpengear) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -170,12 +137,12 @@ func (o *AdvisoryHoneywell) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryHoneywell) SetSummary(v string) {
+func (o *AdvisoryOpengear) SetSummary(v string) {
 	o.Summary = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetTitle() string {
+func (o *AdvisoryOpengear) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -185,7 +152,7 @@ func (o *AdvisoryHoneywell) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetTitleOk() (*string, bool) {
+func (o *AdvisoryOpengear) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -193,7 +160,7 @@ func (o *AdvisoryHoneywell) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasTitle() bool {
+func (o *AdvisoryOpengear) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -202,12 +169,12 @@ func (o *AdvisoryHoneywell) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryHoneywell) SetTitle(v string) {
+func (o *AdvisoryOpengear) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetUpdatedAt() string {
+func (o *AdvisoryOpengear) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -217,7 +184,7 @@ func (o *AdvisoryHoneywell) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryOpengear) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -225,7 +192,7 @@ func (o *AdvisoryHoneywell) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasUpdatedAt() bool {
+func (o *AdvisoryOpengear) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -234,12 +201,12 @@ func (o *AdvisoryHoneywell) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryHoneywell) SetUpdatedAt(v string) {
+func (o *AdvisoryOpengear) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetUrl() string {
+func (o *AdvisoryOpengear) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -249,7 +216,7 @@ func (o *AdvisoryHoneywell) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetUrlOk() (*string, bool) {
+func (o *AdvisoryOpengear) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -257,7 +224,7 @@ func (o *AdvisoryHoneywell) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasUrl() bool {
+func (o *AdvisoryOpengear) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -266,11 +233,11 @@ func (o *AdvisoryHoneywell) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryHoneywell) SetUrl(v string) {
+func (o *AdvisoryOpengear) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryHoneywell) MarshalJSON() ([]byte, error) {
+func (o AdvisoryOpengear) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -278,16 +245,13 @@ func (o AdvisoryHoneywell) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryHoneywell) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryOpengear) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
-	}
-	if !IsNil(o.Id) {
-		toSerialize["id"] = o.Id
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
@@ -304,38 +268,38 @@ func (o AdvisoryHoneywell) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryHoneywell struct {
-	value *AdvisoryHoneywell
+type NullableAdvisoryOpengear struct {
+	value *AdvisoryOpengear
 	isSet bool
 }
 
-func (v NullableAdvisoryHoneywell) Get() *AdvisoryHoneywell {
+func (v NullableAdvisoryOpengear) Get() *AdvisoryOpengear {
 	return v.value
 }
 
-func (v *NullableAdvisoryHoneywell) Set(val *AdvisoryHoneywell) {
+func (v *NullableAdvisoryOpengear) Set(val *AdvisoryOpengear) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryHoneywell) IsSet() bool {
+func (v NullableAdvisoryOpengear) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryHoneywell) Unset() {
+func (v *NullableAdvisoryOpengear) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryHoneywell(val *AdvisoryHoneywell) *NullableAdvisoryHoneywell {
-	return &NullableAdvisoryHoneywell{value: val, isSet: true}
+func NewNullableAdvisoryOpengear(val *AdvisoryOpengear) *NullableAdvisoryOpengear {
+	return &NullableAdvisoryOpengear{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryHoneywell) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryOpengear) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryHoneywell) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryOpengear) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

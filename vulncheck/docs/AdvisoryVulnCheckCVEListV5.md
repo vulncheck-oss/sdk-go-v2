@@ -7,8 +7,10 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **MitreRef** | Pointer to [**AdvisoryMitreCVEListV5Ref**](AdvisoryMitreCVEListV5Ref.md) |  | [optional] 
+**References** | Pointer to **[]string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -105,6 +107,31 @@ SetMitreRef sets MitreRef field to given value.
 
 HasMitreRef returns a boolean if a field has been set.
 
+### GetReferences
+
+`func (o *AdvisoryVulnCheckCVEListV5) GetReferences() []string`
+
+GetReferences returns the References field if non-nil, zero value otherwise.
+
+### GetReferencesOk
+
+`func (o *AdvisoryVulnCheckCVEListV5) GetReferencesOk() (*[]string, bool)`
+
+GetReferencesOk returns a tuple with the References field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReferences
+
+`func (o *AdvisoryVulnCheckCVEListV5) SetReferences(v []string)`
+
+SetReferences sets References field to given value.
+
+### HasReferences
+
+`func (o *AdvisoryVulnCheckCVEListV5) HasReferences() bool`
+
+HasReferences returns a boolean if a field has been set.
+
 ### GetSummary
 
 `func (o *AdvisoryVulnCheckCVEListV5) GetSummary() string`
@@ -154,6 +181,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryVulnCheckCVEListV5) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryVulnCheckCVEListV5) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryVulnCheckCVEListV5) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryVulnCheckCVEListV5) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryVulnCheckCVEListV5) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

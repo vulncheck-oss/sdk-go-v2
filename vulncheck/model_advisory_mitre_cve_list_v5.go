@@ -23,8 +23,10 @@ type AdvisoryMitreCVEListV5 struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	MitreRef *AdvisoryMitreCVEListV5Ref `json:"mitre_ref,omitempty"`
+	References []string `json:"references,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
@@ -141,6 +143,38 @@ func (o *AdvisoryMitreCVEListV5) SetMitreRef(v AdvisoryMitreCVEListV5Ref) {
 	o.MitreRef = &v
 }
 
+// GetReferences returns the References field value if set, zero value otherwise.
+func (o *AdvisoryMitreCVEListV5) GetReferences() []string {
+	if o == nil || IsNil(o.References) {
+		var ret []string
+		return ret
+	}
+	return o.References
+}
+
+// GetReferencesOk returns a tuple with the References field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMitreCVEListV5) GetReferencesOk() ([]string, bool) {
+	if o == nil || IsNil(o.References) {
+		return nil, false
+	}
+	return o.References, true
+}
+
+// HasReferences returns a boolean if a field has been set.
+func (o *AdvisoryMitreCVEListV5) HasReferences() bool {
+	if o != nil && !IsNil(o.References) {
+		return true
+	}
+
+	return false
+}
+
+// SetReferences gets a reference to the given []string and assigns it to the References field.
+func (o *AdvisoryMitreCVEListV5) SetReferences(v []string) {
+	o.References = v
+}
+
 // GetSummary returns the Summary field value if set, zero value otherwise.
 func (o *AdvisoryMitreCVEListV5) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
@@ -205,6 +239,38 @@ func (o *AdvisoryMitreCVEListV5) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryMitreCVEListV5) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMitreCVEListV5) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryMitreCVEListV5) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryMitreCVEListV5) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *AdvisoryMitreCVEListV5) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
@@ -256,11 +322,17 @@ func (o AdvisoryMitreCVEListV5) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.MitreRef) {
 		toSerialize["mitre_ref"] = o.MitreRef
 	}
+	if !IsNil(o.References) {
+		toSerialize["references"] = o.References
+	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	if !IsNil(o.Url) {
 		toSerialize["url"] = o.Url

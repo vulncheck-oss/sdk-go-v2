@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **AssignerOrgId** | Pointer to **string** |  | [optional] 
 **AssignerShortName** | Pointer to **string** |  | [optional] 
 **CveId** | Pointer to **string** |  | [optional] 
-**DatePublished** | Pointer to **string** | FIXME: flip to time | [optional] 
-**DateReserved** | Pointer to **string** | FIXME: flip to time | [optional] 
-**DateUpdated** | Pointer to **string** | FIXME: flip to time | [optional] 
+**DatePublished** | Pointer to **string** |  | [optional] 
+**DateReserved** | Pointer to **string** |  | [optional] 
+**DateUpdated** | Pointer to **string** |  | [optional] 
 **State** | Pointer to **string** |  | [optional] 
 
 ## Methods

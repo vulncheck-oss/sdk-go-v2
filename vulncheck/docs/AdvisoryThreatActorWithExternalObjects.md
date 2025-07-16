@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AssociatedMitreAttackTechniques** | Pointer to [**[]AdvisoryMitreAttackTechWithRefs**](AdvisoryMitreAttackTechWithRefs.md) |  | [optional] 
 **Country** | Pointer to **string** |  | [optional] 
 **CveReferences** | Pointer to [**[]AdvisoryCVEReference**](AdvisoryCVEReference.md) |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
@@ -36,6 +37,31 @@ will change when the set of required properties is changed
 NewAdvisoryThreatActorWithExternalObjectsWithDefaults instantiates a new AdvisoryThreatActorWithExternalObjects object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAssociatedMitreAttackTechniques
+
+`func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedMitreAttackTechniques() []AdvisoryMitreAttackTechWithRefs`
+
+GetAssociatedMitreAttackTechniques returns the AssociatedMitreAttackTechniques field if non-nil, zero value otherwise.
+
+### GetAssociatedMitreAttackTechniquesOk
+
+`func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedMitreAttackTechniquesOk() (*[]AdvisoryMitreAttackTechWithRefs, bool)`
+
+GetAssociatedMitreAttackTechniquesOk returns a tuple with the AssociatedMitreAttackTechniques field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssociatedMitreAttackTechniques
+
+`func (o *AdvisoryThreatActorWithExternalObjects) SetAssociatedMitreAttackTechniques(v []AdvisoryMitreAttackTechWithRefs)`
+
+SetAssociatedMitreAttackTechniques sets AssociatedMitreAttackTechniques field to given value.
+
+### HasAssociatedMitreAttackTechniques
+
+`func (o *AdvisoryThreatActorWithExternalObjects) HasAssociatedMitreAttackTechniques() bool`
+
+HasAssociatedMitreAttackTechniques returns a boolean if a field has been set.
 
 ### GetCountry
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **PatchPgp** | Pointer to **string** |  | [optional] 
 **PatchUrl** | Pointer to **string** |  | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **VulnVersions** | Pointer to **[]string** |  | [optional] 
 
@@ -207,6 +208,31 @@ SetSeverity sets Severity field to given value.
 `func (o *AdvisoryNginxAdvisory) HasSeverity() bool`
 
 HasSeverity returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryNginxAdvisory) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryNginxAdvisory) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryNginxAdvisory) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryNginxAdvisory) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

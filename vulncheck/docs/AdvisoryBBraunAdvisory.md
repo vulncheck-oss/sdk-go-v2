@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Equipment** | Pointer to **[]string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Vulnerabilities** | Pointer to **[]string** |  | [optional] 
@@ -182,6 +183,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryBBraunAdvisory) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryBBraunAdvisory) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryBBraunAdvisory) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryBBraunAdvisory) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryBBraunAdvisory) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

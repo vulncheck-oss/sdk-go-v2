@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryThreatActorWithExternalObjects{}
 
 // AdvisoryThreatActorWithExternalObjects struct for AdvisoryThreatActorWithExternalObjects
 type AdvisoryThreatActorWithExternalObjects struct {
+	AssociatedMitreAttackTechniques []AdvisoryMitreAttackTechWithRefs `json:"associated_mitre_attack_techniques,omitempty"`
 	Country *string `json:"country,omitempty"`
 	CveReferences []AdvisoryCVEReference `json:"cve_references,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
@@ -50,6 +51,38 @@ func NewAdvisoryThreatActorWithExternalObjects() *AdvisoryThreatActorWithExterna
 func NewAdvisoryThreatActorWithExternalObjectsWithDefaults() *AdvisoryThreatActorWithExternalObjects {
 	this := AdvisoryThreatActorWithExternalObjects{}
 	return &this
+}
+
+// GetAssociatedMitreAttackTechniques returns the AssociatedMitreAttackTechniques field value if set, zero value otherwise.
+func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedMitreAttackTechniques() []AdvisoryMitreAttackTechWithRefs {
+	if o == nil || IsNil(o.AssociatedMitreAttackTechniques) {
+		var ret []AdvisoryMitreAttackTechWithRefs
+		return ret
+	}
+	return o.AssociatedMitreAttackTechniques
+}
+
+// GetAssociatedMitreAttackTechniquesOk returns a tuple with the AssociatedMitreAttackTechniques field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedMitreAttackTechniquesOk() ([]AdvisoryMitreAttackTechWithRefs, bool) {
+	if o == nil || IsNil(o.AssociatedMitreAttackTechniques) {
+		return nil, false
+	}
+	return o.AssociatedMitreAttackTechniques, true
+}
+
+// HasAssociatedMitreAttackTechniques returns a boolean if a field has been set.
+func (o *AdvisoryThreatActorWithExternalObjects) HasAssociatedMitreAttackTechniques() bool {
+	if o != nil && !IsNil(o.AssociatedMitreAttackTechniques) {
+		return true
+	}
+
+	return false
+}
+
+// SetAssociatedMitreAttackTechniques gets a reference to the given []AdvisoryMitreAttackTechWithRefs and assigns it to the AssociatedMitreAttackTechniques field.
+func (o *AdvisoryThreatActorWithExternalObjects) SetAssociatedMitreAttackTechniques(v []AdvisoryMitreAttackTechWithRefs) {
+	o.AssociatedMitreAttackTechniques = v
 }
 
 // GetCountry returns the Country field value if set, zero value otherwise.
@@ -478,6 +511,9 @@ func (o AdvisoryThreatActorWithExternalObjects) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryThreatActorWithExternalObjects) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AssociatedMitreAttackTechniques) {
+		toSerialize["associated_mitre_attack_techniques"] = o.AssociatedMitreAttackTechniques
+	}
 	if !IsNil(o.Country) {
 		toSerialize["country"] = o.Country
 	}
