@@ -106,6 +106,7 @@ paths:
           - atlassian
           - atlassian-vulns
           - atredis
+          - audiocodes
           - auscert
           - autodesk
           - avaya
@@ -120,6 +121,7 @@ paths:
           - bd
           - bdu
           - beckhoff
+          - beckman-coulter
           - belden
           - beyond-trust
           - binarly
@@ -307,6 +309,7 @@ paths:
           - ncsc
           - ncsc-cves
           - nec
+          - nessus
           - netapp
           - netatalk
           - netgate
@@ -337,6 +340,7 @@ paths:
           - opam
           - open-cvdb
           - openbsd
+          - opengear
           - openjdk
           - openssh
           - openssl-secadv
@@ -373,6 +377,7 @@ paths:
           - qubes-qsb
           - ransomware
           - redhat
+          - redhat-cves
           - renesas
           - revive
           - roche
@@ -384,6 +389,7 @@ paths:
           - ruckus
           - rustsec-advisories
           - sacert
+          - safran
           - saint
           - salesforce
           - samba
@@ -402,6 +408,7 @@ paths:
           - sierra-wireless
           - sigmahq-sigma-rules
           - singcert
+          - sitecore
           - slackware
           - solarwinds
           - solr
@@ -9068,6 +9075,152 @@ paths:
       summary: Return vulnerability data stored in index "atredis"
       tags:
       - indices
+  /index/audiocodes:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the audiocodes index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** AudioCodes Product Notices
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/audiocodes?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/audiocodes?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Audiocodes-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "audiocodes"
+      tags:
+      - indices
   /index/auscert:
     get:
       description: |
@@ -11110,6 +11263,152 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "beckhoff"
+      tags:
+      - indices
+  /index/beckman-coulter:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the beckman-coulter index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Beckman Coulter Product Security Updates
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/beckman-coulter?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/beckman-coulter?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_BeckmanCoulter-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "beckman-coulter"
       tags:
       - indices
   /index/belden:
@@ -38514,6 +38813,152 @@ paths:
       summary: Return vulnerability data stored in index "nec"
       tags:
       - indices
+  /index/nessus:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the nessus index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Nessus Plugins
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/nessus?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/nessus?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Nessus-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "nessus"
+      tags:
+      - indices
   /index/netapp:
     get:
       description: |
@@ -42892,6 +43337,152 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "openbsd"
+      tags:
+      - indices
+  /index/opengear:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the opengear index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Opengear Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/opengear?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/opengear?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Opengear-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "opengear"
       tags:
       - indices
   /index/openjdk:
@@ -48150,6 +48741,152 @@ paths:
       summary: Return vulnerability data stored in index "redhat"
       tags:
       - indices
+  /index/redhat-cves:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the redhat-cves index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** CSAF data for redhat
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/redhat-cves?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/redhat-cves?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_RhelCVE-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "redhat-cves"
+      tags:
+      - indices
   /index/renesas:
     get:
       description: |
@@ -49754,6 +50491,152 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "sacert"
+      tags:
+      - indices
+  /index/safran:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the safran index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Safran Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/safran?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/safran?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Safran-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "safran"
       tags:
       - indices
   /index/saint:
@@ -52382,6 +53265,152 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "singcert"
+      tags:
+      - indices
+  /index/sitecore:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the sitecore index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Sitecore Security Bulletins
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/sitecore?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/sitecore?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Sitecore-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "sitecore"
       tags:
       - indices
   /index/slackware:
@@ -67524,6 +68553,32 @@ components:
             type: string
           type: array
       type: object
+    advisory.Audiocodes:
+      example:
+        summary: summary
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.AusCert:
       example:
         date_added: date_added
@@ -67733,6 +68788,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         vendor: vendor
         attention: attention
         equipment:
@@ -67761,6 +68817,8 @@ components:
             type: string
           type: array
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -68140,6 +69198,32 @@ components:
             type: string
           type: array
       type: object
+    advisory.BeckmanCoulter:
+      example:
+        summary: summary
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.BectonDickinsonAdvisory:
       example:
         date_added: date_added
@@ -68410,6 +69494,33 @@ components:
         - cve
         - cve
         botnet_name: botnet_name
+        associated_mitre_attack_techniques:
+        - references:
+          - date_added: date_added
+            url: url
+          - date_added: date_added
+            url: url
+          domain: domain
+          name: name
+          subtechnique: true
+          tactics:
+          - tactics
+          - tactics
+          id: id
+          url: url
+        - references:
+          - date_added: date_added
+            url: url
+          - date_added: date_added
+            url: url
+          domain: domain
+          name: name
+          subtechnique: true
+          tactics:
+          - tactics
+          - tactics
+          id: id
+          url: url
         tools:
         - references:
           - date_added: date_added
@@ -68435,6 +69546,10 @@ components:
           - cve
           url: url
       properties:
+        associated_mitre_attack_techniques:
+          items:
+            $ref: '#/components/schemas/advisory.MitreAttackTechWithRefs'
+          type: array
         botnet_name:
           type: string
         cve:
@@ -74804,6 +75919,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         id: id
         title: title
         url: url
@@ -74819,6 +75935,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -77507,13 +78625,10 @@ components:
         cveId:
           type: string
         datePublished:
-          description: "FIXME: flip to time"
           type: string
         dateReserved:
-          description: "FIXME: flip to time"
           type: string
         dateUpdated:
-          description: "FIXME: flip to time"
           type: string
         state:
           type: string
@@ -79716,6 +80831,51 @@ components:
         url:
           type: string
       type: object
+    advisory.MitreAttackRef:
+      example:
+        date_added: date_added
+        url: url
+      properties:
+        date_added:
+          type: string
+        url:
+          type: string
+      type: object
+    advisory.MitreAttackTechWithRefs:
+      example:
+        references:
+        - date_added: date_added
+          url: url
+        - date_added: date_added
+          url: url
+        domain: domain
+        name: name
+        subtechnique: true
+        tactics:
+        - tactics
+        - tactics
+        id: id
+        url: url
+      properties:
+        domain:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        references:
+          items:
+            $ref: '#/components/schemas/advisory.MitreAttackRef'
+          type: array
+        subtechnique:
+          type: boolean
+        tactics:
+          items:
+            type: string
+          type: array
+        url:
+          type: string
+      type: object
     advisory.MitreAttackTechnique:
       example:
         sub_technique: sub_technique
@@ -79746,6 +80906,10 @@ components:
         cve:
         - cve
         - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
         mitre_ref:
           cveMetadata:
             datePublished: datePublished
@@ -80540,9 +81704,15 @@ components:
           type: string
         mitre_ref:
           $ref: '#/components/schemas/advisory.MitreCVEListV5Ref'
+        references:
+          items:
+            type: string
+          type: array
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -82638,6 +83808,56 @@ components:
         url:
           type: string
       type: object
+    advisory.Nessus:
+      example:
+        date_added: date_added
+        exploitability_ease: exploitability_ease
+        iava:
+        - iava
+        - iava
+        cve:
+        - cve
+        - cve
+        filename: filename
+        updated_at: updated_at
+        name: name
+        cpe:
+        - cpe
+        - cpe
+        script_id: 6
+        updated: updated
+        url: url
+      properties:
+        cpe:
+          items:
+            type: string
+          type: array
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        exploitability_ease:
+          description: seems like only 3 vals for this
+          type: string
+        filename:
+          type: string
+        iava:
+          items:
+            type: string
+          type: array
+        name:
+          type: string
+        script_id:
+          type: integer
+        updated:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.NetApp:
       example:
         summary: summary
@@ -82807,6 +84027,7 @@ components:
         not_vuln_versions:
         - not_vuln_versions
         - not_vuln_versions
+        updated_at: updated_at
         description: description
         patch_pgp: patch_pgp
         vuln_versions:
@@ -82831,6 +84052,8 @@ components:
         patch_url:
           type: string
         severity:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -83872,6 +85095,32 @@ components:
         summary:
           type: string
         title:
+          type: string
+        url:
+          type: string
+      type: object
+    advisory.Opengear:
+      example:
+        summary: summary
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -85618,6 +86867,33 @@ components:
         - cve
         - cve
         ransomware_family: ransomware_family
+        associated_mitre_attack_techniques:
+        - references:
+          - date_added: date_added
+            url: url
+          - date_added: date_added
+            url: url
+          domain: domain
+          name: name
+          subtechnique: true
+          tactics:
+          - tactics
+          - tactics
+          id: id
+          url: url
+        - references:
+          - date_added: date_added
+            url: url
+          - date_added: date_added
+            url: url
+          domain: domain
+          name: name
+          subtechnique: true
+          tactics:
+          - tactics
+          - tactics
+          id: id
+          url: url
         tools:
         - references:
           - date_added: date_added
@@ -85643,6 +86919,10 @@ components:
           - cve
           url: url
       properties:
+        associated_mitre_attack_techniques:
+          items:
+            $ref: '#/components/schemas/advisory.MitreAttackTechWithRefs'
+          type: array
         cve:
           items:
             type: string
@@ -85968,6 +87248,357 @@ components:
         summary:
           type: string
         title:
+          type: string
+        url:
+          type: string
+      type: object
+    advisory.RhelCVE:
+      example:
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        csaf:
+          notes:
+          - audience: audience
+            text: text
+            category: category
+            title: title
+          - audience: audience
+            text: text
+            category: category
+            title: title
+          document: "{}"
+          product_tree: "{}"
+          vulnerabilities:
+          - cwe:
+              name: name
+              id: id
+            cve: cve
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            references:
+            - summary: summary
+              category: category
+              url: url
+            - summary: summary
+              category: category
+              url: url
+            release_date: release_date
+            scores:
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            remediations:
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            flags:
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            ids:
+            - system_name: system_name
+              text: text
+            - system_name: system_name
+              text: text
+            product_status:
+              key:
+              - product_status
+              - product_status
+            threats:
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+          - cwe:
+              name: name
+              id: id
+            cve: cve
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            references:
+            - summary: summary
+              category: category
+              url: url
+            - summary: summary
+              category: category
+              url: url
+            release_date: release_date
+            scores:
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            remediations:
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            flags:
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            ids:
+            - system_name: system_name
+              text: text
+            - system_name: system_name
+              text: text
+            product_status:
+              key:
+              - product_status
+              - product_status
+            threats:
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+        url: url
+      properties:
+        csaf:
+          $ref: '#/components/schemas/advisory.CSAF'
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -86945,6 +88576,26 @@ components:
         summary:
           type: string
         title:
+          type: string
+      type: object
+    advisory.Safran:
+      example:
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        title:
+          type: string
+        url:
           type: string
       type: object
     advisory.SaintExploit:
@@ -88679,6 +90330,45 @@ components:
         updated:
           type: string
       type: object
+    advisory.Sitecore:
+      example:
+        summary: summary
+        summary_ja: summary_ja
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        title_ja: title_ja
+        updated_at: updated_at
+        refs:
+        - refs
+        - refs
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        refs:
+          items:
+            type: string
+          type: array
+        summary:
+          type: string
+        summary_ja:
+          type: string
+        title:
+          type: string
+        title_ja:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.Slackware:
       example:
         summary: summary
@@ -89686,6 +91376,33 @@ components:
           name: name
           description: description
         mitre_id: mitre_id
+        associated_mitre_attack_techniques:
+        - references:
+          - date_added: date_added
+            url: url
+          - date_added: date_added
+            url: url
+          domain: domain
+          name: name
+          subtechnique: true
+          tactics:
+          - tactics
+          - tactics
+          id: id
+          url: url
+        - references:
+          - date_added: date_added
+            url: url
+          - date_added: date_added
+            url: url
+          domain: domain
+          name: name
+          subtechnique: true
+          tactics:
+          - tactics
+          - tactics
+          id: id
+          url: url
         misp_id: misp_id
         cve_references:
         - date_added: date_added
@@ -89714,6 +91431,10 @@ components:
           description: description
           id: id
       properties:
+        associated_mitre_attack_techniques:
+          items:
+            $ref: '#/components/schemas/advisory.MitreAttackTechWithRefs'
+          type: array
         country:
           type: string
         cve_references:
@@ -89901,6 +91622,7 @@ components:
         - cve
         - cve
         solution: solution
+        updated_at: updated_at
         scores: scores
         title: title
         affected: affected
@@ -89926,6 +91648,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -90413,6 +92137,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         vde: vde
         title: title
         url: url
@@ -90430,6 +92155,8 @@ components:
         date_last_revised:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -90814,6 +92541,10 @@ components:
         cve:
         - cve
         - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
         mitre_ref:
           cveMetadata:
             datePublished: datePublished
@@ -91608,9 +93339,15 @@ components:
           type: string
         mitre_ref:
           $ref: '#/components/schemas/advisory.MitreCVEListV5Ref'
+        references:
+          items:
+            type: string
+          type: array
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -104822,6 +106559,71 @@ components:
             $ref: '#/components/schemas/advisory.Atredis'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_Audiocodes-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Audiocodes'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_AusCert-paginate_Pagination:
       example:
         data:
@@ -105258,6 +107060,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vendor: vendor
           attention: attention
           equipment:
@@ -105275,6 +107078,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vendor: vendor
           attention: attention
           equipment:
@@ -105756,6 +107560,71 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.BeckhoffAdvisory'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_BeckmanCoulter-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.BeckmanCoulter'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_BectonDickinsonAdvisory-paginate_Pagination:
@@ -106335,6 +108204,33 @@ components:
           - cve
           - cve
           botnet_name: botnet_name
+          associated_mitre_attack_techniques:
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
           tools:
           - references:
             - date_added: date_added
@@ -106365,6 +108261,33 @@ components:
           - cve
           - cve
           botnet_name: botnet_name
+          associated_mitre_attack_techniques:
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
           tools:
           - references:
             - date_added: date_added
@@ -114922,6 +116845,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           id: id
           title: title
           url: url
@@ -114930,6 +116854,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           id: id
           title: title
           url: url
@@ -119323,6 +121248,10 @@ components:
           cve:
           - cve
           - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
           mitre_ref:
             cveMetadata:
               datePublished: datePublished
@@ -120113,6 +122042,10 @@ components:
           cve:
           - cve
           - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
           mitre_ref:
             cveMetadata:
               datePublished: datePublished
@@ -123288,6 +125221,89 @@ components:
             $ref: '#/components/schemas/advisory.Naver'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_Nessus-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          exploitability_ease: exploitability_ease
+          iava:
+          - iava
+          - iava
+          cve:
+          - cve
+          - cve
+          filename: filename
+          updated_at: updated_at
+          name: name
+          cpe:
+          - cpe
+          - cpe
+          script_id: 6
+          updated: updated
+          url: url
+        - date_added: date_added
+          exploitability_ease: exploitability_ease
+          iava:
+          - iava
+          - iava
+          cve:
+          - cve
+          - cve
+          filename: filename
+          updated_at: updated_at
+          name: name
+          cpe:
+          - cpe
+          - cpe
+          script_id: 6
+          updated: updated
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Nessus'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_NetApp-paginate_Pagination:
       example:
         data:
@@ -123649,6 +125665,7 @@ components:
           not_vuln_versions:
           - not_vuln_versions
           - not_vuln_versions
+          updated_at: updated_at
           description: description
           patch_pgp: patch_pgp
           vuln_versions:
@@ -123664,6 +125681,7 @@ components:
           not_vuln_versions:
           - not_vuln_versions
           - not_vuln_versions
+          updated_at: updated_at
           description: description
           patch_pgp: patch_pgp
           vuln_versions:
@@ -125185,6 +127203,71 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.OpenStack'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_Opengear-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Opengear'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_OracleCPU-paginate_Pagination:
@@ -127666,6 +129749,33 @@ components:
           - cve
           - cve
           ransomware_family: ransomware_family
+          associated_mitre_attack_techniques:
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
           tools:
           - references:
             - date_added: date_added
@@ -127696,6 +129806,33 @@ components:
           - cve
           - cve
           ransomware_family: ransomware_family
+          associated_mitre_attack_techniques:
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
           tools:
           - references:
             - date_added: date_added
@@ -128067,6 +130204,725 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.Revive'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_RhelCVE-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          csaf:
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            document: "{}"
+            product_tree: "{}"
+            vulnerabilities:
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+          url: url
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          csaf:
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            document: "{}"
+            product_tree: "{}"
+            vulnerabilities:
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.RhelCVE'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_Roche-paginate_Pagination:
@@ -128937,6 +131793,67 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.SSDAdvisory'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_Safran-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          title: title
+          url: url
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Safran'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_SaintExploit-paginate_Pagination:
@@ -130903,6 +133820,81 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.SingCert'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_Sitecore-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          summary_ja: summary_ja
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          title_ja: title_ja
+          updated_at: updated_at
+          refs:
+          - refs
+          - refs
+          title: title
+          url: url
+        - summary: summary
+          summary_ja: summary_ja
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          title_ja: title_ja
+          updated_at: updated_at
+          refs:
+          - refs
+          - refs
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Sitecore'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_Slackware-paginate_Pagination:
@@ -132877,6 +135869,33 @@ components:
             name: name
             description: description
           mitre_id: mitre_id
+          associated_mitre_attack_techniques:
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
           misp_id: misp_id
           cve_references:
           - date_added: date_added
@@ -132988,6 +136007,33 @@ components:
             name: name
             description: description
           mitre_id: mitre_id
+          associated_mitre_attack_techniques:
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
+          - references:
+            - date_added: date_added
+              url: url
+            - date_added: date_added
+              url: url
+            domain: domain
+            name: name
+            subtechnique: true
+            tactics:
+            - tactics
+            - tactics
+            id: id
+            url: url
           misp_id: misp_id
           cve_references:
           - date_added: date_added
@@ -133205,6 +136251,7 @@ components:
           - cve
           - cve
           solution: solution
+          updated_at: updated_at
           scores: scores
           title: title
           affected: affected
@@ -133217,6 +136264,7 @@ components:
           - cve
           - cve
           solution: solution
+          updated_at: updated_at
           scores: scores
           title: title
           affected: affected
@@ -134133,6 +137181,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vde: vde
           title: title
           url: url
@@ -134144,6 +137193,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vde: vde
           title: title
           url: url
@@ -134915,6 +137965,10 @@ components:
           cve:
           - cve
           - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
           mitre_ref:
             cveMetadata:
               datePublished: datePublished
@@ -135705,6 +138759,10 @@ components:
           cve:
           - cve
           - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
           mitre_ref:
             cveMetadata:
               datePublished: datePublished

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AssociatedMitreAttackTechniques** | Pointer to [**[]AdvisoryMitreAttackTechWithRefs**](AdvisoryMitreAttackTechWithRefs.md) |  | [optional] 
 **BotnetName** | Pointer to **string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **CveReferences** | Pointer to [**[]AdvisoryCVEReference**](AdvisoryCVEReference.md) |  | [optional] 
@@ -29,6 +30,31 @@ will change when the set of required properties is changed
 NewAdvisoryBotnetWithDefaults instantiates a new AdvisoryBotnet object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAssociatedMitreAttackTechniques
+
+`func (o *AdvisoryBotnet) GetAssociatedMitreAttackTechniques() []AdvisoryMitreAttackTechWithRefs`
+
+GetAssociatedMitreAttackTechniques returns the AssociatedMitreAttackTechniques field if non-nil, zero value otherwise.
+
+### GetAssociatedMitreAttackTechniquesOk
+
+`func (o *AdvisoryBotnet) GetAssociatedMitreAttackTechniquesOk() (*[]AdvisoryMitreAttackTechWithRefs, bool)`
+
+GetAssociatedMitreAttackTechniquesOk returns a tuple with the AssociatedMitreAttackTechniques field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssociatedMitreAttackTechniques
+
+`func (o *AdvisoryBotnet) SetAssociatedMitreAttackTechniques(v []AdvisoryMitreAttackTechWithRefs)`
+
+SetAssociatedMitreAttackTechniques sets AssociatedMitreAttackTechniques field to given value.
+
+### HasAssociatedMitreAttackTechniques
+
+`func (o *AdvisoryBotnet) HasAssociatedMitreAttackTechniques() bool`
+
+HasAssociatedMitreAttackTechniques returns a boolean if a field has been set.
 
 ### GetBotnetName
 

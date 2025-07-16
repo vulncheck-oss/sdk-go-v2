@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryBotnet{}
 
 // AdvisoryBotnet struct for AdvisoryBotnet
 type AdvisoryBotnet struct {
+	AssociatedMitreAttackTechniques []AdvisoryMitreAttackTechWithRefs `json:"associated_mitre_attack_techniques,omitempty"`
 	BotnetName *string `json:"botnet_name,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	CveReferences []AdvisoryCVEReference `json:"cve_references,omitempty"`
@@ -43,6 +44,38 @@ func NewAdvisoryBotnet() *AdvisoryBotnet {
 func NewAdvisoryBotnetWithDefaults() *AdvisoryBotnet {
 	this := AdvisoryBotnet{}
 	return &this
+}
+
+// GetAssociatedMitreAttackTechniques returns the AssociatedMitreAttackTechniques field value if set, zero value otherwise.
+func (o *AdvisoryBotnet) GetAssociatedMitreAttackTechniques() []AdvisoryMitreAttackTechWithRefs {
+	if o == nil || IsNil(o.AssociatedMitreAttackTechniques) {
+		var ret []AdvisoryMitreAttackTechWithRefs
+		return ret
+	}
+	return o.AssociatedMitreAttackTechniques
+}
+
+// GetAssociatedMitreAttackTechniquesOk returns a tuple with the AssociatedMitreAttackTechniques field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryBotnet) GetAssociatedMitreAttackTechniquesOk() ([]AdvisoryMitreAttackTechWithRefs, bool) {
+	if o == nil || IsNil(o.AssociatedMitreAttackTechniques) {
+		return nil, false
+	}
+	return o.AssociatedMitreAttackTechniques, true
+}
+
+// HasAssociatedMitreAttackTechniques returns a boolean if a field has been set.
+func (o *AdvisoryBotnet) HasAssociatedMitreAttackTechniques() bool {
+	if o != nil && !IsNil(o.AssociatedMitreAttackTechniques) {
+		return true
+	}
+
+	return false
+}
+
+// SetAssociatedMitreAttackTechniques gets a reference to the given []AdvisoryMitreAttackTechWithRefs and assigns it to the AssociatedMitreAttackTechniques field.
+func (o *AdvisoryBotnet) SetAssociatedMitreAttackTechniques(v []AdvisoryMitreAttackTechWithRefs) {
+	o.AssociatedMitreAttackTechniques = v
 }
 
 // GetBotnetName returns the BotnetName field value if set, zero value otherwise.
@@ -247,6 +280,9 @@ func (o AdvisoryBotnet) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryBotnet) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AssociatedMitreAttackTechniques) {
+		toSerialize["associated_mitre_attack_techniques"] = o.AssociatedMitreAttackTechniques
+	}
 	if !IsNil(o.BotnetName) {
 		toSerialize["botnet_name"] = o.BotnetName
 	}

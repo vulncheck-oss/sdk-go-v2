@@ -23,11 +23,8 @@ type AdvisoryMCveMetadata struct {
 	AssignerOrgId *string `json:"assignerOrgId,omitempty"`
 	AssignerShortName *string `json:"assignerShortName,omitempty"`
 	CveId *string `json:"cveId,omitempty"`
-	// FIXME: flip to time
 	DatePublished *string `json:"datePublished,omitempty"`
-	// FIXME: flip to time
 	DateReserved *string `json:"dateReserved,omitempty"`
-	// FIXME: flip to time
 	DateUpdated *string `json:"dateUpdated,omitempty"`
 	State *string `json:"state,omitempty"`
 }

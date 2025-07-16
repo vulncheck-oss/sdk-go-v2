@@ -15,39 +15,41 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryHoneywell type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryHoneywell{}
+// checks if the AdvisorySitecore type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisorySitecore{}
 
-// AdvisoryHoneywell struct for AdvisoryHoneywell
-type AdvisoryHoneywell struct {
+// AdvisorySitecore struct for AdvisorySitecore
+type AdvisorySitecore struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Id *string `json:"id,omitempty"`
+	Refs []string `json:"refs,omitempty"`
 	Summary *string `json:"summary,omitempty"`
+	SummaryJa *string `json:"summary_ja,omitempty"`
 	Title *string `json:"title,omitempty"`
+	TitleJa *string `json:"title_ja,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryHoneywell instantiates a new AdvisoryHoneywell object
+// NewAdvisorySitecore instantiates a new AdvisorySitecore object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryHoneywell() *AdvisoryHoneywell {
-	this := AdvisoryHoneywell{}
+func NewAdvisorySitecore() *AdvisorySitecore {
+	this := AdvisorySitecore{}
 	return &this
 }
 
-// NewAdvisoryHoneywellWithDefaults instantiates a new AdvisoryHoneywell object
+// NewAdvisorySitecoreWithDefaults instantiates a new AdvisorySitecore object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryHoneywellWithDefaults() *AdvisoryHoneywell {
-	this := AdvisoryHoneywell{}
+func NewAdvisorySitecoreWithDefaults() *AdvisorySitecore {
+	this := AdvisorySitecore{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetCve() []string {
+func (o *AdvisorySitecore) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -57,7 +59,7 @@ func (o *AdvisoryHoneywell) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetCveOk() ([]string, bool) {
+func (o *AdvisorySitecore) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -65,7 +67,7 @@ func (o *AdvisoryHoneywell) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasCve() bool {
+func (o *AdvisorySitecore) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -74,12 +76,12 @@ func (o *AdvisoryHoneywell) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryHoneywell) SetCve(v []string) {
+func (o *AdvisorySitecore) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetDateAdded() string {
+func (o *AdvisorySitecore) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -89,7 +91,7 @@ func (o *AdvisoryHoneywell) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetDateAddedOk() (*string, bool) {
+func (o *AdvisorySitecore) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -97,7 +99,7 @@ func (o *AdvisoryHoneywell) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasDateAdded() bool {
+func (o *AdvisorySitecore) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -106,44 +108,44 @@ func (o *AdvisoryHoneywell) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryHoneywell) SetDateAdded(v string) {
+func (o *AdvisorySitecore) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetId() string {
-	if o == nil || IsNil(o.Id) {
-		var ret string
+// GetRefs returns the Refs field value if set, zero value otherwise.
+func (o *AdvisorySitecore) GetRefs() []string {
+	if o == nil || IsNil(o.Refs) {
+		var ret []string
 		return ret
 	}
-	return *o.Id
+	return o.Refs
 }
 
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// GetRefsOk returns a tuple with the Refs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
+func (o *AdvisorySitecore) GetRefsOk() ([]string, bool) {
+	if o == nil || IsNil(o.Refs) {
 		return nil, false
 	}
-	return o.Id, true
+	return o.Refs, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
+// HasRefs returns a boolean if a field has been set.
+func (o *AdvisorySitecore) HasRefs() bool {
+	if o != nil && !IsNil(o.Refs) {
 		return true
 	}
 
 	return false
 }
 
-// SetId gets a reference to the given string and assigns it to the Id field.
-func (o *AdvisoryHoneywell) SetId(v string) {
-	o.Id = &v
+// SetRefs gets a reference to the given []string and assigns it to the Refs field.
+func (o *AdvisorySitecore) SetRefs(v []string) {
+	o.Refs = v
 }
 
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetSummary() string {
+func (o *AdvisorySitecore) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -153,7 +155,7 @@ func (o *AdvisoryHoneywell) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetSummaryOk() (*string, bool) {
+func (o *AdvisorySitecore) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -161,7 +163,7 @@ func (o *AdvisoryHoneywell) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasSummary() bool {
+func (o *AdvisorySitecore) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -170,12 +172,44 @@ func (o *AdvisoryHoneywell) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryHoneywell) SetSummary(v string) {
+func (o *AdvisorySitecore) SetSummary(v string) {
 	o.Summary = &v
 }
 
+// GetSummaryJa returns the SummaryJa field value if set, zero value otherwise.
+func (o *AdvisorySitecore) GetSummaryJa() string {
+	if o == nil || IsNil(o.SummaryJa) {
+		var ret string
+		return ret
+	}
+	return *o.SummaryJa
+}
+
+// GetSummaryJaOk returns a tuple with the SummaryJa field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySitecore) GetSummaryJaOk() (*string, bool) {
+	if o == nil || IsNil(o.SummaryJa) {
+		return nil, false
+	}
+	return o.SummaryJa, true
+}
+
+// HasSummaryJa returns a boolean if a field has been set.
+func (o *AdvisorySitecore) HasSummaryJa() bool {
+	if o != nil && !IsNil(o.SummaryJa) {
+		return true
+	}
+
+	return false
+}
+
+// SetSummaryJa gets a reference to the given string and assigns it to the SummaryJa field.
+func (o *AdvisorySitecore) SetSummaryJa(v string) {
+	o.SummaryJa = &v
+}
+
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetTitle() string {
+func (o *AdvisorySitecore) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -185,7 +219,7 @@ func (o *AdvisoryHoneywell) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetTitleOk() (*string, bool) {
+func (o *AdvisorySitecore) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -193,7 +227,7 @@ func (o *AdvisoryHoneywell) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasTitle() bool {
+func (o *AdvisorySitecore) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -202,12 +236,44 @@ func (o *AdvisoryHoneywell) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryHoneywell) SetTitle(v string) {
+func (o *AdvisorySitecore) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetTitleJa returns the TitleJa field value if set, zero value otherwise.
+func (o *AdvisorySitecore) GetTitleJa() string {
+	if o == nil || IsNil(o.TitleJa) {
+		var ret string
+		return ret
+	}
+	return *o.TitleJa
+}
+
+// GetTitleJaOk returns a tuple with the TitleJa field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySitecore) GetTitleJaOk() (*string, bool) {
+	if o == nil || IsNil(o.TitleJa) {
+		return nil, false
+	}
+	return o.TitleJa, true
+}
+
+// HasTitleJa returns a boolean if a field has been set.
+func (o *AdvisorySitecore) HasTitleJa() bool {
+	if o != nil && !IsNil(o.TitleJa) {
+		return true
+	}
+
+	return false
+}
+
+// SetTitleJa gets a reference to the given string and assigns it to the TitleJa field.
+func (o *AdvisorySitecore) SetTitleJa(v string) {
+	o.TitleJa = &v
+}
+
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetUpdatedAt() string {
+func (o *AdvisorySitecore) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -217,7 +283,7 @@ func (o *AdvisoryHoneywell) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisorySitecore) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -225,7 +291,7 @@ func (o *AdvisoryHoneywell) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasUpdatedAt() bool {
+func (o *AdvisorySitecore) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -234,12 +300,12 @@ func (o *AdvisoryHoneywell) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryHoneywell) SetUpdatedAt(v string) {
+func (o *AdvisorySitecore) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryHoneywell) GetUrl() string {
+func (o *AdvisorySitecore) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -249,7 +315,7 @@ func (o *AdvisoryHoneywell) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHoneywell) GetUrlOk() (*string, bool) {
+func (o *AdvisorySitecore) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -257,7 +323,7 @@ func (o *AdvisoryHoneywell) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryHoneywell) HasUrl() bool {
+func (o *AdvisorySitecore) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -266,11 +332,11 @@ func (o *AdvisoryHoneywell) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryHoneywell) SetUrl(v string) {
+func (o *AdvisorySitecore) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryHoneywell) MarshalJSON() ([]byte, error) {
+func (o AdvisorySitecore) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -278,7 +344,7 @@ func (o AdvisoryHoneywell) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryHoneywell) ToMap() (map[string]interface{}, error) {
+func (o AdvisorySitecore) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
@@ -286,14 +352,20 @@ func (o AdvisoryHoneywell) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.Id) {
-		toSerialize["id"] = o.Id
+	if !IsNil(o.Refs) {
+		toSerialize["refs"] = o.Refs
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
 	}
+	if !IsNil(o.SummaryJa) {
+		toSerialize["summary_ja"] = o.SummaryJa
+	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.TitleJa) {
+		toSerialize["title_ja"] = o.TitleJa
 	}
 	if !IsNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
@@ -304,38 +376,38 @@ func (o AdvisoryHoneywell) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryHoneywell struct {
-	value *AdvisoryHoneywell
+type NullableAdvisorySitecore struct {
+	value *AdvisorySitecore
 	isSet bool
 }
 
-func (v NullableAdvisoryHoneywell) Get() *AdvisoryHoneywell {
+func (v NullableAdvisorySitecore) Get() *AdvisorySitecore {
 	return v.value
 }
 
-func (v *NullableAdvisoryHoneywell) Set(val *AdvisoryHoneywell) {
+func (v *NullableAdvisorySitecore) Set(val *AdvisorySitecore) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryHoneywell) IsSet() bool {
+func (v NullableAdvisorySitecore) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryHoneywell) Unset() {
+func (v *NullableAdvisorySitecore) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryHoneywell(val *AdvisoryHoneywell) *NullableAdvisoryHoneywell {
-	return &NullableAdvisoryHoneywell{value: val, isSet: true}
+func NewNullableAdvisorySitecore(val *AdvisorySitecore) *NullableAdvisorySitecore {
+	return &NullableAdvisorySitecore{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryHoneywell) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisorySitecore) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryHoneywell) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisorySitecore) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
