@@ -1,4 +1,4 @@
-# AdvisoryHuawei
+# AdvisoryThermoFisher
 
 ## Properties
 
@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
-**SaNumber** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
@@ -14,195 +13,170 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewAdvisoryHuawei
+### NewAdvisoryThermoFisher
 
-`func NewAdvisoryHuawei() *AdvisoryHuawei`
+`func NewAdvisoryThermoFisher() *AdvisoryThermoFisher`
 
-NewAdvisoryHuawei instantiates a new AdvisoryHuawei object
+NewAdvisoryThermoFisher instantiates a new AdvisoryThermoFisher object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewAdvisoryHuaweiWithDefaults
+### NewAdvisoryThermoFisherWithDefaults
 
-`func NewAdvisoryHuaweiWithDefaults() *AdvisoryHuawei`
+`func NewAdvisoryThermoFisherWithDefaults() *AdvisoryThermoFisher`
 
-NewAdvisoryHuaweiWithDefaults instantiates a new AdvisoryHuawei object
+NewAdvisoryThermoFisherWithDefaults instantiates a new AdvisoryThermoFisher object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetCve
 
-`func (o *AdvisoryHuawei) GetCve() []string`
+`func (o *AdvisoryThermoFisher) GetCve() []string`
 
 GetCve returns the Cve field if non-nil, zero value otherwise.
 
 ### GetCveOk
 
-`func (o *AdvisoryHuawei) GetCveOk() (*[]string, bool)`
+`func (o *AdvisoryThermoFisher) GetCveOk() (*[]string, bool)`
 
 GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCve
 
-`func (o *AdvisoryHuawei) SetCve(v []string)`
+`func (o *AdvisoryThermoFisher) SetCve(v []string)`
 
 SetCve sets Cve field to given value.
 
 ### HasCve
 
-`func (o *AdvisoryHuawei) HasCve() bool`
+`func (o *AdvisoryThermoFisher) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 
-`func (o *AdvisoryHuawei) GetDateAdded() string`
+`func (o *AdvisoryThermoFisher) GetDateAdded() string`
 
 GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
 
 ### GetDateAddedOk
 
-`func (o *AdvisoryHuawei) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisoryThermoFisher) GetDateAddedOk() (*string, bool)`
 
 GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateAdded
 
-`func (o *AdvisoryHuawei) SetDateAdded(v string)`
+`func (o *AdvisoryThermoFisher) SetDateAdded(v string)`
 
 SetDateAdded sets DateAdded field to given value.
 
 ### HasDateAdded
 
-`func (o *AdvisoryHuawei) HasDateAdded() bool`
+`func (o *AdvisoryThermoFisher) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
 
-### GetSaNumber
-
-`func (o *AdvisoryHuawei) GetSaNumber() string`
-
-GetSaNumber returns the SaNumber field if non-nil, zero value otherwise.
-
-### GetSaNumberOk
-
-`func (o *AdvisoryHuawei) GetSaNumberOk() (*string, bool)`
-
-GetSaNumberOk returns a tuple with the SaNumber field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSaNumber
-
-`func (o *AdvisoryHuawei) SetSaNumber(v string)`
-
-SetSaNumber sets SaNumber field to given value.
-
-### HasSaNumber
-
-`func (o *AdvisoryHuawei) HasSaNumber() bool`
-
-HasSaNumber returns a boolean if a field has been set.
-
 ### GetSummary
 
-`func (o *AdvisoryHuawei) GetSummary() string`
+`func (o *AdvisoryThermoFisher) GetSummary() string`
 
 GetSummary returns the Summary field if non-nil, zero value otherwise.
 
 ### GetSummaryOk
 
-`func (o *AdvisoryHuawei) GetSummaryOk() (*string, bool)`
+`func (o *AdvisoryThermoFisher) GetSummaryOk() (*string, bool)`
 
 GetSummaryOk returns a tuple with the Summary field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSummary
 
-`func (o *AdvisoryHuawei) SetSummary(v string)`
+`func (o *AdvisoryThermoFisher) SetSummary(v string)`
 
 SetSummary sets Summary field to given value.
 
 ### HasSummary
 
-`func (o *AdvisoryHuawei) HasSummary() bool`
+`func (o *AdvisoryThermoFisher) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
 
 ### GetTitle
 
-`func (o *AdvisoryHuawei) GetTitle() string`
+`func (o *AdvisoryThermoFisher) GetTitle() string`
 
 GetTitle returns the Title field if non-nil, zero value otherwise.
 
 ### GetTitleOk
 
-`func (o *AdvisoryHuawei) GetTitleOk() (*string, bool)`
+`func (o *AdvisoryThermoFisher) GetTitleOk() (*string, bool)`
 
 GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTitle
 
-`func (o *AdvisoryHuawei) SetTitle(v string)`
+`func (o *AdvisoryThermoFisher) SetTitle(v string)`
 
 SetTitle sets Title field to given value.
 
 ### HasTitle
 
-`func (o *AdvisoryHuawei) HasTitle() bool`
+`func (o *AdvisoryThermoFisher) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 
-`func (o *AdvisoryHuawei) GetUpdatedAt() string`
+`func (o *AdvisoryThermoFisher) GetUpdatedAt() string`
 
 GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
 ### GetUpdatedAtOk
 
-`func (o *AdvisoryHuawei) GetUpdatedAtOk() (*string, bool)`
+`func (o *AdvisoryThermoFisher) GetUpdatedAtOk() (*string, bool)`
 
 GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdatedAt
 
-`func (o *AdvisoryHuawei) SetUpdatedAt(v string)`
+`func (o *AdvisoryThermoFisher) SetUpdatedAt(v string)`
 
 SetUpdatedAt sets UpdatedAt field to given value.
 
 ### HasUpdatedAt
 
-`func (o *AdvisoryHuawei) HasUpdatedAt() bool`
+`func (o *AdvisoryThermoFisher) HasUpdatedAt() bool`
 
 HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
-`func (o *AdvisoryHuawei) GetUrl() string`
+`func (o *AdvisoryThermoFisher) GetUrl() string`
 
 GetUrl returns the Url field if non-nil, zero value otherwise.
 
 ### GetUrlOk
 
-`func (o *AdvisoryHuawei) GetUrlOk() (*string, bool)`
+`func (o *AdvisoryThermoFisher) GetUrlOk() (*string, bool)`
 
 GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUrl
 
-`func (o *AdvisoryHuawei) SetUrl(v string)`
+`func (o *AdvisoryThermoFisher) SetUrl(v string)`
 
 SetUrl sets Url field to given value.
 
 ### HasUrl
 
-`func (o *AdvisoryHuawei) HasUrl() bool`
+`func (o *AdvisoryThermoFisher) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
 
