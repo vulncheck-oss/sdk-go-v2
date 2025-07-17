@@ -71,7 +71,7 @@ jobs:
       - name: Run openapi-diff
         uses: docker://openapitools/openapi-diff:latest
         with:
-          args: head/openapi.json previous/openapi.json --markdown head/openapi-diff.md
+          args: previous/openapi.json head/openapi.json  --markdown head/openapi-diff.md
 
       - name: Check if tag exists
         id: check_tag
