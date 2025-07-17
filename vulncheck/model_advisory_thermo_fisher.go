@@ -15,39 +15,38 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryHuawei type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryHuawei{}
+// checks if the AdvisoryThermoFisher type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryThermoFisher{}
 
-// AdvisoryHuawei struct for AdvisoryHuawei
-type AdvisoryHuawei struct {
+// AdvisoryThermoFisher struct for AdvisoryThermoFisher
+type AdvisoryThermoFisher struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	SaNumber *string `json:"sa_number,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryHuawei instantiates a new AdvisoryHuawei object
+// NewAdvisoryThermoFisher instantiates a new AdvisoryThermoFisher object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryHuawei() *AdvisoryHuawei {
-	this := AdvisoryHuawei{}
+func NewAdvisoryThermoFisher() *AdvisoryThermoFisher {
+	this := AdvisoryThermoFisher{}
 	return &this
 }
 
-// NewAdvisoryHuaweiWithDefaults instantiates a new AdvisoryHuawei object
+// NewAdvisoryThermoFisherWithDefaults instantiates a new AdvisoryThermoFisher object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryHuaweiWithDefaults() *AdvisoryHuawei {
-	this := AdvisoryHuawei{}
+func NewAdvisoryThermoFisherWithDefaults() *AdvisoryThermoFisher {
+	this := AdvisoryThermoFisher{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetCve() []string {
+func (o *AdvisoryThermoFisher) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -57,7 +56,7 @@ func (o *AdvisoryHuawei) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetCveOk() ([]string, bool) {
+func (o *AdvisoryThermoFisher) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -65,7 +64,7 @@ func (o *AdvisoryHuawei) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasCve() bool {
+func (o *AdvisoryThermoFisher) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -74,12 +73,12 @@ func (o *AdvisoryHuawei) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryHuawei) SetCve(v []string) {
+func (o *AdvisoryThermoFisher) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetDateAdded() string {
+func (o *AdvisoryThermoFisher) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -89,7 +88,7 @@ func (o *AdvisoryHuawei) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryThermoFisher) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -97,7 +96,7 @@ func (o *AdvisoryHuawei) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasDateAdded() bool {
+func (o *AdvisoryThermoFisher) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -106,44 +105,12 @@ func (o *AdvisoryHuawei) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryHuawei) SetDateAdded(v string) {
+func (o *AdvisoryThermoFisher) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetSaNumber returns the SaNumber field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetSaNumber() string {
-	if o == nil || IsNil(o.SaNumber) {
-		var ret string
-		return ret
-	}
-	return *o.SaNumber
-}
-
-// GetSaNumberOk returns a tuple with the SaNumber field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetSaNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.SaNumber) {
-		return nil, false
-	}
-	return o.SaNumber, true
-}
-
-// HasSaNumber returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasSaNumber() bool {
-	if o != nil && !IsNil(o.SaNumber) {
-		return true
-	}
-
-	return false
-}
-
-// SetSaNumber gets a reference to the given string and assigns it to the SaNumber field.
-func (o *AdvisoryHuawei) SetSaNumber(v string) {
-	o.SaNumber = &v
-}
-
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetSummary() string {
+func (o *AdvisoryThermoFisher) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -153,7 +120,7 @@ func (o *AdvisoryHuawei) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetSummaryOk() (*string, bool) {
+func (o *AdvisoryThermoFisher) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -161,7 +128,7 @@ func (o *AdvisoryHuawei) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasSummary() bool {
+func (o *AdvisoryThermoFisher) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -170,12 +137,12 @@ func (o *AdvisoryHuawei) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryHuawei) SetSummary(v string) {
+func (o *AdvisoryThermoFisher) SetSummary(v string) {
 	o.Summary = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetTitle() string {
+func (o *AdvisoryThermoFisher) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -185,7 +152,7 @@ func (o *AdvisoryHuawei) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetTitleOk() (*string, bool) {
+func (o *AdvisoryThermoFisher) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -193,7 +160,7 @@ func (o *AdvisoryHuawei) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasTitle() bool {
+func (o *AdvisoryThermoFisher) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -202,12 +169,12 @@ func (o *AdvisoryHuawei) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryHuawei) SetTitle(v string) {
+func (o *AdvisoryThermoFisher) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetUpdatedAt() string {
+func (o *AdvisoryThermoFisher) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -217,7 +184,7 @@ func (o *AdvisoryHuawei) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryThermoFisher) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -225,7 +192,7 @@ func (o *AdvisoryHuawei) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasUpdatedAt() bool {
+func (o *AdvisoryThermoFisher) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -234,12 +201,12 @@ func (o *AdvisoryHuawei) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryHuawei) SetUpdatedAt(v string) {
+func (o *AdvisoryThermoFisher) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryHuawei) GetUrl() string {
+func (o *AdvisoryThermoFisher) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -249,7 +216,7 @@ func (o *AdvisoryHuawei) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHuawei) GetUrlOk() (*string, bool) {
+func (o *AdvisoryThermoFisher) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -257,7 +224,7 @@ func (o *AdvisoryHuawei) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryHuawei) HasUrl() bool {
+func (o *AdvisoryThermoFisher) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -266,11 +233,11 @@ func (o *AdvisoryHuawei) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryHuawei) SetUrl(v string) {
+func (o *AdvisoryThermoFisher) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryHuawei) MarshalJSON() ([]byte, error) {
+func (o AdvisoryThermoFisher) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -278,16 +245,13 @@ func (o AdvisoryHuawei) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryHuawei) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryThermoFisher) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
-	}
-	if !IsNil(o.SaNumber) {
-		toSerialize["sa_number"] = o.SaNumber
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
@@ -304,38 +268,38 @@ func (o AdvisoryHuawei) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryHuawei struct {
-	value *AdvisoryHuawei
+type NullableAdvisoryThermoFisher struct {
+	value *AdvisoryThermoFisher
 	isSet bool
 }
 
-func (v NullableAdvisoryHuawei) Get() *AdvisoryHuawei {
+func (v NullableAdvisoryThermoFisher) Get() *AdvisoryThermoFisher {
 	return v.value
 }
 
-func (v *NullableAdvisoryHuawei) Set(val *AdvisoryHuawei) {
+func (v *NullableAdvisoryThermoFisher) Set(val *AdvisoryThermoFisher) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryHuawei) IsSet() bool {
+func (v NullableAdvisoryThermoFisher) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryHuawei) Unset() {
+func (v *NullableAdvisoryThermoFisher) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryHuawei(val *AdvisoryHuawei) *NullableAdvisoryHuawei {
-	return &NullableAdvisoryHuawei{value: val, isSet: true}
+func NewNullableAdvisoryThermoFisher(val *AdvisoryThermoFisher) *NullableAdvisoryThermoFisher {
+	return &NullableAdvisoryThermoFisher{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryHuawei) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryThermoFisher) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryHuawei) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryThermoFisher) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
