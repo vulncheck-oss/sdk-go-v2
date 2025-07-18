@@ -35523,7 +35523,7 @@ func (a *IndicesAPIService) IndexChromeGetExecute(r ApiIndexChromeGetRequest) (*
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiIndexCineaGetRequest struct {
+type ApiIndexCienaGetRequest struct {
 	ctx context.Context
 	ApiService *IndicesAPIService
 	page *int32
@@ -35550,156 +35550,156 @@ type ApiIndexCineaGetRequest struct {
 }
 
 // set the page number of the response
-func (r ApiIndexCineaGetRequest) Page(page int32) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Page(page int32) ApiIndexCienaGetRequest {
 	r.page = &page
 	return r
 }
 
 // limit the number of findings in the response
-func (r ApiIndexCineaGetRequest) Limit(limit int32) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Limit(limit int32) ApiIndexCienaGetRequest {
 	r.limit = &limit
 	return r
 }
 
 // continue server-side paging using a cursor id
-func (r ApiIndexCineaGetRequest) Cursor(cursor string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Cursor(cursor string) ApiIndexCienaGetRequest {
 	r.cursor = &cursor
 	return r
 }
 
 // request server-side paging
-func (r ApiIndexCineaGetRequest) StartCursor(startCursor string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) StartCursor(startCursor string) ApiIndexCienaGetRequest {
 	r.startCursor = &startCursor
 	return r
 }
 
 // Specify a CVE ID to search with.
-func (r ApiIndexCineaGetRequest) Cve(cve string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Cve(cve string) ApiIndexCienaGetRequest {
 	r.cve = &cve
 	return r
 }
 
 // Specify a vulnerability alias to search with.
-func (r ApiIndexCineaGetRequest) Alias(alias string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Alias(alias string) ApiIndexCienaGetRequest {
 	r.alias = &alias
 	return r
 }
 
 // Specify an IAVA ID to search with.
-func (r ApiIndexCineaGetRequest) Iava(iava string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Iava(iava string) ApiIndexCienaGetRequest {
 	r.iava = &iava
 	return r
 }
 
 // Specify a JVNDB ID to search with.
-func (r ApiIndexCineaGetRequest) Jvndb(jvndb string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Jvndb(jvndb string) ApiIndexCienaGetRequest {
 	r.jvndb = &jvndb
 	return r
 }
 
 // Specify an ILVN ID to search with.
-func (r ApiIndexCineaGetRequest) Ilvn(ilvn string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Ilvn(ilvn string) ApiIndexCienaGetRequest {
 	r.ilvn = &ilvn
 	return r
 }
 
 // Specify a threat actor name to search with.
-func (r ApiIndexCineaGetRequest) ThreatActor(threatActor string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) ThreatActor(threatActor string) ApiIndexCienaGetRequest {
 	r.threatActor = &threatActor
 	return r
 }
 
 // Specify a MITRE ID to search with.
-func (r ApiIndexCineaGetRequest) MitreId(mitreId string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) MitreId(mitreId string) ApiIndexCienaGetRequest {
 	r.mitreId = &mitreId
 	return r
 }
 
 // Specify a MISP ID to search with.
-func (r ApiIndexCineaGetRequest) MispId(mispId string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) MispId(mispId string) ApiIndexCienaGetRequest {
 	r.mispId = &mispId
 	return r
 }
 
 // Specify a ransomeware family name to search with.
-func (r ApiIndexCineaGetRequest) Ransomware(ransomware string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Ransomware(ransomware string) ApiIndexCienaGetRequest {
 	r.ransomware = &ransomware
 	return r
 }
 
 // Specify a botnet name to search with.
-func (r ApiIndexCineaGetRequest) Botnet(botnet string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Botnet(botnet string) ApiIndexCienaGetRequest {
 	r.botnet = &botnet
 	return r
 }
 
 // Specify a published date
-func (r ApiIndexCineaGetRequest) Published(published string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) Published(published string) ApiIndexCienaGetRequest {
 	r.published = &published
 	return r
 }
 
 // Specify a starting &#39;updated-at&#39; date to filter with.
-func (r ApiIndexCineaGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexCienaGetRequest {
 	r.updatedAtStartDate = &updatedAtStartDate
 	return r
 }
 
 // Specify an ending &#39;updated-at&#39; date to filter with.
-func (r ApiIndexCineaGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexCienaGetRequest {
 	r.updatedAtEndDate = &updatedAtEndDate
 	return r
 }
 
 // Specify a starting last modified date to filter with.
-func (r ApiIndexCineaGetRequest) LastModStartDate(lastModStartDate string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) LastModStartDate(lastModStartDate string) ApiIndexCienaGetRequest {
 	r.lastModStartDate = &lastModStartDate
 	return r
 }
 
 // Specify an ending last modified date to filter with.
-func (r ApiIndexCineaGetRequest) LastModEndDate(lastModEndDate string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) LastModEndDate(lastModEndDate string) ApiIndexCienaGetRequest {
 	r.lastModEndDate = &lastModEndDate
 	return r
 }
 
 // Specify a starting published date to filter with.
-func (r ApiIndexCineaGetRequest) PubStartDate(pubStartDate string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) PubStartDate(pubStartDate string) ApiIndexCienaGetRequest {
 	r.pubStartDate = &pubStartDate
 	return r
 }
 
 // Specify an ending published date to filter with.
-func (r ApiIndexCineaGetRequest) PubEndDate(pubEndDate string) ApiIndexCineaGetRequest {
+func (r ApiIndexCienaGetRequest) PubEndDate(pubEndDate string) ApiIndexCienaGetRequest {
 	r.pubEndDate = &pubEndDate
 	return r
 }
 
-func (r ApiIndexCineaGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination, *http.Response, error) {
-	return r.ApiService.IndexCineaGetExecute(r)
+func (r ApiIndexCienaGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexCienaGetExecute(r)
 }
 
 /*
-IndexCineaGet Return vulnerability data stored in index \"cinea\"
+IndexCienaGet Return vulnerability data stored in index \"ciena\"
 
 ### Overview
-This endpoint allows you to retrieve a paginated list of all documents from the cinea index. \
+This endpoint allows you to retrieve a paginated list of all documents from the ciena index. \
 By default, a maximum of 100 documents are shown per page.
 
-**Index Description:** Cinea
+**Index Description:** Ciena
 
 ### Paging Over Large Data (cursor)
 In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-"cursor" mechanism. To use the cursor, first call `GET /index/cinea?start_cursor`, the response will
+"cursor" mechanism. To use the cursor, first call `GET /index/ciena?start_cursor`, the response will
 have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-`GET /index/cinea?cursor=<next_cursor_id>`
+`GET /index/ciena?cursor=<next_cursor_id>`
 
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIndexCineaGetRequest
+ @return ApiIndexCienaGetRequest
 */
-func (a *IndicesAPIService) IndexCineaGet(ctx context.Context) ApiIndexCineaGetRequest {
-	return ApiIndexCineaGetRequest{
+func (a *IndicesAPIService) IndexCienaGet(ctx context.Context) ApiIndexCienaGetRequest {
+	return ApiIndexCienaGetRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -35707,7 +35707,7 @@ func (a *IndicesAPIService) IndexCineaGet(ctx context.Context) ApiIndexCineaGetR
 
 // Execute executes the request
 //  @return RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination
-func (a *IndicesAPIService) IndexCineaGetExecute(r ApiIndexCineaGetRequest) (*RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination, *http.Response, error) {
+func (a *IndicesAPIService) IndexCienaGetExecute(r ApiIndexCienaGetRequest) (*RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -35715,12 +35715,12 @@ func (a *IndicesAPIService) IndexCineaGetExecute(r ApiIndexCineaGetRequest) (*Re
 		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexCineaGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexCienaGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cinea"
+	localVarPath := localBasePath + "/index/ciena"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
