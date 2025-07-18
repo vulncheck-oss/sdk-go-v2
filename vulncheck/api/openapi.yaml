@@ -148,7 +148,7 @@ paths:
           - chainguard
           - checkpoint
           - chrome
-          - cinea
+          - ciena
           - cisa-alerts
           - cisa-csaf
           - cisa-kev
@@ -15211,20 +15211,20 @@ paths:
       summary: Return vulnerability data stored in index "chrome"
       tags:
       - indices
-  /index/cinea:
+  /index/ciena:
     get:
       description: |
         ### Overview
-        This endpoint allows you to retrieve a paginated list of all documents from the cinea index. \
+        This endpoint allows you to retrieve a paginated list of all documents from the ciena index. \
         By default, a maximum of 100 documents are shown per page.
 
-        **Index Description:** Cinea
+        **Index Description:** Ciena
 
         ### Paging Over Large Data (cursor)
         In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-        "cursor" mechanism. To use the cursor, first call `GET /index/cinea?start_cursor`, the response will
+        "cursor" mechanism. To use the cursor, first call `GET /index/ciena?start_cursor`, the response will
         have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-        `GET /index/cinea?cursor=<next_cursor_id>`
+        `GET /index/ciena?cursor=<next_cursor_id>`
       parameters:
       - description: set the page number of the response
         in: query
@@ -15354,7 +15354,7 @@ paths:
           description: Internal Server Error
       security:
       - Bearer: []
-      summary: Return vulnerability data stored in index "cinea"
+      summary: Return vulnerability data stored in index "ciena"
       tags:
       - indices
   /index/cisa-alerts:

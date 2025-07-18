@@ -104,7 +104,7 @@ Method | HTTP request | Description
 [**IndexChainguardGet**](IndicesAPI.md#IndexChainguardGet) | **Get** /index/chainguard | Return vulnerability data stored in index \&quot;chainguard\&quot;
 [**IndexCheckpointGet**](IndicesAPI.md#IndexCheckpointGet) | **Get** /index/checkpoint | Return vulnerability data stored in index \&quot;checkpoint\&quot;
 [**IndexChromeGet**](IndicesAPI.md#IndexChromeGet) | **Get** /index/chrome | Return vulnerability data stored in index \&quot;chrome\&quot;
-[**IndexCineaGet**](IndicesAPI.md#IndexCineaGet) | **Get** /index/cinea | Return vulnerability data stored in index \&quot;cinea\&quot;
+[**IndexCienaGet**](IndicesAPI.md#IndexCienaGet) | **Get** /index/ciena | Return vulnerability data stored in index \&quot;ciena\&quot;
 [**IndexCisaAlertsGet**](IndicesAPI.md#IndexCisaAlertsGet) | **Get** /index/cisa-alerts | Return vulnerability data stored in index \&quot;cisa-alerts\&quot;
 [**IndexCisaCsafGet**](IndicesAPI.md#IndexCisaCsafGet) | **Get** /index/cisa-csaf | Return vulnerability data stored in index \&quot;cisa-csaf\&quot;
 [**IndexCisaKevGet**](IndicesAPI.md#IndexCisaKevGet) | **Get** /index/cisa-kev | Return vulnerability data stored in index \&quot;cisa-kev\&quot;
@@ -11054,11 +11054,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## IndexCineaGet
+## IndexCienaGet
 
-> RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination IndexCineaGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+> RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination IndexCienaGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 
-Return vulnerability data stored in index \"cinea\"
+Return vulnerability data stored in index \"ciena\"
 
 
 
@@ -11099,13 +11099,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IndicesAPI.IndexCineaGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	resp, r, err := apiClient.IndicesAPI.IndexCienaGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexCineaGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexCienaGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `IndexCineaGet`: RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination
-	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexCineaGet`: %v\n", resp)
+	// response from `IndexCienaGet`: RenderResponseWithMetadataArrayAdvisoryCienaPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexCienaGet`: %v\n", resp)
 }
 ```
 
@@ -11115,7 +11115,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiIndexCineaGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiIndexCienaGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
