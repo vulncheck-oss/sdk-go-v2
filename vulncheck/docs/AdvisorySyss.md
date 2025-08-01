@@ -1,260 +1,234 @@
-# AdvisoryNetApp
+# AdvisorySyss
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Affected** | Pointer to **string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
-**Impact** | Pointer to **string** |  | [optional] 
-**Ntap** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional] 
 **References** | Pointer to **[]string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
-**Title** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
-### NewAdvisoryNetApp
+### NewAdvisorySyss
 
-`func NewAdvisoryNetApp() *AdvisoryNetApp`
+`func NewAdvisorySyss() *AdvisorySyss`
 
-NewAdvisoryNetApp instantiates a new AdvisoryNetApp object
+NewAdvisorySyss instantiates a new AdvisorySyss object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewAdvisoryNetAppWithDefaults
+### NewAdvisorySyssWithDefaults
 
-`func NewAdvisoryNetAppWithDefaults() *AdvisoryNetApp`
+`func NewAdvisorySyssWithDefaults() *AdvisorySyss`
 
-NewAdvisoryNetAppWithDefaults instantiates a new AdvisoryNetApp object
+NewAdvisorySyssWithDefaults instantiates a new AdvisorySyss object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetAffected
+
+`func (o *AdvisorySyss) GetAffected() string`
+
+GetAffected returns the Affected field if non-nil, zero value otherwise.
+
+### GetAffectedOk
+
+`func (o *AdvisorySyss) GetAffectedOk() (*string, bool)`
+
+GetAffectedOk returns a tuple with the Affected field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffected
+
+`func (o *AdvisorySyss) SetAffected(v string)`
+
+SetAffected sets Affected field to given value.
+
+### HasAffected
+
+`func (o *AdvisorySyss) HasAffected() bool`
+
+HasAffected returns a boolean if a field has been set.
+
 ### GetCve
 
-`func (o *AdvisoryNetApp) GetCve() []string`
+`func (o *AdvisorySyss) GetCve() []string`
 
 GetCve returns the Cve field if non-nil, zero value otherwise.
 
 ### GetCveOk
 
-`func (o *AdvisoryNetApp) GetCveOk() (*[]string, bool)`
+`func (o *AdvisorySyss) GetCveOk() (*[]string, bool)`
 
 GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCve
 
-`func (o *AdvisoryNetApp) SetCve(v []string)`
+`func (o *AdvisorySyss) SetCve(v []string)`
 
 SetCve sets Cve field to given value.
 
 ### HasCve
 
-`func (o *AdvisoryNetApp) HasCve() bool`
+`func (o *AdvisorySyss) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 
-`func (o *AdvisoryNetApp) GetDateAdded() string`
+`func (o *AdvisorySyss) GetDateAdded() string`
 
 GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
 
 ### GetDateAddedOk
 
-`func (o *AdvisoryNetApp) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisorySyss) GetDateAddedOk() (*string, bool)`
 
 GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateAdded
 
-`func (o *AdvisoryNetApp) SetDateAdded(v string)`
+`func (o *AdvisorySyss) SetDateAdded(v string)`
 
 SetDateAdded sets DateAdded field to given value.
 
 ### HasDateAdded
 
-`func (o *AdvisoryNetApp) HasDateAdded() bool`
+`func (o *AdvisorySyss) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
 
-### GetImpact
+### GetId
 
-`func (o *AdvisoryNetApp) GetImpact() string`
+`func (o *AdvisorySyss) GetId() string`
 
-GetImpact returns the Impact field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetImpactOk
+### GetIdOk
 
-`func (o *AdvisoryNetApp) GetImpactOk() (*string, bool)`
+`func (o *AdvisorySyss) GetIdOk() (*string, bool)`
 
-GetImpactOk returns a tuple with the Impact field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImpact
+### SetId
 
-`func (o *AdvisoryNetApp) SetImpact(v string)`
+`func (o *AdvisorySyss) SetId(v string)`
 
-SetImpact sets Impact field to given value.
+SetId sets Id field to given value.
 
-### HasImpact
+### HasId
 
-`func (o *AdvisoryNetApp) HasImpact() bool`
+`func (o *AdvisorySyss) HasId() bool`
 
-HasImpact returns a boolean if a field has been set.
-
-### GetNtap
-
-`func (o *AdvisoryNetApp) GetNtap() string`
-
-GetNtap returns the Ntap field if non-nil, zero value otherwise.
-
-### GetNtapOk
-
-`func (o *AdvisoryNetApp) GetNtapOk() (*string, bool)`
-
-GetNtapOk returns a tuple with the Ntap field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNtap
-
-`func (o *AdvisoryNetApp) SetNtap(v string)`
-
-SetNtap sets Ntap field to given value.
-
-### HasNtap
-
-`func (o *AdvisoryNetApp) HasNtap() bool`
-
-HasNtap returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetReferences
 
-`func (o *AdvisoryNetApp) GetReferences() []string`
+`func (o *AdvisorySyss) GetReferences() []string`
 
 GetReferences returns the References field if non-nil, zero value otherwise.
 
 ### GetReferencesOk
 
-`func (o *AdvisoryNetApp) GetReferencesOk() (*[]string, bool)`
+`func (o *AdvisorySyss) GetReferencesOk() (*[]string, bool)`
 
 GetReferencesOk returns a tuple with the References field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReferences
 
-`func (o *AdvisoryNetApp) SetReferences(v []string)`
+`func (o *AdvisorySyss) SetReferences(v []string)`
 
 SetReferences sets References field to given value.
 
 ### HasReferences
 
-`func (o *AdvisoryNetApp) HasReferences() bool`
+`func (o *AdvisorySyss) HasReferences() bool`
 
 HasReferences returns a boolean if a field has been set.
 
 ### GetSummary
 
-`func (o *AdvisoryNetApp) GetSummary() string`
+`func (o *AdvisorySyss) GetSummary() string`
 
 GetSummary returns the Summary field if non-nil, zero value otherwise.
 
 ### GetSummaryOk
 
-`func (o *AdvisoryNetApp) GetSummaryOk() (*string, bool)`
+`func (o *AdvisorySyss) GetSummaryOk() (*string, bool)`
 
 GetSummaryOk returns a tuple with the Summary field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSummary
 
-`func (o *AdvisoryNetApp) SetSummary(v string)`
+`func (o *AdvisorySyss) SetSummary(v string)`
 
 SetSummary sets Summary field to given value.
 
 ### HasSummary
 
-`func (o *AdvisoryNetApp) HasSummary() bool`
+`func (o *AdvisorySyss) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
 
-### GetTitle
-
-`func (o *AdvisoryNetApp) GetTitle() string`
-
-GetTitle returns the Title field if non-nil, zero value otherwise.
-
-### GetTitleOk
-
-`func (o *AdvisoryNetApp) GetTitleOk() (*string, bool)`
-
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTitle
-
-`func (o *AdvisoryNetApp) SetTitle(v string)`
-
-SetTitle sets Title field to given value.
-
-### HasTitle
-
-`func (o *AdvisoryNetApp) HasTitle() bool`
-
-HasTitle returns a boolean if a field has been set.
-
 ### GetUpdatedAt
 
-`func (o *AdvisoryNetApp) GetUpdatedAt() string`
+`func (o *AdvisorySyss) GetUpdatedAt() string`
 
 GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
 ### GetUpdatedAtOk
 
-`func (o *AdvisoryNetApp) GetUpdatedAtOk() (*string, bool)`
+`func (o *AdvisorySyss) GetUpdatedAtOk() (*string, bool)`
 
 GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdatedAt
 
-`func (o *AdvisoryNetApp) SetUpdatedAt(v string)`
+`func (o *AdvisorySyss) SetUpdatedAt(v string)`
 
 SetUpdatedAt sets UpdatedAt field to given value.
 
 ### HasUpdatedAt
 
-`func (o *AdvisoryNetApp) HasUpdatedAt() bool`
+`func (o *AdvisorySyss) HasUpdatedAt() bool`
 
 HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
-`func (o *AdvisoryNetApp) GetUrl() string`
+`func (o *AdvisorySyss) GetUrl() string`
 
 GetUrl returns the Url field if non-nil, zero value otherwise.
 
 ### GetUrlOk
 
-`func (o *AdvisoryNetApp) GetUrlOk() (*string, bool)`
+`func (o *AdvisorySyss) GetUrlOk() (*string, bool)`
 
 GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUrl
 
-`func (o *AdvisoryNetApp) SetUrl(v string)`
+`func (o *AdvisorySyss) SetUrl(v string)`
 
 SetUrl sets Url field to given value.
 
 ### HasUrl
 
-`func (o *AdvisoryNetApp) HasUrl() bool`
+`func (o *AdvisorySyss) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
 

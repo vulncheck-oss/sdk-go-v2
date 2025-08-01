@@ -15,39 +15,41 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryPaperCut type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryPaperCut{}
+// checks if the AdvisoryNexpose type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryNexpose{}
 
-// AdvisoryPaperCut struct for AdvisoryPaperCut
-type AdvisoryPaperCut struct {
+// AdvisoryNexpose struct for AdvisoryNexpose
+type AdvisoryNexpose struct {
 	Cve []string `json:"cve,omitempty"`
+	CvssScore *string `json:"cvss_score,omitempty"`
+	CvssVector *string `json:"cvss_vector,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	References []string `json:"references,omitempty"`
+	Identifier *string `json:"identifier,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryPaperCut instantiates a new AdvisoryPaperCut object
+// NewAdvisoryNexpose instantiates a new AdvisoryNexpose object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryPaperCut() *AdvisoryPaperCut {
-	this := AdvisoryPaperCut{}
+func NewAdvisoryNexpose() *AdvisoryNexpose {
+	this := AdvisoryNexpose{}
 	return &this
 }
 
-// NewAdvisoryPaperCutWithDefaults instantiates a new AdvisoryPaperCut object
+// NewAdvisoryNexposeWithDefaults instantiates a new AdvisoryNexpose object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryPaperCutWithDefaults() *AdvisoryPaperCut {
-	this := AdvisoryPaperCut{}
+func NewAdvisoryNexposeWithDefaults() *AdvisoryNexpose {
+	this := AdvisoryNexpose{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetCve() []string {
+func (o *AdvisoryNexpose) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -57,7 +59,7 @@ func (o *AdvisoryPaperCut) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetCveOk() ([]string, bool) {
+func (o *AdvisoryNexpose) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -65,7 +67,7 @@ func (o *AdvisoryPaperCut) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasCve() bool {
+func (o *AdvisoryNexpose) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -74,12 +76,76 @@ func (o *AdvisoryPaperCut) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryPaperCut) SetCve(v []string) {
+func (o *AdvisoryNexpose) SetCve(v []string) {
 	o.Cve = v
 }
 
+// GetCvssScore returns the CvssScore field value if set, zero value otherwise.
+func (o *AdvisoryNexpose) GetCvssScore() string {
+	if o == nil || IsNil(o.CvssScore) {
+		var ret string
+		return ret
+	}
+	return *o.CvssScore
+}
+
+// GetCvssScoreOk returns a tuple with the CvssScore field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryNexpose) GetCvssScoreOk() (*string, bool) {
+	if o == nil || IsNil(o.CvssScore) {
+		return nil, false
+	}
+	return o.CvssScore, true
+}
+
+// HasCvssScore returns a boolean if a field has been set.
+func (o *AdvisoryNexpose) HasCvssScore() bool {
+	if o != nil && !IsNil(o.CvssScore) {
+		return true
+	}
+
+	return false
+}
+
+// SetCvssScore gets a reference to the given string and assigns it to the CvssScore field.
+func (o *AdvisoryNexpose) SetCvssScore(v string) {
+	o.CvssScore = &v
+}
+
+// GetCvssVector returns the CvssVector field value if set, zero value otherwise.
+func (o *AdvisoryNexpose) GetCvssVector() string {
+	if o == nil || IsNil(o.CvssVector) {
+		var ret string
+		return ret
+	}
+	return *o.CvssVector
+}
+
+// GetCvssVectorOk returns a tuple with the CvssVector field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryNexpose) GetCvssVectorOk() (*string, bool) {
+	if o == nil || IsNil(o.CvssVector) {
+		return nil, false
+	}
+	return o.CvssVector, true
+}
+
+// HasCvssVector returns a boolean if a field has been set.
+func (o *AdvisoryNexpose) HasCvssVector() bool {
+	if o != nil && !IsNil(o.CvssVector) {
+		return true
+	}
+
+	return false
+}
+
+// SetCvssVector gets a reference to the given string and assigns it to the CvssVector field.
+func (o *AdvisoryNexpose) SetCvssVector(v string) {
+	o.CvssVector = &v
+}
+
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetDateAdded() string {
+func (o *AdvisoryNexpose) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -89,7 +155,7 @@ func (o *AdvisoryPaperCut) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryNexpose) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -97,7 +163,7 @@ func (o *AdvisoryPaperCut) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasDateAdded() bool {
+func (o *AdvisoryNexpose) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -106,44 +172,44 @@ func (o *AdvisoryPaperCut) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryPaperCut) SetDateAdded(v string) {
+func (o *AdvisoryNexpose) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetReferences returns the References field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetReferences() []string {
-	if o == nil || IsNil(o.References) {
-		var ret []string
+// GetIdentifier returns the Identifier field value if set, zero value otherwise.
+func (o *AdvisoryNexpose) GetIdentifier() string {
+	if o == nil || IsNil(o.Identifier) {
+		var ret string
 		return ret
 	}
-	return o.References
+	return *o.Identifier
 }
 
-// GetReferencesOk returns a tuple with the References field value if set, nil otherwise
+// GetIdentifierOk returns a tuple with the Identifier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetReferencesOk() ([]string, bool) {
-	if o == nil || IsNil(o.References) {
+func (o *AdvisoryNexpose) GetIdentifierOk() (*string, bool) {
+	if o == nil || IsNil(o.Identifier) {
 		return nil, false
 	}
-	return o.References, true
+	return o.Identifier, true
 }
 
-// HasReferences returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasReferences() bool {
-	if o != nil && !IsNil(o.References) {
+// HasIdentifier returns a boolean if a field has been set.
+func (o *AdvisoryNexpose) HasIdentifier() bool {
+	if o != nil && !IsNil(o.Identifier) {
 		return true
 	}
 
 	return false
 }
 
-// SetReferences gets a reference to the given []string and assigns it to the References field.
-func (o *AdvisoryPaperCut) SetReferences(v []string) {
-	o.References = v
+// SetIdentifier gets a reference to the given string and assigns it to the Identifier field.
+func (o *AdvisoryNexpose) SetIdentifier(v string) {
+	o.Identifier = &v
 }
 
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetSummary() string {
+func (o *AdvisoryNexpose) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -153,7 +219,7 @@ func (o *AdvisoryPaperCut) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetSummaryOk() (*string, bool) {
+func (o *AdvisoryNexpose) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -161,7 +227,7 @@ func (o *AdvisoryPaperCut) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasSummary() bool {
+func (o *AdvisoryNexpose) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -170,12 +236,12 @@ func (o *AdvisoryPaperCut) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryPaperCut) SetSummary(v string) {
+func (o *AdvisoryNexpose) SetSummary(v string) {
 	o.Summary = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetTitle() string {
+func (o *AdvisoryNexpose) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -185,7 +251,7 @@ func (o *AdvisoryPaperCut) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetTitleOk() (*string, bool) {
+func (o *AdvisoryNexpose) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -193,7 +259,7 @@ func (o *AdvisoryPaperCut) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasTitle() bool {
+func (o *AdvisoryNexpose) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -202,12 +268,12 @@ func (o *AdvisoryPaperCut) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryPaperCut) SetTitle(v string) {
+func (o *AdvisoryNexpose) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetUpdatedAt() string {
+func (o *AdvisoryNexpose) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -217,7 +283,7 @@ func (o *AdvisoryPaperCut) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryNexpose) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -225,7 +291,7 @@ func (o *AdvisoryPaperCut) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasUpdatedAt() bool {
+func (o *AdvisoryNexpose) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -234,12 +300,12 @@ func (o *AdvisoryPaperCut) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryPaperCut) SetUpdatedAt(v string) {
+func (o *AdvisoryNexpose) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryPaperCut) GetUrl() string {
+func (o *AdvisoryNexpose) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -249,7 +315,7 @@ func (o *AdvisoryPaperCut) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryPaperCut) GetUrlOk() (*string, bool) {
+func (o *AdvisoryNexpose) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -257,7 +323,7 @@ func (o *AdvisoryPaperCut) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryPaperCut) HasUrl() bool {
+func (o *AdvisoryNexpose) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -266,11 +332,11 @@ func (o *AdvisoryPaperCut) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryPaperCut) SetUrl(v string) {
+func (o *AdvisoryNexpose) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryPaperCut) MarshalJSON() ([]byte, error) {
+func (o AdvisoryNexpose) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -278,16 +344,22 @@ func (o AdvisoryPaperCut) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryPaperCut) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryNexpose) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
+	if !IsNil(o.CvssScore) {
+		toSerialize["cvss_score"] = o.CvssScore
+	}
+	if !IsNil(o.CvssVector) {
+		toSerialize["cvss_vector"] = o.CvssVector
+	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.References) {
-		toSerialize["references"] = o.References
+	if !IsNil(o.Identifier) {
+		toSerialize["identifier"] = o.Identifier
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
@@ -304,38 +376,38 @@ func (o AdvisoryPaperCut) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryPaperCut struct {
-	value *AdvisoryPaperCut
+type NullableAdvisoryNexpose struct {
+	value *AdvisoryNexpose
 	isSet bool
 }
 
-func (v NullableAdvisoryPaperCut) Get() *AdvisoryPaperCut {
+func (v NullableAdvisoryNexpose) Get() *AdvisoryNexpose {
 	return v.value
 }
 
-func (v *NullableAdvisoryPaperCut) Set(val *AdvisoryPaperCut) {
+func (v *NullableAdvisoryNexpose) Set(val *AdvisoryNexpose) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryPaperCut) IsSet() bool {
+func (v NullableAdvisoryNexpose) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryPaperCut) Unset() {
+func (v *NullableAdvisoryNexpose) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryPaperCut(val *AdvisoryPaperCut) *NullableAdvisoryPaperCut {
-	return &NullableAdvisoryPaperCut{value: val, isSet: true}
+func NewNullableAdvisoryNexpose(val *AdvisoryNexpose) *NullableAdvisoryNexpose {
+	return &NullableAdvisoryNexpose{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryPaperCut) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryNexpose) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryPaperCut) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryNexpose) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

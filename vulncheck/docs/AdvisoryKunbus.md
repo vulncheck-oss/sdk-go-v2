@@ -1,4 +1,4 @@
-# AdvisoryAxis
+# AdvisoryKunbus
 
 ## Properties
 
@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
@@ -13,170 +14,195 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewAdvisoryAxis
+### NewAdvisoryKunbus
 
-`func NewAdvisoryAxis() *AdvisoryAxis`
+`func NewAdvisoryKunbus() *AdvisoryKunbus`
 
-NewAdvisoryAxis instantiates a new AdvisoryAxis object
+NewAdvisoryKunbus instantiates a new AdvisoryKunbus object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewAdvisoryAxisWithDefaults
+### NewAdvisoryKunbusWithDefaults
 
-`func NewAdvisoryAxisWithDefaults() *AdvisoryAxis`
+`func NewAdvisoryKunbusWithDefaults() *AdvisoryKunbus`
 
-NewAdvisoryAxisWithDefaults instantiates a new AdvisoryAxis object
+NewAdvisoryKunbusWithDefaults instantiates a new AdvisoryKunbus object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetCve
 
-`func (o *AdvisoryAxis) GetCve() []string`
+`func (o *AdvisoryKunbus) GetCve() []string`
 
 GetCve returns the Cve field if non-nil, zero value otherwise.
 
 ### GetCveOk
 
-`func (o *AdvisoryAxis) GetCveOk() (*[]string, bool)`
+`func (o *AdvisoryKunbus) GetCveOk() (*[]string, bool)`
 
 GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCve
 
-`func (o *AdvisoryAxis) SetCve(v []string)`
+`func (o *AdvisoryKunbus) SetCve(v []string)`
 
 SetCve sets Cve field to given value.
 
 ### HasCve
 
-`func (o *AdvisoryAxis) HasCve() bool`
+`func (o *AdvisoryKunbus) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 
-`func (o *AdvisoryAxis) GetDateAdded() string`
+`func (o *AdvisoryKunbus) GetDateAdded() string`
 
 GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
 
 ### GetDateAddedOk
 
-`func (o *AdvisoryAxis) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisoryKunbus) GetDateAddedOk() (*string, bool)`
 
 GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateAdded
 
-`func (o *AdvisoryAxis) SetDateAdded(v string)`
+`func (o *AdvisoryKunbus) SetDateAdded(v string)`
 
 SetDateAdded sets DateAdded field to given value.
 
 ### HasDateAdded
 
-`func (o *AdvisoryAxis) HasDateAdded() bool`
+`func (o *AdvisoryKunbus) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *AdvisoryKunbus) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *AdvisoryKunbus) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *AdvisoryKunbus) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *AdvisoryKunbus) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetSummary
 
-`func (o *AdvisoryAxis) GetSummary() string`
+`func (o *AdvisoryKunbus) GetSummary() string`
 
 GetSummary returns the Summary field if non-nil, zero value otherwise.
 
 ### GetSummaryOk
 
-`func (o *AdvisoryAxis) GetSummaryOk() (*string, bool)`
+`func (o *AdvisoryKunbus) GetSummaryOk() (*string, bool)`
 
 GetSummaryOk returns a tuple with the Summary field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSummary
 
-`func (o *AdvisoryAxis) SetSummary(v string)`
+`func (o *AdvisoryKunbus) SetSummary(v string)`
 
 SetSummary sets Summary field to given value.
 
 ### HasSummary
 
-`func (o *AdvisoryAxis) HasSummary() bool`
+`func (o *AdvisoryKunbus) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
 
 ### GetTitle
 
-`func (o *AdvisoryAxis) GetTitle() string`
+`func (o *AdvisoryKunbus) GetTitle() string`
 
 GetTitle returns the Title field if non-nil, zero value otherwise.
 
 ### GetTitleOk
 
-`func (o *AdvisoryAxis) GetTitleOk() (*string, bool)`
+`func (o *AdvisoryKunbus) GetTitleOk() (*string, bool)`
 
 GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTitle
 
-`func (o *AdvisoryAxis) SetTitle(v string)`
+`func (o *AdvisoryKunbus) SetTitle(v string)`
 
 SetTitle sets Title field to given value.
 
 ### HasTitle
 
-`func (o *AdvisoryAxis) HasTitle() bool`
+`func (o *AdvisoryKunbus) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 
-`func (o *AdvisoryAxis) GetUpdatedAt() string`
+`func (o *AdvisoryKunbus) GetUpdatedAt() string`
 
 GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
 ### GetUpdatedAtOk
 
-`func (o *AdvisoryAxis) GetUpdatedAtOk() (*string, bool)`
+`func (o *AdvisoryKunbus) GetUpdatedAtOk() (*string, bool)`
 
 GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdatedAt
 
-`func (o *AdvisoryAxis) SetUpdatedAt(v string)`
+`func (o *AdvisoryKunbus) SetUpdatedAt(v string)`
 
 SetUpdatedAt sets UpdatedAt field to given value.
 
 ### HasUpdatedAt
 
-`func (o *AdvisoryAxis) HasUpdatedAt() bool`
+`func (o *AdvisoryKunbus) HasUpdatedAt() bool`
 
 HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
-`func (o *AdvisoryAxis) GetUrl() string`
+`func (o *AdvisoryKunbus) GetUrl() string`
 
 GetUrl returns the Url field if non-nil, zero value otherwise.
 
 ### GetUrlOk
 
-`func (o *AdvisoryAxis) GetUrlOk() (*string, bool)`
+`func (o *AdvisoryKunbus) GetUrlOk() (*string, bool)`
 
 GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUrl
 
-`func (o *AdvisoryAxis) SetUrl(v string)`
+`func (o *AdvisoryKunbus) SetUrl(v string)`
 
 SetUrl sets Url field to given value.
 
 ### HasUrl
 
-`func (o *AdvisoryAxis) HasUrl() bool`
+`func (o *AdvisoryKunbus) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
 
