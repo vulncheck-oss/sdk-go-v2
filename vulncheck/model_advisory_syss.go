@@ -15,41 +15,72 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryNetApp type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryNetApp{}
+// checks if the AdvisorySyss type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisorySyss{}
 
-// AdvisoryNetApp struct for AdvisoryNetApp
-type AdvisoryNetApp struct {
+// AdvisorySyss struct for AdvisorySyss
+type AdvisorySyss struct {
+	Affected *string `json:"affected,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Impact *string `json:"impact,omitempty"`
-	Ntap *string `json:"ntap,omitempty"`
+	Id *string `json:"id,omitempty"`
 	References []string `json:"references,omitempty"`
 	Summary *string `json:"summary,omitempty"`
-	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryNetApp instantiates a new AdvisoryNetApp object
+// NewAdvisorySyss instantiates a new AdvisorySyss object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryNetApp() *AdvisoryNetApp {
-	this := AdvisoryNetApp{}
+func NewAdvisorySyss() *AdvisorySyss {
+	this := AdvisorySyss{}
 	return &this
 }
 
-// NewAdvisoryNetAppWithDefaults instantiates a new AdvisoryNetApp object
+// NewAdvisorySyssWithDefaults instantiates a new AdvisorySyss object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryNetAppWithDefaults() *AdvisoryNetApp {
-	this := AdvisoryNetApp{}
+func NewAdvisorySyssWithDefaults() *AdvisorySyss {
+	this := AdvisorySyss{}
 	return &this
+}
+
+// GetAffected returns the Affected field value if set, zero value otherwise.
+func (o *AdvisorySyss) GetAffected() string {
+	if o == nil || IsNil(o.Affected) {
+		var ret string
+		return ret
+	}
+	return *o.Affected
+}
+
+// GetAffectedOk returns a tuple with the Affected field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySyss) GetAffectedOk() (*string, bool) {
+	if o == nil || IsNil(o.Affected) {
+		return nil, false
+	}
+	return o.Affected, true
+}
+
+// HasAffected returns a boolean if a field has been set.
+func (o *AdvisorySyss) HasAffected() bool {
+	if o != nil && !IsNil(o.Affected) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffected gets a reference to the given string and assigns it to the Affected field.
+func (o *AdvisorySyss) SetAffected(v string) {
+	o.Affected = &v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetCve() []string {
+func (o *AdvisorySyss) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -59,7 +90,7 @@ func (o *AdvisoryNetApp) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetCveOk() ([]string, bool) {
+func (o *AdvisorySyss) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -67,7 +98,7 @@ func (o *AdvisoryNetApp) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasCve() bool {
+func (o *AdvisorySyss) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -76,12 +107,12 @@ func (o *AdvisoryNetApp) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryNetApp) SetCve(v []string) {
+func (o *AdvisorySyss) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetDateAdded() string {
+func (o *AdvisorySyss) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -91,7 +122,7 @@ func (o *AdvisoryNetApp) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetDateAddedOk() (*string, bool) {
+func (o *AdvisorySyss) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -99,7 +130,7 @@ func (o *AdvisoryNetApp) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasDateAdded() bool {
+func (o *AdvisorySyss) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -108,76 +139,44 @@ func (o *AdvisoryNetApp) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryNetApp) SetDateAdded(v string) {
+func (o *AdvisorySyss) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetImpact returns the Impact field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetImpact() string {
-	if o == nil || IsNil(o.Impact) {
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *AdvisorySyss) GetId() string {
+	if o == nil || IsNil(o.Id) {
 		var ret string
 		return ret
 	}
-	return *o.Impact
+	return *o.Id
 }
 
-// GetImpactOk returns a tuple with the Impact field value if set, nil otherwise
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetImpactOk() (*string, bool) {
-	if o == nil || IsNil(o.Impact) {
+func (o *AdvisorySyss) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
 		return nil, false
 	}
-	return o.Impact, true
+	return o.Id, true
 }
 
-// HasImpact returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasImpact() bool {
-	if o != nil && !IsNil(o.Impact) {
+// HasId returns a boolean if a field has been set.
+func (o *AdvisorySyss) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
 		return true
 	}
 
 	return false
 }
 
-// SetImpact gets a reference to the given string and assigns it to the Impact field.
-func (o *AdvisoryNetApp) SetImpact(v string) {
-	o.Impact = &v
-}
-
-// GetNtap returns the Ntap field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetNtap() string {
-	if o == nil || IsNil(o.Ntap) {
-		var ret string
-		return ret
-	}
-	return *o.Ntap
-}
-
-// GetNtapOk returns a tuple with the Ntap field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetNtapOk() (*string, bool) {
-	if o == nil || IsNil(o.Ntap) {
-		return nil, false
-	}
-	return o.Ntap, true
-}
-
-// HasNtap returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasNtap() bool {
-	if o != nil && !IsNil(o.Ntap) {
-		return true
-	}
-
-	return false
-}
-
-// SetNtap gets a reference to the given string and assigns it to the Ntap field.
-func (o *AdvisoryNetApp) SetNtap(v string) {
-	o.Ntap = &v
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *AdvisorySyss) SetId(v string) {
+	o.Id = &v
 }
 
 // GetReferences returns the References field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetReferences() []string {
+func (o *AdvisorySyss) GetReferences() []string {
 	if o == nil || IsNil(o.References) {
 		var ret []string
 		return ret
@@ -187,7 +186,7 @@ func (o *AdvisoryNetApp) GetReferences() []string {
 
 // GetReferencesOk returns a tuple with the References field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetReferencesOk() ([]string, bool) {
+func (o *AdvisorySyss) GetReferencesOk() ([]string, bool) {
 	if o == nil || IsNil(o.References) {
 		return nil, false
 	}
@@ -195,7 +194,7 @@ func (o *AdvisoryNetApp) GetReferencesOk() ([]string, bool) {
 }
 
 // HasReferences returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasReferences() bool {
+func (o *AdvisorySyss) HasReferences() bool {
 	if o != nil && !IsNil(o.References) {
 		return true
 	}
@@ -204,12 +203,12 @@ func (o *AdvisoryNetApp) HasReferences() bool {
 }
 
 // SetReferences gets a reference to the given []string and assigns it to the References field.
-func (o *AdvisoryNetApp) SetReferences(v []string) {
+func (o *AdvisorySyss) SetReferences(v []string) {
 	o.References = v
 }
 
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetSummary() string {
+func (o *AdvisorySyss) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -219,7 +218,7 @@ func (o *AdvisoryNetApp) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetSummaryOk() (*string, bool) {
+func (o *AdvisorySyss) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -227,7 +226,7 @@ func (o *AdvisoryNetApp) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasSummary() bool {
+func (o *AdvisorySyss) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -236,44 +235,12 @@ func (o *AdvisoryNetApp) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryNetApp) SetSummary(v string) {
+func (o *AdvisorySyss) SetSummary(v string) {
 	o.Summary = &v
 }
 
-// GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetTitle() string {
-	if o == nil || IsNil(o.Title) {
-		var ret string
-		return ret
-	}
-	return *o.Title
-}
-
-// GetTitleOk returns a tuple with the Title field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetTitleOk() (*string, bool) {
-	if o == nil || IsNil(o.Title) {
-		return nil, false
-	}
-	return o.Title, true
-}
-
-// HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasTitle() bool {
-	if o != nil && !IsNil(o.Title) {
-		return true
-	}
-
-	return false
-}
-
-// SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryNetApp) SetTitle(v string) {
-	o.Title = &v
-}
-
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetUpdatedAt() string {
+func (o *AdvisorySyss) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -283,7 +250,7 @@ func (o *AdvisoryNetApp) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisorySyss) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -291,7 +258,7 @@ func (o *AdvisoryNetApp) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasUpdatedAt() bool {
+func (o *AdvisorySyss) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -300,12 +267,12 @@ func (o *AdvisoryNetApp) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryNetApp) SetUpdatedAt(v string) {
+func (o *AdvisorySyss) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryNetApp) GetUrl() string {
+func (o *AdvisorySyss) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -315,7 +282,7 @@ func (o *AdvisoryNetApp) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryNetApp) GetUrlOk() (*string, bool) {
+func (o *AdvisorySyss) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -323,7 +290,7 @@ func (o *AdvisoryNetApp) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryNetApp) HasUrl() bool {
+func (o *AdvisorySyss) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -332,11 +299,11 @@ func (o *AdvisoryNetApp) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryNetApp) SetUrl(v string) {
+func (o *AdvisorySyss) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryNetApp) MarshalJSON() ([]byte, error) {
+func (o AdvisorySyss) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -344,28 +311,25 @@ func (o AdvisoryNetApp) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryNetApp) ToMap() (map[string]interface{}, error) {
+func (o AdvisorySyss) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Affected) {
+		toSerialize["affected"] = o.Affected
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.Impact) {
-		toSerialize["impact"] = o.Impact
-	}
-	if !IsNil(o.Ntap) {
-		toSerialize["ntap"] = o.Ntap
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
 	}
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
-	}
-	if !IsNil(o.Title) {
-		toSerialize["title"] = o.Title
 	}
 	if !IsNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
@@ -376,38 +340,38 @@ func (o AdvisoryNetApp) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryNetApp struct {
-	value *AdvisoryNetApp
+type NullableAdvisorySyss struct {
+	value *AdvisorySyss
 	isSet bool
 }
 
-func (v NullableAdvisoryNetApp) Get() *AdvisoryNetApp {
+func (v NullableAdvisorySyss) Get() *AdvisorySyss {
 	return v.value
 }
 
-func (v *NullableAdvisoryNetApp) Set(val *AdvisoryNetApp) {
+func (v *NullableAdvisorySyss) Set(val *AdvisorySyss) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryNetApp) IsSet() bool {
+func (v NullableAdvisorySyss) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryNetApp) Unset() {
+func (v *NullableAdvisorySyss) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryNetApp(val *AdvisoryNetApp) *NullableAdvisoryNetApp {
-	return &NullableAdvisoryNetApp{value: val, isSet: true}
+func NewNullableAdvisorySyss(val *AdvisorySyss) *NullableAdvisorySyss {
+	return &NullableAdvisorySyss{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryNetApp) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisorySyss) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryNetApp) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisorySyss) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

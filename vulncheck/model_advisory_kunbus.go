@@ -15,38 +15,39 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryAxis type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryAxis{}
+// checks if the AdvisoryKunbus type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryKunbus{}
 
-// AdvisoryAxis struct for AdvisoryAxis
-type AdvisoryAxis struct {
+// AdvisoryKunbus struct for AdvisoryKunbus
+type AdvisoryKunbus struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryAxis instantiates a new AdvisoryAxis object
+// NewAdvisoryKunbus instantiates a new AdvisoryKunbus object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryAxis() *AdvisoryAxis {
-	this := AdvisoryAxis{}
+func NewAdvisoryKunbus() *AdvisoryKunbus {
+	this := AdvisoryKunbus{}
 	return &this
 }
 
-// NewAdvisoryAxisWithDefaults instantiates a new AdvisoryAxis object
+// NewAdvisoryKunbusWithDefaults instantiates a new AdvisoryKunbus object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryAxisWithDefaults() *AdvisoryAxis {
-	this := AdvisoryAxis{}
+func NewAdvisoryKunbusWithDefaults() *AdvisoryKunbus {
+	this := AdvisoryKunbus{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetCve() []string {
+func (o *AdvisoryKunbus) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -56,7 +57,7 @@ func (o *AdvisoryAxis) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetCveOk() ([]string, bool) {
+func (o *AdvisoryKunbus) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -64,7 +65,7 @@ func (o *AdvisoryAxis) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasCve() bool {
+func (o *AdvisoryKunbus) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -73,12 +74,12 @@ func (o *AdvisoryAxis) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryAxis) SetCve(v []string) {
+func (o *AdvisoryKunbus) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetDateAdded() string {
+func (o *AdvisoryKunbus) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -88,7 +89,7 @@ func (o *AdvisoryAxis) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryKunbus) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -96,7 +97,7 @@ func (o *AdvisoryAxis) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasDateAdded() bool {
+func (o *AdvisoryKunbus) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -105,12 +106,44 @@ func (o *AdvisoryAxis) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryAxis) SetDateAdded(v string) {
+func (o *AdvisoryKunbus) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *AdvisoryKunbus) GetId() string {
+	if o == nil || IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
+}
+
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryKunbus) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
+}
+
+// HasId returns a boolean if a field has been set.
+func (o *AdvisoryKunbus) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
+		return true
+	}
+
+	return false
+}
+
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *AdvisoryKunbus) SetId(v string) {
+	o.Id = &v
+}
+
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetSummary() string {
+func (o *AdvisoryKunbus) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -120,7 +153,7 @@ func (o *AdvisoryAxis) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetSummaryOk() (*string, bool) {
+func (o *AdvisoryKunbus) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -128,7 +161,7 @@ func (o *AdvisoryAxis) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasSummary() bool {
+func (o *AdvisoryKunbus) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -137,12 +170,12 @@ func (o *AdvisoryAxis) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryAxis) SetSummary(v string) {
+func (o *AdvisoryKunbus) SetSummary(v string) {
 	o.Summary = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetTitle() string {
+func (o *AdvisoryKunbus) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -152,7 +185,7 @@ func (o *AdvisoryAxis) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetTitleOk() (*string, bool) {
+func (o *AdvisoryKunbus) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -160,7 +193,7 @@ func (o *AdvisoryAxis) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasTitle() bool {
+func (o *AdvisoryKunbus) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -169,12 +202,12 @@ func (o *AdvisoryAxis) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryAxis) SetTitle(v string) {
+func (o *AdvisoryKunbus) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetUpdatedAt() string {
+func (o *AdvisoryKunbus) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -184,7 +217,7 @@ func (o *AdvisoryAxis) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryKunbus) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -192,7 +225,7 @@ func (o *AdvisoryAxis) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasUpdatedAt() bool {
+func (o *AdvisoryKunbus) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -201,12 +234,12 @@ func (o *AdvisoryAxis) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryAxis) SetUpdatedAt(v string) {
+func (o *AdvisoryKunbus) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetUrl() string {
+func (o *AdvisoryKunbus) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -216,7 +249,7 @@ func (o *AdvisoryAxis) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetUrlOk() (*string, bool) {
+func (o *AdvisoryKunbus) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -224,7 +257,7 @@ func (o *AdvisoryAxis) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasUrl() bool {
+func (o *AdvisoryKunbus) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -233,11 +266,11 @@ func (o *AdvisoryAxis) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryAxis) SetUrl(v string) {
+func (o *AdvisoryKunbus) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryAxis) MarshalJSON() ([]byte, error) {
+func (o AdvisoryKunbus) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -245,13 +278,16 @@ func (o AdvisoryAxis) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryAxis) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryKunbus) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
+	}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
@@ -268,38 +304,38 @@ func (o AdvisoryAxis) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryAxis struct {
-	value *AdvisoryAxis
+type NullableAdvisoryKunbus struct {
+	value *AdvisoryKunbus
 	isSet bool
 }
 
-func (v NullableAdvisoryAxis) Get() *AdvisoryAxis {
+func (v NullableAdvisoryKunbus) Get() *AdvisoryKunbus {
 	return v.value
 }
 
-func (v *NullableAdvisoryAxis) Set(val *AdvisoryAxis) {
+func (v *NullableAdvisoryKunbus) Set(val *AdvisoryKunbus) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryAxis) IsSet() bool {
+func (v NullableAdvisoryKunbus) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryAxis) Unset() {
+func (v *NullableAdvisoryKunbus) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryAxis(val *AdvisoryAxis) *NullableAdvisoryAxis {
-	return &NullableAdvisoryAxis{value: val, isSet: true}
+func NewNullableAdvisoryKunbus(val *AdvisoryKunbus) *NullableAdvisoryKunbus {
+	return &NullableAdvisoryKunbus{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryAxis) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryKunbus) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryAxis) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryKunbus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

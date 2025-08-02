@@ -15,38 +15,40 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryAxis type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryAxis{}
+// checks if the AdvisoryQQID type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryQQID{}
 
-// AdvisoryAxis struct for AdvisoryAxis
-type AdvisoryAxis struct {
+// AdvisoryQQID struct for AdvisoryQQID
+type AdvisoryQQID struct {
 	Cve []string `json:"cve,omitempty"`
+	Cvss3Score *string `json:"cvss3_score,omitempty"`
+	CvssScore *string `json:"cvss_score,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Summary *string `json:"summary,omitempty"`
+	Qid *string `json:"qid,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryAxis instantiates a new AdvisoryAxis object
+// NewAdvisoryQQID instantiates a new AdvisoryQQID object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryAxis() *AdvisoryAxis {
-	this := AdvisoryAxis{}
+func NewAdvisoryQQID() *AdvisoryQQID {
+	this := AdvisoryQQID{}
 	return &this
 }
 
-// NewAdvisoryAxisWithDefaults instantiates a new AdvisoryAxis object
+// NewAdvisoryQQIDWithDefaults instantiates a new AdvisoryQQID object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryAxisWithDefaults() *AdvisoryAxis {
-	this := AdvisoryAxis{}
+func NewAdvisoryQQIDWithDefaults() *AdvisoryQQID {
+	this := AdvisoryQQID{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetCve() []string {
+func (o *AdvisoryQQID) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -56,7 +58,7 @@ func (o *AdvisoryAxis) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetCveOk() ([]string, bool) {
+func (o *AdvisoryQQID) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -64,7 +66,7 @@ func (o *AdvisoryAxis) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasCve() bool {
+func (o *AdvisoryQQID) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -73,12 +75,76 @@ func (o *AdvisoryAxis) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryAxis) SetCve(v []string) {
+func (o *AdvisoryQQID) SetCve(v []string) {
 	o.Cve = v
 }
 
+// GetCvss3Score returns the Cvss3Score field value if set, zero value otherwise.
+func (o *AdvisoryQQID) GetCvss3Score() string {
+	if o == nil || IsNil(o.Cvss3Score) {
+		var ret string
+		return ret
+	}
+	return *o.Cvss3Score
+}
+
+// GetCvss3ScoreOk returns a tuple with the Cvss3Score field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryQQID) GetCvss3ScoreOk() (*string, bool) {
+	if o == nil || IsNil(o.Cvss3Score) {
+		return nil, false
+	}
+	return o.Cvss3Score, true
+}
+
+// HasCvss3Score returns a boolean if a field has been set.
+func (o *AdvisoryQQID) HasCvss3Score() bool {
+	if o != nil && !IsNil(o.Cvss3Score) {
+		return true
+	}
+
+	return false
+}
+
+// SetCvss3Score gets a reference to the given string and assigns it to the Cvss3Score field.
+func (o *AdvisoryQQID) SetCvss3Score(v string) {
+	o.Cvss3Score = &v
+}
+
+// GetCvssScore returns the CvssScore field value if set, zero value otherwise.
+func (o *AdvisoryQQID) GetCvssScore() string {
+	if o == nil || IsNil(o.CvssScore) {
+		var ret string
+		return ret
+	}
+	return *o.CvssScore
+}
+
+// GetCvssScoreOk returns a tuple with the CvssScore field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryQQID) GetCvssScoreOk() (*string, bool) {
+	if o == nil || IsNil(o.CvssScore) {
+		return nil, false
+	}
+	return o.CvssScore, true
+}
+
+// HasCvssScore returns a boolean if a field has been set.
+func (o *AdvisoryQQID) HasCvssScore() bool {
+	if o != nil && !IsNil(o.CvssScore) {
+		return true
+	}
+
+	return false
+}
+
+// SetCvssScore gets a reference to the given string and assigns it to the CvssScore field.
+func (o *AdvisoryQQID) SetCvssScore(v string) {
+	o.CvssScore = &v
+}
+
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetDateAdded() string {
+func (o *AdvisoryQQID) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -88,7 +154,7 @@ func (o *AdvisoryAxis) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryQQID) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -96,7 +162,7 @@ func (o *AdvisoryAxis) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasDateAdded() bool {
+func (o *AdvisoryQQID) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -105,44 +171,44 @@ func (o *AdvisoryAxis) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryAxis) SetDateAdded(v string) {
+func (o *AdvisoryQQID) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetSummary() string {
-	if o == nil || IsNil(o.Summary) {
+// GetQid returns the Qid field value if set, zero value otherwise.
+func (o *AdvisoryQQID) GetQid() string {
+	if o == nil || IsNil(o.Qid) {
 		var ret string
 		return ret
 	}
-	return *o.Summary
+	return *o.Qid
 }
 
-// GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
+// GetQidOk returns a tuple with the Qid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetSummaryOk() (*string, bool) {
-	if o == nil || IsNil(o.Summary) {
+func (o *AdvisoryQQID) GetQidOk() (*string, bool) {
+	if o == nil || IsNil(o.Qid) {
 		return nil, false
 	}
-	return o.Summary, true
+	return o.Qid, true
 }
 
-// HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasSummary() bool {
-	if o != nil && !IsNil(o.Summary) {
+// HasQid returns a boolean if a field has been set.
+func (o *AdvisoryQQID) HasQid() bool {
+	if o != nil && !IsNil(o.Qid) {
 		return true
 	}
 
 	return false
 }
 
-// SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryAxis) SetSummary(v string) {
-	o.Summary = &v
+// SetQid gets a reference to the given string and assigns it to the Qid field.
+func (o *AdvisoryQQID) SetQid(v string) {
+	o.Qid = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetTitle() string {
+func (o *AdvisoryQQID) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -152,7 +218,7 @@ func (o *AdvisoryAxis) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetTitleOk() (*string, bool) {
+func (o *AdvisoryQQID) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -160,7 +226,7 @@ func (o *AdvisoryAxis) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasTitle() bool {
+func (o *AdvisoryQQID) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -169,12 +235,12 @@ func (o *AdvisoryAxis) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryAxis) SetTitle(v string) {
+func (o *AdvisoryQQID) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetUpdatedAt() string {
+func (o *AdvisoryQQID) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -184,7 +250,7 @@ func (o *AdvisoryAxis) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryQQID) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -192,7 +258,7 @@ func (o *AdvisoryAxis) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasUpdatedAt() bool {
+func (o *AdvisoryQQID) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -201,12 +267,12 @@ func (o *AdvisoryAxis) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryAxis) SetUpdatedAt(v string) {
+func (o *AdvisoryQQID) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryAxis) GetUrl() string {
+func (o *AdvisoryQQID) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -216,7 +282,7 @@ func (o *AdvisoryAxis) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAxis) GetUrlOk() (*string, bool) {
+func (o *AdvisoryQQID) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -224,7 +290,7 @@ func (o *AdvisoryAxis) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryAxis) HasUrl() bool {
+func (o *AdvisoryQQID) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -233,11 +299,11 @@ func (o *AdvisoryAxis) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryAxis) SetUrl(v string) {
+func (o *AdvisoryQQID) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryAxis) MarshalJSON() ([]byte, error) {
+func (o AdvisoryQQID) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -245,16 +311,22 @@ func (o AdvisoryAxis) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryAxis) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryQQID) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
+	if !IsNil(o.Cvss3Score) {
+		toSerialize["cvss3_score"] = o.Cvss3Score
+	}
+	if !IsNil(o.CvssScore) {
+		toSerialize["cvss_score"] = o.CvssScore
+	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.Summary) {
-		toSerialize["summary"] = o.Summary
+	if !IsNil(o.Qid) {
+		toSerialize["qid"] = o.Qid
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
@@ -268,38 +340,38 @@ func (o AdvisoryAxis) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryAxis struct {
-	value *AdvisoryAxis
+type NullableAdvisoryQQID struct {
+	value *AdvisoryQQID
 	isSet bool
 }
 
-func (v NullableAdvisoryAxis) Get() *AdvisoryAxis {
+func (v NullableAdvisoryQQID) Get() *AdvisoryQQID {
 	return v.value
 }
 
-func (v *NullableAdvisoryAxis) Set(val *AdvisoryAxis) {
+func (v *NullableAdvisoryQQID) Set(val *AdvisoryQQID) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryAxis) IsSet() bool {
+func (v NullableAdvisoryQQID) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryAxis) Unset() {
+func (v *NullableAdvisoryQQID) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryAxis(val *AdvisoryAxis) *NullableAdvisoryAxis {
-	return &NullableAdvisoryAxis{value: val, isSet: true}
+func NewNullableAdvisoryQQID(val *AdvisoryQQID) *NullableAdvisoryQQID {
+	return &NullableAdvisoryQQID{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryAxis) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryQQID) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryAxis) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryQQID) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
