@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ## CpeGet
 
-> RenderResponseWithMetadataArrayStringV3controllersResponseMetadata CpeGet(ctx).Cpe(cpe).Execute()
+> RenderResponseWithMetadataArrayStringV3controllersResponseMetadata CpeGet(ctx).Cpe(cpe).IsVulnerable(isVulnerable).Execute()
 
 Return CVE 's associated with a specific NIST CPE
 
@@ -170,10 +170,11 @@ import (
 
 func main() {
 	cpe := "cpe_example" // string | CPE designation to lookup
+	isVulnerable := "isVulnerable_example" // string | Filter by vulnerability status (true/false). Defaults to false if not provided. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.EndpointsAPI.CpeGet(context.Background()).Cpe(cpe).Execute()
+	resp, r, err := apiClient.EndpointsAPI.CpeGet(context.Background()).Cpe(cpe).IsVulnerable(isVulnerable).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `EndpointsAPI.CpeGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -195,6 +196,7 @@ Other parameters are passed through a pointer to a apiCpeGetRequest struct via t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cpe** | **string** | CPE designation to lookup | 
+ **isVulnerable** | **string** | Filter by vulnerability status (true/false). Defaults to false if not provided. | 
 
 ### Return type
 

@@ -300,11 +300,18 @@ type ApiCpeGetRequest struct {
 	ctx context.Context
 	ApiService *EndpointsAPIService
 	cpe *string
+	isVulnerable *string
 }
 
 // CPE designation to lookup
 func (r ApiCpeGetRequest) Cpe(cpe string) ApiCpeGetRequest {
 	r.cpe = &cpe
+	return r
+}
+
+// Filter by vulnerability status (true/false). Defaults to false if not provided.
+func (r ApiCpeGetRequest) IsVulnerable(isVulnerable string) ApiCpeGetRequest {
+	r.isVulnerable = &isVulnerable
 	return r
 }
 
@@ -352,6 +359,9 @@ func (a *EndpointsAPIService) CpeGetExecute(r ApiCpeGetRequest) (*RenderResponse
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "cpe", r.cpe, "", "")
+	if r.isVulnerable != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isVulnerable", r.isVulnerable, "", "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

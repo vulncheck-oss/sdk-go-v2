@@ -1,4 +1,4 @@
-# AdvisoryCrowdSec
+# AdvisoryDLink
 
 ## Properties
 
@@ -6,203 +6,203 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
-**Eitw** | Pointer to **bool** |  | [optional] 
-**FirstSeen** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
-### NewAdvisoryCrowdSec
+### NewAdvisoryDLink
 
-`func NewAdvisoryCrowdSec() *AdvisoryCrowdSec`
+`func NewAdvisoryDLink() *AdvisoryDLink`
 
-NewAdvisoryCrowdSec instantiates a new AdvisoryCrowdSec object
+NewAdvisoryDLink instantiates a new AdvisoryDLink object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewAdvisoryCrowdSecWithDefaults
+### NewAdvisoryDLinkWithDefaults
 
-`func NewAdvisoryCrowdSecWithDefaults() *AdvisoryCrowdSec`
+`func NewAdvisoryDLinkWithDefaults() *AdvisoryDLink`
 
-NewAdvisoryCrowdSecWithDefaults instantiates a new AdvisoryCrowdSec object
+NewAdvisoryDLinkWithDefaults instantiates a new AdvisoryDLink object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetCve
 
-`func (o *AdvisoryCrowdSec) GetCve() []string`
+`func (o *AdvisoryDLink) GetCve() []string`
 
 GetCve returns the Cve field if non-nil, zero value otherwise.
 
 ### GetCveOk
 
-`func (o *AdvisoryCrowdSec) GetCveOk() (*[]string, bool)`
+`func (o *AdvisoryDLink) GetCveOk() (*[]string, bool)`
 
 GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCve
 
-`func (o *AdvisoryCrowdSec) SetCve(v []string)`
+`func (o *AdvisoryDLink) SetCve(v []string)`
 
 SetCve sets Cve field to given value.
 
 ### HasCve
 
-`func (o *AdvisoryCrowdSec) HasCve() bool`
+`func (o *AdvisoryDLink) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 
-`func (o *AdvisoryCrowdSec) GetDateAdded() string`
+`func (o *AdvisoryDLink) GetDateAdded() string`
 
 GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
 
 ### GetDateAddedOk
 
-`func (o *AdvisoryCrowdSec) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisoryDLink) GetDateAddedOk() (*string, bool)`
 
 GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateAdded
 
-`func (o *AdvisoryCrowdSec) SetDateAdded(v string)`
+`func (o *AdvisoryDLink) SetDateAdded(v string)`
 
 SetDateAdded sets DateAdded field to given value.
 
 ### HasDateAdded
 
-`func (o *AdvisoryCrowdSec) HasDateAdded() bool`
+`func (o *AdvisoryDLink) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
 
-### GetEitw
+### GetId
 
-`func (o *AdvisoryCrowdSec) GetEitw() bool`
+`func (o *AdvisoryDLink) GetId() string`
 
-GetEitw returns the Eitw field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetEitwOk
+### GetIdOk
 
-`func (o *AdvisoryCrowdSec) GetEitwOk() (*bool, bool)`
+`func (o *AdvisoryDLink) GetIdOk() (*string, bool)`
 
-GetEitwOk returns a tuple with the Eitw field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEitw
+### SetId
 
-`func (o *AdvisoryCrowdSec) SetEitw(v bool)`
+`func (o *AdvisoryDLink) SetId(v string)`
 
-SetEitw sets Eitw field to given value.
+SetId sets Id field to given value.
 
-### HasEitw
+### HasId
 
-`func (o *AdvisoryCrowdSec) HasEitw() bool`
+`func (o *AdvisoryDLink) HasId() bool`
 
-HasEitw returns a boolean if a field has been set.
-
-### GetFirstSeen
-
-`func (o *AdvisoryCrowdSec) GetFirstSeen() string`
-
-GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
-
-### GetFirstSeenOk
-
-`func (o *AdvisoryCrowdSec) GetFirstSeenOk() (*string, bool)`
-
-GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFirstSeen
-
-`func (o *AdvisoryCrowdSec) SetFirstSeen(v string)`
-
-SetFirstSeen sets FirstSeen field to given value.
-
-### HasFirstSeen
-
-`func (o *AdvisoryCrowdSec) HasFirstSeen() bool`
-
-HasFirstSeen returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetSummary
 
-`func (o *AdvisoryCrowdSec) GetSummary() string`
+`func (o *AdvisoryDLink) GetSummary() string`
 
 GetSummary returns the Summary field if non-nil, zero value otherwise.
 
 ### GetSummaryOk
 
-`func (o *AdvisoryCrowdSec) GetSummaryOk() (*string, bool)`
+`func (o *AdvisoryDLink) GetSummaryOk() (*string, bool)`
 
 GetSummaryOk returns a tuple with the Summary field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSummary
 
-`func (o *AdvisoryCrowdSec) SetSummary(v string)`
+`func (o *AdvisoryDLink) SetSummary(v string)`
 
 SetSummary sets Summary field to given value.
 
 ### HasSummary
 
-`func (o *AdvisoryCrowdSec) HasSummary() bool`
+`func (o *AdvisoryDLink) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
 
 ### GetTitle
 
-`func (o *AdvisoryCrowdSec) GetTitle() string`
+`func (o *AdvisoryDLink) GetTitle() string`
 
 GetTitle returns the Title field if non-nil, zero value otherwise.
 
 ### GetTitleOk
 
-`func (o *AdvisoryCrowdSec) GetTitleOk() (*string, bool)`
+`func (o *AdvisoryDLink) GetTitleOk() (*string, bool)`
 
 GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTitle
 
-`func (o *AdvisoryCrowdSec) SetTitle(v string)`
+`func (o *AdvisoryDLink) SetTitle(v string)`
 
 SetTitle sets Title field to given value.
 
 ### HasTitle
 
-`func (o *AdvisoryCrowdSec) HasTitle() bool`
+`func (o *AdvisoryDLink) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
 
+### GetUpdatedAt
+
+`func (o *AdvisoryDLink) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryDLink) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryDLink) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryDLink) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
 ### GetUrl
 
-`func (o *AdvisoryCrowdSec) GetUrl() string`
+`func (o *AdvisoryDLink) GetUrl() string`
 
 GetUrl returns the Url field if non-nil, zero value otherwise.
 
 ### GetUrlOk
 
-`func (o *AdvisoryCrowdSec) GetUrlOk() (*string, bool)`
+`func (o *AdvisoryDLink) GetUrlOk() (*string, bool)`
 
 GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUrl
 
-`func (o *AdvisoryCrowdSec) SetUrl(v string)`
+`func (o *AdvisoryDLink) SetUrl(v string)`
 
 SetUrl sets Url field to given value.
 
 ### HasUrl
 
-`func (o *AdvisoryCrowdSec) HasUrl() bool`
+`func (o *AdvisoryDLink) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
 

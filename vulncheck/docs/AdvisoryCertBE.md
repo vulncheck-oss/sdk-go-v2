@@ -4,13 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AffectedSoftware** | Pointer to **[]string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
+**Mitigation** | Pointer to **string** |  | [optional] 
 **References** | Pointer to **[]string** |  | [optional] 
+**Risk** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
+**VulnerabilityType** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
 
@@ -30,6 +35,31 @@ will change when the set of required properties is changed
 NewAdvisoryCertBEWithDefaults instantiates a new AdvisoryCertBE object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAffectedSoftware
+
+`func (o *AdvisoryCertBE) GetAffectedSoftware() []string`
+
+GetAffectedSoftware returns the AffectedSoftware field if non-nil, zero value otherwise.
+
+### GetAffectedSoftwareOk
+
+`func (o *AdvisoryCertBE) GetAffectedSoftwareOk() (*[]string, bool)`
+
+GetAffectedSoftwareOk returns a tuple with the AffectedSoftware field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffectedSoftware
+
+`func (o *AdvisoryCertBE) SetAffectedSoftware(v []string)`
+
+SetAffectedSoftware sets AffectedSoftware field to given value.
+
+### HasAffectedSoftware
+
+`func (o *AdvisoryCertBE) HasAffectedSoftware() bool`
+
+HasAffectedSoftware returns a boolean if a field has been set.
 
 ### GetCve
 
@@ -106,6 +136,31 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetMitigation
+
+`func (o *AdvisoryCertBE) GetMitigation() string`
+
+GetMitigation returns the Mitigation field if non-nil, zero value otherwise.
+
+### GetMitigationOk
+
+`func (o *AdvisoryCertBE) GetMitigationOk() (*string, bool)`
+
+GetMitigationOk returns a tuple with the Mitigation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMitigation
+
+`func (o *AdvisoryCertBE) SetMitigation(v string)`
+
+SetMitigation sets Mitigation field to given value.
+
+### HasMitigation
+
+`func (o *AdvisoryCertBE) HasMitigation() bool`
+
+HasMitigation returns a boolean if a field has been set.
+
 ### GetReferences
 
 `func (o *AdvisoryCertBE) GetReferences() []string`
@@ -130,6 +185,31 @@ SetReferences sets References field to given value.
 `func (o *AdvisoryCertBE) HasReferences() bool`
 
 HasReferences returns a boolean if a field has been set.
+
+### GetRisk
+
+`func (o *AdvisoryCertBE) GetRisk() string`
+
+GetRisk returns the Risk field if non-nil, zero value otherwise.
+
+### GetRiskOk
+
+`func (o *AdvisoryCertBE) GetRiskOk() (*string, bool)`
+
+GetRiskOk returns a tuple with the Risk field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRisk
+
+`func (o *AdvisoryCertBE) SetRisk(v string)`
+
+SetRisk sets Risk field to given value.
+
+### HasRisk
+
+`func (o *AdvisoryCertBE) HasRisk() bool`
+
+HasRisk returns a boolean if a field has been set.
 
 ### GetSummary
 
@@ -181,6 +261,31 @@ SetTitle sets Title field to given value.
 
 HasTitle returns a boolean if a field has been set.
 
+### GetUpdatedAt
+
+`func (o *AdvisoryCertBE) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryCertBE) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryCertBE) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryCertBE) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
 ### GetUrl
 
 `func (o *AdvisoryCertBE) GetUrl() string`
@@ -205,6 +310,31 @@ SetUrl sets Url field to given value.
 `func (o *AdvisoryCertBE) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
+
+### GetVulnerabilityType
+
+`func (o *AdvisoryCertBE) GetVulnerabilityType() []string`
+
+GetVulnerabilityType returns the VulnerabilityType field if non-nil, zero value otherwise.
+
+### GetVulnerabilityTypeOk
+
+`func (o *AdvisoryCertBE) GetVulnerabilityTypeOk() (*[]string, bool)`
+
+GetVulnerabilityTypeOk returns a tuple with the VulnerabilityType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVulnerabilityType
+
+`func (o *AdvisoryCertBE) SetVulnerabilityType(v []string)`
+
+SetVulnerabilityType sets VulnerabilityType field to given value.
+
+### HasVulnerabilityType
+
+`func (o *AdvisoryCertBE) HasVulnerabilityType() bool`
+
+HasVulnerabilityType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
