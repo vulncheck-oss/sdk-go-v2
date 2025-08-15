@@ -15,39 +15,38 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryCrowdSec type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryCrowdSec{}
+// checks if the AdvisorySandisk type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisorySandisk{}
 
-// AdvisoryCrowdSec struct for AdvisoryCrowdSec
-type AdvisoryCrowdSec struct {
+// AdvisorySandisk struct for AdvisorySandisk
+type AdvisorySandisk struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Eitw *bool `json:"eitw,omitempty"`
-	FirstSeen *string `json:"first_seen,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryCrowdSec instantiates a new AdvisoryCrowdSec object
+// NewAdvisorySandisk instantiates a new AdvisorySandisk object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryCrowdSec() *AdvisoryCrowdSec {
-	this := AdvisoryCrowdSec{}
+func NewAdvisorySandisk() *AdvisorySandisk {
+	this := AdvisorySandisk{}
 	return &this
 }
 
-// NewAdvisoryCrowdSecWithDefaults instantiates a new AdvisoryCrowdSec object
+// NewAdvisorySandiskWithDefaults instantiates a new AdvisorySandisk object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryCrowdSecWithDefaults() *AdvisoryCrowdSec {
-	this := AdvisoryCrowdSec{}
+func NewAdvisorySandiskWithDefaults() *AdvisorySandisk {
+	this := AdvisorySandisk{}
 	return &this
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetCve() []string {
+func (o *AdvisorySandisk) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -57,7 +56,7 @@ func (o *AdvisoryCrowdSec) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetCveOk() ([]string, bool) {
+func (o *AdvisorySandisk) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -65,7 +64,7 @@ func (o *AdvisoryCrowdSec) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasCve() bool {
+func (o *AdvisorySandisk) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -74,12 +73,12 @@ func (o *AdvisoryCrowdSec) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryCrowdSec) SetCve(v []string) {
+func (o *AdvisorySandisk) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetDateAdded() string {
+func (o *AdvisorySandisk) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -89,7 +88,7 @@ func (o *AdvisoryCrowdSec) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetDateAddedOk() (*string, bool) {
+func (o *AdvisorySandisk) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -97,7 +96,7 @@ func (o *AdvisoryCrowdSec) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasDateAdded() bool {
+func (o *AdvisorySandisk) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -106,76 +105,12 @@ func (o *AdvisoryCrowdSec) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryCrowdSec) SetDateAdded(v string) {
+func (o *AdvisorySandisk) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetEitw returns the Eitw field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetEitw() bool {
-	if o == nil || IsNil(o.Eitw) {
-		var ret bool
-		return ret
-	}
-	return *o.Eitw
-}
-
-// GetEitwOk returns a tuple with the Eitw field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetEitwOk() (*bool, bool) {
-	if o == nil || IsNil(o.Eitw) {
-		return nil, false
-	}
-	return o.Eitw, true
-}
-
-// HasEitw returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasEitw() bool {
-	if o != nil && !IsNil(o.Eitw) {
-		return true
-	}
-
-	return false
-}
-
-// SetEitw gets a reference to the given bool and assigns it to the Eitw field.
-func (o *AdvisoryCrowdSec) SetEitw(v bool) {
-	o.Eitw = &v
-}
-
-// GetFirstSeen returns the FirstSeen field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetFirstSeen() string {
-	if o == nil || IsNil(o.FirstSeen) {
-		var ret string
-		return ret
-	}
-	return *o.FirstSeen
-}
-
-// GetFirstSeenOk returns a tuple with the FirstSeen field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetFirstSeenOk() (*string, bool) {
-	if o == nil || IsNil(o.FirstSeen) {
-		return nil, false
-	}
-	return o.FirstSeen, true
-}
-
-// HasFirstSeen returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasFirstSeen() bool {
-	if o != nil && !IsNil(o.FirstSeen) {
-		return true
-	}
-
-	return false
-}
-
-// SetFirstSeen gets a reference to the given string and assigns it to the FirstSeen field.
-func (o *AdvisoryCrowdSec) SetFirstSeen(v string) {
-	o.FirstSeen = &v
-}
-
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetSummary() string {
+func (o *AdvisorySandisk) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -185,7 +120,7 @@ func (o *AdvisoryCrowdSec) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetSummaryOk() (*string, bool) {
+func (o *AdvisorySandisk) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -193,7 +128,7 @@ func (o *AdvisoryCrowdSec) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasSummary() bool {
+func (o *AdvisorySandisk) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -202,12 +137,12 @@ func (o *AdvisoryCrowdSec) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryCrowdSec) SetSummary(v string) {
+func (o *AdvisorySandisk) SetSummary(v string) {
 	o.Summary = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetTitle() string {
+func (o *AdvisorySandisk) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -217,7 +152,7 @@ func (o *AdvisoryCrowdSec) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetTitleOk() (*string, bool) {
+func (o *AdvisorySandisk) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -225,7 +160,7 @@ func (o *AdvisoryCrowdSec) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasTitle() bool {
+func (o *AdvisorySandisk) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -234,12 +169,44 @@ func (o *AdvisoryCrowdSec) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryCrowdSec) SetTitle(v string) {
+func (o *AdvisorySandisk) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisorySandisk) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySandisk) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisorySandisk) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisorySandisk) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryCrowdSec) GetUrl() string {
+func (o *AdvisorySandisk) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -249,7 +216,7 @@ func (o *AdvisoryCrowdSec) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCrowdSec) GetUrlOk() (*string, bool) {
+func (o *AdvisorySandisk) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -257,7 +224,7 @@ func (o *AdvisoryCrowdSec) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryCrowdSec) HasUrl() bool {
+func (o *AdvisorySandisk) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -266,11 +233,11 @@ func (o *AdvisoryCrowdSec) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryCrowdSec) SetUrl(v string) {
+func (o *AdvisorySandisk) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryCrowdSec) MarshalJSON() ([]byte, error) {
+func (o AdvisorySandisk) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -278,7 +245,7 @@ func (o AdvisoryCrowdSec) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryCrowdSec) ToMap() (map[string]interface{}, error) {
+func (o AdvisorySandisk) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
@@ -286,17 +253,14 @@ func (o AdvisoryCrowdSec) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.Eitw) {
-		toSerialize["eitw"] = o.Eitw
-	}
-	if !IsNil(o.FirstSeen) {
-		toSerialize["first_seen"] = o.FirstSeen
-	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	if !IsNil(o.Url) {
 		toSerialize["url"] = o.Url
@@ -304,38 +268,38 @@ func (o AdvisoryCrowdSec) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryCrowdSec struct {
-	value *AdvisoryCrowdSec
+type NullableAdvisorySandisk struct {
+	value *AdvisorySandisk
 	isSet bool
 }
 
-func (v NullableAdvisoryCrowdSec) Get() *AdvisoryCrowdSec {
+func (v NullableAdvisorySandisk) Get() *AdvisorySandisk {
 	return v.value
 }
 
-func (v *NullableAdvisoryCrowdSec) Set(val *AdvisoryCrowdSec) {
+func (v *NullableAdvisorySandisk) Set(val *AdvisorySandisk) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryCrowdSec) IsSet() bool {
+func (v NullableAdvisorySandisk) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryCrowdSec) Unset() {
+func (v *NullableAdvisorySandisk) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryCrowdSec(val *AdvisoryCrowdSec) *NullableAdvisoryCrowdSec {
-	return &NullableAdvisoryCrowdSec{value: val, isSet: true}
+func NewNullableAdvisorySandisk(val *AdvisorySandisk) *NullableAdvisorySandisk {
+	return &NullableAdvisorySandisk{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryCrowdSec) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisorySandisk) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryCrowdSec) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisorySandisk) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

@@ -15,70 +15,38 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisorySel type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisorySel{}
+// checks if the AdvisoryDFNCert type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryDFNCert{}
 
-// AdvisorySel struct for AdvisorySel
-type AdvisorySel struct {
-	Acknowledgement *string `json:"acknowledgement,omitempty"`
+// AdvisoryDFNCert struct for AdvisoryDFNCert
+type AdvisoryDFNCert struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Description *string `json:"description,omitempty"`
+	SummaryDe *string `json:"summary_de,omitempty"`
+	TitleDe *string `json:"title_de,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisorySel instantiates a new AdvisorySel object
+// NewAdvisoryDFNCert instantiates a new AdvisoryDFNCert object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisorySel() *AdvisorySel {
-	this := AdvisorySel{}
+func NewAdvisoryDFNCert() *AdvisoryDFNCert {
+	this := AdvisoryDFNCert{}
 	return &this
 }
 
-// NewAdvisorySelWithDefaults instantiates a new AdvisorySel object
+// NewAdvisoryDFNCertWithDefaults instantiates a new AdvisoryDFNCert object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisorySelWithDefaults() *AdvisorySel {
-	this := AdvisorySel{}
+func NewAdvisoryDFNCertWithDefaults() *AdvisoryDFNCert {
+	this := AdvisoryDFNCert{}
 	return &this
-}
-
-// GetAcknowledgement returns the Acknowledgement field value if set, zero value otherwise.
-func (o *AdvisorySel) GetAcknowledgement() string {
-	if o == nil || IsNil(o.Acknowledgement) {
-		var ret string
-		return ret
-	}
-	return *o.Acknowledgement
-}
-
-// GetAcknowledgementOk returns a tuple with the Acknowledgement field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisorySel) GetAcknowledgementOk() (*string, bool) {
-	if o == nil || IsNil(o.Acknowledgement) {
-		return nil, false
-	}
-	return o.Acknowledgement, true
-}
-
-// HasAcknowledgement returns a boolean if a field has been set.
-func (o *AdvisorySel) HasAcknowledgement() bool {
-	if o != nil && !IsNil(o.Acknowledgement) {
-		return true
-	}
-
-	return false
-}
-
-// SetAcknowledgement gets a reference to the given string and assigns it to the Acknowledgement field.
-func (o *AdvisorySel) SetAcknowledgement(v string) {
-	o.Acknowledgement = &v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisorySel) GetCve() []string {
+func (o *AdvisoryDFNCert) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -88,7 +56,7 @@ func (o *AdvisorySel) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisorySel) GetCveOk() ([]string, bool) {
+func (o *AdvisoryDFNCert) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -96,7 +64,7 @@ func (o *AdvisorySel) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisorySel) HasCve() bool {
+func (o *AdvisoryDFNCert) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -105,12 +73,12 @@ func (o *AdvisorySel) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisorySel) SetCve(v []string) {
+func (o *AdvisoryDFNCert) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisorySel) GetDateAdded() string {
+func (o *AdvisoryDFNCert) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -120,7 +88,7 @@ func (o *AdvisorySel) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisorySel) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryDFNCert) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -128,7 +96,7 @@ func (o *AdvisorySel) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisorySel) HasDateAdded() bool {
+func (o *AdvisoryDFNCert) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -137,44 +105,76 @@ func (o *AdvisorySel) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisorySel) SetDateAdded(v string) {
+func (o *AdvisoryDFNCert) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetDescription returns the Description field value if set, zero value otherwise.
-func (o *AdvisorySel) GetDescription() string {
-	if o == nil || IsNil(o.Description) {
+// GetSummaryDe returns the SummaryDe field value if set, zero value otherwise.
+func (o *AdvisoryDFNCert) GetSummaryDe() string {
+	if o == nil || IsNil(o.SummaryDe) {
 		var ret string
 		return ret
 	}
-	return *o.Description
+	return *o.SummaryDe
 }
 
-// GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
+// GetSummaryDeOk returns a tuple with the SummaryDe field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisorySel) GetDescriptionOk() (*string, bool) {
-	if o == nil || IsNil(o.Description) {
+func (o *AdvisoryDFNCert) GetSummaryDeOk() (*string, bool) {
+	if o == nil || IsNil(o.SummaryDe) {
 		return nil, false
 	}
-	return o.Description, true
+	return o.SummaryDe, true
 }
 
-// HasDescription returns a boolean if a field has been set.
-func (o *AdvisorySel) HasDescription() bool {
-	if o != nil && !IsNil(o.Description) {
+// HasSummaryDe returns a boolean if a field has been set.
+func (o *AdvisoryDFNCert) HasSummaryDe() bool {
+	if o != nil && !IsNil(o.SummaryDe) {
 		return true
 	}
 
 	return false
 }
 
-// SetDescription gets a reference to the given string and assigns it to the Description field.
-func (o *AdvisorySel) SetDescription(v string) {
-	o.Description = &v
+// SetSummaryDe gets a reference to the given string and assigns it to the SummaryDe field.
+func (o *AdvisoryDFNCert) SetSummaryDe(v string) {
+	o.SummaryDe = &v
+}
+
+// GetTitleDe returns the TitleDe field value if set, zero value otherwise.
+func (o *AdvisoryDFNCert) GetTitleDe() string {
+	if o == nil || IsNil(o.TitleDe) {
+		var ret string
+		return ret
+	}
+	return *o.TitleDe
+}
+
+// GetTitleDeOk returns a tuple with the TitleDe field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryDFNCert) GetTitleDeOk() (*string, bool) {
+	if o == nil || IsNil(o.TitleDe) {
+		return nil, false
+	}
+	return o.TitleDe, true
+}
+
+// HasTitleDe returns a boolean if a field has been set.
+func (o *AdvisoryDFNCert) HasTitleDe() bool {
+	if o != nil && !IsNil(o.TitleDe) {
+		return true
+	}
+
+	return false
+}
+
+// SetTitleDe gets a reference to the given string and assigns it to the TitleDe field.
+func (o *AdvisoryDFNCert) SetTitleDe(v string) {
+	o.TitleDe = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisorySel) GetUpdatedAt() string {
+func (o *AdvisoryDFNCert) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -184,7 +184,7 @@ func (o *AdvisorySel) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisorySel) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryDFNCert) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -192,7 +192,7 @@ func (o *AdvisorySel) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisorySel) HasUpdatedAt() bool {
+func (o *AdvisoryDFNCert) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -201,12 +201,12 @@ func (o *AdvisorySel) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisorySel) SetUpdatedAt(v string) {
+func (o *AdvisoryDFNCert) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisorySel) GetUrl() string {
+func (o *AdvisoryDFNCert) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -216,7 +216,7 @@ func (o *AdvisorySel) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisorySel) GetUrlOk() (*string, bool) {
+func (o *AdvisoryDFNCert) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -224,7 +224,7 @@ func (o *AdvisorySel) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisorySel) HasUrl() bool {
+func (o *AdvisoryDFNCert) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -233,11 +233,11 @@ func (o *AdvisorySel) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisorySel) SetUrl(v string) {
+func (o *AdvisoryDFNCert) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisorySel) MarshalJSON() ([]byte, error) {
+func (o AdvisoryDFNCert) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -245,19 +245,19 @@ func (o AdvisorySel) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisorySel) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryDFNCert) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Acknowledgement) {
-		toSerialize["acknowledgement"] = o.Acknowledgement
-	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.Description) {
-		toSerialize["description"] = o.Description
+	if !IsNil(o.SummaryDe) {
+		toSerialize["summary_de"] = o.SummaryDe
+	}
+	if !IsNil(o.TitleDe) {
+		toSerialize["title_de"] = o.TitleDe
 	}
 	if !IsNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
@@ -268,38 +268,38 @@ func (o AdvisorySel) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisorySel struct {
-	value *AdvisorySel
+type NullableAdvisoryDFNCert struct {
+	value *AdvisoryDFNCert
 	isSet bool
 }
 
-func (v NullableAdvisorySel) Get() *AdvisorySel {
+func (v NullableAdvisoryDFNCert) Get() *AdvisoryDFNCert {
 	return v.value
 }
 
-func (v *NullableAdvisorySel) Set(val *AdvisorySel) {
+func (v *NullableAdvisoryDFNCert) Set(val *AdvisoryDFNCert) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisorySel) IsSet() bool {
+func (v NullableAdvisoryDFNCert) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisorySel) Unset() {
+func (v *NullableAdvisoryDFNCert) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisorySel(val *AdvisorySel) *NullableAdvisorySel {
-	return &NullableAdvisorySel{value: val, isSet: true}
+func NewNullableAdvisoryDFNCert(val *AdvisoryDFNCert) *NullableAdvisoryDFNCert {
+	return &NullableAdvisoryDFNCert{value: val, isSet: true}
 }
 
-func (v NullableAdvisorySel) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryDFNCert) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisorySel) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryDFNCert) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

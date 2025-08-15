@@ -139,7 +139,9 @@ Method | HTTP request | Description
 [**IndexDebianPurlsGet**](IndicesAPI.md#IndexDebianPurlsGet) | **Get** /index/debian-purls | Return vulnerability data stored in index \&quot;debian-purls\&quot;
 [**IndexDellGet**](IndicesAPI.md#IndexDellGet) | **Get** /index/dell | Return vulnerability data stored in index \&quot;dell\&quot;
 [**IndexDeltaGet**](IndicesAPI.md#IndexDeltaGet) | **Get** /index/delta | Return vulnerability data stored in index \&quot;delta\&quot;
+[**IndexDfnCertGet**](IndicesAPI.md#IndexDfnCertGet) | **Get** /index/dfn-cert | Return vulnerability data stored in index \&quot;dfn-cert\&quot;
 [**IndexDjangoGet**](IndicesAPI.md#IndexDjangoGet) | **Get** /index/django | Return vulnerability data stored in index \&quot;django\&quot;
+[**IndexDlinkGet**](IndicesAPI.md#IndexDlinkGet) | **Get** /index/dlink | Return vulnerability data stored in index \&quot;dlink\&quot;
 [**IndexDnnGet**](IndicesAPI.md#IndexDnnGet) | **Get** /index/dnn | Return vulnerability data stored in index \&quot;dnn\&quot;
 [**IndexDotcmsGet**](IndicesAPI.md#IndexDotcmsGet) | **Get** /index/dotcms | Return vulnerability data stored in index \&quot;dotcms\&quot;
 [**IndexDragosGet**](IndicesAPI.md#IndexDragosGet) | **Get** /index/dragos | Return vulnerability data stored in index \&quot;dragos\&quot;
@@ -180,6 +182,7 @@ Method | HTTP request | Description
 [**IndexGeGasGet**](IndicesAPI.md#IndexGeGasGet) | **Get** /index/ge-gas | Return vulnerability data stored in index \&quot;ge-gas\&quot;
 [**IndexGeHealthcareGet**](IndicesAPI.md#IndexGeHealthcareGet) | **Get** /index/ge-healthcare | Return vulnerability data stored in index \&quot;ge-healthcare\&quot;
 [**IndexGemGet**](IndicesAPI.md#IndexGemGet) | **Get** /index/gem | Return vulnerability data stored in index \&quot;gem\&quot;
+[**IndexGenGet**](IndicesAPI.md#IndexGenGet) | **Get** /index/gen | Return vulnerability data stored in index \&quot;gen\&quot;
 [**IndexGenetecGet**](IndicesAPI.md#IndexGenetecGet) | **Get** /index/genetec | Return vulnerability data stored in index \&quot;genetec\&quot;
 [**IndexGigabyteGet**](IndicesAPI.md#IndexGigabyteGet) | **Get** /index/gigabyte | Return vulnerability data stored in index \&quot;gigabyte\&quot;
 [**IndexGiteeExploitsGet**](IndicesAPI.md#IndexGiteeExploitsGet) | **Get** /index/gitee-exploits | Return vulnerability data stored in index \&quot;gitee-exploits\&quot;
@@ -188,6 +191,7 @@ Method | HTTP request | Description
 [**IndexGitlabAdvisoriesCommunityGet**](IndicesAPI.md#IndexGitlabAdvisoriesCommunityGet) | **Get** /index/gitlab-advisories-community | Return vulnerability data stored in index \&quot;gitlab-advisories-community\&quot;
 [**IndexGitlabExploitsGet**](IndicesAPI.md#IndexGitlabExploitsGet) | **Get** /index/gitlab-exploits | Return vulnerability data stored in index \&quot;gitlab-exploits\&quot;
 [**IndexGlibcGet**](IndicesAPI.md#IndexGlibcGet) | **Get** /index/glibc | Return vulnerability data stored in index \&quot;glibc\&quot;
+[**IndexGmoCybersecurityGet**](IndicesAPI.md#IndexGmoCybersecurityGet) | **Get** /index/gmo-cybersecurity | Return vulnerability data stored in index \&quot;gmo-cybersecurity\&quot;
 [**IndexGnutlsGet**](IndicesAPI.md#IndexGnutlsGet) | **Get** /index/gnutls | Return vulnerability data stored in index \&quot;gnutls\&quot;
 [**IndexGoVulndbGet**](IndicesAPI.md#IndexGoVulndbGet) | **Get** /index/go-vulndb | Return vulnerability data stored in index \&quot;go-vulndb\&quot;
 [**IndexGolangGet**](IndicesAPI.md#IndexGolangGet) | **Get** /index/golang | Return vulnerability data stored in index \&quot;golang\&quot;
@@ -359,8 +363,10 @@ Method | HTTP request | Description
 [**IndexSaintGet**](IndicesAPI.md#IndexSaintGet) | **Get** /index/saint | Return vulnerability data stored in index \&quot;saint\&quot;
 [**IndexSalesforceGet**](IndicesAPI.md#IndexSalesforceGet) | **Get** /index/salesforce | Return vulnerability data stored in index \&quot;salesforce\&quot;
 [**IndexSambaGet**](IndicesAPI.md#IndexSambaGet) | **Get** /index/samba | Return vulnerability data stored in index \&quot;samba\&quot;
+[**IndexSandiskGet**](IndicesAPI.md#IndexSandiskGet) | **Get** /index/sandisk | Return vulnerability data stored in index \&quot;sandisk\&quot;
 [**IndexSapGet**](IndicesAPI.md#IndexSapGet) | **Get** /index/sap | Return vulnerability data stored in index \&quot;sap\&quot;
 [**IndexSchneiderElectricGet**](IndicesAPI.md#IndexSchneiderElectricGet) | **Get** /index/schneider-electric | Return vulnerability data stored in index \&quot;schneider-electric\&quot;
+[**IndexSchutzwerkGet**](IndicesAPI.md#IndexSchutzwerkGet) | **Get** /index/schutzwerk | Return vulnerability data stored in index \&quot;schutzwerk\&quot;
 [**IndexSecConsultGet**](IndicesAPI.md#IndexSecConsultGet) | **Get** /index/sec-consult | Return vulnerability data stored in index \&quot;sec-consult\&quot;
 [**IndexSecuritylabGet**](IndicesAPI.md#IndexSecuritylabGet) | **Get** /index/securitylab | Return vulnerability data stored in index \&quot;securitylab\&quot;
 [**IndexSeebugGet**](IndicesAPI.md#IndexSeebugGet) | **Get** /index/seebug | Return vulnerability data stored in index \&quot;seebug\&quot;
@@ -14772,6 +14778,112 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## IndexDfnCertGet
+
+> RenderResponseWithMetadataArrayAdvisoryDFNCertPaginatePagination IndexDfnCertGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+
+Return vulnerability data stored in index \"dfn-cert\"
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+)
+
+func main() {
+	page := int32(56) // int32 | set the page number of the response (optional)
+	limit := int32(56) // int32 | limit the number of findings in the response (optional)
+	cursor := "cursor_example" // string | continue server-side paging using a cursor id (optional)
+	startCursor := "startCursor_example" // string | request server-side paging (optional)
+	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
+	alias := "alias_example" // string | Specify a vulnerability alias to search with. (optional)
+	iava := "iava_example" // string | Specify an IAVA ID to search with. (optional)
+	jvndb := "jvndb_example" // string | Specify a JVNDB ID to search with. (optional)
+	ilvn := "ilvn_example" // string | Specify an ILVN ID to search with. (optional)
+	threatActor := "threatActor_example" // string | Specify a threat actor name to search with. (optional)
+	mitreId := "mitreId_example" // string | Specify a MITRE ID to search with. (optional)
+	mispId := "mispId_example" // string | Specify a MISP ID to search with. (optional)
+	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
+	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
+	published := "published_example" // string | Specify a published date (optional)
+	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
+	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
+	lastModStartDate := "lastModStartDate_example" // string | Specify a starting last modified date to filter with. (optional)
+	lastModEndDate := "lastModEndDate_example" // string | Specify an ending last modified date to filter with. (optional)
+	pubStartDate := "pubStartDate_example" // string | Specify a starting published date to filter with. (optional)
+	pubEndDate := "pubEndDate_example" // string | Specify an ending published date to filter with. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IndicesAPI.IndexDfnCertGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexDfnCertGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IndexDfnCertGet`: RenderResponseWithMetadataArrayAdvisoryDFNCertPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexDfnCertGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIndexDfnCertGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | set the page number of the response | 
+ **limit** | **int32** | limit the number of findings in the response | 
+ **cursor** | **string** | continue server-side paging using a cursor id | 
+ **startCursor** | **string** | request server-side paging | 
+ **cve** | **string** | Specify a CVE ID to search with. | 
+ **alias** | **string** | Specify a vulnerability alias to search with. | 
+ **iava** | **string** | Specify an IAVA ID to search with. | 
+ **jvndb** | **string** | Specify a JVNDB ID to search with. | 
+ **ilvn** | **string** | Specify an ILVN ID to search with. | 
+ **threatActor** | **string** | Specify a threat actor name to search with. | 
+ **mitreId** | **string** | Specify a MITRE ID to search with. | 
+ **mispId** | **string** | Specify a MISP ID to search with. | 
+ **ransomware** | **string** | Specify a ransomeware family name to search with. | 
+ **botnet** | **string** | Specify a botnet name to search with. | 
+ **published** | **string** | Specify a published date | 
+ **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
+ **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
+ **lastModStartDate** | **string** | Specify a starting last modified date to filter with. | 
+ **lastModEndDate** | **string** | Specify an ending last modified date to filter with. | 
+ **pubStartDate** | **string** | Specify a starting published date to filter with. | 
+ **pubEndDate** | **string** | Specify an ending published date to filter with. | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayAdvisoryDFNCertPaginatePagination**](RenderResponseWithMetadataArrayAdvisoryDFNCertPaginatePagination.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## IndexDjangoGet
 
 > RenderResponseWithMetadataArrayAdvisoryDjangoPaginatePagination IndexDjangoGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
@@ -14863,6 +14975,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RenderResponseWithMetadataArrayAdvisoryDjangoPaginatePagination**](RenderResponseWithMetadataArrayAdvisoryDjangoPaginatePagination.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IndexDlinkGet
+
+> RenderResponseWithMetadataArrayAdvisoryDLinkPaginatePagination IndexDlinkGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+
+Return vulnerability data stored in index \"dlink\"
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+)
+
+func main() {
+	page := int32(56) // int32 | set the page number of the response (optional)
+	limit := int32(56) // int32 | limit the number of findings in the response (optional)
+	cursor := "cursor_example" // string | continue server-side paging using a cursor id (optional)
+	startCursor := "startCursor_example" // string | request server-side paging (optional)
+	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
+	alias := "alias_example" // string | Specify a vulnerability alias to search with. (optional)
+	iava := "iava_example" // string | Specify an IAVA ID to search with. (optional)
+	jvndb := "jvndb_example" // string | Specify a JVNDB ID to search with. (optional)
+	ilvn := "ilvn_example" // string | Specify an ILVN ID to search with. (optional)
+	threatActor := "threatActor_example" // string | Specify a threat actor name to search with. (optional)
+	mitreId := "mitreId_example" // string | Specify a MITRE ID to search with. (optional)
+	mispId := "mispId_example" // string | Specify a MISP ID to search with. (optional)
+	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
+	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
+	published := "published_example" // string | Specify a published date (optional)
+	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
+	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
+	lastModStartDate := "lastModStartDate_example" // string | Specify a starting last modified date to filter with. (optional)
+	lastModEndDate := "lastModEndDate_example" // string | Specify an ending last modified date to filter with. (optional)
+	pubStartDate := "pubStartDate_example" // string | Specify a starting published date to filter with. (optional)
+	pubEndDate := "pubEndDate_example" // string | Specify an ending published date to filter with. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IndicesAPI.IndexDlinkGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexDlinkGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IndexDlinkGet`: RenderResponseWithMetadataArrayAdvisoryDLinkPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexDlinkGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIndexDlinkGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | set the page number of the response | 
+ **limit** | **int32** | limit the number of findings in the response | 
+ **cursor** | **string** | continue server-side paging using a cursor id | 
+ **startCursor** | **string** | request server-side paging | 
+ **cve** | **string** | Specify a CVE ID to search with. | 
+ **alias** | **string** | Specify a vulnerability alias to search with. | 
+ **iava** | **string** | Specify an IAVA ID to search with. | 
+ **jvndb** | **string** | Specify a JVNDB ID to search with. | 
+ **ilvn** | **string** | Specify an ILVN ID to search with. | 
+ **threatActor** | **string** | Specify a threat actor name to search with. | 
+ **mitreId** | **string** | Specify a MITRE ID to search with. | 
+ **mispId** | **string** | Specify a MISP ID to search with. | 
+ **ransomware** | **string** | Specify a ransomeware family name to search with. | 
+ **botnet** | **string** | Specify a botnet name to search with. | 
+ **published** | **string** | Specify a published date | 
+ **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
+ **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
+ **lastModStartDate** | **string** | Specify a starting last modified date to filter with. | 
+ **lastModEndDate** | **string** | Specify an ending last modified date to filter with. | 
+ **pubStartDate** | **string** | Specify a starting published date to filter with. | 
+ **pubEndDate** | **string** | Specify an ending published date to filter with. | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayAdvisoryDLinkPaginatePagination**](RenderResponseWithMetadataArrayAdvisoryDLinkPaginatePagination.md)
 
 ### Authorization
 
@@ -19118,6 +19336,112 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## IndexGenGet
+
+> RenderResponseWithMetadataArrayAdvisoryGenPaginatePagination IndexGenGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+
+Return vulnerability data stored in index \"gen\"
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+)
+
+func main() {
+	page := int32(56) // int32 | set the page number of the response (optional)
+	limit := int32(56) // int32 | limit the number of findings in the response (optional)
+	cursor := "cursor_example" // string | continue server-side paging using a cursor id (optional)
+	startCursor := "startCursor_example" // string | request server-side paging (optional)
+	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
+	alias := "alias_example" // string | Specify a vulnerability alias to search with. (optional)
+	iava := "iava_example" // string | Specify an IAVA ID to search with. (optional)
+	jvndb := "jvndb_example" // string | Specify a JVNDB ID to search with. (optional)
+	ilvn := "ilvn_example" // string | Specify an ILVN ID to search with. (optional)
+	threatActor := "threatActor_example" // string | Specify a threat actor name to search with. (optional)
+	mitreId := "mitreId_example" // string | Specify a MITRE ID to search with. (optional)
+	mispId := "mispId_example" // string | Specify a MISP ID to search with. (optional)
+	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
+	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
+	published := "published_example" // string | Specify a published date (optional)
+	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
+	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
+	lastModStartDate := "lastModStartDate_example" // string | Specify a starting last modified date to filter with. (optional)
+	lastModEndDate := "lastModEndDate_example" // string | Specify an ending last modified date to filter with. (optional)
+	pubStartDate := "pubStartDate_example" // string | Specify a starting published date to filter with. (optional)
+	pubEndDate := "pubEndDate_example" // string | Specify an ending published date to filter with. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IndicesAPI.IndexGenGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexGenGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IndexGenGet`: RenderResponseWithMetadataArrayAdvisoryGenPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexGenGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIndexGenGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | set the page number of the response | 
+ **limit** | **int32** | limit the number of findings in the response | 
+ **cursor** | **string** | continue server-side paging using a cursor id | 
+ **startCursor** | **string** | request server-side paging | 
+ **cve** | **string** | Specify a CVE ID to search with. | 
+ **alias** | **string** | Specify a vulnerability alias to search with. | 
+ **iava** | **string** | Specify an IAVA ID to search with. | 
+ **jvndb** | **string** | Specify a JVNDB ID to search with. | 
+ **ilvn** | **string** | Specify an ILVN ID to search with. | 
+ **threatActor** | **string** | Specify a threat actor name to search with. | 
+ **mitreId** | **string** | Specify a MITRE ID to search with. | 
+ **mispId** | **string** | Specify a MISP ID to search with. | 
+ **ransomware** | **string** | Specify a ransomeware family name to search with. | 
+ **botnet** | **string** | Specify a botnet name to search with. | 
+ **published** | **string** | Specify a published date | 
+ **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
+ **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
+ **lastModStartDate** | **string** | Specify a starting last modified date to filter with. | 
+ **lastModEndDate** | **string** | Specify an ending last modified date to filter with. | 
+ **pubStartDate** | **string** | Specify a starting published date to filter with. | 
+ **pubEndDate** | **string** | Specify an ending published date to filter with. | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayAdvisoryGenPaginatePagination**](RenderResponseWithMetadataArrayAdvisoryGenPaginatePagination.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## IndexGenetecGet
 
 > RenderResponseWithMetadataArrayAdvisoryGenetecPaginatePagination IndexGenetecGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
@@ -19951,6 +20275,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RenderResponseWithMetadataArrayAdvisoryGlibcPaginatePagination**](RenderResponseWithMetadataArrayAdvisoryGlibcPaginatePagination.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IndexGmoCybersecurityGet
+
+> RenderResponseWithMetadataArrayAdvisoryGMOCyberSecurityPaginatePagination IndexGmoCybersecurityGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+
+Return vulnerability data stored in index \"gmo-cybersecurity\"
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+)
+
+func main() {
+	page := int32(56) // int32 | set the page number of the response (optional)
+	limit := int32(56) // int32 | limit the number of findings in the response (optional)
+	cursor := "cursor_example" // string | continue server-side paging using a cursor id (optional)
+	startCursor := "startCursor_example" // string | request server-side paging (optional)
+	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
+	alias := "alias_example" // string | Specify a vulnerability alias to search with. (optional)
+	iava := "iava_example" // string | Specify an IAVA ID to search with. (optional)
+	jvndb := "jvndb_example" // string | Specify a JVNDB ID to search with. (optional)
+	ilvn := "ilvn_example" // string | Specify an ILVN ID to search with. (optional)
+	threatActor := "threatActor_example" // string | Specify a threat actor name to search with. (optional)
+	mitreId := "mitreId_example" // string | Specify a MITRE ID to search with. (optional)
+	mispId := "mispId_example" // string | Specify a MISP ID to search with. (optional)
+	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
+	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
+	published := "published_example" // string | Specify a published date (optional)
+	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
+	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
+	lastModStartDate := "lastModStartDate_example" // string | Specify a starting last modified date to filter with. (optional)
+	lastModEndDate := "lastModEndDate_example" // string | Specify an ending last modified date to filter with. (optional)
+	pubStartDate := "pubStartDate_example" // string | Specify a starting published date to filter with. (optional)
+	pubEndDate := "pubEndDate_example" // string | Specify an ending published date to filter with. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IndicesAPI.IndexGmoCybersecurityGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexGmoCybersecurityGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IndexGmoCybersecurityGet`: RenderResponseWithMetadataArrayAdvisoryGMOCyberSecurityPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexGmoCybersecurityGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIndexGmoCybersecurityGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | set the page number of the response | 
+ **limit** | **int32** | limit the number of findings in the response | 
+ **cursor** | **string** | continue server-side paging using a cursor id | 
+ **startCursor** | **string** | request server-side paging | 
+ **cve** | **string** | Specify a CVE ID to search with. | 
+ **alias** | **string** | Specify a vulnerability alias to search with. | 
+ **iava** | **string** | Specify an IAVA ID to search with. | 
+ **jvndb** | **string** | Specify a JVNDB ID to search with. | 
+ **ilvn** | **string** | Specify an ILVN ID to search with. | 
+ **threatActor** | **string** | Specify a threat actor name to search with. | 
+ **mitreId** | **string** | Specify a MITRE ID to search with. | 
+ **mispId** | **string** | Specify a MISP ID to search with. | 
+ **ransomware** | **string** | Specify a ransomeware family name to search with. | 
+ **botnet** | **string** | Specify a botnet name to search with. | 
+ **published** | **string** | Specify a published date | 
+ **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
+ **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
+ **lastModStartDate** | **string** | Specify a starting last modified date to filter with. | 
+ **lastModEndDate** | **string** | Specify an ending last modified date to filter with. | 
+ **pubStartDate** | **string** | Specify a starting published date to filter with. | 
+ **pubEndDate** | **string** | Specify an ending published date to filter with. | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayAdvisoryGMOCyberSecurityPaginatePagination**](RenderResponseWithMetadataArrayAdvisoryGMOCyberSecurityPaginatePagination.md)
 
 ### Authorization
 
@@ -38132,6 +38562,112 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## IndexSandiskGet
+
+> RenderResponseWithMetadataArrayAdvisorySandiskPaginatePagination IndexSandiskGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+
+Return vulnerability data stored in index \"sandisk\"
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+)
+
+func main() {
+	page := int32(56) // int32 | set the page number of the response (optional)
+	limit := int32(56) // int32 | limit the number of findings in the response (optional)
+	cursor := "cursor_example" // string | continue server-side paging using a cursor id (optional)
+	startCursor := "startCursor_example" // string | request server-side paging (optional)
+	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
+	alias := "alias_example" // string | Specify a vulnerability alias to search with. (optional)
+	iava := "iava_example" // string | Specify an IAVA ID to search with. (optional)
+	jvndb := "jvndb_example" // string | Specify a JVNDB ID to search with. (optional)
+	ilvn := "ilvn_example" // string | Specify an ILVN ID to search with. (optional)
+	threatActor := "threatActor_example" // string | Specify a threat actor name to search with. (optional)
+	mitreId := "mitreId_example" // string | Specify a MITRE ID to search with. (optional)
+	mispId := "mispId_example" // string | Specify a MISP ID to search with. (optional)
+	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
+	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
+	published := "published_example" // string | Specify a published date (optional)
+	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
+	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
+	lastModStartDate := "lastModStartDate_example" // string | Specify a starting last modified date to filter with. (optional)
+	lastModEndDate := "lastModEndDate_example" // string | Specify an ending last modified date to filter with. (optional)
+	pubStartDate := "pubStartDate_example" // string | Specify a starting published date to filter with. (optional)
+	pubEndDate := "pubEndDate_example" // string | Specify an ending published date to filter with. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IndicesAPI.IndexSandiskGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexSandiskGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IndexSandiskGet`: RenderResponseWithMetadataArrayAdvisorySandiskPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexSandiskGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIndexSandiskGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | set the page number of the response | 
+ **limit** | **int32** | limit the number of findings in the response | 
+ **cursor** | **string** | continue server-side paging using a cursor id | 
+ **startCursor** | **string** | request server-side paging | 
+ **cve** | **string** | Specify a CVE ID to search with. | 
+ **alias** | **string** | Specify a vulnerability alias to search with. | 
+ **iava** | **string** | Specify an IAVA ID to search with. | 
+ **jvndb** | **string** | Specify a JVNDB ID to search with. | 
+ **ilvn** | **string** | Specify an ILVN ID to search with. | 
+ **threatActor** | **string** | Specify a threat actor name to search with. | 
+ **mitreId** | **string** | Specify a MITRE ID to search with. | 
+ **mispId** | **string** | Specify a MISP ID to search with. | 
+ **ransomware** | **string** | Specify a ransomeware family name to search with. | 
+ **botnet** | **string** | Specify a botnet name to search with. | 
+ **published** | **string** | Specify a published date | 
+ **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
+ **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
+ **lastModStartDate** | **string** | Specify a starting last modified date to filter with. | 
+ **lastModEndDate** | **string** | Specify an ending last modified date to filter with. | 
+ **pubStartDate** | **string** | Specify a starting published date to filter with. | 
+ **pubEndDate** | **string** | Specify an ending published date to filter with. | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayAdvisorySandiskPaginatePagination**](RenderResponseWithMetadataArrayAdvisorySandiskPaginatePagination.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## IndexSapGet
 
 > RenderResponseWithMetadataArrayAdvisorySAPPaginatePagination IndexSapGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
@@ -38329,6 +38865,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RenderResponseWithMetadataArrayAdvisorySchneiderElectricAdvisoryPaginatePagination**](RenderResponseWithMetadataArrayAdvisorySchneiderElectricAdvisoryPaginatePagination.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## IndexSchutzwerkGet
+
+> RenderResponseWithMetadataArrayAdvisorySchutzwerkPaginatePagination IndexSchutzwerkGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+
+Return vulnerability data stored in index \"schutzwerk\"
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+)
+
+func main() {
+	page := int32(56) // int32 | set the page number of the response (optional)
+	limit := int32(56) // int32 | limit the number of findings in the response (optional)
+	cursor := "cursor_example" // string | continue server-side paging using a cursor id (optional)
+	startCursor := "startCursor_example" // string | request server-side paging (optional)
+	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
+	alias := "alias_example" // string | Specify a vulnerability alias to search with. (optional)
+	iava := "iava_example" // string | Specify an IAVA ID to search with. (optional)
+	jvndb := "jvndb_example" // string | Specify a JVNDB ID to search with. (optional)
+	ilvn := "ilvn_example" // string | Specify an ILVN ID to search with. (optional)
+	threatActor := "threatActor_example" // string | Specify a threat actor name to search with. (optional)
+	mitreId := "mitreId_example" // string | Specify a MITRE ID to search with. (optional)
+	mispId := "mispId_example" // string | Specify a MISP ID to search with. (optional)
+	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
+	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
+	published := "published_example" // string | Specify a published date (optional)
+	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
+	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
+	lastModStartDate := "lastModStartDate_example" // string | Specify a starting last modified date to filter with. (optional)
+	lastModEndDate := "lastModEndDate_example" // string | Specify an ending last modified date to filter with. (optional)
+	pubStartDate := "pubStartDate_example" // string | Specify a starting published date to filter with. (optional)
+	pubEndDate := "pubEndDate_example" // string | Specify an ending published date to filter with. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.IndicesAPI.IndexSchutzwerkGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexSchutzwerkGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `IndexSchutzwerkGet`: RenderResponseWithMetadataArrayAdvisorySchutzwerkPaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexSchutzwerkGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiIndexSchutzwerkGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | set the page number of the response | 
+ **limit** | **int32** | limit the number of findings in the response | 
+ **cursor** | **string** | continue server-side paging using a cursor id | 
+ **startCursor** | **string** | request server-side paging | 
+ **cve** | **string** | Specify a CVE ID to search with. | 
+ **alias** | **string** | Specify a vulnerability alias to search with. | 
+ **iava** | **string** | Specify an IAVA ID to search with. | 
+ **jvndb** | **string** | Specify a JVNDB ID to search with. | 
+ **ilvn** | **string** | Specify an ILVN ID to search with. | 
+ **threatActor** | **string** | Specify a threat actor name to search with. | 
+ **mitreId** | **string** | Specify a MITRE ID to search with. | 
+ **mispId** | **string** | Specify a MISP ID to search with. | 
+ **ransomware** | **string** | Specify a ransomeware family name to search with. | 
+ **botnet** | **string** | Specify a botnet name to search with. | 
+ **published** | **string** | Specify a published date | 
+ **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
+ **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
+ **lastModStartDate** | **string** | Specify a starting last modified date to filter with. | 
+ **lastModEndDate** | **string** | Specify an ending last modified date to filter with. | 
+ **pubStartDate** | **string** | Specify a starting published date to filter with. | 
+ **pubEndDate** | **string** | Specify an ending published date to filter with. | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayAdvisorySchutzwerkPaginatePagination**](RenderResponseWithMetadataArrayAdvisorySchutzwerkPaginatePagination.md)
 
 ### Authorization
 

@@ -1,182 +1,182 @@
-# AdvisorySel
+# AdvisoryDFNCert
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Acknowledgement** | Pointer to **string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
+**SummaryDe** | Pointer to **string** |  | [optional] 
+**TitleDe** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
-### NewAdvisorySel
+### NewAdvisoryDFNCert
 
-`func NewAdvisorySel() *AdvisorySel`
+`func NewAdvisoryDFNCert() *AdvisoryDFNCert`
 
-NewAdvisorySel instantiates a new AdvisorySel object
+NewAdvisoryDFNCert instantiates a new AdvisoryDFNCert object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewAdvisorySelWithDefaults
+### NewAdvisoryDFNCertWithDefaults
 
-`func NewAdvisorySelWithDefaults() *AdvisorySel`
+`func NewAdvisoryDFNCertWithDefaults() *AdvisoryDFNCert`
 
-NewAdvisorySelWithDefaults instantiates a new AdvisorySel object
+NewAdvisoryDFNCertWithDefaults instantiates a new AdvisoryDFNCert object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAcknowledgement
-
-`func (o *AdvisorySel) GetAcknowledgement() string`
-
-GetAcknowledgement returns the Acknowledgement field if non-nil, zero value otherwise.
-
-### GetAcknowledgementOk
-
-`func (o *AdvisorySel) GetAcknowledgementOk() (*string, bool)`
-
-GetAcknowledgementOk returns a tuple with the Acknowledgement field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAcknowledgement
-
-`func (o *AdvisorySel) SetAcknowledgement(v string)`
-
-SetAcknowledgement sets Acknowledgement field to given value.
-
-### HasAcknowledgement
-
-`func (o *AdvisorySel) HasAcknowledgement() bool`
-
-HasAcknowledgement returns a boolean if a field has been set.
-
 ### GetCve
 
-`func (o *AdvisorySel) GetCve() []string`
+`func (o *AdvisoryDFNCert) GetCve() []string`
 
 GetCve returns the Cve field if non-nil, zero value otherwise.
 
 ### GetCveOk
 
-`func (o *AdvisorySel) GetCveOk() (*[]string, bool)`
+`func (o *AdvisoryDFNCert) GetCveOk() (*[]string, bool)`
 
 GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCve
 
-`func (o *AdvisorySel) SetCve(v []string)`
+`func (o *AdvisoryDFNCert) SetCve(v []string)`
 
 SetCve sets Cve field to given value.
 
 ### HasCve
 
-`func (o *AdvisorySel) HasCve() bool`
+`func (o *AdvisoryDFNCert) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 
-`func (o *AdvisorySel) GetDateAdded() string`
+`func (o *AdvisoryDFNCert) GetDateAdded() string`
 
 GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
 
 ### GetDateAddedOk
 
-`func (o *AdvisorySel) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisoryDFNCert) GetDateAddedOk() (*string, bool)`
 
 GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateAdded
 
-`func (o *AdvisorySel) SetDateAdded(v string)`
+`func (o *AdvisoryDFNCert) SetDateAdded(v string)`
 
 SetDateAdded sets DateAdded field to given value.
 
 ### HasDateAdded
 
-`func (o *AdvisorySel) HasDateAdded() bool`
+`func (o *AdvisoryDFNCert) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
 
-### GetDescription
+### GetSummaryDe
 
-`func (o *AdvisorySel) GetDescription() string`
+`func (o *AdvisoryDFNCert) GetSummaryDe() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetSummaryDe returns the SummaryDe field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetSummaryDeOk
 
-`func (o *AdvisorySel) GetDescriptionOk() (*string, bool)`
+`func (o *AdvisoryDFNCert) GetSummaryDeOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetSummaryDeOk returns a tuple with the SummaryDe field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSummaryDe
 
-`func (o *AdvisorySel) SetDescription(v string)`
+`func (o *AdvisoryDFNCert) SetSummaryDe(v string)`
 
-SetDescription sets Description field to given value.
+SetSummaryDe sets SummaryDe field to given value.
 
-### HasDescription
+### HasSummaryDe
 
-`func (o *AdvisorySel) HasDescription() bool`
+`func (o *AdvisoryDFNCert) HasSummaryDe() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasSummaryDe returns a boolean if a field has been set.
+
+### GetTitleDe
+
+`func (o *AdvisoryDFNCert) GetTitleDe() string`
+
+GetTitleDe returns the TitleDe field if non-nil, zero value otherwise.
+
+### GetTitleDeOk
+
+`func (o *AdvisoryDFNCert) GetTitleDeOk() (*string, bool)`
+
+GetTitleDeOk returns a tuple with the TitleDe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitleDe
+
+`func (o *AdvisoryDFNCert) SetTitleDe(v string)`
+
+SetTitleDe sets TitleDe field to given value.
+
+### HasTitleDe
+
+`func (o *AdvisoryDFNCert) HasTitleDe() bool`
+
+HasTitleDe returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 
-`func (o *AdvisorySel) GetUpdatedAt() string`
+`func (o *AdvisoryDFNCert) GetUpdatedAt() string`
 
 GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
 ### GetUpdatedAtOk
 
-`func (o *AdvisorySel) GetUpdatedAtOk() (*string, bool)`
+`func (o *AdvisoryDFNCert) GetUpdatedAtOk() (*string, bool)`
 
 GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdatedAt
 
-`func (o *AdvisorySel) SetUpdatedAt(v string)`
+`func (o *AdvisoryDFNCert) SetUpdatedAt(v string)`
 
 SetUpdatedAt sets UpdatedAt field to given value.
 
 ### HasUpdatedAt
 
-`func (o *AdvisorySel) HasUpdatedAt() bool`
+`func (o *AdvisoryDFNCert) HasUpdatedAt() bool`
 
 HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
-`func (o *AdvisorySel) GetUrl() string`
+`func (o *AdvisoryDFNCert) GetUrl() string`
 
 GetUrl returns the Url field if non-nil, zero value otherwise.
 
 ### GetUrlOk
 
-`func (o *AdvisorySel) GetUrlOk() (*string, bool)`
+`func (o *AdvisoryDFNCert) GetUrlOk() (*string, bool)`
 
 GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUrl
 
-`func (o *AdvisorySel) SetUrl(v string)`
+`func (o *AdvisoryDFNCert) SetUrl(v string)`
 
 SetUrl sets Url field to given value.
 
 ### HasUrl
 
-`func (o *AdvisorySel) HasUrl() bool`
+`func (o *AdvisoryDFNCert) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
 

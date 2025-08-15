@@ -20,13 +20,18 @@ var _ MappedNullable = &AdvisoryCertBE{}
 
 // AdvisoryCertBE struct for AdvisoryCertBE
 type AdvisoryCertBE struct {
+	AffectedSoftware []string `json:"affected_software,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Id *string `json:"id,omitempty"`
+	Mitigation *string `json:"mitigation,omitempty"`
 	References []string `json:"references,omitempty"`
+	Risk *string `json:"risk,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
+	VulnerabilityType []string `json:"vulnerability_type,omitempty"`
 }
 
 // NewAdvisoryCertBE instantiates a new AdvisoryCertBE object
@@ -44,6 +49,38 @@ func NewAdvisoryCertBE() *AdvisoryCertBE {
 func NewAdvisoryCertBEWithDefaults() *AdvisoryCertBE {
 	this := AdvisoryCertBE{}
 	return &this
+}
+
+// GetAffectedSoftware returns the AffectedSoftware field value if set, zero value otherwise.
+func (o *AdvisoryCertBE) GetAffectedSoftware() []string {
+	if o == nil || IsNil(o.AffectedSoftware) {
+		var ret []string
+		return ret
+	}
+	return o.AffectedSoftware
+}
+
+// GetAffectedSoftwareOk returns a tuple with the AffectedSoftware field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCertBE) GetAffectedSoftwareOk() ([]string, bool) {
+	if o == nil || IsNil(o.AffectedSoftware) {
+		return nil, false
+	}
+	return o.AffectedSoftware, true
+}
+
+// HasAffectedSoftware returns a boolean if a field has been set.
+func (o *AdvisoryCertBE) HasAffectedSoftware() bool {
+	if o != nil && !IsNil(o.AffectedSoftware) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffectedSoftware gets a reference to the given []string and assigns it to the AffectedSoftware field.
+func (o *AdvisoryCertBE) SetAffectedSoftware(v []string) {
+	o.AffectedSoftware = v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
@@ -142,6 +179,38 @@ func (o *AdvisoryCertBE) SetId(v string) {
 	o.Id = &v
 }
 
+// GetMitigation returns the Mitigation field value if set, zero value otherwise.
+func (o *AdvisoryCertBE) GetMitigation() string {
+	if o == nil || IsNil(o.Mitigation) {
+		var ret string
+		return ret
+	}
+	return *o.Mitigation
+}
+
+// GetMitigationOk returns a tuple with the Mitigation field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCertBE) GetMitigationOk() (*string, bool) {
+	if o == nil || IsNil(o.Mitigation) {
+		return nil, false
+	}
+	return o.Mitigation, true
+}
+
+// HasMitigation returns a boolean if a field has been set.
+func (o *AdvisoryCertBE) HasMitigation() bool {
+	if o != nil && !IsNil(o.Mitigation) {
+		return true
+	}
+
+	return false
+}
+
+// SetMitigation gets a reference to the given string and assigns it to the Mitigation field.
+func (o *AdvisoryCertBE) SetMitigation(v string) {
+	o.Mitigation = &v
+}
+
 // GetReferences returns the References field value if set, zero value otherwise.
 func (o *AdvisoryCertBE) GetReferences() []string {
 	if o == nil || IsNil(o.References) {
@@ -172,6 +241,38 @@ func (o *AdvisoryCertBE) HasReferences() bool {
 // SetReferences gets a reference to the given []string and assigns it to the References field.
 func (o *AdvisoryCertBE) SetReferences(v []string) {
 	o.References = v
+}
+
+// GetRisk returns the Risk field value if set, zero value otherwise.
+func (o *AdvisoryCertBE) GetRisk() string {
+	if o == nil || IsNil(o.Risk) {
+		var ret string
+		return ret
+	}
+	return *o.Risk
+}
+
+// GetRiskOk returns a tuple with the Risk field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCertBE) GetRiskOk() (*string, bool) {
+	if o == nil || IsNil(o.Risk) {
+		return nil, false
+	}
+	return o.Risk, true
+}
+
+// HasRisk returns a boolean if a field has been set.
+func (o *AdvisoryCertBE) HasRisk() bool {
+	if o != nil && !IsNil(o.Risk) {
+		return true
+	}
+
+	return false
+}
+
+// SetRisk gets a reference to the given string and assigns it to the Risk field.
+func (o *AdvisoryCertBE) SetRisk(v string) {
+	o.Risk = &v
 }
 
 // GetSummary returns the Summary field value if set, zero value otherwise.
@@ -238,6 +339,38 @@ func (o *AdvisoryCertBE) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryCertBE) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCertBE) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryCertBE) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryCertBE) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *AdvisoryCertBE) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
@@ -270,6 +403,38 @@ func (o *AdvisoryCertBE) SetUrl(v string) {
 	o.Url = &v
 }
 
+// GetVulnerabilityType returns the VulnerabilityType field value if set, zero value otherwise.
+func (o *AdvisoryCertBE) GetVulnerabilityType() []string {
+	if o == nil || IsNil(o.VulnerabilityType) {
+		var ret []string
+		return ret
+	}
+	return o.VulnerabilityType
+}
+
+// GetVulnerabilityTypeOk returns a tuple with the VulnerabilityType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCertBE) GetVulnerabilityTypeOk() ([]string, bool) {
+	if o == nil || IsNil(o.VulnerabilityType) {
+		return nil, false
+	}
+	return o.VulnerabilityType, true
+}
+
+// HasVulnerabilityType returns a boolean if a field has been set.
+func (o *AdvisoryCertBE) HasVulnerabilityType() bool {
+	if o != nil && !IsNil(o.VulnerabilityType) {
+		return true
+	}
+
+	return false
+}
+
+// SetVulnerabilityType gets a reference to the given []string and assigns it to the VulnerabilityType field.
+func (o *AdvisoryCertBE) SetVulnerabilityType(v []string) {
+	o.VulnerabilityType = v
+}
+
 func (o AdvisoryCertBE) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -280,6 +445,9 @@ func (o AdvisoryCertBE) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryCertBE) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AffectedSoftware) {
+		toSerialize["affected_software"] = o.AffectedSoftware
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
@@ -289,8 +457,14 @@ func (o AdvisoryCertBE) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
+	if !IsNil(o.Mitigation) {
+		toSerialize["mitigation"] = o.Mitigation
+	}
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References
+	}
+	if !IsNil(o.Risk) {
+		toSerialize["risk"] = o.Risk
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
@@ -298,8 +472,14 @@ func (o AdvisoryCertBE) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
 	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
+	}
 	if !IsNil(o.Url) {
 		toSerialize["url"] = o.Url
+	}
+	if !IsNil(o.VulnerabilityType) {
+		toSerialize["vulnerability_type"] = o.VulnerabilityType
 	}
 	return toSerialize, nil
 }

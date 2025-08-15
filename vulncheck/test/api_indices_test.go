@@ -1642,11 +1642,35 @@ func Test_vulncheck_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexDfnCertGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexDfnCertGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexDjangoGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexDjangoGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexDlinkGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexDlinkGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -2134,6 +2158,18 @@ func Test_vulncheck_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexGenGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexGenGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexGenetecGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -2223,6 +2259,18 @@ func Test_vulncheck_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexGlibcGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexGmoCybersecurityGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexGmoCybersecurityGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -4282,6 +4330,18 @@ func Test_vulncheck_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexSandiskGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexSandiskGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexSapGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -4299,6 +4359,18 @@ func Test_vulncheck_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexSchneiderElectricGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexSchutzwerkGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexSchutzwerkGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
