@@ -59,6 +59,7 @@ paths:
           - advisories
           - aix
           - aleph-research
+          - alibaba-advs
           - alma
           - alpine
           - alpine-purls
@@ -2235,6 +2236,152 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "aleph-research"
+      tags:
+      - indices
+  /index/alibaba-advs:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the alibaba-advs index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Alibaba Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/alibaba-advs?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/alibaba-advs?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Alibaba-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "alibaba-advs"
       tags:
       - indices
   /index/alma:
@@ -69421,6 +69568,72 @@ components:
         url:
           type: string
       type: object
+    advisory.Alibaba:
+      example:
+        cvss_score: cvss_score
+        references:
+        - references
+        - references
+        url: url
+        cwe:
+        - cwe
+        - cwe
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        summary_cn: summary_cn
+        updated_at: updated_at
+        cvss_vector: cvss_vector
+        cnnvd:
+        - cnnvd
+        - cnnvd
+        cnvd:
+        - cnvd
+        - cnvd
+        title_cn: title_cn
+        id: id
+        mitigation_cn: mitigation_cn
+      properties:
+        cnnvd:
+          items:
+            type: string
+          type: array
+        cnvd:
+          items:
+            type: string
+          type: array
+        cve:
+          items:
+            type: string
+          type: array
+        cvss_score:
+          type: string
+        cvss_vector:
+          type: string
+        cwe:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        id:
+          type: string
+        mitigation_cn:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
+        summary_cn:
+          type: string
+        title_cn:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.AlmaDate:
       example:
         $date: 6
@@ -101226,6 +101439,9 @@ components:
           censysRawQueries:
           - censysRawQueries
           - censysRawQueries
+          driftnetQueries:
+          - driftnetQueries
+          - driftnetQueries
           mitreAttackTechniques:
           - mitreAttackTechniques
           - mitreAttackTechniques
@@ -101242,9 +101458,15 @@ components:
           - fofaQueries
           - fofaQueries
           artifactName: artifactName
+          censysLegacyQueries:
+          - censysLegacyQueries
+          - censysLegacyQueries
           pcap: true
           vendor: vendor
           suricataRule: true
+          driftnetRawQueries:
+          - driftnetRawQueries
+          - driftnetRawQueries
           shodanQueries:
           - shodanQueries
           - shodanQueries
@@ -101271,11 +101493,15 @@ components:
           zoomEyeRawQueries:
           - zoomEyeRawQueries
           - zoomEyeRawQueries
+          sigmaRule: true
           zeroday: true
           baiduQueries:
           - baiduQueries
           - baiduQueries
           exploit: true
+          censysLegacyRawQueries:
+          - censysLegacyRawQueries
+          - censysLegacyRawQueries
         - fofaRawQueries:
           - fofaRawQueries
           - fofaRawQueries
@@ -101289,6 +101515,9 @@ components:
           censysRawQueries:
           - censysRawQueries
           - censysRawQueries
+          driftnetQueries:
+          - driftnetQueries
+          - driftnetQueries
           mitreAttackTechniques:
           - mitreAttackTechniques
           - mitreAttackTechniques
@@ -101305,9 +101534,15 @@ components:
           - fofaQueries
           - fofaQueries
           artifactName: artifactName
+          censysLegacyQueries:
+          - censysLegacyQueries
+          - censysLegacyQueries
           pcap: true
           vendor: vendor
           suricataRule: true
+          driftnetRawQueries:
+          - driftnetRawQueries
+          - driftnetRawQueries
           shodanQueries:
           - shodanQueries
           - shodanQueries
@@ -101334,11 +101569,15 @@ components:
           zoomEyeRawQueries:
           - zoomEyeRawQueries
           - zoomEyeRawQueries
+          sigmaRule: true
           zeroday: true
           baiduQueries:
           - baiduQueries
           - baiduQueries
           exploit: true
+          censysLegacyRawQueries:
+          - censysLegacyRawQueries
+          - censysLegacyRawQueries
       properties:
         artifacts:
           description: "Artifacts holds the set of available artifacts for this vulnerability,\
@@ -101379,6 +101618,9 @@ components:
         censysRawQueries:
         - censysRawQueries
         - censysRawQueries
+        driftnetQueries:
+        - driftnetQueries
+        - driftnetQueries
         mitreAttackTechniques:
         - mitreAttackTechniques
         - mitreAttackTechniques
@@ -101395,9 +101637,15 @@ components:
         - fofaQueries
         - fofaQueries
         artifactName: artifactName
+        censysLegacyQueries:
+        - censysLegacyQueries
+        - censysLegacyQueries
         pcap: true
         vendor: vendor
         suricataRule: true
+        driftnetRawQueries:
+        - driftnetRawQueries
+        - driftnetRawQueries
         shodanQueries:
         - shodanQueries
         - shodanQueries
@@ -101424,11 +101672,15 @@ components:
         zoomEyeRawQueries:
         - zoomEyeRawQueries
         - zoomEyeRawQueries
+        sigmaRule: true
         zeroday: true
         baiduQueries:
         - baiduQueries
         - baiduQueries
         exploit: true
+        censysLegacyRawQueries:
+        - censysLegacyRawQueries
+        - censysLegacyRawQueries
       properties:
         artifactName:
           description: ArtifactName is a title to associate with this artifact.
@@ -101445,6 +101697,18 @@ components:
           type: array
         baiduRawQueries:
           description: '...'
+          items:
+            type: string
+          type: array
+        censysLegacyQueries:
+          description: CensysLegacyQueries are legacy queries for examining potential
+            Internet-exposed devices & applications with Censys in URL form.
+          items:
+            type: string
+          type: array
+        censysLegacyRawQueries:
+          description: CensysLegacyRawQueries are raw legacy queries for examining
+            potential Internet-exposed devices & applications with Censys.
           items:
             type: string
           type: array
@@ -101467,6 +101731,18 @@ components:
           description: DateAdded is when this artifact entry was first added to the
             InitialAccess data set.
           type: string
+        driftnetQueries:
+          description: DriftnetQueries are queries for examining Internet exposed
+            services with Driftnet.
+          items:
+            type: string
+          type: array
+        driftnetRawQueries:
+          description: DriftnetRawQueries are queries for examining Internet exposed
+            services with Driftnet.
+          items:
+            type: string
+          type: array
         exploit:
           description: Exploit indicates whether or not an exploit is available in
             this artifact.
@@ -101527,6 +101803,11 @@ components:
           items:
             type: string
           type: array
+        sigmaRule:
+          description: SigmaRule indicates whether or not a Sigma rule designed to
+            detect the exploitation of the vulnerability over the network exists in
+            this artifact.
+          type: boolean
         snortRule:
           description: SnortRule indicates whether or not a Snort rule designed to
             detect the exploitation of the vulnerability over the network exists in
@@ -106545,6 +106826,103 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.AlephResearch'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_Alibaba-paginate_Pagination:
+      example:
+        data:
+        - cvss_score: cvss_score
+          references:
+          - references
+          - references
+          url: url
+          cwe:
+          - cwe
+          - cwe
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          summary_cn: summary_cn
+          updated_at: updated_at
+          cvss_vector: cvss_vector
+          cnnvd:
+          - cnnvd
+          - cnnvd
+          cnvd:
+          - cnvd
+          - cnvd
+          title_cn: title_cn
+          id: id
+          mitigation_cn: mitigation_cn
+        - cvss_score: cvss_score
+          references:
+          - references
+          - references
+          url: url
+          cwe:
+          - cwe
+          - cwe
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          summary_cn: summary_cn
+          updated_at: updated_at
+          cvss_vector: cvss_vector
+          cnnvd:
+          - cnnvd
+          - cnnvd
+          cnvd:
+          - cnvd
+          - cnvd
+          title_cn: title_cn
+          id: id
+          mitigation_cn: mitigation_cn
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Alibaba'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_AlmaLinuxUpdate-paginate_Pagination:
@@ -149162,6 +149540,9 @@ components:
             censysRawQueries:
             - censysRawQueries
             - censysRawQueries
+            driftnetQueries:
+            - driftnetQueries
+            - driftnetQueries
             mitreAttackTechniques:
             - mitreAttackTechniques
             - mitreAttackTechniques
@@ -149178,9 +149559,15 @@ components:
             - fofaQueries
             - fofaQueries
             artifactName: artifactName
+            censysLegacyQueries:
+            - censysLegacyQueries
+            - censysLegacyQueries
             pcap: true
             vendor: vendor
             suricataRule: true
+            driftnetRawQueries:
+            - driftnetRawQueries
+            - driftnetRawQueries
             shodanQueries:
             - shodanQueries
             - shodanQueries
@@ -149207,11 +149594,15 @@ components:
             zoomEyeRawQueries:
             - zoomEyeRawQueries
             - zoomEyeRawQueries
+            sigmaRule: true
             zeroday: true
             baiduQueries:
             - baiduQueries
             - baiduQueries
             exploit: true
+            censysLegacyRawQueries:
+            - censysLegacyRawQueries
+            - censysLegacyRawQueries
           - fofaRawQueries:
             - fofaRawQueries
             - fofaRawQueries
@@ -149225,6 +149616,9 @@ components:
             censysRawQueries:
             - censysRawQueries
             - censysRawQueries
+            driftnetQueries:
+            - driftnetQueries
+            - driftnetQueries
             mitreAttackTechniques:
             - mitreAttackTechniques
             - mitreAttackTechniques
@@ -149241,9 +149635,15 @@ components:
             - fofaQueries
             - fofaQueries
             artifactName: artifactName
+            censysLegacyQueries:
+            - censysLegacyQueries
+            - censysLegacyQueries
             pcap: true
             vendor: vendor
             suricataRule: true
+            driftnetRawQueries:
+            - driftnetRawQueries
+            - driftnetRawQueries
             shodanQueries:
             - shodanQueries
             - shodanQueries
@@ -149270,11 +149670,15 @@ components:
             zoomEyeRawQueries:
             - zoomEyeRawQueries
             - zoomEyeRawQueries
+            sigmaRule: true
             zeroday: true
             baiduQueries:
             - baiduQueries
             - baiduQueries
             exploit: true
+            censysLegacyRawQueries:
+            - censysLegacyRawQueries
+            - censysLegacyRawQueries
         - cve: cve
           inVCKEV: true
           inKEV: true
@@ -149295,6 +149699,9 @@ components:
             censysRawQueries:
             - censysRawQueries
             - censysRawQueries
+            driftnetQueries:
+            - driftnetQueries
+            - driftnetQueries
             mitreAttackTechniques:
             - mitreAttackTechniques
             - mitreAttackTechniques
@@ -149311,9 +149718,15 @@ components:
             - fofaQueries
             - fofaQueries
             artifactName: artifactName
+            censysLegacyQueries:
+            - censysLegacyQueries
+            - censysLegacyQueries
             pcap: true
             vendor: vendor
             suricataRule: true
+            driftnetRawQueries:
+            - driftnetRawQueries
+            - driftnetRawQueries
             shodanQueries:
             - shodanQueries
             - shodanQueries
@@ -149340,11 +149753,15 @@ components:
             zoomEyeRawQueries:
             - zoomEyeRawQueries
             - zoomEyeRawQueries
+            sigmaRule: true
             zeroday: true
             baiduQueries:
             - baiduQueries
             - baiduQueries
             exploit: true
+            censysLegacyRawQueries:
+            - censysLegacyRawQueries
+            - censysLegacyRawQueries
           - fofaRawQueries:
             - fofaRawQueries
             - fofaRawQueries
@@ -149358,6 +149775,9 @@ components:
             censysRawQueries:
             - censysRawQueries
             - censysRawQueries
+            driftnetQueries:
+            - driftnetQueries
+            - driftnetQueries
             mitreAttackTechniques:
             - mitreAttackTechniques
             - mitreAttackTechniques
@@ -149374,9 +149794,15 @@ components:
             - fofaQueries
             - fofaQueries
             artifactName: artifactName
+            censysLegacyQueries:
+            - censysLegacyQueries
+            - censysLegacyQueries
             pcap: true
             vendor: vendor
             suricataRule: true
+            driftnetRawQueries:
+            - driftnetRawQueries
+            - driftnetRawQueries
             shodanQueries:
             - shodanQueries
             - shodanQueries
@@ -149403,11 +149829,15 @@ components:
             zoomEyeRawQueries:
             - zoomEyeRawQueries
             - zoomEyeRawQueries
+            sigmaRule: true
             zeroday: true
             baiduQueries:
             - baiduQueries
             - baiduQueries
             exploit: true
+            censysLegacyRawQueries:
+            - censysLegacyRawQueries
+            - censysLegacyRawQueries
         _meta:
           cursor: cursor
           next_cursor: next_cursor
