@@ -8,10 +8,14 @@ Name | Type | Description | Notes
 **ArtifactsURL** | Pointer to **[]string** | ArtifactsURL are URLs to the available artifact. | [optional] 
 **BaiduQueries** | Pointer to **[]string** | ... | [optional] 
 **BaiduRawQueries** | Pointer to **[]string** | ... | [optional] 
+**CensysLegacyQueries** | Pointer to **[]string** | CensysLegacyQueries are legacy queries for examining potential Internet-exposed devices &amp; applications with Censys in URL form. | [optional] 
+**CensysLegacyRawQueries** | Pointer to **[]string** | CensysLegacyRawQueries are raw legacy queries for examining potential Internet-exposed devices &amp; applications with Censys. | [optional] 
 **CensysQueries** | Pointer to **[]string** | CensysQueries are queries for examining potential Internet-exposed devices &amp; applications with Censys in URL form. | [optional] 
 **CensysRawQueries** | Pointer to **[]string** | CensysRawQueries are raw queries for examining potential Internet-exposed devices &amp; applications with Censys. | [optional] 
 **CloneSSHURL** | Pointer to **string** | CloneSSHURL is the git URL to clone the artifact with. | [optional] 
 **DateAdded** | Pointer to **string** | DateAdded is when this artifact entry was first added to the InitialAccess data set. | [optional] 
+**DriftnetQueries** | Pointer to **[]string** | DriftnetQueries are queries for examining Internet exposed services with Driftnet. | [optional] 
+**DriftnetRawQueries** | Pointer to **[]string** | DriftnetRawQueries are queries for examining Internet exposed services with Driftnet. | [optional] 
 **Exploit** | Pointer to **bool** | Exploit indicates whether or not an exploit is available in this artifact. | [optional] 
 **FofaQueries** | Pointer to **[]string** | FOFAQueries are raw queries for examining potential Internet-exposed devices &amp; applications with FOFA. | [optional] 
 **FofaRawQueries** | Pointer to **[]string** |  | [optional] 
@@ -24,6 +28,7 @@ Name | Type | Description | Notes
 **Product** | Pointer to **[]string** | Product are the software that has the vulnerability. | [optional] 
 **ShodanQueries** | Pointer to **[]string** | ShodanQueries are queries for examining potential Internet-exposed devices &amp; applications with Shodan in URL form. | [optional] 
 **ShodanRawQueries** | Pointer to **[]string** | ShodanRawQueries are raw queries for examining potential Internet-exposed devices &amp; applications with Shodan. | [optional] 
+**SigmaRule** | Pointer to **bool** | SigmaRule indicates whether or not a Sigma rule designed to detect the exploitation of the vulnerability over the network exists in this artifact. | [optional] 
 **SnortRule** | Pointer to **bool** | SnortRule indicates whether or not a Snort rule designed to detect the exploitation of the vulnerability over the network exists in this artifact. | [optional] 
 **SuricataRule** | Pointer to **bool** | SuricataRule indicates whether or not a Suricata rule designed to detect the exploitation of the vulnerability over the network exists in this artifact. | [optional] 
 **TargetDocker** | Pointer to **bool** | TargetDocker indicates whether or not there is an available docker image with the vulnerability. | [optional] 
@@ -155,6 +160,56 @@ SetBaiduRawQueries sets BaiduRawQueries field to given value.
 
 HasBaiduRawQueries returns a boolean if a field has been set.
 
+### GetCensysLegacyQueries
+
+`func (o *ApiInitialAccessArtifact) GetCensysLegacyQueries() []string`
+
+GetCensysLegacyQueries returns the CensysLegacyQueries field if non-nil, zero value otherwise.
+
+### GetCensysLegacyQueriesOk
+
+`func (o *ApiInitialAccessArtifact) GetCensysLegacyQueriesOk() (*[]string, bool)`
+
+GetCensysLegacyQueriesOk returns a tuple with the CensysLegacyQueries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCensysLegacyQueries
+
+`func (o *ApiInitialAccessArtifact) SetCensysLegacyQueries(v []string)`
+
+SetCensysLegacyQueries sets CensysLegacyQueries field to given value.
+
+### HasCensysLegacyQueries
+
+`func (o *ApiInitialAccessArtifact) HasCensysLegacyQueries() bool`
+
+HasCensysLegacyQueries returns a boolean if a field has been set.
+
+### GetCensysLegacyRawQueries
+
+`func (o *ApiInitialAccessArtifact) GetCensysLegacyRawQueries() []string`
+
+GetCensysLegacyRawQueries returns the CensysLegacyRawQueries field if non-nil, zero value otherwise.
+
+### GetCensysLegacyRawQueriesOk
+
+`func (o *ApiInitialAccessArtifact) GetCensysLegacyRawQueriesOk() (*[]string, bool)`
+
+GetCensysLegacyRawQueriesOk returns a tuple with the CensysLegacyRawQueries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCensysLegacyRawQueries
+
+`func (o *ApiInitialAccessArtifact) SetCensysLegacyRawQueries(v []string)`
+
+SetCensysLegacyRawQueries sets CensysLegacyRawQueries field to given value.
+
+### HasCensysLegacyRawQueries
+
+`func (o *ApiInitialAccessArtifact) HasCensysLegacyRawQueries() bool`
+
+HasCensysLegacyRawQueries returns a boolean if a field has been set.
+
 ### GetCensysQueries
 
 `func (o *ApiInitialAccessArtifact) GetCensysQueries() []string`
@@ -254,6 +309,56 @@ SetDateAdded sets DateAdded field to given value.
 `func (o *ApiInitialAccessArtifact) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
+
+### GetDriftnetQueries
+
+`func (o *ApiInitialAccessArtifact) GetDriftnetQueries() []string`
+
+GetDriftnetQueries returns the DriftnetQueries field if non-nil, zero value otherwise.
+
+### GetDriftnetQueriesOk
+
+`func (o *ApiInitialAccessArtifact) GetDriftnetQueriesOk() (*[]string, bool)`
+
+GetDriftnetQueriesOk returns a tuple with the DriftnetQueries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDriftnetQueries
+
+`func (o *ApiInitialAccessArtifact) SetDriftnetQueries(v []string)`
+
+SetDriftnetQueries sets DriftnetQueries field to given value.
+
+### HasDriftnetQueries
+
+`func (o *ApiInitialAccessArtifact) HasDriftnetQueries() bool`
+
+HasDriftnetQueries returns a boolean if a field has been set.
+
+### GetDriftnetRawQueries
+
+`func (o *ApiInitialAccessArtifact) GetDriftnetRawQueries() []string`
+
+GetDriftnetRawQueries returns the DriftnetRawQueries field if non-nil, zero value otherwise.
+
+### GetDriftnetRawQueriesOk
+
+`func (o *ApiInitialAccessArtifact) GetDriftnetRawQueriesOk() (*[]string, bool)`
+
+GetDriftnetRawQueriesOk returns a tuple with the DriftnetRawQueries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDriftnetRawQueries
+
+`func (o *ApiInitialAccessArtifact) SetDriftnetRawQueries(v []string)`
+
+SetDriftnetRawQueries sets DriftnetRawQueries field to given value.
+
+### HasDriftnetRawQueries
+
+`func (o *ApiInitialAccessArtifact) HasDriftnetRawQueries() bool`
+
+HasDriftnetRawQueries returns a boolean if a field has been set.
 
 ### GetExploit
 
@@ -554,6 +659,31 @@ SetShodanRawQueries sets ShodanRawQueries field to given value.
 `func (o *ApiInitialAccessArtifact) HasShodanRawQueries() bool`
 
 HasShodanRawQueries returns a boolean if a field has been set.
+
+### GetSigmaRule
+
+`func (o *ApiInitialAccessArtifact) GetSigmaRule() bool`
+
+GetSigmaRule returns the SigmaRule field if non-nil, zero value otherwise.
+
+### GetSigmaRuleOk
+
+`func (o *ApiInitialAccessArtifact) GetSigmaRuleOk() (*bool, bool)`
+
+GetSigmaRuleOk returns a tuple with the SigmaRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSigmaRule
+
+`func (o *ApiInitialAccessArtifact) SetSigmaRule(v bool)`
+
+SetSigmaRule sets SigmaRule field to given value.
+
+### HasSigmaRule
+
+`func (o *ApiInitialAccessArtifact) HasSigmaRule() bool`
+
+HasSigmaRule returns a boolean if a field has been set.
 
 ### GetSnortRule
 

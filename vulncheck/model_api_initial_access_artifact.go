@@ -28,6 +28,10 @@ type ApiInitialAccessArtifact struct {
 	BaiduQueries []string `json:"baiduQueries,omitempty"`
 	// ...
 	BaiduRawQueries []string `json:"baiduRawQueries,omitempty"`
+	// CensysLegacyQueries are legacy queries for examining potential Internet-exposed devices & applications with Censys in URL form.
+	CensysLegacyQueries []string `json:"censysLegacyQueries,omitempty"`
+	// CensysLegacyRawQueries are raw legacy queries for examining potential Internet-exposed devices & applications with Censys.
+	CensysLegacyRawQueries []string `json:"censysLegacyRawQueries,omitempty"`
 	// CensysQueries are queries for examining potential Internet-exposed devices & applications with Censys in URL form.
 	CensysQueries []string `json:"censysQueries,omitempty"`
 	// CensysRawQueries are raw queries for examining potential Internet-exposed devices & applications with Censys.
@@ -36,6 +40,10 @@ type ApiInitialAccessArtifact struct {
 	CloneSSHURL *string `json:"cloneSSHURL,omitempty"`
 	// DateAdded is when this artifact entry was first added to the InitialAccess data set.
 	DateAdded *string `json:"dateAdded,omitempty"`
+	// DriftnetQueries are queries for examining Internet exposed services with Driftnet.
+	DriftnetQueries []string `json:"driftnetQueries,omitempty"`
+	// DriftnetRawQueries are queries for examining Internet exposed services with Driftnet.
+	DriftnetRawQueries []string `json:"driftnetRawQueries,omitempty"`
 	// Exploit indicates whether or not an exploit is available in this artifact.
 	Exploit *bool `json:"exploit,omitempty"`
 	// FOFAQueries are raw queries for examining potential Internet-exposed devices & applications with FOFA.
@@ -59,6 +67,8 @@ type ApiInitialAccessArtifact struct {
 	ShodanQueries []string `json:"shodanQueries,omitempty"`
 	// ShodanRawQueries are raw queries for examining potential Internet-exposed devices & applications with Shodan.
 	ShodanRawQueries []string `json:"shodanRawQueries,omitempty"`
+	// SigmaRule indicates whether or not a Sigma rule designed to detect the exploitation of the vulnerability over the network exists in this artifact.
+	SigmaRule *bool `json:"sigmaRule,omitempty"`
 	// SnortRule indicates whether or not a Snort rule designed to detect the exploitation of the vulnerability over the network exists in this artifact.
 	SnortRule *bool `json:"snortRule,omitempty"`
 	// SuricataRule indicates whether or not a Suricata rule designed to detect the exploitation of the vulnerability over the network exists in this artifact.
@@ -227,6 +237,70 @@ func (o *ApiInitialAccessArtifact) SetBaiduRawQueries(v []string) {
 	o.BaiduRawQueries = v
 }
 
+// GetCensysLegacyQueries returns the CensysLegacyQueries field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetCensysLegacyQueries() []string {
+	if o == nil || IsNil(o.CensysLegacyQueries) {
+		var ret []string
+		return ret
+	}
+	return o.CensysLegacyQueries
+}
+
+// GetCensysLegacyQueriesOk returns a tuple with the CensysLegacyQueries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetCensysLegacyQueriesOk() ([]string, bool) {
+	if o == nil || IsNil(o.CensysLegacyQueries) {
+		return nil, false
+	}
+	return o.CensysLegacyQueries, true
+}
+
+// HasCensysLegacyQueries returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasCensysLegacyQueries() bool {
+	if o != nil && !IsNil(o.CensysLegacyQueries) {
+		return true
+	}
+
+	return false
+}
+
+// SetCensysLegacyQueries gets a reference to the given []string and assigns it to the CensysLegacyQueries field.
+func (o *ApiInitialAccessArtifact) SetCensysLegacyQueries(v []string) {
+	o.CensysLegacyQueries = v
+}
+
+// GetCensysLegacyRawQueries returns the CensysLegacyRawQueries field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetCensysLegacyRawQueries() []string {
+	if o == nil || IsNil(o.CensysLegacyRawQueries) {
+		var ret []string
+		return ret
+	}
+	return o.CensysLegacyRawQueries
+}
+
+// GetCensysLegacyRawQueriesOk returns a tuple with the CensysLegacyRawQueries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetCensysLegacyRawQueriesOk() ([]string, bool) {
+	if o == nil || IsNil(o.CensysLegacyRawQueries) {
+		return nil, false
+	}
+	return o.CensysLegacyRawQueries, true
+}
+
+// HasCensysLegacyRawQueries returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasCensysLegacyRawQueries() bool {
+	if o != nil && !IsNil(o.CensysLegacyRawQueries) {
+		return true
+	}
+
+	return false
+}
+
+// SetCensysLegacyRawQueries gets a reference to the given []string and assigns it to the CensysLegacyRawQueries field.
+func (o *ApiInitialAccessArtifact) SetCensysLegacyRawQueries(v []string) {
+	o.CensysLegacyRawQueries = v
+}
+
 // GetCensysQueries returns the CensysQueries field value if set, zero value otherwise.
 func (o *ApiInitialAccessArtifact) GetCensysQueries() []string {
 	if o == nil || IsNil(o.CensysQueries) {
@@ -353,6 +427,70 @@ func (o *ApiInitialAccessArtifact) HasDateAdded() bool {
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
 func (o *ApiInitialAccessArtifact) SetDateAdded(v string) {
 	o.DateAdded = &v
+}
+
+// GetDriftnetQueries returns the DriftnetQueries field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetDriftnetQueries() []string {
+	if o == nil || IsNil(o.DriftnetQueries) {
+		var ret []string
+		return ret
+	}
+	return o.DriftnetQueries
+}
+
+// GetDriftnetQueriesOk returns a tuple with the DriftnetQueries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetDriftnetQueriesOk() ([]string, bool) {
+	if o == nil || IsNil(o.DriftnetQueries) {
+		return nil, false
+	}
+	return o.DriftnetQueries, true
+}
+
+// HasDriftnetQueries returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasDriftnetQueries() bool {
+	if o != nil && !IsNil(o.DriftnetQueries) {
+		return true
+	}
+
+	return false
+}
+
+// SetDriftnetQueries gets a reference to the given []string and assigns it to the DriftnetQueries field.
+func (o *ApiInitialAccessArtifact) SetDriftnetQueries(v []string) {
+	o.DriftnetQueries = v
+}
+
+// GetDriftnetRawQueries returns the DriftnetRawQueries field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetDriftnetRawQueries() []string {
+	if o == nil || IsNil(o.DriftnetRawQueries) {
+		var ret []string
+		return ret
+	}
+	return o.DriftnetRawQueries
+}
+
+// GetDriftnetRawQueriesOk returns a tuple with the DriftnetRawQueries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetDriftnetRawQueriesOk() ([]string, bool) {
+	if o == nil || IsNil(o.DriftnetRawQueries) {
+		return nil, false
+	}
+	return o.DriftnetRawQueries, true
+}
+
+// HasDriftnetRawQueries returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasDriftnetRawQueries() bool {
+	if o != nil && !IsNil(o.DriftnetRawQueries) {
+		return true
+	}
+
+	return false
+}
+
+// SetDriftnetRawQueries gets a reference to the given []string and assigns it to the DriftnetRawQueries field.
+func (o *ApiInitialAccessArtifact) SetDriftnetRawQueries(v []string) {
+	o.DriftnetRawQueries = v
 }
 
 // GetExploit returns the Exploit field value if set, zero value otherwise.
@@ -739,6 +877,38 @@ func (o *ApiInitialAccessArtifact) SetShodanRawQueries(v []string) {
 	o.ShodanRawQueries = v
 }
 
+// GetSigmaRule returns the SigmaRule field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetSigmaRule() bool {
+	if o == nil || IsNil(o.SigmaRule) {
+		var ret bool
+		return ret
+	}
+	return *o.SigmaRule
+}
+
+// GetSigmaRuleOk returns a tuple with the SigmaRule field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetSigmaRuleOk() (*bool, bool) {
+	if o == nil || IsNil(o.SigmaRule) {
+		return nil, false
+	}
+	return o.SigmaRule, true
+}
+
+// HasSigmaRule returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasSigmaRule() bool {
+	if o != nil && !IsNil(o.SigmaRule) {
+		return true
+	}
+
+	return false
+}
+
+// SetSigmaRule gets a reference to the given bool and assigns it to the SigmaRule field.
+func (o *ApiInitialAccessArtifact) SetSigmaRule(v bool) {
+	o.SigmaRule = &v
+}
+
 // GetSnortRule returns the SnortRule field value if set, zero value otherwise.
 func (o *ApiInitialAccessArtifact) GetSnortRule() bool {
 	if o == nil || IsNil(o.SnortRule) {
@@ -1113,6 +1283,12 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.BaiduRawQueries) {
 		toSerialize["baiduRawQueries"] = o.BaiduRawQueries
 	}
+	if !IsNil(o.CensysLegacyQueries) {
+		toSerialize["censysLegacyQueries"] = o.CensysLegacyQueries
+	}
+	if !IsNil(o.CensysLegacyRawQueries) {
+		toSerialize["censysLegacyRawQueries"] = o.CensysLegacyRawQueries
+	}
 	if !IsNil(o.CensysQueries) {
 		toSerialize["censysQueries"] = o.CensysQueries
 	}
@@ -1124,6 +1300,12 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["dateAdded"] = o.DateAdded
+	}
+	if !IsNil(o.DriftnetQueries) {
+		toSerialize["driftnetQueries"] = o.DriftnetQueries
+	}
+	if !IsNil(o.DriftnetRawQueries) {
+		toSerialize["driftnetRawQueries"] = o.DriftnetRawQueries
 	}
 	if !IsNil(o.Exploit) {
 		toSerialize["exploit"] = o.Exploit
@@ -1160,6 +1342,9 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ShodanRawQueries) {
 		toSerialize["shodanRawQueries"] = o.ShodanRawQueries
+	}
+	if !IsNil(o.SigmaRule) {
+		toSerialize["sigmaRule"] = o.SigmaRule
 	}
 	if !IsNil(o.SnortRule) {
 		toSerialize["snortRule"] = o.SnortRule
