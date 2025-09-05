@@ -157,6 +157,7 @@ docs/AdvisoryCVSSV40.md
 docs/AdvisoryCVSSV40Threat.md
 docs/AdvisoryCWENode.md
 docs/AdvisoryCanvasExploit.md
+docs/AdvisoryCapec.md
 docs/AdvisoryCarestreamAdvisory.md
 docs/AdvisoryCarrier.md
 docs/AdvisoryCentosPackage.md
@@ -202,6 +203,7 @@ docs/AdvisoryCvrf.md
 docs/AdvisoryCvsssV23.md
 docs/AdvisoryCwe.md
 docs/AdvisoryCweAcceptanceLevel.md
+docs/AdvisoryCweData.md
 docs/AdvisoryCwes.md
 docs/AdvisoryCycle.md
 docs/AdvisoryDBSpecific.md
@@ -753,6 +755,8 @@ docs/ApiInitialAccess.md
 docs/ApiInitialAccessArtifact.md
 docs/ApiMitreAttackTech.md
 docs/ApiMitreAttackToCVE.md
+docs/ApiMitreDetectionTech.md
+docs/ApiMitreMitigationTech.md
 docs/ApiNVD20CPEMatch.md
 docs/ApiNVD20CPEName.md
 docs/ApiNVD20CVE.md
@@ -1395,6 +1399,7 @@ model_advisory_botnet.go
 model_advisory_bugzilla.go
 model_advisory_ca_cyber_centre_advisory.go
 model_advisory_canvas_exploit.go
+model_advisory_capec.go
 model_advisory_carestream_advisory.go
 model_advisory_carrier.go
 model_advisory_cbl_mariner.go
@@ -1465,6 +1470,7 @@ model_advisory_cvssv40.go
 model_advisory_cvssv40_threat.go
 model_advisory_cwe.go
 model_advisory_cwe_acceptance_level.go
+model_advisory_cwe_data.go
 model_advisory_cwe_node.go
 model_advisory_cwes.go
 model_advisory_cycle.go
@@ -2017,6 +2023,8 @@ model_api_initial_access.go
 model_api_initial_access_artifact.go
 model_api_mitre_attack_tech.go
 model_api_mitre_attack_to_cve.go
+model_api_mitre_detection_tech.go
+model_api_mitre_mitigation_tech.go
 model_api_nodes.go
 model_api_normalized_exploit_v3_entry.go
 model_api_normalized_report_v3_entry.go

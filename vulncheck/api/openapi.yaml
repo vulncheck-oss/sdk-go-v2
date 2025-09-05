@@ -68562,7 +68562,7 @@ components:
         metrics:
         - other:
             type: type
-            content: content
+            content: "{}"
           format: format
           cvssV3_0:
             baseSeverity: baseSeverity
@@ -68624,7 +68624,7 @@ components:
             valueDensity: valueDensity
         - other:
             type: type
-            content: content
+            content: "{}"
           format: format
           cvssV3_0:
             baseSeverity: baseSeverity
@@ -72388,6 +72388,24 @@ components:
         - cve
         - cve
         botnet_name: botnet_name
+        associated_capecs:
+        - capec_name: capec_name
+          capec_id: capec_id
+          capec_url: capec_url
+          lang: lang
+        - capec_name: capec_name
+          capec_id: capec_id
+          capec_url: capec_url
+          lang: lang
+        associated_cwes:
+        - name: name
+          lang: lang
+          value: value
+          url: url
+        - name: name
+          lang: lang
+          value: value
+          url: url
         associated_mitre_attack_techniques:
         - references:
           - date_added: date_added
@@ -72440,6 +72458,14 @@ components:
           - cve
           url: url
       properties:
+        associated_capecs:
+          items:
+            $ref: '#/components/schemas/advisory.Capec'
+          type: array
+        associated_cwes:
+          items:
+            $ref: '#/components/schemas/advisory.CweData'
+          type: array
         associated_mitre_attack_techniques:
           items:
             $ref: '#/components/schemas/advisory.MitreAttackTechWithRefs'
@@ -73970,6 +73996,22 @@ components:
         name:
           type: string
         url:
+          type: string
+      type: object
+    advisory.Capec:
+      example:
+        capec_name: capec_name
+        capec_id: capec_id
+        capec_url: capec_url
+        lang: lang
+      properties:
+        capec_id:
+          type: string
+        capec_name:
+          type: string
+        capec_url:
+          type: string
+        lang:
           type: string
       type: object
     advisory.CarestreamAdvisory:
@@ -75782,6 +75824,22 @@ components:
         description:
           type: string
         lastModified:
+          type: string
+      type: object
+    advisory.CweData:
+      example:
+        name: name
+        lang: lang
+        value: value
+        url: url
+      properties:
+        lang:
+          type: string
+        name:
+          type: string
+        url:
+          type: string
+        value:
           type: string
       type: object
     advisory.Cwes:
@@ -78558,6 +78616,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         name: name
         id: id
         recommend_block: true
@@ -78604,6 +78663,8 @@ components:
             $ref: '#/components/schemas/advisory.GreyNoiseTags'
           type: array
         slug:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -80855,7 +80916,7 @@ components:
         metrics:
         - other:
             type: type
-            content: content
+            content: "{}"
           format: format
           cvssV3_0:
             baseSeverity: baseSeverity
@@ -80917,7 +80978,7 @@ components:
             valueDensity: valueDensity
         - other:
             type: type
-            content: content
+            content: "{}"
           format: format
           cvssV3_0:
             baseSeverity: baseSeverity
@@ -81221,7 +81282,7 @@ components:
           metrics:
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -81283,7 +81344,7 @@ components:
               valueDensity: valueDensity
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -81448,7 +81509,7 @@ components:
           metrics:
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -81510,7 +81571,7 @@ components:
               valueDensity: valueDensity
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -81674,7 +81735,7 @@ components:
           metrics:
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -81736,7 +81797,7 @@ components:
               valueDensity: valueDensity
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -83430,7 +83491,7 @@ components:
       example:
         other:
           type: type
-          content: content
+          content: "{}"
         format: format
         cvssV3_0:
           baseSeverity: baseSeverity
@@ -83507,10 +83568,11 @@ components:
     advisory.MetricsOther:
       example:
         type: type
-        content: content
+        content: "{}"
       properties:
         content:
-          type: string
+          properties: {}
+          type: object
         type:
           type: string
       type: object
@@ -84314,7 +84376,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -84376,7 +84438,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -84541,7 +84603,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -84603,7 +84665,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -84767,7 +84829,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -84829,7 +84891,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -85122,7 +85184,7 @@ components:
             metrics:
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -85184,7 +85246,7 @@ components:
                 valueDensity: valueDensity
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -85349,7 +85411,7 @@ components:
             metrics:
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -85411,7 +85473,7 @@ components:
                 valueDensity: valueDensity
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -85575,7 +85637,7 @@ components:
             metrics:
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -85637,7 +85699,7 @@ components:
                 valueDensity: valueDensity
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -90211,6 +90273,24 @@ components:
         - cve
         - cve
         ransomware_family: ransomware_family
+        associated_capecs:
+        - capec_name: capec_name
+          capec_id: capec_id
+          capec_url: capec_url
+          lang: lang
+        - capec_name: capec_name
+          capec_id: capec_id
+          capec_url: capec_url
+          lang: lang
+        associated_cwes:
+        - name: name
+          lang: lang
+          value: value
+          url: url
+        - name: name
+          lang: lang
+          value: value
+          url: url
         associated_mitre_attack_techniques:
         - references:
           - date_added: date_added
@@ -90263,6 +90343,14 @@ components:
           - cve
           url: url
       properties:
+        associated_capecs:
+          items:
+            $ref: '#/components/schemas/advisory.Capec'
+          type: array
+        associated_cwes:
+          items:
+            $ref: '#/components/schemas/advisory.CweData'
+          type: array
         associated_mitre_attack_techniques:
           items:
             $ref: '#/components/schemas/advisory.MitreAttackTechWithRefs'
@@ -94762,6 +94850,24 @@ components:
           vendor: vendor
         - product: product
           vendor: vendor
+        associated_capecs:
+        - capec_name: capec_name
+          capec_id: capec_id
+          capec_url: capec_url
+          lang: lang
+        - capec_name: capec_name
+          capec_id: capec_id
+          capec_url: capec_url
+          lang: lang
+        associated_cwes:
+        - name: name
+          lang: lang
+          value: value
+          url: url
+        - name: name
+          lang: lang
+          value: value
+          url: url
         threat_actor_name: threat_actor_name
         tools:
         - references:
@@ -94895,6 +95001,14 @@ components:
           description: description
           id: id
       properties:
+        associated_capecs:
+          items:
+            $ref: '#/components/schemas/advisory.Capec'
+          type: array
+        associated_cwes:
+          items:
+            $ref: '#/components/schemas/advisory.CweData'
+          type: array
         associated_mitre_attack_techniques:
           items:
             $ref: '#/components/schemas/advisory.MitreAttackTechWithRefs'
@@ -96142,7 +96256,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -96204,7 +96318,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -96369,7 +96483,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -96431,7 +96545,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -96595,7 +96709,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -96657,7 +96771,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -97296,7 +97410,7 @@ components:
               metrics:
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -97358,7 +97472,7 @@ components:
                   valueDensity: valueDensity
               - other:
                   type: type
-                  content: content
+                  content: "{}"
                 format: format
                 cvssV3_0:
                   baseSeverity: baseSeverity
@@ -97801,7 +97915,7 @@ components:
             metrics:
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -97863,7 +97977,7 @@ components:
                 valueDensity: valueDensity
             - other:
                 type: type
-                content: content
+                content: "{}"
               format: format
               cvssV3_0:
                 baseSeverity: baseSeverity
@@ -98292,7 +98406,7 @@ components:
           metrics:
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -98354,7 +98468,7 @@ components:
               valueDensity: valueDensity
           - other:
               type: type
-              content: content
+              content: "{}"
             format: format
             cvssV3_0:
               baseSeverity: baseSeverity
@@ -100834,7 +100948,23 @@ components:
           - tactics
           - tactics
           id: id
+          mitigations:
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
           url: url
+          detections:
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
         - domain: domain
           name: name
           subtechnique: true
@@ -100842,7 +100972,23 @@ components:
           - tactics
           - tactics
           id: id
+          mitigations:
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
           url: url
+          detections:
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
         publishedDate: publishedDate
         _timestamp: _timestamp
         vulnerable_cpes:
@@ -101864,12 +102010,36 @@ components:
         - tactics
         - tactics
         id: id
+        mitigations:
+        - mitigation_url: mitigation_url
+          description: description
+          id: id
+        - mitigation_url: mitigation_url
+          description: description
+          id: id
         url: url
+        detections:
+        - dastacomponent: dastacomponent
+          datasource: datasource
+          detects: detects
+          id: id
+        - dastacomponent: dastacomponent
+          datasource: datasource
+          detects: detects
+          id: id
       properties:
+        detections:
+          items:
+            $ref: '#/components/schemas/api.MitreDetectionTech'
+          type: array
         domain:
           type: string
         id:
           type: string
+        mitigations:
+          items:
+            $ref: '#/components/schemas/api.MitreMitigationTech'
+          type: array
         name:
           type: string
         subtechnique:
@@ -101895,7 +102065,23 @@ components:
           - tactics
           - tactics
           id: id
+          mitigations:
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
           url: url
+          detections:
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
       properties:
         cve_list:
           items:
@@ -101905,6 +102091,35 @@ components:
           type: string
         technique_id:
           $ref: '#/components/schemas/api.MitreAttackTech'
+      type: object
+    api.MitreDetectionTech:
+      example:
+        dastacomponent: dastacomponent
+        datasource: datasource
+        detects: detects
+        id: id
+      properties:
+        dastacomponent:
+          type: string
+        datasource:
+          type: string
+        detects:
+          type: string
+        id:
+          type: string
+      type: object
+    api.MitreMitigationTech:
+      example:
+        mitigation_url: mitigation_url
+        description: description
+        id: id
+      properties:
+        description:
+          type: string
+        id:
+          type: string
+        mitigation_url:
+          type: string
       type: object
     api.NVD20CPEMatch:
       example:
@@ -102626,7 +102841,23 @@ components:
           - tactics
           - tactics
           id: id
+          mitigations:
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
           url: url
+          detections:
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
         - domain: domain
           name: name
           subtechnique: true
@@ -102634,7 +102865,23 @@ components:
           - tactics
           - tactics
           id: id
+          mitigations:
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
+          - mitigation_url: mitigation_url
+            description: description
+            id: id
           url: url
+          detections:
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
+          - dastacomponent: dastacomponent
+            datasource: datasource
+            detects: detects
+            id: id
         descriptions:
         - lang: lang
           value: value
@@ -111913,6 +112160,24 @@ components:
           - cve
           - cve
           botnet_name: botnet_name
+          associated_capecs:
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          associated_cwes:
+          - name: name
+            lang: lang
+            value: value
+            url: url
+          - name: name
+            lang: lang
+            value: value
+            url: url
           associated_mitre_attack_techniques:
           - references:
             - date_added: date_added
@@ -111970,6 +112235,24 @@ components:
           - cve
           - cve
           botnet_name: botnet_name
+          associated_capecs:
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          associated_cwes:
+          - name: name
+            lang: lang
+            value: value
+            url: url
+          - name: name
+            lang: lang
+            value: value
+            url: url
           associated_mitre_attack_techniques:
           - references:
             - date_added: date_added
@@ -120245,6 +120528,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           name: name
           id: id
           recommend_block: true
@@ -120272,6 +120556,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           name: name
           id: id
           recommend_block: true
@@ -125873,7 +126158,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -125935,7 +126220,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126100,7 +126385,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126162,7 +126447,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126326,7 +126611,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126388,7 +126673,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126667,7 +126952,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126729,7 +127014,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126894,7 +127179,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -126956,7 +127241,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -127120,7 +127405,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -127182,7 +127467,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -134381,6 +134666,24 @@ components:
           - cve
           - cve
           ransomware_family: ransomware_family
+          associated_capecs:
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          associated_cwes:
+          - name: name
+            lang: lang
+            value: value
+            url: url
+          - name: name
+            lang: lang
+            value: value
+            url: url
           associated_mitre_attack_techniques:
           - references:
             - date_added: date_added
@@ -134438,6 +134741,24 @@ components:
           - cve
           - cve
           ransomware_family: ransomware_family
+          associated_capecs:
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          associated_cwes:
+          - name: name
+            lang: lang
+            value: value
+            url: url
+          - name: name
+            lang: lang
+            value: value
+            url: url
           associated_mitre_attack_techniques:
           - references:
             - date_added: date_added
@@ -140695,6 +141016,24 @@ components:
             vendor: vendor
           - product: product
             vendor: vendor
+          associated_capecs:
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          associated_cwes:
+          - name: name
+            lang: lang
+            value: value
+            url: url
+          - name: name
+            lang: lang
+            value: value
+            url: url
           threat_actor_name: threat_actor_name
           tools:
           - references:
@@ -140833,6 +141172,24 @@ components:
             vendor: vendor
           - product: product
             vendor: vendor
+          associated_capecs:
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          - capec_name: capec_name
+            capec_id: capec_id
+            capec_url: capec_url
+            lang: lang
+          associated_cwes:
+          - name: name
+            lang: lang
+            value: value
+            url: url
+          - name: name
+            lang: lang
+            value: value
+            url: url
           threat_actor_name: threat_actor_name
           tools:
           - references:
@@ -143006,7 +143363,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143068,7 +143425,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143233,7 +143590,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143295,7 +143652,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143459,7 +143816,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143521,7 +143878,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143800,7 +144157,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -143862,7 +144219,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -144027,7 +144384,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -144089,7 +144446,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -144253,7 +144610,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -144315,7 +144672,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -145129,7 +145486,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -145191,7 +145548,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -145625,7 +145982,7 @@ components:
                 metrics:
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -145687,7 +146044,7 @@ components:
                     valueDensity: valueDensity
                 - other:
                     type: type
-                    content: content
+                    content: "{}"
                   format: format
                   cvssV3_0:
                     baseSeverity: baseSeverity
@@ -148707,7 +149064,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           - domain: domain
             name: name
             subtechnique: true
@@ -148715,7 +149088,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           publishedDate: publishedDate
           _timestamp: _timestamp
           vulnerable_cpes:
@@ -149075,7 +149464,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           - domain: domain
             name: name
             subtechnique: true
@@ -149083,7 +149488,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           publishedDate: publishedDate
           _timestamp: _timestamp
           vulnerable_cpes:
@@ -149899,7 +150320,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
         - cve_list:
           - cve_list
           - cve_list
@@ -149912,7 +150349,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
         _meta:
           cursor: cursor
           next_cursor: next_cursor
@@ -151183,7 +151636,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           - domain: domain
             name: name
             subtechnique: true
@@ -151191,7 +151660,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           descriptions:
           - lang: lang
             value: value
@@ -151862,7 +152347,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           - domain: domain
             name: name
             subtechnique: true
@@ -151870,7 +152371,23 @@ components:
             - tactics
             - tactics
             id: id
+            mitigations:
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
+            - mitigation_url: mitigation_url
+              description: description
+              id: id
             url: url
+            detections:
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
+            - dastacomponent: dastacomponent
+              datasource: datasource
+              detects: detects
+              id: id
           descriptions:
           - lang: lang
             value: value

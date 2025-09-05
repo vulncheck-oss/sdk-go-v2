@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AssociatedCapecs** | Pointer to [**[]AdvisoryCapec**](AdvisoryCapec.md) |  | [optional] 
+**AssociatedCwes** | Pointer to [**[]AdvisoryCweData**](AdvisoryCweData.md) |  | [optional] 
 **AssociatedMitreAttackTechniques** | Pointer to [**[]AdvisoryMitreAttackTechWithRefs**](AdvisoryMitreAttackTechWithRefs.md) |  | [optional] 
 **Country** | Pointer to **string** |  | [optional] 
 **CveReferences** | Pointer to [**[]AdvisoryCVEReference**](AdvisoryCVEReference.md) |  | [optional] 
@@ -37,6 +39,56 @@ will change when the set of required properties is changed
 NewAdvisoryThreatActorWithExternalObjectsWithDefaults instantiates a new AdvisoryThreatActorWithExternalObjects object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAssociatedCapecs
+
+`func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedCapecs() []AdvisoryCapec`
+
+GetAssociatedCapecs returns the AssociatedCapecs field if non-nil, zero value otherwise.
+
+### GetAssociatedCapecsOk
+
+`func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedCapecsOk() (*[]AdvisoryCapec, bool)`
+
+GetAssociatedCapecsOk returns a tuple with the AssociatedCapecs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssociatedCapecs
+
+`func (o *AdvisoryThreatActorWithExternalObjects) SetAssociatedCapecs(v []AdvisoryCapec)`
+
+SetAssociatedCapecs sets AssociatedCapecs field to given value.
+
+### HasAssociatedCapecs
+
+`func (o *AdvisoryThreatActorWithExternalObjects) HasAssociatedCapecs() bool`
+
+HasAssociatedCapecs returns a boolean if a field has been set.
+
+### GetAssociatedCwes
+
+`func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedCwes() []AdvisoryCweData`
+
+GetAssociatedCwes returns the AssociatedCwes field if non-nil, zero value otherwise.
+
+### GetAssociatedCwesOk
+
+`func (o *AdvisoryThreatActorWithExternalObjects) GetAssociatedCwesOk() (*[]AdvisoryCweData, bool)`
+
+GetAssociatedCwesOk returns a tuple with the AssociatedCwes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssociatedCwes
+
+`func (o *AdvisoryThreatActorWithExternalObjects) SetAssociatedCwes(v []AdvisoryCweData)`
+
+SetAssociatedCwes sets AssociatedCwes field to given value.
+
+### HasAssociatedCwes
+
+`func (o *AdvisoryThreatActorWithExternalObjects) HasAssociatedCwes() bool`
+
+HasAssociatedCwes returns a boolean if a field has been set.
 
 ### GetAssociatedMitreAttackTechniques
 
