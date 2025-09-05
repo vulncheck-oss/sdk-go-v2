@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AssociatedCapecs** | Pointer to [**[]AdvisoryCapec**](AdvisoryCapec.md) |  | [optional] 
+**AssociatedCwes** | Pointer to [**[]AdvisoryCweData**](AdvisoryCweData.md) |  | [optional] 
 **AssociatedMitreAttackTechniques** | Pointer to [**[]AdvisoryMitreAttackTechWithRefs**](AdvisoryMitreAttackTechWithRefs.md) |  | [optional] 
 **BotnetName** | Pointer to **string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
@@ -30,6 +32,56 @@ will change when the set of required properties is changed
 NewAdvisoryBotnetWithDefaults instantiates a new AdvisoryBotnet object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAssociatedCapecs
+
+`func (o *AdvisoryBotnet) GetAssociatedCapecs() []AdvisoryCapec`
+
+GetAssociatedCapecs returns the AssociatedCapecs field if non-nil, zero value otherwise.
+
+### GetAssociatedCapecsOk
+
+`func (o *AdvisoryBotnet) GetAssociatedCapecsOk() (*[]AdvisoryCapec, bool)`
+
+GetAssociatedCapecsOk returns a tuple with the AssociatedCapecs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssociatedCapecs
+
+`func (o *AdvisoryBotnet) SetAssociatedCapecs(v []AdvisoryCapec)`
+
+SetAssociatedCapecs sets AssociatedCapecs field to given value.
+
+### HasAssociatedCapecs
+
+`func (o *AdvisoryBotnet) HasAssociatedCapecs() bool`
+
+HasAssociatedCapecs returns a boolean if a field has been set.
+
+### GetAssociatedCwes
+
+`func (o *AdvisoryBotnet) GetAssociatedCwes() []AdvisoryCweData`
+
+GetAssociatedCwes returns the AssociatedCwes field if non-nil, zero value otherwise.
+
+### GetAssociatedCwesOk
+
+`func (o *AdvisoryBotnet) GetAssociatedCwesOk() (*[]AdvisoryCweData, bool)`
+
+GetAssociatedCwesOk returns a tuple with the AssociatedCwes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssociatedCwes
+
+`func (o *AdvisoryBotnet) SetAssociatedCwes(v []AdvisoryCweData)`
+
+SetAssociatedCwes sets AssociatedCwes field to given value.
+
+### HasAssociatedCwes
+
+`func (o *AdvisoryBotnet) HasAssociatedCwes() bool`
+
+HasAssociatedCwes returns a boolean if a field has been set.
 
 ### GetAssociatedMitreAttackTechniques
 

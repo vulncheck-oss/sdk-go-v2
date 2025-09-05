@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Content** | Pointer to **string** |  | [optional] 
+**Content** | Pointer to **map[string]interface{}** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetContent
 
-`func (o *AdvisoryMetricsOther) GetContent() string`
+`func (o *AdvisoryMetricsOther) GetContent() map[string]interface{}`
 
 GetContent returns the Content field if non-nil, zero value otherwise.
 
 ### GetContentOk
 
-`func (o *AdvisoryMetricsOther) GetContentOk() (*string, bool)`
+`func (o *AdvisoryMetricsOther) GetContentOk() (*map[string]interface{}, bool)`
 
 GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContent
 
-`func (o *AdvisoryMetricsOther) SetContent(v string)`
+`func (o *AdvisoryMetricsOther) SetContent(v map[string]interface{})`
 
 SetContent sets Content field to given value.
 

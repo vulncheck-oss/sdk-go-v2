@@ -20,7 +20,7 @@ var _ MappedNullable = &AdvisoryMetricsOther{}
 
 // AdvisoryMetricsOther struct for AdvisoryMetricsOther
 type AdvisoryMetricsOther struct {
-	Content *string `json:"content,omitempty"`
+	Content map[string]interface{} `json:"content,omitempty"`
 	Type *string `json:"type,omitempty"`
 }
 
@@ -42,19 +42,19 @@ func NewAdvisoryMetricsOtherWithDefaults() *AdvisoryMetricsOther {
 }
 
 // GetContent returns the Content field value if set, zero value otherwise.
-func (o *AdvisoryMetricsOther) GetContent() string {
+func (o *AdvisoryMetricsOther) GetContent() map[string]interface{} {
 	if o == nil || IsNil(o.Content) {
-		var ret string
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Content
+	return o.Content
 }
 
 // GetContentOk returns a tuple with the Content field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMetricsOther) GetContentOk() (*string, bool) {
+func (o *AdvisoryMetricsOther) GetContentOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Content) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Content, true
 }
@@ -68,9 +68,9 @@ func (o *AdvisoryMetricsOther) HasContent() bool {
 	return false
 }
 
-// SetContent gets a reference to the given string and assigns it to the Content field.
-func (o *AdvisoryMetricsOther) SetContent(v string) {
-	o.Content = &v
+// SetContent gets a reference to the given map[string]interface{} and assigns it to the Content field.
+func (o *AdvisoryMetricsOther) SetContent(v map[string]interface{}) {
+	o.Content = v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Detections** | Pointer to [**[]ApiMitreDetectionTech**](ApiMitreDetectionTech.md) |  | [optional] 
 **Domain** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
+**Mitigations** | Pointer to [**[]ApiMitreMitigationTech**](ApiMitreMitigationTech.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Subtechnique** | Pointer to **bool** |  | [optional] 
 **Tactics** | Pointer to **[]string** |  | [optional] 
@@ -29,6 +31,31 @@ will change when the set of required properties is changed
 NewApiMitreAttackTechWithDefaults instantiates a new ApiMitreAttackTech object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDetections
+
+`func (o *ApiMitreAttackTech) GetDetections() []ApiMitreDetectionTech`
+
+GetDetections returns the Detections field if non-nil, zero value otherwise.
+
+### GetDetectionsOk
+
+`func (o *ApiMitreAttackTech) GetDetectionsOk() (*[]ApiMitreDetectionTech, bool)`
+
+GetDetectionsOk returns a tuple with the Detections field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetections
+
+`func (o *ApiMitreAttackTech) SetDetections(v []ApiMitreDetectionTech)`
+
+SetDetections sets Detections field to given value.
+
+### HasDetections
+
+`func (o *ApiMitreAttackTech) HasDetections() bool`
+
+HasDetections returns a boolean if a field has been set.
 
 ### GetDomain
 
@@ -79,6 +106,31 @@ SetId sets Id field to given value.
 `func (o *ApiMitreAttackTech) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetMitigations
+
+`func (o *ApiMitreAttackTech) GetMitigations() []ApiMitreMitigationTech`
+
+GetMitigations returns the Mitigations field if non-nil, zero value otherwise.
+
+### GetMitigationsOk
+
+`func (o *ApiMitreAttackTech) GetMitigationsOk() (*[]ApiMitreMitigationTech, bool)`
+
+GetMitigationsOk returns a tuple with the Mitigations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMitigations
+
+`func (o *ApiMitreAttackTech) SetMitigations(v []ApiMitreMitigationTech)`
+
+SetMitigations sets Mitigations field to given value.
+
+### HasMitigations
+
+`func (o *ApiMitreAttackTech) HasMitigations() bool`
+
+HasMitigations returns a boolean if a field has been set.
 
 ### GetName
 

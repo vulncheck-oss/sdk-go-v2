@@ -20,6 +20,8 @@ var _ MappedNullable = &AdvisoryBotnet{}
 
 // AdvisoryBotnet struct for AdvisoryBotnet
 type AdvisoryBotnet struct {
+	AssociatedCapecs []AdvisoryCapec `json:"associated_capecs,omitempty"`
+	AssociatedCwes []AdvisoryCweData `json:"associated_cwes,omitempty"`
 	AssociatedMitreAttackTechniques []AdvisoryMitreAttackTechWithRefs `json:"associated_mitre_attack_techniques,omitempty"`
 	BotnetName *string `json:"botnet_name,omitempty"`
 	Cve []string `json:"cve,omitempty"`
@@ -44,6 +46,70 @@ func NewAdvisoryBotnet() *AdvisoryBotnet {
 func NewAdvisoryBotnetWithDefaults() *AdvisoryBotnet {
 	this := AdvisoryBotnet{}
 	return &this
+}
+
+// GetAssociatedCapecs returns the AssociatedCapecs field value if set, zero value otherwise.
+func (o *AdvisoryBotnet) GetAssociatedCapecs() []AdvisoryCapec {
+	if o == nil || IsNil(o.AssociatedCapecs) {
+		var ret []AdvisoryCapec
+		return ret
+	}
+	return o.AssociatedCapecs
+}
+
+// GetAssociatedCapecsOk returns a tuple with the AssociatedCapecs field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryBotnet) GetAssociatedCapecsOk() ([]AdvisoryCapec, bool) {
+	if o == nil || IsNil(o.AssociatedCapecs) {
+		return nil, false
+	}
+	return o.AssociatedCapecs, true
+}
+
+// HasAssociatedCapecs returns a boolean if a field has been set.
+func (o *AdvisoryBotnet) HasAssociatedCapecs() bool {
+	if o != nil && !IsNil(o.AssociatedCapecs) {
+		return true
+	}
+
+	return false
+}
+
+// SetAssociatedCapecs gets a reference to the given []AdvisoryCapec and assigns it to the AssociatedCapecs field.
+func (o *AdvisoryBotnet) SetAssociatedCapecs(v []AdvisoryCapec) {
+	o.AssociatedCapecs = v
+}
+
+// GetAssociatedCwes returns the AssociatedCwes field value if set, zero value otherwise.
+func (o *AdvisoryBotnet) GetAssociatedCwes() []AdvisoryCweData {
+	if o == nil || IsNil(o.AssociatedCwes) {
+		var ret []AdvisoryCweData
+		return ret
+	}
+	return o.AssociatedCwes
+}
+
+// GetAssociatedCwesOk returns a tuple with the AssociatedCwes field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryBotnet) GetAssociatedCwesOk() ([]AdvisoryCweData, bool) {
+	if o == nil || IsNil(o.AssociatedCwes) {
+		return nil, false
+	}
+	return o.AssociatedCwes, true
+}
+
+// HasAssociatedCwes returns a boolean if a field has been set.
+func (o *AdvisoryBotnet) HasAssociatedCwes() bool {
+	if o != nil && !IsNil(o.AssociatedCwes) {
+		return true
+	}
+
+	return false
+}
+
+// SetAssociatedCwes gets a reference to the given []AdvisoryCweData and assigns it to the AssociatedCwes field.
+func (o *AdvisoryBotnet) SetAssociatedCwes(v []AdvisoryCweData) {
+	o.AssociatedCwes = v
 }
 
 // GetAssociatedMitreAttackTechniques returns the AssociatedMitreAttackTechniques field value if set, zero value otherwise.
@@ -280,6 +346,12 @@ func (o AdvisoryBotnet) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryBotnet) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AssociatedCapecs) {
+		toSerialize["associated_capecs"] = o.AssociatedCapecs
+	}
+	if !IsNil(o.AssociatedCwes) {
+		toSerialize["associated_cwes"] = o.AssociatedCwes
+	}
 	if !IsNil(o.AssociatedMitreAttackTechniques) {
 		toSerialize["associated_mitre_attack_techniques"] = o.AssociatedMitreAttackTechniques
 	}

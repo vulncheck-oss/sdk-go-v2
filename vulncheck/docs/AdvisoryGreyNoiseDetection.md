@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **References** | Pointer to **[]string** |  | [optional] 
 **RelatedTags** | Pointer to [**[]AdvisoryGreyNoiseTags**](AdvisoryGreyNoiseTags.md) |  | [optional] 
 **Slug** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -336,6 +337,31 @@ SetSlug sets Slug field to given value.
 `func (o *AdvisoryGreyNoiseDetection) HasSlug() bool`
 
 HasSlug returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryGreyNoiseDetection) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryGreyNoiseDetection) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryGreyNoiseDetection) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryGreyNoiseDetection) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

@@ -20,8 +20,10 @@ var _ MappedNullable = &ApiMitreAttackTech{}
 
 // ApiMitreAttackTech struct for ApiMitreAttackTech
 type ApiMitreAttackTech struct {
+	Detections []ApiMitreDetectionTech `json:"detections,omitempty"`
 	Domain *string `json:"domain,omitempty"`
 	Id *string `json:"id,omitempty"`
+	Mitigations []ApiMitreMitigationTech `json:"mitigations,omitempty"`
 	Name *string `json:"name,omitempty"`
 	Subtechnique *bool `json:"subtechnique,omitempty"`
 	Tactics []string `json:"tactics,omitempty"`
@@ -43,6 +45,38 @@ func NewApiMitreAttackTech() *ApiMitreAttackTech {
 func NewApiMitreAttackTechWithDefaults() *ApiMitreAttackTech {
 	this := ApiMitreAttackTech{}
 	return &this
+}
+
+// GetDetections returns the Detections field value if set, zero value otherwise.
+func (o *ApiMitreAttackTech) GetDetections() []ApiMitreDetectionTech {
+	if o == nil || IsNil(o.Detections) {
+		var ret []ApiMitreDetectionTech
+		return ret
+	}
+	return o.Detections
+}
+
+// GetDetectionsOk returns a tuple with the Detections field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiMitreAttackTech) GetDetectionsOk() ([]ApiMitreDetectionTech, bool) {
+	if o == nil || IsNil(o.Detections) {
+		return nil, false
+	}
+	return o.Detections, true
+}
+
+// HasDetections returns a boolean if a field has been set.
+func (o *ApiMitreAttackTech) HasDetections() bool {
+	if o != nil && !IsNil(o.Detections) {
+		return true
+	}
+
+	return false
+}
+
+// SetDetections gets a reference to the given []ApiMitreDetectionTech and assigns it to the Detections field.
+func (o *ApiMitreAttackTech) SetDetections(v []ApiMitreDetectionTech) {
+	o.Detections = v
 }
 
 // GetDomain returns the Domain field value if set, zero value otherwise.
@@ -107,6 +141,38 @@ func (o *ApiMitreAttackTech) HasId() bool {
 // SetId gets a reference to the given string and assigns it to the Id field.
 func (o *ApiMitreAttackTech) SetId(v string) {
 	o.Id = &v
+}
+
+// GetMitigations returns the Mitigations field value if set, zero value otherwise.
+func (o *ApiMitreAttackTech) GetMitigations() []ApiMitreMitigationTech {
+	if o == nil || IsNil(o.Mitigations) {
+		var ret []ApiMitreMitigationTech
+		return ret
+	}
+	return o.Mitigations
+}
+
+// GetMitigationsOk returns a tuple with the Mitigations field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiMitreAttackTech) GetMitigationsOk() ([]ApiMitreMitigationTech, bool) {
+	if o == nil || IsNil(o.Mitigations) {
+		return nil, false
+	}
+	return o.Mitigations, true
+}
+
+// HasMitigations returns a boolean if a field has been set.
+func (o *ApiMitreAttackTech) HasMitigations() bool {
+	if o != nil && !IsNil(o.Mitigations) {
+		return true
+	}
+
+	return false
+}
+
+// SetMitigations gets a reference to the given []ApiMitreMitigationTech and assigns it to the Mitigations field.
+func (o *ApiMitreAttackTech) SetMitigations(v []ApiMitreMitigationTech) {
+	o.Mitigations = v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
@@ -247,11 +313,17 @@ func (o ApiMitreAttackTech) MarshalJSON() ([]byte, error) {
 
 func (o ApiMitreAttackTech) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Detections) {
+		toSerialize["detections"] = o.Detections
+	}
 	if !IsNil(o.Domain) {
 		toSerialize["domain"] = o.Domain
 	}
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
+	}
+	if !IsNil(o.Mitigations) {
+		toSerialize["mitigations"] = o.Mitigations
 	}
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name

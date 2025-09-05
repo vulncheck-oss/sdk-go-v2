@@ -32,6 +32,7 @@ type AdvisoryGreyNoiseDetection struct {
 	References []string `json:"references,omitempty"`
 	RelatedTags []AdvisoryGreyNoiseTags `json:"related_tags,omitempty"`
 	Slug *string `json:"slug,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
@@ -436,6 +437,38 @@ func (o *AdvisoryGreyNoiseDetection) SetSlug(v string) {
 	o.Slug = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryGreyNoiseDetection) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryGreyNoiseDetection) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryGreyNoiseDetection) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryGreyNoiseDetection) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *AdvisoryGreyNoiseDetection) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
@@ -513,6 +546,9 @@ func (o AdvisoryGreyNoiseDetection) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Slug) {
 		toSerialize["slug"] = o.Slug
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	if !IsNil(o.Url) {
 		toSerialize["url"] = o.Url
