@@ -29,6 +29,8 @@ type AdvisoryAndroidAdvisory struct {
 	Published *string `json:"published,omitempty"`
 	References []AdvisoryAndroidReference `json:"references,omitempty"`
 	Summary *string `json:"summary,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	Url *string `json:"url,omitempty"`
 }
 
 // NewAdvisoryAndroidAdvisory instantiates a new AdvisoryAndroidAdvisory object
@@ -336,6 +338,70 @@ func (o *AdvisoryAndroidAdvisory) SetSummary(v string) {
 	o.Summary = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryAndroidAdvisory) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryAndroidAdvisory) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryAndroidAdvisory) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryAndroidAdvisory) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
+// GetUrl returns the Url field value if set, zero value otherwise.
+func (o *AdvisoryAndroidAdvisory) GetUrl() string {
+	if o == nil || IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
+}
+
+// GetUrlOk returns a tuple with the Url field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryAndroidAdvisory) GetUrlOk() (*string, bool) {
+	if o == nil || IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
+}
+
+// HasUrl returns a boolean if a field has been set.
+func (o *AdvisoryAndroidAdvisory) HasUrl() bool {
+	if o != nil && !IsNil(o.Url) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrl gets a reference to the given string and assigns it to the Url field.
+func (o *AdvisoryAndroidAdvisory) SetUrl(v string) {
+	o.Url = &v
+}
+
 func (o AdvisoryAndroidAdvisory) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -372,6 +438,12 @@ func (o AdvisoryAndroidAdvisory) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
+	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
 	}
 	return toSerialize, nil
 }

@@ -1,5 +1,5 @@
 additionalProperties:
   packageName: "vulncheck"
   packageUrl: "https://github.com/vulncheck-oss/sdk-go-v2/vulncheck"
-  packageVersion: "2.0.7"
+  packageVersion: "2.0.8"
   isGoSubmodule: true

@@ -20,6 +20,7 @@ var _ MappedNullable = &ApiMitreAttackTech{}
 
 // ApiMitreAttackTech struct for ApiMitreAttackTech
 type ApiMitreAttackTech struct {
+	D3fendmapping []ApiMitreMitigation2D3fendMapping `json:"d3fendmapping,omitempty"`
 	Detections []ApiMitreDetectionTech `json:"detections,omitempty"`
 	Domain *string `json:"domain,omitempty"`
 	Id *string `json:"id,omitempty"`
@@ -45,6 +46,38 @@ func NewApiMitreAttackTech() *ApiMitreAttackTech {
 func NewApiMitreAttackTechWithDefaults() *ApiMitreAttackTech {
 	this := ApiMitreAttackTech{}
 	return &this
+}
+
+// GetD3fendmapping returns the D3fendmapping field value if set, zero value otherwise.
+func (o *ApiMitreAttackTech) GetD3fendmapping() []ApiMitreMitigation2D3fendMapping {
+	if o == nil || IsNil(o.D3fendmapping) {
+		var ret []ApiMitreMitigation2D3fendMapping
+		return ret
+	}
+	return o.D3fendmapping
+}
+
+// GetD3fendmappingOk returns a tuple with the D3fendmapping field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiMitreAttackTech) GetD3fendmappingOk() ([]ApiMitreMitigation2D3fendMapping, bool) {
+	if o == nil || IsNil(o.D3fendmapping) {
+		return nil, false
+	}
+	return o.D3fendmapping, true
+}
+
+// HasD3fendmapping returns a boolean if a field has been set.
+func (o *ApiMitreAttackTech) HasD3fendmapping() bool {
+	if o != nil && !IsNil(o.D3fendmapping) {
+		return true
+	}
+
+	return false
+}
+
+// SetD3fendmapping gets a reference to the given []ApiMitreMitigation2D3fendMapping and assigns it to the D3fendmapping field.
+func (o *ApiMitreAttackTech) SetD3fendmapping(v []ApiMitreMitigation2D3fendMapping) {
+	o.D3fendmapping = v
 }
 
 // GetDetections returns the Detections field value if set, zero value otherwise.
@@ -313,6 +346,9 @@ func (o ApiMitreAttackTech) MarshalJSON() ([]byte, error) {
 
 func (o ApiMitreAttackTech) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.D3fendmapping) {
+		toSerialize["d3fendmapping"] = o.D3fendmapping
+	}
 	if !IsNil(o.Detections) {
 		toSerialize["detections"] = o.Detections
 	}

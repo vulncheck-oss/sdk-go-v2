@@ -70069,6 +70069,7 @@ components:
           url: url
         - type: type
           url: url
+        updated_at: updated_at
         modified: modified
         id: id
         published: published
@@ -70119,6 +70120,7 @@ components:
           versions:
           - versions
           - versions
+        url: url
       properties:
         affected:
           items:
@@ -70145,6 +70147,10 @@ components:
             $ref: '#/components/schemas/advisory.AndroidReference'
           type: array
         summary:
+          type: string
+        updated_at:
+          type: string
+        url:
           type: string
       type: object
     advisory.AndroidAffected:
@@ -72419,6 +72425,27 @@ components:
           - tactics
           - tactics
           id: id
+          nist_controls:
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
           url: url
         - references:
           - date_added: date_added
@@ -72432,6 +72459,27 @@ components:
           - tactics
           - tactics
           id: id
+          nist_controls:
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
           url: url
         tools:
         - references:
@@ -72509,6 +72557,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         html_url: html_url
         serial_number: serial_number
         title: title
@@ -72526,6 +72575,8 @@ components:
         serial_number:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
       type: object
     advisory.CBLMariner:
@@ -72717,6 +72768,19 @@ components:
         url:
           type: string
         vendor:
+          type: string
+      type: object
+    advisory.CISControl:
+      example:
+        cis_control_id: cis_control_id
+        cis_control_description: cis_control_description
+        cis_control_name: cis_control_name
+      properties:
+        cis_control_description:
+          type: string
+        cis_control_id:
+          type: string
+        cis_control_name:
           type: string
       type: object
     advisory.CNNVDEntryJSON:
@@ -84188,6 +84252,27 @@ components:
         - tactics
         - tactics
         id: id
+        nist_controls:
+        - cis_controls:
+          - cis_control_id: cis_control_id
+            cis_control_description: cis_control_description
+            cis_control_name: cis_control_name
+          - cis_control_id: cis_control_id
+            cis_control_description: cis_control_description
+            cis_control_name: cis_control_name
+          nist_control_name: nist_control_name
+          nist_control_id: nist_control_id
+          nist_control_family: nist_control_family
+        - cis_controls:
+          - cis_control_id: cis_control_id
+            cis_control_description: cis_control_description
+            cis_control_name: cis_control_name
+          - cis_control_id: cis_control_id
+            cis_control_description: cis_control_description
+            cis_control_name: cis_control_name
+          nist_control_name: nist_control_name
+          nist_control_id: nist_control_id
+          nist_control_family: nist_control_family
         url: url
       properties:
         domain:
@@ -84196,6 +84281,10 @@ components:
           type: string
         name:
           type: string
+        nist_controls:
+          items:
+            $ref: '#/components/schemas/advisory.NISTControl'
+          type: array
         references:
           items:
             $ref: '#/components/schemas/advisory.MitreAttackRef'
@@ -86890,6 +86979,30 @@ components:
         title:
           type: string
         url:
+          type: string
+      type: object
+    advisory.NISTControl:
+      example:
+        cis_controls:
+        - cis_control_id: cis_control_id
+          cis_control_description: cis_control_description
+          cis_control_name: cis_control_name
+        - cis_control_id: cis_control_id
+          cis_control_description: cis_control_description
+          cis_control_name: cis_control_name
+        nist_control_name: nist_control_name
+        nist_control_id: nist_control_id
+        nist_control_family: nist_control_family
+      properties:
+        cis_controls:
+          items:
+            $ref: '#/components/schemas/advisory.CISControl'
+          type: array
+        nist_control_family:
+          type: string
+        nist_control_id:
+          type: string
+        nist_control_name:
           type: string
       type: object
     advisory.NTP:
@@ -90304,6 +90417,27 @@ components:
           - tactics
           - tactics
           id: id
+          nist_controls:
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
           url: url
         - references:
           - date_added: date_added
@@ -90317,6 +90451,27 @@ components:
           - tactics
           - tactics
           id: id
+          nist_controls:
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
           url: url
         tools:
         - references:
@@ -94959,6 +95114,27 @@ components:
           - tactics
           - tactics
           id: id
+          nist_controls:
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
           url: url
         - references:
           - date_added: date_added
@@ -94972,6 +95148,27 @@ components:
           - tactics
           - tactics
           id: id
+          nist_controls:
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
+          - cis_controls:
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            - cis_control_id: cis_control_id
+              cis_control_description: cis_control_description
+              cis_control_name: cis_control_name
+            nist_control_name: nist_control_name
+            nist_control_id: nist_control_id
+            nist_control_family: nist_control_family
           url: url
         misp_id: misp_id
         cve_references:
@@ -99740,11 +99937,19 @@ components:
         - cve
         - cve
         cvss_score: cvss_score
+        updated_at: updated_at
         cvss_vector: cvss_vector
         zsb: zsb
         title: title
+        affected:
+        - affected
+        - affected
         url: url
       properties:
+        affected:
+          items:
+            type: string
+          type: array
         cve:
           items:
             type: string
@@ -99756,6 +99961,8 @@ components:
         date_added:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -100955,13 +101162,26 @@ components:
           - mitigation_url: mitigation_url
             description: description
             id: id
+          d3fendmapping:
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
           url: url
           detections:
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
@@ -100979,13 +101199,26 @@ components:
           - mitigation_url: mitigation_url
             description: description
             id: id
+          d3fendmapping:
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
           url: url
           detections:
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
@@ -102017,17 +102250,34 @@ components:
         - mitigation_url: mitigation_url
           description: description
           id: id
+        d3fendmapping:
+        - d3fendtechniques:
+          - id: id
+            url: url
+          - id: id
+            url: url
+          id: id
+        - d3fendtechniques:
+          - id: id
+            url: url
+          - id: id
+            url: url
+          id: id
         url: url
         detections:
-        - dastacomponent: dastacomponent
+        - datacomponent: datacomponent
           datasource: datasource
           detects: detects
           id: id
-        - dastacomponent: dastacomponent
+        - datacomponent: datacomponent
           datasource: datasource
           detects: detects
           id: id
       properties:
+        d3fendmapping:
+          items:
+            $ref: '#/components/schemas/api.MitreMitigation2D3fendMapping'
+          type: array
         detections:
           items:
             $ref: '#/components/schemas/api.MitreDetectionTech'
@@ -102072,13 +102322,26 @@ components:
           - mitigation_url: mitigation_url
             description: description
             id: id
+          d3fendmapping:
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
           url: url
           detections:
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
@@ -102092,19 +102355,45 @@ components:
         technique_id:
           $ref: '#/components/schemas/api.MitreAttackTech'
       type: object
+    api.MitreD3fendTechnique:
+      example:
+        id: id
+        url: url
+      properties:
+        id:
+          type: string
+        url:
+          type: string
+      type: object
     api.MitreDetectionTech:
       example:
-        dastacomponent: dastacomponent
+        datacomponent: datacomponent
         datasource: datasource
         detects: detects
         id: id
       properties:
-        dastacomponent:
+        datacomponent:
           type: string
         datasource:
           type: string
         detects:
           type: string
+        id:
+          type: string
+      type: object
+    api.MitreMitigation2D3fendMapping:
+      example:
+        d3fendtechniques:
+        - id: id
+          url: url
+        - id: id
+          url: url
+        id: id
+      properties:
+        d3fendtechniques:
+          items:
+            $ref: '#/components/schemas/api.MitreD3fendTechnique'
+          type: array
         id:
           type: string
       type: object
@@ -102848,13 +103137,26 @@ components:
           - mitigation_url: mitigation_url
             description: description
             id: id
+          d3fendmapping:
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
           url: url
           detections:
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
@@ -102872,13 +103174,26 @@ components:
           - mitigation_url: mitigation_url
             description: description
             id: id
+          d3fendmapping:
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
+          - d3fendtechniques:
+            - id: id
+              url: url
+            - id: id
+              url: url
+            id: id
           url: url
           detections:
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
-          - dastacomponent: dastacomponent
+          - datacomponent: datacomponent
             datasource: datasource
             detects: detects
             id: id
@@ -107702,6 +108017,7 @@ components:
             url: url
           - type: type
             url: url
+          updated_at: updated_at
           modified: modified
           id: id
           published: published
@@ -107752,6 +108068,7 @@ components:
             versions:
             - versions
             - versions
+          url: url
         - summary: summary
           date_added: date_added
           aliases:
@@ -107765,6 +108082,7 @@ components:
             url: url
           - type: type
             url: url
+          updated_at: updated_at
           modified: modified
           id: id
           published: published
@@ -107815,6 +108133,7 @@ components:
             versions:
             - versions
             - versions
+          url: url
         _meta:
           cursor: cursor
           next_cursor: next_cursor
@@ -112191,6 +112510,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           - references:
             - date_added: date_added
@@ -112204,6 +112544,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           tools:
           - references:
@@ -112266,6 +112627,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           - references:
             - date_added: date_added
@@ -112279,6 +112661,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           tools:
           - references:
@@ -112358,6 +112761,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           html_url: html_url
           serial_number: serial_number
           title: title
@@ -112366,6 +112770,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           html_url: html_url
           serial_number: serial_number
           title: title
@@ -134697,6 +135102,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           - references:
             - date_added: date_added
@@ -134710,6 +135136,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           tools:
           - references:
@@ -134772,6 +135219,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           - references:
             - date_added: date_added
@@ -134785,6 +135253,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           tools:
           - references:
@@ -141125,6 +141614,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           - references:
             - date_added: date_added
@@ -141138,6 +141648,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           misp_id: misp_id
           cve_references:
@@ -141281,6 +141812,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           - references:
             - date_added: date_added
@@ -141294,6 +141846,27 @@ components:
             - tactics
             - tactics
             id: id
+            nist_controls:
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
+            - cis_controls:
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              - cis_control_id: cis_control_id
+                cis_control_description: cis_control_description
+                cis_control_name: cis_control_name
+              nist_control_name: nist_control_name
+              nist_control_id: nist_control_id
+              nist_control_family: nist_control_family
             url: url
           misp_id: misp_id
           cve_references:
@@ -147903,18 +148476,26 @@ components:
           - cve
           - cve
           cvss_score: cvss_score
+          updated_at: updated_at
           cvss_vector: cvss_vector
           zsb: zsb
           title: title
+          affected:
+          - affected
+          - affected
           url: url
         - date_added: date_added
           cve:
           - cve
           - cve
           cvss_score: cvss_score
+          updated_at: updated_at
           cvss_vector: cvss_vector
           zsb: zsb
           title: title
+          affected:
+          - affected
+          - affected
           url: url
         _meta:
           cursor: cursor
@@ -149071,13 +149652,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -149095,13 +149689,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -149471,13 +150078,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -149495,13 +150115,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -150327,13 +150960,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -150356,13 +151002,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -151643,13 +152302,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -151667,13 +152339,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -152354,13 +153039,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
@@ -152378,13 +153076,26 @@ components:
             - mitigation_url: mitigation_url
               description: description
               id: id
+            d3fendmapping:
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
+            - d3fendtechniques:
+              - id: id
+                url: url
+              - id: id
+                url: url
+              id: id
             url: url
             detections:
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id
-            - dastacomponent: dastacomponent
+            - datacomponent: datacomponent
               datasource: datasource
               detects: detects
               id: id

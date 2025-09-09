@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Affected** | Pointer to **[]string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **CvssScore** | Pointer to **string** |  | [optional] 
 **CvssVector** | Pointer to **string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **Zsb** | Pointer to **string** |  | [optional] 
 
@@ -30,6 +32,31 @@ will change when the set of required properties is changed
 NewAdvisoryZoomWithDefaults instantiates a new AdvisoryZoom object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAffected
+
+`func (o *AdvisoryZoom) GetAffected() []string`
+
+GetAffected returns the Affected field if non-nil, zero value otherwise.
+
+### GetAffectedOk
+
+`func (o *AdvisoryZoom) GetAffectedOk() (*[]string, bool)`
+
+GetAffectedOk returns a tuple with the Affected field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffected
+
+`func (o *AdvisoryZoom) SetAffected(v []string)`
+
+SetAffected sets Affected field to given value.
+
+### HasAffected
+
+`func (o *AdvisoryZoom) HasAffected() bool`
+
+HasAffected returns a boolean if a field has been set.
 
 ### GetCve
 
@@ -155,6 +182,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryZoom) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryZoom) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryZoom) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryZoom) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryZoom) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

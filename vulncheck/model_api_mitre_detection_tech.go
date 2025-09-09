@@ -20,7 +20,7 @@ var _ MappedNullable = &ApiMitreDetectionTech{}
 
 // ApiMitreDetectionTech struct for ApiMitreDetectionTech
 type ApiMitreDetectionTech struct {
-	Dastacomponent *string `json:"dastacomponent,omitempty"`
+	Datacomponent *string `json:"datacomponent,omitempty"`
 	Datasource *string `json:"datasource,omitempty"`
 	Detects *string `json:"detects,omitempty"`
 	Id *string `json:"id,omitempty"`
@@ -43,36 +43,36 @@ func NewApiMitreDetectionTechWithDefaults() *ApiMitreDetectionTech {
 	return &this
 }
 
-// GetDastacomponent returns the Dastacomponent field value if set, zero value otherwise.
-func (o *ApiMitreDetectionTech) GetDastacomponent() string {
-	if o == nil || IsNil(o.Dastacomponent) {
+// GetDatacomponent returns the Datacomponent field value if set, zero value otherwise.
+func (o *ApiMitreDetectionTech) GetDatacomponent() string {
+	if o == nil || IsNil(o.Datacomponent) {
 		var ret string
 		return ret
 	}
-	return *o.Dastacomponent
+	return *o.Datacomponent
 }
 
-// GetDastacomponentOk returns a tuple with the Dastacomponent field value if set, nil otherwise
+// GetDatacomponentOk returns a tuple with the Datacomponent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiMitreDetectionTech) GetDastacomponentOk() (*string, bool) {
-	if o == nil || IsNil(o.Dastacomponent) {
+func (o *ApiMitreDetectionTech) GetDatacomponentOk() (*string, bool) {
+	if o == nil || IsNil(o.Datacomponent) {
 		return nil, false
 	}
-	return o.Dastacomponent, true
+	return o.Datacomponent, true
 }
 
-// HasDastacomponent returns a boolean if a field has been set.
-func (o *ApiMitreDetectionTech) HasDastacomponent() bool {
-	if o != nil && !IsNil(o.Dastacomponent) {
+// HasDatacomponent returns a boolean if a field has been set.
+func (o *ApiMitreDetectionTech) HasDatacomponent() bool {
+	if o != nil && !IsNil(o.Datacomponent) {
 		return true
 	}
 
 	return false
 }
 
-// SetDastacomponent gets a reference to the given string and assigns it to the Dastacomponent field.
-func (o *ApiMitreDetectionTech) SetDastacomponent(v string) {
-	o.Dastacomponent = &v
+// SetDatacomponent gets a reference to the given string and assigns it to the Datacomponent field.
+func (o *ApiMitreDetectionTech) SetDatacomponent(v string) {
+	o.Datacomponent = &v
 }
 
 // GetDatasource returns the Datasource field value if set, zero value otherwise.
@@ -181,8 +181,8 @@ func (o ApiMitreDetectionTech) MarshalJSON() ([]byte, error) {
 
 func (o ApiMitreDetectionTech) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Dastacomponent) {
-		toSerialize["dastacomponent"] = o.Dastacomponent
+	if !IsNil(o.Datacomponent) {
+		toSerialize["datacomponent"] = o.Datacomponent
 	}
 	if !IsNil(o.Datasource) {
 		toSerialize["datasource"] = o.Datasource

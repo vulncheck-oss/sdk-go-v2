@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Domain** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
+**NistControls** | Pointer to [**[]AdvisoryNISTControl**](AdvisoryNISTControl.md) |  | [optional] 
 **References** | Pointer to [**[]AdvisoryMitreAttackRef**](AdvisoryMitreAttackRef.md) |  | [optional] 
 **Subtechnique** | Pointer to **bool** |  | [optional] 
 **Tactics** | Pointer to **[]string** |  | [optional] 
@@ -105,6 +106,31 @@ SetName sets Name field to given value.
 `func (o *AdvisoryMitreAttackTechWithRefs) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetNistControls
+
+`func (o *AdvisoryMitreAttackTechWithRefs) GetNistControls() []AdvisoryNISTControl`
+
+GetNistControls returns the NistControls field if non-nil, zero value otherwise.
+
+### GetNistControlsOk
+
+`func (o *AdvisoryMitreAttackTechWithRefs) GetNistControlsOk() (*[]AdvisoryNISTControl, bool)`
+
+GetNistControlsOk returns a tuple with the NistControls field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNistControls
+
+`func (o *AdvisoryMitreAttackTechWithRefs) SetNistControls(v []AdvisoryNISTControl)`
+
+SetNistControls sets NistControls field to given value.
+
+### HasNistControls
+
+`func (o *AdvisoryMitreAttackTechWithRefs) HasNistControls() bool`
+
+HasNistControls returns a boolean if a field has been set.
 
 ### GetReferences
 

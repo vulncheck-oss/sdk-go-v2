@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **Published** | Pointer to **string** |  | [optional] 
 **References** | Pointer to [**[]AdvisoryAndroidReference**](AdvisoryAndroidReference.md) |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
+**Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -257,6 +259,56 @@ SetSummary sets Summary field to given value.
 `func (o *AdvisoryAndroidAdvisory) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryAndroidAdvisory) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryAndroidAdvisory) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryAndroidAdvisory) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryAndroidAdvisory) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *AdvisoryAndroidAdvisory) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *AdvisoryAndroidAdvisory) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *AdvisoryAndroidAdvisory) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *AdvisoryAndroidAdvisory) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
