@@ -134,6 +134,7 @@ docs/AdvisoryCBLMariner.md
 docs/AdvisoryCERTEUAdvisory.md
 docs/AdvisoryCESA.md
 docs/AdvisoryCISAAlert.md
+docs/AdvisoryCISControl.md
 docs/AdvisoryCNNVDEntryJSON.md
 docs/AdvisoryCNVDBulletin.md
 docs/AdvisoryCNVDFlaw.md
@@ -421,6 +422,7 @@ docs/AdvisoryNCSCCVE.md
 docs/AdvisoryNEC.md
 docs/AdvisoryNHS.md
 docs/AdvisoryNI.md
+docs/AdvisoryNISTControl.md
 docs/AdvisoryNTP.md
 docs/AdvisoryNVD20CVECPEMatch.md
 docs/AdvisoryNVD20Configuration.md
@@ -755,7 +757,9 @@ docs/ApiInitialAccess.md
 docs/ApiInitialAccessArtifact.md
 docs/ApiMitreAttackTech.md
 docs/ApiMitreAttackToCVE.md
+docs/ApiMitreD3fendTechnique.md
 docs/ApiMitreDetectionTech.md
+docs/ApiMitreMitigation2D3fendMapping.md
 docs/ApiMitreMitigationTech.md
 docs/ApiNVD20CPEMatch.md
 docs/ApiNVD20CPEName.md
@@ -1418,6 +1422,7 @@ model_advisory_chain_guard_sec_fix.go
 model_advisory_check_point.go
 model_advisory_chrome.go
 model_advisory_ciena.go
+model_advisory_cis_control.go
 model_advisory_cisa_alert.go
 model_advisory_cisa_csaf_adv.go
 model_advisory_cisco_advisory.go
@@ -1698,6 +1703,7 @@ model_advisory_nexpose.go
 model_advisory_nginx_advisory.go
 model_advisory_nhs.go
 model_advisory_ni.go
+model_advisory_nist_control.go
 model_advisory_node_author.go
 model_advisory_node_js_.go
 model_advisory_node_security.go
@@ -2023,7 +2029,9 @@ model_api_initial_access.go
 model_api_initial_access_artifact.go
 model_api_mitre_attack_tech.go
 model_api_mitre_attack_to_cve.go
+model_api_mitre_d3fend_technique.go
 model_api_mitre_detection_tech.go
+model_api_mitre_mitigation2_d3fend_mapping.go
 model_api_mitre_mitigation_tech.go
 model_api_nodes.go
 model_api_normalized_exploit_v3_entry.go

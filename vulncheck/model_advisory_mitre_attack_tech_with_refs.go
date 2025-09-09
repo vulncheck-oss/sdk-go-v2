@@ -23,6 +23,7 @@ type AdvisoryMitreAttackTechWithRefs struct {
 	Domain *string `json:"domain,omitempty"`
 	Id *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
+	NistControls []AdvisoryNISTControl `json:"nist_controls,omitempty"`
 	References []AdvisoryMitreAttackRef `json:"references,omitempty"`
 	Subtechnique *bool `json:"subtechnique,omitempty"`
 	Tactics []string `json:"tactics,omitempty"`
@@ -140,6 +141,38 @@ func (o *AdvisoryMitreAttackTechWithRefs) HasName() bool {
 // SetName gets a reference to the given string and assigns it to the Name field.
 func (o *AdvisoryMitreAttackTechWithRefs) SetName(v string) {
 	o.Name = &v
+}
+
+// GetNistControls returns the NistControls field value if set, zero value otherwise.
+func (o *AdvisoryMitreAttackTechWithRefs) GetNistControls() []AdvisoryNISTControl {
+	if o == nil || IsNil(o.NistControls) {
+		var ret []AdvisoryNISTControl
+		return ret
+	}
+	return o.NistControls
+}
+
+// GetNistControlsOk returns a tuple with the NistControls field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMitreAttackTechWithRefs) GetNistControlsOk() ([]AdvisoryNISTControl, bool) {
+	if o == nil || IsNil(o.NistControls) {
+		return nil, false
+	}
+	return o.NistControls, true
+}
+
+// HasNistControls returns a boolean if a field has been set.
+func (o *AdvisoryMitreAttackTechWithRefs) HasNistControls() bool {
+	if o != nil && !IsNil(o.NistControls) {
+		return true
+	}
+
+	return false
+}
+
+// SetNistControls gets a reference to the given []AdvisoryNISTControl and assigns it to the NistControls field.
+func (o *AdvisoryMitreAttackTechWithRefs) SetNistControls(v []AdvisoryNISTControl) {
+	o.NistControls = v
 }
 
 // GetReferences returns the References field value if set, zero value otherwise.
@@ -288,6 +321,9 @@ func (o AdvisoryMitreAttackTechWithRefs) ToMap() (map[string]interface{}, error)
 	}
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.NistControls) {
+		toSerialize["nist_controls"] = o.NistControls
 	}
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References

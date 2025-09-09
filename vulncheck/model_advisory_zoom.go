@@ -20,11 +20,13 @@ var _ MappedNullable = &AdvisoryZoom{}
 
 // AdvisoryZoom struct for AdvisoryZoom
 type AdvisoryZoom struct {
+	Affected []string `json:"affected,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	CvssScore *string `json:"cvss_score,omitempty"`
 	CvssVector *string `json:"cvss_vector,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Title *string `json:"title,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 	Zsb *string `json:"zsb,omitempty"`
 }
@@ -44,6 +46,38 @@ func NewAdvisoryZoom() *AdvisoryZoom {
 func NewAdvisoryZoomWithDefaults() *AdvisoryZoom {
 	this := AdvisoryZoom{}
 	return &this
+}
+
+// GetAffected returns the Affected field value if set, zero value otherwise.
+func (o *AdvisoryZoom) GetAffected() []string {
+	if o == nil || IsNil(o.Affected) {
+		var ret []string
+		return ret
+	}
+	return o.Affected
+}
+
+// GetAffectedOk returns a tuple with the Affected field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryZoom) GetAffectedOk() ([]string, bool) {
+	if o == nil || IsNil(o.Affected) {
+		return nil, false
+	}
+	return o.Affected, true
+}
+
+// HasAffected returns a boolean if a field has been set.
+func (o *AdvisoryZoom) HasAffected() bool {
+	if o != nil && !IsNil(o.Affected) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffected gets a reference to the given []string and assigns it to the Affected field.
+func (o *AdvisoryZoom) SetAffected(v []string) {
+	o.Affected = v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
@@ -206,6 +240,38 @@ func (o *AdvisoryZoom) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryZoom) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryZoom) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryZoom) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryZoom) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *AdvisoryZoom) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
@@ -280,6 +346,9 @@ func (o AdvisoryZoom) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryZoom) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Affected) {
+		toSerialize["affected"] = o.Affected
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
@@ -294,6 +363,9 @@ func (o AdvisoryZoom) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	if !IsNil(o.Url) {
 		toSerialize["url"] = o.Url

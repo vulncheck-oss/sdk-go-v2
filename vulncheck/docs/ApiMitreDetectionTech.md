@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Dastacomponent** | Pointer to **string** |  | [optional] 
+**Datacomponent** | Pointer to **string** |  | [optional] 
 **Datasource** | Pointer to **string** |  | [optional] 
 **Detects** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
@@ -28,30 +28,30 @@ NewApiMitreDetectionTechWithDefaults instantiates a new ApiMitreDetectionTech ob
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDastacomponent
+### GetDatacomponent
 
-`func (o *ApiMitreDetectionTech) GetDastacomponent() string`
+`func (o *ApiMitreDetectionTech) GetDatacomponent() string`
 
-GetDastacomponent returns the Dastacomponent field if non-nil, zero value otherwise.
+GetDatacomponent returns the Datacomponent field if non-nil, zero value otherwise.
 
-### GetDastacomponentOk
+### GetDatacomponentOk
 
-`func (o *ApiMitreDetectionTech) GetDastacomponentOk() (*string, bool)`
+`func (o *ApiMitreDetectionTech) GetDatacomponentOk() (*string, bool)`
 
-GetDastacomponentOk returns a tuple with the Dastacomponent field if it's non-nil, zero value otherwise
+GetDatacomponentOk returns a tuple with the Datacomponent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDastacomponent
+### SetDatacomponent
 
-`func (o *ApiMitreDetectionTech) SetDastacomponent(v string)`
+`func (o *ApiMitreDetectionTech) SetDatacomponent(v string)`
 
-SetDastacomponent sets Dastacomponent field to given value.
+SetDatacomponent sets Datacomponent field to given value.
 
-### HasDastacomponent
+### HasDatacomponent
 
-`func (o *ApiMitreDetectionTech) HasDastacomponent() bool`
+`func (o *ApiMitreDetectionTech) HasDatacomponent() bool`
 
-HasDastacomponent returns a boolean if a field has been set.
+HasDatacomponent returns a boolean if a field has been set.
 
 ### GetDatasource
 
