@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **DueDate** | Pointer to **string** |  | [optional] 
 **KnownRansomwareCampaignUse** | Pointer to **string** |  | [optional] 
 **Product** | Pointer to **string** |  | [optional] 
+**ReportedExploitedByVulncheckCanaries** | Pointer to **bool** |  | [optional] 
 **RequiredAction** | Pointer to **string** |  | [optional] 
 **ShortDescription** | Pointer to **string** |  | [optional] 
 **VendorProject** | Pointer to **string** |  | [optional] 
@@ -237,6 +238,31 @@ SetProduct sets Product field to given value.
 `func (o *AdvisoryVulnCheckKEV) HasProduct() bool`
 
 HasProduct returns a boolean if a field has been set.
+
+### GetReportedExploitedByVulncheckCanaries
+
+`func (o *AdvisoryVulnCheckKEV) GetReportedExploitedByVulncheckCanaries() bool`
+
+GetReportedExploitedByVulncheckCanaries returns the ReportedExploitedByVulncheckCanaries field if non-nil, zero value otherwise.
+
+### GetReportedExploitedByVulncheckCanariesOk
+
+`func (o *AdvisoryVulnCheckKEV) GetReportedExploitedByVulncheckCanariesOk() (*bool, bool)`
+
+GetReportedExploitedByVulncheckCanariesOk returns a tuple with the ReportedExploitedByVulncheckCanaries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReportedExploitedByVulncheckCanaries
+
+`func (o *AdvisoryVulnCheckKEV) SetReportedExploitedByVulncheckCanaries(v bool)`
+
+SetReportedExploitedByVulncheckCanaries sets ReportedExploitedByVulncheckCanaries field to given value.
+
+### HasReportedExploitedByVulncheckCanaries
+
+`func (o *AdvisoryVulnCheckKEV) HasReportedExploitedByVulncheckCanaries() bool`
+
+HasReportedExploitedByVulncheckCanaries returns a boolean if a field has been set.
 
 ### GetRequiredAction
 

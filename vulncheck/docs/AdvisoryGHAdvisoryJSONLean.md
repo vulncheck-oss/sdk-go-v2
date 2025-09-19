@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Cvss** | Pointer to [**AdvisoryGHCvss**](AdvisoryGHCvss.md) |  | [optional] 
 **Cwes** | Pointer to [**AdvisoryCwes**](AdvisoryCwes.md) |  | [optional] 
 **DatabaseId** | Pointer to **int32** |  | [optional] 
+**DateAdded** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **GhsaId** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
@@ -20,6 +21,7 @@ Name | Type | Description | Notes
 **References** | Pointer to [**[]AdvisoryGHReference**](AdvisoryGHReference.md) |  | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
 **Vulnerabilities** | Pointer to [**AdvisoryGHVulnerabilities**](AdvisoryGHVulnerabilities.md) |  | [optional] 
 **WithdrawnAt** | Pointer to **string** |  | [optional] 
@@ -167,6 +169,31 @@ SetDatabaseId sets DatabaseId field to given value.
 `func (o *AdvisoryGHAdvisoryJSONLean) HasDatabaseId() bool`
 
 HasDatabaseId returns a boolean if a field has been set.
+
+### GetDateAdded
+
+`func (o *AdvisoryGHAdvisoryJSONLean) GetDateAdded() string`
+
+GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
+
+### GetDateAddedOk
+
+`func (o *AdvisoryGHAdvisoryJSONLean) GetDateAddedOk() (*string, bool)`
+
+GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDateAdded
+
+`func (o *AdvisoryGHAdvisoryJSONLean) SetDateAdded(v string)`
+
+SetDateAdded sets DateAdded field to given value.
+
+### HasDateAdded
+
+`func (o *AdvisoryGHAdvisoryJSONLean) HasDateAdded() bool`
+
+HasDateAdded returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -442,6 +469,31 @@ SetSummary sets Summary field to given value.
 `func (o *AdvisoryGHAdvisoryJSONLean) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryGHAdvisoryJSONLean) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryGHAdvisoryJSONLean) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 
