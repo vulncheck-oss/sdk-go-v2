@@ -282,6 +282,7 @@ paths:
           - jetbrains
           - jfrog
           - jnj
+          - johnson-controls
           - juniper
           - jvn
           - jvndb
@@ -34894,6 +34895,152 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "jnj"
+      tags:
+      - indices
+  /index/johnson-controls:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the johnson-controls index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Security Advisories - Johnson Controls
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/johnson-controls?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/johnson-controls?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_JohnsonControls-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "johnson-controls"
       tags:
       - indices
   /index/juniper:
@@ -77761,9 +77908,11 @@ components:
             description: description
             id: id
           totalCount: 1
+        date_added: date_added
         cve:
         - cve
         - cve
+        updated_at: updated_at
         ghsaId: ghsaId
         vulnerabilities:
           nodes:
@@ -77800,6 +77949,8 @@ components:
           $ref: '#/components/schemas/advisory.Cwes'
         databaseId:
           type: integer
+        date_added:
+          type: string
         description:
           type: string
         ghsaId:
@@ -77827,6 +77978,8 @@ components:
         summary:
           type: string
         updatedAt:
+          type: string
+        updated_at:
           type: string
         vulnerabilities:
           $ref: '#/components/schemas/advisory.GHVulnerabilities'
@@ -80142,6 +80295,51 @@ components:
             type: string
           type: array
         severity:
+          type: string
+        url:
+          type: string
+      type: object
+    advisory.JohnsonControls:
+      example:
+        summary: summary
+        date_added: date_added
+        mitigation: mitigation
+        cve:
+        - cve
+        - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        description: description
+        id: id
+        title: title
+        affected: affected
+        url: url
+      properties:
+        affected:
+          type: string
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        description:
+          type: string
+        id:
+          type: string
+        mitigation:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -97225,6 +97423,7 @@ components:
         product: product
         vulnerabilityName: vulnerabilityName
         cisa_date_added: cisa_date_added
+        reported_exploited_by_vulncheck_canaries: true
         required_action: required_action
         dueDate: dueDate
         knownRansomwareCampaignUse: knownRansomwareCampaignUse
@@ -97275,6 +97474,8 @@ components:
           type: string
         product:
           type: string
+        reported_exploited_by_vulncheck_canaries:
+          type: boolean
         required_action:
           type: string
         shortDescription:
@@ -101361,6 +101562,7 @@ components:
         reported_exploited_by_botnets: true
         epss: "{}"
         reported_exploited_by_threat_actors: true
+        reported_exploited_by_vulncheck_canaries: true
         counts:
           threat_actors: 5
           ransomware_families: 5
@@ -101467,6 +101669,8 @@ components:
         reported_exploited_by_ransomware:
           type: boolean
         reported_exploited_by_threat_actors:
+          type: boolean
+        reported_exploited_by_vulncheck_canaries:
           type: boolean
         timeline:
           $ref: '#/components/schemas/api.ExploitsV3Timeline'
@@ -119675,9 +119879,11 @@ components:
               description: description
               id: id
             totalCount: 1
+          date_added: date_added
           cve:
           - cve
           - cve
+          updated_at: updated_at
           ghsaId: ghsaId
           vulnerabilities:
             nodes:
@@ -119728,9 +119934,11 @@ components:
               description: description
               id: id
             totalCount: 1
+          date_added: date_added
           cve:
           - cve
           - cve
+          updated_at: updated_at
           ghsaId: ghsaId
           vulnerabilities:
             nodes:
@@ -123586,6 +123794,85 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.JetBrains'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_JohnsonControls-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          description: description
+          id: id
+          title: title
+          affected: affected
+          url: url
+        - summary: summary
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          description: description
+          id: id
+          title: title
+          affected: affected
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.JohnsonControls'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_Juniper-paginate_Pagination:
@@ -145641,6 +145928,7 @@ components:
         - product: product
           vulnerabilityName: vulnerabilityName
           cisa_date_added: cisa_date_added
+          reported_exploited_by_vulncheck_canaries: true
           required_action: required_action
           dueDate: dueDate
           knownRansomwareCampaignUse: knownRansomwareCampaignUse
@@ -145673,6 +145961,7 @@ components:
         - product: product
           vulnerabilityName: vulnerabilityName
           cisa_date_added: cisa_date_added
+          reported_exploited_by_vulncheck_canaries: true
           required_action: required_action
           dueDate: dueDate
           knownRansomwareCampaignUse: knownRansomwareCampaignUse
@@ -150318,6 +150607,7 @@ components:
           reported_exploited_by_botnets: true
           epss: "{}"
           reported_exploited_by_threat_actors: true
+          reported_exploited_by_vulncheck_canaries: true
           counts:
             threat_actors: 5
             ransomware_families: 5
@@ -150388,6 +150678,7 @@ components:
           reported_exploited_by_botnets: true
           epss: "{}"
           reported_exploited_by_threat_actors: true
+          reported_exploited_by_vulncheck_canaries: true
           counts:
             threat_actors: 5
             ransomware_families: 5

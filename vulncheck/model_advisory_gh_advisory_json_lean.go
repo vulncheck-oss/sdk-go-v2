@@ -25,6 +25,7 @@ type AdvisoryGHAdvisoryJSONLean struct {
 	Cvss *AdvisoryGHCvss `json:"cvss,omitempty"`
 	Cwes *AdvisoryCwes `json:"cwes,omitempty"`
 	DatabaseId *int32 `json:"databaseId,omitempty"`
+	DateAdded *string `json:"date_added,omitempty"`
 	Description *string `json:"description,omitempty"`
 	GhsaId *string `json:"ghsaId,omitempty"`
 	Id *string `json:"id,omitempty"`
@@ -37,6 +38,7 @@ type AdvisoryGHAdvisoryJSONLean struct {
 	Severity *string `json:"severity,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	UpdatedAt *string `json:"updatedAt,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	Vulnerabilities *AdvisoryGHVulnerabilities `json:"vulnerabilities,omitempty"`
 	WithdrawnAt *string `json:"withdrawnAt,omitempty"`
 }
@@ -216,6 +218,38 @@ func (o *AdvisoryGHAdvisoryJSONLean) HasDatabaseId() bool {
 // SetDatabaseId gets a reference to the given int32 and assigns it to the DatabaseId field.
 func (o *AdvisoryGHAdvisoryJSONLean) SetDatabaseId(v int32) {
 	o.DatabaseId = &v
+}
+
+// GetDateAdded returns the DateAdded field value if set, zero value otherwise.
+func (o *AdvisoryGHAdvisoryJSONLean) GetDateAdded() string {
+	if o == nil || IsNil(o.DateAdded) {
+		var ret string
+		return ret
+	}
+	return *o.DateAdded
+}
+
+// GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryGHAdvisoryJSONLean) GetDateAddedOk() (*string, bool) {
+	if o == nil || IsNil(o.DateAdded) {
+		return nil, false
+	}
+	return o.DateAdded, true
+}
+
+// HasDateAdded returns a boolean if a field has been set.
+func (o *AdvisoryGHAdvisoryJSONLean) HasDateAdded() bool {
+	if o != nil && !IsNil(o.DateAdded) {
+		return true
+	}
+
+	return false
+}
+
+// SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
+func (o *AdvisoryGHAdvisoryJSONLean) SetDateAdded(v string) {
+	o.DateAdded = &v
 }
 
 // GetDescription returns the Description field value if set, zero value otherwise.
@@ -602,6 +636,38 @@ func (o *AdvisoryGHAdvisoryJSONLean) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryGHAdvisoryJSONLean) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryGHAdvisoryJSONLean) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetVulnerabilities returns the Vulnerabilities field value if set, zero value otherwise.
 func (o *AdvisoryGHAdvisoryJSONLean) GetVulnerabilities() AdvisoryGHVulnerabilities {
 	if o == nil || IsNil(o.Vulnerabilities) {
@@ -691,6 +757,9 @@ func (o AdvisoryGHAdvisoryJSONLean) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.DatabaseId) {
 		toSerialize["databaseId"] = o.DatabaseId
 	}
+	if !IsNil(o.DateAdded) {
+		toSerialize["date_added"] = o.DateAdded
+	}
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
@@ -726,6 +795,9 @@ func (o AdvisoryGHAdvisoryJSONLean) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.UpdatedAt) {
 		toSerialize["updatedAt"] = o.UpdatedAt
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	if !IsNil(o.Vulnerabilities) {
 		toSerialize["vulnerabilities"] = o.Vulnerabilities

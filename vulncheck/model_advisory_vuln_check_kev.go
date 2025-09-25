@@ -28,6 +28,7 @@ type AdvisoryVulnCheckKEV struct {
 	DueDate *string `json:"dueDate,omitempty"`
 	KnownRansomwareCampaignUse *string `json:"knownRansomwareCampaignUse,omitempty"`
 	Product *string `json:"product,omitempty"`
+	ReportedExploitedByVulncheckCanaries *bool `json:"reported_exploited_by_vulncheck_canaries,omitempty"`
 	RequiredAction *string `json:"required_action,omitempty"`
 	ShortDescription *string `json:"shortDescription,omitempty"`
 	VendorProject *string `json:"vendorProject,omitempty"`
@@ -309,6 +310,38 @@ func (o *AdvisoryVulnCheckKEV) SetProduct(v string) {
 	o.Product = &v
 }
 
+// GetReportedExploitedByVulncheckCanaries returns the ReportedExploitedByVulncheckCanaries field value if set, zero value otherwise.
+func (o *AdvisoryVulnCheckKEV) GetReportedExploitedByVulncheckCanaries() bool {
+	if o == nil || IsNil(o.ReportedExploitedByVulncheckCanaries) {
+		var ret bool
+		return ret
+	}
+	return *o.ReportedExploitedByVulncheckCanaries
+}
+
+// GetReportedExploitedByVulncheckCanariesOk returns a tuple with the ReportedExploitedByVulncheckCanaries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryVulnCheckKEV) GetReportedExploitedByVulncheckCanariesOk() (*bool, bool) {
+	if o == nil || IsNil(o.ReportedExploitedByVulncheckCanaries) {
+		return nil, false
+	}
+	return o.ReportedExploitedByVulncheckCanaries, true
+}
+
+// HasReportedExploitedByVulncheckCanaries returns a boolean if a field has been set.
+func (o *AdvisoryVulnCheckKEV) HasReportedExploitedByVulncheckCanaries() bool {
+	if o != nil && !IsNil(o.ReportedExploitedByVulncheckCanaries) {
+		return true
+	}
+
+	return false
+}
+
+// SetReportedExploitedByVulncheckCanaries gets a reference to the given bool and assigns it to the ReportedExploitedByVulncheckCanaries field.
+func (o *AdvisoryVulnCheckKEV) SetReportedExploitedByVulncheckCanaries(v bool) {
+	o.ReportedExploitedByVulncheckCanaries = &v
+}
+
 // GetRequiredAction returns the RequiredAction field value if set, zero value otherwise.
 func (o *AdvisoryVulnCheckKEV) GetRequiredAction() string {
 	if o == nil || IsNil(o.RequiredAction) {
@@ -534,6 +567,9 @@ func (o AdvisoryVulnCheckKEV) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product
+	}
+	if !IsNil(o.ReportedExploitedByVulncheckCanaries) {
+		toSerialize["reported_exploited_by_vulncheck_canaries"] = o.ReportedExploitedByVulncheckCanaries
 	}
 	if !IsNil(o.RequiredAction) {
 		toSerialize["required_action"] = o.RequiredAction
