@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -128,6 +129,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryStrykerAdvisory) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryStrykerAdvisory) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryStrykerAdvisory) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryStrykerAdvisory) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryStrykerAdvisory) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

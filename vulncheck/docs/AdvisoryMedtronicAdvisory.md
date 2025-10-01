@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AffectedProducts** | Pointer to **string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
+**Mitigation** | Pointer to **string** |  | [optional] 
+**References** | Pointer to **[]string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
@@ -29,6 +32,31 @@ will change when the set of required properties is changed
 NewAdvisoryMedtronicAdvisoryWithDefaults instantiates a new AdvisoryMedtronicAdvisory object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAffectedProducts
+
+`func (o *AdvisoryMedtronicAdvisory) GetAffectedProducts() string`
+
+GetAffectedProducts returns the AffectedProducts field if non-nil, zero value otherwise.
+
+### GetAffectedProductsOk
+
+`func (o *AdvisoryMedtronicAdvisory) GetAffectedProductsOk() (*string, bool)`
+
+GetAffectedProductsOk returns a tuple with the AffectedProducts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffectedProducts
+
+`func (o *AdvisoryMedtronicAdvisory) SetAffectedProducts(v string)`
+
+SetAffectedProducts sets AffectedProducts field to given value.
+
+### HasAffectedProducts
+
+`func (o *AdvisoryMedtronicAdvisory) HasAffectedProducts() bool`
+
+HasAffectedProducts returns a boolean if a field has been set.
 
 ### GetCve
 
@@ -104,6 +132,56 @@ SetDescription sets Description field to given value.
 `func (o *AdvisoryMedtronicAdvisory) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
+
+### GetMitigation
+
+`func (o *AdvisoryMedtronicAdvisory) GetMitigation() string`
+
+GetMitigation returns the Mitigation field if non-nil, zero value otherwise.
+
+### GetMitigationOk
+
+`func (o *AdvisoryMedtronicAdvisory) GetMitigationOk() (*string, bool)`
+
+GetMitigationOk returns a tuple with the Mitigation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMitigation
+
+`func (o *AdvisoryMedtronicAdvisory) SetMitigation(v string)`
+
+SetMitigation sets Mitigation field to given value.
+
+### HasMitigation
+
+`func (o *AdvisoryMedtronicAdvisory) HasMitigation() bool`
+
+HasMitigation returns a boolean if a field has been set.
+
+### GetReferences
+
+`func (o *AdvisoryMedtronicAdvisory) GetReferences() []string`
+
+GetReferences returns the References field if non-nil, zero value otherwise.
+
+### GetReferencesOk
+
+`func (o *AdvisoryMedtronicAdvisory) GetReferencesOk() (*[]string, bool)`
+
+GetReferencesOk returns a tuple with the References field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReferences
+
+`func (o *AdvisoryMedtronicAdvisory) SetReferences(v []string)`
+
+SetReferences sets References field to given value.
+
+### HasReferences
+
+`func (o *AdvisoryMedtronicAdvisory) HasReferences() bool`
+
+HasReferences returns a boolean if a field has been set.
 
 ### GetTitle
 

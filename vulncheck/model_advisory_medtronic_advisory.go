@@ -20,9 +20,12 @@ var _ MappedNullable = &AdvisoryMedtronicAdvisory{}
 
 // AdvisoryMedtronicAdvisory struct for AdvisoryMedtronicAdvisory
 type AdvisoryMedtronicAdvisory struct {
+	AffectedProducts *string `json:"affected_products,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Description *string `json:"description,omitempty"`
+	Mitigation *string `json:"mitigation,omitempty"`
+	References []string `json:"references,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
@@ -43,6 +46,38 @@ func NewAdvisoryMedtronicAdvisory() *AdvisoryMedtronicAdvisory {
 func NewAdvisoryMedtronicAdvisoryWithDefaults() *AdvisoryMedtronicAdvisory {
 	this := AdvisoryMedtronicAdvisory{}
 	return &this
+}
+
+// GetAffectedProducts returns the AffectedProducts field value if set, zero value otherwise.
+func (o *AdvisoryMedtronicAdvisory) GetAffectedProducts() string {
+	if o == nil || IsNil(o.AffectedProducts) {
+		var ret string
+		return ret
+	}
+	return *o.AffectedProducts
+}
+
+// GetAffectedProductsOk returns a tuple with the AffectedProducts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMedtronicAdvisory) GetAffectedProductsOk() (*string, bool) {
+	if o == nil || IsNil(o.AffectedProducts) {
+		return nil, false
+	}
+	return o.AffectedProducts, true
+}
+
+// HasAffectedProducts returns a boolean if a field has been set.
+func (o *AdvisoryMedtronicAdvisory) HasAffectedProducts() bool {
+	if o != nil && !IsNil(o.AffectedProducts) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffectedProducts gets a reference to the given string and assigns it to the AffectedProducts field.
+func (o *AdvisoryMedtronicAdvisory) SetAffectedProducts(v string) {
+	o.AffectedProducts = &v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
@@ -139,6 +174,70 @@ func (o *AdvisoryMedtronicAdvisory) HasDescription() bool {
 // SetDescription gets a reference to the given string and assigns it to the Description field.
 func (o *AdvisoryMedtronicAdvisory) SetDescription(v string) {
 	o.Description = &v
+}
+
+// GetMitigation returns the Mitigation field value if set, zero value otherwise.
+func (o *AdvisoryMedtronicAdvisory) GetMitigation() string {
+	if o == nil || IsNil(o.Mitigation) {
+		var ret string
+		return ret
+	}
+	return *o.Mitigation
+}
+
+// GetMitigationOk returns a tuple with the Mitigation field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMedtronicAdvisory) GetMitigationOk() (*string, bool) {
+	if o == nil || IsNil(o.Mitigation) {
+		return nil, false
+	}
+	return o.Mitigation, true
+}
+
+// HasMitigation returns a boolean if a field has been set.
+func (o *AdvisoryMedtronicAdvisory) HasMitigation() bool {
+	if o != nil && !IsNil(o.Mitigation) {
+		return true
+	}
+
+	return false
+}
+
+// SetMitigation gets a reference to the given string and assigns it to the Mitigation field.
+func (o *AdvisoryMedtronicAdvisory) SetMitigation(v string) {
+	o.Mitigation = &v
+}
+
+// GetReferences returns the References field value if set, zero value otherwise.
+func (o *AdvisoryMedtronicAdvisory) GetReferences() []string {
+	if o == nil || IsNil(o.References) {
+		var ret []string
+		return ret
+	}
+	return o.References
+}
+
+// GetReferencesOk returns a tuple with the References field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMedtronicAdvisory) GetReferencesOk() ([]string, bool) {
+	if o == nil || IsNil(o.References) {
+		return nil, false
+	}
+	return o.References, true
+}
+
+// HasReferences returns a boolean if a field has been set.
+func (o *AdvisoryMedtronicAdvisory) HasReferences() bool {
+	if o != nil && !IsNil(o.References) {
+		return true
+	}
+
+	return false
+}
+
+// SetReferences gets a reference to the given []string and assigns it to the References field.
+func (o *AdvisoryMedtronicAdvisory) SetReferences(v []string) {
+	o.References = v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
@@ -247,6 +346,9 @@ func (o AdvisoryMedtronicAdvisory) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryMedtronicAdvisory) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AffectedProducts) {
+		toSerialize["affected_products"] = o.AffectedProducts
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
@@ -255,6 +357,12 @@ func (o AdvisoryMedtronicAdvisory) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
+	}
+	if !IsNil(o.Mitigation) {
+		toSerialize["mitigation"] = o.Mitigation
+	}
+	if !IsNil(o.References) {
+		toSerialize["references"] = o.References
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title

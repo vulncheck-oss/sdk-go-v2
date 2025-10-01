@@ -83589,15 +83589,22 @@ components:
       type: object
     advisory.MedtronicAdvisory:
       example:
+        affected_products: affected_products
         date_added: date_added
+        mitigation: mitigation
         cve:
         - cve
         - cve
+        references:
+        - references
+        - references
         updated_at: updated_at
         description: description
         title: title
         url: url
       properties:
+        affected_products:
+          type: string
         cve:
           items:
             type: string
@@ -83606,6 +83613,12 @@ components:
           type: string
         description:
           type: string
+        mitigation:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
         title:
           type: string
         updated_at:
@@ -94568,6 +94581,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         title: title
         affected_components:
         - affected_components
@@ -94585,6 +94599,8 @@ components:
         date_added:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -95953,6 +95969,7 @@ components:
         - cve
         - cve
         affected_software: affected_software
+        updated_at: updated_at
       properties:
         access_vector:
           type: string
@@ -95977,6 +95994,8 @@ components:
         technology:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -125236,18 +125255,28 @@ components:
     render.ResponseWithMetadata-array_advisory_MedtronicAdvisory-paginate_Pagination:
       example:
         data:
-        - date_added: date_added
+        - affected_products: affected_products
+          date_added: date_added
+          mitigation: mitigation
           cve:
           - cve
           - cve
+          references:
+          - references
+          - references
           updated_at: updated_at
           description: description
           title: title
           url: url
-        - date_added: date_added
+        - affected_products: affected_products
+          date_added: date_added
+          mitigation: mitigation
           cve:
           - cve
           - cve
+          references:
+          - references
+          - references
           updated_at: updated_at
           description: description
           title: title
@@ -140408,6 +140437,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           title: title
           affected_components:
           - affected_components
@@ -140417,6 +140447,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           title: title
           affected_components:
           - affected_components
@@ -142997,6 +143028,7 @@ components:
           - cve
           - cve
           affected_software: affected_software
+          updated_at: updated_at
         - severity: severity
           affected_chipsets: affected_chipsets
           rating: rating
@@ -143012,6 +143044,7 @@ components:
           - cve
           - cve
           affected_software: affected_software
+          updated_at: updated_at
         _meta:
           cursor: cursor
           next_cursor: next_cursor

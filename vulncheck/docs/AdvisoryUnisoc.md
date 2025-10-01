@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **Severity** | Pointer to **string** |  | [optional] 
 **Technology** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **Vulnerability** | Pointer to **string** |  | [optional] 
 
@@ -311,6 +312,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryUnisoc) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryUnisoc) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryUnisoc) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryUnisoc) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryUnisoc) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
