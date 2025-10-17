@@ -6,9 +6,9 @@ on:
     branches:
       - main
     paths:
-      - vulncheck/go.mod
-      - vulncheck/go.sum
-      - vulncheck/*.go
+      - v2/go.mod
+      - v2/go.sum
+      - v2/*.go
 
 permissions:
   contents: write
