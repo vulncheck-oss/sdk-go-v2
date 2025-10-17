@@ -9,7 +9,7 @@ Bring the VulnCheck API to your Go applications.
 ## Installation
 
 ```bash
-go get github.com/vulncheck-oss/sdk-go-v2/vulncheck
+go get github.com/vulncheck-oss/sdk-go-v2/v2
 ```
 
 ## Examples
@@ -25,7 +25,7 @@ import (
   "log"
   "os"
 
-  "github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+  "github.com/vulncheck-oss/sdk-go-v2/v2"
 )
 
 func main() {
