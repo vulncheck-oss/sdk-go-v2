@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/vulncheck-oss/sdk-go-v2/vulncheck"
+	vulncheck "github.com/vulncheck-oss/sdk-go-v2/v2"
 )
 
 const (
