@@ -3,7 +3,7 @@ set -e
 
 OPENAPI_GENERATOR_VERSION=7.13.0
 OPENAPI_JSON=openapi.json
-OPENAPI_CLIENT_DIR=vulncheck
+OPENAPI_CLIENT_DIR=v2
 
 # Pre-Generation Steps ########################################################
 
