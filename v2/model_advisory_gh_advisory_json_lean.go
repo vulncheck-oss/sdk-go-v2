@@ -37,7 +37,6 @@ type AdvisoryGHAdvisoryJSONLean struct {
 	References []AdvisoryGHReference `json:"references,omitempty"`
 	Severity *string `json:"severity,omitempty"`
 	Summary *string `json:"summary,omitempty"`
-	UpdatedAt *string `json:"updatedAt,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Vulnerabilities *AdvisoryGHVulnerabilities `json:"vulnerabilities,omitempty"`
 	WithdrawnAt *string `json:"withdrawnAt,omitempty"`
@@ -636,38 +635,6 @@ func (o *AdvisoryGHAdvisoryJSONLean) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
-// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAt() string {
-	if o == nil || IsNil(o.UpdatedAt) {
-		var ret string
-		return ret
-	}
-	return *o.UpdatedAt
-}
-
-// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAtOk() (*string, bool) {
-	if o == nil || IsNil(o.UpdatedAt) {
-		return nil, false
-	}
-	return o.UpdatedAt, true
-}
-
-// HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryGHAdvisoryJSONLean) HasUpdatedAt() bool {
-	if o != nil && !IsNil(o.UpdatedAt) {
-		return true
-	}
-
-	return false
-}
-
-// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryGHAdvisoryJSONLean) SetUpdatedAt(v string) {
-	o.UpdatedAt = &v
-}
-
 // GetVulnerabilities returns the Vulnerabilities field value if set, zero value otherwise.
 func (o *AdvisoryGHAdvisoryJSONLean) GetVulnerabilities() AdvisoryGHVulnerabilities {
 	if o == nil || IsNil(o.Vulnerabilities) {
@@ -792,9 +759,6 @@ func (o AdvisoryGHAdvisoryJSONLean) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
-	}
-	if !IsNil(o.UpdatedAt) {
-		toSerialize["updatedAt"] = o.UpdatedAt
 	}
 	if !IsNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt

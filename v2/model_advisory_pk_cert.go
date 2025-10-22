@@ -15,74 +15,39 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryRockwell type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryRockwell{}
+// checks if the AdvisoryPKCert type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryPKCert{}
 
-// AdvisoryRockwell struct for AdvisoryRockwell
-type AdvisoryRockwell struct {
-	AffectedProducts []AdvisoryRockwellAffectedProduct `json:"affected_products,omitempty"`
+// AdvisoryPKCert struct for AdvisoryPKCert
+type AdvisoryPKCert struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Id *string `json:"id,omitempty"`
-	Impact *string `json:"impact,omitempty"`
-	References []string `json:"references,omitempty"`
 	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryRockwell instantiates a new AdvisoryRockwell object
+// NewAdvisoryPKCert instantiates a new AdvisoryPKCert object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryRockwell() *AdvisoryRockwell {
-	this := AdvisoryRockwell{}
+func NewAdvisoryPKCert() *AdvisoryPKCert {
+	this := AdvisoryPKCert{}
 	return &this
 }
 
-// NewAdvisoryRockwellWithDefaults instantiates a new AdvisoryRockwell object
+// NewAdvisoryPKCertWithDefaults instantiates a new AdvisoryPKCert object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryRockwellWithDefaults() *AdvisoryRockwell {
-	this := AdvisoryRockwell{}
+func NewAdvisoryPKCertWithDefaults() *AdvisoryPKCert {
+	this := AdvisoryPKCert{}
 	return &this
-}
-
-// GetAffectedProducts returns the AffectedProducts field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetAffectedProducts() []AdvisoryRockwellAffectedProduct {
-	if o == nil || IsNil(o.AffectedProducts) {
-		var ret []AdvisoryRockwellAffectedProduct
-		return ret
-	}
-	return o.AffectedProducts
-}
-
-// GetAffectedProductsOk returns a tuple with the AffectedProducts field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetAffectedProductsOk() ([]AdvisoryRockwellAffectedProduct, bool) {
-	if o == nil || IsNil(o.AffectedProducts) {
-		return nil, false
-	}
-	return o.AffectedProducts, true
-}
-
-// HasAffectedProducts returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasAffectedProducts() bool {
-	if o != nil && !IsNil(o.AffectedProducts) {
-		return true
-	}
-
-	return false
-}
-
-// SetAffectedProducts gets a reference to the given []AdvisoryRockwellAffectedProduct and assigns it to the AffectedProducts field.
-func (o *AdvisoryRockwell) SetAffectedProducts(v []AdvisoryRockwellAffectedProduct) {
-	o.AffectedProducts = v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetCve() []string {
+func (o *AdvisoryPKCert) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -92,7 +57,7 @@ func (o *AdvisoryRockwell) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetCveOk() ([]string, bool) {
+func (o *AdvisoryPKCert) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -100,7 +65,7 @@ func (o *AdvisoryRockwell) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasCve() bool {
+func (o *AdvisoryPKCert) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -109,12 +74,12 @@ func (o *AdvisoryRockwell) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryRockwell) SetCve(v []string) {
+func (o *AdvisoryPKCert) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetDateAdded() string {
+func (o *AdvisoryPKCert) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -124,7 +89,7 @@ func (o *AdvisoryRockwell) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryPKCert) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -132,7 +97,7 @@ func (o *AdvisoryRockwell) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasDateAdded() bool {
+func (o *AdvisoryPKCert) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -141,12 +106,12 @@ func (o *AdvisoryRockwell) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryRockwell) SetDateAdded(v string) {
+func (o *AdvisoryPKCert) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetId() string {
+func (o *AdvisoryPKCert) GetId() string {
 	if o == nil || IsNil(o.Id) {
 		var ret string
 		return ret
@@ -156,7 +121,7 @@ func (o *AdvisoryRockwell) GetId() string {
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetIdOk() (*string, bool) {
+func (o *AdvisoryPKCert) GetIdOk() (*string, bool) {
 	if o == nil || IsNil(o.Id) {
 		return nil, false
 	}
@@ -164,7 +129,7 @@ func (o *AdvisoryRockwell) GetIdOk() (*string, bool) {
 }
 
 // HasId returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasId() bool {
+func (o *AdvisoryPKCert) HasId() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -173,76 +138,12 @@ func (o *AdvisoryRockwell) HasId() bool {
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
-func (o *AdvisoryRockwell) SetId(v string) {
+func (o *AdvisoryPKCert) SetId(v string) {
 	o.Id = &v
 }
 
-// GetImpact returns the Impact field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetImpact() string {
-	if o == nil || IsNil(o.Impact) {
-		var ret string
-		return ret
-	}
-	return *o.Impact
-}
-
-// GetImpactOk returns a tuple with the Impact field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetImpactOk() (*string, bool) {
-	if o == nil || IsNil(o.Impact) {
-		return nil, false
-	}
-	return o.Impact, true
-}
-
-// HasImpact returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasImpact() bool {
-	if o != nil && !IsNil(o.Impact) {
-		return true
-	}
-
-	return false
-}
-
-// SetImpact gets a reference to the given string and assigns it to the Impact field.
-func (o *AdvisoryRockwell) SetImpact(v string) {
-	o.Impact = &v
-}
-
-// GetReferences returns the References field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetReferences() []string {
-	if o == nil || IsNil(o.References) {
-		var ret []string
-		return ret
-	}
-	return o.References
-}
-
-// GetReferencesOk returns a tuple with the References field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetReferencesOk() ([]string, bool) {
-	if o == nil || IsNil(o.References) {
-		return nil, false
-	}
-	return o.References, true
-}
-
-// HasReferences returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasReferences() bool {
-	if o != nil && !IsNil(o.References) {
-		return true
-	}
-
-	return false
-}
-
-// SetReferences gets a reference to the given []string and assigns it to the References field.
-func (o *AdvisoryRockwell) SetReferences(v []string) {
-	o.References = v
-}
-
 // GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetSummary() string {
+func (o *AdvisoryPKCert) GetSummary() string {
 	if o == nil || IsNil(o.Summary) {
 		var ret string
 		return ret
@@ -252,7 +153,7 @@ func (o *AdvisoryRockwell) GetSummary() string {
 
 // GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetSummaryOk() (*string, bool) {
+func (o *AdvisoryPKCert) GetSummaryOk() (*string, bool) {
 	if o == nil || IsNil(o.Summary) {
 		return nil, false
 	}
@@ -260,7 +161,7 @@ func (o *AdvisoryRockwell) GetSummaryOk() (*string, bool) {
 }
 
 // HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasSummary() bool {
+func (o *AdvisoryPKCert) HasSummary() bool {
 	if o != nil && !IsNil(o.Summary) {
 		return true
 	}
@@ -269,12 +170,12 @@ func (o *AdvisoryRockwell) HasSummary() bool {
 }
 
 // SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryRockwell) SetSummary(v string) {
+func (o *AdvisoryPKCert) SetSummary(v string) {
 	o.Summary = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetTitle() string {
+func (o *AdvisoryPKCert) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -284,7 +185,7 @@ func (o *AdvisoryRockwell) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetTitleOk() (*string, bool) {
+func (o *AdvisoryPKCert) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -292,7 +193,7 @@ func (o *AdvisoryRockwell) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasTitle() bool {
+func (o *AdvisoryPKCert) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -301,12 +202,12 @@ func (o *AdvisoryRockwell) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryRockwell) SetTitle(v string) {
+func (o *AdvisoryPKCert) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetUpdatedAt() string {
+func (o *AdvisoryPKCert) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -316,7 +217,7 @@ func (o *AdvisoryRockwell) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryPKCert) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -324,7 +225,7 @@ func (o *AdvisoryRockwell) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasUpdatedAt() bool {
+func (o *AdvisoryPKCert) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -333,12 +234,12 @@ func (o *AdvisoryRockwell) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryRockwell) SetUpdatedAt(v string) {
+func (o *AdvisoryPKCert) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryRockwell) GetUrl() string {
+func (o *AdvisoryPKCert) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -348,7 +249,7 @@ func (o *AdvisoryRockwell) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockwell) GetUrlOk() (*string, bool) {
+func (o *AdvisoryPKCert) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -356,7 +257,7 @@ func (o *AdvisoryRockwell) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryRockwell) HasUrl() bool {
+func (o *AdvisoryPKCert) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -365,11 +266,11 @@ func (o *AdvisoryRockwell) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryRockwell) SetUrl(v string) {
+func (o *AdvisoryPKCert) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryRockwell) MarshalJSON() ([]byte, error) {
+func (o AdvisoryPKCert) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -377,11 +278,8 @@ func (o AdvisoryRockwell) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryRockwell) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryPKCert) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.AffectedProducts) {
-		toSerialize["affected_products"] = o.AffectedProducts
-	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
@@ -390,12 +288,6 @@ func (o AdvisoryRockwell) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
-	}
-	if !IsNil(o.Impact) {
-		toSerialize["impact"] = o.Impact
-	}
-	if !IsNil(o.References) {
-		toSerialize["references"] = o.References
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary
@@ -412,38 +304,38 @@ func (o AdvisoryRockwell) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryRockwell struct {
-	value *AdvisoryRockwell
+type NullableAdvisoryPKCert struct {
+	value *AdvisoryPKCert
 	isSet bool
 }
 
-func (v NullableAdvisoryRockwell) Get() *AdvisoryRockwell {
+func (v NullableAdvisoryPKCert) Get() *AdvisoryPKCert {
 	return v.value
 }
 
-func (v *NullableAdvisoryRockwell) Set(val *AdvisoryRockwell) {
+func (v *NullableAdvisoryPKCert) Set(val *AdvisoryPKCert) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryRockwell) IsSet() bool {
+func (v NullableAdvisoryPKCert) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryRockwell) Unset() {
+func (v *NullableAdvisoryPKCert) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryRockwell(val *AdvisoryRockwell) *NullableAdvisoryRockwell {
-	return &NullableAdvisoryRockwell{value: val, isSet: true}
+func NewNullableAdvisoryPKCert(val *AdvisoryPKCert) *NullableAdvisoryPKCert {
+	return &NullableAdvisoryPKCert{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryRockwell) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryPKCert) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryRockwell) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryPKCert) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
