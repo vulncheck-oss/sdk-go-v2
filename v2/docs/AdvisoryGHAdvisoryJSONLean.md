@@ -22,7 +22,6 @@ Name | Type | Description | Notes
 **Severity** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
-**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Vulnerabilities** | Pointer to [**AdvisoryGHVulnerabilities**](AdvisoryGHVulnerabilities.md) |  | [optional] 
 **WithdrawnAt** | Pointer to **string** |  | [optional] 
 
@@ -469,31 +468,6 @@ SetSummary sets Summary field to given value.
 `func (o *AdvisoryGHAdvisoryJSONLean) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *AdvisoryGHAdvisoryJSONLean) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *AdvisoryGHAdvisoryJSONLean) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *AdvisoryGHAdvisoryJSONLean) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 

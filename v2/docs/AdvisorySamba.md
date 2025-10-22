@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Issues** | Pointer to **string** |  | [optional] 
+**Patches** | Pointer to **[]string** |  | [optional] 
 **References** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
@@ -128,6 +129,31 @@ SetIssues sets Issues field to given value.
 `func (o *AdvisorySamba) HasIssues() bool`
 
 HasIssues returns a boolean if a field has been set.
+
+### GetPatches
+
+`func (o *AdvisorySamba) GetPatches() []string`
+
+GetPatches returns the Patches field if non-nil, zero value otherwise.
+
+### GetPatchesOk
+
+`func (o *AdvisorySamba) GetPatchesOk() (*[]string, bool)`
+
+GetPatchesOk returns a tuple with the Patches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPatches
+
+`func (o *AdvisorySamba) SetPatches(v []string)`
+
+SetPatches sets Patches field to given value.
+
+### HasPatches
+
+`func (o *AdvisorySamba) HasPatches() bool`
+
+HasPatches returns a boolean if a field has been set.
 
 ### GetReferences
 

@@ -41,6 +41,8 @@ type ApiIndex7zipGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -136,6 +138,18 @@ func (r ApiIndex7zipGetRequest) Botnet(botnet string) ApiIndex7zipGetRequest {
 // Specify a published date
 func (r ApiIndex7zipGetRequest) Published(published string) ApiIndex7zipGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndex7zipGetRequest) Date(date string) ApiIndex7zipGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndex7zipGetRequest) Date2(date2 string) ApiIndex7zipGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -271,6 +285,12 @@ func (a *IndicesAPIService) Index7zipGetExecute(r ApiIndex7zipGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -396,6 +416,8 @@ type ApiIndexA10GetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -491,6 +513,18 @@ func (r ApiIndexA10GetRequest) Botnet(botnet string) ApiIndexA10GetRequest {
 // Specify a published date
 func (r ApiIndexA10GetRequest) Published(published string) ApiIndexA10GetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexA10GetRequest) Date(date string) ApiIndexA10GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexA10GetRequest) Date2(date2 string) ApiIndexA10GetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -626,6 +660,12 @@ func (a *IndicesAPIService) IndexA10GetExecute(r ApiIndexA10GetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -751,6 +791,8 @@ type ApiIndexAbbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -846,6 +888,18 @@ func (r ApiIndexAbbGetRequest) Botnet(botnet string) ApiIndexAbbGetRequest {
 // Specify a published date
 func (r ApiIndexAbbGetRequest) Published(published string) ApiIndexAbbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAbbGetRequest) Date(date string) ApiIndexAbbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAbbGetRequest) Date2(date2 string) ApiIndexAbbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -981,6 +1035,12 @@ func (a *IndicesAPIService) IndexAbbGetExecute(r ApiIndexAbbGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -1106,6 +1166,8 @@ type ApiIndexAbbottGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -1201,6 +1263,18 @@ func (r ApiIndexAbbottGetRequest) Botnet(botnet string) ApiIndexAbbottGetRequest
 // Specify a published date
 func (r ApiIndexAbbottGetRequest) Published(published string) ApiIndexAbbottGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAbbottGetRequest) Date(date string) ApiIndexAbbottGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAbbottGetRequest) Date2(date2 string) ApiIndexAbbottGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -1336,6 +1410,12 @@ func (a *IndicesAPIService) IndexAbbottGetExecute(r ApiIndexAbbottGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -1461,6 +1541,8 @@ type ApiIndexAbsoluteGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -1556,6 +1638,18 @@ func (r ApiIndexAbsoluteGetRequest) Botnet(botnet string) ApiIndexAbsoluteGetReq
 // Specify a published date
 func (r ApiIndexAbsoluteGetRequest) Published(published string) ApiIndexAbsoluteGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAbsoluteGetRequest) Date(date string) ApiIndexAbsoluteGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAbsoluteGetRequest) Date2(date2 string) ApiIndexAbsoluteGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -1691,6 +1785,12 @@ func (a *IndicesAPIService) IndexAbsoluteGetExecute(r ApiIndexAbsoluteGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -1816,6 +1916,8 @@ type ApiIndexAcronisGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -1911,6 +2013,18 @@ func (r ApiIndexAcronisGetRequest) Botnet(botnet string) ApiIndexAcronisGetReque
 // Specify a published date
 func (r ApiIndexAcronisGetRequest) Published(published string) ApiIndexAcronisGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAcronisGetRequest) Date(date string) ApiIndexAcronisGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAcronisGetRequest) Date2(date2 string) ApiIndexAcronisGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -2046,6 +2160,12 @@ func (a *IndicesAPIService) IndexAcronisGetExecute(r ApiIndexAcronisGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -2171,6 +2291,8 @@ type ApiIndexAdobeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -2266,6 +2388,18 @@ func (r ApiIndexAdobeGetRequest) Botnet(botnet string) ApiIndexAdobeGetRequest {
 // Specify a published date
 func (r ApiIndexAdobeGetRequest) Published(published string) ApiIndexAdobeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAdobeGetRequest) Date(date string) ApiIndexAdobeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAdobeGetRequest) Date2(date2 string) ApiIndexAdobeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -2401,6 +2535,12 @@ func (a *IndicesAPIService) IndexAdobeGetExecute(r ApiIndexAdobeGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -2526,6 +2666,8 @@ type ApiIndexAdvantechGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -2621,6 +2763,18 @@ func (r ApiIndexAdvantechGetRequest) Botnet(botnet string) ApiIndexAdvantechGetR
 // Specify a published date
 func (r ApiIndexAdvantechGetRequest) Published(published string) ApiIndexAdvantechGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAdvantechGetRequest) Date(date string) ApiIndexAdvantechGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAdvantechGetRequest) Date2(date2 string) ApiIndexAdvantechGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -2756,6 +2910,12 @@ func (a *IndicesAPIService) IndexAdvantechGetExecute(r ApiIndexAdvantechGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -2881,6 +3041,8 @@ type ApiIndexAdvisoriesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -2976,6 +3138,18 @@ func (r ApiIndexAdvisoriesGetRequest) Botnet(botnet string) ApiIndexAdvisoriesGe
 // Specify a published date
 func (r ApiIndexAdvisoriesGetRequest) Published(published string) ApiIndexAdvisoriesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAdvisoriesGetRequest) Date(date string) ApiIndexAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAdvisoriesGetRequest) Date2(date2 string) ApiIndexAdvisoriesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -3111,6 +3285,12 @@ func (a *IndicesAPIService) IndexAdvisoriesGetExecute(r ApiIndexAdvisoriesGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -3236,6 +3416,8 @@ type ApiIndexAixGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -3331,6 +3513,18 @@ func (r ApiIndexAixGetRequest) Botnet(botnet string) ApiIndexAixGetRequest {
 // Specify a published date
 func (r ApiIndexAixGetRequest) Published(published string) ApiIndexAixGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAixGetRequest) Date(date string) ApiIndexAixGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAixGetRequest) Date2(date2 string) ApiIndexAixGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -3466,6 +3660,12 @@ func (a *IndicesAPIService) IndexAixGetExecute(r ApiIndexAixGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -3591,6 +3791,8 @@ type ApiIndexAlephResearchGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -3686,6 +3888,18 @@ func (r ApiIndexAlephResearchGetRequest) Botnet(botnet string) ApiIndexAlephRese
 // Specify a published date
 func (r ApiIndexAlephResearchGetRequest) Published(published string) ApiIndexAlephResearchGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAlephResearchGetRequest) Date(date string) ApiIndexAlephResearchGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAlephResearchGetRequest) Date2(date2 string) ApiIndexAlephResearchGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -3821,6 +4035,12 @@ func (a *IndicesAPIService) IndexAlephResearchGetExecute(r ApiIndexAlephResearch
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -3946,6 +4166,8 @@ type ApiIndexAlibabaAdvsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -4041,6 +4263,18 @@ func (r ApiIndexAlibabaAdvsGetRequest) Botnet(botnet string) ApiIndexAlibabaAdvs
 // Specify a published date
 func (r ApiIndexAlibabaAdvsGetRequest) Published(published string) ApiIndexAlibabaAdvsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAlibabaAdvsGetRequest) Date(date string) ApiIndexAlibabaAdvsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAlibabaAdvsGetRequest) Date2(date2 string) ApiIndexAlibabaAdvsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -4176,6 +4410,12 @@ func (a *IndicesAPIService) IndexAlibabaAdvsGetExecute(r ApiIndexAlibabaAdvsGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -4301,6 +4541,8 @@ type ApiIndexAlmaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -4396,6 +4638,18 @@ func (r ApiIndexAlmaGetRequest) Botnet(botnet string) ApiIndexAlmaGetRequest {
 // Specify a published date
 func (r ApiIndexAlmaGetRequest) Published(published string) ApiIndexAlmaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAlmaGetRequest) Date(date string) ApiIndexAlmaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAlmaGetRequest) Date2(date2 string) ApiIndexAlmaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -4531,6 +4785,12 @@ func (a *IndicesAPIService) IndexAlmaGetExecute(r ApiIndexAlmaGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -4656,6 +4916,8 @@ type ApiIndexAlpineGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -4751,6 +5013,18 @@ func (r ApiIndexAlpineGetRequest) Botnet(botnet string) ApiIndexAlpineGetRequest
 // Specify a published date
 func (r ApiIndexAlpineGetRequest) Published(published string) ApiIndexAlpineGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAlpineGetRequest) Date(date string) ApiIndexAlpineGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAlpineGetRequest) Date2(date2 string) ApiIndexAlpineGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -4886,6 +5160,12 @@ func (a *IndicesAPIService) IndexAlpineGetExecute(r ApiIndexAlpineGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -5011,6 +5291,8 @@ type ApiIndexAlpinePurlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -5106,6 +5388,18 @@ func (r ApiIndexAlpinePurlsGetRequest) Botnet(botnet string) ApiIndexAlpinePurls
 // Specify a published date
 func (r ApiIndexAlpinePurlsGetRequest) Published(published string) ApiIndexAlpinePurlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAlpinePurlsGetRequest) Date(date string) ApiIndexAlpinePurlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAlpinePurlsGetRequest) Date2(date2 string) ApiIndexAlpinePurlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -5241,6 +5535,12 @@ func (a *IndicesAPIService) IndexAlpinePurlsGetExecute(r ApiIndexAlpinePurlsGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -5366,6 +5666,8 @@ type ApiIndexAmazonCveGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -5461,6 +5763,18 @@ func (r ApiIndexAmazonCveGetRequest) Botnet(botnet string) ApiIndexAmazonCveGetR
 // Specify a published date
 func (r ApiIndexAmazonCveGetRequest) Published(published string) ApiIndexAmazonCveGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAmazonCveGetRequest) Date(date string) ApiIndexAmazonCveGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAmazonCveGetRequest) Date2(date2 string) ApiIndexAmazonCveGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -5596,6 +5910,12 @@ func (a *IndicesAPIService) IndexAmazonCveGetExecute(r ApiIndexAmazonCveGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -5721,6 +6041,8 @@ type ApiIndexAmazonGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -5816,6 +6138,18 @@ func (r ApiIndexAmazonGetRequest) Botnet(botnet string) ApiIndexAmazonGetRequest
 // Specify a published date
 func (r ApiIndexAmazonGetRequest) Published(published string) ApiIndexAmazonGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAmazonGetRequest) Date(date string) ApiIndexAmazonGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAmazonGetRequest) Date2(date2 string) ApiIndexAmazonGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -5951,6 +6285,12 @@ func (a *IndicesAPIService) IndexAmazonGetExecute(r ApiIndexAmazonGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -6076,6 +6416,8 @@ type ApiIndexAmdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -6171,6 +6513,18 @@ func (r ApiIndexAmdGetRequest) Botnet(botnet string) ApiIndexAmdGetRequest {
 // Specify a published date
 func (r ApiIndexAmdGetRequest) Published(published string) ApiIndexAmdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAmdGetRequest) Date(date string) ApiIndexAmdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAmdGetRequest) Date2(date2 string) ApiIndexAmdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -6306,6 +6660,12 @@ func (a *IndicesAPIService) IndexAmdGetExecute(r ApiIndexAmdGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -6431,6 +6791,8 @@ type ApiIndexAmiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -6526,6 +6888,18 @@ func (r ApiIndexAmiGetRequest) Botnet(botnet string) ApiIndexAmiGetRequest {
 // Specify a published date
 func (r ApiIndexAmiGetRequest) Published(published string) ApiIndexAmiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAmiGetRequest) Date(date string) ApiIndexAmiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAmiGetRequest) Date2(date2 string) ApiIndexAmiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -6661,6 +7035,12 @@ func (a *IndicesAPIService) IndexAmiGetExecute(r ApiIndexAmiGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -6786,6 +7166,8 @@ type ApiIndexAnchoreNvdOverrideGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -6881,6 +7263,18 @@ func (r ApiIndexAnchoreNvdOverrideGetRequest) Botnet(botnet string) ApiIndexAnch
 // Specify a published date
 func (r ApiIndexAnchoreNvdOverrideGetRequest) Published(published string) ApiIndexAnchoreNvdOverrideGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAnchoreNvdOverrideGetRequest) Date(date string) ApiIndexAnchoreNvdOverrideGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAnchoreNvdOverrideGetRequest) Date2(date2 string) ApiIndexAnchoreNvdOverrideGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -7016,6 +7410,12 @@ func (a *IndicesAPIService) IndexAnchoreNvdOverrideGetExecute(r ApiIndexAnchoreN
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -7141,6 +7541,8 @@ type ApiIndexAndroidGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -7236,6 +7638,18 @@ func (r ApiIndexAndroidGetRequest) Botnet(botnet string) ApiIndexAndroidGetReque
 // Specify a published date
 func (r ApiIndexAndroidGetRequest) Published(published string) ApiIndexAndroidGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAndroidGetRequest) Date(date string) ApiIndexAndroidGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAndroidGetRequest) Date2(date2 string) ApiIndexAndroidGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -7371,6 +7785,12 @@ func (a *IndicesAPIService) IndexAndroidGetExecute(r ApiIndexAndroidGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -7496,6 +7916,8 @@ type ApiIndexApacheActivemqGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -7591,6 +8013,18 @@ func (r ApiIndexApacheActivemqGetRequest) Botnet(botnet string) ApiIndexApacheAc
 // Specify a published date
 func (r ApiIndexApacheActivemqGetRequest) Published(published string) ApiIndexApacheActivemqGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheActivemqGetRequest) Date(date string) ApiIndexApacheActivemqGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheActivemqGetRequest) Date2(date2 string) ApiIndexApacheActivemqGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -7726,6 +8160,12 @@ func (a *IndicesAPIService) IndexApacheActivemqGetExecute(r ApiIndexApacheActive
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -7851,6 +8291,8 @@ type ApiIndexApacheArchivaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -7946,6 +8388,18 @@ func (r ApiIndexApacheArchivaGetRequest) Botnet(botnet string) ApiIndexApacheArc
 // Specify a published date
 func (r ApiIndexApacheArchivaGetRequest) Published(published string) ApiIndexApacheArchivaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheArchivaGetRequest) Date(date string) ApiIndexApacheArchivaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheArchivaGetRequest) Date2(date2 string) ApiIndexApacheArchivaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -8081,6 +8535,12 @@ func (a *IndicesAPIService) IndexApacheArchivaGetExecute(r ApiIndexApacheArchiva
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -8206,6 +8666,8 @@ type ApiIndexApacheArrowGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -8301,6 +8763,18 @@ func (r ApiIndexApacheArrowGetRequest) Botnet(botnet string) ApiIndexApacheArrow
 // Specify a published date
 func (r ApiIndexApacheArrowGetRequest) Published(published string) ApiIndexApacheArrowGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheArrowGetRequest) Date(date string) ApiIndexApacheArrowGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheArrowGetRequest) Date2(date2 string) ApiIndexApacheArrowGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -8436,6 +8910,12 @@ func (a *IndicesAPIService) IndexApacheArrowGetExecute(r ApiIndexApacheArrowGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -8561,6 +9041,8 @@ type ApiIndexApacheCamelGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -8656,6 +9138,18 @@ func (r ApiIndexApacheCamelGetRequest) Botnet(botnet string) ApiIndexApacheCamel
 // Specify a published date
 func (r ApiIndexApacheCamelGetRequest) Published(published string) ApiIndexApacheCamelGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheCamelGetRequest) Date(date string) ApiIndexApacheCamelGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheCamelGetRequest) Date2(date2 string) ApiIndexApacheCamelGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -8791,6 +9285,12 @@ func (a *IndicesAPIService) IndexApacheCamelGetExecute(r ApiIndexApacheCamelGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -8916,6 +9416,8 @@ type ApiIndexApacheCommonsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -9011,6 +9513,18 @@ func (r ApiIndexApacheCommonsGetRequest) Botnet(botnet string) ApiIndexApacheCom
 // Specify a published date
 func (r ApiIndexApacheCommonsGetRequest) Published(published string) ApiIndexApacheCommonsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheCommonsGetRequest) Date(date string) ApiIndexApacheCommonsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheCommonsGetRequest) Date2(date2 string) ApiIndexApacheCommonsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -9146,6 +9660,12 @@ func (a *IndicesAPIService) IndexApacheCommonsGetExecute(r ApiIndexApacheCommons
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -9271,6 +9791,8 @@ type ApiIndexApacheCouchdbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -9366,6 +9888,18 @@ func (r ApiIndexApacheCouchdbGetRequest) Botnet(botnet string) ApiIndexApacheCou
 // Specify a published date
 func (r ApiIndexApacheCouchdbGetRequest) Published(published string) ApiIndexApacheCouchdbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheCouchdbGetRequest) Date(date string) ApiIndexApacheCouchdbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheCouchdbGetRequest) Date2(date2 string) ApiIndexApacheCouchdbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -9501,6 +10035,12 @@ func (a *IndicesAPIService) IndexApacheCouchdbGetExecute(r ApiIndexApacheCouchdb
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -9626,6 +10166,8 @@ type ApiIndexApacheFlinkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -9721,6 +10263,18 @@ func (r ApiIndexApacheFlinkGetRequest) Botnet(botnet string) ApiIndexApacheFlink
 // Specify a published date
 func (r ApiIndexApacheFlinkGetRequest) Published(published string) ApiIndexApacheFlinkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheFlinkGetRequest) Date(date string) ApiIndexApacheFlinkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheFlinkGetRequest) Date2(date2 string) ApiIndexApacheFlinkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -9856,6 +10410,12 @@ func (a *IndicesAPIService) IndexApacheFlinkGetExecute(r ApiIndexApacheFlinkGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -9981,6 +10541,8 @@ type ApiIndexApacheGuacamoleGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -10076,6 +10638,18 @@ func (r ApiIndexApacheGuacamoleGetRequest) Botnet(botnet string) ApiIndexApacheG
 // Specify a published date
 func (r ApiIndexApacheGuacamoleGetRequest) Published(published string) ApiIndexApacheGuacamoleGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheGuacamoleGetRequest) Date(date string) ApiIndexApacheGuacamoleGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheGuacamoleGetRequest) Date2(date2 string) ApiIndexApacheGuacamoleGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -10211,6 +10785,12 @@ func (a *IndicesAPIService) IndexApacheGuacamoleGetExecute(r ApiIndexApacheGuaca
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -10336,6 +10916,8 @@ type ApiIndexApacheHadoopGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -10431,6 +11013,18 @@ func (r ApiIndexApacheHadoopGetRequest) Botnet(botnet string) ApiIndexApacheHado
 // Specify a published date
 func (r ApiIndexApacheHadoopGetRequest) Published(published string) ApiIndexApacheHadoopGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheHadoopGetRequest) Date(date string) ApiIndexApacheHadoopGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheHadoopGetRequest) Date2(date2 string) ApiIndexApacheHadoopGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -10566,6 +11160,12 @@ func (a *IndicesAPIService) IndexApacheHadoopGetExecute(r ApiIndexApacheHadoopGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -10691,6 +11291,8 @@ type ApiIndexApacheHttpGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -10786,6 +11388,18 @@ func (r ApiIndexApacheHttpGetRequest) Botnet(botnet string) ApiIndexApacheHttpGe
 // Specify a published date
 func (r ApiIndexApacheHttpGetRequest) Published(published string) ApiIndexApacheHttpGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheHttpGetRequest) Date(date string) ApiIndexApacheHttpGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheHttpGetRequest) Date2(date2 string) ApiIndexApacheHttpGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -10921,6 +11535,12 @@ func (a *IndicesAPIService) IndexApacheHttpGetExecute(r ApiIndexApacheHttpGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -11046,6 +11666,8 @@ type ApiIndexApacheJspwikiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -11141,6 +11763,18 @@ func (r ApiIndexApacheJspwikiGetRequest) Botnet(botnet string) ApiIndexApacheJsp
 // Specify a published date
 func (r ApiIndexApacheJspwikiGetRequest) Published(published string) ApiIndexApacheJspwikiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheJspwikiGetRequest) Date(date string) ApiIndexApacheJspwikiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheJspwikiGetRequest) Date2(date2 string) ApiIndexApacheJspwikiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -11276,6 +11910,12 @@ func (a *IndicesAPIService) IndexApacheJspwikiGetExecute(r ApiIndexApacheJspwiki
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -11401,6 +12041,8 @@ type ApiIndexApacheKafkaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -11496,6 +12138,18 @@ func (r ApiIndexApacheKafkaGetRequest) Botnet(botnet string) ApiIndexApacheKafka
 // Specify a published date
 func (r ApiIndexApacheKafkaGetRequest) Published(published string) ApiIndexApacheKafkaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheKafkaGetRequest) Date(date string) ApiIndexApacheKafkaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheKafkaGetRequest) Date2(date2 string) ApiIndexApacheKafkaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -11631,6 +12285,12 @@ func (a *IndicesAPIService) IndexApacheKafkaGetExecute(r ApiIndexApacheKafkaGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -11756,6 +12416,8 @@ type ApiIndexApacheLoggingservicesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -11851,6 +12513,18 @@ func (r ApiIndexApacheLoggingservicesGetRequest) Botnet(botnet string) ApiIndexA
 // Specify a published date
 func (r ApiIndexApacheLoggingservicesGetRequest) Published(published string) ApiIndexApacheLoggingservicesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheLoggingservicesGetRequest) Date(date string) ApiIndexApacheLoggingservicesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheLoggingservicesGetRequest) Date2(date2 string) ApiIndexApacheLoggingservicesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -11986,6 +12660,12 @@ func (a *IndicesAPIService) IndexApacheLoggingservicesGetExecute(r ApiIndexApach
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -12111,6 +12791,8 @@ type ApiIndexApacheNifiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -12206,6 +12888,18 @@ func (r ApiIndexApacheNifiGetRequest) Botnet(botnet string) ApiIndexApacheNifiGe
 // Specify a published date
 func (r ApiIndexApacheNifiGetRequest) Published(published string) ApiIndexApacheNifiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheNifiGetRequest) Date(date string) ApiIndexApacheNifiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheNifiGetRequest) Date2(date2 string) ApiIndexApacheNifiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -12341,6 +13035,12 @@ func (a *IndicesAPIService) IndexApacheNifiGetExecute(r ApiIndexApacheNifiGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -12466,6 +13166,8 @@ type ApiIndexApacheOfbizGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -12561,6 +13263,18 @@ func (r ApiIndexApacheOfbizGetRequest) Botnet(botnet string) ApiIndexApacheOfbiz
 // Specify a published date
 func (r ApiIndexApacheOfbizGetRequest) Published(published string) ApiIndexApacheOfbizGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheOfbizGetRequest) Date(date string) ApiIndexApacheOfbizGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheOfbizGetRequest) Date2(date2 string) ApiIndexApacheOfbizGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -12696,6 +13410,12 @@ func (a *IndicesAPIService) IndexApacheOfbizGetExecute(r ApiIndexApacheOfbizGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -12821,6 +13541,8 @@ type ApiIndexApacheOpenmeetingsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -12916,6 +13638,18 @@ func (r ApiIndexApacheOpenmeetingsGetRequest) Botnet(botnet string) ApiIndexApac
 // Specify a published date
 func (r ApiIndexApacheOpenmeetingsGetRequest) Published(published string) ApiIndexApacheOpenmeetingsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheOpenmeetingsGetRequest) Date(date string) ApiIndexApacheOpenmeetingsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheOpenmeetingsGetRequest) Date2(date2 string) ApiIndexApacheOpenmeetingsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -13051,6 +13785,12 @@ func (a *IndicesAPIService) IndexApacheOpenmeetingsGetExecute(r ApiIndexApacheOp
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -13176,6 +13916,8 @@ type ApiIndexApacheOpenofficeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -13271,6 +14013,18 @@ func (r ApiIndexApacheOpenofficeGetRequest) Botnet(botnet string) ApiIndexApache
 // Specify a published date
 func (r ApiIndexApacheOpenofficeGetRequest) Published(published string) ApiIndexApacheOpenofficeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheOpenofficeGetRequest) Date(date string) ApiIndexApacheOpenofficeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheOpenofficeGetRequest) Date2(date2 string) ApiIndexApacheOpenofficeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -13406,6 +14160,12 @@ func (a *IndicesAPIService) IndexApacheOpenofficeGetExecute(r ApiIndexApacheOpen
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -13531,6 +14291,8 @@ type ApiIndexApachePulsarGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -13626,6 +14388,18 @@ func (r ApiIndexApachePulsarGetRequest) Botnet(botnet string) ApiIndexApachePuls
 // Specify a published date
 func (r ApiIndexApachePulsarGetRequest) Published(published string) ApiIndexApachePulsarGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApachePulsarGetRequest) Date(date string) ApiIndexApachePulsarGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApachePulsarGetRequest) Date2(date2 string) ApiIndexApachePulsarGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -13761,6 +14535,12 @@ func (a *IndicesAPIService) IndexApachePulsarGetExecute(r ApiIndexApachePulsarGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -13886,6 +14666,8 @@ type ApiIndexApacheShiroGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -13981,6 +14763,18 @@ func (r ApiIndexApacheShiroGetRequest) Botnet(botnet string) ApiIndexApacheShiro
 // Specify a published date
 func (r ApiIndexApacheShiroGetRequest) Published(published string) ApiIndexApacheShiroGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheShiroGetRequest) Date(date string) ApiIndexApacheShiroGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheShiroGetRequest) Date2(date2 string) ApiIndexApacheShiroGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -14116,6 +14910,12 @@ func (a *IndicesAPIService) IndexApacheShiroGetExecute(r ApiIndexApacheShiroGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -14241,6 +15041,8 @@ type ApiIndexApacheSparkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -14336,6 +15138,18 @@ func (r ApiIndexApacheSparkGetRequest) Botnet(botnet string) ApiIndexApacheSpark
 // Specify a published date
 func (r ApiIndexApacheSparkGetRequest) Published(published string) ApiIndexApacheSparkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheSparkGetRequest) Date(date string) ApiIndexApacheSparkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheSparkGetRequest) Date2(date2 string) ApiIndexApacheSparkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -14471,6 +15285,12 @@ func (a *IndicesAPIService) IndexApacheSparkGetExecute(r ApiIndexApacheSparkGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -14596,6 +15416,8 @@ type ApiIndexApacheStrutsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -14691,6 +15513,18 @@ func (r ApiIndexApacheStrutsGetRequest) Botnet(botnet string) ApiIndexApacheStru
 // Specify a published date
 func (r ApiIndexApacheStrutsGetRequest) Published(published string) ApiIndexApacheStrutsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheStrutsGetRequest) Date(date string) ApiIndexApacheStrutsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheStrutsGetRequest) Date2(date2 string) ApiIndexApacheStrutsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -14826,6 +15660,12 @@ func (a *IndicesAPIService) IndexApacheStrutsGetExecute(r ApiIndexApacheStrutsGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -14951,6 +15791,8 @@ type ApiIndexApacheSubversionGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -15046,6 +15888,18 @@ func (r ApiIndexApacheSubversionGetRequest) Botnet(botnet string) ApiIndexApache
 // Specify a published date
 func (r ApiIndexApacheSubversionGetRequest) Published(published string) ApiIndexApacheSubversionGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheSubversionGetRequest) Date(date string) ApiIndexApacheSubversionGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheSubversionGetRequest) Date2(date2 string) ApiIndexApacheSubversionGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -15181,6 +16035,12 @@ func (a *IndicesAPIService) IndexApacheSubversionGetExecute(r ApiIndexApacheSubv
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -15306,6 +16166,8 @@ type ApiIndexApacheSupersetGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -15401,6 +16263,18 @@ func (r ApiIndexApacheSupersetGetRequest) Botnet(botnet string) ApiIndexApacheSu
 // Specify a published date
 func (r ApiIndexApacheSupersetGetRequest) Published(published string) ApiIndexApacheSupersetGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheSupersetGetRequest) Date(date string) ApiIndexApacheSupersetGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheSupersetGetRequest) Date2(date2 string) ApiIndexApacheSupersetGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -15536,6 +16410,12 @@ func (a *IndicesAPIService) IndexApacheSupersetGetExecute(r ApiIndexApacheSupers
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -15661,6 +16541,8 @@ type ApiIndexApacheTomcatGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -15756,6 +16638,18 @@ func (r ApiIndexApacheTomcatGetRequest) Botnet(botnet string) ApiIndexApacheTomc
 // Specify a published date
 func (r ApiIndexApacheTomcatGetRequest) Published(published string) ApiIndexApacheTomcatGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheTomcatGetRequest) Date(date string) ApiIndexApacheTomcatGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheTomcatGetRequest) Date2(date2 string) ApiIndexApacheTomcatGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -15891,6 +16785,12 @@ func (a *IndicesAPIService) IndexApacheTomcatGetExecute(r ApiIndexApacheTomcatGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -16016,6 +16916,8 @@ type ApiIndexApacheZookeeperGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -16111,6 +17013,18 @@ func (r ApiIndexApacheZookeeperGetRequest) Botnet(botnet string) ApiIndexApacheZ
 // Specify a published date
 func (r ApiIndexApacheZookeeperGetRequest) Published(published string) ApiIndexApacheZookeeperGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexApacheZookeeperGetRequest) Date(date string) ApiIndexApacheZookeeperGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexApacheZookeeperGetRequest) Date2(date2 string) ApiIndexApacheZookeeperGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -16246,6 +17160,12 @@ func (a *IndicesAPIService) IndexApacheZookeeperGetExecute(r ApiIndexApacheZooke
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -16371,6 +17291,8 @@ type ApiIndexAppcheckGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -16466,6 +17388,18 @@ func (r ApiIndexAppcheckGetRequest) Botnet(botnet string) ApiIndexAppcheckGetReq
 // Specify a published date
 func (r ApiIndexAppcheckGetRequest) Published(published string) ApiIndexAppcheckGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAppcheckGetRequest) Date(date string) ApiIndexAppcheckGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAppcheckGetRequest) Date2(date2 string) ApiIndexAppcheckGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -16601,6 +17535,12 @@ func (a *IndicesAPIService) IndexAppcheckGetExecute(r ApiIndexAppcheckGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -16726,6 +17666,8 @@ type ApiIndexAppgateGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -16821,6 +17763,18 @@ func (r ApiIndexAppgateGetRequest) Botnet(botnet string) ApiIndexAppgateGetReque
 // Specify a published date
 func (r ApiIndexAppgateGetRequest) Published(published string) ApiIndexAppgateGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAppgateGetRequest) Date(date string) ApiIndexAppgateGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAppgateGetRequest) Date2(date2 string) ApiIndexAppgateGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -16956,6 +17910,12 @@ func (a *IndicesAPIService) IndexAppgateGetExecute(r ApiIndexAppgateGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -17081,6 +18041,8 @@ type ApiIndexAppleGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -17176,6 +18138,18 @@ func (r ApiIndexAppleGetRequest) Botnet(botnet string) ApiIndexAppleGetRequest {
 // Specify a published date
 func (r ApiIndexAppleGetRequest) Published(published string) ApiIndexAppleGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAppleGetRequest) Date(date string) ApiIndexAppleGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAppleGetRequest) Date2(date2 string) ApiIndexAppleGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -17311,6 +18285,12 @@ func (a *IndicesAPIService) IndexAppleGetExecute(r ApiIndexAppleGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -17436,6 +18416,8 @@ type ApiIndexArchGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -17531,6 +18513,18 @@ func (r ApiIndexArchGetRequest) Botnet(botnet string) ApiIndexArchGetRequest {
 // Specify a published date
 func (r ApiIndexArchGetRequest) Published(published string) ApiIndexArchGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexArchGetRequest) Date(date string) ApiIndexArchGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexArchGetRequest) Date2(date2 string) ApiIndexArchGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -17666,6 +18660,12 @@ func (a *IndicesAPIService) IndexArchGetExecute(r ApiIndexArchGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -17791,6 +18791,8 @@ type ApiIndexAristaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -17886,6 +18888,18 @@ func (r ApiIndexAristaGetRequest) Botnet(botnet string) ApiIndexAristaGetRequest
 // Specify a published date
 func (r ApiIndexAristaGetRequest) Published(published string) ApiIndexAristaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAristaGetRequest) Date(date string) ApiIndexAristaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAristaGetRequest) Date2(date2 string) ApiIndexAristaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -18021,6 +19035,12 @@ func (a *IndicesAPIService) IndexAristaGetExecute(r ApiIndexAristaGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -18146,6 +19166,8 @@ type ApiIndexArubaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -18241,6 +19263,18 @@ func (r ApiIndexArubaGetRequest) Botnet(botnet string) ApiIndexArubaGetRequest {
 // Specify a published date
 func (r ApiIndexArubaGetRequest) Published(published string) ApiIndexArubaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexArubaGetRequest) Date(date string) ApiIndexArubaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexArubaGetRequest) Date2(date2 string) ApiIndexArubaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -18376,6 +19410,12 @@ func (a *IndicesAPIService) IndexArubaGetExecute(r ApiIndexArubaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -18501,6 +19541,8 @@ type ApiIndexAsrgGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -18596,6 +19638,18 @@ func (r ApiIndexAsrgGetRequest) Botnet(botnet string) ApiIndexAsrgGetRequest {
 // Specify a published date
 func (r ApiIndexAsrgGetRequest) Published(published string) ApiIndexAsrgGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAsrgGetRequest) Date(date string) ApiIndexAsrgGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAsrgGetRequest) Date2(date2 string) ApiIndexAsrgGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -18731,6 +19785,12 @@ func (a *IndicesAPIService) IndexAsrgGetExecute(r ApiIndexAsrgGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -18856,6 +19916,8 @@ type ApiIndexAssetnoteGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -18951,6 +20013,18 @@ func (r ApiIndexAssetnoteGetRequest) Botnet(botnet string) ApiIndexAssetnoteGetR
 // Specify a published date
 func (r ApiIndexAssetnoteGetRequest) Published(published string) ApiIndexAssetnoteGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAssetnoteGetRequest) Date(date string) ApiIndexAssetnoteGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAssetnoteGetRequest) Date2(date2 string) ApiIndexAssetnoteGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -19086,6 +20160,12 @@ func (a *IndicesAPIService) IndexAssetnoteGetExecute(r ApiIndexAssetnoteGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -19211,6 +20291,8 @@ type ApiIndexAsteriskGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -19306,6 +20388,18 @@ func (r ApiIndexAsteriskGetRequest) Botnet(botnet string) ApiIndexAsteriskGetReq
 // Specify a published date
 func (r ApiIndexAsteriskGetRequest) Published(published string) ApiIndexAsteriskGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAsteriskGetRequest) Date(date string) ApiIndexAsteriskGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAsteriskGetRequest) Date2(date2 string) ApiIndexAsteriskGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -19441,6 +20535,12 @@ func (a *IndicesAPIService) IndexAsteriskGetExecute(r ApiIndexAsteriskGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -19566,6 +20666,8 @@ type ApiIndexAstraGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -19661,6 +20763,18 @@ func (r ApiIndexAstraGetRequest) Botnet(botnet string) ApiIndexAstraGetRequest {
 // Specify a published date
 func (r ApiIndexAstraGetRequest) Published(published string) ApiIndexAstraGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAstraGetRequest) Date(date string) ApiIndexAstraGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAstraGetRequest) Date2(date2 string) ApiIndexAstraGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -19796,6 +20910,12 @@ func (a *IndicesAPIService) IndexAstraGetExecute(r ApiIndexAstraGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -19921,6 +21041,8 @@ type ApiIndexAsusGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -20016,6 +21138,18 @@ func (r ApiIndexAsusGetRequest) Botnet(botnet string) ApiIndexAsusGetRequest {
 // Specify a published date
 func (r ApiIndexAsusGetRequest) Published(published string) ApiIndexAsusGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAsusGetRequest) Date(date string) ApiIndexAsusGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAsusGetRequest) Date2(date2 string) ApiIndexAsusGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -20151,6 +21285,12 @@ func (a *IndicesAPIService) IndexAsusGetExecute(r ApiIndexAsusGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -20276,6 +21416,8 @@ type ApiIndexAtlassianGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -20371,6 +21513,18 @@ func (r ApiIndexAtlassianGetRequest) Botnet(botnet string) ApiIndexAtlassianGetR
 // Specify a published date
 func (r ApiIndexAtlassianGetRequest) Published(published string) ApiIndexAtlassianGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAtlassianGetRequest) Date(date string) ApiIndexAtlassianGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAtlassianGetRequest) Date2(date2 string) ApiIndexAtlassianGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -20506,6 +21660,12 @@ func (a *IndicesAPIService) IndexAtlassianGetExecute(r ApiIndexAtlassianGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -20631,6 +21791,8 @@ type ApiIndexAtlassianVulnsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -20726,6 +21888,18 @@ func (r ApiIndexAtlassianVulnsGetRequest) Botnet(botnet string) ApiIndexAtlassia
 // Specify a published date
 func (r ApiIndexAtlassianVulnsGetRequest) Published(published string) ApiIndexAtlassianVulnsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAtlassianVulnsGetRequest) Date(date string) ApiIndexAtlassianVulnsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAtlassianVulnsGetRequest) Date2(date2 string) ApiIndexAtlassianVulnsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -20861,6 +22035,12 @@ func (a *IndicesAPIService) IndexAtlassianVulnsGetExecute(r ApiIndexAtlassianVul
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -20986,6 +22166,8 @@ type ApiIndexAtredisGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -21081,6 +22263,18 @@ func (r ApiIndexAtredisGetRequest) Botnet(botnet string) ApiIndexAtredisGetReque
 // Specify a published date
 func (r ApiIndexAtredisGetRequest) Published(published string) ApiIndexAtredisGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAtredisGetRequest) Date(date string) ApiIndexAtredisGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAtredisGetRequest) Date2(date2 string) ApiIndexAtredisGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -21216,6 +22410,12 @@ func (a *IndicesAPIService) IndexAtredisGetExecute(r ApiIndexAtredisGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -21341,6 +22541,8 @@ type ApiIndexAudiocodesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -21436,6 +22638,18 @@ func (r ApiIndexAudiocodesGetRequest) Botnet(botnet string) ApiIndexAudiocodesGe
 // Specify a published date
 func (r ApiIndexAudiocodesGetRequest) Published(published string) ApiIndexAudiocodesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAudiocodesGetRequest) Date(date string) ApiIndexAudiocodesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAudiocodesGetRequest) Date2(date2 string) ApiIndexAudiocodesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -21571,6 +22785,12 @@ func (a *IndicesAPIService) IndexAudiocodesGetExecute(r ApiIndexAudiocodesGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -21696,6 +22916,8 @@ type ApiIndexAuscertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -21791,6 +23013,18 @@ func (r ApiIndexAuscertGetRequest) Botnet(botnet string) ApiIndexAuscertGetReque
 // Specify a published date
 func (r ApiIndexAuscertGetRequest) Published(published string) ApiIndexAuscertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAuscertGetRequest) Date(date string) ApiIndexAuscertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAuscertGetRequest) Date2(date2 string) ApiIndexAuscertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -21926,6 +23160,12 @@ func (a *IndicesAPIService) IndexAuscertGetExecute(r ApiIndexAuscertGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -22051,6 +23291,8 @@ type ApiIndexAutodeskGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -22146,6 +23388,18 @@ func (r ApiIndexAutodeskGetRequest) Botnet(botnet string) ApiIndexAutodeskGetReq
 // Specify a published date
 func (r ApiIndexAutodeskGetRequest) Published(published string) ApiIndexAutodeskGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAutodeskGetRequest) Date(date string) ApiIndexAutodeskGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAutodeskGetRequest) Date2(date2 string) ApiIndexAutodeskGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -22281,6 +23535,12 @@ func (a *IndicesAPIService) IndexAutodeskGetExecute(r ApiIndexAutodeskGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -22406,6 +23666,8 @@ type ApiIndexAvayaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -22501,6 +23763,18 @@ func (r ApiIndexAvayaGetRequest) Botnet(botnet string) ApiIndexAvayaGetRequest {
 // Specify a published date
 func (r ApiIndexAvayaGetRequest) Published(published string) ApiIndexAvayaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAvayaGetRequest) Date(date string) ApiIndexAvayaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAvayaGetRequest) Date2(date2 string) ApiIndexAvayaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -22636,6 +23910,12 @@ func (a *IndicesAPIService) IndexAvayaGetExecute(r ApiIndexAvayaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -22761,6 +24041,8 @@ type ApiIndexAvevaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -22856,6 +24138,18 @@ func (r ApiIndexAvevaGetRequest) Botnet(botnet string) ApiIndexAvevaGetRequest {
 // Specify a published date
 func (r ApiIndexAvevaGetRequest) Published(published string) ApiIndexAvevaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAvevaGetRequest) Date(date string) ApiIndexAvevaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAvevaGetRequest) Date2(date2 string) ApiIndexAvevaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -22991,6 +24285,12 @@ func (a *IndicesAPIService) IndexAvevaGetExecute(r ApiIndexAvevaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -23116,6 +24416,8 @@ type ApiIndexAvigilonGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -23211,6 +24513,18 @@ func (r ApiIndexAvigilonGetRequest) Botnet(botnet string) ApiIndexAvigilonGetReq
 // Specify a published date
 func (r ApiIndexAvigilonGetRequest) Published(published string) ApiIndexAvigilonGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAvigilonGetRequest) Date(date string) ApiIndexAvigilonGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAvigilonGetRequest) Date2(date2 string) ApiIndexAvigilonGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -23346,6 +24660,12 @@ func (a *IndicesAPIService) IndexAvigilonGetExecute(r ApiIndexAvigilonGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -23471,6 +24791,8 @@ type ApiIndexAwsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -23566,6 +24888,18 @@ func (r ApiIndexAwsGetRequest) Botnet(botnet string) ApiIndexAwsGetRequest {
 // Specify a published date
 func (r ApiIndexAwsGetRequest) Published(published string) ApiIndexAwsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAwsGetRequest) Date(date string) ApiIndexAwsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAwsGetRequest) Date2(date2 string) ApiIndexAwsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -23701,6 +25035,12 @@ func (a *IndicesAPIService) IndexAwsGetExecute(r ApiIndexAwsGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -23826,6 +25166,8 @@ type ApiIndexAxisGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -23921,6 +25263,18 @@ func (r ApiIndexAxisGetRequest) Botnet(botnet string) ApiIndexAxisGetRequest {
 // Specify a published date
 func (r ApiIndexAxisGetRequest) Published(published string) ApiIndexAxisGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAxisGetRequest) Date(date string) ApiIndexAxisGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAxisGetRequest) Date2(date2 string) ApiIndexAxisGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -24056,6 +25410,12 @@ func (a *IndicesAPIService) IndexAxisGetExecute(r ApiIndexAxisGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -24181,6 +25541,8 @@ type ApiIndexAzulGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -24276,6 +25638,18 @@ func (r ApiIndexAzulGetRequest) Botnet(botnet string) ApiIndexAzulGetRequest {
 // Specify a published date
 func (r ApiIndexAzulGetRequest) Published(published string) ApiIndexAzulGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexAzulGetRequest) Date(date string) ApiIndexAzulGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexAzulGetRequest) Date2(date2 string) ApiIndexAzulGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -24411,6 +25785,12 @@ func (a *IndicesAPIService) IndexAzulGetExecute(r ApiIndexAzulGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -24536,6 +25916,8 @@ type ApiIndexBandrGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -24631,6 +26013,18 @@ func (r ApiIndexBandrGetRequest) Botnet(botnet string) ApiIndexBandrGetRequest {
 // Specify a published date
 func (r ApiIndexBandrGetRequest) Published(published string) ApiIndexBandrGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBandrGetRequest) Date(date string) ApiIndexBandrGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBandrGetRequest) Date2(date2 string) ApiIndexBandrGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -24766,6 +26160,12 @@ func (a *IndicesAPIService) IndexBandrGetExecute(r ApiIndexBandrGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -24891,6 +26291,8 @@ type ApiIndexBaxterGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -24986,6 +26388,18 @@ func (r ApiIndexBaxterGetRequest) Botnet(botnet string) ApiIndexBaxterGetRequest
 // Specify a published date
 func (r ApiIndexBaxterGetRequest) Published(published string) ApiIndexBaxterGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBaxterGetRequest) Date(date string) ApiIndexBaxterGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBaxterGetRequest) Date2(date2 string) ApiIndexBaxterGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -25121,6 +26535,12 @@ func (a *IndicesAPIService) IndexBaxterGetExecute(r ApiIndexBaxterGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -25246,6 +26666,8 @@ type ApiIndexBbraunGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -25341,6 +26763,18 @@ func (r ApiIndexBbraunGetRequest) Botnet(botnet string) ApiIndexBbraunGetRequest
 // Specify a published date
 func (r ApiIndexBbraunGetRequest) Published(published string) ApiIndexBbraunGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBbraunGetRequest) Date(date string) ApiIndexBbraunGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBbraunGetRequest) Date2(date2 string) ApiIndexBbraunGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -25476,6 +26910,12 @@ func (a *IndicesAPIService) IndexBbraunGetExecute(r ApiIndexBbraunGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -25601,6 +27041,8 @@ type ApiIndexBdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -25696,6 +27138,18 @@ func (r ApiIndexBdGetRequest) Botnet(botnet string) ApiIndexBdGetRequest {
 // Specify a published date
 func (r ApiIndexBdGetRequest) Published(published string) ApiIndexBdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBdGetRequest) Date(date string) ApiIndexBdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBdGetRequest) Date2(date2 string) ApiIndexBdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -25831,6 +27285,12 @@ func (a *IndicesAPIService) IndexBdGetExecute(r ApiIndexBdGetRequest) (*RenderRe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -25956,6 +27416,8 @@ type ApiIndexBduGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -26051,6 +27513,18 @@ func (r ApiIndexBduGetRequest) Botnet(botnet string) ApiIndexBduGetRequest {
 // Specify a published date
 func (r ApiIndexBduGetRequest) Published(published string) ApiIndexBduGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBduGetRequest) Date(date string) ApiIndexBduGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBduGetRequest) Date2(date2 string) ApiIndexBduGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -26186,6 +27660,12 @@ func (a *IndicesAPIService) IndexBduGetExecute(r ApiIndexBduGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -26311,6 +27791,8 @@ type ApiIndexBeckhoffGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -26406,6 +27888,18 @@ func (r ApiIndexBeckhoffGetRequest) Botnet(botnet string) ApiIndexBeckhoffGetReq
 // Specify a published date
 func (r ApiIndexBeckhoffGetRequest) Published(published string) ApiIndexBeckhoffGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBeckhoffGetRequest) Date(date string) ApiIndexBeckhoffGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBeckhoffGetRequest) Date2(date2 string) ApiIndexBeckhoffGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -26541,6 +28035,12 @@ func (a *IndicesAPIService) IndexBeckhoffGetExecute(r ApiIndexBeckhoffGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -26666,6 +28166,8 @@ type ApiIndexBeckmanCoulterGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -26761,6 +28263,18 @@ func (r ApiIndexBeckmanCoulterGetRequest) Botnet(botnet string) ApiIndexBeckmanC
 // Specify a published date
 func (r ApiIndexBeckmanCoulterGetRequest) Published(published string) ApiIndexBeckmanCoulterGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBeckmanCoulterGetRequest) Date(date string) ApiIndexBeckmanCoulterGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBeckmanCoulterGetRequest) Date2(date2 string) ApiIndexBeckmanCoulterGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -26896,6 +28410,12 @@ func (a *IndicesAPIService) IndexBeckmanCoulterGetExecute(r ApiIndexBeckmanCoult
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -27021,6 +28541,8 @@ type ApiIndexBeldenGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -27116,6 +28638,18 @@ func (r ApiIndexBeldenGetRequest) Botnet(botnet string) ApiIndexBeldenGetRequest
 // Specify a published date
 func (r ApiIndexBeldenGetRequest) Published(published string) ApiIndexBeldenGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBeldenGetRequest) Date(date string) ApiIndexBeldenGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBeldenGetRequest) Date2(date2 string) ApiIndexBeldenGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -27251,6 +28785,12 @@ func (a *IndicesAPIService) IndexBeldenGetExecute(r ApiIndexBeldenGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -27376,6 +28916,8 @@ type ApiIndexBeyondTrustGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -27471,6 +29013,18 @@ func (r ApiIndexBeyondTrustGetRequest) Botnet(botnet string) ApiIndexBeyondTrust
 // Specify a published date
 func (r ApiIndexBeyondTrustGetRequest) Published(published string) ApiIndexBeyondTrustGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBeyondTrustGetRequest) Date(date string) ApiIndexBeyondTrustGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBeyondTrustGetRequest) Date2(date2 string) ApiIndexBeyondTrustGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -27606,6 +29160,12 @@ func (a *IndicesAPIService) IndexBeyondTrustGetExecute(r ApiIndexBeyondTrustGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -27731,6 +29291,8 @@ type ApiIndexBinarlyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -27826,6 +29388,18 @@ func (r ApiIndexBinarlyGetRequest) Botnet(botnet string) ApiIndexBinarlyGetReque
 // Specify a published date
 func (r ApiIndexBinarlyGetRequest) Published(published string) ApiIndexBinarlyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBinarlyGetRequest) Date(date string) ApiIndexBinarlyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBinarlyGetRequest) Date2(date2 string) ApiIndexBinarlyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -27961,6 +29535,12 @@ func (a *IndicesAPIService) IndexBinarlyGetExecute(r ApiIndexBinarlyGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -28086,6 +29666,8 @@ type ApiIndexBitdefenderGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -28181,6 +29763,18 @@ func (r ApiIndexBitdefenderGetRequest) Botnet(botnet string) ApiIndexBitdefender
 // Specify a published date
 func (r ApiIndexBitdefenderGetRequest) Published(published string) ApiIndexBitdefenderGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBitdefenderGetRequest) Date(date string) ApiIndexBitdefenderGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBitdefenderGetRequest) Date2(date2 string) ApiIndexBitdefenderGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -28316,6 +29910,12 @@ func (a *IndicesAPIService) IndexBitdefenderGetExecute(r ApiIndexBitdefenderGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -28441,6 +30041,8 @@ type ApiIndexBlackberryGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -28536,6 +30138,18 @@ func (r ApiIndexBlackberryGetRequest) Botnet(botnet string) ApiIndexBlackberryGe
 // Specify a published date
 func (r ApiIndexBlackberryGetRequest) Published(published string) ApiIndexBlackberryGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBlackberryGetRequest) Date(date string) ApiIndexBlackberryGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBlackberryGetRequest) Date2(date2 string) ApiIndexBlackberryGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -28671,6 +30285,12 @@ func (a *IndicesAPIService) IndexBlackberryGetExecute(r ApiIndexBlackberryGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -28796,6 +30416,8 @@ type ApiIndexBlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -28891,6 +30513,18 @@ func (r ApiIndexBlsGetRequest) Botnet(botnet string) ApiIndexBlsGetRequest {
 // Specify a published date
 func (r ApiIndexBlsGetRequest) Published(published string) ApiIndexBlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBlsGetRequest) Date(date string) ApiIndexBlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBlsGetRequest) Date2(date2 string) ApiIndexBlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -29026,6 +30660,12 @@ func (a *IndicesAPIService) IndexBlsGetExecute(r ApiIndexBlsGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -29151,6 +30791,8 @@ type ApiIndexBoschGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -29246,6 +30888,18 @@ func (r ApiIndexBoschGetRequest) Botnet(botnet string) ApiIndexBoschGetRequest {
 // Specify a published date
 func (r ApiIndexBoschGetRequest) Published(published string) ApiIndexBoschGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBoschGetRequest) Date(date string) ApiIndexBoschGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBoschGetRequest) Date2(date2 string) ApiIndexBoschGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -29381,6 +31035,12 @@ func (a *IndicesAPIService) IndexBoschGetExecute(r ApiIndexBoschGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -29506,6 +31166,8 @@ type ApiIndexBostonScientificGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -29601,6 +31263,18 @@ func (r ApiIndexBostonScientificGetRequest) Botnet(botnet string) ApiIndexBoston
 // Specify a published date
 func (r ApiIndexBostonScientificGetRequest) Published(published string) ApiIndexBostonScientificGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBostonScientificGetRequest) Date(date string) ApiIndexBostonScientificGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBostonScientificGetRequest) Date2(date2 string) ApiIndexBostonScientificGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -29736,6 +31410,12 @@ func (a *IndicesAPIService) IndexBostonScientificGetExecute(r ApiIndexBostonScie
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -29861,6 +31541,8 @@ type ApiIndexBotnetsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -29956,6 +31638,18 @@ func (r ApiIndexBotnetsGetRequest) Botnet(botnet string) ApiIndexBotnetsGetReque
 // Specify a published date
 func (r ApiIndexBotnetsGetRequest) Published(published string) ApiIndexBotnetsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexBotnetsGetRequest) Date(date string) ApiIndexBotnetsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexBotnetsGetRequest) Date2(date2 string) ApiIndexBotnetsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -30091,6 +31785,12 @@ func (a *IndicesAPIService) IndexBotnetsGetExecute(r ApiIndexBotnetsGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -30216,6 +31916,8 @@ type ApiIndexCaCyberCentreGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -30311,6 +32013,18 @@ func (r ApiIndexCaCyberCentreGetRequest) Botnet(botnet string) ApiIndexCaCyberCe
 // Specify a published date
 func (r ApiIndexCaCyberCentreGetRequest) Published(published string) ApiIndexCaCyberCentreGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCaCyberCentreGetRequest) Date(date string) ApiIndexCaCyberCentreGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCaCyberCentreGetRequest) Date2(date2 string) ApiIndexCaCyberCentreGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -30446,6 +32160,12 @@ func (a *IndicesAPIService) IndexCaCyberCentreGetExecute(r ApiIndexCaCyberCentre
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -30571,6 +32291,8 @@ type ApiIndexCanvasGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -30666,6 +32388,18 @@ func (r ApiIndexCanvasGetRequest) Botnet(botnet string) ApiIndexCanvasGetRequest
 // Specify a published date
 func (r ApiIndexCanvasGetRequest) Published(published string) ApiIndexCanvasGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCanvasGetRequest) Date(date string) ApiIndexCanvasGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCanvasGetRequest) Date2(date2 string) ApiIndexCanvasGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -30801,6 +32535,12 @@ func (a *IndicesAPIService) IndexCanvasGetExecute(r ApiIndexCanvasGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -30926,6 +32666,8 @@ type ApiIndexCarestreamGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -31021,6 +32763,18 @@ func (r ApiIndexCarestreamGetRequest) Botnet(botnet string) ApiIndexCarestreamGe
 // Specify a published date
 func (r ApiIndexCarestreamGetRequest) Published(published string) ApiIndexCarestreamGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCarestreamGetRequest) Date(date string) ApiIndexCarestreamGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCarestreamGetRequest) Date2(date2 string) ApiIndexCarestreamGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -31156,6 +32910,12 @@ func (a *IndicesAPIService) IndexCarestreamGetExecute(r ApiIndexCarestreamGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -31281,6 +33041,8 @@ type ApiIndexCargoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -31376,6 +33138,18 @@ func (r ApiIndexCargoGetRequest) Botnet(botnet string) ApiIndexCargoGetRequest {
 // Specify a published date
 func (r ApiIndexCargoGetRequest) Published(published string) ApiIndexCargoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCargoGetRequest) Date(date string) ApiIndexCargoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCargoGetRequest) Date2(date2 string) ApiIndexCargoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -31511,6 +33285,12 @@ func (a *IndicesAPIService) IndexCargoGetExecute(r ApiIndexCargoGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -31636,6 +33416,8 @@ type ApiIndexCarrierGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -31731,6 +33513,18 @@ func (r ApiIndexCarrierGetRequest) Botnet(botnet string) ApiIndexCarrierGetReque
 // Specify a published date
 func (r ApiIndexCarrierGetRequest) Published(published string) ApiIndexCarrierGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCarrierGetRequest) Date(date string) ApiIndexCarrierGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCarrierGetRequest) Date2(date2 string) ApiIndexCarrierGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -31866,6 +33660,12 @@ func (a *IndicesAPIService) IndexCarrierGetExecute(r ApiIndexCarrierGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -31991,6 +33791,8 @@ type ApiIndexCblMarinerGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -32086,6 +33888,18 @@ func (r ApiIndexCblMarinerGetRequest) Botnet(botnet string) ApiIndexCblMarinerGe
 // Specify a published date
 func (r ApiIndexCblMarinerGetRequest) Published(published string) ApiIndexCblMarinerGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCblMarinerGetRequest) Date(date string) ApiIndexCblMarinerGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCblMarinerGetRequest) Date2(date2 string) ApiIndexCblMarinerGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -32221,6 +34035,12 @@ func (a *IndicesAPIService) IndexCblMarinerGetExecute(r ApiIndexCblMarinerGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -32346,6 +34166,8 @@ type ApiIndexCentosGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -32441,6 +34263,18 @@ func (r ApiIndexCentosGetRequest) Botnet(botnet string) ApiIndexCentosGetRequest
 // Specify a published date
 func (r ApiIndexCentosGetRequest) Published(published string) ApiIndexCentosGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCentosGetRequest) Date(date string) ApiIndexCentosGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCentosGetRequest) Date2(date2 string) ApiIndexCentosGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -32576,6 +34410,12 @@ func (a *IndicesAPIService) IndexCentosGetExecute(r ApiIndexCentosGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -32701,6 +34541,8 @@ type ApiIndexCertBeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -32796,6 +34638,18 @@ func (r ApiIndexCertBeGetRequest) Botnet(botnet string) ApiIndexCertBeGetRequest
 // Specify a published date
 func (r ApiIndexCertBeGetRequest) Published(published string) ApiIndexCertBeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCertBeGetRequest) Date(date string) ApiIndexCertBeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCertBeGetRequest) Date2(date2 string) ApiIndexCertBeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -32931,6 +34785,12 @@ func (a *IndicesAPIService) IndexCertBeGetExecute(r ApiIndexCertBeGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -33056,6 +34916,8 @@ type ApiIndexCertInGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -33151,6 +35013,18 @@ func (r ApiIndexCertInGetRequest) Botnet(botnet string) ApiIndexCertInGetRequest
 // Specify a published date
 func (r ApiIndexCertInGetRequest) Published(published string) ApiIndexCertInGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCertInGetRequest) Date(date string) ApiIndexCertInGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCertInGetRequest) Date2(date2 string) ApiIndexCertInGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -33286,6 +35160,12 @@ func (a *IndicesAPIService) IndexCertInGetExecute(r ApiIndexCertInGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -33411,6 +35291,8 @@ type ApiIndexCertIrSecurityAlertsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -33506,6 +35388,18 @@ func (r ApiIndexCertIrSecurityAlertsGetRequest) Botnet(botnet string) ApiIndexCe
 // Specify a published date
 func (r ApiIndexCertIrSecurityAlertsGetRequest) Published(published string) ApiIndexCertIrSecurityAlertsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCertIrSecurityAlertsGetRequest) Date(date string) ApiIndexCertIrSecurityAlertsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCertIrSecurityAlertsGetRequest) Date2(date2 string) ApiIndexCertIrSecurityAlertsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -33641,6 +35535,12 @@ func (a *IndicesAPIService) IndexCertIrSecurityAlertsGetExecute(r ApiIndexCertIr
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -33766,6 +35666,8 @@ type ApiIndexCertSeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -33861,6 +35763,18 @@ func (r ApiIndexCertSeGetRequest) Botnet(botnet string) ApiIndexCertSeGetRequest
 // Specify a published date
 func (r ApiIndexCertSeGetRequest) Published(published string) ApiIndexCertSeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCertSeGetRequest) Date(date string) ApiIndexCertSeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCertSeGetRequest) Date2(date2 string) ApiIndexCertSeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -33996,6 +35910,12 @@ func (a *IndicesAPIService) IndexCertSeGetExecute(r ApiIndexCertSeGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -34121,6 +36041,8 @@ type ApiIndexCertUaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -34216,6 +36138,18 @@ func (r ApiIndexCertUaGetRequest) Botnet(botnet string) ApiIndexCertUaGetRequest
 // Specify a published date
 func (r ApiIndexCertUaGetRequest) Published(published string) ApiIndexCertUaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCertUaGetRequest) Date(date string) ApiIndexCertUaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCertUaGetRequest) Date2(date2 string) ApiIndexCertUaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -34351,6 +36285,12 @@ func (a *IndicesAPIService) IndexCertUaGetExecute(r ApiIndexCertUaGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -34476,6 +36416,8 @@ type ApiIndexCerteuGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -34571,6 +36513,18 @@ func (r ApiIndexCerteuGetRequest) Botnet(botnet string) ApiIndexCerteuGetRequest
 // Specify a published date
 func (r ApiIndexCerteuGetRequest) Published(published string) ApiIndexCerteuGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCerteuGetRequest) Date(date string) ApiIndexCerteuGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCerteuGetRequest) Date2(date2 string) ApiIndexCerteuGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -34706,6 +36660,12 @@ func (a *IndicesAPIService) IndexCerteuGetExecute(r ApiIndexCerteuGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -34831,6 +36791,8 @@ type ApiIndexCertfrGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -34926,6 +36888,18 @@ func (r ApiIndexCertfrGetRequest) Botnet(botnet string) ApiIndexCertfrGetRequest
 // Specify a published date
 func (r ApiIndexCertfrGetRequest) Published(published string) ApiIndexCertfrGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCertfrGetRequest) Date(date string) ApiIndexCertfrGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCertfrGetRequest) Date2(date2 string) ApiIndexCertfrGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -35061,6 +37035,12 @@ func (a *IndicesAPIService) IndexCertfrGetExecute(r ApiIndexCertfrGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -35186,6 +37166,8 @@ type ApiIndexChainguardGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -35281,6 +37263,18 @@ func (r ApiIndexChainguardGetRequest) Botnet(botnet string) ApiIndexChainguardGe
 // Specify a published date
 func (r ApiIndexChainguardGetRequest) Published(published string) ApiIndexChainguardGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexChainguardGetRequest) Date(date string) ApiIndexChainguardGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexChainguardGetRequest) Date2(date2 string) ApiIndexChainguardGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -35416,6 +37410,12 @@ func (a *IndicesAPIService) IndexChainguardGetExecute(r ApiIndexChainguardGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -35541,6 +37541,8 @@ type ApiIndexCheckpointGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -35636,6 +37638,18 @@ func (r ApiIndexCheckpointGetRequest) Botnet(botnet string) ApiIndexCheckpointGe
 // Specify a published date
 func (r ApiIndexCheckpointGetRequest) Published(published string) ApiIndexCheckpointGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCheckpointGetRequest) Date(date string) ApiIndexCheckpointGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCheckpointGetRequest) Date2(date2 string) ApiIndexCheckpointGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -35771,6 +37785,12 @@ func (a *IndicesAPIService) IndexCheckpointGetExecute(r ApiIndexCheckpointGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -35896,6 +37916,8 @@ type ApiIndexChromeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -35991,6 +38013,18 @@ func (r ApiIndexChromeGetRequest) Botnet(botnet string) ApiIndexChromeGetRequest
 // Specify a published date
 func (r ApiIndexChromeGetRequest) Published(published string) ApiIndexChromeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexChromeGetRequest) Date(date string) ApiIndexChromeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexChromeGetRequest) Date2(date2 string) ApiIndexChromeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -36126,6 +38160,12 @@ func (a *IndicesAPIService) IndexChromeGetExecute(r ApiIndexChromeGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -36251,6 +38291,8 @@ type ApiIndexCienaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -36346,6 +38388,18 @@ func (r ApiIndexCienaGetRequest) Botnet(botnet string) ApiIndexCienaGetRequest {
 // Specify a published date
 func (r ApiIndexCienaGetRequest) Published(published string) ApiIndexCienaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCienaGetRequest) Date(date string) ApiIndexCienaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCienaGetRequest) Date2(date2 string) ApiIndexCienaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -36481,6 +38535,12 @@ func (a *IndicesAPIService) IndexCienaGetExecute(r ApiIndexCienaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -36606,6 +38666,8 @@ type ApiIndexCisaAlertsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -36701,6 +38763,18 @@ func (r ApiIndexCisaAlertsGetRequest) Botnet(botnet string) ApiIndexCisaAlertsGe
 // Specify a published date
 func (r ApiIndexCisaAlertsGetRequest) Published(published string) ApiIndexCisaAlertsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCisaAlertsGetRequest) Date(date string) ApiIndexCisaAlertsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCisaAlertsGetRequest) Date2(date2 string) ApiIndexCisaAlertsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -36836,6 +38910,12 @@ func (a *IndicesAPIService) IndexCisaAlertsGetExecute(r ApiIndexCisaAlertsGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -36961,6 +39041,8 @@ type ApiIndexCisaCsafGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -37056,6 +39138,18 @@ func (r ApiIndexCisaCsafGetRequest) Botnet(botnet string) ApiIndexCisaCsafGetReq
 // Specify a published date
 func (r ApiIndexCisaCsafGetRequest) Published(published string) ApiIndexCisaCsafGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCisaCsafGetRequest) Date(date string) ApiIndexCisaCsafGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCisaCsafGetRequest) Date2(date2 string) ApiIndexCisaCsafGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -37191,6 +39285,12 @@ func (a *IndicesAPIService) IndexCisaCsafGetExecute(r ApiIndexCisaCsafGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -37316,6 +39416,8 @@ type ApiIndexCisaKevGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -37411,6 +39513,18 @@ func (r ApiIndexCisaKevGetRequest) Botnet(botnet string) ApiIndexCisaKevGetReque
 // Specify a published date
 func (r ApiIndexCisaKevGetRequest) Published(published string) ApiIndexCisaKevGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCisaKevGetRequest) Date(date string) ApiIndexCisaKevGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCisaKevGetRequest) Date2(date2 string) ApiIndexCisaKevGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -37546,6 +39660,12 @@ func (a *IndicesAPIService) IndexCisaKevGetExecute(r ApiIndexCisaKevGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -37671,6 +39791,8 @@ type ApiIndexCiscoCsafGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -37766,6 +39888,18 @@ func (r ApiIndexCiscoCsafGetRequest) Botnet(botnet string) ApiIndexCiscoCsafGetR
 // Specify a published date
 func (r ApiIndexCiscoCsafGetRequest) Published(published string) ApiIndexCiscoCsafGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCiscoCsafGetRequest) Date(date string) ApiIndexCiscoCsafGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCiscoCsafGetRequest) Date2(date2 string) ApiIndexCiscoCsafGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -37901,6 +40035,12 @@ func (a *IndicesAPIService) IndexCiscoCsafGetExecute(r ApiIndexCiscoCsafGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -38026,6 +40166,8 @@ type ApiIndexCiscoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -38121,6 +40263,18 @@ func (r ApiIndexCiscoGetRequest) Botnet(botnet string) ApiIndexCiscoGetRequest {
 // Specify a published date
 func (r ApiIndexCiscoGetRequest) Published(published string) ApiIndexCiscoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCiscoGetRequest) Date(date string) ApiIndexCiscoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCiscoGetRequest) Date2(date2 string) ApiIndexCiscoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -38256,6 +40410,387 @@ func (a *IndicesAPIService) IndexCiscoGetExecute(r ApiIndexCiscoGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexCiscoKnownGoodValuesGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	date2 *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Page(page int32) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Limit(limit int32) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Cursor(cursor string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) StartCursor(startCursor string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Cve(cve string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Alias(alias string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Iava(iava string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Jvndb(jvndb string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Ilvn(ilvn string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) ThreatActor(threatActor string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) MitreId(mitreId string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) MispId(mispId string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Ransomware(ransomware string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Botnet(botnet string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Published(published string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Date(date string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Date2(date2 string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.date2 = &date2
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) LastModStartDate(lastModStartDate string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) LastModEndDate(lastModEndDate string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) PubStartDate(pubStartDate string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) PubEndDate(pubEndDate string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryCiscoKnownGoodValuePaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexCiscoKnownGoodValuesGetExecute(r)
+}
+
+/*
+IndexCiscoKnownGoodValuesGet Return vulnerability data stored in index \"cisco-known-good-values\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the cisco-known-good-values index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** Cisco Known Good Values
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/cisco-known-good-values?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/cisco-known-good-values?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexCiscoKnownGoodValuesGetRequest
+*/
+func (a *IndicesAPIService) IndexCiscoKnownGoodValuesGet(ctx context.Context) ApiIndexCiscoKnownGoodValuesGetRequest {
+	return ApiIndexCiscoKnownGoodValuesGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayAdvisoryCiscoKnownGoodValuePaginatePagination
+func (a *IndicesAPIService) IndexCiscoKnownGoodValuesGetExecute(r ApiIndexCiscoKnownGoodValuesGetRequest) (*RenderResponseWithMetadataArrayAdvisoryCiscoKnownGoodValuePaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryCiscoKnownGoodValuePaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexCiscoKnownGoodValuesGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/index/cisco-known-good-values"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -38381,6 +40916,8 @@ type ApiIndexCiscoTalosGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -38476,6 +41013,18 @@ func (r ApiIndexCiscoTalosGetRequest) Botnet(botnet string) ApiIndexCiscoTalosGe
 // Specify a published date
 func (r ApiIndexCiscoTalosGetRequest) Published(published string) ApiIndexCiscoTalosGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCiscoTalosGetRequest) Date(date string) ApiIndexCiscoTalosGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCiscoTalosGetRequest) Date2(date2 string) ApiIndexCiscoTalosGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -38611,6 +41160,12 @@ func (a *IndicesAPIService) IndexCiscoTalosGetExecute(r ApiIndexCiscoTalosGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -38736,6 +41291,8 @@ type ApiIndexCitrixGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -38831,6 +41388,18 @@ func (r ApiIndexCitrixGetRequest) Botnet(botnet string) ApiIndexCitrixGetRequest
 // Specify a published date
 func (r ApiIndexCitrixGetRequest) Published(published string) ApiIndexCitrixGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCitrixGetRequest) Date(date string) ApiIndexCitrixGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCitrixGetRequest) Date2(date2 string) ApiIndexCitrixGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -38966,6 +41535,12 @@ func (a *IndicesAPIService) IndexCitrixGetExecute(r ApiIndexCitrixGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -39091,6 +41666,8 @@ type ApiIndexClarotyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -39186,6 +41763,18 @@ func (r ApiIndexClarotyGetRequest) Botnet(botnet string) ApiIndexClarotyGetReque
 // Specify a published date
 func (r ApiIndexClarotyGetRequest) Published(published string) ApiIndexClarotyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexClarotyGetRequest) Date(date string) ApiIndexClarotyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexClarotyGetRequest) Date2(date2 string) ApiIndexClarotyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -39321,6 +41910,12 @@ func (a *IndicesAPIService) IndexClarotyGetExecute(r ApiIndexClarotyGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -39446,6 +42041,8 @@ type ApiIndexCloudbeesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -39541,6 +42138,18 @@ func (r ApiIndexCloudbeesGetRequest) Botnet(botnet string) ApiIndexCloudbeesGetR
 // Specify a published date
 func (r ApiIndexCloudbeesGetRequest) Published(published string) ApiIndexCloudbeesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCloudbeesGetRequest) Date(date string) ApiIndexCloudbeesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCloudbeesGetRequest) Date2(date2 string) ApiIndexCloudbeesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -39676,6 +42285,12 @@ func (a *IndicesAPIService) IndexCloudbeesGetExecute(r ApiIndexCloudbeesGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -39801,6 +42416,8 @@ type ApiIndexCloudvulndbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -39896,6 +42513,18 @@ func (r ApiIndexCloudvulndbGetRequest) Botnet(botnet string) ApiIndexCloudvulndb
 // Specify a published date
 func (r ApiIndexCloudvulndbGetRequest) Published(published string) ApiIndexCloudvulndbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCloudvulndbGetRequest) Date(date string) ApiIndexCloudvulndbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCloudvulndbGetRequest) Date2(date2 string) ApiIndexCloudvulndbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -40031,6 +42660,12 @@ func (a *IndicesAPIService) IndexCloudvulndbGetExecute(r ApiIndexCloudvulndbGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -40156,6 +42791,8 @@ type ApiIndexCnnvdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -40251,6 +42888,18 @@ func (r ApiIndexCnnvdGetRequest) Botnet(botnet string) ApiIndexCnnvdGetRequest {
 // Specify a published date
 func (r ApiIndexCnnvdGetRequest) Published(published string) ApiIndexCnnvdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCnnvdGetRequest) Date(date string) ApiIndexCnnvdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCnnvdGetRequest) Date2(date2 string) ApiIndexCnnvdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -40386,6 +43035,12 @@ func (a *IndicesAPIService) IndexCnnvdGetExecute(r ApiIndexCnnvdGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -40511,6 +43166,8 @@ type ApiIndexCnvdBulletinsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -40606,6 +43263,18 @@ func (r ApiIndexCnvdBulletinsGetRequest) Botnet(botnet string) ApiIndexCnvdBulle
 // Specify a published date
 func (r ApiIndexCnvdBulletinsGetRequest) Published(published string) ApiIndexCnvdBulletinsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCnvdBulletinsGetRequest) Date(date string) ApiIndexCnvdBulletinsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCnvdBulletinsGetRequest) Date2(date2 string) ApiIndexCnvdBulletinsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -40741,6 +43410,12 @@ func (a *IndicesAPIService) IndexCnvdBulletinsGetExecute(r ApiIndexCnvdBulletins
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -40866,6 +43541,8 @@ type ApiIndexCnvdFlawsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -40961,6 +43638,18 @@ func (r ApiIndexCnvdFlawsGetRequest) Botnet(botnet string) ApiIndexCnvdFlawsGetR
 // Specify a published date
 func (r ApiIndexCnvdFlawsGetRequest) Published(published string) ApiIndexCnvdFlawsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCnvdFlawsGetRequest) Date(date string) ApiIndexCnvdFlawsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCnvdFlawsGetRequest) Date2(date2 string) ApiIndexCnvdFlawsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -41096,6 +43785,12 @@ func (a *IndicesAPIService) IndexCnvdFlawsGetExecute(r ApiIndexCnvdFlawsGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -41221,6 +43916,8 @@ type ApiIndexCocoapodsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -41316,6 +44013,18 @@ func (r ApiIndexCocoapodsGetRequest) Botnet(botnet string) ApiIndexCocoapodsGetR
 // Specify a published date
 func (r ApiIndexCocoapodsGetRequest) Published(published string) ApiIndexCocoapodsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCocoapodsGetRequest) Date(date string) ApiIndexCocoapodsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCocoapodsGetRequest) Date2(date2 string) ApiIndexCocoapodsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -41451,6 +44160,12 @@ func (a *IndicesAPIService) IndexCocoapodsGetExecute(r ApiIndexCocoapodsGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -41576,6 +44291,8 @@ type ApiIndexCodesysGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -41671,6 +44388,18 @@ func (r ApiIndexCodesysGetRequest) Botnet(botnet string) ApiIndexCodesysGetReque
 // Specify a published date
 func (r ApiIndexCodesysGetRequest) Published(published string) ApiIndexCodesysGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCodesysGetRequest) Date(date string) ApiIndexCodesysGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCodesysGetRequest) Date2(date2 string) ApiIndexCodesysGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -41806,6 +44535,12 @@ func (a *IndicesAPIService) IndexCodesysGetExecute(r ApiIndexCodesysGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -41931,6 +44666,8 @@ type ApiIndexCommvaultGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -42026,6 +44763,18 @@ func (r ApiIndexCommvaultGetRequest) Botnet(botnet string) ApiIndexCommvaultGetR
 // Specify a published date
 func (r ApiIndexCommvaultGetRequest) Published(published string) ApiIndexCommvaultGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCommvaultGetRequest) Date(date string) ApiIndexCommvaultGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCommvaultGetRequest) Date2(date2 string) ApiIndexCommvaultGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -42161,6 +44910,12 @@ func (a *IndicesAPIService) IndexCommvaultGetExecute(r ApiIndexCommvaultGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -42286,6 +45041,8 @@ type ApiIndexCompassSecurityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -42381,6 +45138,18 @@ func (r ApiIndexCompassSecurityGetRequest) Botnet(botnet string) ApiIndexCompass
 // Specify a published date
 func (r ApiIndexCompassSecurityGetRequest) Published(published string) ApiIndexCompassSecurityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCompassSecurityGetRequest) Date(date string) ApiIndexCompassSecurityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCompassSecurityGetRequest) Date2(date2 string) ApiIndexCompassSecurityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -42516,6 +45285,12 @@ func (a *IndicesAPIService) IndexCompassSecurityGetExecute(r ApiIndexCompassSecu
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -42641,6 +45416,8 @@ type ApiIndexComposerGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -42736,6 +45513,18 @@ func (r ApiIndexComposerGetRequest) Botnet(botnet string) ApiIndexComposerGetReq
 // Specify a published date
 func (r ApiIndexComposerGetRequest) Published(published string) ApiIndexComposerGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexComposerGetRequest) Date(date string) ApiIndexComposerGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexComposerGetRequest) Date2(date2 string) ApiIndexComposerGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -42871,6 +45660,12 @@ func (a *IndicesAPIService) IndexComposerGetExecute(r ApiIndexComposerGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -42996,6 +45791,8 @@ type ApiIndexConanGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -43091,6 +45888,18 @@ func (r ApiIndexConanGetRequest) Botnet(botnet string) ApiIndexConanGetRequest {
 // Specify a published date
 func (r ApiIndexConanGetRequest) Published(published string) ApiIndexConanGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexConanGetRequest) Date(date string) ApiIndexConanGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexConanGetRequest) Date2(date2 string) ApiIndexConanGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -43226,6 +46035,12 @@ func (a *IndicesAPIService) IndexConanGetExecute(r ApiIndexConanGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -43351,6 +46166,8 @@ type ApiIndexCoreimpactGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -43446,6 +46263,18 @@ func (r ApiIndexCoreimpactGetRequest) Botnet(botnet string) ApiIndexCoreimpactGe
 // Specify a published date
 func (r ApiIndexCoreimpactGetRequest) Published(published string) ApiIndexCoreimpactGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCoreimpactGetRequest) Date(date string) ApiIndexCoreimpactGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCoreimpactGetRequest) Date2(date2 string) ApiIndexCoreimpactGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -43581,6 +46410,12 @@ func (a *IndicesAPIService) IndexCoreimpactGetExecute(r ApiIndexCoreimpactGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -43706,6 +46541,8 @@ type ApiIndexCpeVulnerableGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -43801,6 +46638,18 @@ func (r ApiIndexCpeVulnerableGetRequest) Botnet(botnet string) ApiIndexCpeVulner
 // Specify a published date
 func (r ApiIndexCpeVulnerableGetRequest) Published(published string) ApiIndexCpeVulnerableGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCpeVulnerableGetRequest) Date(date string) ApiIndexCpeVulnerableGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCpeVulnerableGetRequest) Date2(date2 string) ApiIndexCpeVulnerableGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -43936,6 +46785,12 @@ func (a *IndicesAPIService) IndexCpeVulnerableGetExecute(r ApiIndexCpeVulnerable
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -44061,6 +46916,8 @@ type ApiIndexCrestronGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -44156,6 +47013,18 @@ func (r ApiIndexCrestronGetRequest) Botnet(botnet string) ApiIndexCrestronGetReq
 // Specify a published date
 func (r ApiIndexCrestronGetRequest) Published(published string) ApiIndexCrestronGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCrestronGetRequest) Date(date string) ApiIndexCrestronGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCrestronGetRequest) Date2(date2 string) ApiIndexCrestronGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -44291,6 +47160,12 @@ func (a *IndicesAPIService) IndexCrestronGetExecute(r ApiIndexCrestronGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -44416,6 +47291,8 @@ type ApiIndexCrowdsecGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -44511,6 +47388,18 @@ func (r ApiIndexCrowdsecGetRequest) Botnet(botnet string) ApiIndexCrowdsecGetReq
 // Specify a published date
 func (r ApiIndexCrowdsecGetRequest) Published(published string) ApiIndexCrowdsecGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCrowdsecGetRequest) Date(date string) ApiIndexCrowdsecGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCrowdsecGetRequest) Date2(date2 string) ApiIndexCrowdsecGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -44646,6 +47535,12 @@ func (a *IndicesAPIService) IndexCrowdsecGetExecute(r ApiIndexCrowdsecGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -44771,6 +47666,8 @@ type ApiIndexCurlGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -44866,6 +47763,18 @@ func (r ApiIndexCurlGetRequest) Botnet(botnet string) ApiIndexCurlGetRequest {
 // Specify a published date
 func (r ApiIndexCurlGetRequest) Published(published string) ApiIndexCurlGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCurlGetRequest) Date(date string) ApiIndexCurlGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCurlGetRequest) Date2(date2 string) ApiIndexCurlGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -45001,6 +47910,12 @@ func (a *IndicesAPIService) IndexCurlGetExecute(r ApiIndexCurlGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -45126,6 +48041,8 @@ type ApiIndexCweGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -45221,6 +48138,18 @@ func (r ApiIndexCweGetRequest) Botnet(botnet string) ApiIndexCweGetRequest {
 // Specify a published date
 func (r ApiIndexCweGetRequest) Published(published string) ApiIndexCweGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexCweGetRequest) Date(date string) ApiIndexCweGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexCweGetRequest) Date2(date2 string) ApiIndexCweGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -45356,6 +48285,12 @@ func (a *IndicesAPIService) IndexCweGetExecute(r ApiIndexCweGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -45481,6 +48416,8 @@ type ApiIndexDahuaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -45576,6 +48513,18 @@ func (r ApiIndexDahuaGetRequest) Botnet(botnet string) ApiIndexDahuaGetRequest {
 // Specify a published date
 func (r ApiIndexDahuaGetRequest) Published(published string) ApiIndexDahuaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDahuaGetRequest) Date(date string) ApiIndexDahuaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDahuaGetRequest) Date2(date2 string) ApiIndexDahuaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -45711,6 +48660,12 @@ func (a *IndicesAPIService) IndexDahuaGetExecute(r ApiIndexDahuaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -45836,6 +48791,8 @@ type ApiIndexDassaultGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -45931,6 +48888,18 @@ func (r ApiIndexDassaultGetRequest) Botnet(botnet string) ApiIndexDassaultGetReq
 // Specify a published date
 func (r ApiIndexDassaultGetRequest) Published(published string) ApiIndexDassaultGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDassaultGetRequest) Date(date string) ApiIndexDassaultGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDassaultGetRequest) Date2(date2 string) ApiIndexDassaultGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -46066,6 +49035,12 @@ func (a *IndicesAPIService) IndexDassaultGetExecute(r ApiIndexDassaultGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -46191,6 +49166,8 @@ type ApiIndexDebianDsaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -46286,6 +49263,18 @@ func (r ApiIndexDebianDsaGetRequest) Botnet(botnet string) ApiIndexDebianDsaGetR
 // Specify a published date
 func (r ApiIndexDebianDsaGetRequest) Published(published string) ApiIndexDebianDsaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDebianDsaGetRequest) Date(date string) ApiIndexDebianDsaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDebianDsaGetRequest) Date2(date2 string) ApiIndexDebianDsaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -46421,6 +49410,12 @@ func (a *IndicesAPIService) IndexDebianDsaGetExecute(r ApiIndexDebianDsaGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -46546,6 +49541,8 @@ type ApiIndexDebianGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -46641,6 +49638,18 @@ func (r ApiIndexDebianGetRequest) Botnet(botnet string) ApiIndexDebianGetRequest
 // Specify a published date
 func (r ApiIndexDebianGetRequest) Published(published string) ApiIndexDebianGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDebianGetRequest) Date(date string) ApiIndexDebianGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDebianGetRequest) Date2(date2 string) ApiIndexDebianGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -46776,6 +49785,12 @@ func (a *IndicesAPIService) IndexDebianGetExecute(r ApiIndexDebianGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -46901,6 +49916,8 @@ type ApiIndexDebianPackagesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -46996,6 +50013,18 @@ func (r ApiIndexDebianPackagesGetRequest) Botnet(botnet string) ApiIndexDebianPa
 // Specify a published date
 func (r ApiIndexDebianPackagesGetRequest) Published(published string) ApiIndexDebianPackagesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDebianPackagesGetRequest) Date(date string) ApiIndexDebianPackagesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDebianPackagesGetRequest) Date2(date2 string) ApiIndexDebianPackagesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -47131,6 +50160,12 @@ func (a *IndicesAPIService) IndexDebianPackagesGetExecute(r ApiIndexDebianPackag
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -47256,6 +50291,8 @@ type ApiIndexDebianPurlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -47351,6 +50388,18 @@ func (r ApiIndexDebianPurlsGetRequest) Botnet(botnet string) ApiIndexDebianPurls
 // Specify a published date
 func (r ApiIndexDebianPurlsGetRequest) Published(published string) ApiIndexDebianPurlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDebianPurlsGetRequest) Date(date string) ApiIndexDebianPurlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDebianPurlsGetRequest) Date2(date2 string) ApiIndexDebianPurlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -47486,6 +50535,12 @@ func (a *IndicesAPIService) IndexDebianPurlsGetExecute(r ApiIndexDebianPurlsGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -47611,6 +50666,8 @@ type ApiIndexDellGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -47706,6 +50763,18 @@ func (r ApiIndexDellGetRequest) Botnet(botnet string) ApiIndexDellGetRequest {
 // Specify a published date
 func (r ApiIndexDellGetRequest) Published(published string) ApiIndexDellGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDellGetRequest) Date(date string) ApiIndexDellGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDellGetRequest) Date2(date2 string) ApiIndexDellGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -47841,6 +50910,12 @@ func (a *IndicesAPIService) IndexDellGetExecute(r ApiIndexDellGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -47966,6 +51041,8 @@ type ApiIndexDeltaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -48061,6 +51138,18 @@ func (r ApiIndexDeltaGetRequest) Botnet(botnet string) ApiIndexDeltaGetRequest {
 // Specify a published date
 func (r ApiIndexDeltaGetRequest) Published(published string) ApiIndexDeltaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDeltaGetRequest) Date(date string) ApiIndexDeltaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDeltaGetRequest) Date2(date2 string) ApiIndexDeltaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -48196,6 +51285,12 @@ func (a *IndicesAPIService) IndexDeltaGetExecute(r ApiIndexDeltaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -48321,6 +51416,8 @@ type ApiIndexDfnCertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -48416,6 +51513,18 @@ func (r ApiIndexDfnCertGetRequest) Botnet(botnet string) ApiIndexDfnCertGetReque
 // Specify a published date
 func (r ApiIndexDfnCertGetRequest) Published(published string) ApiIndexDfnCertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDfnCertGetRequest) Date(date string) ApiIndexDfnCertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDfnCertGetRequest) Date2(date2 string) ApiIndexDfnCertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -48551,6 +51660,12 @@ func (a *IndicesAPIService) IndexDfnCertGetExecute(r ApiIndexDfnCertGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -48676,6 +51791,8 @@ type ApiIndexDjangoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -48771,6 +51888,18 @@ func (r ApiIndexDjangoGetRequest) Botnet(botnet string) ApiIndexDjangoGetRequest
 // Specify a published date
 func (r ApiIndexDjangoGetRequest) Published(published string) ApiIndexDjangoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDjangoGetRequest) Date(date string) ApiIndexDjangoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDjangoGetRequest) Date2(date2 string) ApiIndexDjangoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -48906,6 +52035,12 @@ func (a *IndicesAPIService) IndexDjangoGetExecute(r ApiIndexDjangoGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -49031,6 +52166,8 @@ type ApiIndexDlinkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -49126,6 +52263,18 @@ func (r ApiIndexDlinkGetRequest) Botnet(botnet string) ApiIndexDlinkGetRequest {
 // Specify a published date
 func (r ApiIndexDlinkGetRequest) Published(published string) ApiIndexDlinkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDlinkGetRequest) Date(date string) ApiIndexDlinkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDlinkGetRequest) Date2(date2 string) ApiIndexDlinkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -49261,6 +52410,12 @@ func (a *IndicesAPIService) IndexDlinkGetExecute(r ApiIndexDlinkGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -49386,6 +52541,8 @@ type ApiIndexDnnGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -49481,6 +52638,18 @@ func (r ApiIndexDnnGetRequest) Botnet(botnet string) ApiIndexDnnGetRequest {
 // Specify a published date
 func (r ApiIndexDnnGetRequest) Published(published string) ApiIndexDnnGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDnnGetRequest) Date(date string) ApiIndexDnnGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDnnGetRequest) Date2(date2 string) ApiIndexDnnGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -49616,6 +52785,12 @@ func (a *IndicesAPIService) IndexDnnGetExecute(r ApiIndexDnnGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -49741,6 +52916,8 @@ type ApiIndexDotcmsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -49836,6 +53013,18 @@ func (r ApiIndexDotcmsGetRequest) Botnet(botnet string) ApiIndexDotcmsGetRequest
 // Specify a published date
 func (r ApiIndexDotcmsGetRequest) Published(published string) ApiIndexDotcmsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDotcmsGetRequest) Date(date string) ApiIndexDotcmsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDotcmsGetRequest) Date2(date2 string) ApiIndexDotcmsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -49971,6 +53160,12 @@ func (a *IndicesAPIService) IndexDotcmsGetExecute(r ApiIndexDotcmsGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -50096,6 +53291,8 @@ type ApiIndexDragosGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -50191,6 +53388,18 @@ func (r ApiIndexDragosGetRequest) Botnet(botnet string) ApiIndexDragosGetRequest
 // Specify a published date
 func (r ApiIndexDragosGetRequest) Published(published string) ApiIndexDragosGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDragosGetRequest) Date(date string) ApiIndexDragosGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDragosGetRequest) Date2(date2 string) ApiIndexDragosGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -50326,6 +53535,12 @@ func (a *IndicesAPIService) IndexDragosGetExecute(r ApiIndexDragosGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -50451,6 +53666,8 @@ type ApiIndexDraytekGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -50546,6 +53763,18 @@ func (r ApiIndexDraytekGetRequest) Botnet(botnet string) ApiIndexDraytekGetReque
 // Specify a published date
 func (r ApiIndexDraytekGetRequest) Published(published string) ApiIndexDraytekGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDraytekGetRequest) Date(date string) ApiIndexDraytekGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDraytekGetRequest) Date2(date2 string) ApiIndexDraytekGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -50681,6 +53910,12 @@ func (a *IndicesAPIService) IndexDraytekGetExecute(r ApiIndexDraytekGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -50806,6 +54041,8 @@ type ApiIndexDrupalGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -50901,6 +54138,18 @@ func (r ApiIndexDrupalGetRequest) Botnet(botnet string) ApiIndexDrupalGetRequest
 // Specify a published date
 func (r ApiIndexDrupalGetRequest) Published(published string) ApiIndexDrupalGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexDrupalGetRequest) Date(date string) ApiIndexDrupalGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexDrupalGetRequest) Date2(date2 string) ApiIndexDrupalGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -51036,6 +54285,12 @@ func (a *IndicesAPIService) IndexDrupalGetExecute(r ApiIndexDrupalGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -51161,6 +54416,8 @@ type ApiIndexEatonGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -51256,6 +54513,18 @@ func (r ApiIndexEatonGetRequest) Botnet(botnet string) ApiIndexEatonGetRequest {
 // Specify a published date
 func (r ApiIndexEatonGetRequest) Published(published string) ApiIndexEatonGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEatonGetRequest) Date(date string) ApiIndexEatonGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEatonGetRequest) Date2(date2 string) ApiIndexEatonGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -51391,6 +54660,12 @@ func (a *IndicesAPIService) IndexEatonGetExecute(r ApiIndexEatonGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -51516,6 +54791,8 @@ type ApiIndexElasticGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -51611,6 +54888,18 @@ func (r ApiIndexElasticGetRequest) Botnet(botnet string) ApiIndexElasticGetReque
 // Specify a published date
 func (r ApiIndexElasticGetRequest) Published(published string) ApiIndexElasticGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexElasticGetRequest) Date(date string) ApiIndexElasticGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexElasticGetRequest) Date2(date2 string) ApiIndexElasticGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -51746,6 +55035,12 @@ func (a *IndicesAPIService) IndexElasticGetExecute(r ApiIndexElasticGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -51871,6 +55166,8 @@ type ApiIndexElspecGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -51966,6 +55263,18 @@ func (r ApiIndexElspecGetRequest) Botnet(botnet string) ApiIndexElspecGetRequest
 // Specify a published date
 func (r ApiIndexElspecGetRequest) Published(published string) ApiIndexElspecGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexElspecGetRequest) Date(date string) ApiIndexElspecGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexElspecGetRequest) Date2(date2 string) ApiIndexElspecGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -52101,6 +55410,12 @@ func (a *IndicesAPIService) IndexElspecGetExecute(r ApiIndexElspecGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -52226,6 +55541,8 @@ type ApiIndexEmergingThreatsSnortGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -52321,6 +55638,18 @@ func (r ApiIndexEmergingThreatsSnortGetRequest) Botnet(botnet string) ApiIndexEm
 // Specify a published date
 func (r ApiIndexEmergingThreatsSnortGetRequest) Published(published string) ApiIndexEmergingThreatsSnortGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEmergingThreatsSnortGetRequest) Date(date string) ApiIndexEmergingThreatsSnortGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEmergingThreatsSnortGetRequest) Date2(date2 string) ApiIndexEmergingThreatsSnortGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -52456,6 +55785,12 @@ func (a *IndicesAPIService) IndexEmergingThreatsSnortGetExecute(r ApiIndexEmergi
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -52581,6 +55916,8 @@ type ApiIndexEmersonGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -52676,6 +56013,18 @@ func (r ApiIndexEmersonGetRequest) Botnet(botnet string) ApiIndexEmersonGetReque
 // Specify a published date
 func (r ApiIndexEmersonGetRequest) Published(published string) ApiIndexEmersonGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEmersonGetRequest) Date(date string) ApiIndexEmersonGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEmersonGetRequest) Date2(date2 string) ApiIndexEmersonGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -52811,6 +56160,12 @@ func (a *IndicesAPIService) IndexEmersonGetExecute(r ApiIndexEmersonGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -52936,6 +56291,8 @@ type ApiIndexEndoflifeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -53031,6 +56388,18 @@ func (r ApiIndexEndoflifeGetRequest) Botnet(botnet string) ApiIndexEndoflifeGetR
 // Specify a published date
 func (r ApiIndexEndoflifeGetRequest) Published(published string) ApiIndexEndoflifeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEndoflifeGetRequest) Date(date string) ApiIndexEndoflifeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEndoflifeGetRequest) Date2(date2 string) ApiIndexEndoflifeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -53166,6 +56535,12 @@ func (a *IndicesAPIService) IndexEndoflifeGetExecute(r ApiIndexEndoflifeGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -53291,6 +56666,8 @@ type ApiIndexEolAlibabaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -53386,6 +56763,18 @@ func (r ApiIndexEolAlibabaGetRequest) Botnet(botnet string) ApiIndexEolAlibabaGe
 // Specify a published date
 func (r ApiIndexEolAlibabaGetRequest) Published(published string) ApiIndexEolAlibabaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEolAlibabaGetRequest) Date(date string) ApiIndexEolAlibabaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEolAlibabaGetRequest) Date2(date2 string) ApiIndexEolAlibabaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -53521,6 +56910,12 @@ func (a *IndicesAPIService) IndexEolAlibabaGetExecute(r ApiIndexEolAlibabaGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -53646,6 +57041,8 @@ type ApiIndexEolGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -53741,6 +57138,18 @@ func (r ApiIndexEolGetRequest) Botnet(botnet string) ApiIndexEolGetRequest {
 // Specify a published date
 func (r ApiIndexEolGetRequest) Published(published string) ApiIndexEolGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEolGetRequest) Date(date string) ApiIndexEolGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEolGetRequest) Date2(date2 string) ApiIndexEolGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -53876,6 +57285,12 @@ func (a *IndicesAPIService) IndexEolGetExecute(r ApiIndexEolGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -54001,6 +57416,8 @@ type ApiIndexEolMicrosoftGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -54096,6 +57513,18 @@ func (r ApiIndexEolMicrosoftGetRequest) Botnet(botnet string) ApiIndexEolMicroso
 // Specify a published date
 func (r ApiIndexEolMicrosoftGetRequest) Published(published string) ApiIndexEolMicrosoftGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEolMicrosoftGetRequest) Date(date string) ApiIndexEolMicrosoftGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEolMicrosoftGetRequest) Date2(date2 string) ApiIndexEolMicrosoftGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -54231,6 +57660,12 @@ func (a *IndicesAPIService) IndexEolMicrosoftGetExecute(r ApiIndexEolMicrosoftGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -54356,6 +57791,8 @@ type ApiIndexEpssGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -54451,6 +57888,18 @@ func (r ApiIndexEpssGetRequest) Botnet(botnet string) ApiIndexEpssGetRequest {
 // Specify a published date
 func (r ApiIndexEpssGetRequest) Published(published string) ApiIndexEpssGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEpssGetRequest) Date(date string) ApiIndexEpssGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEpssGetRequest) Date2(date2 string) ApiIndexEpssGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -54586,6 +58035,12 @@ func (a *IndicesAPIService) IndexEpssGetExecute(r ApiIndexEpssGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -54711,6 +58166,8 @@ type ApiIndexEuvdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -54806,6 +58263,18 @@ func (r ApiIndexEuvdGetRequest) Botnet(botnet string) ApiIndexEuvdGetRequest {
 // Specify a published date
 func (r ApiIndexEuvdGetRequest) Published(published string) ApiIndexEuvdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexEuvdGetRequest) Date(date string) ApiIndexEuvdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexEuvdGetRequest) Date2(date2 string) ApiIndexEuvdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -54941,6 +58410,12 @@ func (a *IndicesAPIService) IndexEuvdGetExecute(r ApiIndexEuvdGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -55066,6 +58541,8 @@ type ApiIndexExodusIntelGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -55161,6 +58638,18 @@ func (r ApiIndexExodusIntelGetRequest) Botnet(botnet string) ApiIndexExodusIntel
 // Specify a published date
 func (r ApiIndexExodusIntelGetRequest) Published(published string) ApiIndexExodusIntelGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexExodusIntelGetRequest) Date(date string) ApiIndexExodusIntelGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexExodusIntelGetRequest) Date2(date2 string) ApiIndexExodusIntelGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -55296,6 +58785,12 @@ func (a *IndicesAPIService) IndexExodusIntelGetExecute(r ApiIndexExodusIntelGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -55421,6 +58916,8 @@ type ApiIndexExploitChainsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -55516,6 +59013,18 @@ func (r ApiIndexExploitChainsGetRequest) Botnet(botnet string) ApiIndexExploitCh
 // Specify a published date
 func (r ApiIndexExploitChainsGetRequest) Published(published string) ApiIndexExploitChainsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexExploitChainsGetRequest) Date(date string) ApiIndexExploitChainsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexExploitChainsGetRequest) Date2(date2 string) ApiIndexExploitChainsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -55651,6 +59160,12 @@ func (a *IndicesAPIService) IndexExploitChainsGetExecute(r ApiIndexExploitChains
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -55776,6 +59291,8 @@ type ApiIndexExploitdbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -55871,6 +59388,18 @@ func (r ApiIndexExploitdbGetRequest) Botnet(botnet string) ApiIndexExploitdbGetR
 // Specify a published date
 func (r ApiIndexExploitdbGetRequest) Published(published string) ApiIndexExploitdbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexExploitdbGetRequest) Date(date string) ApiIndexExploitdbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexExploitdbGetRequest) Date2(date2 string) ApiIndexExploitdbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -56006,6 +59535,12 @@ func (a *IndicesAPIService) IndexExploitdbGetExecute(r ApiIndexExploitdbGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -56131,6 +59666,8 @@ type ApiIndexExploitsChangelogGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -56226,6 +59763,18 @@ func (r ApiIndexExploitsChangelogGetRequest) Botnet(botnet string) ApiIndexExplo
 // Specify a published date
 func (r ApiIndexExploitsChangelogGetRequest) Published(published string) ApiIndexExploitsChangelogGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexExploitsChangelogGetRequest) Date(date string) ApiIndexExploitsChangelogGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexExploitsChangelogGetRequest) Date2(date2 string) ApiIndexExploitsChangelogGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -56361,6 +59910,12 @@ func (a *IndicesAPIService) IndexExploitsChangelogGetExecute(r ApiIndexExploitsC
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -56486,6 +60041,8 @@ type ApiIndexExploitsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -56581,6 +60138,18 @@ func (r ApiIndexExploitsGetRequest) Botnet(botnet string) ApiIndexExploitsGetReq
 // Specify a published date
 func (r ApiIndexExploitsGetRequest) Published(published string) ApiIndexExploitsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexExploitsGetRequest) Date(date string) ApiIndexExploitsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexExploitsGetRequest) Date2(date2 string) ApiIndexExploitsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -56716,6 +60285,12 @@ func (a *IndicesAPIService) IndexExploitsGetExecute(r ApiIndexExploitsGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -56841,6 +60416,8 @@ type ApiIndexF5GetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -56936,6 +60513,18 @@ func (r ApiIndexF5GetRequest) Botnet(botnet string) ApiIndexF5GetRequest {
 // Specify a published date
 func (r ApiIndexF5GetRequest) Published(published string) ApiIndexF5GetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexF5GetRequest) Date(date string) ApiIndexF5GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexF5GetRequest) Date2(date2 string) ApiIndexF5GetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -57071,6 +60660,12 @@ func (a *IndicesAPIService) IndexF5GetExecute(r ApiIndexF5GetRequest) (*RenderRe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -57196,6 +60791,8 @@ type ApiIndexFSecureGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -57291,6 +60888,18 @@ func (r ApiIndexFSecureGetRequest) Botnet(botnet string) ApiIndexFSecureGetReque
 // Specify a published date
 func (r ApiIndexFSecureGetRequest) Published(published string) ApiIndexFSecureGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFSecureGetRequest) Date(date string) ApiIndexFSecureGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFSecureGetRequest) Date2(date2 string) ApiIndexFSecureGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -57426,6 +61035,12 @@ func (a *IndicesAPIService) IndexFSecureGetExecute(r ApiIndexFSecureGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -57551,6 +61166,8 @@ type ApiIndexFanucGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -57646,6 +61263,18 @@ func (r ApiIndexFanucGetRequest) Botnet(botnet string) ApiIndexFanucGetRequest {
 // Specify a published date
 func (r ApiIndexFanucGetRequest) Published(published string) ApiIndexFanucGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFanucGetRequest) Date(date string) ApiIndexFanucGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFanucGetRequest) Date2(date2 string) ApiIndexFanucGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -57781,6 +61410,12 @@ func (a *IndicesAPIService) IndexFanucGetExecute(r ApiIndexFanucGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -57906,6 +61541,8 @@ type ApiIndexFastlyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -58001,6 +61638,18 @@ func (r ApiIndexFastlyGetRequest) Botnet(botnet string) ApiIndexFastlyGetRequest
 // Specify a published date
 func (r ApiIndexFastlyGetRequest) Published(published string) ApiIndexFastlyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFastlyGetRequest) Date(date string) ApiIndexFastlyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFastlyGetRequest) Date2(date2 string) ApiIndexFastlyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -58136,6 +61785,12 @@ func (a *IndicesAPIService) IndexFastlyGetExecute(r ApiIndexFastlyGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -58261,6 +61916,8 @@ type ApiIndexFedoraGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -58356,6 +62013,18 @@ func (r ApiIndexFedoraGetRequest) Botnet(botnet string) ApiIndexFedoraGetRequest
 // Specify a published date
 func (r ApiIndexFedoraGetRequest) Published(published string) ApiIndexFedoraGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFedoraGetRequest) Date(date string) ApiIndexFedoraGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFedoraGetRequest) Date2(date2 string) ApiIndexFedoraGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -58491,6 +62160,12 @@ func (a *IndicesAPIService) IndexFedoraGetExecute(r ApiIndexFedoraGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -58616,6 +62291,8 @@ type ApiIndexFestoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -58711,6 +62388,18 @@ func (r ApiIndexFestoGetRequest) Botnet(botnet string) ApiIndexFestoGetRequest {
 // Specify a published date
 func (r ApiIndexFestoGetRequest) Published(published string) ApiIndexFestoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFestoGetRequest) Date(date string) ApiIndexFestoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFestoGetRequest) Date2(date2 string) ApiIndexFestoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -58846,6 +62535,12 @@ func (a *IndicesAPIService) IndexFestoGetExecute(r ApiIndexFestoGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -58971,6 +62666,8 @@ type ApiIndexFilecloudGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -59066,6 +62763,18 @@ func (r ApiIndexFilecloudGetRequest) Botnet(botnet string) ApiIndexFilecloudGetR
 // Specify a published date
 func (r ApiIndexFilecloudGetRequest) Published(published string) ApiIndexFilecloudGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFilecloudGetRequest) Date(date string) ApiIndexFilecloudGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFilecloudGetRequest) Date2(date2 string) ApiIndexFilecloudGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -59201,6 +62910,12 @@ func (a *IndicesAPIService) IndexFilecloudGetExecute(r ApiIndexFilecloudGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -59326,6 +63041,8 @@ type ApiIndexFilezillaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -59421,6 +63138,18 @@ func (r ApiIndexFilezillaGetRequest) Botnet(botnet string) ApiIndexFilezillaGetR
 // Specify a published date
 func (r ApiIndexFilezillaGetRequest) Published(published string) ApiIndexFilezillaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFilezillaGetRequest) Date(date string) ApiIndexFilezillaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFilezillaGetRequest) Date2(date2 string) ApiIndexFilezillaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -59556,6 +63285,12 @@ func (a *IndicesAPIService) IndexFilezillaGetExecute(r ApiIndexFilezillaGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -59681,6 +63416,8 @@ type ApiIndexFlattSecurityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -59776,6 +63513,18 @@ func (r ApiIndexFlattSecurityGetRequest) Botnet(botnet string) ApiIndexFlattSecu
 // Specify a published date
 func (r ApiIndexFlattSecurityGetRequest) Published(published string) ApiIndexFlattSecurityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFlattSecurityGetRequest) Date(date string) ApiIndexFlattSecurityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFlattSecurityGetRequest) Date2(date2 string) ApiIndexFlattSecurityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -59911,6 +63660,12 @@ func (a *IndicesAPIService) IndexFlattSecurityGetExecute(r ApiIndexFlattSecurity
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -60036,6 +63791,8 @@ type ApiIndexForgerockGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -60131,6 +63888,18 @@ func (r ApiIndexForgerockGetRequest) Botnet(botnet string) ApiIndexForgerockGetR
 // Specify a published date
 func (r ApiIndexForgerockGetRequest) Published(published string) ApiIndexForgerockGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexForgerockGetRequest) Date(date string) ApiIndexForgerockGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexForgerockGetRequest) Date2(date2 string) ApiIndexForgerockGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -60266,6 +64035,12 @@ func (a *IndicesAPIService) IndexForgerockGetExecute(r ApiIndexForgerockGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -60391,6 +64166,8 @@ type ApiIndexFortinetGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -60486,6 +64263,18 @@ func (r ApiIndexFortinetGetRequest) Botnet(botnet string) ApiIndexFortinetGetReq
 // Specify a published date
 func (r ApiIndexFortinetGetRequest) Published(published string) ApiIndexFortinetGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFortinetGetRequest) Date(date string) ApiIndexFortinetGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFortinetGetRequest) Date2(date2 string) ApiIndexFortinetGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -60621,6 +64410,12 @@ func (a *IndicesAPIService) IndexFortinetGetExecute(r ApiIndexFortinetGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -60746,6 +64541,8 @@ type ApiIndexFortinetIpsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -60841,6 +64638,18 @@ func (r ApiIndexFortinetIpsGetRequest) Botnet(botnet string) ApiIndexFortinetIps
 // Specify a published date
 func (r ApiIndexFortinetIpsGetRequest) Published(published string) ApiIndexFortinetIpsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFortinetIpsGetRequest) Date(date string) ApiIndexFortinetIpsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFortinetIpsGetRequest) Date2(date2 string) ApiIndexFortinetIpsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -60976,6 +64785,12 @@ func (a *IndicesAPIService) IndexFortinetIpsGetExecute(r ApiIndexFortinetIpsGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -61101,6 +64916,8 @@ type ApiIndexFoxitGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -61196,6 +65013,18 @@ func (r ApiIndexFoxitGetRequest) Botnet(botnet string) ApiIndexFoxitGetRequest {
 // Specify a published date
 func (r ApiIndexFoxitGetRequest) Published(published string) ApiIndexFoxitGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFoxitGetRequest) Date(date string) ApiIndexFoxitGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFoxitGetRequest) Date2(date2 string) ApiIndexFoxitGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -61331,6 +65160,12 @@ func (a *IndicesAPIService) IndexFoxitGetExecute(r ApiIndexFoxitGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -61456,6 +65291,8 @@ type ApiIndexFreebsdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -61551,6 +65388,18 @@ func (r ApiIndexFreebsdGetRequest) Botnet(botnet string) ApiIndexFreebsdGetReque
 // Specify a published date
 func (r ApiIndexFreebsdGetRequest) Published(published string) ApiIndexFreebsdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexFreebsdGetRequest) Date(date string) ApiIndexFreebsdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexFreebsdGetRequest) Date2(date2 string) ApiIndexFreebsdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -61686,6 +65535,12 @@ func (a *IndicesAPIService) IndexFreebsdGetExecute(r ApiIndexFreebsdGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -61811,6 +65666,8 @@ type ApiIndexGallagherGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -61906,6 +65763,18 @@ func (r ApiIndexGallagherGetRequest) Botnet(botnet string) ApiIndexGallagherGetR
 // Specify a published date
 func (r ApiIndexGallagherGetRequest) Published(published string) ApiIndexGallagherGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGallagherGetRequest) Date(date string) ApiIndexGallagherGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGallagherGetRequest) Date2(date2 string) ApiIndexGallagherGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -62041,6 +65910,12 @@ func (a *IndicesAPIService) IndexGallagherGetExecute(r ApiIndexGallagherGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -62166,6 +66041,8 @@ type ApiIndexGcpGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -62261,6 +66138,18 @@ func (r ApiIndexGcpGetRequest) Botnet(botnet string) ApiIndexGcpGetRequest {
 // Specify a published date
 func (r ApiIndexGcpGetRequest) Published(published string) ApiIndexGcpGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGcpGetRequest) Date(date string) ApiIndexGcpGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGcpGetRequest) Date2(date2 string) ApiIndexGcpGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -62396,6 +66285,12 @@ func (a *IndicesAPIService) IndexGcpGetExecute(r ApiIndexGcpGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -62521,6 +66416,8 @@ type ApiIndexGeGasGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -62616,6 +66513,18 @@ func (r ApiIndexGeGasGetRequest) Botnet(botnet string) ApiIndexGeGasGetRequest {
 // Specify a published date
 func (r ApiIndexGeGasGetRequest) Published(published string) ApiIndexGeGasGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGeGasGetRequest) Date(date string) ApiIndexGeGasGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGeGasGetRequest) Date2(date2 string) ApiIndexGeGasGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -62751,6 +66660,12 @@ func (a *IndicesAPIService) IndexGeGasGetExecute(r ApiIndexGeGasGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -62876,6 +66791,8 @@ type ApiIndexGeHealthcareGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -62971,6 +66888,18 @@ func (r ApiIndexGeHealthcareGetRequest) Botnet(botnet string) ApiIndexGeHealthca
 // Specify a published date
 func (r ApiIndexGeHealthcareGetRequest) Published(published string) ApiIndexGeHealthcareGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGeHealthcareGetRequest) Date(date string) ApiIndexGeHealthcareGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGeHealthcareGetRequest) Date2(date2 string) ApiIndexGeHealthcareGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -63106,6 +67035,12 @@ func (a *IndicesAPIService) IndexGeHealthcareGetExecute(r ApiIndexGeHealthcareGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -63231,6 +67166,8 @@ type ApiIndexGemGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -63326,6 +67263,18 @@ func (r ApiIndexGemGetRequest) Botnet(botnet string) ApiIndexGemGetRequest {
 // Specify a published date
 func (r ApiIndexGemGetRequest) Published(published string) ApiIndexGemGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGemGetRequest) Date(date string) ApiIndexGemGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGemGetRequest) Date2(date2 string) ApiIndexGemGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -63461,6 +67410,12 @@ func (a *IndicesAPIService) IndexGemGetExecute(r ApiIndexGemGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -63586,6 +67541,8 @@ type ApiIndexGenGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -63681,6 +67638,18 @@ func (r ApiIndexGenGetRequest) Botnet(botnet string) ApiIndexGenGetRequest {
 // Specify a published date
 func (r ApiIndexGenGetRequest) Published(published string) ApiIndexGenGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGenGetRequest) Date(date string) ApiIndexGenGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGenGetRequest) Date2(date2 string) ApiIndexGenGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -63816,6 +67785,12 @@ func (a *IndicesAPIService) IndexGenGetExecute(r ApiIndexGenGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -63941,6 +67916,8 @@ type ApiIndexGenetecGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -64036,6 +68013,18 @@ func (r ApiIndexGenetecGetRequest) Botnet(botnet string) ApiIndexGenetecGetReque
 // Specify a published date
 func (r ApiIndexGenetecGetRequest) Published(published string) ApiIndexGenetecGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGenetecGetRequest) Date(date string) ApiIndexGenetecGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGenetecGetRequest) Date2(date2 string) ApiIndexGenetecGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -64171,6 +68160,387 @@ func (a *IndicesAPIService) IndexGenetecGetExecute(r ApiIndexGenetecGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexGhsaGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	date2 *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexGhsaGetRequest) Page(page int32) ApiIndexGhsaGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexGhsaGetRequest) Limit(limit int32) ApiIndexGhsaGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexGhsaGetRequest) Cursor(cursor string) ApiIndexGhsaGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexGhsaGetRequest) StartCursor(startCursor string) ApiIndexGhsaGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexGhsaGetRequest) Cve(cve string) ApiIndexGhsaGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexGhsaGetRequest) Alias(alias string) ApiIndexGhsaGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexGhsaGetRequest) Iava(iava string) ApiIndexGhsaGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexGhsaGetRequest) Jvndb(jvndb string) ApiIndexGhsaGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexGhsaGetRequest) Ilvn(ilvn string) ApiIndexGhsaGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexGhsaGetRequest) ThreatActor(threatActor string) ApiIndexGhsaGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexGhsaGetRequest) MitreId(mitreId string) ApiIndexGhsaGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexGhsaGetRequest) MispId(mispId string) ApiIndexGhsaGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexGhsaGetRequest) Ransomware(ransomware string) ApiIndexGhsaGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexGhsaGetRequest) Botnet(botnet string) ApiIndexGhsaGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexGhsaGetRequest) Published(published string) ApiIndexGhsaGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGhsaGetRequest) Date(date string) ApiIndexGhsaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGhsaGetRequest) Date2(date2 string) ApiIndexGhsaGetRequest {
+	r.date2 = &date2
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexGhsaGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexGhsaGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexGhsaGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexGhsaGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexGhsaGetRequest) LastModStartDate(lastModStartDate string) ApiIndexGhsaGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexGhsaGetRequest) LastModEndDate(lastModEndDate string) ApiIndexGhsaGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGhsaGetRequest) PubStartDate(pubStartDate string) ApiIndexGhsaGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGhsaGetRequest) PubEndDate(pubEndDate string) ApiIndexGhsaGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexGhsaGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryGHSAPaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexGhsaGetExecute(r)
+}
+
+/*
+IndexGhsaGet Return vulnerability data stored in index \"ghsa\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the ghsa index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** GHSA
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/ghsa?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/ghsa?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexGhsaGetRequest
+*/
+func (a *IndicesAPIService) IndexGhsaGet(ctx context.Context) ApiIndexGhsaGetRequest {
+	return ApiIndexGhsaGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayAdvisoryGHSAPaginatePagination
+func (a *IndicesAPIService) IndexGhsaGetExecute(r ApiIndexGhsaGetRequest) (*RenderResponseWithMetadataArrayAdvisoryGHSAPaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryGHSAPaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexGhsaGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/index/ghsa"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -64296,6 +68666,8 @@ type ApiIndexGigabyteGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -64391,6 +68763,18 @@ func (r ApiIndexGigabyteGetRequest) Botnet(botnet string) ApiIndexGigabyteGetReq
 // Specify a published date
 func (r ApiIndexGigabyteGetRequest) Published(published string) ApiIndexGigabyteGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGigabyteGetRequest) Date(date string) ApiIndexGigabyteGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGigabyteGetRequest) Date2(date2 string) ApiIndexGigabyteGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -64526,6 +68910,12 @@ func (a *IndicesAPIService) IndexGigabyteGetExecute(r ApiIndexGigabyteGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -64651,6 +69041,8 @@ type ApiIndexGiteeExploitsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -64746,6 +69138,18 @@ func (r ApiIndexGiteeExploitsGetRequest) Botnet(botnet string) ApiIndexGiteeExpl
 // Specify a published date
 func (r ApiIndexGiteeExploitsGetRequest) Published(published string) ApiIndexGiteeExploitsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGiteeExploitsGetRequest) Date(date string) ApiIndexGiteeExploitsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGiteeExploitsGetRequest) Date2(date2 string) ApiIndexGiteeExploitsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -64881,6 +69285,12 @@ func (a *IndicesAPIService) IndexGiteeExploitsGetExecute(r ApiIndexGiteeExploits
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -65006,6 +69416,8 @@ type ApiIndexGithubExploitsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -65101,6 +69513,18 @@ func (r ApiIndexGithubExploitsGetRequest) Botnet(botnet string) ApiIndexGithubEx
 // Specify a published date
 func (r ApiIndexGithubExploitsGetRequest) Published(published string) ApiIndexGithubExploitsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGithubExploitsGetRequest) Date(date string) ApiIndexGithubExploitsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGithubExploitsGetRequest) Date2(date2 string) ApiIndexGithubExploitsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -65236,6 +69660,12 @@ func (a *IndicesAPIService) IndexGithubExploitsGetExecute(r ApiIndexGithubExploi
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -65361,6 +69791,8 @@ type ApiIndexGithubSecurityAdvisoriesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -65456,6 +69888,18 @@ func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Botnet(botnet string) ApiInd
 // Specify a published date
 func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Published(published string) ApiIndexGithubSecurityAdvisoriesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Date(date string) ApiIndexGithubSecurityAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Date2(date2 string) ApiIndexGithubSecurityAdvisoriesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -65591,6 +70035,12 @@ func (a *IndicesAPIService) IndexGithubSecurityAdvisoriesGetExecute(r ApiIndexGi
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -65716,6 +70166,8 @@ type ApiIndexGitlabAdvisoriesCommunityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -65811,6 +70263,18 @@ func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Botnet(botnet string) ApiIn
 // Specify a published date
 func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Published(published string) ApiIndexGitlabAdvisoriesCommunityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Date(date string) ApiIndexGitlabAdvisoriesCommunityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Date2(date2 string) ApiIndexGitlabAdvisoriesCommunityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -65946,6 +70410,12 @@ func (a *IndicesAPIService) IndexGitlabAdvisoriesCommunityGetExecute(r ApiIndexG
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -66071,6 +70541,8 @@ type ApiIndexGitlabExploitsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -66166,6 +70638,18 @@ func (r ApiIndexGitlabExploitsGetRequest) Botnet(botnet string) ApiIndexGitlabEx
 // Specify a published date
 func (r ApiIndexGitlabExploitsGetRequest) Published(published string) ApiIndexGitlabExploitsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGitlabExploitsGetRequest) Date(date string) ApiIndexGitlabExploitsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGitlabExploitsGetRequest) Date2(date2 string) ApiIndexGitlabExploitsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -66301,6 +70785,12 @@ func (a *IndicesAPIService) IndexGitlabExploitsGetExecute(r ApiIndexGitlabExploi
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -66426,6 +70916,8 @@ type ApiIndexGlibcGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -66521,6 +71013,18 @@ func (r ApiIndexGlibcGetRequest) Botnet(botnet string) ApiIndexGlibcGetRequest {
 // Specify a published date
 func (r ApiIndexGlibcGetRequest) Published(published string) ApiIndexGlibcGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGlibcGetRequest) Date(date string) ApiIndexGlibcGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGlibcGetRequest) Date2(date2 string) ApiIndexGlibcGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -66656,6 +71160,12 @@ func (a *IndicesAPIService) IndexGlibcGetExecute(r ApiIndexGlibcGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -66781,6 +71291,8 @@ type ApiIndexGmoCybersecurityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -66876,6 +71388,18 @@ func (r ApiIndexGmoCybersecurityGetRequest) Botnet(botnet string) ApiIndexGmoCyb
 // Specify a published date
 func (r ApiIndexGmoCybersecurityGetRequest) Published(published string) ApiIndexGmoCybersecurityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGmoCybersecurityGetRequest) Date(date string) ApiIndexGmoCybersecurityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGmoCybersecurityGetRequest) Date2(date2 string) ApiIndexGmoCybersecurityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -67011,6 +71535,12 @@ func (a *IndicesAPIService) IndexGmoCybersecurityGetExecute(r ApiIndexGmoCyberse
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -67136,6 +71666,8 @@ type ApiIndexGnutlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -67231,6 +71763,18 @@ func (r ApiIndexGnutlsGetRequest) Botnet(botnet string) ApiIndexGnutlsGetRequest
 // Specify a published date
 func (r ApiIndexGnutlsGetRequest) Published(published string) ApiIndexGnutlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGnutlsGetRequest) Date(date string) ApiIndexGnutlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGnutlsGetRequest) Date2(date2 string) ApiIndexGnutlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -67366,6 +71910,12 @@ func (a *IndicesAPIService) IndexGnutlsGetExecute(r ApiIndexGnutlsGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -67491,6 +72041,8 @@ type ApiIndexGoVulndbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -67586,6 +72138,18 @@ func (r ApiIndexGoVulndbGetRequest) Botnet(botnet string) ApiIndexGoVulndbGetReq
 // Specify a published date
 func (r ApiIndexGoVulndbGetRequest) Published(published string) ApiIndexGoVulndbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGoVulndbGetRequest) Date(date string) ApiIndexGoVulndbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGoVulndbGetRequest) Date2(date2 string) ApiIndexGoVulndbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -67721,6 +72285,12 @@ func (a *IndicesAPIService) IndexGoVulndbGetExecute(r ApiIndexGoVulndbGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -67846,6 +72416,8 @@ type ApiIndexGolangGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -67941,6 +72513,18 @@ func (r ApiIndexGolangGetRequest) Botnet(botnet string) ApiIndexGolangGetRequest
 // Specify a published date
 func (r ApiIndexGolangGetRequest) Published(published string) ApiIndexGolangGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGolangGetRequest) Date(date string) ApiIndexGolangGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGolangGetRequest) Date2(date2 string) ApiIndexGolangGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -68076,6 +72660,12 @@ func (a *IndicesAPIService) IndexGolangGetExecute(r ApiIndexGolangGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -68201,6 +72791,8 @@ type ApiIndexGoogle0dayItwGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -68296,6 +72888,18 @@ func (r ApiIndexGoogle0dayItwGetRequest) Botnet(botnet string) ApiIndexGoogle0da
 // Specify a published date
 func (r ApiIndexGoogle0dayItwGetRequest) Published(published string) ApiIndexGoogle0dayItwGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGoogle0dayItwGetRequest) Date(date string) ApiIndexGoogle0dayItwGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGoogle0dayItwGetRequest) Date2(date2 string) ApiIndexGoogle0dayItwGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -68431,6 +73035,12 @@ func (a *IndicesAPIService) IndexGoogle0dayItwGetExecute(r ApiIndexGoogle0dayItw
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -68556,6 +73166,8 @@ type ApiIndexGoogleContainerOptimizedOsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -68651,6 +73263,18 @@ func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Botnet(botnet string) ApiI
 // Specify a published date
 func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Published(published string) ApiIndexGoogleContainerOptimizedOsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Date(date string) ApiIndexGoogleContainerOptimizedOsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Date2(date2 string) ApiIndexGoogleContainerOptimizedOsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -68786,6 +73410,12 @@ func (a *IndicesAPIService) IndexGoogleContainerOptimizedOsGetExecute(r ApiIndex
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -68911,6 +73541,8 @@ type ApiIndexGrafanaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -69006,6 +73638,18 @@ func (r ApiIndexGrafanaGetRequest) Botnet(botnet string) ApiIndexGrafanaGetReque
 // Specify a published date
 func (r ApiIndexGrafanaGetRequest) Published(published string) ApiIndexGrafanaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGrafanaGetRequest) Date(date string) ApiIndexGrafanaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGrafanaGetRequest) Date2(date2 string) ApiIndexGrafanaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -69141,6 +73785,12 @@ func (a *IndicesAPIService) IndexGrafanaGetExecute(r ApiIndexGrafanaGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -69266,6 +73916,8 @@ type ApiIndexGreynoiseMetadataGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -69361,6 +74013,18 @@ func (r ApiIndexGreynoiseMetadataGetRequest) Botnet(botnet string) ApiIndexGreyn
 // Specify a published date
 func (r ApiIndexGreynoiseMetadataGetRequest) Published(published string) ApiIndexGreynoiseMetadataGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexGreynoiseMetadataGetRequest) Date(date string) ApiIndexGreynoiseMetadataGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexGreynoiseMetadataGetRequest) Date2(date2 string) ApiIndexGreynoiseMetadataGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -69496,6 +74160,12 @@ func (a *IndicesAPIService) IndexGreynoiseMetadataGetExecute(r ApiIndexGreynoise
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -69621,6 +74291,8 @@ type ApiIndexHackageGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -69716,6 +74388,18 @@ func (r ApiIndexHackageGetRequest) Botnet(botnet string) ApiIndexHackageGetReque
 // Specify a published date
 func (r ApiIndexHackageGetRequest) Published(published string) ApiIndexHackageGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHackageGetRequest) Date(date string) ApiIndexHackageGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHackageGetRequest) Date2(date2 string) ApiIndexHackageGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -69851,6 +74535,12 @@ func (a *IndicesAPIService) IndexHackageGetExecute(r ApiIndexHackageGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -69976,6 +74666,8 @@ type ApiIndexHacktivityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -70071,6 +74763,18 @@ func (r ApiIndexHacktivityGetRequest) Botnet(botnet string) ApiIndexHacktivityGe
 // Specify a published date
 func (r ApiIndexHacktivityGetRequest) Published(published string) ApiIndexHacktivityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHacktivityGetRequest) Date(date string) ApiIndexHacktivityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHacktivityGetRequest) Date2(date2 string) ApiIndexHacktivityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -70206,6 +74910,12 @@ func (a *IndicesAPIService) IndexHacktivityGetExecute(r ApiIndexHacktivityGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -70331,6 +75041,8 @@ type ApiIndexHarmonyosGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -70426,6 +75138,18 @@ func (r ApiIndexHarmonyosGetRequest) Botnet(botnet string) ApiIndexHarmonyosGetR
 // Specify a published date
 func (r ApiIndexHarmonyosGetRequest) Published(published string) ApiIndexHarmonyosGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHarmonyosGetRequest) Date(date string) ApiIndexHarmonyosGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHarmonyosGetRequest) Date2(date2 string) ApiIndexHarmonyosGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -70561,6 +75285,12 @@ func (a *IndicesAPIService) IndexHarmonyosGetExecute(r ApiIndexHarmonyosGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -70686,6 +75416,8 @@ type ApiIndexHashicorpGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -70781,6 +75513,18 @@ func (r ApiIndexHashicorpGetRequest) Botnet(botnet string) ApiIndexHashicorpGetR
 // Specify a published date
 func (r ApiIndexHashicorpGetRequest) Published(published string) ApiIndexHashicorpGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHashicorpGetRequest) Date(date string) ApiIndexHashicorpGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHashicorpGetRequest) Date2(date2 string) ApiIndexHashicorpGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -70916,6 +75660,12 @@ func (a *IndicesAPIService) IndexHashicorpGetExecute(r ApiIndexHashicorpGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -71041,6 +75791,8 @@ type ApiIndexHaskellSadbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -71136,6 +75888,18 @@ func (r ApiIndexHaskellSadbGetRequest) Botnet(botnet string) ApiIndexHaskellSadb
 // Specify a published date
 func (r ApiIndexHaskellSadbGetRequest) Published(published string) ApiIndexHaskellSadbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHaskellSadbGetRequest) Date(date string) ApiIndexHaskellSadbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHaskellSadbGetRequest) Date2(date2 string) ApiIndexHaskellSadbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -71271,6 +76035,12 @@ func (a *IndicesAPIService) IndexHaskellSadbGetExecute(r ApiIndexHaskellSadbGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -71396,6 +76166,8 @@ type ApiIndexHclGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -71491,6 +76263,18 @@ func (r ApiIndexHclGetRequest) Botnet(botnet string) ApiIndexHclGetRequest {
 // Specify a published date
 func (r ApiIndexHclGetRequest) Published(published string) ApiIndexHclGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHclGetRequest) Date(date string) ApiIndexHclGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHclGetRequest) Date2(date2 string) ApiIndexHclGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -71626,6 +76410,12 @@ func (a *IndicesAPIService) IndexHclGetExecute(r ApiIndexHclGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -71751,6 +76541,8 @@ type ApiIndexHexGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -71846,6 +76638,18 @@ func (r ApiIndexHexGetRequest) Botnet(botnet string) ApiIndexHexGetRequest {
 // Specify a published date
 func (r ApiIndexHexGetRequest) Published(published string) ApiIndexHexGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHexGetRequest) Date(date string) ApiIndexHexGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHexGetRequest) Date2(date2 string) ApiIndexHexGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -71981,6 +76785,12 @@ func (a *IndicesAPIService) IndexHexGetExecute(r ApiIndexHexGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -72106,6 +76916,8 @@ type ApiIndexHikvisionGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -72201,6 +77013,18 @@ func (r ApiIndexHikvisionGetRequest) Botnet(botnet string) ApiIndexHikvisionGetR
 // Specify a published date
 func (r ApiIndexHikvisionGetRequest) Published(published string) ApiIndexHikvisionGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHikvisionGetRequest) Date(date string) ApiIndexHikvisionGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHikvisionGetRequest) Date2(date2 string) ApiIndexHikvisionGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -72336,6 +77160,12 @@ func (a *IndicesAPIService) IndexHikvisionGetExecute(r ApiIndexHikvisionGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -72461,6 +77291,8 @@ type ApiIndexHillromGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -72556,6 +77388,18 @@ func (r ApiIndexHillromGetRequest) Botnet(botnet string) ApiIndexHillromGetReque
 // Specify a published date
 func (r ApiIndexHillromGetRequest) Published(published string) ApiIndexHillromGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHillromGetRequest) Date(date string) ApiIndexHillromGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHillromGetRequest) Date2(date2 string) ApiIndexHillromGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -72691,6 +77535,12 @@ func (a *IndicesAPIService) IndexHillromGetExecute(r ApiIndexHillromGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -72816,6 +77666,8 @@ type ApiIndexHitachiEnergyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -72911,6 +77763,18 @@ func (r ApiIndexHitachiEnergyGetRequest) Botnet(botnet string) ApiIndexHitachiEn
 // Specify a published date
 func (r ApiIndexHitachiEnergyGetRequest) Published(published string) ApiIndexHitachiEnergyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHitachiEnergyGetRequest) Date(date string) ApiIndexHitachiEnergyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHitachiEnergyGetRequest) Date2(date2 string) ApiIndexHitachiEnergyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -73046,6 +77910,12 @@ func (a *IndicesAPIService) IndexHitachiEnergyGetExecute(r ApiIndexHitachiEnergy
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -73171,6 +78041,8 @@ type ApiIndexHitachiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -73266,6 +78138,18 @@ func (r ApiIndexHitachiGetRequest) Botnet(botnet string) ApiIndexHitachiGetReque
 // Specify a published date
 func (r ApiIndexHitachiGetRequest) Published(published string) ApiIndexHitachiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHitachiGetRequest) Date(date string) ApiIndexHitachiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHitachiGetRequest) Date2(date2 string) ApiIndexHitachiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -73401,6 +78285,12 @@ func (a *IndicesAPIService) IndexHitachiGetExecute(r ApiIndexHitachiGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -73526,6 +78416,8 @@ type ApiIndexHkcertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -73621,6 +78513,18 @@ func (r ApiIndexHkcertGetRequest) Botnet(botnet string) ApiIndexHkcertGetRequest
 // Specify a published date
 func (r ApiIndexHkcertGetRequest) Published(published string) ApiIndexHkcertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHkcertGetRequest) Date(date string) ApiIndexHkcertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHkcertGetRequest) Date2(date2 string) ApiIndexHkcertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -73756,6 +78660,12 @@ func (a *IndicesAPIService) IndexHkcertGetExecute(r ApiIndexHkcertGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -73881,6 +78791,8 @@ type ApiIndexHoneywellGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -73976,6 +78888,18 @@ func (r ApiIndexHoneywellGetRequest) Botnet(botnet string) ApiIndexHoneywellGetR
 // Specify a published date
 func (r ApiIndexHoneywellGetRequest) Published(published string) ApiIndexHoneywellGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHoneywellGetRequest) Date(date string) ApiIndexHoneywellGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHoneywellGetRequest) Date2(date2 string) ApiIndexHoneywellGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -74111,6 +79035,12 @@ func (a *IndicesAPIService) IndexHoneywellGetExecute(r ApiIndexHoneywellGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -74236,6 +79166,8 @@ type ApiIndexHpGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -74331,6 +79263,18 @@ func (r ApiIndexHpGetRequest) Botnet(botnet string) ApiIndexHpGetRequest {
 // Specify a published date
 func (r ApiIndexHpGetRequest) Published(published string) ApiIndexHpGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHpGetRequest) Date(date string) ApiIndexHpGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHpGetRequest) Date2(date2 string) ApiIndexHpGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -74466,6 +79410,12 @@ func (a *IndicesAPIService) IndexHpGetExecute(r ApiIndexHpGetRequest) (*RenderRe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -74591,6 +79541,8 @@ type ApiIndexHpeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -74686,6 +79638,18 @@ func (r ApiIndexHpeGetRequest) Botnet(botnet string) ApiIndexHpeGetRequest {
 // Specify a published date
 func (r ApiIndexHpeGetRequest) Published(published string) ApiIndexHpeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHpeGetRequest) Date(date string) ApiIndexHpeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHpeGetRequest) Date2(date2 string) ApiIndexHpeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -74821,6 +79785,12 @@ func (a *IndicesAPIService) IndexHpeGetExecute(r ApiIndexHpeGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -74946,6 +79916,8 @@ type ApiIndexHuaweiEulerosGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -75041,6 +80013,18 @@ func (r ApiIndexHuaweiEulerosGetRequest) Botnet(botnet string) ApiIndexHuaweiEul
 // Specify a published date
 func (r ApiIndexHuaweiEulerosGetRequest) Published(published string) ApiIndexHuaweiEulerosGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHuaweiEulerosGetRequest) Date(date string) ApiIndexHuaweiEulerosGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHuaweiEulerosGetRequest) Date2(date2 string) ApiIndexHuaweiEulerosGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -75176,6 +80160,12 @@ func (a *IndicesAPIService) IndexHuaweiEulerosGetExecute(r ApiIndexHuaweiEuleros
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -75301,6 +80291,8 @@ type ApiIndexHuaweiIpsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -75396,6 +80388,18 @@ func (r ApiIndexHuaweiIpsGetRequest) Botnet(botnet string) ApiIndexHuaweiIpsGetR
 // Specify a published date
 func (r ApiIndexHuaweiIpsGetRequest) Published(published string) ApiIndexHuaweiIpsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHuaweiIpsGetRequest) Date(date string) ApiIndexHuaweiIpsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHuaweiIpsGetRequest) Date2(date2 string) ApiIndexHuaweiIpsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -75531,6 +80535,12 @@ func (a *IndicesAPIService) IndexHuaweiIpsGetExecute(r ApiIndexHuaweiIpsGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -75656,6 +80666,8 @@ type ApiIndexHuaweiPsirtGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -75751,6 +80763,18 @@ func (r ApiIndexHuaweiPsirtGetRequest) Botnet(botnet string) ApiIndexHuaweiPsirt
 // Specify a published date
 func (r ApiIndexHuaweiPsirtGetRequest) Published(published string) ApiIndexHuaweiPsirtGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexHuaweiPsirtGetRequest) Date(date string) ApiIndexHuaweiPsirtGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexHuaweiPsirtGetRequest) Date2(date2 string) ApiIndexHuaweiPsirtGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -75886,6 +80910,12 @@ func (a *IndicesAPIService) IndexHuaweiPsirtGetExecute(r ApiIndexHuaweiPsirtGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -76011,6 +81041,8 @@ type ApiIndexIavaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -76106,6 +81138,18 @@ func (r ApiIndexIavaGetRequest) Botnet(botnet string) ApiIndexIavaGetRequest {
 // Specify a published date
 func (r ApiIndexIavaGetRequest) Published(published string) ApiIndexIavaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIavaGetRequest) Date(date string) ApiIndexIavaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIavaGetRequest) Date2(date2 string) ApiIndexIavaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -76241,6 +81285,12 @@ func (a *IndicesAPIService) IndexIavaGetExecute(r ApiIndexIavaGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -76366,6 +81416,8 @@ type ApiIndexIbmGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -76461,6 +81513,18 @@ func (r ApiIndexIbmGetRequest) Botnet(botnet string) ApiIndexIbmGetRequest {
 // Specify a published date
 func (r ApiIndexIbmGetRequest) Published(published string) ApiIndexIbmGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIbmGetRequest) Date(date string) ApiIndexIbmGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIbmGetRequest) Date2(date2 string) ApiIndexIbmGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -76596,6 +81660,12 @@ func (a *IndicesAPIService) IndexIbmGetExecute(r ApiIndexIbmGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -76721,6 +81791,8 @@ type ApiIndexIdemiaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -76816,6 +81888,18 @@ func (r ApiIndexIdemiaGetRequest) Botnet(botnet string) ApiIndexIdemiaGetRequest
 // Specify a published date
 func (r ApiIndexIdemiaGetRequest) Published(published string) ApiIndexIdemiaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIdemiaGetRequest) Date(date string) ApiIndexIdemiaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIdemiaGetRequest) Date2(date2 string) ApiIndexIdemiaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -76951,6 +82035,12 @@ func (a *IndicesAPIService) IndexIdemiaGetExecute(r ApiIndexIdemiaGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -77076,6 +82166,8 @@ type ApiIndexIlAlertsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -77171,6 +82263,18 @@ func (r ApiIndexIlAlertsGetRequest) Botnet(botnet string) ApiIndexIlAlertsGetReq
 // Specify a published date
 func (r ApiIndexIlAlertsGetRequest) Published(published string) ApiIndexIlAlertsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIlAlertsGetRequest) Date(date string) ApiIndexIlAlertsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIlAlertsGetRequest) Date2(date2 string) ApiIndexIlAlertsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -77306,6 +82410,12 @@ func (a *IndicesAPIService) IndexIlAlertsGetExecute(r ApiIndexIlAlertsGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -77431,6 +82541,8 @@ type ApiIndexIlVulnerabilitiesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -77526,6 +82638,18 @@ func (r ApiIndexIlVulnerabilitiesGetRequest) Botnet(botnet string) ApiIndexIlVul
 // Specify a published date
 func (r ApiIndexIlVulnerabilitiesGetRequest) Published(published string) ApiIndexIlVulnerabilitiesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIlVulnerabilitiesGetRequest) Date(date string) ApiIndexIlVulnerabilitiesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIlVulnerabilitiesGetRequest) Date2(date2 string) ApiIndexIlVulnerabilitiesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -77661,6 +82785,12 @@ func (a *IndicesAPIService) IndexIlVulnerabilitiesGetExecute(r ApiIndexIlVulnera
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -77786,6 +82916,8 @@ type ApiIndexIncibeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -77881,6 +83013,18 @@ func (r ApiIndexIncibeGetRequest) Botnet(botnet string) ApiIndexIncibeGetRequest
 // Specify a published date
 func (r ApiIndexIncibeGetRequest) Published(published string) ApiIndexIncibeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIncibeGetRequest) Date(date string) ApiIndexIncibeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIncibeGetRequest) Date2(date2 string) ApiIndexIncibeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -78016,6 +83160,12 @@ func (a *IndicesAPIService) IndexIncibeGetExecute(r ApiIndexIncibeGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -78141,6 +83291,8 @@ type ApiIndexInitialAccessGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -78236,6 +83388,18 @@ func (r ApiIndexInitialAccessGetRequest) Botnet(botnet string) ApiIndexInitialAc
 // Specify a published date
 func (r ApiIndexInitialAccessGetRequest) Published(published string) ApiIndexInitialAccessGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexInitialAccessGetRequest) Date(date string) ApiIndexInitialAccessGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexInitialAccessGetRequest) Date2(date2 string) ApiIndexInitialAccessGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -78371,6 +83535,12 @@ func (a *IndicesAPIService) IndexInitialAccessGetExecute(r ApiIndexInitialAccess
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -78496,6 +83666,8 @@ type ApiIndexInitialAccessGitGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -78591,6 +83763,18 @@ func (r ApiIndexInitialAccessGitGetRequest) Botnet(botnet string) ApiIndexInitia
 // Specify a published date
 func (r ApiIndexInitialAccessGitGetRequest) Published(published string) ApiIndexInitialAccessGitGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexInitialAccessGitGetRequest) Date(date string) ApiIndexInitialAccessGitGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexInitialAccessGitGetRequest) Date2(date2 string) ApiIndexInitialAccessGitGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -78726,6 +83910,12 @@ func (a *IndicesAPIService) IndexInitialAccessGitGetExecute(r ApiIndexInitialAcc
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -78851,6 +84041,8 @@ type ApiIndexIntelGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -78946,6 +84138,18 @@ func (r ApiIndexIntelGetRequest) Botnet(botnet string) ApiIndexIntelGetRequest {
 // Specify a published date
 func (r ApiIndexIntelGetRequest) Published(published string) ApiIndexIntelGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIntelGetRequest) Date(date string) ApiIndexIntelGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIntelGetRequest) Date2(date2 string) ApiIndexIntelGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -79081,6 +84285,12 @@ func (a *IndicesAPIService) IndexIntelGetExecute(r ApiIndexIntelGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -79211,6 +84421,8 @@ type ApiIndexIpintel10dGetRequest struct {
 	kind *string
 	hostname *string
 	matches *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -79336,6 +84548,18 @@ func (r ApiIndexIpintel10dGetRequest) Hostname(hostname string) ApiIndexIpintel1
 // Search for a string in the field describing the finding
 func (r ApiIndexIpintel10dGetRequest) Matches(matches string) ApiIndexIpintel10dGetRequest {
 	r.matches = &matches
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIpintel10dGetRequest) Date(date string) ApiIndexIpintel10dGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIpintel10dGetRequest) Date2(date2 string) ApiIndexIpintel10dGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -79486,6 +84710,12 @@ func (a *IndicesAPIService) IndexIpintel10dGetExecute(r ApiIndexIpintel10dGetReq
 	if r.matches != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "matches", r.matches, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -79616,6 +84846,8 @@ type ApiIndexIpintel30dGetRequest struct {
 	kind *string
 	hostname *string
 	matches *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -79741,6 +84973,18 @@ func (r ApiIndexIpintel30dGetRequest) Hostname(hostname string) ApiIndexIpintel3
 // Search for a string in the field describing the finding
 func (r ApiIndexIpintel30dGetRequest) Matches(matches string) ApiIndexIpintel30dGetRequest {
 	r.matches = &matches
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIpintel30dGetRequest) Date(date string) ApiIndexIpintel30dGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIpintel30dGetRequest) Date2(date2 string) ApiIndexIpintel30dGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -79891,6 +85135,12 @@ func (a *IndicesAPIService) IndexIpintel30dGetExecute(r ApiIndexIpintel30dGetReq
 	if r.matches != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "matches", r.matches, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -80021,6 +85271,8 @@ type ApiIndexIpintel3dGetRequest struct {
 	kind *string
 	hostname *string
 	matches *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -80146,6 +85398,18 @@ func (r ApiIndexIpintel3dGetRequest) Hostname(hostname string) ApiIndexIpintel3d
 // Search for a string in the field describing the finding
 func (r ApiIndexIpintel3dGetRequest) Matches(matches string) ApiIndexIpintel3dGetRequest {
 	r.matches = &matches
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIpintel3dGetRequest) Date(date string) ApiIndexIpintel3dGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIpintel3dGetRequest) Date2(date2 string) ApiIndexIpintel3dGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -80296,6 +85560,12 @@ func (a *IndicesAPIService) IndexIpintel3dGetExecute(r ApiIndexIpintel3dGetReque
 	if r.matches != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "matches", r.matches, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -80426,6 +85696,8 @@ type ApiIndexIpintel90dGetRequest struct {
 	kind *string
 	hostname *string
 	matches *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -80551,6 +85823,18 @@ func (r ApiIndexIpintel90dGetRequest) Hostname(hostname string) ApiIndexIpintel9
 // Search for a string in the field describing the finding
 func (r ApiIndexIpintel90dGetRequest) Matches(matches string) ApiIndexIpintel90dGetRequest {
 	r.matches = &matches
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIpintel90dGetRequest) Date(date string) ApiIndexIpintel90dGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIpintel90dGetRequest) Date2(date2 string) ApiIndexIpintel90dGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -80701,6 +85985,12 @@ func (a *IndicesAPIService) IndexIpintel90dGetExecute(r ApiIndexIpintel90dGetReq
 	if r.matches != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "matches", r.matches, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -80826,6 +86116,8 @@ type ApiIndexIstioGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -80921,6 +86213,18 @@ func (r ApiIndexIstioGetRequest) Botnet(botnet string) ApiIndexIstioGetRequest {
 // Specify a published date
 func (r ApiIndexIstioGetRequest) Published(published string) ApiIndexIstioGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIstioGetRequest) Date(date string) ApiIndexIstioGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIstioGetRequest) Date2(date2 string) ApiIndexIstioGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -81056,6 +86360,12 @@ func (a *IndicesAPIService) IndexIstioGetExecute(r ApiIndexIstioGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -81181,6 +86491,8 @@ type ApiIndexIvantiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -81276,6 +86588,18 @@ func (r ApiIndexIvantiGetRequest) Botnet(botnet string) ApiIndexIvantiGetRequest
 // Specify a published date
 func (r ApiIndexIvantiGetRequest) Published(published string) ApiIndexIvantiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIvantiGetRequest) Date(date string) ApiIndexIvantiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIvantiGetRequest) Date2(date2 string) ApiIndexIvantiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -81411,6 +86735,12 @@ func (a *IndicesAPIService) IndexIvantiGetExecute(r ApiIndexIvantiGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -81536,6 +86866,8 @@ type ApiIndexIvantiRssGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -81631,6 +86963,18 @@ func (r ApiIndexIvantiRssGetRequest) Botnet(botnet string) ApiIndexIvantiRssGetR
 // Specify a published date
 func (r ApiIndexIvantiRssGetRequest) Published(published string) ApiIndexIvantiRssGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexIvantiRssGetRequest) Date(date string) ApiIndexIvantiRssGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexIvantiRssGetRequest) Date2(date2 string) ApiIndexIvantiRssGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -81766,6 +87110,12 @@ func (a *IndicesAPIService) IndexIvantiRssGetExecute(r ApiIndexIvantiRssGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -81891,6 +87241,8 @@ type ApiIndexJenkinsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -81986,6 +87338,18 @@ func (r ApiIndexJenkinsGetRequest) Botnet(botnet string) ApiIndexJenkinsGetReque
 // Specify a published date
 func (r ApiIndexJenkinsGetRequest) Published(published string) ApiIndexJenkinsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJenkinsGetRequest) Date(date string) ApiIndexJenkinsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJenkinsGetRequest) Date2(date2 string) ApiIndexJenkinsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -82121,6 +87485,12 @@ func (a *IndicesAPIService) IndexJenkinsGetExecute(r ApiIndexJenkinsGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -82246,6 +87616,8 @@ type ApiIndexJetbrainsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -82341,6 +87713,18 @@ func (r ApiIndexJetbrainsGetRequest) Botnet(botnet string) ApiIndexJetbrainsGetR
 // Specify a published date
 func (r ApiIndexJetbrainsGetRequest) Published(published string) ApiIndexJetbrainsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJetbrainsGetRequest) Date(date string) ApiIndexJetbrainsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJetbrainsGetRequest) Date2(date2 string) ApiIndexJetbrainsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -82476,6 +87860,12 @@ func (a *IndicesAPIService) IndexJetbrainsGetExecute(r ApiIndexJetbrainsGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -82601,6 +87991,8 @@ type ApiIndexJfrogGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -82696,6 +88088,18 @@ func (r ApiIndexJfrogGetRequest) Botnet(botnet string) ApiIndexJfrogGetRequest {
 // Specify a published date
 func (r ApiIndexJfrogGetRequest) Published(published string) ApiIndexJfrogGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJfrogGetRequest) Date(date string) ApiIndexJfrogGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJfrogGetRequest) Date2(date2 string) ApiIndexJfrogGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -82831,6 +88235,12 @@ func (a *IndicesAPIService) IndexJfrogGetExecute(r ApiIndexJfrogGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -82956,6 +88366,8 @@ type ApiIndexJnjGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -83051,6 +88463,18 @@ func (r ApiIndexJnjGetRequest) Botnet(botnet string) ApiIndexJnjGetRequest {
 // Specify a published date
 func (r ApiIndexJnjGetRequest) Published(published string) ApiIndexJnjGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJnjGetRequest) Date(date string) ApiIndexJnjGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJnjGetRequest) Date2(date2 string) ApiIndexJnjGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -83186,6 +88610,12 @@ func (a *IndicesAPIService) IndexJnjGetExecute(r ApiIndexJnjGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -83311,6 +88741,8 @@ type ApiIndexJohnsonControlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -83406,6 +88838,18 @@ func (r ApiIndexJohnsonControlsGetRequest) Botnet(botnet string) ApiIndexJohnson
 // Specify a published date
 func (r ApiIndexJohnsonControlsGetRequest) Published(published string) ApiIndexJohnsonControlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJohnsonControlsGetRequest) Date(date string) ApiIndexJohnsonControlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJohnsonControlsGetRequest) Date2(date2 string) ApiIndexJohnsonControlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -83541,6 +88985,12 @@ func (a *IndicesAPIService) IndexJohnsonControlsGetExecute(r ApiIndexJohnsonCont
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -83666,6 +89116,8 @@ type ApiIndexJuniperGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -83761,6 +89213,18 @@ func (r ApiIndexJuniperGetRequest) Botnet(botnet string) ApiIndexJuniperGetReque
 // Specify a published date
 func (r ApiIndexJuniperGetRequest) Published(published string) ApiIndexJuniperGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJuniperGetRequest) Date(date string) ApiIndexJuniperGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJuniperGetRequest) Date2(date2 string) ApiIndexJuniperGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -83896,6 +89360,12 @@ func (a *IndicesAPIService) IndexJuniperGetExecute(r ApiIndexJuniperGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -84021,6 +89491,8 @@ type ApiIndexJvnGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -84116,6 +89588,18 @@ func (r ApiIndexJvnGetRequest) Botnet(botnet string) ApiIndexJvnGetRequest {
 // Specify a published date
 func (r ApiIndexJvnGetRequest) Published(published string) ApiIndexJvnGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJvnGetRequest) Date(date string) ApiIndexJvnGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJvnGetRequest) Date2(date2 string) ApiIndexJvnGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -84251,6 +89735,12 @@ func (a *IndicesAPIService) IndexJvnGetExecute(r ApiIndexJvnGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -84376,6 +89866,8 @@ type ApiIndexJvndbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -84471,6 +89963,18 @@ func (r ApiIndexJvndbGetRequest) Botnet(botnet string) ApiIndexJvndbGetRequest {
 // Specify a published date
 func (r ApiIndexJvndbGetRequest) Published(published string) ApiIndexJvndbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexJvndbGetRequest) Date(date string) ApiIndexJvndbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexJvndbGetRequest) Date2(date2 string) ApiIndexJvndbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -84606,6 +90110,12 @@ func (a *IndicesAPIService) IndexJvndbGetExecute(r ApiIndexJvndbGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -84731,6 +90241,8 @@ type ApiIndexKasperskyIcsCertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -84826,6 +90338,18 @@ func (r ApiIndexKasperskyIcsCertGetRequest) Botnet(botnet string) ApiIndexKasper
 // Specify a published date
 func (r ApiIndexKasperskyIcsCertGetRequest) Published(published string) ApiIndexKasperskyIcsCertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexKasperskyIcsCertGetRequest) Date(date string) ApiIndexKasperskyIcsCertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexKasperskyIcsCertGetRequest) Date2(date2 string) ApiIndexKasperskyIcsCertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -84961,6 +90485,12 @@ func (a *IndicesAPIService) IndexKasperskyIcsCertGetExecute(r ApiIndexKasperskyI
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -85086,6 +90616,8 @@ type ApiIndexKorelogicGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -85181,6 +90713,18 @@ func (r ApiIndexKorelogicGetRequest) Botnet(botnet string) ApiIndexKorelogicGetR
 // Specify a published date
 func (r ApiIndexKorelogicGetRequest) Published(published string) ApiIndexKorelogicGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexKorelogicGetRequest) Date(date string) ApiIndexKorelogicGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexKorelogicGetRequest) Date2(date2 string) ApiIndexKorelogicGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -85316,6 +90860,12 @@ func (a *IndicesAPIService) IndexKorelogicGetExecute(r ApiIndexKorelogicGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -85441,6 +90991,8 @@ type ApiIndexKrcertSecurityNoticesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -85536,6 +91088,18 @@ func (r ApiIndexKrcertSecurityNoticesGetRequest) Botnet(botnet string) ApiIndexK
 // Specify a published date
 func (r ApiIndexKrcertSecurityNoticesGetRequest) Published(published string) ApiIndexKrcertSecurityNoticesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexKrcertSecurityNoticesGetRequest) Date(date string) ApiIndexKrcertSecurityNoticesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexKrcertSecurityNoticesGetRequest) Date2(date2 string) ApiIndexKrcertSecurityNoticesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -85671,6 +91235,12 @@ func (a *IndicesAPIService) IndexKrcertSecurityNoticesGetExecute(r ApiIndexKrcer
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -85796,6 +91366,8 @@ type ApiIndexKrcertVulnerabilitiesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -85891,6 +91463,18 @@ func (r ApiIndexKrcertVulnerabilitiesGetRequest) Botnet(botnet string) ApiIndexK
 // Specify a published date
 func (r ApiIndexKrcertVulnerabilitiesGetRequest) Published(published string) ApiIndexKrcertVulnerabilitiesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexKrcertVulnerabilitiesGetRequest) Date(date string) ApiIndexKrcertVulnerabilitiesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexKrcertVulnerabilitiesGetRequest) Date2(date2 string) ApiIndexKrcertVulnerabilitiesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -86026,6 +91610,12 @@ func (a *IndicesAPIService) IndexKrcertVulnerabilitiesGetExecute(r ApiIndexKrcer
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -86151,6 +91741,8 @@ type ApiIndexKubernetesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -86246,6 +91838,18 @@ func (r ApiIndexKubernetesGetRequest) Botnet(botnet string) ApiIndexKubernetesGe
 // Specify a published date
 func (r ApiIndexKubernetesGetRequest) Published(published string) ApiIndexKubernetesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexKubernetesGetRequest) Date(date string) ApiIndexKubernetesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexKubernetesGetRequest) Date2(date2 string) ApiIndexKubernetesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -86381,6 +91985,12 @@ func (a *IndicesAPIService) IndexKubernetesGetExecute(r ApiIndexKubernetesGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -86506,6 +92116,8 @@ type ApiIndexKunbusGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -86601,6 +92213,18 @@ func (r ApiIndexKunbusGetRequest) Botnet(botnet string) ApiIndexKunbusGetRequest
 // Specify a published date
 func (r ApiIndexKunbusGetRequest) Published(published string) ApiIndexKunbusGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexKunbusGetRequest) Date(date string) ApiIndexKunbusGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexKunbusGetRequest) Date2(date2 string) ApiIndexKunbusGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -86736,6 +92360,12 @@ func (a *IndicesAPIService) IndexKunbusGetExecute(r ApiIndexKunbusGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -86861,6 +92491,8 @@ type ApiIndexLenovoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -86956,6 +92588,18 @@ func (r ApiIndexLenovoGetRequest) Botnet(botnet string) ApiIndexLenovoGetRequest
 // Specify a published date
 func (r ApiIndexLenovoGetRequest) Published(published string) ApiIndexLenovoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexLenovoGetRequest) Date(date string) ApiIndexLenovoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexLenovoGetRequest) Date2(date2 string) ApiIndexLenovoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -87091,6 +92735,12 @@ func (a *IndicesAPIService) IndexLenovoGetExecute(r ApiIndexLenovoGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -87216,6 +92866,8 @@ type ApiIndexLexmarkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -87311,6 +92963,18 @@ func (r ApiIndexLexmarkGetRequest) Botnet(botnet string) ApiIndexLexmarkGetReque
 // Specify a published date
 func (r ApiIndexLexmarkGetRequest) Published(published string) ApiIndexLexmarkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexLexmarkGetRequest) Date(date string) ApiIndexLexmarkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexLexmarkGetRequest) Date2(date2 string) ApiIndexLexmarkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -87446,6 +93110,12 @@ func (a *IndicesAPIService) IndexLexmarkGetExecute(r ApiIndexLexmarkGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -87571,6 +93241,8 @@ type ApiIndexLgGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -87666,6 +93338,18 @@ func (r ApiIndexLgGetRequest) Botnet(botnet string) ApiIndexLgGetRequest {
 // Specify a published date
 func (r ApiIndexLgGetRequest) Published(published string) ApiIndexLgGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexLgGetRequest) Date(date string) ApiIndexLgGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexLgGetRequest) Date2(date2 string) ApiIndexLgGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -87801,6 +93485,12 @@ func (a *IndicesAPIService) IndexLgGetExecute(r ApiIndexLgGetRequest) (*RenderRe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -87926,6 +93616,8 @@ type ApiIndexLibreOfficeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -88021,6 +93713,18 @@ func (r ApiIndexLibreOfficeGetRequest) Botnet(botnet string) ApiIndexLibreOffice
 // Specify a published date
 func (r ApiIndexLibreOfficeGetRequest) Published(published string) ApiIndexLibreOfficeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexLibreOfficeGetRequest) Date(date string) ApiIndexLibreOfficeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexLibreOfficeGetRequest) Date2(date2 string) ApiIndexLibreOfficeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -88156,6 +93860,12 @@ func (a *IndicesAPIService) IndexLibreOfficeGetExecute(r ApiIndexLibreOfficeGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -88281,6 +93991,8 @@ type ApiIndexLinuxGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -88376,6 +94088,18 @@ func (r ApiIndexLinuxGetRequest) Botnet(botnet string) ApiIndexLinuxGetRequest {
 // Specify a published date
 func (r ApiIndexLinuxGetRequest) Published(published string) ApiIndexLinuxGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexLinuxGetRequest) Date(date string) ApiIndexLinuxGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexLinuxGetRequest) Date2(date2 string) ApiIndexLinuxGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -88511,6 +94235,12 @@ func (a *IndicesAPIService) IndexLinuxGetExecute(r ApiIndexLinuxGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -88636,6 +94366,8 @@ type ApiIndexLolAdvsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -88731,6 +94463,18 @@ func (r ApiIndexLolAdvsGetRequest) Botnet(botnet string) ApiIndexLolAdvsGetReque
 // Specify a published date
 func (r ApiIndexLolAdvsGetRequest) Published(published string) ApiIndexLolAdvsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexLolAdvsGetRequest) Date(date string) ApiIndexLolAdvsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexLolAdvsGetRequest) Date2(date2 string) ApiIndexLolAdvsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -88866,6 +94610,12 @@ func (a *IndicesAPIService) IndexLolAdvsGetExecute(r ApiIndexLolAdvsGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -88991,6 +94741,8 @@ type ApiIndexMFilesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -89086,6 +94838,18 @@ func (r ApiIndexMFilesGetRequest) Botnet(botnet string) ApiIndexMFilesGetRequest
 // Specify a published date
 func (r ApiIndexMFilesGetRequest) Published(published string) ApiIndexMFilesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMFilesGetRequest) Date(date string) ApiIndexMFilesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMFilesGetRequest) Date2(date2 string) ApiIndexMFilesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -89221,6 +94985,12 @@ func (a *IndicesAPIService) IndexMFilesGetExecute(r ApiIndexMFilesGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -89346,6 +95116,8 @@ type ApiIndexMacertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -89441,6 +95213,18 @@ func (r ApiIndexMacertGetRequest) Botnet(botnet string) ApiIndexMacertGetRequest
 // Specify a published date
 func (r ApiIndexMacertGetRequest) Published(published string) ApiIndexMacertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMacertGetRequest) Date(date string) ApiIndexMacertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMacertGetRequest) Date2(date2 string) ApiIndexMacertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -89576,6 +95360,387 @@ func (a *IndicesAPIService) IndexMacertGetExecute(r ApiIndexMacertGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexMaliciousPackagesGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	date2 *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexMaliciousPackagesGetRequest) Page(page int32) ApiIndexMaliciousPackagesGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexMaliciousPackagesGetRequest) Limit(limit int32) ApiIndexMaliciousPackagesGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexMaliciousPackagesGetRequest) Cursor(cursor string) ApiIndexMaliciousPackagesGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexMaliciousPackagesGetRequest) StartCursor(startCursor string) ApiIndexMaliciousPackagesGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Cve(cve string) ApiIndexMaliciousPackagesGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Alias(alias string) ApiIndexMaliciousPackagesGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Iava(iava string) ApiIndexMaliciousPackagesGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Jvndb(jvndb string) ApiIndexMaliciousPackagesGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Ilvn(ilvn string) ApiIndexMaliciousPackagesGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) ThreatActor(threatActor string) ApiIndexMaliciousPackagesGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) MitreId(mitreId string) ApiIndexMaliciousPackagesGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) MispId(mispId string) ApiIndexMaliciousPackagesGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Ransomware(ransomware string) ApiIndexMaliciousPackagesGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Botnet(botnet string) ApiIndexMaliciousPackagesGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexMaliciousPackagesGetRequest) Published(published string) ApiIndexMaliciousPackagesGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) Date(date string) ApiIndexMaliciousPackagesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) Date2(date2 string) ApiIndexMaliciousPackagesGetRequest {
+	r.date2 = &date2
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexMaliciousPackagesGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexMaliciousPackagesGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) LastModStartDate(lastModStartDate string) ApiIndexMaliciousPackagesGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) LastModEndDate(lastModEndDate string) ApiIndexMaliciousPackagesGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) PubStartDate(pubStartDate string) ApiIndexMaliciousPackagesGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMaliciousPackagesGetRequest) PubEndDate(pubEndDate string) ApiIndexMaliciousPackagesGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexMaliciousPackagesGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexMaliciousPackagesGetExecute(r)
+}
+
+/*
+IndexMaliciousPackagesGet Return vulnerability data stored in index \"malicious-packages\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the malicious-packages index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** Malicious Packages
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/malicious-packages?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/malicious-packages?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexMaliciousPackagesGetRequest
+*/
+func (a *IndicesAPIService) IndexMaliciousPackagesGet(ctx context.Context) ApiIndexMaliciousPackagesGetRequest {
+	return ApiIndexMaliciousPackagesGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination
+func (a *IndicesAPIService) IndexMaliciousPackagesGetExecute(r ApiIndexMaliciousPackagesGetRequest) (*RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexMaliciousPackagesGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/index/malicious-packages"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -89701,6 +95866,8 @@ type ApiIndexManageengineGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -89796,6 +95963,18 @@ func (r ApiIndexManageengineGetRequest) Botnet(botnet string) ApiIndexManageengi
 // Specify a published date
 func (r ApiIndexManageengineGetRequest) Published(published string) ApiIndexManageengineGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexManageengineGetRequest) Date(date string) ApiIndexManageengineGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexManageengineGetRequest) Date2(date2 string) ApiIndexManageengineGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -89931,6 +96110,12 @@ func (a *IndicesAPIService) IndexManageengineGetExecute(r ApiIndexManageengineGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -90056,6 +96241,8 @@ type ApiIndexMavenGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -90151,6 +96338,18 @@ func (r ApiIndexMavenGetRequest) Botnet(botnet string) ApiIndexMavenGetRequest {
 // Specify a published date
 func (r ApiIndexMavenGetRequest) Published(published string) ApiIndexMavenGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMavenGetRequest) Date(date string) ApiIndexMavenGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMavenGetRequest) Date2(date2 string) ApiIndexMavenGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -90286,6 +96485,12 @@ func (a *IndicesAPIService) IndexMavenGetExecute(r ApiIndexMavenGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -90411,6 +96616,8 @@ type ApiIndexMbedTlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -90506,6 +96713,18 @@ func (r ApiIndexMbedTlsGetRequest) Botnet(botnet string) ApiIndexMbedTlsGetReque
 // Specify a published date
 func (r ApiIndexMbedTlsGetRequest) Published(published string) ApiIndexMbedTlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMbedTlsGetRequest) Date(date string) ApiIndexMbedTlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMbedTlsGetRequest) Date2(date2 string) ApiIndexMbedTlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -90641,6 +96860,12 @@ func (a *IndicesAPIService) IndexMbedTlsGetExecute(r ApiIndexMbedTlsGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -90766,6 +96991,8 @@ type ApiIndexMcafeeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -90861,6 +97088,18 @@ func (r ApiIndexMcafeeGetRequest) Botnet(botnet string) ApiIndexMcafeeGetRequest
 // Specify a published date
 func (r ApiIndexMcafeeGetRequest) Published(published string) ApiIndexMcafeeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMcafeeGetRequest) Date(date string) ApiIndexMcafeeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMcafeeGetRequest) Date2(date2 string) ApiIndexMcafeeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -90996,6 +97235,12 @@ func (a *IndicesAPIService) IndexMcafeeGetExecute(r ApiIndexMcafeeGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -91121,6 +97366,8 @@ type ApiIndexMediatekGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -91216,6 +97463,18 @@ func (r ApiIndexMediatekGetRequest) Botnet(botnet string) ApiIndexMediatekGetReq
 // Specify a published date
 func (r ApiIndexMediatekGetRequest) Published(published string) ApiIndexMediatekGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMediatekGetRequest) Date(date string) ApiIndexMediatekGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMediatekGetRequest) Date2(date2 string) ApiIndexMediatekGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -91351,6 +97610,12 @@ func (a *IndicesAPIService) IndexMediatekGetExecute(r ApiIndexMediatekGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -91476,6 +97741,8 @@ type ApiIndexMedtronicGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -91571,6 +97838,18 @@ func (r ApiIndexMedtronicGetRequest) Botnet(botnet string) ApiIndexMedtronicGetR
 // Specify a published date
 func (r ApiIndexMedtronicGetRequest) Published(published string) ApiIndexMedtronicGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMedtronicGetRequest) Date(date string) ApiIndexMedtronicGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMedtronicGetRequest) Date2(date2 string) ApiIndexMedtronicGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -91706,6 +97985,12 @@ func (a *IndicesAPIService) IndexMedtronicGetExecute(r ApiIndexMedtronicGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -91831,6 +98116,8 @@ type ApiIndexMendixGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -91926,6 +98213,18 @@ func (r ApiIndexMendixGetRequest) Botnet(botnet string) ApiIndexMendixGetRequest
 // Specify a published date
 func (r ApiIndexMendixGetRequest) Published(published string) ApiIndexMendixGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMendixGetRequest) Date(date string) ApiIndexMendixGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMendixGetRequest) Date2(date2 string) ApiIndexMendixGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -92061,6 +98360,12 @@ func (a *IndicesAPIService) IndexMendixGetExecute(r ApiIndexMendixGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -92186,6 +98491,8 @@ type ApiIndexMetasploitGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -92281,6 +98588,18 @@ func (r ApiIndexMetasploitGetRequest) Botnet(botnet string) ApiIndexMetasploitGe
 // Specify a published date
 func (r ApiIndexMetasploitGetRequest) Published(published string) ApiIndexMetasploitGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMetasploitGetRequest) Date(date string) ApiIndexMetasploitGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMetasploitGetRequest) Date2(date2 string) ApiIndexMetasploitGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -92416,6 +98735,12 @@ func (a *IndicesAPIService) IndexMetasploitGetExecute(r ApiIndexMetasploitGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -92541,6 +98866,8 @@ type ApiIndexMicrosoftCvrfGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -92636,6 +98963,18 @@ func (r ApiIndexMicrosoftCvrfGetRequest) Botnet(botnet string) ApiIndexMicrosoft
 // Specify a published date
 func (r ApiIndexMicrosoftCvrfGetRequest) Published(published string) ApiIndexMicrosoftCvrfGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMicrosoftCvrfGetRequest) Date(date string) ApiIndexMicrosoftCvrfGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMicrosoftCvrfGetRequest) Date2(date2 string) ApiIndexMicrosoftCvrfGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -92771,6 +99110,12 @@ func (a *IndicesAPIService) IndexMicrosoftCvrfGetExecute(r ApiIndexMicrosoftCvrf
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -92896,6 +99241,8 @@ type ApiIndexMicrosoftKbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -92991,6 +99338,18 @@ func (r ApiIndexMicrosoftKbGetRequest) Botnet(botnet string) ApiIndexMicrosoftKb
 // Specify a published date
 func (r ApiIndexMicrosoftKbGetRequest) Published(published string) ApiIndexMicrosoftKbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMicrosoftKbGetRequest) Date(date string) ApiIndexMicrosoftKbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMicrosoftKbGetRequest) Date2(date2 string) ApiIndexMicrosoftKbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -93126,6 +99485,12 @@ func (a *IndicesAPIService) IndexMicrosoftKbGetExecute(r ApiIndexMicrosoftKbGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -93251,6 +99616,8 @@ type ApiIndexMikrotikGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -93346,6 +99713,18 @@ func (r ApiIndexMikrotikGetRequest) Botnet(botnet string) ApiIndexMikrotikGetReq
 // Specify a published date
 func (r ApiIndexMikrotikGetRequest) Published(published string) ApiIndexMikrotikGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMikrotikGetRequest) Date(date string) ApiIndexMikrotikGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMikrotikGetRequest) Date2(date2 string) ApiIndexMikrotikGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -93481,6 +99860,12 @@ func (a *IndicesAPIService) IndexMikrotikGetExecute(r ApiIndexMikrotikGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -93606,6 +99991,8 @@ type ApiIndexMindrayGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -93701,6 +100088,18 @@ func (r ApiIndexMindrayGetRequest) Botnet(botnet string) ApiIndexMindrayGetReque
 // Specify a published date
 func (r ApiIndexMindrayGetRequest) Published(published string) ApiIndexMindrayGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMindrayGetRequest) Date(date string) ApiIndexMindrayGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMindrayGetRequest) Date2(date2 string) ApiIndexMindrayGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -93836,6 +100235,12 @@ func (a *IndicesAPIService) IndexMindrayGetExecute(r ApiIndexMindrayGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -93961,6 +100366,8 @@ type ApiIndexMispThreatActorsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -94056,6 +100463,18 @@ func (r ApiIndexMispThreatActorsGetRequest) Botnet(botnet string) ApiIndexMispTh
 // Specify a published date
 func (r ApiIndexMispThreatActorsGetRequest) Published(published string) ApiIndexMispThreatActorsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMispThreatActorsGetRequest) Date(date string) ApiIndexMispThreatActorsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMispThreatActorsGetRequest) Date2(date2 string) ApiIndexMispThreatActorsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -94191,6 +100610,12 @@ func (a *IndicesAPIService) IndexMispThreatActorsGetExecute(r ApiIndexMispThreat
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -94316,6 +100741,8 @@ type ApiIndexMitelGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -94411,6 +100838,18 @@ func (r ApiIndexMitelGetRequest) Botnet(botnet string) ApiIndexMitelGetRequest {
 // Specify a published date
 func (r ApiIndexMitelGetRequest) Published(published string) ApiIndexMitelGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMitelGetRequest) Date(date string) ApiIndexMitelGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMitelGetRequest) Date2(date2 string) ApiIndexMitelGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -94546,6 +100985,12 @@ func (a *IndicesAPIService) IndexMitelGetExecute(r ApiIndexMitelGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -94671,6 +101116,8 @@ type ApiIndexMitreAttackCveGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -94766,6 +101213,18 @@ func (r ApiIndexMitreAttackCveGetRequest) Botnet(botnet string) ApiIndexMitreAtt
 // Specify a published date
 func (r ApiIndexMitreAttackCveGetRequest) Published(published string) ApiIndexMitreAttackCveGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMitreAttackCveGetRequest) Date(date string) ApiIndexMitreAttackCveGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMitreAttackCveGetRequest) Date2(date2 string) ApiIndexMitreAttackCveGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -94901,6 +101360,12 @@ func (a *IndicesAPIService) IndexMitreAttackCveGetExecute(r ApiIndexMitreAttackC
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -95026,6 +101491,8 @@ type ApiIndexMitreCvelistV5GetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -95121,6 +101588,18 @@ func (r ApiIndexMitreCvelistV5GetRequest) Botnet(botnet string) ApiIndexMitreCve
 // Specify a published date
 func (r ApiIndexMitreCvelistV5GetRequest) Published(published string) ApiIndexMitreCvelistV5GetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMitreCvelistV5GetRequest) Date(date string) ApiIndexMitreCvelistV5GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMitreCvelistV5GetRequest) Date2(date2 string) ApiIndexMitreCvelistV5GetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -95256,6 +101735,12 @@ func (a *IndicesAPIService) IndexMitreCvelistV5GetExecute(r ApiIndexMitreCvelist
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -95381,6 +101866,8 @@ type ApiIndexMitsubishiElectricGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -95476,6 +101963,18 @@ func (r ApiIndexMitsubishiElectricGetRequest) Botnet(botnet string) ApiIndexMits
 // Specify a published date
 func (r ApiIndexMitsubishiElectricGetRequest) Published(published string) ApiIndexMitsubishiElectricGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMitsubishiElectricGetRequest) Date(date string) ApiIndexMitsubishiElectricGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMitsubishiElectricGetRequest) Date2(date2 string) ApiIndexMitsubishiElectricGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -95611,6 +102110,12 @@ func (a *IndicesAPIService) IndexMitsubishiElectricGetExecute(r ApiIndexMitsubis
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -95736,6 +102241,8 @@ type ApiIndexMongodbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -95831,6 +102338,18 @@ func (r ApiIndexMongodbGetRequest) Botnet(botnet string) ApiIndexMongodbGetReque
 // Specify a published date
 func (r ApiIndexMongodbGetRequest) Published(published string) ApiIndexMongodbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMongodbGetRequest) Date(date string) ApiIndexMongodbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMongodbGetRequest) Date2(date2 string) ApiIndexMongodbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -95966,6 +102485,12 @@ func (a *IndicesAPIService) IndexMongodbGetExecute(r ApiIndexMongodbGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -96091,6 +102616,8 @@ type ApiIndexMoxaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -96186,6 +102713,18 @@ func (r ApiIndexMoxaGetRequest) Botnet(botnet string) ApiIndexMoxaGetRequest {
 // Specify a published date
 func (r ApiIndexMoxaGetRequest) Published(published string) ApiIndexMoxaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMoxaGetRequest) Date(date string) ApiIndexMoxaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMoxaGetRequest) Date2(date2 string) ApiIndexMoxaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -96321,6 +102860,12 @@ func (a *IndicesAPIService) IndexMoxaGetExecute(r ApiIndexMoxaGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -96446,6 +102991,8 @@ type ApiIndexMozillaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -96541,6 +103088,18 @@ func (r ApiIndexMozillaGetRequest) Botnet(botnet string) ApiIndexMozillaGetReque
 // Specify a published date
 func (r ApiIndexMozillaGetRequest) Published(published string) ApiIndexMozillaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMozillaGetRequest) Date(date string) ApiIndexMozillaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMozillaGetRequest) Date2(date2 string) ApiIndexMozillaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -96676,6 +103235,12 @@ func (a *IndicesAPIService) IndexMozillaGetExecute(r ApiIndexMozillaGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -96801,6 +103366,8 @@ type ApiIndexNaverGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -96896,6 +103463,18 @@ func (r ApiIndexNaverGetRequest) Botnet(botnet string) ApiIndexNaverGetRequest {
 // Specify a published date
 func (r ApiIndexNaverGetRequest) Published(published string) ApiIndexNaverGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNaverGetRequest) Date(date string) ApiIndexNaverGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNaverGetRequest) Date2(date2 string) ApiIndexNaverGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -97031,6 +103610,12 @@ func (a *IndicesAPIService) IndexNaverGetExecute(r ApiIndexNaverGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -97156,6 +103741,8 @@ type ApiIndexNcscCvesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -97251,6 +103838,18 @@ func (r ApiIndexNcscCvesGetRequest) Botnet(botnet string) ApiIndexNcscCvesGetReq
 // Specify a published date
 func (r ApiIndexNcscCvesGetRequest) Published(published string) ApiIndexNcscCvesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNcscCvesGetRequest) Date(date string) ApiIndexNcscCvesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNcscCvesGetRequest) Date2(date2 string) ApiIndexNcscCvesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -97386,6 +103985,12 @@ func (a *IndicesAPIService) IndexNcscCvesGetExecute(r ApiIndexNcscCvesGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -97511,6 +104116,8 @@ type ApiIndexNcscGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -97606,6 +104213,18 @@ func (r ApiIndexNcscGetRequest) Botnet(botnet string) ApiIndexNcscGetRequest {
 // Specify a published date
 func (r ApiIndexNcscGetRequest) Published(published string) ApiIndexNcscGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNcscGetRequest) Date(date string) ApiIndexNcscGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNcscGetRequest) Date2(date2 string) ApiIndexNcscGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -97741,6 +104360,12 @@ func (a *IndicesAPIService) IndexNcscGetExecute(r ApiIndexNcscGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -97866,6 +104491,8 @@ type ApiIndexNecGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -97961,6 +104588,18 @@ func (r ApiIndexNecGetRequest) Botnet(botnet string) ApiIndexNecGetRequest {
 // Specify a published date
 func (r ApiIndexNecGetRequest) Published(published string) ApiIndexNecGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNecGetRequest) Date(date string) ApiIndexNecGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNecGetRequest) Date2(date2 string) ApiIndexNecGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -98096,6 +104735,12 @@ func (a *IndicesAPIService) IndexNecGetExecute(r ApiIndexNecGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -98221,6 +104866,8 @@ type ApiIndexNessusGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -98316,6 +104963,18 @@ func (r ApiIndexNessusGetRequest) Botnet(botnet string) ApiIndexNessusGetRequest
 // Specify a published date
 func (r ApiIndexNessusGetRequest) Published(published string) ApiIndexNessusGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNessusGetRequest) Date(date string) ApiIndexNessusGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNessusGetRequest) Date2(date2 string) ApiIndexNessusGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -98451,6 +105110,12 @@ func (a *IndicesAPIService) IndexNessusGetExecute(r ApiIndexNessusGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -98576,6 +105241,8 @@ type ApiIndexNetappGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -98671,6 +105338,18 @@ func (r ApiIndexNetappGetRequest) Botnet(botnet string) ApiIndexNetappGetRequest
 // Specify a published date
 func (r ApiIndexNetappGetRequest) Published(published string) ApiIndexNetappGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNetappGetRequest) Date(date string) ApiIndexNetappGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNetappGetRequest) Date2(date2 string) ApiIndexNetappGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -98806,6 +105485,12 @@ func (a *IndicesAPIService) IndexNetappGetExecute(r ApiIndexNetappGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -98931,6 +105616,8 @@ type ApiIndexNetatalkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -99026,6 +105713,18 @@ func (r ApiIndexNetatalkGetRequest) Botnet(botnet string) ApiIndexNetatalkGetReq
 // Specify a published date
 func (r ApiIndexNetatalkGetRequest) Published(published string) ApiIndexNetatalkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNetatalkGetRequest) Date(date string) ApiIndexNetatalkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNetatalkGetRequest) Date2(date2 string) ApiIndexNetatalkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -99161,6 +105860,12 @@ func (a *IndicesAPIService) IndexNetatalkGetExecute(r ApiIndexNetatalkGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -99286,6 +105991,8 @@ type ApiIndexNetgateGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -99381,6 +106088,18 @@ func (r ApiIndexNetgateGetRequest) Botnet(botnet string) ApiIndexNetgateGetReque
 // Specify a published date
 func (r ApiIndexNetgateGetRequest) Published(published string) ApiIndexNetgateGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNetgateGetRequest) Date(date string) ApiIndexNetgateGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNetgateGetRequest) Date2(date2 string) ApiIndexNetgateGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -99516,6 +106235,12 @@ func (a *IndicesAPIService) IndexNetgateGetExecute(r ApiIndexNetgateGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -99641,6 +106366,8 @@ type ApiIndexNetgearGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -99736,6 +106463,18 @@ func (r ApiIndexNetgearGetRequest) Botnet(botnet string) ApiIndexNetgearGetReque
 // Specify a published date
 func (r ApiIndexNetgearGetRequest) Published(published string) ApiIndexNetgearGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNetgearGetRequest) Date(date string) ApiIndexNetgearGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNetgearGetRequest) Date2(date2 string) ApiIndexNetgearGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -99871,6 +106610,12 @@ func (a *IndicesAPIService) IndexNetgearGetExecute(r ApiIndexNetgearGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -99996,6 +106741,8 @@ type ApiIndexNetskopeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -100091,6 +106838,18 @@ func (r ApiIndexNetskopeGetRequest) Botnet(botnet string) ApiIndexNetskopeGetReq
 // Specify a published date
 func (r ApiIndexNetskopeGetRequest) Published(published string) ApiIndexNetskopeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNetskopeGetRequest) Date(date string) ApiIndexNetskopeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNetskopeGetRequest) Date2(date2 string) ApiIndexNetskopeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -100226,6 +106985,12 @@ func (a *IndicesAPIService) IndexNetskopeGetExecute(r ApiIndexNetskopeGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -100351,6 +107116,8 @@ type ApiIndexNexposeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -100446,6 +107213,18 @@ func (r ApiIndexNexposeGetRequest) Botnet(botnet string) ApiIndexNexposeGetReque
 // Specify a published date
 func (r ApiIndexNexposeGetRequest) Published(published string) ApiIndexNexposeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNexposeGetRequest) Date(date string) ApiIndexNexposeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNexposeGetRequest) Date2(date2 string) ApiIndexNexposeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -100581,6 +107360,12 @@ func (a *IndicesAPIService) IndexNexposeGetExecute(r ApiIndexNexposeGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -100706,6 +107491,8 @@ type ApiIndexNginxGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -100801,6 +107588,18 @@ func (r ApiIndexNginxGetRequest) Botnet(botnet string) ApiIndexNginxGetRequest {
 // Specify a published date
 func (r ApiIndexNginxGetRequest) Published(published string) ApiIndexNginxGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNginxGetRequest) Date(date string) ApiIndexNginxGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNginxGetRequest) Date2(date2 string) ApiIndexNginxGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -100936,6 +107735,12 @@ func (a *IndicesAPIService) IndexNginxGetExecute(r ApiIndexNginxGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -101061,6 +107866,8 @@ type ApiIndexNhsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -101156,6 +107963,18 @@ func (r ApiIndexNhsGetRequest) Botnet(botnet string) ApiIndexNhsGetRequest {
 // Specify a published date
 func (r ApiIndexNhsGetRequest) Published(published string) ApiIndexNhsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNhsGetRequest) Date(date string) ApiIndexNhsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNhsGetRequest) Date2(date2 string) ApiIndexNhsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -101291,6 +108110,12 @@ func (a *IndicesAPIService) IndexNhsGetExecute(r ApiIndexNhsGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -101416,6 +108241,8 @@ type ApiIndexNiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -101511,6 +108338,18 @@ func (r ApiIndexNiGetRequest) Botnet(botnet string) ApiIndexNiGetRequest {
 // Specify a published date
 func (r ApiIndexNiGetRequest) Published(published string) ApiIndexNiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNiGetRequest) Date(date string) ApiIndexNiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNiGetRequest) Date2(date2 string) ApiIndexNiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -101646,6 +108485,12 @@ func (a *IndicesAPIService) IndexNiGetExecute(r ApiIndexNiGetRequest) (*RenderRe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -101771,6 +108616,8 @@ type ApiIndexNistNvd2CpematchGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -101866,6 +108713,18 @@ func (r ApiIndexNistNvd2CpematchGetRequest) Botnet(botnet string) ApiIndexNistNv
 // Specify a published date
 func (r ApiIndexNistNvd2CpematchGetRequest) Published(published string) ApiIndexNistNvd2CpematchGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNistNvd2CpematchGetRequest) Date(date string) ApiIndexNistNvd2CpematchGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNistNvd2CpematchGetRequest) Date2(date2 string) ApiIndexNistNvd2CpematchGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -102001,6 +108860,12 @@ func (a *IndicesAPIService) IndexNistNvd2CpematchGetExecute(r ApiIndexNistNvd2Cp
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -102126,6 +108991,8 @@ type ApiIndexNistNvd2GetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -102221,6 +109088,18 @@ func (r ApiIndexNistNvd2GetRequest) Botnet(botnet string) ApiIndexNistNvd2GetReq
 // Specify a published date
 func (r ApiIndexNistNvd2GetRequest) Published(published string) ApiIndexNistNvd2GetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNistNvd2GetRequest) Date(date string) ApiIndexNistNvd2GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNistNvd2GetRequest) Date2(date2 string) ApiIndexNistNvd2GetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -102356,6 +109235,12 @@ func (a *IndicesAPIService) IndexNistNvd2GetExecute(r ApiIndexNistNvd2GetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -102481,6 +109366,8 @@ type ApiIndexNistNvd2SourcesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -102576,6 +109463,18 @@ func (r ApiIndexNistNvd2SourcesGetRequest) Botnet(botnet string) ApiIndexNistNvd
 // Specify a published date
 func (r ApiIndexNistNvd2SourcesGetRequest) Published(published string) ApiIndexNistNvd2SourcesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNistNvd2SourcesGetRequest) Date(date string) ApiIndexNistNvd2SourcesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNistNvd2SourcesGetRequest) Date2(date2 string) ApiIndexNistNvd2SourcesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -102711,6 +109610,12 @@ func (a *IndicesAPIService) IndexNistNvd2SourcesGetExecute(r ApiIndexNistNvd2Sou
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -102836,6 +109741,8 @@ type ApiIndexNistNvdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -102931,6 +109838,18 @@ func (r ApiIndexNistNvdGetRequest) Botnet(botnet string) ApiIndexNistNvdGetReque
 // Specify a published date
 func (r ApiIndexNistNvdGetRequest) Published(published string) ApiIndexNistNvdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNistNvdGetRequest) Date(date string) ApiIndexNistNvdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNistNvdGetRequest) Date2(date2 string) ApiIndexNistNvdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -103066,6 +109985,12 @@ func (a *IndicesAPIService) IndexNistNvdGetExecute(r ApiIndexNistNvdGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -103191,6 +110116,8 @@ type ApiIndexNodeSecurityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -103286,6 +110213,18 @@ func (r ApiIndexNodeSecurityGetRequest) Botnet(botnet string) ApiIndexNodeSecuri
 // Specify a published date
 func (r ApiIndexNodeSecurityGetRequest) Published(published string) ApiIndexNodeSecurityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNodeSecurityGetRequest) Date(date string) ApiIndexNodeSecurityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNodeSecurityGetRequest) Date2(date2 string) ApiIndexNodeSecurityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -103421,6 +110360,12 @@ func (a *IndicesAPIService) IndexNodeSecurityGetExecute(r ApiIndexNodeSecurityGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -103546,6 +110491,8 @@ type ApiIndexNodejsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -103641,6 +110588,18 @@ func (r ApiIndexNodejsGetRequest) Botnet(botnet string) ApiIndexNodejsGetRequest
 // Specify a published date
 func (r ApiIndexNodejsGetRequest) Published(published string) ApiIndexNodejsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNodejsGetRequest) Date(date string) ApiIndexNodejsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNodejsGetRequest) Date2(date2 string) ApiIndexNodejsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -103776,6 +110735,12 @@ func (a *IndicesAPIService) IndexNodejsGetExecute(r ApiIndexNodejsGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -103901,6 +110866,8 @@ type ApiIndexNokiaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -103996,6 +110963,18 @@ func (r ApiIndexNokiaGetRequest) Botnet(botnet string) ApiIndexNokiaGetRequest {
 // Specify a published date
 func (r ApiIndexNokiaGetRequest) Published(published string) ApiIndexNokiaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNokiaGetRequest) Date(date string) ApiIndexNokiaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNokiaGetRequest) Date2(date2 string) ApiIndexNokiaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -104131,6 +111110,12 @@ func (a *IndicesAPIService) IndexNokiaGetExecute(r ApiIndexNokiaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -104256,6 +111241,8 @@ type ApiIndexNotepadplusplusGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -104351,6 +111338,18 @@ func (r ApiIndexNotepadplusplusGetRequest) Botnet(botnet string) ApiIndexNotepad
 // Specify a published date
 func (r ApiIndexNotepadplusplusGetRequest) Published(published string) ApiIndexNotepadplusplusGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNotepadplusplusGetRequest) Date(date string) ApiIndexNotepadplusplusGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNotepadplusplusGetRequest) Date2(date2 string) ApiIndexNotepadplusplusGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -104486,6 +111485,12 @@ func (a *IndicesAPIService) IndexNotepadplusplusGetExecute(r ApiIndexNotepadplus
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -104611,6 +111616,8 @@ type ApiIndexNozomiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -104706,6 +111713,18 @@ func (r ApiIndexNozomiGetRequest) Botnet(botnet string) ApiIndexNozomiGetRequest
 // Specify a published date
 func (r ApiIndexNozomiGetRequest) Published(published string) ApiIndexNozomiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNozomiGetRequest) Date(date string) ApiIndexNozomiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNozomiGetRequest) Date2(date2 string) ApiIndexNozomiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -104841,6 +111860,12 @@ func (a *IndicesAPIService) IndexNozomiGetExecute(r ApiIndexNozomiGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -104966,6 +111991,8 @@ type ApiIndexNpmGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -105061,6 +112088,18 @@ func (r ApiIndexNpmGetRequest) Botnet(botnet string) ApiIndexNpmGetRequest {
 // Specify a published date
 func (r ApiIndexNpmGetRequest) Published(published string) ApiIndexNpmGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNpmGetRequest) Date(date string) ApiIndexNpmGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNpmGetRequest) Date2(date2 string) ApiIndexNpmGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -105196,6 +112235,12 @@ func (a *IndicesAPIService) IndexNpmGetExecute(r ApiIndexNpmGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -105321,6 +112366,8 @@ type ApiIndexNtpGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -105416,6 +112463,18 @@ func (r ApiIndexNtpGetRequest) Botnet(botnet string) ApiIndexNtpGetRequest {
 // Specify a published date
 func (r ApiIndexNtpGetRequest) Published(published string) ApiIndexNtpGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNtpGetRequest) Date(date string) ApiIndexNtpGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNtpGetRequest) Date2(date2 string) ApiIndexNtpGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -105551,6 +112610,12 @@ func (a *IndicesAPIService) IndexNtpGetExecute(r ApiIndexNtpGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -105676,6 +112741,8 @@ type ApiIndexNugetGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -105771,6 +112838,18 @@ func (r ApiIndexNugetGetRequest) Botnet(botnet string) ApiIndexNugetGetRequest {
 // Specify a published date
 func (r ApiIndexNugetGetRequest) Published(published string) ApiIndexNugetGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNugetGetRequest) Date(date string) ApiIndexNugetGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNugetGetRequest) Date2(date2 string) ApiIndexNugetGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -105906,6 +112985,12 @@ func (a *IndicesAPIService) IndexNugetGetExecute(r ApiIndexNugetGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -106031,6 +113116,8 @@ type ApiIndexNvdCpeDictionaryGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -106126,6 +113213,18 @@ func (r ApiIndexNvdCpeDictionaryGetRequest) Botnet(botnet string) ApiIndexNvdCpe
 // Specify a published date
 func (r ApiIndexNvdCpeDictionaryGetRequest) Published(published string) ApiIndexNvdCpeDictionaryGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNvdCpeDictionaryGetRequest) Date(date string) ApiIndexNvdCpeDictionaryGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNvdCpeDictionaryGetRequest) Date2(date2 string) ApiIndexNvdCpeDictionaryGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -106261,6 +113360,12 @@ func (a *IndicesAPIService) IndexNvdCpeDictionaryGetExecute(r ApiIndexNvdCpeDict
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -106386,6 +113491,8 @@ type ApiIndexNvidiaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -106481,6 +113588,18 @@ func (r ApiIndexNvidiaGetRequest) Botnet(botnet string) ApiIndexNvidiaGetRequest
 // Specify a published date
 func (r ApiIndexNvidiaGetRequest) Published(published string) ApiIndexNvidiaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNvidiaGetRequest) Date(date string) ApiIndexNvidiaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNvidiaGetRequest) Date2(date2 string) ApiIndexNvidiaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -106616,6 +113735,12 @@ func (a *IndicesAPIService) IndexNvidiaGetExecute(r ApiIndexNvidiaGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -106741,6 +113866,8 @@ type ApiIndexNzAdvisoriesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -106836,6 +113963,18 @@ func (r ApiIndexNzAdvisoriesGetRequest) Botnet(botnet string) ApiIndexNzAdvisori
 // Specify a published date
 func (r ApiIndexNzAdvisoriesGetRequest) Published(published string) ApiIndexNzAdvisoriesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexNzAdvisoriesGetRequest) Date(date string) ApiIndexNzAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexNzAdvisoriesGetRequest) Date2(date2 string) ApiIndexNzAdvisoriesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -106971,6 +114110,12 @@ func (a *IndicesAPIService) IndexNzAdvisoriesGetExecute(r ApiIndexNzAdvisoriesGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -107096,6 +114241,8 @@ type ApiIndexOctopusDeployGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -107191,6 +114338,18 @@ func (r ApiIndexOctopusDeployGetRequest) Botnet(botnet string) ApiIndexOctopusDe
 // Specify a published date
 func (r ApiIndexOctopusDeployGetRequest) Published(published string) ApiIndexOctopusDeployGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOctopusDeployGetRequest) Date(date string) ApiIndexOctopusDeployGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOctopusDeployGetRequest) Date2(date2 string) ApiIndexOctopusDeployGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -107326,6 +114485,12 @@ func (a *IndicesAPIService) IndexOctopusDeployGetExecute(r ApiIndexOctopusDeploy
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -107451,6 +114616,8 @@ type ApiIndexOktaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -107546,6 +114713,18 @@ func (r ApiIndexOktaGetRequest) Botnet(botnet string) ApiIndexOktaGetRequest {
 // Specify a published date
 func (r ApiIndexOktaGetRequest) Published(published string) ApiIndexOktaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOktaGetRequest) Date(date string) ApiIndexOktaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOktaGetRequest) Date2(date2 string) ApiIndexOktaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -107681,6 +114860,12 @@ func (a *IndicesAPIService) IndexOktaGetExecute(r ApiIndexOktaGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -107806,6 +114991,8 @@ type ApiIndexOmronGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -107901,6 +115088,18 @@ func (r ApiIndexOmronGetRequest) Botnet(botnet string) ApiIndexOmronGetRequest {
 // Specify a published date
 func (r ApiIndexOmronGetRequest) Published(published string) ApiIndexOmronGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOmronGetRequest) Date(date string) ApiIndexOmronGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOmronGetRequest) Date2(date2 string) ApiIndexOmronGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -108036,6 +115235,12 @@ func (a *IndicesAPIService) IndexOmronGetExecute(r ApiIndexOmronGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -108161,6 +115366,8 @@ type ApiIndexOneEGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -108256,6 +115463,18 @@ func (r ApiIndexOneEGetRequest) Botnet(botnet string) ApiIndexOneEGetRequest {
 // Specify a published date
 func (r ApiIndexOneEGetRequest) Published(published string) ApiIndexOneEGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOneEGetRequest) Date(date string) ApiIndexOneEGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOneEGetRequest) Date2(date2 string) ApiIndexOneEGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -108391,6 +115610,12 @@ func (a *IndicesAPIService) IndexOneEGetExecute(r ApiIndexOneEGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -108516,6 +115741,8 @@ type ApiIndexOpamGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -108611,6 +115838,18 @@ func (r ApiIndexOpamGetRequest) Botnet(botnet string) ApiIndexOpamGetRequest {
 // Specify a published date
 func (r ApiIndexOpamGetRequest) Published(published string) ApiIndexOpamGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpamGetRequest) Date(date string) ApiIndexOpamGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpamGetRequest) Date2(date2 string) ApiIndexOpamGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -108746,6 +115985,12 @@ func (a *IndicesAPIService) IndexOpamGetExecute(r ApiIndexOpamGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -108871,6 +116116,8 @@ type ApiIndexOpenCvdbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -108966,6 +116213,18 @@ func (r ApiIndexOpenCvdbGetRequest) Botnet(botnet string) ApiIndexOpenCvdbGetReq
 // Specify a published date
 func (r ApiIndexOpenCvdbGetRequest) Published(published string) ApiIndexOpenCvdbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpenCvdbGetRequest) Date(date string) ApiIndexOpenCvdbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpenCvdbGetRequest) Date2(date2 string) ApiIndexOpenCvdbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -109101,6 +116360,12 @@ func (a *IndicesAPIService) IndexOpenCvdbGetExecute(r ApiIndexOpenCvdbGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -109226,6 +116491,8 @@ type ApiIndexOpenbsdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -109321,6 +116588,18 @@ func (r ApiIndexOpenbsdGetRequest) Botnet(botnet string) ApiIndexOpenbsdGetReque
 // Specify a published date
 func (r ApiIndexOpenbsdGetRequest) Published(published string) ApiIndexOpenbsdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpenbsdGetRequest) Date(date string) ApiIndexOpenbsdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpenbsdGetRequest) Date2(date2 string) ApiIndexOpenbsdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -109456,6 +116735,12 @@ func (a *IndicesAPIService) IndexOpenbsdGetExecute(r ApiIndexOpenbsdGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -109581,6 +116866,8 @@ type ApiIndexOpengearGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -109676,6 +116963,18 @@ func (r ApiIndexOpengearGetRequest) Botnet(botnet string) ApiIndexOpengearGetReq
 // Specify a published date
 func (r ApiIndexOpengearGetRequest) Published(published string) ApiIndexOpengearGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpengearGetRequest) Date(date string) ApiIndexOpengearGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpengearGetRequest) Date2(date2 string) ApiIndexOpengearGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -109811,6 +117110,12 @@ func (a *IndicesAPIService) IndexOpengearGetExecute(r ApiIndexOpengearGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -109936,6 +117241,8 @@ type ApiIndexOpenjdkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -110031,6 +117338,18 @@ func (r ApiIndexOpenjdkGetRequest) Botnet(botnet string) ApiIndexOpenjdkGetReque
 // Specify a published date
 func (r ApiIndexOpenjdkGetRequest) Published(published string) ApiIndexOpenjdkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpenjdkGetRequest) Date(date string) ApiIndexOpenjdkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpenjdkGetRequest) Date2(date2 string) ApiIndexOpenjdkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -110166,6 +117485,12 @@ func (a *IndicesAPIService) IndexOpenjdkGetExecute(r ApiIndexOpenjdkGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -110291,6 +117616,8 @@ type ApiIndexOpensshGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -110386,6 +117713,18 @@ func (r ApiIndexOpensshGetRequest) Botnet(botnet string) ApiIndexOpensshGetReque
 // Specify a published date
 func (r ApiIndexOpensshGetRequest) Published(published string) ApiIndexOpensshGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpensshGetRequest) Date(date string) ApiIndexOpensshGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpensshGetRequest) Date2(date2 string) ApiIndexOpensshGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -110521,6 +117860,12 @@ func (a *IndicesAPIService) IndexOpensshGetExecute(r ApiIndexOpensshGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -110646,6 +117991,8 @@ type ApiIndexOpensslSecadvGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -110741,6 +118088,18 @@ func (r ApiIndexOpensslSecadvGetRequest) Botnet(botnet string) ApiIndexOpensslSe
 // Specify a published date
 func (r ApiIndexOpensslSecadvGetRequest) Published(published string) ApiIndexOpensslSecadvGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpensslSecadvGetRequest) Date(date string) ApiIndexOpensslSecadvGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpensslSecadvGetRequest) Date2(date2 string) ApiIndexOpensslSecadvGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -110876,6 +118235,12 @@ func (a *IndicesAPIService) IndexOpensslSecadvGetExecute(r ApiIndexOpensslSecadv
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -111001,6 +118366,8 @@ type ApiIndexOpenstackGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -111096,6 +118463,18 @@ func (r ApiIndexOpenstackGetRequest) Botnet(botnet string) ApiIndexOpenstackGetR
 // Specify a published date
 func (r ApiIndexOpenstackGetRequest) Published(published string) ApiIndexOpenstackGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpenstackGetRequest) Date(date string) ApiIndexOpenstackGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpenstackGetRequest) Date2(date2 string) ApiIndexOpenstackGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -111231,6 +118610,12 @@ func (a *IndicesAPIService) IndexOpenstackGetExecute(r ApiIndexOpenstackGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -111356,6 +118741,8 @@ type ApiIndexOpenwrtGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -111451,6 +118838,18 @@ func (r ApiIndexOpenwrtGetRequest) Botnet(botnet string) ApiIndexOpenwrtGetReque
 // Specify a published date
 func (r ApiIndexOpenwrtGetRequest) Published(published string) ApiIndexOpenwrtGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOpenwrtGetRequest) Date(date string) ApiIndexOpenwrtGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOpenwrtGetRequest) Date2(date2 string) ApiIndexOpenwrtGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -111586,6 +118985,12 @@ func (a *IndicesAPIService) IndexOpenwrtGetExecute(r ApiIndexOpenwrtGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -111711,6 +119116,8 @@ type ApiIndexOracleCpuCsafGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -111806,6 +119213,18 @@ func (r ApiIndexOracleCpuCsafGetRequest) Botnet(botnet string) ApiIndexOracleCpu
 // Specify a published date
 func (r ApiIndexOracleCpuCsafGetRequest) Published(published string) ApiIndexOracleCpuCsafGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOracleCpuCsafGetRequest) Date(date string) ApiIndexOracleCpuCsafGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOracleCpuCsafGetRequest) Date2(date2 string) ApiIndexOracleCpuCsafGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -111941,6 +119360,12 @@ func (a *IndicesAPIService) IndexOracleCpuCsafGetExecute(r ApiIndexOracleCpuCsaf
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -112066,6 +119491,8 @@ type ApiIndexOracleCpuGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -112161,6 +119588,18 @@ func (r ApiIndexOracleCpuGetRequest) Botnet(botnet string) ApiIndexOracleCpuGetR
 // Specify a published date
 func (r ApiIndexOracleCpuGetRequest) Published(published string) ApiIndexOracleCpuGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOracleCpuGetRequest) Date(date string) ApiIndexOracleCpuGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOracleCpuGetRequest) Date2(date2 string) ApiIndexOracleCpuGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -112296,6 +119735,12 @@ func (a *IndicesAPIService) IndexOracleCpuGetExecute(r ApiIndexOracleCpuGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -112421,6 +119866,8 @@ type ApiIndexOracleGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -112516,6 +119963,18 @@ func (r ApiIndexOracleGetRequest) Botnet(botnet string) ApiIndexOracleGetRequest
 // Specify a published date
 func (r ApiIndexOracleGetRequest) Published(published string) ApiIndexOracleGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOracleGetRequest) Date(date string) ApiIndexOracleGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOracleGetRequest) Date2(date2 string) ApiIndexOracleGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -112651,6 +120110,12 @@ func (a *IndicesAPIService) IndexOracleGetExecute(r ApiIndexOracleGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -112776,6 +120241,8 @@ type ApiIndexOsvGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -112871,6 +120338,18 @@ func (r ApiIndexOsvGetRequest) Botnet(botnet string) ApiIndexOsvGetRequest {
 // Specify a published date
 func (r ApiIndexOsvGetRequest) Published(published string) ApiIndexOsvGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOsvGetRequest) Date(date string) ApiIndexOsvGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOsvGetRequest) Date2(date2 string) ApiIndexOsvGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -113006,6 +120485,12 @@ func (a *IndicesAPIService) IndexOsvGetExecute(r ApiIndexOsvGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -113131,6 +120616,8 @@ type ApiIndexOtrsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -113226,6 +120713,18 @@ func (r ApiIndexOtrsGetRequest) Botnet(botnet string) ApiIndexOtrsGetRequest {
 // Specify a published date
 func (r ApiIndexOtrsGetRequest) Published(published string) ApiIndexOtrsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOtrsGetRequest) Date(date string) ApiIndexOtrsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOtrsGetRequest) Date2(date2 string) ApiIndexOtrsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -113361,6 +120860,12 @@ func (a *IndicesAPIService) IndexOtrsGetExecute(r ApiIndexOtrsGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -113486,6 +120991,8 @@ type ApiIndexOwncloudGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -113581,6 +121088,18 @@ func (r ApiIndexOwncloudGetRequest) Botnet(botnet string) ApiIndexOwncloudGetReq
 // Specify a published date
 func (r ApiIndexOwncloudGetRequest) Published(published string) ApiIndexOwncloudGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexOwncloudGetRequest) Date(date string) ApiIndexOwncloudGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexOwncloudGetRequest) Date2(date2 string) ApiIndexOwncloudGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -113716,6 +121235,12 @@ func (a *IndicesAPIService) IndexOwncloudGetExecute(r ApiIndexOwncloudGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -113841,6 +121366,8 @@ type ApiIndexPacketstormGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -113936,6 +121463,18 @@ func (r ApiIndexPacketstormGetRequest) Botnet(botnet string) ApiIndexPacketstorm
 // Specify a published date
 func (r ApiIndexPacketstormGetRequest) Published(published string) ApiIndexPacketstormGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPacketstormGetRequest) Date(date string) ApiIndexPacketstormGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPacketstormGetRequest) Date2(date2 string) ApiIndexPacketstormGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -114071,6 +121610,12 @@ func (a *IndicesAPIService) IndexPacketstormGetExecute(r ApiIndexPacketstormGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -114196,6 +121741,8 @@ type ApiIndexPalantirGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -114291,6 +121838,18 @@ func (r ApiIndexPalantirGetRequest) Botnet(botnet string) ApiIndexPalantirGetReq
 // Specify a published date
 func (r ApiIndexPalantirGetRequest) Published(published string) ApiIndexPalantirGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPalantirGetRequest) Date(date string) ApiIndexPalantirGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPalantirGetRequest) Date2(date2 string) ApiIndexPalantirGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -114426,6 +121985,12 @@ func (a *IndicesAPIService) IndexPalantirGetExecute(r ApiIndexPalantirGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -114551,6 +122116,8 @@ type ApiIndexPaloAltoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -114646,6 +122213,18 @@ func (r ApiIndexPaloAltoGetRequest) Botnet(botnet string) ApiIndexPaloAltoGetReq
 // Specify a published date
 func (r ApiIndexPaloAltoGetRequest) Published(published string) ApiIndexPaloAltoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPaloAltoGetRequest) Date(date string) ApiIndexPaloAltoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPaloAltoGetRequest) Date2(date2 string) ApiIndexPaloAltoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -114781,6 +122360,12 @@ func (a *IndicesAPIService) IndexPaloAltoGetExecute(r ApiIndexPaloAltoGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -114906,6 +122491,8 @@ type ApiIndexPanasonicGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -115001,6 +122588,18 @@ func (r ApiIndexPanasonicGetRequest) Botnet(botnet string) ApiIndexPanasonicGetR
 // Specify a published date
 func (r ApiIndexPanasonicGetRequest) Published(published string) ApiIndexPanasonicGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPanasonicGetRequest) Date(date string) ApiIndexPanasonicGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPanasonicGetRequest) Date2(date2 string) ApiIndexPanasonicGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -115136,6 +122735,12 @@ func (a *IndicesAPIService) IndexPanasonicGetExecute(r ApiIndexPanasonicGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -115261,6 +122866,8 @@ type ApiIndexPapercutGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -115356,6 +122963,18 @@ func (r ApiIndexPapercutGetRequest) Botnet(botnet string) ApiIndexPapercutGetReq
 // Specify a published date
 func (r ApiIndexPapercutGetRequest) Published(published string) ApiIndexPapercutGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPapercutGetRequest) Date(date string) ApiIndexPapercutGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPapercutGetRequest) Date2(date2 string) ApiIndexPapercutGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -115491,6 +123110,12 @@ func (a *IndicesAPIService) IndexPapercutGetExecute(r ApiIndexPapercutGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -115616,6 +123241,8 @@ type ApiIndexPegaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -115711,6 +123338,18 @@ func (r ApiIndexPegaGetRequest) Botnet(botnet string) ApiIndexPegaGetRequest {
 // Specify a published date
 func (r ApiIndexPegaGetRequest) Published(published string) ApiIndexPegaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPegaGetRequest) Date(date string) ApiIndexPegaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPegaGetRequest) Date2(date2 string) ApiIndexPegaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -115846,6 +123485,12 @@ func (a *IndicesAPIService) IndexPegaGetExecute(r ApiIndexPegaGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -115971,6 +123616,8 @@ type ApiIndexPhilipsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -116066,6 +123713,18 @@ func (r ApiIndexPhilipsGetRequest) Botnet(botnet string) ApiIndexPhilipsGetReque
 // Specify a published date
 func (r ApiIndexPhilipsGetRequest) Published(published string) ApiIndexPhilipsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPhilipsGetRequest) Date(date string) ApiIndexPhilipsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPhilipsGetRequest) Date2(date2 string) ApiIndexPhilipsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -116201,6 +123860,12 @@ func (a *IndicesAPIService) IndexPhilipsGetExecute(r ApiIndexPhilipsGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -116326,6 +123991,8 @@ type ApiIndexPhoenixContactGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -116421,6 +124088,18 @@ func (r ApiIndexPhoenixContactGetRequest) Botnet(botnet string) ApiIndexPhoenixC
 // Specify a published date
 func (r ApiIndexPhoenixContactGetRequest) Published(published string) ApiIndexPhoenixContactGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPhoenixContactGetRequest) Date(date string) ApiIndexPhoenixContactGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPhoenixContactGetRequest) Date2(date2 string) ApiIndexPhoenixContactGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -116556,6 +124235,12 @@ func (a *IndicesAPIService) IndexPhoenixContactGetExecute(r ApiIndexPhoenixConta
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -116681,6 +124366,8 @@ type ApiIndexPhpMyAdminGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -116776,6 +124463,18 @@ func (r ApiIndexPhpMyAdminGetRequest) Botnet(botnet string) ApiIndexPhpMyAdminGe
 // Specify a published date
 func (r ApiIndexPhpMyAdminGetRequest) Published(published string) ApiIndexPhpMyAdminGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPhpMyAdminGetRequest) Date(date string) ApiIndexPhpMyAdminGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPhpMyAdminGetRequest) Date2(date2 string) ApiIndexPhpMyAdminGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -116911,6 +124610,387 @@ func (a *IndicesAPIService) IndexPhpMyAdminGetExecute(r ApiIndexPhpMyAdminGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexPkcertGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	date2 *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexPkcertGetRequest) Page(page int32) ApiIndexPkcertGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexPkcertGetRequest) Limit(limit int32) ApiIndexPkcertGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexPkcertGetRequest) Cursor(cursor string) ApiIndexPkcertGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexPkcertGetRequest) StartCursor(startCursor string) ApiIndexPkcertGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexPkcertGetRequest) Cve(cve string) ApiIndexPkcertGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexPkcertGetRequest) Alias(alias string) ApiIndexPkcertGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexPkcertGetRequest) Iava(iava string) ApiIndexPkcertGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexPkcertGetRequest) Jvndb(jvndb string) ApiIndexPkcertGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexPkcertGetRequest) Ilvn(ilvn string) ApiIndexPkcertGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexPkcertGetRequest) ThreatActor(threatActor string) ApiIndexPkcertGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexPkcertGetRequest) MitreId(mitreId string) ApiIndexPkcertGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexPkcertGetRequest) MispId(mispId string) ApiIndexPkcertGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexPkcertGetRequest) Ransomware(ransomware string) ApiIndexPkcertGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexPkcertGetRequest) Botnet(botnet string) ApiIndexPkcertGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexPkcertGetRequest) Published(published string) ApiIndexPkcertGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPkcertGetRequest) Date(date string) ApiIndexPkcertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPkcertGetRequest) Date2(date2 string) ApiIndexPkcertGetRequest {
+	r.date2 = &date2
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexPkcertGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexPkcertGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexPkcertGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexPkcertGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexPkcertGetRequest) LastModStartDate(lastModStartDate string) ApiIndexPkcertGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexPkcertGetRequest) LastModEndDate(lastModEndDate string) ApiIndexPkcertGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPkcertGetRequest) PubStartDate(pubStartDate string) ApiIndexPkcertGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPkcertGetRequest) PubEndDate(pubEndDate string) ApiIndexPkcertGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexPkcertGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryPKCertPaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexPkcertGetExecute(r)
+}
+
+/*
+IndexPkcertGet Return vulnerability data stored in index \"pkcert\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the pkcert index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** PK CERT Security Advisories
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/pkcert?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/pkcert?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexPkcertGetRequest
+*/
+func (a *IndicesAPIService) IndexPkcertGet(ctx context.Context) ApiIndexPkcertGetRequest {
+	return ApiIndexPkcertGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayAdvisoryPKCertPaginatePagination
+func (a *IndicesAPIService) IndexPkcertGetExecute(r ApiIndexPkcertGetRequest) (*RenderResponseWithMetadataArrayAdvisoryPKCertPaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryPKCertPaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexPkcertGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/index/pkcert"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -117036,6 +125116,8 @@ type ApiIndexPostgressqlGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -117131,6 +125213,18 @@ func (r ApiIndexPostgressqlGetRequest) Botnet(botnet string) ApiIndexPostgressql
 // Specify a published date
 func (r ApiIndexPostgressqlGetRequest) Published(published string) ApiIndexPostgressqlGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPostgressqlGetRequest) Date(date string) ApiIndexPostgressqlGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPostgressqlGetRequest) Date2(date2 string) ApiIndexPostgressqlGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -117266,6 +125360,12 @@ func (a *IndicesAPIService) IndexPostgressqlGetExecute(r ApiIndexPostgressqlGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -117391,6 +125491,8 @@ type ApiIndexPowerdnsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -117486,6 +125588,18 @@ func (r ApiIndexPowerdnsGetRequest) Botnet(botnet string) ApiIndexPowerdnsGetReq
 // Specify a published date
 func (r ApiIndexPowerdnsGetRequest) Published(published string) ApiIndexPowerdnsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPowerdnsGetRequest) Date(date string) ApiIndexPowerdnsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPowerdnsGetRequest) Date2(date2 string) ApiIndexPowerdnsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -117621,6 +125735,12 @@ func (a *IndicesAPIService) IndexPowerdnsGetExecute(r ApiIndexPowerdnsGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -117746,6 +125866,8 @@ type ApiIndexProgressGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -117841,6 +125963,18 @@ func (r ApiIndexProgressGetRequest) Botnet(botnet string) ApiIndexProgressGetReq
 // Specify a published date
 func (r ApiIndexProgressGetRequest) Published(published string) ApiIndexProgressGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexProgressGetRequest) Date(date string) ApiIndexProgressGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexProgressGetRequest) Date2(date2 string) ApiIndexProgressGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -117976,6 +126110,12 @@ func (a *IndicesAPIService) IndexProgressGetExecute(r ApiIndexProgressGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -118101,6 +126241,8 @@ type ApiIndexProofpointGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -118196,6 +126338,18 @@ func (r ApiIndexProofpointGetRequest) Botnet(botnet string) ApiIndexProofpointGe
 // Specify a published date
 func (r ApiIndexProofpointGetRequest) Published(published string) ApiIndexProofpointGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexProofpointGetRequest) Date(date string) ApiIndexProofpointGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexProofpointGetRequest) Date2(date2 string) ApiIndexProofpointGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -118331,6 +126485,12 @@ func (a *IndicesAPIService) IndexProofpointGetExecute(r ApiIndexProofpointGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -118456,6 +126616,8 @@ type ApiIndexPtcGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -118551,6 +126713,18 @@ func (r ApiIndexPtcGetRequest) Botnet(botnet string) ApiIndexPtcGetRequest {
 // Specify a published date
 func (r ApiIndexPtcGetRequest) Published(published string) ApiIndexPtcGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPtcGetRequest) Date(date string) ApiIndexPtcGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPtcGetRequest) Date2(date2 string) ApiIndexPtcGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -118686,6 +126860,12 @@ func (a *IndicesAPIService) IndexPtcGetExecute(r ApiIndexPtcGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -118811,6 +126991,8 @@ type ApiIndexPubGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -118906,6 +127088,18 @@ func (r ApiIndexPubGetRequest) Botnet(botnet string) ApiIndexPubGetRequest {
 // Specify a published date
 func (r ApiIndexPubGetRequest) Published(published string) ApiIndexPubGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPubGetRequest) Date(date string) ApiIndexPubGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPubGetRequest) Date2(date2 string) ApiIndexPubGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -119041,6 +127235,12 @@ func (a *IndicesAPIService) IndexPubGetExecute(r ApiIndexPubGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -119166,6 +127366,8 @@ type ApiIndexPureStorageGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -119261,6 +127463,18 @@ func (r ApiIndexPureStorageGetRequest) Botnet(botnet string) ApiIndexPureStorage
 // Specify a published date
 func (r ApiIndexPureStorageGetRequest) Published(published string) ApiIndexPureStorageGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPureStorageGetRequest) Date(date string) ApiIndexPureStorageGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPureStorageGetRequest) Date2(date2 string) ApiIndexPureStorageGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -119396,6 +127610,12 @@ func (a *IndicesAPIService) IndexPureStorageGetExecute(r ApiIndexPureStorageGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -119521,6 +127741,8 @@ type ApiIndexPypaAdvisoriesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -119616,6 +127838,18 @@ func (r ApiIndexPypaAdvisoriesGetRequest) Botnet(botnet string) ApiIndexPypaAdvi
 // Specify a published date
 func (r ApiIndexPypaAdvisoriesGetRequest) Published(published string) ApiIndexPypaAdvisoriesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPypaAdvisoriesGetRequest) Date(date string) ApiIndexPypaAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPypaAdvisoriesGetRequest) Date2(date2 string) ApiIndexPypaAdvisoriesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -119751,6 +127985,12 @@ func (a *IndicesAPIService) IndexPypaAdvisoriesGetExecute(r ApiIndexPypaAdvisori
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -119876,6 +128116,8 @@ type ApiIndexPypiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -119971,6 +128213,18 @@ func (r ApiIndexPypiGetRequest) Botnet(botnet string) ApiIndexPypiGetRequest {
 // Specify a published date
 func (r ApiIndexPypiGetRequest) Published(published string) ApiIndexPypiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexPypiGetRequest) Date(date string) ApiIndexPypiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexPypiGetRequest) Date2(date2 string) ApiIndexPypiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -120106,6 +128360,12 @@ func (a *IndicesAPIService) IndexPypiGetExecute(r ApiIndexPypiGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -120231,6 +128491,8 @@ type ApiIndexQnapGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -120326,6 +128588,18 @@ func (r ApiIndexQnapGetRequest) Botnet(botnet string) ApiIndexQnapGetRequest {
 // Specify a published date
 func (r ApiIndexQnapGetRequest) Published(published string) ApiIndexQnapGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexQnapGetRequest) Date(date string) ApiIndexQnapGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexQnapGetRequest) Date2(date2 string) ApiIndexQnapGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -120461,6 +128735,12 @@ func (a *IndicesAPIService) IndexQnapGetExecute(r ApiIndexQnapGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -120586,6 +128866,8 @@ type ApiIndexQqidsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -120681,6 +128963,18 @@ func (r ApiIndexQqidsGetRequest) Botnet(botnet string) ApiIndexQqidsGetRequest {
 // Specify a published date
 func (r ApiIndexQqidsGetRequest) Published(published string) ApiIndexQqidsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexQqidsGetRequest) Date(date string) ApiIndexQqidsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexQqidsGetRequest) Date2(date2 string) ApiIndexQqidsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -120816,6 +129110,12 @@ func (a *IndicesAPIService) IndexQqidsGetExecute(r ApiIndexQqidsGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -120941,6 +129241,8 @@ type ApiIndexQualcommGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -121036,6 +129338,18 @@ func (r ApiIndexQualcommGetRequest) Botnet(botnet string) ApiIndexQualcommGetReq
 // Specify a published date
 func (r ApiIndexQualcommGetRequest) Published(published string) ApiIndexQualcommGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexQualcommGetRequest) Date(date string) ApiIndexQualcommGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexQualcommGetRequest) Date2(date2 string) ApiIndexQualcommGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -121171,6 +129485,12 @@ func (a *IndicesAPIService) IndexQualcommGetExecute(r ApiIndexQualcommGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -121296,6 +129616,8 @@ type ApiIndexQualysGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -121391,6 +129713,18 @@ func (r ApiIndexQualysGetRequest) Botnet(botnet string) ApiIndexQualysGetRequest
 // Specify a published date
 func (r ApiIndexQualysGetRequest) Published(published string) ApiIndexQualysGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexQualysGetRequest) Date(date string) ApiIndexQualysGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexQualysGetRequest) Date2(date2 string) ApiIndexQualysGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -121526,6 +129860,12 @@ func (a *IndicesAPIService) IndexQualysGetExecute(r ApiIndexQualysGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -121651,6 +129991,8 @@ type ApiIndexQualysQidsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -121746,6 +130088,18 @@ func (r ApiIndexQualysQidsGetRequest) Botnet(botnet string) ApiIndexQualysQidsGe
 // Specify a published date
 func (r ApiIndexQualysQidsGetRequest) Published(published string) ApiIndexQualysQidsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexQualysQidsGetRequest) Date(date string) ApiIndexQualysQidsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexQualysQidsGetRequest) Date2(date2 string) ApiIndexQualysQidsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -121881,6 +130235,12 @@ func (a *IndicesAPIService) IndexQualysQidsGetExecute(r ApiIndexQualysQidsGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -122006,6 +130366,8 @@ type ApiIndexQubesQsbGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -122101,6 +130463,18 @@ func (r ApiIndexQubesQsbGetRequest) Botnet(botnet string) ApiIndexQubesQsbGetReq
 // Specify a published date
 func (r ApiIndexQubesQsbGetRequest) Published(published string) ApiIndexQubesQsbGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexQubesQsbGetRequest) Date(date string) ApiIndexQubesQsbGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexQubesQsbGetRequest) Date2(date2 string) ApiIndexQubesQsbGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -122236,6 +130610,12 @@ func (a *IndicesAPIService) IndexQubesQsbGetExecute(r ApiIndexQubesQsbGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -122361,6 +130741,8 @@ type ApiIndexRansomwareGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -122456,6 +130838,18 @@ func (r ApiIndexRansomwareGetRequest) Botnet(botnet string) ApiIndexRansomwareGe
 // Specify a published date
 func (r ApiIndexRansomwareGetRequest) Published(published string) ApiIndexRansomwareGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRansomwareGetRequest) Date(date string) ApiIndexRansomwareGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRansomwareGetRequest) Date2(date2 string) ApiIndexRansomwareGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -122591,6 +130985,12 @@ func (a *IndicesAPIService) IndexRansomwareGetExecute(r ApiIndexRansomwareGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -122716,6 +131116,8 @@ type ApiIndexRedhatCvesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -122811,6 +131213,18 @@ func (r ApiIndexRedhatCvesGetRequest) Botnet(botnet string) ApiIndexRedhatCvesGe
 // Specify a published date
 func (r ApiIndexRedhatCvesGetRequest) Published(published string) ApiIndexRedhatCvesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRedhatCvesGetRequest) Date(date string) ApiIndexRedhatCvesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRedhatCvesGetRequest) Date2(date2 string) ApiIndexRedhatCvesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -122946,6 +131360,12 @@ func (a *IndicesAPIService) IndexRedhatCvesGetExecute(r ApiIndexRedhatCvesGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -123071,6 +131491,8 @@ type ApiIndexRedhatGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -123166,6 +131588,18 @@ func (r ApiIndexRedhatGetRequest) Botnet(botnet string) ApiIndexRedhatGetRequest
 // Specify a published date
 func (r ApiIndexRedhatGetRequest) Published(published string) ApiIndexRedhatGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRedhatGetRequest) Date(date string) ApiIndexRedhatGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRedhatGetRequest) Date2(date2 string) ApiIndexRedhatGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -123301,6 +131735,12 @@ func (a *IndicesAPIService) IndexRedhatGetExecute(r ApiIndexRedhatGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -123426,6 +131866,8 @@ type ApiIndexRenesasGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -123521,6 +131963,18 @@ func (r ApiIndexRenesasGetRequest) Botnet(botnet string) ApiIndexRenesasGetReque
 // Specify a published date
 func (r ApiIndexRenesasGetRequest) Published(published string) ApiIndexRenesasGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRenesasGetRequest) Date(date string) ApiIndexRenesasGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRenesasGetRequest) Date2(date2 string) ApiIndexRenesasGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -123656,6 +132110,12 @@ func (a *IndicesAPIService) IndexRenesasGetExecute(r ApiIndexRenesasGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -123781,6 +132241,8 @@ type ApiIndexReviveGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -123876,6 +132338,18 @@ func (r ApiIndexReviveGetRequest) Botnet(botnet string) ApiIndexReviveGetRequest
 // Specify a published date
 func (r ApiIndexReviveGetRequest) Published(published string) ApiIndexReviveGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexReviveGetRequest) Date(date string) ApiIndexReviveGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexReviveGetRequest) Date2(date2 string) ApiIndexReviveGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -124011,6 +132485,12 @@ func (a *IndicesAPIService) IndexReviveGetExecute(r ApiIndexReviveGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -124136,6 +132616,8 @@ type ApiIndexRocheGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -124231,6 +132713,18 @@ func (r ApiIndexRocheGetRequest) Botnet(botnet string) ApiIndexRocheGetRequest {
 // Specify a published date
 func (r ApiIndexRocheGetRequest) Published(published string) ApiIndexRocheGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRocheGetRequest) Date(date string) ApiIndexRocheGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRocheGetRequest) Date2(date2 string) ApiIndexRocheGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -124366,6 +132860,12 @@ func (a *IndicesAPIService) IndexRocheGetExecute(r ApiIndexRocheGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -124491,6 +132991,8 @@ type ApiIndexRockwellGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -124586,6 +133088,18 @@ func (r ApiIndexRockwellGetRequest) Botnet(botnet string) ApiIndexRockwellGetReq
 // Specify a published date
 func (r ApiIndexRockwellGetRequest) Published(published string) ApiIndexRockwellGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRockwellGetRequest) Date(date string) ApiIndexRockwellGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRockwellGetRequest) Date2(date2 string) ApiIndexRockwellGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -124721,6 +133235,12 @@ func (a *IndicesAPIService) IndexRockwellGetExecute(r ApiIndexRockwellGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -124846,6 +133366,8 @@ type ApiIndexRockyErrataGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -124941,6 +133463,18 @@ func (r ApiIndexRockyErrataGetRequest) Botnet(botnet string) ApiIndexRockyErrata
 // Specify a published date
 func (r ApiIndexRockyErrataGetRequest) Published(published string) ApiIndexRockyErrataGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRockyErrataGetRequest) Date(date string) ApiIndexRockyErrataGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRockyErrataGetRequest) Date2(date2 string) ApiIndexRockyErrataGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -125076,6 +133610,12 @@ func (a *IndicesAPIService) IndexRockyErrataGetExecute(r ApiIndexRockyErrataGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -125201,6 +133741,8 @@ type ApiIndexRockyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -125296,6 +133838,18 @@ func (r ApiIndexRockyGetRequest) Botnet(botnet string) ApiIndexRockyGetRequest {
 // Specify a published date
 func (r ApiIndexRockyGetRequest) Published(published string) ApiIndexRockyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRockyGetRequest) Date(date string) ApiIndexRockyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRockyGetRequest) Date2(date2 string) ApiIndexRockyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -125431,6 +133985,12 @@ func (a *IndicesAPIService) IndexRockyGetExecute(r ApiIndexRockyGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -125556,6 +134116,8 @@ type ApiIndexRockyPurlsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -125651,6 +134213,18 @@ func (r ApiIndexRockyPurlsGetRequest) Botnet(botnet string) ApiIndexRockyPurlsGe
 // Specify a published date
 func (r ApiIndexRockyPurlsGetRequest) Published(published string) ApiIndexRockyPurlsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRockyPurlsGetRequest) Date(date string) ApiIndexRockyPurlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRockyPurlsGetRequest) Date2(date2 string) ApiIndexRockyPurlsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -125786,6 +134360,12 @@ func (a *IndicesAPIService) IndexRockyPurlsGetExecute(r ApiIndexRockyPurlsGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -125911,6 +134491,8 @@ type ApiIndexRsyncGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -126006,6 +134588,18 @@ func (r ApiIndexRsyncGetRequest) Botnet(botnet string) ApiIndexRsyncGetRequest {
 // Specify a published date
 func (r ApiIndexRsyncGetRequest) Published(published string) ApiIndexRsyncGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRsyncGetRequest) Date(date string) ApiIndexRsyncGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRsyncGetRequest) Date2(date2 string) ApiIndexRsyncGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -126141,6 +134735,12 @@ func (a *IndicesAPIService) IndexRsyncGetExecute(r ApiIndexRsyncGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -126266,6 +134866,8 @@ type ApiIndexRuckusGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -126361,6 +134963,18 @@ func (r ApiIndexRuckusGetRequest) Botnet(botnet string) ApiIndexRuckusGetRequest
 // Specify a published date
 func (r ApiIndexRuckusGetRequest) Published(published string) ApiIndexRuckusGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRuckusGetRequest) Date(date string) ApiIndexRuckusGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRuckusGetRequest) Date2(date2 string) ApiIndexRuckusGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -126496,6 +135110,12 @@ func (a *IndicesAPIService) IndexRuckusGetExecute(r ApiIndexRuckusGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -126621,6 +135241,8 @@ type ApiIndexRustsecAdvisoriesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -126716,6 +135338,18 @@ func (r ApiIndexRustsecAdvisoriesGetRequest) Botnet(botnet string) ApiIndexRusts
 // Specify a published date
 func (r ApiIndexRustsecAdvisoriesGetRequest) Published(published string) ApiIndexRustsecAdvisoriesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRustsecAdvisoriesGetRequest) Date(date string) ApiIndexRustsecAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRustsecAdvisoriesGetRequest) Date2(date2 string) ApiIndexRustsecAdvisoriesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -126851,6 +135485,12 @@ func (a *IndicesAPIService) IndexRustsecAdvisoriesGetExecute(r ApiIndexRustsecAd
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -126976,6 +135616,8 @@ type ApiIndexSacertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -127071,6 +135713,18 @@ func (r ApiIndexSacertGetRequest) Botnet(botnet string) ApiIndexSacertGetRequest
 // Specify a published date
 func (r ApiIndexSacertGetRequest) Published(published string) ApiIndexSacertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSacertGetRequest) Date(date string) ApiIndexSacertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSacertGetRequest) Date2(date2 string) ApiIndexSacertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -127206,6 +135860,12 @@ func (a *IndicesAPIService) IndexSacertGetExecute(r ApiIndexSacertGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -127331,6 +135991,8 @@ type ApiIndexSafranGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -127426,6 +136088,18 @@ func (r ApiIndexSafranGetRequest) Botnet(botnet string) ApiIndexSafranGetRequest
 // Specify a published date
 func (r ApiIndexSafranGetRequest) Published(published string) ApiIndexSafranGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSafranGetRequest) Date(date string) ApiIndexSafranGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSafranGetRequest) Date2(date2 string) ApiIndexSafranGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -127561,6 +136235,12 @@ func (a *IndicesAPIService) IndexSafranGetExecute(r ApiIndexSafranGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -127686,6 +136366,8 @@ type ApiIndexSaintGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -127781,6 +136463,18 @@ func (r ApiIndexSaintGetRequest) Botnet(botnet string) ApiIndexSaintGetRequest {
 // Specify a published date
 func (r ApiIndexSaintGetRequest) Published(published string) ApiIndexSaintGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSaintGetRequest) Date(date string) ApiIndexSaintGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSaintGetRequest) Date2(date2 string) ApiIndexSaintGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -127916,6 +136610,12 @@ func (a *IndicesAPIService) IndexSaintGetExecute(r ApiIndexSaintGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -128041,6 +136741,8 @@ type ApiIndexSalesforceGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -128136,6 +136838,18 @@ func (r ApiIndexSalesforceGetRequest) Botnet(botnet string) ApiIndexSalesforceGe
 // Specify a published date
 func (r ApiIndexSalesforceGetRequest) Published(published string) ApiIndexSalesforceGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSalesforceGetRequest) Date(date string) ApiIndexSalesforceGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSalesforceGetRequest) Date2(date2 string) ApiIndexSalesforceGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -128271,6 +136985,12 @@ func (a *IndicesAPIService) IndexSalesforceGetExecute(r ApiIndexSalesforceGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -128396,6 +137116,8 @@ type ApiIndexSambaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -128491,6 +137213,18 @@ func (r ApiIndexSambaGetRequest) Botnet(botnet string) ApiIndexSambaGetRequest {
 // Specify a published date
 func (r ApiIndexSambaGetRequest) Published(published string) ApiIndexSambaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSambaGetRequest) Date(date string) ApiIndexSambaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSambaGetRequest) Date2(date2 string) ApiIndexSambaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -128626,6 +137360,12 @@ func (a *IndicesAPIService) IndexSambaGetExecute(r ApiIndexSambaGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -128751,6 +137491,8 @@ type ApiIndexSandiskGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -128846,6 +137588,18 @@ func (r ApiIndexSandiskGetRequest) Botnet(botnet string) ApiIndexSandiskGetReque
 // Specify a published date
 func (r ApiIndexSandiskGetRequest) Published(published string) ApiIndexSandiskGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSandiskGetRequest) Date(date string) ApiIndexSandiskGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSandiskGetRequest) Date2(date2 string) ApiIndexSandiskGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -128981,6 +137735,12 @@ func (a *IndicesAPIService) IndexSandiskGetExecute(r ApiIndexSandiskGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -129106,6 +137866,8 @@ type ApiIndexSapGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -129201,6 +137963,18 @@ func (r ApiIndexSapGetRequest) Botnet(botnet string) ApiIndexSapGetRequest {
 // Specify a published date
 func (r ApiIndexSapGetRequest) Published(published string) ApiIndexSapGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSapGetRequest) Date(date string) ApiIndexSapGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSapGetRequest) Date2(date2 string) ApiIndexSapGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -129336,6 +138110,12 @@ func (a *IndicesAPIService) IndexSapGetExecute(r ApiIndexSapGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -129461,6 +138241,8 @@ type ApiIndexSchneiderElectricGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -129556,6 +138338,18 @@ func (r ApiIndexSchneiderElectricGetRequest) Botnet(botnet string) ApiIndexSchne
 // Specify a published date
 func (r ApiIndexSchneiderElectricGetRequest) Published(published string) ApiIndexSchneiderElectricGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSchneiderElectricGetRequest) Date(date string) ApiIndexSchneiderElectricGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSchneiderElectricGetRequest) Date2(date2 string) ApiIndexSchneiderElectricGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -129691,6 +138485,12 @@ func (a *IndicesAPIService) IndexSchneiderElectricGetExecute(r ApiIndexSchneider
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -129816,6 +138616,8 @@ type ApiIndexSchutzwerkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -129911,6 +138713,18 @@ func (r ApiIndexSchutzwerkGetRequest) Botnet(botnet string) ApiIndexSchutzwerkGe
 // Specify a published date
 func (r ApiIndexSchutzwerkGetRequest) Published(published string) ApiIndexSchutzwerkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSchutzwerkGetRequest) Date(date string) ApiIndexSchutzwerkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSchutzwerkGetRequest) Date2(date2 string) ApiIndexSchutzwerkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -130046,6 +138860,12 @@ func (a *IndicesAPIService) IndexSchutzwerkGetExecute(r ApiIndexSchutzwerkGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -130171,6 +138991,8 @@ type ApiIndexSecConsultGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -130266,6 +139088,18 @@ func (r ApiIndexSecConsultGetRequest) Botnet(botnet string) ApiIndexSecConsultGe
 // Specify a published date
 func (r ApiIndexSecConsultGetRequest) Published(published string) ApiIndexSecConsultGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSecConsultGetRequest) Date(date string) ApiIndexSecConsultGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSecConsultGetRequest) Date2(date2 string) ApiIndexSecConsultGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -130401,6 +139235,12 @@ func (a *IndicesAPIService) IndexSecConsultGetExecute(r ApiIndexSecConsultGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -130526,6 +139366,8 @@ type ApiIndexSecuritylabGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -130621,6 +139463,18 @@ func (r ApiIndexSecuritylabGetRequest) Botnet(botnet string) ApiIndexSecuritylab
 // Specify a published date
 func (r ApiIndexSecuritylabGetRequest) Published(published string) ApiIndexSecuritylabGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSecuritylabGetRequest) Date(date string) ApiIndexSecuritylabGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSecuritylabGetRequest) Date2(date2 string) ApiIndexSecuritylabGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -130756,6 +139610,12 @@ func (a *IndicesAPIService) IndexSecuritylabGetExecute(r ApiIndexSecuritylabGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -130881,6 +139741,8 @@ type ApiIndexSeebugGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -130976,6 +139838,18 @@ func (r ApiIndexSeebugGetRequest) Botnet(botnet string) ApiIndexSeebugGetRequest
 // Specify a published date
 func (r ApiIndexSeebugGetRequest) Published(published string) ApiIndexSeebugGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSeebugGetRequest) Date(date string) ApiIndexSeebugGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSeebugGetRequest) Date2(date2 string) ApiIndexSeebugGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -131111,6 +139985,12 @@ func (a *IndicesAPIService) IndexSeebugGetExecute(r ApiIndexSeebugGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -131236,6 +140116,8 @@ type ApiIndexSelGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -131331,6 +140213,18 @@ func (r ApiIndexSelGetRequest) Botnet(botnet string) ApiIndexSelGetRequest {
 // Specify a published date
 func (r ApiIndexSelGetRequest) Published(published string) ApiIndexSelGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSelGetRequest) Date(date string) ApiIndexSelGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSelGetRequest) Date2(date2 string) ApiIndexSelGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -131466,6 +140360,12 @@ func (a *IndicesAPIService) IndexSelGetExecute(r ApiIndexSelGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -131591,6 +140491,8 @@ type ApiIndexSentineloneGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -131686,6 +140588,18 @@ func (r ApiIndexSentineloneGetRequest) Botnet(botnet string) ApiIndexSentinelone
 // Specify a published date
 func (r ApiIndexSentineloneGetRequest) Published(published string) ApiIndexSentineloneGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSentineloneGetRequest) Date(date string) ApiIndexSentineloneGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSentineloneGetRequest) Date2(date2 string) ApiIndexSentineloneGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -131821,6 +140735,12 @@ func (a *IndicesAPIService) IndexSentineloneGetExecute(r ApiIndexSentineloneGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -131946,6 +140866,8 @@ type ApiIndexServicenowGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -132041,6 +140963,18 @@ func (r ApiIndexServicenowGetRequest) Botnet(botnet string) ApiIndexServicenowGe
 // Specify a published date
 func (r ApiIndexServicenowGetRequest) Published(published string) ApiIndexServicenowGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexServicenowGetRequest) Date(date string) ApiIndexServicenowGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexServicenowGetRequest) Date2(date2 string) ApiIndexServicenowGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -132176,6 +141110,12 @@ func (a *IndicesAPIService) IndexServicenowGetExecute(r ApiIndexServicenowGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -132301,6 +141241,8 @@ type ApiIndexShadowserverExploitedGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -132396,6 +141338,18 @@ func (r ApiIndexShadowserverExploitedGetRequest) Botnet(botnet string) ApiIndexS
 // Specify a published date
 func (r ApiIndexShadowserverExploitedGetRequest) Published(published string) ApiIndexShadowserverExploitedGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexShadowserverExploitedGetRequest) Date(date string) ApiIndexShadowserverExploitedGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexShadowserverExploitedGetRequest) Date2(date2 string) ApiIndexShadowserverExploitedGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -132531,6 +141485,12 @@ func (a *IndicesAPIService) IndexShadowserverExploitedGetExecute(r ApiIndexShado
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -132656,6 +141616,8 @@ type ApiIndexShielderGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -132751,6 +141713,18 @@ func (r ApiIndexShielderGetRequest) Botnet(botnet string) ApiIndexShielderGetReq
 // Specify a published date
 func (r ApiIndexShielderGetRequest) Published(published string) ApiIndexShielderGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexShielderGetRequest) Date(date string) ApiIndexShielderGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexShielderGetRequest) Date2(date2 string) ApiIndexShielderGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -132886,6 +141860,12 @@ func (a *IndicesAPIService) IndexShielderGetExecute(r ApiIndexShielderGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -133011,6 +141991,8 @@ type ApiIndexSickGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -133106,6 +142088,18 @@ func (r ApiIndexSickGetRequest) Botnet(botnet string) ApiIndexSickGetRequest {
 // Specify a published date
 func (r ApiIndexSickGetRequest) Published(published string) ApiIndexSickGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSickGetRequest) Date(date string) ApiIndexSickGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSickGetRequest) Date2(date2 string) ApiIndexSickGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -133241,6 +142235,12 @@ func (a *IndicesAPIService) IndexSickGetExecute(r ApiIndexSickGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -133366,6 +142366,8 @@ type ApiIndexSiemensGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -133461,6 +142463,18 @@ func (r ApiIndexSiemensGetRequest) Botnet(botnet string) ApiIndexSiemensGetReque
 // Specify a published date
 func (r ApiIndexSiemensGetRequest) Published(published string) ApiIndexSiemensGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSiemensGetRequest) Date(date string) ApiIndexSiemensGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSiemensGetRequest) Date2(date2 string) ApiIndexSiemensGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -133596,6 +142610,12 @@ func (a *IndicesAPIService) IndexSiemensGetExecute(r ApiIndexSiemensGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -133721,6 +142741,8 @@ type ApiIndexSierraWirelessGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -133816,6 +142838,18 @@ func (r ApiIndexSierraWirelessGetRequest) Botnet(botnet string) ApiIndexSierraWi
 // Specify a published date
 func (r ApiIndexSierraWirelessGetRequest) Published(published string) ApiIndexSierraWirelessGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSierraWirelessGetRequest) Date(date string) ApiIndexSierraWirelessGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSierraWirelessGetRequest) Date2(date2 string) ApiIndexSierraWirelessGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -133951,6 +142985,12 @@ func (a *IndicesAPIService) IndexSierraWirelessGetExecute(r ApiIndexSierraWirele
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -134076,6 +143116,8 @@ type ApiIndexSigmahqSigmaRulesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -134171,6 +143213,18 @@ func (r ApiIndexSigmahqSigmaRulesGetRequest) Botnet(botnet string) ApiIndexSigma
 // Specify a published date
 func (r ApiIndexSigmahqSigmaRulesGetRequest) Published(published string) ApiIndexSigmahqSigmaRulesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSigmahqSigmaRulesGetRequest) Date(date string) ApiIndexSigmahqSigmaRulesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSigmahqSigmaRulesGetRequest) Date2(date2 string) ApiIndexSigmahqSigmaRulesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -134306,6 +143360,12 @@ func (a *IndicesAPIService) IndexSigmahqSigmaRulesGetExecute(r ApiIndexSigmahqSi
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -134431,6 +143491,8 @@ type ApiIndexSingcertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -134526,6 +143588,18 @@ func (r ApiIndexSingcertGetRequest) Botnet(botnet string) ApiIndexSingcertGetReq
 // Specify a published date
 func (r ApiIndexSingcertGetRequest) Published(published string) ApiIndexSingcertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSingcertGetRequest) Date(date string) ApiIndexSingcertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSingcertGetRequest) Date2(date2 string) ApiIndexSingcertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -134661,6 +143735,12 @@ func (a *IndicesAPIService) IndexSingcertGetExecute(r ApiIndexSingcertGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -134786,6 +143866,8 @@ type ApiIndexSitecoreGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -134881,6 +143963,18 @@ func (r ApiIndexSitecoreGetRequest) Botnet(botnet string) ApiIndexSitecoreGetReq
 // Specify a published date
 func (r ApiIndexSitecoreGetRequest) Published(published string) ApiIndexSitecoreGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSitecoreGetRequest) Date(date string) ApiIndexSitecoreGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSitecoreGetRequest) Date2(date2 string) ApiIndexSitecoreGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -135016,6 +144110,12 @@ func (a *IndicesAPIService) IndexSitecoreGetExecute(r ApiIndexSitecoreGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -135141,6 +144241,8 @@ type ApiIndexSlackwareGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -135236,6 +144338,18 @@ func (r ApiIndexSlackwareGetRequest) Botnet(botnet string) ApiIndexSlackwareGetR
 // Specify a published date
 func (r ApiIndexSlackwareGetRequest) Published(published string) ApiIndexSlackwareGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSlackwareGetRequest) Date(date string) ApiIndexSlackwareGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSlackwareGetRequest) Date2(date2 string) ApiIndexSlackwareGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -135371,6 +144485,12 @@ func (a *IndicesAPIService) IndexSlackwareGetExecute(r ApiIndexSlackwareGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -135496,6 +144616,8 @@ type ApiIndexSolarwindsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -135591,6 +144713,18 @@ func (r ApiIndexSolarwindsGetRequest) Botnet(botnet string) ApiIndexSolarwindsGe
 // Specify a published date
 func (r ApiIndexSolarwindsGetRequest) Published(published string) ApiIndexSolarwindsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSolarwindsGetRequest) Date(date string) ApiIndexSolarwindsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSolarwindsGetRequest) Date2(date2 string) ApiIndexSolarwindsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -135726,6 +144860,12 @@ func (a *IndicesAPIService) IndexSolarwindsGetExecute(r ApiIndexSolarwindsGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -135851,6 +144991,8 @@ type ApiIndexSolrGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -135946,6 +145088,18 @@ func (r ApiIndexSolrGetRequest) Botnet(botnet string) ApiIndexSolrGetRequest {
 // Specify a published date
 func (r ApiIndexSolrGetRequest) Published(published string) ApiIndexSolrGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSolrGetRequest) Date(date string) ApiIndexSolrGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSolrGetRequest) Date2(date2 string) ApiIndexSolrGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -136081,6 +145235,12 @@ func (a *IndicesAPIService) IndexSolrGetExecute(r ApiIndexSolrGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -136206,6 +145366,8 @@ type ApiIndexSonatypeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -136301,6 +145463,18 @@ func (r ApiIndexSonatypeGetRequest) Botnet(botnet string) ApiIndexSonatypeGetReq
 // Specify a published date
 func (r ApiIndexSonatypeGetRequest) Published(published string) ApiIndexSonatypeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSonatypeGetRequest) Date(date string) ApiIndexSonatypeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSonatypeGetRequest) Date2(date2 string) ApiIndexSonatypeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -136436,6 +145610,12 @@ func (a *IndicesAPIService) IndexSonatypeGetExecute(r ApiIndexSonatypeGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -136561,6 +145741,8 @@ type ApiIndexSonicwallGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -136656,6 +145838,18 @@ func (r ApiIndexSonicwallGetRequest) Botnet(botnet string) ApiIndexSonicwallGetR
 // Specify a published date
 func (r ApiIndexSonicwallGetRequest) Published(published string) ApiIndexSonicwallGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSonicwallGetRequest) Date(date string) ApiIndexSonicwallGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSonicwallGetRequest) Date2(date2 string) ApiIndexSonicwallGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -136791,6 +145985,12 @@ func (a *IndicesAPIService) IndexSonicwallGetExecute(r ApiIndexSonicwallGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -136916,6 +146116,8 @@ type ApiIndexSpacelabsHealthcareGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -137011,6 +146213,18 @@ func (r ApiIndexSpacelabsHealthcareGetRequest) Botnet(botnet string) ApiIndexSpa
 // Specify a published date
 func (r ApiIndexSpacelabsHealthcareGetRequest) Published(published string) ApiIndexSpacelabsHealthcareGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSpacelabsHealthcareGetRequest) Date(date string) ApiIndexSpacelabsHealthcareGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSpacelabsHealthcareGetRequest) Date2(date2 string) ApiIndexSpacelabsHealthcareGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -137146,6 +146360,12 @@ func (a *IndicesAPIService) IndexSpacelabsHealthcareGetExecute(r ApiIndexSpacela
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -137271,6 +146491,8 @@ type ApiIndexSplunkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -137366,6 +146588,18 @@ func (r ApiIndexSplunkGetRequest) Botnet(botnet string) ApiIndexSplunkGetRequest
 // Specify a published date
 func (r ApiIndexSplunkGetRequest) Published(published string) ApiIndexSplunkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSplunkGetRequest) Date(date string) ApiIndexSplunkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSplunkGetRequest) Date2(date2 string) ApiIndexSplunkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -137501,6 +146735,12 @@ func (a *IndicesAPIService) IndexSplunkGetExecute(r ApiIndexSplunkGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -137626,6 +146866,8 @@ type ApiIndexSpringGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -137721,6 +146963,18 @@ func (r ApiIndexSpringGetRequest) Botnet(botnet string) ApiIndexSpringGetRequest
 // Specify a published date
 func (r ApiIndexSpringGetRequest) Published(published string) ApiIndexSpringGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSpringGetRequest) Date(date string) ApiIndexSpringGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSpringGetRequest) Date2(date2 string) ApiIndexSpringGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -137856,6 +147110,12 @@ func (a *IndicesAPIService) IndexSpringGetExecute(r ApiIndexSpringGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -137981,6 +147241,8 @@ type ApiIndexSsdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -138076,6 +147338,18 @@ func (r ApiIndexSsdGetRequest) Botnet(botnet string) ApiIndexSsdGetRequest {
 // Specify a published date
 func (r ApiIndexSsdGetRequest) Published(published string) ApiIndexSsdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSsdGetRequest) Date(date string) ApiIndexSsdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSsdGetRequest) Date2(date2 string) ApiIndexSsdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -138211,6 +147485,12 @@ func (a *IndicesAPIService) IndexSsdGetExecute(r ApiIndexSsdGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -138336,6 +147616,8 @@ type ApiIndexStormshieldGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -138431,6 +147713,18 @@ func (r ApiIndexStormshieldGetRequest) Botnet(botnet string) ApiIndexStormshield
 // Specify a published date
 func (r ApiIndexStormshieldGetRequest) Published(published string) ApiIndexStormshieldGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexStormshieldGetRequest) Date(date string) ApiIndexStormshieldGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexStormshieldGetRequest) Date2(date2 string) ApiIndexStormshieldGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -138566,6 +147860,12 @@ func (a *IndicesAPIService) IndexStormshieldGetExecute(r ApiIndexStormshieldGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -138691,6 +147991,8 @@ type ApiIndexStrykerGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -138786,6 +148088,18 @@ func (r ApiIndexStrykerGetRequest) Botnet(botnet string) ApiIndexStrykerGetReque
 // Specify a published date
 func (r ApiIndexStrykerGetRequest) Published(published string) ApiIndexStrykerGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexStrykerGetRequest) Date(date string) ApiIndexStrykerGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexStrykerGetRequest) Date2(date2 string) ApiIndexStrykerGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -138921,6 +148235,12 @@ func (a *IndicesAPIService) IndexStrykerGetExecute(r ApiIndexStrykerGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -139046,6 +148366,8 @@ type ApiIndexSudoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -139141,6 +148463,18 @@ func (r ApiIndexSudoGetRequest) Botnet(botnet string) ApiIndexSudoGetRequest {
 // Specify a published date
 func (r ApiIndexSudoGetRequest) Published(published string) ApiIndexSudoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSudoGetRequest) Date(date string) ApiIndexSudoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSudoGetRequest) Date2(date2 string) ApiIndexSudoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -139276,6 +148610,12 @@ func (a *IndicesAPIService) IndexSudoGetExecute(r ApiIndexSudoGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -139401,6 +148741,8 @@ type ApiIndexSuseGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -139496,6 +148838,18 @@ func (r ApiIndexSuseGetRequest) Botnet(botnet string) ApiIndexSuseGetRequest {
 // Specify a published date
 func (r ApiIndexSuseGetRequest) Published(published string) ApiIndexSuseGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSuseGetRequest) Date(date string) ApiIndexSuseGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSuseGetRequest) Date2(date2 string) ApiIndexSuseGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -139631,6 +148985,12 @@ func (a *IndicesAPIService) IndexSuseGetExecute(r ApiIndexSuseGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -139756,6 +149116,8 @@ type ApiIndexSuseSecurityGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -139851,6 +149213,18 @@ func (r ApiIndexSuseSecurityGetRequest) Botnet(botnet string) ApiIndexSuseSecuri
 // Specify a published date
 func (r ApiIndexSuseSecurityGetRequest) Published(published string) ApiIndexSuseSecurityGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSuseSecurityGetRequest) Date(date string) ApiIndexSuseSecurityGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSuseSecurityGetRequest) Date2(date2 string) ApiIndexSuseSecurityGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -139986,6 +149360,12 @@ func (a *IndicesAPIService) IndexSuseSecurityGetExecute(r ApiIndexSuseSecurityGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -140111,6 +149491,8 @@ type ApiIndexSwiftGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -140206,6 +149588,18 @@ func (r ApiIndexSwiftGetRequest) Botnet(botnet string) ApiIndexSwiftGetRequest {
 // Specify a published date
 func (r ApiIndexSwiftGetRequest) Published(published string) ApiIndexSwiftGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSwiftGetRequest) Date(date string) ApiIndexSwiftGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSwiftGetRequest) Date2(date2 string) ApiIndexSwiftGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -140341,6 +149735,12 @@ func (a *IndicesAPIService) IndexSwiftGetExecute(r ApiIndexSwiftGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -140466,6 +149866,8 @@ type ApiIndexSwisslogHealthcareGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -140561,6 +149963,18 @@ func (r ApiIndexSwisslogHealthcareGetRequest) Botnet(botnet string) ApiIndexSwis
 // Specify a published date
 func (r ApiIndexSwisslogHealthcareGetRequest) Published(published string) ApiIndexSwisslogHealthcareGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSwisslogHealthcareGetRequest) Date(date string) ApiIndexSwisslogHealthcareGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSwisslogHealthcareGetRequest) Date2(date2 string) ApiIndexSwisslogHealthcareGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -140696,6 +150110,12 @@ func (a *IndicesAPIService) IndexSwisslogHealthcareGetExecute(r ApiIndexSwisslog
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -140821,6 +150241,8 @@ type ApiIndexSymfonyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -140916,6 +150338,18 @@ func (r ApiIndexSymfonyGetRequest) Botnet(botnet string) ApiIndexSymfonyGetReque
 // Specify a published date
 func (r ApiIndexSymfonyGetRequest) Published(published string) ApiIndexSymfonyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSymfonyGetRequest) Date(date string) ApiIndexSymfonyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSymfonyGetRequest) Date2(date2 string) ApiIndexSymfonyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -141051,6 +150485,12 @@ func (a *IndicesAPIService) IndexSymfonyGetExecute(r ApiIndexSymfonyGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -141176,6 +150616,8 @@ type ApiIndexSynacktivGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -141271,6 +150713,18 @@ func (r ApiIndexSynacktivGetRequest) Botnet(botnet string) ApiIndexSynacktivGetR
 // Specify a published date
 func (r ApiIndexSynacktivGetRequest) Published(published string) ApiIndexSynacktivGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSynacktivGetRequest) Date(date string) ApiIndexSynacktivGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSynacktivGetRequest) Date2(date2 string) ApiIndexSynacktivGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -141406,6 +150860,12 @@ func (a *IndicesAPIService) IndexSynacktivGetExecute(r ApiIndexSynacktivGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -141531,6 +150991,8 @@ type ApiIndexSyncrosoftGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -141626,6 +151088,18 @@ func (r ApiIndexSyncrosoftGetRequest) Botnet(botnet string) ApiIndexSyncrosoftGe
 // Specify a published date
 func (r ApiIndexSyncrosoftGetRequest) Published(published string) ApiIndexSyncrosoftGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSyncrosoftGetRequest) Date(date string) ApiIndexSyncrosoftGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSyncrosoftGetRequest) Date2(date2 string) ApiIndexSyncrosoftGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -141761,6 +151235,12 @@ func (a *IndicesAPIService) IndexSyncrosoftGetExecute(r ApiIndexSyncrosoftGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -141886,6 +151366,8 @@ type ApiIndexSynologyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -141981,6 +151463,18 @@ func (r ApiIndexSynologyGetRequest) Botnet(botnet string) ApiIndexSynologyGetReq
 // Specify a published date
 func (r ApiIndexSynologyGetRequest) Published(published string) ApiIndexSynologyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSynologyGetRequest) Date(date string) ApiIndexSynologyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSynologyGetRequest) Date2(date2 string) ApiIndexSynologyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -142116,6 +151610,12 @@ func (a *IndicesAPIService) IndexSynologyGetExecute(r ApiIndexSynologyGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -142241,6 +151741,8 @@ type ApiIndexSyssGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -142336,6 +151838,18 @@ func (r ApiIndexSyssGetRequest) Botnet(botnet string) ApiIndexSyssGetRequest {
 // Specify a published date
 func (r ApiIndexSyssGetRequest) Published(published string) ApiIndexSyssGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexSyssGetRequest) Date(date string) ApiIndexSyssGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexSyssGetRequest) Date2(date2 string) ApiIndexSyssGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -142471,6 +151985,12 @@ func (a *IndicesAPIService) IndexSyssGetExecute(r ApiIndexSyssGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -142596,6 +152116,8 @@ type ApiIndexTailscaleGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -142691,6 +152213,18 @@ func (r ApiIndexTailscaleGetRequest) Botnet(botnet string) ApiIndexTailscaleGetR
 // Specify a published date
 func (r ApiIndexTailscaleGetRequest) Published(published string) ApiIndexTailscaleGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTailscaleGetRequest) Date(date string) ApiIndexTailscaleGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTailscaleGetRequest) Date2(date2 string) ApiIndexTailscaleGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -142826,6 +152360,12 @@ func (a *IndicesAPIService) IndexTailscaleGetExecute(r ApiIndexTailscaleGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -142951,6 +152491,8 @@ type ApiIndexTeamviewerGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -143046,6 +152588,18 @@ func (r ApiIndexTeamviewerGetRequest) Botnet(botnet string) ApiIndexTeamviewerGe
 // Specify a published date
 func (r ApiIndexTeamviewerGetRequest) Published(published string) ApiIndexTeamviewerGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTeamviewerGetRequest) Date(date string) ApiIndexTeamviewerGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTeamviewerGetRequest) Date2(date2 string) ApiIndexTeamviewerGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -143181,6 +152735,12 @@ func (a *IndicesAPIService) IndexTeamviewerGetExecute(r ApiIndexTeamviewerGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -143306,6 +152866,8 @@ type ApiIndexTenableResearchAdvisoriesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -143401,6 +152963,18 @@ func (r ApiIndexTenableResearchAdvisoriesGetRequest) Botnet(botnet string) ApiIn
 // Specify a published date
 func (r ApiIndexTenableResearchAdvisoriesGetRequest) Published(published string) ApiIndexTenableResearchAdvisoriesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTenableResearchAdvisoriesGetRequest) Date(date string) ApiIndexTenableResearchAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTenableResearchAdvisoriesGetRequest) Date2(date2 string) ApiIndexTenableResearchAdvisoriesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -143536,6 +153110,12 @@ func (a *IndicesAPIService) IndexTenableResearchAdvisoriesGetExecute(r ApiIndexT
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -143661,6 +153241,8 @@ type ApiIndexTencentGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -143756,6 +153338,18 @@ func (r ApiIndexTencentGetRequest) Botnet(botnet string) ApiIndexTencentGetReque
 // Specify a published date
 func (r ApiIndexTencentGetRequest) Published(published string) ApiIndexTencentGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTencentGetRequest) Date(date string) ApiIndexTencentGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTencentGetRequest) Date2(date2 string) ApiIndexTencentGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -143891,6 +153485,12 @@ func (a *IndicesAPIService) IndexTencentGetExecute(r ApiIndexTencentGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -144016,6 +153616,8 @@ type ApiIndexThalesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -144111,6 +153713,18 @@ func (r ApiIndexThalesGetRequest) Botnet(botnet string) ApiIndexThalesGetRequest
 // Specify a published date
 func (r ApiIndexThalesGetRequest) Published(published string) ApiIndexThalesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexThalesGetRequest) Date(date string) ApiIndexThalesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexThalesGetRequest) Date2(date2 string) ApiIndexThalesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -144246,6 +153860,12 @@ func (a *IndicesAPIService) IndexThalesGetExecute(r ApiIndexThalesGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -144371,6 +153991,8 @@ type ApiIndexThemissinglinkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -144466,6 +154088,18 @@ func (r ApiIndexThemissinglinkGetRequest) Botnet(botnet string) ApiIndexThemissi
 // Specify a published date
 func (r ApiIndexThemissinglinkGetRequest) Published(published string) ApiIndexThemissinglinkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexThemissinglinkGetRequest) Date(date string) ApiIndexThemissinglinkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexThemissinglinkGetRequest) Date2(date2 string) ApiIndexThemissinglinkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -144601,6 +154235,12 @@ func (a *IndicesAPIService) IndexThemissinglinkGetExecute(r ApiIndexThemissingli
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -144726,6 +154366,8 @@ type ApiIndexThermoFisherGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -144821,6 +154463,18 @@ func (r ApiIndexThermoFisherGetRequest) Botnet(botnet string) ApiIndexThermoFish
 // Specify a published date
 func (r ApiIndexThermoFisherGetRequest) Published(published string) ApiIndexThermoFisherGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexThermoFisherGetRequest) Date(date string) ApiIndexThermoFisherGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexThermoFisherGetRequest) Date2(date2 string) ApiIndexThermoFisherGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -144956,6 +154610,12 @@ func (a *IndicesAPIService) IndexThermoFisherGetExecute(r ApiIndexThermoFisherGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -145081,6 +154741,8 @@ type ApiIndexThreatActorsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -145176,6 +154838,18 @@ func (r ApiIndexThreatActorsGetRequest) Botnet(botnet string) ApiIndexThreatActo
 // Specify a published date
 func (r ApiIndexThreatActorsGetRequest) Published(published string) ApiIndexThreatActorsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexThreatActorsGetRequest) Date(date string) ApiIndexThreatActorsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexThreatActorsGetRequest) Date2(date2 string) ApiIndexThreatActorsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -145311,6 +154985,12 @@ func (a *IndicesAPIService) IndexThreatActorsGetExecute(r ApiIndexThreatActorsGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -145436,6 +155116,8 @@ type ApiIndexTiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -145531,6 +155213,18 @@ func (r ApiIndexTiGetRequest) Botnet(botnet string) ApiIndexTiGetRequest {
 // Specify a published date
 func (r ApiIndexTiGetRequest) Published(published string) ApiIndexTiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTiGetRequest) Date(date string) ApiIndexTiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTiGetRequest) Date2(date2 string) ApiIndexTiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -145666,6 +155360,12 @@ func (a *IndicesAPIService) IndexTiGetExecute(r ApiIndexTiGetRequest) (*RenderRe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -145791,6 +155491,8 @@ type ApiIndexTibcoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -145886,6 +155588,18 @@ func (r ApiIndexTibcoGetRequest) Botnet(botnet string) ApiIndexTibcoGetRequest {
 // Specify a published date
 func (r ApiIndexTibcoGetRequest) Published(published string) ApiIndexTibcoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTibcoGetRequest) Date(date string) ApiIndexTibcoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTibcoGetRequest) Date2(date2 string) ApiIndexTibcoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -146021,6 +155735,12 @@ func (a *IndicesAPIService) IndexTibcoGetExecute(r ApiIndexTibcoGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -146146,6 +155866,8 @@ type ApiIndexTpLinkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -146241,6 +155963,18 @@ func (r ApiIndexTpLinkGetRequest) Botnet(botnet string) ApiIndexTpLinkGetRequest
 // Specify a published date
 func (r ApiIndexTpLinkGetRequest) Published(published string) ApiIndexTpLinkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTpLinkGetRequest) Date(date string) ApiIndexTpLinkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTpLinkGetRequest) Date2(date2 string) ApiIndexTpLinkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -146376,6 +156110,12 @@ func (a *IndicesAPIService) IndexTpLinkGetExecute(r ApiIndexTpLinkGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -146501,6 +156241,8 @@ type ApiIndexTraneTechnologyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -146596,6 +156338,18 @@ func (r ApiIndexTraneTechnologyGetRequest) Botnet(botnet string) ApiIndexTraneTe
 // Specify a published date
 func (r ApiIndexTraneTechnologyGetRequest) Published(published string) ApiIndexTraneTechnologyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTraneTechnologyGetRequest) Date(date string) ApiIndexTraneTechnologyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTraneTechnologyGetRequest) Date2(date2 string) ApiIndexTraneTechnologyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -146731,6 +156485,12 @@ func (a *IndicesAPIService) IndexTraneTechnologyGetExecute(r ApiIndexTraneTechno
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -146856,6 +156616,8 @@ type ApiIndexTrendmicroGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -146951,6 +156713,18 @@ func (r ApiIndexTrendmicroGetRequest) Botnet(botnet string) ApiIndexTrendmicroGe
 // Specify a published date
 func (r ApiIndexTrendmicroGetRequest) Published(published string) ApiIndexTrendmicroGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTrendmicroGetRequest) Date(date string) ApiIndexTrendmicroGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTrendmicroGetRequest) Date2(date2 string) ApiIndexTrendmicroGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -147086,6 +156860,12 @@ func (a *IndicesAPIService) IndexTrendmicroGetExecute(r ApiIndexTrendmicroGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -147211,6 +156991,8 @@ type ApiIndexTrustwaveGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -147306,6 +157088,18 @@ func (r ApiIndexTrustwaveGetRequest) Botnet(botnet string) ApiIndexTrustwaveGetR
 // Specify a published date
 func (r ApiIndexTrustwaveGetRequest) Published(published string) ApiIndexTrustwaveGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTrustwaveGetRequest) Date(date string) ApiIndexTrustwaveGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTrustwaveGetRequest) Date2(date2 string) ApiIndexTrustwaveGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -147441,6 +157235,12 @@ func (a *IndicesAPIService) IndexTrustwaveGetExecute(r ApiIndexTrustwaveGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -147566,6 +157366,8 @@ type ApiIndexTwcertGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -147661,6 +157463,18 @@ func (r ApiIndexTwcertGetRequest) Botnet(botnet string) ApiIndexTwcertGetRequest
 // Specify a published date
 func (r ApiIndexTwcertGetRequest) Published(published string) ApiIndexTwcertGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexTwcertGetRequest) Date(date string) ApiIndexTwcertGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexTwcertGetRequest) Date2(date2 string) ApiIndexTwcertGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -147796,6 +157610,12 @@ func (a *IndicesAPIService) IndexTwcertGetExecute(r ApiIndexTwcertGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -147921,6 +157741,8 @@ type ApiIndexUbiquitiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -148016,6 +157838,18 @@ func (r ApiIndexUbiquitiGetRequest) Botnet(botnet string) ApiIndexUbiquitiGetReq
 // Specify a published date
 func (r ApiIndexUbiquitiGetRequest) Published(published string) ApiIndexUbiquitiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexUbiquitiGetRequest) Date(date string) ApiIndexUbiquitiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexUbiquitiGetRequest) Date2(date2 string) ApiIndexUbiquitiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -148151,6 +157985,12 @@ func (a *IndicesAPIService) IndexUbiquitiGetExecute(r ApiIndexUbiquitiGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -148276,6 +158116,8 @@ type ApiIndexUbuntuGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -148371,6 +158213,18 @@ func (r ApiIndexUbuntuGetRequest) Botnet(botnet string) ApiIndexUbuntuGetRequest
 // Specify a published date
 func (r ApiIndexUbuntuGetRequest) Published(published string) ApiIndexUbuntuGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexUbuntuGetRequest) Date(date string) ApiIndexUbuntuGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexUbuntuGetRequest) Date2(date2 string) ApiIndexUbuntuGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -148506,6 +158360,12 @@ func (a *IndicesAPIService) IndexUbuntuGetExecute(r ApiIndexUbuntuGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -148631,6 +158491,8 @@ type ApiIndexUnifyGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -148726,6 +158588,18 @@ func (r ApiIndexUnifyGetRequest) Botnet(botnet string) ApiIndexUnifyGetRequest {
 // Specify a published date
 func (r ApiIndexUnifyGetRequest) Published(published string) ApiIndexUnifyGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexUnifyGetRequest) Date(date string) ApiIndexUnifyGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexUnifyGetRequest) Date2(date2 string) ApiIndexUnifyGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -148861,6 +158735,12 @@ func (a *IndicesAPIService) IndexUnifyGetExecute(r ApiIndexUnifyGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -148986,6 +158866,8 @@ type ApiIndexUnisocGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -149081,6 +158963,18 @@ func (r ApiIndexUnisocGetRequest) Botnet(botnet string) ApiIndexUnisocGetRequest
 // Specify a published date
 func (r ApiIndexUnisocGetRequest) Published(published string) ApiIndexUnisocGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexUnisocGetRequest) Date(date string) ApiIndexUnisocGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexUnisocGetRequest) Date2(date2 string) ApiIndexUnisocGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -149216,6 +159110,12 @@ func (a *IndicesAPIService) IndexUnisocGetExecute(r ApiIndexUnisocGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -149341,6 +159241,8 @@ type ApiIndexUsdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -149436,6 +159338,18 @@ func (r ApiIndexUsdGetRequest) Botnet(botnet string) ApiIndexUsdGetRequest {
 // Specify a published date
 func (r ApiIndexUsdGetRequest) Published(published string) ApiIndexUsdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexUsdGetRequest) Date(date string) ApiIndexUsdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexUsdGetRequest) Date2(date2 string) ApiIndexUsdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -149571,6 +159485,12 @@ func (a *IndicesAPIService) IndexUsdGetExecute(r ApiIndexUsdGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -149696,6 +159616,8 @@ type ApiIndexUsomGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -149791,6 +159713,18 @@ func (r ApiIndexUsomGetRequest) Botnet(botnet string) ApiIndexUsomGetRequest {
 // Specify a published date
 func (r ApiIndexUsomGetRequest) Published(published string) ApiIndexUsomGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexUsomGetRequest) Date(date string) ApiIndexUsomGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexUsomGetRequest) Date2(date2 string) ApiIndexUsomGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -149926,6 +159860,12 @@ func (a *IndicesAPIService) IndexUsomGetExecute(r ApiIndexUsomGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -150051,6 +159991,8 @@ type ApiIndexVandykeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -150146,6 +160088,18 @@ func (r ApiIndexVandykeGetRequest) Botnet(botnet string) ApiIndexVandykeGetReque
 // Specify a published date
 func (r ApiIndexVandykeGetRequest) Published(published string) ApiIndexVandykeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVandykeGetRequest) Date(date string) ApiIndexVandykeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVandykeGetRequest) Date2(date2 string) ApiIndexVandykeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -150281,6 +160235,12 @@ func (a *IndicesAPIService) IndexVandykeGetExecute(r ApiIndexVandykeGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -150406,6 +160366,8 @@ type ApiIndexVapidlabsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -150501,6 +160463,18 @@ func (r ApiIndexVapidlabsGetRequest) Botnet(botnet string) ApiIndexVapidlabsGetR
 // Specify a published date
 func (r ApiIndexVapidlabsGetRequest) Published(published string) ApiIndexVapidlabsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVapidlabsGetRequest) Date(date string) ApiIndexVapidlabsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVapidlabsGetRequest) Date2(date2 string) ApiIndexVapidlabsGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -150636,6 +160610,12 @@ func (a *IndicesAPIService) IndexVapidlabsGetExecute(r ApiIndexVapidlabsGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -150761,6 +160741,8 @@ type ApiIndexVcCpeDictionaryGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -150856,6 +160838,18 @@ func (r ApiIndexVcCpeDictionaryGetRequest) Botnet(botnet string) ApiIndexVcCpeDi
 // Specify a published date
 func (r ApiIndexVcCpeDictionaryGetRequest) Published(published string) ApiIndexVcCpeDictionaryGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVcCpeDictionaryGetRequest) Date(date string) ApiIndexVcCpeDictionaryGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVcCpeDictionaryGetRequest) Date2(date2 string) ApiIndexVcCpeDictionaryGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -150991,6 +160985,12 @@ func (a *IndicesAPIService) IndexVcCpeDictionaryGetExecute(r ApiIndexVcCpeDictio
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -151116,6 +161116,8 @@ type ApiIndexVdeGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -151211,6 +161213,18 @@ func (r ApiIndexVdeGetRequest) Botnet(botnet string) ApiIndexVdeGetRequest {
 // Specify a published date
 func (r ApiIndexVdeGetRequest) Published(published string) ApiIndexVdeGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVdeGetRequest) Date(date string) ApiIndexVdeGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVdeGetRequest) Date2(date2 string) ApiIndexVdeGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -151346,6 +161360,12 @@ func (a *IndicesAPIService) IndexVdeGetExecute(r ApiIndexVdeGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -151471,6 +161491,8 @@ type ApiIndexVeeamGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -151566,6 +161588,18 @@ func (r ApiIndexVeeamGetRequest) Botnet(botnet string) ApiIndexVeeamGetRequest {
 // Specify a published date
 func (r ApiIndexVeeamGetRequest) Published(published string) ApiIndexVeeamGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVeeamGetRequest) Date(date string) ApiIndexVeeamGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVeeamGetRequest) Date2(date2 string) ApiIndexVeeamGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -151701,6 +161735,12 @@ func (a *IndicesAPIService) IndexVeeamGetExecute(r ApiIndexVeeamGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -151826,6 +161866,8 @@ type ApiIndexVeritasGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -151921,6 +161963,18 @@ func (r ApiIndexVeritasGetRequest) Botnet(botnet string) ApiIndexVeritasGetReque
 // Specify a published date
 func (r ApiIndexVeritasGetRequest) Published(published string) ApiIndexVeritasGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVeritasGetRequest) Date(date string) ApiIndexVeritasGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVeritasGetRequest) Date2(date2 string) ApiIndexVeritasGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -152056,6 +162110,12 @@ func (a *IndicesAPIService) IndexVeritasGetExecute(r ApiIndexVeritasGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -152181,6 +162241,8 @@ type ApiIndexVirtuozzoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -152276,6 +162338,18 @@ func (r ApiIndexVirtuozzoGetRequest) Botnet(botnet string) ApiIndexVirtuozzoGetR
 // Specify a published date
 func (r ApiIndexVirtuozzoGetRequest) Published(published string) ApiIndexVirtuozzoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVirtuozzoGetRequest) Date(date string) ApiIndexVirtuozzoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVirtuozzoGetRequest) Date2(date2 string) ApiIndexVirtuozzoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -152411,6 +162485,12 @@ func (a *IndicesAPIService) IndexVirtuozzoGetExecute(r ApiIndexVirtuozzoGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -152536,6 +162616,8 @@ type ApiIndexVlcGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -152631,6 +162713,18 @@ func (r ApiIndexVlcGetRequest) Botnet(botnet string) ApiIndexVlcGetRequest {
 // Specify a published date
 func (r ApiIndexVlcGetRequest) Published(published string) ApiIndexVlcGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVlcGetRequest) Date(date string) ApiIndexVlcGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVlcGetRequest) Date2(date2 string) ApiIndexVlcGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -152766,6 +162860,12 @@ func (a *IndicesAPIService) IndexVlcGetExecute(r ApiIndexVlcGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -152891,6 +162991,8 @@ type ApiIndexVmwareGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -152986,6 +163088,18 @@ func (r ApiIndexVmwareGetRequest) Botnet(botnet string) ApiIndexVmwareGetRequest
 // Specify a published date
 func (r ApiIndexVmwareGetRequest) Published(published string) ApiIndexVmwareGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVmwareGetRequest) Date(date string) ApiIndexVmwareGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVmwareGetRequest) Date2(date2 string) ApiIndexVmwareGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -153121,6 +163235,12 @@ func (a *IndicesAPIService) IndexVmwareGetExecute(r ApiIndexVmwareGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -153246,6 +163366,8 @@ type ApiIndexVoidsecGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -153341,6 +163463,18 @@ func (r ApiIndexVoidsecGetRequest) Botnet(botnet string) ApiIndexVoidsecGetReque
 // Specify a published date
 func (r ApiIndexVoidsecGetRequest) Published(published string) ApiIndexVoidsecGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVoidsecGetRequest) Date(date string) ApiIndexVoidsecGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVoidsecGetRequest) Date2(date2 string) ApiIndexVoidsecGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -153476,6 +163610,12 @@ func (a *IndicesAPIService) IndexVoidsecGetExecute(r ApiIndexVoidsecGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -153601,6 +163741,8 @@ type ApiIndexVulncheckConfigGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -153696,6 +163838,18 @@ func (r ApiIndexVulncheckConfigGetRequest) Botnet(botnet string) ApiIndexVulnche
 // Specify a published date
 func (r ApiIndexVulncheckConfigGetRequest) Published(published string) ApiIndexVulncheckConfigGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckConfigGetRequest) Date(date string) ApiIndexVulncheckConfigGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckConfigGetRequest) Date2(date2 string) ApiIndexVulncheckConfigGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -153831,6 +163985,12 @@ func (a *IndicesAPIService) IndexVulncheckConfigGetExecute(r ApiIndexVulncheckCo
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -153956,6 +164116,8 @@ type ApiIndexVulncheckCvelistV5GetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -154051,6 +164213,18 @@ func (r ApiIndexVulncheckCvelistV5GetRequest) Botnet(botnet string) ApiIndexVuln
 // Specify a published date
 func (r ApiIndexVulncheckCvelistV5GetRequest) Published(published string) ApiIndexVulncheckCvelistV5GetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckCvelistV5GetRequest) Date(date string) ApiIndexVulncheckCvelistV5GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckCvelistV5GetRequest) Date2(date2 string) ApiIndexVulncheckCvelistV5GetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -154186,6 +164360,12 @@ func (a *IndicesAPIService) IndexVulncheckCvelistV5GetExecute(r ApiIndexVulnchec
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -154311,6 +164491,8 @@ type ApiIndexVulncheckGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -154406,6 +164588,18 @@ func (r ApiIndexVulncheckGetRequest) Botnet(botnet string) ApiIndexVulncheckGetR
 // Specify a published date
 func (r ApiIndexVulncheckGetRequest) Published(published string) ApiIndexVulncheckGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckGetRequest) Date(date string) ApiIndexVulncheckGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckGetRequest) Date2(date2 string) ApiIndexVulncheckGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -154541,6 +164735,12 @@ func (a *IndicesAPIService) IndexVulncheckGetExecute(r ApiIndexVulncheckGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -154666,6 +164866,8 @@ type ApiIndexVulncheckKevGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -154761,6 +164963,18 @@ func (r ApiIndexVulncheckKevGetRequest) Botnet(botnet string) ApiIndexVulncheckK
 // Specify a published date
 func (r ApiIndexVulncheckKevGetRequest) Published(published string) ApiIndexVulncheckKevGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckKevGetRequest) Date(date string) ApiIndexVulncheckKevGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckKevGetRequest) Date2(date2 string) ApiIndexVulncheckKevGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -154896,6 +165110,12 @@ func (a *IndicesAPIService) IndexVulncheckKevGetExecute(r ApiIndexVulncheckKevGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -155021,6 +165241,8 @@ type ApiIndexVulncheckNvd2GetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -155116,6 +165338,18 @@ func (r ApiIndexVulncheckNvd2GetRequest) Botnet(botnet string) ApiIndexVulncheck
 // Specify a published date
 func (r ApiIndexVulncheckNvd2GetRequest) Published(published string) ApiIndexVulncheckNvd2GetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckNvd2GetRequest) Date(date string) ApiIndexVulncheckNvd2GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckNvd2GetRequest) Date2(date2 string) ApiIndexVulncheckNvd2GetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -155251,6 +165485,12 @@ func (a *IndicesAPIService) IndexVulncheckNvd2GetExecute(r ApiIndexVulncheckNvd2
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -155376,6 +165616,8 @@ type ApiIndexVulncheckNvdGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -155471,6 +165713,18 @@ func (r ApiIndexVulncheckNvdGetRequest) Botnet(botnet string) ApiIndexVulncheckN
 // Specify a published date
 func (r ApiIndexVulncheckNvdGetRequest) Published(published string) ApiIndexVulncheckNvdGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckNvdGetRequest) Date(date string) ApiIndexVulncheckNvdGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckNvdGetRequest) Date2(date2 string) ApiIndexVulncheckNvdGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -155606,6 +165860,12 @@ func (a *IndicesAPIService) IndexVulncheckNvdGetExecute(r ApiIndexVulncheckNvdGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -155731,6 +165991,8 @@ type ApiIndexVulnerabilityAliasesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -155826,6 +166088,18 @@ func (r ApiIndexVulnerabilityAliasesGetRequest) Botnet(botnet string) ApiIndexVu
 // Specify a published date
 func (r ApiIndexVulnerabilityAliasesGetRequest) Published(published string) ApiIndexVulnerabilityAliasesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulnerabilityAliasesGetRequest) Date(date string) ApiIndexVulnerabilityAliasesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulnerabilityAliasesGetRequest) Date2(date2 string) ApiIndexVulnerabilityAliasesGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -155961,6 +166235,12 @@ func (a *IndicesAPIService) IndexVulnerabilityAliasesGetExecute(r ApiIndexVulner
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -156086,6 +166366,8 @@ type ApiIndexVulnrichmentGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -156181,6 +166463,18 @@ func (r ApiIndexVulnrichmentGetRequest) Botnet(botnet string) ApiIndexVulnrichme
 // Specify a published date
 func (r ApiIndexVulnrichmentGetRequest) Published(published string) ApiIndexVulnrichmentGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulnrichmentGetRequest) Date(date string) ApiIndexVulnrichmentGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulnrichmentGetRequest) Date2(date2 string) ApiIndexVulnrichmentGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -156316,6 +166610,12 @@ func (a *IndicesAPIService) IndexVulnrichmentGetExecute(r ApiIndexVulnrichmentGe
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -156441,6 +166741,8 @@ type ApiIndexVyaireGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -156536,6 +166838,18 @@ func (r ApiIndexVyaireGetRequest) Botnet(botnet string) ApiIndexVyaireGetRequest
 // Specify a published date
 func (r ApiIndexVyaireGetRequest) Published(published string) ApiIndexVyaireGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVyaireGetRequest) Date(date string) ApiIndexVyaireGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVyaireGetRequest) Date2(date2 string) ApiIndexVyaireGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -156671,6 +166985,12 @@ func (a *IndicesAPIService) IndexVyaireGetExecute(r ApiIndexVyaireGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -156796,6 +167116,8 @@ type ApiIndexWatchguardGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -156891,6 +167213,18 @@ func (r ApiIndexWatchguardGetRequest) Botnet(botnet string) ApiIndexWatchguardGe
 // Specify a published date
 func (r ApiIndexWatchguardGetRequest) Published(published string) ApiIndexWatchguardGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWatchguardGetRequest) Date(date string) ApiIndexWatchguardGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWatchguardGetRequest) Date2(date2 string) ApiIndexWatchguardGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -157026,6 +167360,12 @@ func (a *IndicesAPIService) IndexWatchguardGetExecute(r ApiIndexWatchguardGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -157151,6 +167491,8 @@ type ApiIndexWhatsappGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -157246,6 +167588,18 @@ func (r ApiIndexWhatsappGetRequest) Botnet(botnet string) ApiIndexWhatsappGetReq
 // Specify a published date
 func (r ApiIndexWhatsappGetRequest) Published(published string) ApiIndexWhatsappGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWhatsappGetRequest) Date(date string) ApiIndexWhatsappGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWhatsappGetRequest) Date2(date2 string) ApiIndexWhatsappGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -157381,6 +167735,12 @@ func (a *IndicesAPIService) IndexWhatsappGetExecute(r ApiIndexWhatsappGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -157506,6 +167866,8 @@ type ApiIndexWibuGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -157601,6 +167963,18 @@ func (r ApiIndexWibuGetRequest) Botnet(botnet string) ApiIndexWibuGetRequest {
 // Specify a published date
 func (r ApiIndexWibuGetRequest) Published(published string) ApiIndexWibuGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWibuGetRequest) Date(date string) ApiIndexWibuGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWibuGetRequest) Date2(date2 string) ApiIndexWibuGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -157736,6 +168110,12 @@ func (a *IndicesAPIService) IndexWibuGetExecute(r ApiIndexWibuGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -157861,6 +168241,8 @@ type ApiIndexWiresharkGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -157956,6 +168338,18 @@ func (r ApiIndexWiresharkGetRequest) Botnet(botnet string) ApiIndexWiresharkGetR
 // Specify a published date
 func (r ApiIndexWiresharkGetRequest) Published(published string) ApiIndexWiresharkGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWiresharkGetRequest) Date(date string) ApiIndexWiresharkGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWiresharkGetRequest) Date2(date2 string) ApiIndexWiresharkGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -158091,6 +168485,12 @@ func (a *IndicesAPIService) IndexWiresharkGetExecute(r ApiIndexWiresharkGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -158216,6 +168616,8 @@ type ApiIndexWithSecureGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -158311,6 +168713,18 @@ func (r ApiIndexWithSecureGetRequest) Botnet(botnet string) ApiIndexWithSecureGe
 // Specify a published date
 func (r ApiIndexWithSecureGetRequest) Published(published string) ApiIndexWithSecureGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWithSecureGetRequest) Date(date string) ApiIndexWithSecureGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWithSecureGetRequest) Date2(date2 string) ApiIndexWithSecureGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -158446,6 +168860,12 @@ func (a *IndicesAPIService) IndexWithSecureGetExecute(r ApiIndexWithSecureGetReq
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -158571,6 +168991,8 @@ type ApiIndexWolfiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -158666,6 +169088,18 @@ func (r ApiIndexWolfiGetRequest) Botnet(botnet string) ApiIndexWolfiGetRequest {
 // Specify a published date
 func (r ApiIndexWolfiGetRequest) Published(published string) ApiIndexWolfiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWolfiGetRequest) Date(date string) ApiIndexWolfiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWolfiGetRequest) Date2(date2 string) ApiIndexWolfiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -158801,6 +169235,12 @@ func (a *IndicesAPIService) IndexWolfiGetExecute(r ApiIndexWolfiGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -158926,6 +169366,8 @@ type ApiIndexWolfsslGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -159021,6 +169463,18 @@ func (r ApiIndexWolfsslGetRequest) Botnet(botnet string) ApiIndexWolfsslGetReque
 // Specify a published date
 func (r ApiIndexWolfsslGetRequest) Published(published string) ApiIndexWolfsslGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWolfsslGetRequest) Date(date string) ApiIndexWolfsslGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWolfsslGetRequest) Date2(date2 string) ApiIndexWolfsslGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -159156,6 +169610,12 @@ func (a *IndicesAPIService) IndexWolfsslGetExecute(r ApiIndexWolfsslGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -159281,6 +169741,8 @@ type ApiIndexWordfenceGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -159376,6 +169838,18 @@ func (r ApiIndexWordfenceGetRequest) Botnet(botnet string) ApiIndexWordfenceGetR
 // Specify a published date
 func (r ApiIndexWordfenceGetRequest) Published(published string) ApiIndexWordfenceGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexWordfenceGetRequest) Date(date string) ApiIndexWordfenceGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexWordfenceGetRequest) Date2(date2 string) ApiIndexWordfenceGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -159511,6 +169985,12 @@ func (a *IndicesAPIService) IndexWordfenceGetExecute(r ApiIndexWordfenceGetReque
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -159636,6 +170116,8 @@ type ApiIndexXenGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -159731,6 +170213,18 @@ func (r ApiIndexXenGetRequest) Botnet(botnet string) ApiIndexXenGetRequest {
 // Specify a published date
 func (r ApiIndexXenGetRequest) Published(published string) ApiIndexXenGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexXenGetRequest) Date(date string) ApiIndexXenGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexXenGetRequest) Date2(date2 string) ApiIndexXenGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -159866,6 +170360,12 @@ func (a *IndicesAPIService) IndexXenGetExecute(r ApiIndexXenGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -159991,6 +170491,8 @@ type ApiIndexXeroxGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -160086,6 +170588,18 @@ func (r ApiIndexXeroxGetRequest) Botnet(botnet string) ApiIndexXeroxGetRequest {
 // Specify a published date
 func (r ApiIndexXeroxGetRequest) Published(published string) ApiIndexXeroxGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexXeroxGetRequest) Date(date string) ApiIndexXeroxGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexXeroxGetRequest) Date2(date2 string) ApiIndexXeroxGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -160221,6 +170735,12 @@ func (a *IndicesAPIService) IndexXeroxGetExecute(r ApiIndexXeroxGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -160346,6 +170866,8 @@ type ApiIndexXiaomiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -160441,6 +170963,18 @@ func (r ApiIndexXiaomiGetRequest) Botnet(botnet string) ApiIndexXiaomiGetRequest
 // Specify a published date
 func (r ApiIndexXiaomiGetRequest) Published(published string) ApiIndexXiaomiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexXiaomiGetRequest) Date(date string) ApiIndexXiaomiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexXiaomiGetRequest) Date2(date2 string) ApiIndexXiaomiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -160576,6 +171110,12 @@ func (a *IndicesAPIService) IndexXiaomiGetExecute(r ApiIndexXiaomiGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -160701,6 +171241,8 @@ type ApiIndexXylemGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -160796,6 +171338,18 @@ func (r ApiIndexXylemGetRequest) Botnet(botnet string) ApiIndexXylemGetRequest {
 // Specify a published date
 func (r ApiIndexXylemGetRequest) Published(published string) ApiIndexXylemGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexXylemGetRequest) Date(date string) ApiIndexXylemGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexXylemGetRequest) Date2(date2 string) ApiIndexXylemGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -160931,6 +171485,12 @@ func (a *IndicesAPIService) IndexXylemGetExecute(r ApiIndexXylemGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -161056,6 +171616,8 @@ type ApiIndexYamahaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -161151,6 +171713,18 @@ func (r ApiIndexYamahaGetRequest) Botnet(botnet string) ApiIndexYamahaGetRequest
 // Specify a published date
 func (r ApiIndexYamahaGetRequest) Published(published string) ApiIndexYamahaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexYamahaGetRequest) Date(date string) ApiIndexYamahaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexYamahaGetRequest) Date2(date2 string) ApiIndexYamahaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -161286,6 +171860,12 @@ func (a *IndicesAPIService) IndexYamahaGetExecute(r ApiIndexYamahaGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -161411,6 +171991,8 @@ type ApiIndexYokogawaGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -161506,6 +172088,18 @@ func (r ApiIndexYokogawaGetRequest) Botnet(botnet string) ApiIndexYokogawaGetReq
 // Specify a published date
 func (r ApiIndexYokogawaGetRequest) Published(published string) ApiIndexYokogawaGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexYokogawaGetRequest) Date(date string) ApiIndexYokogawaGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexYokogawaGetRequest) Date2(date2 string) ApiIndexYokogawaGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -161641,6 +172235,12 @@ func (a *IndicesAPIService) IndexYokogawaGetExecute(r ApiIndexYokogawaGetRequest
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -161766,6 +172366,8 @@ type ApiIndexYubicoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -161861,6 +172463,18 @@ func (r ApiIndexYubicoGetRequest) Botnet(botnet string) ApiIndexYubicoGetRequest
 // Specify a published date
 func (r ApiIndexYubicoGetRequest) Published(published string) ApiIndexYubicoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexYubicoGetRequest) Date(date string) ApiIndexYubicoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexYubicoGetRequest) Date2(date2 string) ApiIndexYubicoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -161996,6 +172610,12 @@ func (a *IndicesAPIService) IndexYubicoGetExecute(r ApiIndexYubicoGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -162121,6 +172741,8 @@ type ApiIndexZdiGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -162216,6 +172838,18 @@ func (r ApiIndexZdiGetRequest) Botnet(botnet string) ApiIndexZdiGetRequest {
 // Specify a published date
 func (r ApiIndexZdiGetRequest) Published(published string) ApiIndexZdiGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZdiGetRequest) Date(date string) ApiIndexZdiGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZdiGetRequest) Date2(date2 string) ApiIndexZdiGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -162351,6 +172985,12 @@ func (a *IndicesAPIService) IndexZdiGetExecute(r ApiIndexZdiGetRequest) (*Render
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -162476,6 +173116,8 @@ type ApiIndexZebraGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -162571,6 +173213,18 @@ func (r ApiIndexZebraGetRequest) Botnet(botnet string) ApiIndexZebraGetRequest {
 // Specify a published date
 func (r ApiIndexZebraGetRequest) Published(published string) ApiIndexZebraGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZebraGetRequest) Date(date string) ApiIndexZebraGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZebraGetRequest) Date2(date2 string) ApiIndexZebraGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -162706,6 +173360,12 @@ func (a *IndicesAPIService) IndexZebraGetExecute(r ApiIndexZebraGetRequest) (*Re
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -162831,6 +173491,8 @@ type ApiIndexZeroscienceGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -162926,6 +173588,18 @@ func (r ApiIndexZeroscienceGetRequest) Botnet(botnet string) ApiIndexZeroscience
 // Specify a published date
 func (r ApiIndexZeroscienceGetRequest) Published(published string) ApiIndexZeroscienceGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZeroscienceGetRequest) Date(date string) ApiIndexZeroscienceGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZeroscienceGetRequest) Date2(date2 string) ApiIndexZeroscienceGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -163061,6 +173735,12 @@ func (a *IndicesAPIService) IndexZeroscienceGetExecute(r ApiIndexZeroscienceGetR
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -163186,6 +173866,8 @@ type ApiIndexZimbraGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -163281,6 +173963,18 @@ func (r ApiIndexZimbraGetRequest) Botnet(botnet string) ApiIndexZimbraGetRequest
 // Specify a published date
 func (r ApiIndexZimbraGetRequest) Published(published string) ApiIndexZimbraGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZimbraGetRequest) Date(date string) ApiIndexZimbraGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZimbraGetRequest) Date2(date2 string) ApiIndexZimbraGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -163416,6 +174110,12 @@ func (a *IndicesAPIService) IndexZimbraGetExecute(r ApiIndexZimbraGetRequest) (*
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -163541,6 +174241,8 @@ type ApiIndexZoomGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -163636,6 +174338,18 @@ func (r ApiIndexZoomGetRequest) Botnet(botnet string) ApiIndexZoomGetRequest {
 // Specify a published date
 func (r ApiIndexZoomGetRequest) Published(published string) ApiIndexZoomGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZoomGetRequest) Date(date string) ApiIndexZoomGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZoomGetRequest) Date2(date2 string) ApiIndexZoomGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -163771,6 +174485,12 @@ func (a *IndicesAPIService) IndexZoomGetExecute(r ApiIndexZoomGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -163896,6 +174616,8 @@ type ApiIndexZscalerGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -163991,6 +174713,18 @@ func (r ApiIndexZscalerGetRequest) Botnet(botnet string) ApiIndexZscalerGetReque
 // Specify a published date
 func (r ApiIndexZscalerGetRequest) Published(published string) ApiIndexZscalerGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZscalerGetRequest) Date(date string) ApiIndexZscalerGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZscalerGetRequest) Date2(date2 string) ApiIndexZscalerGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -164126,6 +174860,12 @@ func (a *IndicesAPIService) IndexZscalerGetExecute(r ApiIndexZscalerGetRequest) 
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -164251,6 +174991,8 @@ type ApiIndexZusoGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -164346,6 +175088,18 @@ func (r ApiIndexZusoGetRequest) Botnet(botnet string) ApiIndexZusoGetRequest {
 // Specify a published date
 func (r ApiIndexZusoGetRequest) Published(published string) ApiIndexZusoGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZusoGetRequest) Date(date string) ApiIndexZusoGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZusoGetRequest) Date2(date2 string) ApiIndexZusoGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -164481,6 +175235,12 @@ func (a *IndicesAPIService) IndexZusoGetExecute(r ApiIndexZusoGetRequest) (*Rend
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
 	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
 	}
@@ -164606,6 +175366,8 @@ type ApiIndexZyxelGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	date *string
+	date2 *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
 	lastModStartDate *string
@@ -164701,6 +175463,18 @@ func (r ApiIndexZyxelGetRequest) Botnet(botnet string) ApiIndexZyxelGetRequest {
 // Specify a published date
 func (r ApiIndexZyxelGetRequest) Published(published string) ApiIndexZyxelGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexZyxelGetRequest) Date(date string) ApiIndexZyxelGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexZyxelGetRequest) Date2(date2 string) ApiIndexZyxelGetRequest {
+	r.date2 = &date2
 	return r
 }
 
@@ -164835,6 +175609,12 @@ func (a *IndicesAPIService) IndexZyxelGetExecute(r ApiIndexZyxelGetRequest) (*Re
 	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
 	}
 	if r.updatedAtStartDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")

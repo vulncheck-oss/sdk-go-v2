@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AffectedProducts** | Pointer to [**[]AdvisoryRockwellAffectedProduct**](AdvisoryRockwellAffectedProduct.md) |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
@@ -32,6 +33,31 @@ will change when the set of required properties is changed
 NewAdvisoryRockwellWithDefaults instantiates a new AdvisoryRockwell object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAffectedProducts
+
+`func (o *AdvisoryRockwell) GetAffectedProducts() []AdvisoryRockwellAffectedProduct`
+
+GetAffectedProducts returns the AffectedProducts field if non-nil, zero value otherwise.
+
+### GetAffectedProductsOk
+
+`func (o *AdvisoryRockwell) GetAffectedProductsOk() (*[]AdvisoryRockwellAffectedProduct, bool)`
+
+GetAffectedProductsOk returns a tuple with the AffectedProducts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffectedProducts
+
+`func (o *AdvisoryRockwell) SetAffectedProducts(v []AdvisoryRockwellAffectedProduct)`
+
+SetAffectedProducts sets AffectedProducts field to given value.
+
+### HasAffectedProducts
+
+`func (o *AdvisoryRockwell) HasAffectedProducts() bool`
+
+HasAffectedProducts returns a boolean if a field has been set.
 
 ### GetCve
 

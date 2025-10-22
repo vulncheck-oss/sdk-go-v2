@@ -24,6 +24,7 @@ type AdvisorySamba struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Issues *string `json:"issues,omitempty"`
+	Patches []string `json:"patches,omitempty"`
 	References []string `json:"references,omitempty"`
 }
 
@@ -172,6 +173,38 @@ func (o *AdvisorySamba) SetIssues(v string) {
 	o.Issues = &v
 }
 
+// GetPatches returns the Patches field value if set, zero value otherwise.
+func (o *AdvisorySamba) GetPatches() []string {
+	if o == nil || IsNil(o.Patches) {
+		var ret []string
+		return ret
+	}
+	return o.Patches
+}
+
+// GetPatchesOk returns a tuple with the Patches field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySamba) GetPatchesOk() ([]string, bool) {
+	if o == nil || IsNil(o.Patches) {
+		return nil, false
+	}
+	return o.Patches, true
+}
+
+// HasPatches returns a boolean if a field has been set.
+func (o *AdvisorySamba) HasPatches() bool {
+	if o != nil && !IsNil(o.Patches) {
+		return true
+	}
+
+	return false
+}
+
+// SetPatches gets a reference to the given []string and assigns it to the Patches field.
+func (o *AdvisorySamba) SetPatches(v []string) {
+	o.Patches = v
+}
+
 // GetReferences returns the References field value if set, zero value otherwise.
 func (o *AdvisorySamba) GetReferences() []string {
 	if o == nil || IsNil(o.References) {
@@ -225,6 +258,9 @@ func (o AdvisorySamba) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Issues) {
 		toSerialize["issues"] = o.Issues
+	}
+	if !IsNil(o.Patches) {
+		toSerialize["patches"] = o.Patches
 	}
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References
