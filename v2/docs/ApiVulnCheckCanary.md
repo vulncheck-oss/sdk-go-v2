@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Signature** | Pointer to **string** |  | [optional] 
 **SignatureId** | Pointer to **int32** |  | [optional] 
 **SrcCountry** | Pointer to **string** |  | [optional] 
-**SrcIp** | Pointer to **[]int32** |  | [optional] 
+**SrcIp** | Pointer to **string** |  | [optional] 
 **SrcPort** | Pointer to **int32** |  | [optional] 
 **Timestamp** | Pointer to **string** |  | [optional] 
 
@@ -263,20 +263,20 @@ HasSrcCountry returns a boolean if a field has been set.
 
 ### GetSrcIp
 
-`func (o *ApiVulnCheckCanary) GetSrcIp() []int32`
+`func (o *ApiVulnCheckCanary) GetSrcIp() string`
 
 GetSrcIp returns the SrcIp field if non-nil, zero value otherwise.
 
 ### GetSrcIpOk
 
-`func (o *ApiVulnCheckCanary) GetSrcIpOk() (*[]int32, bool)`
+`func (o *ApiVulnCheckCanary) GetSrcIpOk() (*string, bool)`
 
 GetSrcIpOk returns a tuple with the SrcIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSrcIp
 
-`func (o *ApiVulnCheckCanary) SetSrcIp(v []int32)`
+`func (o *ApiVulnCheckCanary) SetSrcIp(v string)`
 
 SetSrcIp sets SrcIp field to given value.
 

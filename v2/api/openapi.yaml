@@ -90470,6 +90470,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         cvrf:
           documentpublisher:
             issuing_authority: issuing_authority
@@ -90813,6 +90814,8 @@ components:
             $ref: '#/components/schemas/advisory.ITW'
           type: array
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -112936,9 +112939,7 @@ components:
       example:
         dst_country: dst_country
         severity: 6
-        src_ip:
-        - 5
-        - 5
+        src_ip: src_ip
         src_port: 5
         signature_id: 1
         cve: cve
@@ -112976,9 +112977,7 @@ components:
         src_country:
           type: string
         src_ip:
-          items:
-            type: integer
-          type: array
+          type: string
         src_port:
           type: integer
         timestamp:
@@ -133080,6 +133079,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           cvrf:
             documentpublisher:
               issuing_authority: issuing_authority
@@ -133413,6 +133413,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           cvrf:
             documentpublisher:
               issuing_authority: issuing_authority
@@ -161887,9 +161888,7 @@ components:
         data:
         - dst_country: dst_country
           severity: 6
-          src_ip:
-          - 5
-          - 5
+          src_ip: src_ip
           src_port: 5
           signature_id: 1
           cve: cve
@@ -161909,9 +161908,7 @@ components:
           timestamp: timestamp
         - dst_country: dst_country
           severity: 6
-          src_ip:
-          - 5
-          - 5
+          src_ip: src_ip
           src_port: 5
           signature_id: 1
           cve: cve

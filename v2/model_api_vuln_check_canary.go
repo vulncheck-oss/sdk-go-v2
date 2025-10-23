@@ -29,7 +29,7 @@ type ApiVulnCheckCanary struct {
 	Signature *string `json:"signature,omitempty"`
 	SignatureId *int32 `json:"signature_id,omitempty"`
 	SrcCountry *string `json:"src_country,omitempty"`
-	SrcIp []int32 `json:"src_ip,omitempty"`
+	SrcIp *string `json:"src_ip,omitempty"`
 	SrcPort *int32 `json:"src_port,omitempty"`
 	Timestamp *string `json:"timestamp,omitempty"`
 }
@@ -340,17 +340,17 @@ func (o *ApiVulnCheckCanary) SetSrcCountry(v string) {
 }
 
 // GetSrcIp returns the SrcIp field value if set, zero value otherwise.
-func (o *ApiVulnCheckCanary) GetSrcIp() []int32 {
+func (o *ApiVulnCheckCanary) GetSrcIp() string {
 	if o == nil || IsNil(o.SrcIp) {
-		var ret []int32
+		var ret string
 		return ret
 	}
-	return o.SrcIp
+	return *o.SrcIp
 }
 
 // GetSrcIpOk returns a tuple with the SrcIp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiVulnCheckCanary) GetSrcIpOk() ([]int32, bool) {
+func (o *ApiVulnCheckCanary) GetSrcIpOk() (*string, bool) {
 	if o == nil || IsNil(o.SrcIp) {
 		return nil, false
 	}
@@ -366,9 +366,9 @@ func (o *ApiVulnCheckCanary) HasSrcIp() bool {
 	return false
 }
 
-// SetSrcIp gets a reference to the given []int32 and assigns it to the SrcIp field.
-func (o *ApiVulnCheckCanary) SetSrcIp(v []int32) {
-	o.SrcIp = v
+// SetSrcIp gets a reference to the given string and assigns it to the SrcIp field.
+func (o *ApiVulnCheckCanary) SetSrcIp(v string) {
+	o.SrcIp = &v
 }
 
 // GetSrcPort returns the SrcPort field value if set, zero value otherwise.
