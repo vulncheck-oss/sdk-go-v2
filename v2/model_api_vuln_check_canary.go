@@ -25,6 +25,7 @@ type ApiVulnCheckCanary struct {
 	Cve *string `json:"cve,omitempty"`
 	DstCountry *string `json:"dst_country,omitempty"`
 	Http *ApiHTTPDetails `json:"http,omitempty"`
+	Payload *string `json:"payload,omitempty"`
 	Severity *int32 `json:"severity,omitempty"`
 	Signature *string `json:"signature,omitempty"`
 	SignatureId *int32 `json:"signature_id,omitempty"`
@@ -209,6 +210,38 @@ func (o *ApiVulnCheckCanary) HasHttp() bool {
 // SetHttp gets a reference to the given ApiHTTPDetails and assigns it to the Http field.
 func (o *ApiVulnCheckCanary) SetHttp(v ApiHTTPDetails) {
 	o.Http = &v
+}
+
+// GetPayload returns the Payload field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetPayload() string {
+	if o == nil || IsNil(o.Payload) {
+		var ret string
+		return ret
+	}
+	return *o.Payload
+}
+
+// GetPayloadOk returns a tuple with the Payload field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetPayloadOk() (*string, bool) {
+	if o == nil || IsNil(o.Payload) {
+		return nil, false
+	}
+	return o.Payload, true
+}
+
+// HasPayload returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasPayload() bool {
+	if o != nil && !IsNil(o.Payload) {
+		return true
+	}
+
+	return false
+}
+
+// SetPayload gets a reference to the given string and assigns it to the Payload field.
+func (o *ApiVulnCheckCanary) SetPayload(v string) {
+	o.Payload = &v
 }
 
 // GetSeverity returns the Severity field value if set, zero value otherwise.
@@ -459,6 +492,9 @@ func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Http) {
 		toSerialize["http"] = o.Http
+	}
+	if !IsNil(o.Payload) {
+		toSerialize["payload"] = o.Payload
 	}
 	if !IsNil(o.Severity) {
 		toSerialize["severity"] = o.Severity

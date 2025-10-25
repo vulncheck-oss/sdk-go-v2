@@ -112939,11 +112939,16 @@ components:
       example:
         dst_country: dst_country
         severity: 6
+        signature: signature
+        client_fingerprints:
+          hassh: hassh
+          ja4: ja4
+          ja3: ja3
         src_ip: src_ip
         src_port: 5
         signature_id: 1
         cve: cve
-        signature: signature
+        payload: payload
         src_country: src_country
         http:
           protocol: protocol
@@ -112952,10 +112957,6 @@ components:
           url: url
           http_user_agent: http_user_agent
         category: category
-        client_fingerprints:
-          hassh: hassh
-          ja4: ja4
-          ja3: ja3
         timestamp: timestamp
       properties:
         category:
@@ -112968,6 +112969,8 @@ components:
           type: string
         http:
           $ref: '#/components/schemas/api.HTTPDetails'
+        payload:
+          type: string
         severity:
           type: integer
         signature:
@@ -161888,11 +161891,16 @@ components:
         data:
         - dst_country: dst_country
           severity: 6
+          signature: signature
+          client_fingerprints:
+            hassh: hassh
+            ja4: ja4
+            ja3: ja3
           src_ip: src_ip
           src_port: 5
           signature_id: 1
           cve: cve
-          signature: signature
+          payload: payload
           src_country: src_country
           http:
             protocol: protocol
@@ -161901,18 +161909,19 @@ components:
             url: url
             http_user_agent: http_user_agent
           category: category
-          client_fingerprints:
-            hassh: hassh
-            ja4: ja4
-            ja3: ja3
           timestamp: timestamp
         - dst_country: dst_country
           severity: 6
+          signature: signature
+          client_fingerprints:
+            hassh: hassh
+            ja4: ja4
+            ja3: ja3
           src_ip: src_ip
           src_port: 5
           signature_id: 1
           cve: cve
-          signature: signature
+          payload: payload
           src_country: src_country
           http:
             protocol: protocol
@@ -161921,10 +161930,6 @@ components:
             url: url
             http_user_agent: http_user_agent
           category: category
-          client_fingerprints:
-            hassh: hassh
-            ja4: ja4
-            ja3: ja3
           timestamp: timestamp
         _meta:
           cursor: cursor
