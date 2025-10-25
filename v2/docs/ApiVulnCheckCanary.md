@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **string** |  | [optional] 
 **DstCountry** | Pointer to **string** |  | [optional] 
 **Http** | Pointer to [**ApiHTTPDetails**](ApiHTTPDetails.md) |  | [optional] 
+**Payload** | Pointer to **string** |  | [optional] 
 **Severity** | Pointer to **int32** |  | [optional] 
 **Signature** | Pointer to **string** |  | [optional] 
 **SignatureId** | Pointer to **int32** |  | [optional] 
@@ -160,6 +161,31 @@ SetHttp sets Http field to given value.
 `func (o *ApiVulnCheckCanary) HasHttp() bool`
 
 HasHttp returns a boolean if a field has been set.
+
+### GetPayload
+
+`func (o *ApiVulnCheckCanary) GetPayload() string`
+
+GetPayload returns the Payload field if non-nil, zero value otherwise.
+
+### GetPayloadOk
+
+`func (o *ApiVulnCheckCanary) GetPayloadOk() (*string, bool)`
+
+GetPayloadOk returns a tuple with the Payload field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayload
+
+`func (o *ApiVulnCheckCanary) SetPayload(v string)`
+
+SetPayload sets Payload field to given value.
+
+### HasPayload
+
+`func (o *ApiVulnCheckCanary) HasPayload() bool`
+
+HasPayload returns a boolean if a field has been set.
 
 ### GetSeverity
 
