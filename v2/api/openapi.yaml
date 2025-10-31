@@ -76347,6 +76347,8 @@ components:
               references:
               - references
               - references
+            modified: modified
+            published: published
             snapshot: snapshot
           cve:
             configurations:
@@ -95941,6 +95943,8 @@ components:
             references:
             - references
             - references
+          modified: modified
+          published: published
           snapshot: snapshot
         cve:
           configurations:
@@ -95996,9 +96000,15 @@ components:
           references:
           - references
           - references
+        modified: modified
+        published: published
         snapshot: snapshot
       properties:
         cve_id:
+          type: string
+        modified:
+          type: string
+        published:
           type: string
         reason:
           type: string
@@ -114953,6 +114963,8 @@ components:
                 references:
                 - references
                 - references
+              modified: modified
+              published: published
               snapshot: snapshot
             cve:
               configurations:
@@ -115007,6 +115019,8 @@ components:
                 references:
                 - references
                 - references
+              modified: modified
+              published: published
               snapshot: snapshot
             cve:
               configurations:

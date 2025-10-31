@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CveId** | Pointer to **string** |  | [optional] 
+**Modified** | Pointer to **string** |  | [optional] 
+**Published** | Pointer to **string** |  | [optional] 
 **Reason** | Pointer to **string** |  | [optional] 
 **Snapshot** | Pointer to **string** |  | [optional] 
 **TriageNotes** | Pointer to [**AdvisoryTriageNotes**](AdvisoryTriageNotes.md) |  | [optional] 
@@ -52,6 +54,56 @@ SetCveId sets CveId field to given value.
 `func (o *AdvisoryOverrideAnnotation) HasCveId() bool`
 
 HasCveId returns a boolean if a field has been set.
+
+### GetModified
+
+`func (o *AdvisoryOverrideAnnotation) GetModified() string`
+
+GetModified returns the Modified field if non-nil, zero value otherwise.
+
+### GetModifiedOk
+
+`func (o *AdvisoryOverrideAnnotation) GetModifiedOk() (*string, bool)`
+
+GetModifiedOk returns a tuple with the Modified field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModified
+
+`func (o *AdvisoryOverrideAnnotation) SetModified(v string)`
+
+SetModified sets Modified field to given value.
+
+### HasModified
+
+`func (o *AdvisoryOverrideAnnotation) HasModified() bool`
+
+HasModified returns a boolean if a field has been set.
+
+### GetPublished
+
+`func (o *AdvisoryOverrideAnnotation) GetPublished() string`
+
+GetPublished returns the Published field if non-nil, zero value otherwise.
+
+### GetPublishedOk
+
+`func (o *AdvisoryOverrideAnnotation) GetPublishedOk() (*string, bool)`
+
+GetPublishedOk returns a tuple with the Published field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublished
+
+`func (o *AdvisoryOverrideAnnotation) SetPublished(v string)`
+
+SetPublished sets Published field to given value.
+
+### HasPublished
+
+`func (o *AdvisoryOverrideAnnotation) HasPublished() bool`
+
+HasPublished returns a boolean if a field has been set.
 
 ### GetReason
 
