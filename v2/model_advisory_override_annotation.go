@@ -21,6 +21,8 @@ var _ MappedNullable = &AdvisoryOverrideAnnotation{}
 // AdvisoryOverrideAnnotation struct for AdvisoryOverrideAnnotation
 type AdvisoryOverrideAnnotation struct {
 	CveId *string `json:"cve_id,omitempty"`
+	Modified *string `json:"modified,omitempty"`
+	Published *string `json:"published,omitempty"`
 	Reason *string `json:"reason,omitempty"`
 	Snapshot *string `json:"snapshot,omitempty"`
 	TriageNotes *AdvisoryTriageNotes `json:"triage_notes,omitempty"`
@@ -73,6 +75,70 @@ func (o *AdvisoryOverrideAnnotation) HasCveId() bool {
 // SetCveId gets a reference to the given string and assigns it to the CveId field.
 func (o *AdvisoryOverrideAnnotation) SetCveId(v string) {
 	o.CveId = &v
+}
+
+// GetModified returns the Modified field value if set, zero value otherwise.
+func (o *AdvisoryOverrideAnnotation) GetModified() string {
+	if o == nil || IsNil(o.Modified) {
+		var ret string
+		return ret
+	}
+	return *o.Modified
+}
+
+// GetModifiedOk returns a tuple with the Modified field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryOverrideAnnotation) GetModifiedOk() (*string, bool) {
+	if o == nil || IsNil(o.Modified) {
+		return nil, false
+	}
+	return o.Modified, true
+}
+
+// HasModified returns a boolean if a field has been set.
+func (o *AdvisoryOverrideAnnotation) HasModified() bool {
+	if o != nil && !IsNil(o.Modified) {
+		return true
+	}
+
+	return false
+}
+
+// SetModified gets a reference to the given string and assigns it to the Modified field.
+func (o *AdvisoryOverrideAnnotation) SetModified(v string) {
+	o.Modified = &v
+}
+
+// GetPublished returns the Published field value if set, zero value otherwise.
+func (o *AdvisoryOverrideAnnotation) GetPublished() string {
+	if o == nil || IsNil(o.Published) {
+		var ret string
+		return ret
+	}
+	return *o.Published
+}
+
+// GetPublishedOk returns a tuple with the Published field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryOverrideAnnotation) GetPublishedOk() (*string, bool) {
+	if o == nil || IsNil(o.Published) {
+		return nil, false
+	}
+	return o.Published, true
+}
+
+// HasPublished returns a boolean if a field has been set.
+func (o *AdvisoryOverrideAnnotation) HasPublished() bool {
+	if o != nil && !IsNil(o.Published) {
+		return true
+	}
+
+	return false
+}
+
+// SetPublished gets a reference to the given string and assigns it to the Published field.
+func (o *AdvisoryOverrideAnnotation) SetPublished(v string) {
+	o.Published = &v
 }
 
 // GetReason returns the Reason field value if set, zero value otherwise.
@@ -183,6 +249,12 @@ func (o AdvisoryOverrideAnnotation) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.CveId) {
 		toSerialize["cve_id"] = o.CveId
+	}
+	if !IsNil(o.Modified) {
+		toSerialize["modified"] = o.Modified
+	}
+	if !IsNil(o.Published) {
+		toSerialize["published"] = o.Published
 	}
 	if !IsNil(o.Reason) {
 		toSerialize["reason"] = o.Reason
