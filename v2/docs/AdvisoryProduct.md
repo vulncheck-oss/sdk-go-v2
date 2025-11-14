@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **ProductId** | Pointer to **string** |  | [optional] 
-**ProductIdentificationHelper** | Pointer to **map[string]string** |  | [optional] 
+**ProductIdentificationHelper** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasProductId returns a boolean if a field has been set.
 
 ### GetProductIdentificationHelper
 
-`func (o *AdvisoryProduct) GetProductIdentificationHelper() map[string]string`
+`func (o *AdvisoryProduct) GetProductIdentificationHelper() map[string]interface{}`
 
 GetProductIdentificationHelper returns the ProductIdentificationHelper field if non-nil, zero value otherwise.
 
 ### GetProductIdentificationHelperOk
 
-`func (o *AdvisoryProduct) GetProductIdentificationHelperOk() (*map[string]string, bool)`
+`func (o *AdvisoryProduct) GetProductIdentificationHelperOk() (*map[string]interface{}, bool)`
 
 GetProductIdentificationHelperOk returns a tuple with the ProductIdentificationHelper field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProductIdentificationHelper
 
-`func (o *AdvisoryProduct) SetProductIdentificationHelper(v map[string]string)`
+`func (o *AdvisoryProduct) SetProductIdentificationHelper(v map[string]interface{})`
 
 SetProductIdentificationHelper sets ProductIdentificationHelper field to given value.
 

@@ -24,9 +24,10 @@ type AdvisoryMAffected struct {
 	Cpes []string `json:"cpes,omitempty"`
 	DefaultStatus *string `json:"defaultStatus,omitempty"`
 	PackageName *string `json:"packageName,omitempty"`
+	PackageURL *string `json:"packageURL,omitempty"`
 	Platforms []string `json:"platforms,omitempty"`
 	Product *string `json:"product,omitempty"`
-	Repos *string `json:"repos,omitempty"`
+	Repo *string `json:"repo,omitempty"`
 	Vendor *string `json:"vendor,omitempty"`
 	Versions []AdvisoryMVersion `json:"versions,omitempty"`
 }
@@ -176,6 +177,38 @@ func (o *AdvisoryMAffected) SetPackageName(v string) {
 	o.PackageName = &v
 }
 
+// GetPackageURL returns the PackageURL field value if set, zero value otherwise.
+func (o *AdvisoryMAffected) GetPackageURL() string {
+	if o == nil || IsNil(o.PackageURL) {
+		var ret string
+		return ret
+	}
+	return *o.PackageURL
+}
+
+// GetPackageURLOk returns a tuple with the PackageURL field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMAffected) GetPackageURLOk() (*string, bool) {
+	if o == nil || IsNil(o.PackageURL) {
+		return nil, false
+	}
+	return o.PackageURL, true
+}
+
+// HasPackageURL returns a boolean if a field has been set.
+func (o *AdvisoryMAffected) HasPackageURL() bool {
+	if o != nil && !IsNil(o.PackageURL) {
+		return true
+	}
+
+	return false
+}
+
+// SetPackageURL gets a reference to the given string and assigns it to the PackageURL field.
+func (o *AdvisoryMAffected) SetPackageURL(v string) {
+	o.PackageURL = &v
+}
+
 // GetPlatforms returns the Platforms field value if set, zero value otherwise.
 func (o *AdvisoryMAffected) GetPlatforms() []string {
 	if o == nil || IsNil(o.Platforms) {
@@ -240,36 +273,36 @@ func (o *AdvisoryMAffected) SetProduct(v string) {
 	o.Product = &v
 }
 
-// GetRepos returns the Repos field value if set, zero value otherwise.
-func (o *AdvisoryMAffected) GetRepos() string {
-	if o == nil || IsNil(o.Repos) {
+// GetRepo returns the Repo field value if set, zero value otherwise.
+func (o *AdvisoryMAffected) GetRepo() string {
+	if o == nil || IsNil(o.Repo) {
 		var ret string
 		return ret
 	}
-	return *o.Repos
+	return *o.Repo
 }
 
-// GetReposOk returns a tuple with the Repos field value if set, nil otherwise
+// GetRepoOk returns a tuple with the Repo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMAffected) GetReposOk() (*string, bool) {
-	if o == nil || IsNil(o.Repos) {
+func (o *AdvisoryMAffected) GetRepoOk() (*string, bool) {
+	if o == nil || IsNil(o.Repo) {
 		return nil, false
 	}
-	return o.Repos, true
+	return o.Repo, true
 }
 
-// HasRepos returns a boolean if a field has been set.
-func (o *AdvisoryMAffected) HasRepos() bool {
-	if o != nil && !IsNil(o.Repos) {
+// HasRepo returns a boolean if a field has been set.
+func (o *AdvisoryMAffected) HasRepo() bool {
+	if o != nil && !IsNil(o.Repo) {
 		return true
 	}
 
 	return false
 }
 
-// SetRepos gets a reference to the given string and assigns it to the Repos field.
-func (o *AdvisoryMAffected) SetRepos(v string) {
-	o.Repos = &v
+// SetRepo gets a reference to the given string and assigns it to the Repo field.
+func (o *AdvisoryMAffected) SetRepo(v string) {
+	o.Repo = &v
 }
 
 // GetVendor returns the Vendor field value if set, zero value otherwise.
@@ -358,14 +391,17 @@ func (o AdvisoryMAffected) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.PackageName) {
 		toSerialize["packageName"] = o.PackageName
 	}
+	if !IsNil(o.PackageURL) {
+		toSerialize["packageURL"] = o.PackageURL
+	}
 	if !IsNil(o.Platforms) {
 		toSerialize["platforms"] = o.Platforms
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product
 	}
-	if !IsNil(o.Repos) {
-		toSerialize["repos"] = o.Repos
+	if !IsNil(o.Repo) {
+		toSerialize["repo"] = o.Repo
 	}
 	if !IsNil(o.Vendor) {
 		toSerialize["vendor"] = o.Vendor

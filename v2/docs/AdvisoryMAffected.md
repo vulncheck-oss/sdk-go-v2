@@ -8,9 +8,10 @@ Name | Type | Description | Notes
 **Cpes** | Pointer to **[]string** |  | [optional] 
 **DefaultStatus** | Pointer to **string** |  | [optional] 
 **PackageName** | Pointer to **string** |  | [optional] 
+**PackageURL** | Pointer to **string** |  | [optional] 
 **Platforms** | Pointer to **[]string** |  | [optional] 
 **Product** | Pointer to **string** |  | [optional] 
-**Repos** | Pointer to **string** |  | [optional] 
+**Repo** | Pointer to **string** |  | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Versions** | Pointer to [**[]AdvisoryMVersion**](AdvisoryMVersion.md) |  | [optional] 
 
@@ -133,6 +134,31 @@ SetPackageName sets PackageName field to given value.
 
 HasPackageName returns a boolean if a field has been set.
 
+### GetPackageURL
+
+`func (o *AdvisoryMAffected) GetPackageURL() string`
+
+GetPackageURL returns the PackageURL field if non-nil, zero value otherwise.
+
+### GetPackageURLOk
+
+`func (o *AdvisoryMAffected) GetPackageURLOk() (*string, bool)`
+
+GetPackageURLOk returns a tuple with the PackageURL field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPackageURL
+
+`func (o *AdvisoryMAffected) SetPackageURL(v string)`
+
+SetPackageURL sets PackageURL field to given value.
+
+### HasPackageURL
+
+`func (o *AdvisoryMAffected) HasPackageURL() bool`
+
+HasPackageURL returns a boolean if a field has been set.
+
 ### GetPlatforms
 
 `func (o *AdvisoryMAffected) GetPlatforms() []string`
@@ -183,30 +209,30 @@ SetProduct sets Product field to given value.
 
 HasProduct returns a boolean if a field has been set.
 
-### GetRepos
+### GetRepo
 
-`func (o *AdvisoryMAffected) GetRepos() string`
+`func (o *AdvisoryMAffected) GetRepo() string`
 
-GetRepos returns the Repos field if non-nil, zero value otherwise.
+GetRepo returns the Repo field if non-nil, zero value otherwise.
 
-### GetReposOk
+### GetRepoOk
 
-`func (o *AdvisoryMAffected) GetReposOk() (*string, bool)`
+`func (o *AdvisoryMAffected) GetRepoOk() (*string, bool)`
 
-GetReposOk returns a tuple with the Repos field if it's non-nil, zero value otherwise
+GetRepoOk returns a tuple with the Repo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRepos
+### SetRepo
 
-`func (o *AdvisoryMAffected) SetRepos(v string)`
+`func (o *AdvisoryMAffected) SetRepo(v string)`
 
-SetRepos sets Repos field to given value.
+SetRepo sets Repo field to given value.
 
-### HasRepos
+### HasRepo
 
-`func (o *AdvisoryMAffected) HasRepos() bool`
+`func (o *AdvisoryMAffected) HasRepo() bool`
 
-HasRepos returns a boolean if a field has been set.
+HasRepo returns a boolean if a field has been set.
 
 ### GetVendor
 
