@@ -68957,54 +68957,19 @@ paths:
         name: cve
         schema:
           type: string
-      - description: Specify a vulnerability alias to search with.
-        in: query
-        name: alias
-        schema:
-          type: string
-      - description: Specify an IAVA ID to search with.
-        in: query
-        name: iava
-        schema:
-          type: string
-      - description: Specify a JVNDB ID to search with.
-        in: query
-        name: jvndb
-        schema:
-          type: string
-      - description: Specify an ILVN ID to search with.
-        in: query
-        name: ilvn
-        schema:
-          type: string
-      - description: Specify a threat actor name to search with.
-        in: query
-        name: threat_actor
-        schema:
-          type: string
-      - description: Specify a MITRE ID to search with.
-        in: query
-        name: mitre_id
-        schema:
-          type: string
-      - description: Specify a MISP ID to search with.
-        in: query
-        name: misp_id
-        schema:
-          type: string
-      - description: Specify a ransomeware family name to search with.
-        in: query
-        name: ransomware
-        schema:
-          type: string
-      - description: Specify a botnet name to search with.
-        in: query
-        name: botnet
-        schema:
-          type: string
       - description: Specify a published date
         in: query
         name: published
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: src_country
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: dst_country
         schema:
           type: string
       - description: Specify a starting published date to filter with.
@@ -69113,54 +69078,19 @@ paths:
         name: cve
         schema:
           type: string
-      - description: Specify a vulnerability alias to search with.
-        in: query
-        name: alias
-        schema:
-          type: string
-      - description: Specify an IAVA ID to search with.
-        in: query
-        name: iava
-        schema:
-          type: string
-      - description: Specify a JVNDB ID to search with.
-        in: query
-        name: jvndb
-        schema:
-          type: string
-      - description: Specify an ILVN ID to search with.
-        in: query
-        name: ilvn
-        schema:
-          type: string
-      - description: Specify a threat actor name to search with.
-        in: query
-        name: threat_actor
-        schema:
-          type: string
-      - description: Specify a MITRE ID to search with.
-        in: query
-        name: mitre_id
-        schema:
-          type: string
-      - description: Specify a MISP ID to search with.
-        in: query
-        name: misp_id
-        schema:
-          type: string
-      - description: Specify a ransomeware family name to search with.
-        in: query
-        name: ransomware
-        schema:
-          type: string
-      - description: Specify a botnet name to search with.
-        in: query
-        name: botnet
-        schema:
-          type: string
       - description: Specify a published date
         in: query
         name: published
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: src_country
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: dst_country
         schema:
           type: string
       - description: Specify a starting published date to filter with.
@@ -69269,54 +69199,19 @@ paths:
         name: cve
         schema:
           type: string
-      - description: Specify a vulnerability alias to search with.
-        in: query
-        name: alias
-        schema:
-          type: string
-      - description: Specify an IAVA ID to search with.
-        in: query
-        name: iava
-        schema:
-          type: string
-      - description: Specify a JVNDB ID to search with.
-        in: query
-        name: jvndb
-        schema:
-          type: string
-      - description: Specify an ILVN ID to search with.
-        in: query
-        name: ilvn
-        schema:
-          type: string
-      - description: Specify a threat actor name to search with.
-        in: query
-        name: threat_actor
-        schema:
-          type: string
-      - description: Specify a MITRE ID to search with.
-        in: query
-        name: mitre_id
-        schema:
-          type: string
-      - description: Specify a MISP ID to search with.
-        in: query
-        name: misp_id
-        schema:
-          type: string
-      - description: Specify a ransomeware family name to search with.
-        in: query
-        name: ransomware
-        schema:
-          type: string
-      - description: Specify a botnet name to search with.
-        in: query
-        name: botnet
-        schema:
-          type: string
       - description: Specify a published date
         in: query
         name: published
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: src_country
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: dst_country
         schema:
           type: string
       - description: Specify a starting published date to filter with.
@@ -69425,54 +69320,19 @@ paths:
         name: cve
         schema:
           type: string
-      - description: Specify a vulnerability alias to search with.
-        in: query
-        name: alias
-        schema:
-          type: string
-      - description: Specify an IAVA ID to search with.
-        in: query
-        name: iava
-        schema:
-          type: string
-      - description: Specify a JVNDB ID to search with.
-        in: query
-        name: jvndb
-        schema:
-          type: string
-      - description: Specify an ILVN ID to search with.
-        in: query
-        name: ilvn
-        schema:
-          type: string
-      - description: Specify a threat actor name to search with.
-        in: query
-        name: threat_actor
-        schema:
-          type: string
-      - description: Specify a MITRE ID to search with.
-        in: query
-        name: mitre_id
-        schema:
-          type: string
-      - description: Specify a MISP ID to search with.
-        in: query
-        name: misp_id
-        schema:
-          type: string
-      - description: Specify a ransomeware family name to search with.
-        in: query
-        name: ransomware
-        schema:
-          type: string
-      - description: Specify a botnet name to search with.
-        in: query
-        name: botnet
-        schema:
-          type: string
       - description: Specify a published date
         in: query
         name: published
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: src_country
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: dst_country
         schema:
           type: string
       - description: Specify a starting published date to filter with.
@@ -69581,54 +69441,19 @@ paths:
         name: cve
         schema:
           type: string
-      - description: Specify a vulnerability alias to search with.
-        in: query
-        name: alias
-        schema:
-          type: string
-      - description: Specify an IAVA ID to search with.
-        in: query
-        name: iava
-        schema:
-          type: string
-      - description: Specify a JVNDB ID to search with.
-        in: query
-        name: jvndb
-        schema:
-          type: string
-      - description: Specify an ILVN ID to search with.
-        in: query
-        name: ilvn
-        schema:
-          type: string
-      - description: Specify a threat actor name to search with.
-        in: query
-        name: threat_actor
-        schema:
-          type: string
-      - description: Specify a MITRE ID to search with.
-        in: query
-        name: mitre_id
-        schema:
-          type: string
-      - description: Specify a MISP ID to search with.
-        in: query
-        name: misp_id
-        schema:
-          type: string
-      - description: Specify a ransomeware family name to search with.
-        in: query
-        name: ransomware
-        schema:
-          type: string
-      - description: Specify a botnet name to search with.
-        in: query
-        name: botnet
-        schema:
-          type: string
       - description: Specify a published date
         in: query
         name: published
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: src_country
+        schema:
+          type: string
+      - description: Country code in ISO-3166 format
+        in: query
+        name: dst_country
         schema:
           type: string
       - description: Specify a starting published date to filter with.
@@ -74836,8 +74661,9 @@ components:
             lessThanOrEqual: lessThanOrEqual
             version: version
             status: status
+          packageURL: packageURL
           vendor: vendor
-          repos: repos
+          repo: repo
           packageName: packageName
           collectionURL: collectionURL
           platforms:
@@ -74859,8 +74685,9 @@ components:
             lessThanOrEqual: lessThanOrEqual
             version: version
             status: status
+          packageURL: packageURL
           vendor: vendor
-          repos: repos
+          repo: repo
           packageName: packageName
           collectionURL: collectionURL
           platforms:
@@ -74911,6 +74738,11 @@ components:
             type: type
             content: "{}"
           format: format
+          scenarios:
+          - lang: lang
+            value: value
+          - lang: lang
+            value: value
           cvssV3_0:
             baseSeverity: baseSeverity
             confidentialityImpact: confidentialityImpact
@@ -74952,20 +74784,20 @@ components:
             subConfidentialityImpact: subConfidentialityImpact
             baseScore: 5.637376656633329
             privilegesRequired: privilegesRequired
+            recovery: recovery
             subIntegrityImpact: subIntegrityImpact
-            Recovery: Recovery
             userInteraction: userInteraction
             version: version
-            Automatable: Automatable
             baseSeverity: baseSeverity
+            automatable: automatable
             subAvailabilityImpact: subAvailabilityImpact
             providerUrgency: providerUrgency
+            safety: safety
             attackComplexity: attackComplexity
             vulnAvailabilityImpact: vulnAvailabilityImpact
             vulnConfidentialityImpact: vulnConfidentialityImpact
             attackVector: attackVector
             attackRequirements: attackRequirements
-            Safety: Safety
             vulnIntegrityImpact: vulnIntegrityImpact
             vectorString: vectorString
             valueDensity: valueDensity
@@ -74973,6 +74805,11 @@ components:
             type: type
             content: "{}"
           format: format
+          scenarios:
+          - lang: lang
+            value: value
+          - lang: lang
+            value: value
           cvssV3_0:
             baseSeverity: baseSeverity
             confidentialityImpact: confidentialityImpact
@@ -75014,20 +74851,20 @@ components:
             subConfidentialityImpact: subConfidentialityImpact
             baseScore: 5.637376656633329
             privilegesRequired: privilegesRequired
+            recovery: recovery
             subIntegrityImpact: subIntegrityImpact
-            Recovery: Recovery
             userInteraction: userInteraction
             version: version
-            Automatable: Automatable
             baseSeverity: baseSeverity
+            automatable: automatable
             subAvailabilityImpact: subAvailabilityImpact
             providerUrgency: providerUrgency
+            safety: safety
             attackComplexity: attackComplexity
             vulnAvailabilityImpact: vulnAvailabilityImpact
             vulnConfidentialityImpact: vulnConfidentialityImpact
             attackVector: attackVector
             attackRequirements: attackRequirements
-            Safety: Safety
             vulnIntegrityImpact: vulnIntegrityImpact
             vectorString: vectorString
             valueDensity: valueDensity
@@ -75049,8 +74886,9 @@ components:
             lessThanOrEqual: lessThanOrEqual
             version: version
             status: status
+          packageURL: packageURL
           vendor: vendor
-          repos: repos
+          repo: repo
           packageName: packageName
           collectionURL: collectionURL
           platforms:
@@ -75072,8 +74910,9 @@ components:
             lessThanOrEqual: lessThanOrEqual
             version: version
             status: status
+          packageURL: packageURL
           vendor: vendor
-          repos: repos
+          repo: repo
           packageName: packageName
           collectionURL: collectionURL
           platforms:
@@ -86152,8 +85991,7 @@ components:
           type: string
       type: object
     advisory.IdentificationHelper:
-      additionalProperties:
-        type: string
+      additionalProperties: true
       type: object
     advisory.Impact:
       example:
@@ -87392,8 +87230,9 @@ components:
           lessThanOrEqual: lessThanOrEqual
           version: version
           status: status
+        packageURL: packageURL
         vendor: vendor
-        repos: repos
+        repo: repo
         packageName: packageName
         collectionURL: collectionURL
         platforms:
@@ -87410,13 +87249,15 @@ components:
           type: string
         packageName:
           type: string
+        packageURL:
+          type: string
         platforms:
           items:
             type: string
           type: array
         product:
           type: string
-        repos:
+        repo:
           type: string
         vendor:
           type: string
@@ -87671,6 +87512,11 @@ components:
             type: type
             content: "{}"
           format: format
+          scenarios:
+          - lang: lang
+            value: value
+          - lang: lang
+            value: value
           cvssV3_0:
             baseSeverity: baseSeverity
             confidentialityImpact: confidentialityImpact
@@ -87712,20 +87558,20 @@ components:
             subConfidentialityImpact: subConfidentialityImpact
             baseScore: 5.637376656633329
             privilegesRequired: privilegesRequired
+            recovery: recovery
             subIntegrityImpact: subIntegrityImpact
-            Recovery: Recovery
             userInteraction: userInteraction
             version: version
-            Automatable: Automatable
             baseSeverity: baseSeverity
+            automatable: automatable
             subAvailabilityImpact: subAvailabilityImpact
             providerUrgency: providerUrgency
+            safety: safety
             attackComplexity: attackComplexity
             vulnAvailabilityImpact: vulnAvailabilityImpact
             vulnConfidentialityImpact: vulnConfidentialityImpact
             attackVector: attackVector
             attackRequirements: attackRequirements
-            Safety: Safety
             vulnIntegrityImpact: vulnIntegrityImpact
             vectorString: vectorString
             valueDensity: valueDensity
@@ -87733,6 +87579,11 @@ components:
             type: type
             content: "{}"
           format: format
+          scenarios:
+          - lang: lang
+            value: value
+          - lang: lang
+            value: value
           cvssV3_0:
             baseSeverity: baseSeverity
             confidentialityImpact: confidentialityImpact
@@ -87774,20 +87625,20 @@ components:
             subConfidentialityImpact: subConfidentialityImpact
             baseScore: 5.637376656633329
             privilegesRequired: privilegesRequired
+            recovery: recovery
             subIntegrityImpact: subIntegrityImpact
-            Recovery: Recovery
             userInteraction: userInteraction
             version: version
-            Automatable: Automatable
             baseSeverity: baseSeverity
+            automatable: automatable
             subAvailabilityImpact: subAvailabilityImpact
             providerUrgency: providerUrgency
+            safety: safety
             attackComplexity: attackComplexity
             vulnAvailabilityImpact: vulnAvailabilityImpact
             vulnConfidentialityImpact: vulnConfidentialityImpact
             attackVector: attackVector
             attackRequirements: attackRequirements
-            Safety: Safety
             vulnIntegrityImpact: vulnIntegrityImpact
             vectorString: vectorString
             valueDensity: valueDensity
@@ -87809,8 +87660,9 @@ components:
             lessThanOrEqual: lessThanOrEqual
             version: version
             status: status
+          packageURL: packageURL
           vendor: vendor
-          repos: repos
+          repo: repo
           packageName: packageName
           collectionURL: collectionURL
           platforms:
@@ -87832,8 +87684,9 @@ components:
             lessThanOrEqual: lessThanOrEqual
             version: version
             status: status
+          packageURL: packageURL
           vendor: vendor
-          repos: repos
+          repo: repo
           packageName: packageName
           collectionURL: collectionURL
           platforms:
@@ -88037,6 +87890,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -88078,20 +87936,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -88099,6 +87957,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -88140,20 +88003,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -88175,8 +88038,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -88198,8 +88062,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -88264,6 +88129,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -88305,20 +88175,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -88326,6 +88196,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -88367,20 +88242,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -88402,8 +88277,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -88425,8 +88301,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -88490,6 +88367,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -88531,20 +88413,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -88552,6 +88434,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -88593,20 +88480,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -88628,8 +88515,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -88651,8 +88539,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -88835,35 +88724,31 @@ components:
         subConfidentialityImpact: subConfidentialityImpact
         baseScore: 5.637376656633329
         privilegesRequired: privilegesRequired
+        recovery: recovery
         subIntegrityImpact: subIntegrityImpact
-        Recovery: Recovery
         userInteraction: userInteraction
         version: version
-        Automatable: Automatable
         baseSeverity: baseSeverity
+        automatable: automatable
         subAvailabilityImpact: subAvailabilityImpact
         providerUrgency: providerUrgency
+        safety: safety
         attackComplexity: attackComplexity
         vulnAvailabilityImpact: vulnAvailabilityImpact
         vulnConfidentialityImpact: vulnConfidentialityImpact
         attackVector: attackVector
         attackRequirements: attackRequirements
-        Safety: Safety
         vulnIntegrityImpact: vulnIntegrityImpact
         vectorString: vectorString
         valueDensity: valueDensity
       properties:
-        Automatable:
-          type: string
-        Recovery:
-          type: string
-        Safety:
-          type: string
         attackComplexity:
           type: string
         attackRequirements:
           type: string
         attackVector:
+          type: string
+        automatable:
           type: string
         baseScore:
           type: number
@@ -88872,6 +88757,10 @@ components:
         privilegesRequired:
           type: string
         providerUrgency:
+          type: string
+        recovery:
+          type: string
+        safety:
           type: string
         subAvailabilityImpact:
           type: string
@@ -90383,6 +90272,11 @@ components:
           type: type
           content: "{}"
         format: format
+        scenarios:
+        - lang: lang
+          value: value
+        - lang: lang
+          value: value
         cvssV3_0:
           baseSeverity: baseSeverity
           confidentialityImpact: confidentialityImpact
@@ -90424,20 +90318,20 @@ components:
           subConfidentialityImpact: subConfidentialityImpact
           baseScore: 5.637376656633329
           privilegesRequired: privilegesRequired
+          recovery: recovery
           subIntegrityImpact: subIntegrityImpact
-          Recovery: Recovery
           userInteraction: userInteraction
           version: version
-          Automatable: Automatable
           baseSeverity: baseSeverity
+          automatable: automatable
           subAvailabilityImpact: subAvailabilityImpact
           providerUrgency: providerUrgency
+          safety: safety
           attackComplexity: attackComplexity
           vulnAvailabilityImpact: vulnAvailabilityImpact
           vulnConfidentialityImpact: vulnConfidentialityImpact
           attackVector: attackVector
           attackRequirements: attackRequirements
-          Safety: Safety
           vulnIntegrityImpact: vulnIntegrityImpact
           vectorString: vectorString
           valueDensity: valueDensity
@@ -90454,6 +90348,20 @@ components:
           type: string
         other:
           $ref: '#/components/schemas/advisory.MetricsOther'
+        scenarios:
+          items:
+            $ref: '#/components/schemas/advisory.MetricScenario'
+          type: array
+      type: object
+    advisory.MetricScenario:
+      example:
+        lang: lang
+        value: value
+      properties:
+        lang:
+          type: string
+        value:
+          type: string
       type: object
     advisory.MetricsOther:
       example:
@@ -91296,6 +91204,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -91337,20 +91250,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -91358,6 +91271,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -91399,20 +91317,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -91434,8 +91352,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -91457,8 +91376,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -91523,6 +91443,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -91564,20 +91489,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -91585,6 +91510,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -91626,20 +91556,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -91661,8 +91591,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -91684,8 +91615,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -91749,6 +91681,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -91790,20 +91727,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -91811,6 +91748,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -91852,20 +91794,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -91887,8 +91829,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -91910,8 +91853,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -92104,6 +92048,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -92145,20 +92094,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -92166,6 +92115,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -92207,20 +92161,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -92242,8 +92196,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -92265,8 +92220,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -92331,6 +92287,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -92372,20 +92333,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -92393,6 +92354,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -92434,20 +92400,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -92469,8 +92435,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -92492,8 +92459,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -92557,6 +92525,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -92598,20 +92571,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -92619,6 +92592,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -92660,20 +92638,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -92695,8 +92673,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -92718,8 +92697,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -96655,8 +96635,7 @@ components:
         product_id:
           type: string
         product_identification_helper:
-          additionalProperties:
-            type: string
+          additionalProperties: true
           type: object
       type: object
     advisory.ProductBranch:
@@ -102929,9 +102908,340 @@ components:
         - cve
         updated_at: updated_at
         vde: vde
+        csaf_json:
+          notes:
+          - audience: audience
+            text: text
+            category: category
+            title: title
+          - audience: audience
+            text: text
+            category: category
+            title: title
+          document: "{}"
+          product_tree: "{}"
+          vulnerabilities:
+          - cwe:
+              name: name
+              id: id
+            cve: cve
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            references:
+            - summary: summary
+              category: category
+              url: url
+            - summary: summary
+              category: category
+              url: url
+            release_date: release_date
+            scores:
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            remediations:
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            flags:
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            ids:
+            - system_name: system_name
+              text: text
+            - system_name: system_name
+              text: text
+            product_status:
+              key:
+              - product_status
+              - product_status
+            threats:
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+          - cwe:
+              name: name
+              id: id
+            cve: cve
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            references:
+            - summary: summary
+              category: category
+              url: url
+            - summary: summary
+              category: category
+              url: url
+            release_date: release_date
+            scores:
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            - cvss_v3:
+                baseSeverity: baseSeverity
+                confidentialityImpact: confidentialityImpact
+                attackComplexity: attackComplexity
+                scope: scope
+                attackVector: attackVector
+                availabilityImpact: availabilityImpact
+                integrityImpact: integrityImpact
+                baseScore: 5.637376656633329
+                privilegesRequired: privilegesRequired
+                vectorString: vectorString
+                userInteraction: userInteraction
+                version: version
+              cvss_v2:
+                temporalScore: 5.962133916683182
+                reportConfidence: reportConfidence
+                availabilityImpact: availabilityImpact
+                collateralDamagePotential: collateralDamagePotential
+                baseScore: 6.027456183070403
+                confidentialityRequirement: confidentialityRequirement
+                integrityRequirement: integrityRequirement
+                remediationLevel: remediationLevel
+                availabilityRequirement: availabilityRequirement
+                accessComplexity: accessComplexity
+                confidentialityImpact: confidentialityImpact
+                targetDistribution: targetDistribution
+                environmentalScore: 1.4658129805029452
+                integrityImpact: integrityImpact
+                exploitability: exploitability
+                accessVector: accessVector
+                authentication: authentication
+              products:
+              - products
+              - products
+            remediations:
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            - date: date
+              entitlements:
+              - entitlements
+              - entitlements
+              product_ids:
+              - product_ids
+              - product_ids
+              restart_required:
+                details: details
+                category: category
+              group_ids:
+              - group_ids
+              - group_ids
+              details: details
+              category: category
+            flags:
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            - date: date
+              product_ids:
+              - product_ids
+              - product_ids
+              group_ids:
+              - group_ids
+              - group_ids
+              label: label
+            ids:
+            - system_name: system_name
+              text: text
+            - system_name: system_name
+              text: text
+            product_status:
+              key:
+              - product_status
+              - product_status
+            threats:
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
+            - product_ids:
+              - product_ids
+              - product_ids
+              details: details
+              category: category
         title: title
         url: url
       properties:
+        csaf_json:
+          $ref: '#/components/schemas/advisory.CSAF'
         cve:
           items:
             type: string
@@ -103470,6 +103780,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -103511,20 +103826,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -103532,6 +103847,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -103573,20 +103893,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -103608,8 +103928,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -103631,8 +103952,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -103697,6 +104019,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -103738,20 +104065,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -103759,6 +104086,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -103800,20 +104132,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -103835,8 +104167,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -103858,8 +104191,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -103923,6 +104257,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -103964,20 +104303,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -103985,6 +104324,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -104026,20 +104370,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -104061,8 +104405,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104084,8 +104429,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104627,6 +104973,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -104668,20 +105019,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -104689,6 +105040,11 @@ components:
                   type: type
                   content: "{}"
                 format: format
+                scenarios:
+                - lang: lang
+                  value: value
+                - lang: lang
+                  value: value
                 cvssV3_0:
                   baseSeverity: baseSeverity
                   confidentialityImpact: confidentialityImpact
@@ -104730,20 +105086,20 @@ components:
                   subConfidentialityImpact: subConfidentialityImpact
                   baseScore: 5.637376656633329
                   privilegesRequired: privilegesRequired
+                  recovery: recovery
                   subIntegrityImpact: subIntegrityImpact
-                  Recovery: Recovery
                   userInteraction: userInteraction
                   version: version
-                  Automatable: Automatable
                   baseSeverity: baseSeverity
+                  automatable: automatable
                   subAvailabilityImpact: subAvailabilityImpact
                   providerUrgency: providerUrgency
+                  safety: safety
                   attackComplexity: attackComplexity
                   vulnAvailabilityImpact: vulnAvailabilityImpact
                   vulnConfidentialityImpact: vulnConfidentialityImpact
                   attackVector: attackVector
                   attackRequirements: attackRequirements
-                  Safety: Safety
                   vulnIntegrityImpact: vulnIntegrityImpact
                   vectorString: vectorString
                   valueDensity: valueDensity
@@ -104765,8 +105121,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104788,8 +105145,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104873,8 +105231,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104896,8 +105255,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104953,8 +105313,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -104976,8 +105337,9 @@ components:
                   lessThanOrEqual: lessThanOrEqual
                   version: version
                   status: status
+                packageURL: packageURL
                 vendor: vendor
-                repos: repos
+                repo: repo
                 packageName: packageName
                 collectionURL: collectionURL
                 platforms:
@@ -105132,6 +105494,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -105173,20 +105540,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -105194,6 +105561,11 @@ components:
                 type: type
                 content: "{}"
               format: format
+              scenarios:
+              - lang: lang
+                value: value
+              - lang: lang
+                value: value
               cvssV3_0:
                 baseSeverity: baseSeverity
                 confidentialityImpact: confidentialityImpact
@@ -105235,20 +105607,20 @@ components:
                 subConfidentialityImpact: subConfidentialityImpact
                 baseScore: 5.637376656633329
                 privilegesRequired: privilegesRequired
+                recovery: recovery
                 subIntegrityImpact: subIntegrityImpact
-                Recovery: Recovery
                 userInteraction: userInteraction
                 version: version
-                Automatable: Automatable
                 baseSeverity: baseSeverity
+                automatable: automatable
                 subAvailabilityImpact: subAvailabilityImpact
                 providerUrgency: providerUrgency
+                safety: safety
                 attackComplexity: attackComplexity
                 vulnAvailabilityImpact: vulnAvailabilityImpact
                 vulnConfidentialityImpact: vulnConfidentialityImpact
                 attackVector: attackVector
                 attackRequirements: attackRequirements
-                Safety: Safety
                 vulnIntegrityImpact: vulnIntegrityImpact
                 vectorString: vectorString
                 valueDensity: valueDensity
@@ -105270,8 +105642,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -105293,8 +105666,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -105378,8 +105752,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -105401,8 +105776,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -105458,8 +105834,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -105481,8 +105858,9 @@ components:
                 lessThanOrEqual: lessThanOrEqual
                 version: version
                 status: status
+              packageURL: packageURL
               vendor: vendor
-              repos: repos
+              repo: repo
               packageName: packageName
               collectionURL: collectionURL
               platforms:
@@ -105623,6 +106001,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -105664,20 +106047,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -105685,6 +106068,11 @@ components:
               type: type
               content: "{}"
             format: format
+            scenarios:
+            - lang: lang
+              value: value
+            - lang: lang
+              value: value
             cvssV3_0:
               baseSeverity: baseSeverity
               confidentialityImpact: confidentialityImpact
@@ -105726,20 +106114,20 @@ components:
               subConfidentialityImpact: subConfidentialityImpact
               baseScore: 5.637376656633329
               privilegesRequired: privilegesRequired
+              recovery: recovery
               subIntegrityImpact: subIntegrityImpact
-              Recovery: Recovery
               userInteraction: userInteraction
               version: version
-              Automatable: Automatable
               baseSeverity: baseSeverity
+              automatable: automatable
               subAvailabilityImpact: subAvailabilityImpact
               providerUrgency: providerUrgency
+              safety: safety
               attackComplexity: attackComplexity
               vulnAvailabilityImpact: vulnAvailabilityImpact
               vulnConfidentialityImpact: vulnConfidentialityImpact
               attackVector: attackVector
               attackRequirements: attackRequirements
-              Safety: Safety
               vulnIntegrityImpact: vulnIntegrityImpact
               vectorString: vectorString
               valueDensity: valueDensity
@@ -105761,8 +106149,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -105784,8 +106173,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -105869,8 +106259,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -105892,8 +106283,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -105949,8 +106341,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -105972,8 +106365,9 @@ components:
               lessThanOrEqual: lessThanOrEqual
               version: version
               status: status
+            packageURL: packageURL
             vendor: vendor
-            repos: repos
+            repo: repo
             packageName: packageName
             collectionURL: collectionURL
             platforms:
@@ -134366,6 +134760,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -134407,20 +134806,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -134428,6 +134827,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -134469,20 +134873,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -134504,8 +134908,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -134527,8 +134932,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -134593,6 +134999,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -134634,20 +135045,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -134655,6 +135066,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -134696,20 +135112,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -134731,8 +135147,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -134754,8 +135171,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -134819,6 +135237,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -134860,20 +135283,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -134881,6 +135304,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -134922,20 +135350,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -134957,8 +135385,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -134980,8 +135409,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -135160,6 +135590,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -135201,20 +135636,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -135222,6 +135657,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -135263,20 +135703,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -135298,8 +135738,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -135321,8 +135762,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -135387,6 +135829,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -135428,20 +135875,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -135449,6 +135896,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -135490,20 +135942,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -135525,8 +135977,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -135548,8 +136001,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -135613,6 +136067,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -135654,20 +136113,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -135675,6 +136134,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -135716,20 +136180,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -135751,8 +136215,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -135774,8 +136239,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -150917,6 +151383,335 @@ components:
           - cve
           updated_at: updated_at
           vde: vde
+          csaf_json:
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            document: "{}"
+            product_tree: "{}"
+            vulnerabilities:
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
           title: title
           url: url
         - cwe:
@@ -150929,6 +151724,335 @@ components:
           - cve
           updated_at: updated_at
           vde: vde
+          csaf_json:
+            notes:
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            - audience: audience
+              text: text
+              category: category
+              title: title
+            document: "{}"
+            product_tree: "{}"
+            vulnerabilities:
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+            - cwe:
+                name: name
+                id: id
+              cve: cve
+              notes:
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              - audience: audience
+                text: text
+                category: category
+                title: title
+              references:
+              - summary: summary
+                category: category
+                url: url
+              - summary: summary
+                category: category
+                url: url
+              release_date: release_date
+              scores:
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              - cvss_v3:
+                  baseSeverity: baseSeverity
+                  confidentialityImpact: confidentialityImpact
+                  attackComplexity: attackComplexity
+                  scope: scope
+                  attackVector: attackVector
+                  availabilityImpact: availabilityImpact
+                  integrityImpact: integrityImpact
+                  baseScore: 5.637376656633329
+                  privilegesRequired: privilegesRequired
+                  vectorString: vectorString
+                  userInteraction: userInteraction
+                  version: version
+                cvss_v2:
+                  temporalScore: 5.962133916683182
+                  reportConfidence: reportConfidence
+                  availabilityImpact: availabilityImpact
+                  collateralDamagePotential: collateralDamagePotential
+                  baseScore: 6.027456183070403
+                  confidentialityRequirement: confidentialityRequirement
+                  integrityRequirement: integrityRequirement
+                  remediationLevel: remediationLevel
+                  availabilityRequirement: availabilityRequirement
+                  accessComplexity: accessComplexity
+                  confidentialityImpact: confidentialityImpact
+                  targetDistribution: targetDistribution
+                  environmentalScore: 1.4658129805029452
+                  integrityImpact: integrityImpact
+                  exploitability: exploitability
+                  accessVector: accessVector
+                  authentication: authentication
+                products:
+                - products
+                - products
+              remediations:
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              - date: date
+                entitlements:
+                - entitlements
+                - entitlements
+                product_ids:
+                - product_ids
+                - product_ids
+                restart_required:
+                  details: details
+                  category: category
+                group_ids:
+                - group_ids
+                - group_ids
+                details: details
+                category: category
+              flags:
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              - date: date
+                product_ids:
+                - product_ids
+                - product_ids
+                group_ids:
+                - group_ids
+                - group_ids
+                label: label
+              ids:
+              - system_name: system_name
+                text: text
+              - system_name: system_name
+                text: text
+              product_status:
+                key:
+                - product_status
+                - product_status
+              threats:
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
+              - product_ids:
+                - product_ids
+                - product_ids
+                details: details
+                category: category
           title: title
           url: url
         _meta:
@@ -151838,6 +152962,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -151879,20 +153008,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -151900,6 +153029,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -151941,20 +153075,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -151976,8 +153110,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -151999,8 +153134,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152065,6 +153201,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152106,20 +153247,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152127,6 +153268,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152168,20 +153314,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152203,8 +153349,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152226,8 +153373,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152291,6 +153439,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152332,20 +153485,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152353,6 +153506,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152394,20 +153552,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152429,8 +153587,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152452,8 +153611,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152632,6 +153792,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152673,20 +153838,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152694,6 +153859,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152735,20 +153905,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152770,8 +153940,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152793,8 +153964,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -152859,6 +154031,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152900,20 +154077,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152921,6 +154098,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -152962,20 +154144,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -152997,8 +154179,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -153020,8 +154203,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -153085,6 +154269,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -153126,20 +154315,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -153147,6 +154336,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -153188,20 +154382,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -153223,8 +154417,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -153246,8 +154441,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -153963,6 +155159,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -154004,20 +155205,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -154025,6 +155226,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -154066,20 +155272,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -154101,8 +155307,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154124,8 +155331,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154209,8 +155417,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154232,8 +155441,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154289,8 +155499,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154312,8 +155523,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154459,6 +155671,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -154500,20 +155717,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -154521,6 +155738,11 @@ components:
                     type: type
                     content: "{}"
                   format: format
+                  scenarios:
+                  - lang: lang
+                    value: value
+                  - lang: lang
+                    value: value
                   cvssV3_0:
                     baseSeverity: baseSeverity
                     confidentialityImpact: confidentialityImpact
@@ -154562,20 +155784,20 @@ components:
                     subConfidentialityImpact: subConfidentialityImpact
                     baseScore: 5.637376656633329
                     privilegesRequired: privilegesRequired
+                    recovery: recovery
                     subIntegrityImpact: subIntegrityImpact
-                    Recovery: Recovery
                     userInteraction: userInteraction
                     version: version
-                    Automatable: Automatable
                     baseSeverity: baseSeverity
+                    automatable: automatable
                     subAvailabilityImpact: subAvailabilityImpact
                     providerUrgency: providerUrgency
+                    safety: safety
                     attackComplexity: attackComplexity
                     vulnAvailabilityImpact: vulnAvailabilityImpact
                     vulnConfidentialityImpact: vulnConfidentialityImpact
                     attackVector: attackVector
                     attackRequirements: attackRequirements
-                    Safety: Safety
                     vulnIntegrityImpact: vulnIntegrityImpact
                     vectorString: vectorString
                     valueDensity: valueDensity
@@ -154597,8 +155819,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154620,8 +155843,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154705,8 +155929,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154728,8 +155953,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154785,8 +156011,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:
@@ -154808,8 +156035,9 @@ components:
                     lessThanOrEqual: lessThanOrEqual
                     version: version
                     status: status
+                  packageURL: packageURL
                   vendor: vendor
-                  repos: repos
+                  repo: repo
                   packageName: packageName
                   collectionURL: collectionURL
                   platforms:

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**CsafJson** | Pointer to [**AdvisoryCSAF**](AdvisoryCSAF.md) |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **Cwe** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
@@ -31,6 +32,31 @@ will change when the set of required properties is changed
 NewAdvisoryVDEAdvisoryWithDefaults instantiates a new AdvisoryVDEAdvisory object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCsafJson
+
+`func (o *AdvisoryVDEAdvisory) GetCsafJson() AdvisoryCSAF`
+
+GetCsafJson returns the CsafJson field if non-nil, zero value otherwise.
+
+### GetCsafJsonOk
+
+`func (o *AdvisoryVDEAdvisory) GetCsafJsonOk() (*AdvisoryCSAF, bool)`
+
+GetCsafJsonOk returns a tuple with the CsafJson field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCsafJson
+
+`func (o *AdvisoryVDEAdvisory) SetCsafJson(v AdvisoryCSAF)`
+
+SetCsafJson sets CsafJson field to given value.
+
+### HasCsafJson
+
+`func (o *AdvisoryVDEAdvisory) HasCsafJson() bool`
+
+HasCsafJson returns a boolean if a field has been set.
 
 ### GetCve
 

@@ -26,6 +26,7 @@ type AdvisoryMetric struct {
 	CvssV40 *AdvisoryMCvssV40 `json:"cvssV4_0,omitempty"`
 	Format *string `json:"format,omitempty"`
 	Other *AdvisoryMetricsOther `json:"other,omitempty"`
+	Scenarios []AdvisoryMetricScenario `json:"scenarios,omitempty"`
 }
 
 // NewAdvisoryMetric instantiates a new AdvisoryMetric object
@@ -237,6 +238,38 @@ func (o *AdvisoryMetric) SetOther(v AdvisoryMetricsOther) {
 	o.Other = &v
 }
 
+// GetScenarios returns the Scenarios field value if set, zero value otherwise.
+func (o *AdvisoryMetric) GetScenarios() []AdvisoryMetricScenario {
+	if o == nil || IsNil(o.Scenarios) {
+		var ret []AdvisoryMetricScenario
+		return ret
+	}
+	return o.Scenarios
+}
+
+// GetScenariosOk returns a tuple with the Scenarios field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMetric) GetScenariosOk() ([]AdvisoryMetricScenario, bool) {
+	if o == nil || IsNil(o.Scenarios) {
+		return nil, false
+	}
+	return o.Scenarios, true
+}
+
+// HasScenarios returns a boolean if a field has been set.
+func (o *AdvisoryMetric) HasScenarios() bool {
+	if o != nil && !IsNil(o.Scenarios) {
+		return true
+	}
+
+	return false
+}
+
+// SetScenarios gets a reference to the given []AdvisoryMetricScenario and assigns it to the Scenarios field.
+func (o *AdvisoryMetric) SetScenarios(v []AdvisoryMetricScenario) {
+	o.Scenarios = v
+}
+
 func (o AdvisoryMetric) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -264,6 +297,9 @@ func (o AdvisoryMetric) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Other) {
 		toSerialize["other"] = o.Other
+	}
+	if !IsNil(o.Scenarios) {
+		toSerialize["scenarios"] = o.Scenarios
 	}
 	return toSerialize, nil
 }

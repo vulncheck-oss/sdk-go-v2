@@ -163731,16 +163731,9 @@ type ApiIndexVulncheckCanaries10dGetRequest struct {
 	cursor *string
 	startCursor *string
 	cve *string
-	alias *string
-	iava *string
-	jvndb *string
-	ilvn *string
-	threatActor *string
-	mitreId *string
-	mispId *string
-	ransomware *string
-	botnet *string
 	published *string
+	srcCountry *string
+	dstCountry *string
 	date *string
 	date2 *string
 	updatedAtStartDate *string
@@ -163781,63 +163774,21 @@ func (r ApiIndexVulncheckCanaries10dGetRequest) Cve(cve string) ApiIndexVulnchec
 	return r
 }
 
-// Specify a vulnerability alias to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) Alias(alias string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.alias = &alias
-	return r
-}
-
-// Specify an IAVA ID to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) Iava(iava string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.iava = &iava
-	return r
-}
-
-// Specify a JVNDB ID to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) Jvndb(jvndb string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.jvndb = &jvndb
-	return r
-}
-
-// Specify an ILVN ID to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) Ilvn(ilvn string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.ilvn = &ilvn
-	return r
-}
-
-// Specify a threat actor name to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) ThreatActor(threatActor string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.threatActor = &threatActor
-	return r
-}
-
-// Specify a MITRE ID to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) MitreId(mitreId string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.mitreId = &mitreId
-	return r
-}
-
-// Specify a MISP ID to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) MispId(mispId string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.mispId = &mispId
-	return r
-}
-
-// Specify a ransomeware family name to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) Ransomware(ransomware string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.ransomware = &ransomware
-	return r
-}
-
-// Specify a botnet name to search with.
-func (r ApiIndexVulncheckCanaries10dGetRequest) Botnet(botnet string) ApiIndexVulncheckCanaries10dGetRequest {
-	r.botnet = &botnet
-	return r
-}
-
 // Specify a published date
 func (r ApiIndexVulncheckCanaries10dGetRequest) Published(published string) ApiIndexVulncheckCanaries10dGetRequest {
 	r.published = &published
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries10dGetRequest) SrcCountry(srcCountry string) ApiIndexVulncheckCanaries10dGetRequest {
+	r.srcCountry = &srcCountry
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries10dGetRequest) DstCountry(dstCountry string) ApiIndexVulncheckCanaries10dGetRequest {
+	r.dstCountry = &dstCountry
 	return r
 }
 
@@ -163955,35 +163906,14 @@ func (a *IndicesAPIService) IndexVulncheckCanaries10dGetExecute(r ApiIndexVulnch
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
-	if r.alias != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
-	}
-	if r.iava != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
-	}
-	if r.jvndb != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
-	}
-	if r.ilvn != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
-	}
-	if r.threatActor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
-	}
-	if r.mitreId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
-	}
-	if r.mispId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
-	}
-	if r.ransomware != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
-	}
-	if r.botnet != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
-	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.srcCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "src_country", r.srcCountry, "", "")
+	}
+	if r.dstCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dst_country", r.dstCountry, "", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
@@ -164106,16 +164036,9 @@ type ApiIndexVulncheckCanaries30dGetRequest struct {
 	cursor *string
 	startCursor *string
 	cve *string
-	alias *string
-	iava *string
-	jvndb *string
-	ilvn *string
-	threatActor *string
-	mitreId *string
-	mispId *string
-	ransomware *string
-	botnet *string
 	published *string
+	srcCountry *string
+	dstCountry *string
 	date *string
 	date2 *string
 	updatedAtStartDate *string
@@ -164156,63 +164079,21 @@ func (r ApiIndexVulncheckCanaries30dGetRequest) Cve(cve string) ApiIndexVulnchec
 	return r
 }
 
-// Specify a vulnerability alias to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) Alias(alias string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.alias = &alias
-	return r
-}
-
-// Specify an IAVA ID to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) Iava(iava string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.iava = &iava
-	return r
-}
-
-// Specify a JVNDB ID to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) Jvndb(jvndb string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.jvndb = &jvndb
-	return r
-}
-
-// Specify an ILVN ID to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) Ilvn(ilvn string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.ilvn = &ilvn
-	return r
-}
-
-// Specify a threat actor name to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) ThreatActor(threatActor string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.threatActor = &threatActor
-	return r
-}
-
-// Specify a MITRE ID to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) MitreId(mitreId string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.mitreId = &mitreId
-	return r
-}
-
-// Specify a MISP ID to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) MispId(mispId string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.mispId = &mispId
-	return r
-}
-
-// Specify a ransomeware family name to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) Ransomware(ransomware string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.ransomware = &ransomware
-	return r
-}
-
-// Specify a botnet name to search with.
-func (r ApiIndexVulncheckCanaries30dGetRequest) Botnet(botnet string) ApiIndexVulncheckCanaries30dGetRequest {
-	r.botnet = &botnet
-	return r
-}
-
 // Specify a published date
 func (r ApiIndexVulncheckCanaries30dGetRequest) Published(published string) ApiIndexVulncheckCanaries30dGetRequest {
 	r.published = &published
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries30dGetRequest) SrcCountry(srcCountry string) ApiIndexVulncheckCanaries30dGetRequest {
+	r.srcCountry = &srcCountry
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries30dGetRequest) DstCountry(dstCountry string) ApiIndexVulncheckCanaries30dGetRequest {
+	r.dstCountry = &dstCountry
 	return r
 }
 
@@ -164330,35 +164211,14 @@ func (a *IndicesAPIService) IndexVulncheckCanaries30dGetExecute(r ApiIndexVulnch
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
-	if r.alias != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
-	}
-	if r.iava != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
-	}
-	if r.jvndb != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
-	}
-	if r.ilvn != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
-	}
-	if r.threatActor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
-	}
-	if r.mitreId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
-	}
-	if r.mispId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
-	}
-	if r.ransomware != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
-	}
-	if r.botnet != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
-	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.srcCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "src_country", r.srcCountry, "", "")
+	}
+	if r.dstCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dst_country", r.dstCountry, "", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
@@ -164481,16 +164341,9 @@ type ApiIndexVulncheckCanaries3dGetRequest struct {
 	cursor *string
 	startCursor *string
 	cve *string
-	alias *string
-	iava *string
-	jvndb *string
-	ilvn *string
-	threatActor *string
-	mitreId *string
-	mispId *string
-	ransomware *string
-	botnet *string
 	published *string
+	srcCountry *string
+	dstCountry *string
 	date *string
 	date2 *string
 	updatedAtStartDate *string
@@ -164531,63 +164384,21 @@ func (r ApiIndexVulncheckCanaries3dGetRequest) Cve(cve string) ApiIndexVulncheck
 	return r
 }
 
-// Specify a vulnerability alias to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) Alias(alias string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.alias = &alias
-	return r
-}
-
-// Specify an IAVA ID to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) Iava(iava string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.iava = &iava
-	return r
-}
-
-// Specify a JVNDB ID to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) Jvndb(jvndb string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.jvndb = &jvndb
-	return r
-}
-
-// Specify an ILVN ID to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) Ilvn(ilvn string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.ilvn = &ilvn
-	return r
-}
-
-// Specify a threat actor name to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) ThreatActor(threatActor string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.threatActor = &threatActor
-	return r
-}
-
-// Specify a MITRE ID to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) MitreId(mitreId string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.mitreId = &mitreId
-	return r
-}
-
-// Specify a MISP ID to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) MispId(mispId string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.mispId = &mispId
-	return r
-}
-
-// Specify a ransomeware family name to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) Ransomware(ransomware string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.ransomware = &ransomware
-	return r
-}
-
-// Specify a botnet name to search with.
-func (r ApiIndexVulncheckCanaries3dGetRequest) Botnet(botnet string) ApiIndexVulncheckCanaries3dGetRequest {
-	r.botnet = &botnet
-	return r
-}
-
 // Specify a published date
 func (r ApiIndexVulncheckCanaries3dGetRequest) Published(published string) ApiIndexVulncheckCanaries3dGetRequest {
 	r.published = &published
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries3dGetRequest) SrcCountry(srcCountry string) ApiIndexVulncheckCanaries3dGetRequest {
+	r.srcCountry = &srcCountry
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries3dGetRequest) DstCountry(dstCountry string) ApiIndexVulncheckCanaries3dGetRequest {
+	r.dstCountry = &dstCountry
 	return r
 }
 
@@ -164705,35 +164516,14 @@ func (a *IndicesAPIService) IndexVulncheckCanaries3dGetExecute(r ApiIndexVulnche
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
-	if r.alias != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
-	}
-	if r.iava != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
-	}
-	if r.jvndb != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
-	}
-	if r.ilvn != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
-	}
-	if r.threatActor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
-	}
-	if r.mitreId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
-	}
-	if r.mispId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
-	}
-	if r.ransomware != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
-	}
-	if r.botnet != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
-	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.srcCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "src_country", r.srcCountry, "", "")
+	}
+	if r.dstCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dst_country", r.dstCountry, "", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
@@ -164856,16 +164646,9 @@ type ApiIndexVulncheckCanaries90dGetRequest struct {
 	cursor *string
 	startCursor *string
 	cve *string
-	alias *string
-	iava *string
-	jvndb *string
-	ilvn *string
-	threatActor *string
-	mitreId *string
-	mispId *string
-	ransomware *string
-	botnet *string
 	published *string
+	srcCountry *string
+	dstCountry *string
 	date *string
 	date2 *string
 	updatedAtStartDate *string
@@ -164906,63 +164689,21 @@ func (r ApiIndexVulncheckCanaries90dGetRequest) Cve(cve string) ApiIndexVulnchec
 	return r
 }
 
-// Specify a vulnerability alias to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) Alias(alias string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.alias = &alias
-	return r
-}
-
-// Specify an IAVA ID to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) Iava(iava string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.iava = &iava
-	return r
-}
-
-// Specify a JVNDB ID to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) Jvndb(jvndb string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.jvndb = &jvndb
-	return r
-}
-
-// Specify an ILVN ID to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) Ilvn(ilvn string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.ilvn = &ilvn
-	return r
-}
-
-// Specify a threat actor name to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) ThreatActor(threatActor string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.threatActor = &threatActor
-	return r
-}
-
-// Specify a MITRE ID to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) MitreId(mitreId string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.mitreId = &mitreId
-	return r
-}
-
-// Specify a MISP ID to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) MispId(mispId string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.mispId = &mispId
-	return r
-}
-
-// Specify a ransomeware family name to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) Ransomware(ransomware string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.ransomware = &ransomware
-	return r
-}
-
-// Specify a botnet name to search with.
-func (r ApiIndexVulncheckCanaries90dGetRequest) Botnet(botnet string) ApiIndexVulncheckCanaries90dGetRequest {
-	r.botnet = &botnet
-	return r
-}
-
 // Specify a published date
 func (r ApiIndexVulncheckCanaries90dGetRequest) Published(published string) ApiIndexVulncheckCanaries90dGetRequest {
 	r.published = &published
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries90dGetRequest) SrcCountry(srcCountry string) ApiIndexVulncheckCanaries90dGetRequest {
+	r.srcCountry = &srcCountry
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanaries90dGetRequest) DstCountry(dstCountry string) ApiIndexVulncheckCanaries90dGetRequest {
+	r.dstCountry = &dstCountry
 	return r
 }
 
@@ -165080,35 +164821,14 @@ func (a *IndicesAPIService) IndexVulncheckCanaries90dGetExecute(r ApiIndexVulnch
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
-	if r.alias != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
-	}
-	if r.iava != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
-	}
-	if r.jvndb != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
-	}
-	if r.ilvn != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
-	}
-	if r.threatActor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
-	}
-	if r.mitreId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
-	}
-	if r.mispId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
-	}
-	if r.ransomware != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
-	}
-	if r.botnet != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
-	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.srcCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "src_country", r.srcCountry, "", "")
+	}
+	if r.dstCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dst_country", r.dstCountry, "", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
@@ -165231,16 +164951,9 @@ type ApiIndexVulncheckCanariesGetRequest struct {
 	cursor *string
 	startCursor *string
 	cve *string
-	alias *string
-	iava *string
-	jvndb *string
-	ilvn *string
-	threatActor *string
-	mitreId *string
-	mispId *string
-	ransomware *string
-	botnet *string
 	published *string
+	srcCountry *string
+	dstCountry *string
 	date *string
 	date2 *string
 	updatedAtStartDate *string
@@ -165281,63 +164994,21 @@ func (r ApiIndexVulncheckCanariesGetRequest) Cve(cve string) ApiIndexVulncheckCa
 	return r
 }
 
-// Specify a vulnerability alias to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) Alias(alias string) ApiIndexVulncheckCanariesGetRequest {
-	r.alias = &alias
-	return r
-}
-
-// Specify an IAVA ID to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) Iava(iava string) ApiIndexVulncheckCanariesGetRequest {
-	r.iava = &iava
-	return r
-}
-
-// Specify a JVNDB ID to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) Jvndb(jvndb string) ApiIndexVulncheckCanariesGetRequest {
-	r.jvndb = &jvndb
-	return r
-}
-
-// Specify an ILVN ID to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) Ilvn(ilvn string) ApiIndexVulncheckCanariesGetRequest {
-	r.ilvn = &ilvn
-	return r
-}
-
-// Specify a threat actor name to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) ThreatActor(threatActor string) ApiIndexVulncheckCanariesGetRequest {
-	r.threatActor = &threatActor
-	return r
-}
-
-// Specify a MITRE ID to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) MitreId(mitreId string) ApiIndexVulncheckCanariesGetRequest {
-	r.mitreId = &mitreId
-	return r
-}
-
-// Specify a MISP ID to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) MispId(mispId string) ApiIndexVulncheckCanariesGetRequest {
-	r.mispId = &mispId
-	return r
-}
-
-// Specify a ransomeware family name to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) Ransomware(ransomware string) ApiIndexVulncheckCanariesGetRequest {
-	r.ransomware = &ransomware
-	return r
-}
-
-// Specify a botnet name to search with.
-func (r ApiIndexVulncheckCanariesGetRequest) Botnet(botnet string) ApiIndexVulncheckCanariesGetRequest {
-	r.botnet = &botnet
-	return r
-}
-
 // Specify a published date
 func (r ApiIndexVulncheckCanariesGetRequest) Published(published string) ApiIndexVulncheckCanariesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanariesGetRequest) SrcCountry(srcCountry string) ApiIndexVulncheckCanariesGetRequest {
+	r.srcCountry = &srcCountry
+	return r
+}
+
+// Country code in ISO-3166 format
+func (r ApiIndexVulncheckCanariesGetRequest) DstCountry(dstCountry string) ApiIndexVulncheckCanariesGetRequest {
+	r.dstCountry = &dstCountry
 	return r
 }
 
@@ -165455,35 +165126,14 @@ func (a *IndicesAPIService) IndexVulncheckCanariesGetExecute(r ApiIndexVulncheck
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
-	if r.alias != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
-	}
-	if r.iava != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
-	}
-	if r.jvndb != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
-	}
-	if r.ilvn != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
-	}
-	if r.threatActor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
-	}
-	if r.mitreId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
-	}
-	if r.mispId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
-	}
-	if r.ransomware != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
-	}
-	if r.botnet != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
-	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.srcCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "src_country", r.srcCountry, "", "")
+	}
+	if r.dstCountry != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dst_country", r.dstCountry, "", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")

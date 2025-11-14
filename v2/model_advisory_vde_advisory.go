@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryVDEAdvisory{}
 
 // AdvisoryVDEAdvisory struct for AdvisoryVDEAdvisory
 type AdvisoryVDEAdvisory struct {
+	CsafJson *AdvisoryCSAF `json:"csaf_json,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	Cwe []string `json:"cwe,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
@@ -45,6 +46,38 @@ func NewAdvisoryVDEAdvisory() *AdvisoryVDEAdvisory {
 func NewAdvisoryVDEAdvisoryWithDefaults() *AdvisoryVDEAdvisory {
 	this := AdvisoryVDEAdvisory{}
 	return &this
+}
+
+// GetCsafJson returns the CsafJson field value if set, zero value otherwise.
+func (o *AdvisoryVDEAdvisory) GetCsafJson() AdvisoryCSAF {
+	if o == nil || IsNil(o.CsafJson) {
+		var ret AdvisoryCSAF
+		return ret
+	}
+	return *o.CsafJson
+}
+
+// GetCsafJsonOk returns a tuple with the CsafJson field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryVDEAdvisory) GetCsafJsonOk() (*AdvisoryCSAF, bool) {
+	if o == nil || IsNil(o.CsafJson) {
+		return nil, false
+	}
+	return o.CsafJson, true
+}
+
+// HasCsafJson returns a boolean if a field has been set.
+func (o *AdvisoryVDEAdvisory) HasCsafJson() bool {
+	if o != nil && !IsNil(o.CsafJson) {
+		return true
+	}
+
+	return false
+}
+
+// SetCsafJson gets a reference to the given AdvisoryCSAF and assigns it to the CsafJson field.
+func (o *AdvisoryVDEAdvisory) SetCsafJson(v AdvisoryCSAF) {
+	o.CsafJson = &v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
@@ -313,6 +346,9 @@ func (o AdvisoryVDEAdvisory) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryVDEAdvisory) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.CsafJson) {
+		toSerialize["csaf_json"] = o.CsafJson
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}

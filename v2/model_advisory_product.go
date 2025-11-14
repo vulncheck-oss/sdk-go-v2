@@ -22,7 +22,7 @@ var _ MappedNullable = &AdvisoryProduct{}
 type AdvisoryProduct struct {
 	Name *string `json:"name,omitempty"`
 	ProductId *string `json:"product_id,omitempty"`
-	ProductIdentificationHelper *map[string]string `json:"product_identification_helper,omitempty"`
+	ProductIdentificationHelper map[string]interface{} `json:"product_identification_helper,omitempty"`
 }
 
 // NewAdvisoryProduct instantiates a new AdvisoryProduct object
@@ -107,19 +107,19 @@ func (o *AdvisoryProduct) SetProductId(v string) {
 }
 
 // GetProductIdentificationHelper returns the ProductIdentificationHelper field value if set, zero value otherwise.
-func (o *AdvisoryProduct) GetProductIdentificationHelper() map[string]string {
+func (o *AdvisoryProduct) GetProductIdentificationHelper() map[string]interface{} {
 	if o == nil || IsNil(o.ProductIdentificationHelper) {
-		var ret map[string]string
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.ProductIdentificationHelper
+	return o.ProductIdentificationHelper
 }
 
 // GetProductIdentificationHelperOk returns a tuple with the ProductIdentificationHelper field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryProduct) GetProductIdentificationHelperOk() (*map[string]string, bool) {
+func (o *AdvisoryProduct) GetProductIdentificationHelperOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.ProductIdentificationHelper) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.ProductIdentificationHelper, true
 }
@@ -133,9 +133,9 @@ func (o *AdvisoryProduct) HasProductIdentificationHelper() bool {
 	return false
 }
 
-// SetProductIdentificationHelper gets a reference to the given map[string]string and assigns it to the ProductIdentificationHelper field.
-func (o *AdvisoryProduct) SetProductIdentificationHelper(v map[string]string) {
-	o.ProductIdentificationHelper = &v
+// SetProductIdentificationHelper gets a reference to the given map[string]interface{} and assigns it to the ProductIdentificationHelper field.
+func (o *AdvisoryProduct) SetProductIdentificationHelper(v map[string]interface{}) {
+	o.ProductIdentificationHelper = v
 }
 
 func (o AdvisoryProduct) MarshalJSON() ([]byte, error) {

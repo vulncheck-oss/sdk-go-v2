@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **CvssV40** | Pointer to [**AdvisoryMCvssV40**](AdvisoryMCvssV40.md) |  | [optional] 
 **Format** | Pointer to **string** |  | [optional] 
 **Other** | Pointer to [**AdvisoryMetricsOther**](AdvisoryMetricsOther.md) |  | [optional] 
+**Scenarios** | Pointer to [**[]AdvisoryMetricScenario**](AdvisoryMetricScenario.md) |  | [optional] 
 
 ## Methods
 
@@ -179,6 +180,31 @@ SetOther sets Other field to given value.
 `func (o *AdvisoryMetric) HasOther() bool`
 
 HasOther returns a boolean if a field has been set.
+
+### GetScenarios
+
+`func (o *AdvisoryMetric) GetScenarios() []AdvisoryMetricScenario`
+
+GetScenarios returns the Scenarios field if non-nil, zero value otherwise.
+
+### GetScenariosOk
+
+`func (o *AdvisoryMetric) GetScenariosOk() (*[]AdvisoryMetricScenario, bool)`
+
+GetScenariosOk returns a tuple with the Scenarios field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScenarios
+
+`func (o *AdvisoryMetric) SetScenarios(v []AdvisoryMetricScenario)`
+
+SetScenarios sets Scenarios field to given value.
+
+### HasScenarios
+
+`func (o *AdvisoryMetric) HasScenarios() bool`
+
+HasScenarios returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

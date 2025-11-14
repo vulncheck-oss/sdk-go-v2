@@ -20,16 +20,16 @@ var _ MappedNullable = &AdvisoryMCvssV40{}
 
 // AdvisoryMCvssV40 struct for AdvisoryMCvssV40
 type AdvisoryMCvssV40 struct {
-	Automatable *string `json:"Automatable,omitempty"`
-	Recovery *string `json:"Recovery,omitempty"`
-	Safety *string `json:"Safety,omitempty"`
 	AttackComplexity *string `json:"attackComplexity,omitempty"`
 	AttackRequirements *string `json:"attackRequirements,omitempty"`
 	AttackVector *string `json:"attackVector,omitempty"`
+	Automatable *string `json:"automatable,omitempty"`
 	BaseScore *float32 `json:"baseScore,omitempty"`
 	BaseSeverity *string `json:"baseSeverity,omitempty"`
 	PrivilegesRequired *string `json:"privilegesRequired,omitempty"`
 	ProviderUrgency *string `json:"providerUrgency,omitempty"`
+	Recovery *string `json:"recovery,omitempty"`
+	Safety *string `json:"safety,omitempty"`
 	SubAvailabilityImpact *string `json:"subAvailabilityImpact,omitempty"`
 	SubConfidentialityImpact *string `json:"subConfidentialityImpact,omitempty"`
 	SubIntegrityImpact *string `json:"subIntegrityImpact,omitempty"`
@@ -58,102 +58,6 @@ func NewAdvisoryMCvssV40() *AdvisoryMCvssV40 {
 func NewAdvisoryMCvssV40WithDefaults() *AdvisoryMCvssV40 {
 	this := AdvisoryMCvssV40{}
 	return &this
-}
-
-// GetAutomatable returns the Automatable field value if set, zero value otherwise.
-func (o *AdvisoryMCvssV40) GetAutomatable() string {
-	if o == nil || IsNil(o.Automatable) {
-		var ret string
-		return ret
-	}
-	return *o.Automatable
-}
-
-// GetAutomatableOk returns a tuple with the Automatable field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryMCvssV40) GetAutomatableOk() (*string, bool) {
-	if o == nil || IsNil(o.Automatable) {
-		return nil, false
-	}
-	return o.Automatable, true
-}
-
-// HasAutomatable returns a boolean if a field has been set.
-func (o *AdvisoryMCvssV40) HasAutomatable() bool {
-	if o != nil && !IsNil(o.Automatable) {
-		return true
-	}
-
-	return false
-}
-
-// SetAutomatable gets a reference to the given string and assigns it to the Automatable field.
-func (o *AdvisoryMCvssV40) SetAutomatable(v string) {
-	o.Automatable = &v
-}
-
-// GetRecovery returns the Recovery field value if set, zero value otherwise.
-func (o *AdvisoryMCvssV40) GetRecovery() string {
-	if o == nil || IsNil(o.Recovery) {
-		var ret string
-		return ret
-	}
-	return *o.Recovery
-}
-
-// GetRecoveryOk returns a tuple with the Recovery field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryMCvssV40) GetRecoveryOk() (*string, bool) {
-	if o == nil || IsNil(o.Recovery) {
-		return nil, false
-	}
-	return o.Recovery, true
-}
-
-// HasRecovery returns a boolean if a field has been set.
-func (o *AdvisoryMCvssV40) HasRecovery() bool {
-	if o != nil && !IsNil(o.Recovery) {
-		return true
-	}
-
-	return false
-}
-
-// SetRecovery gets a reference to the given string and assigns it to the Recovery field.
-func (o *AdvisoryMCvssV40) SetRecovery(v string) {
-	o.Recovery = &v
-}
-
-// GetSafety returns the Safety field value if set, zero value otherwise.
-func (o *AdvisoryMCvssV40) GetSafety() string {
-	if o == nil || IsNil(o.Safety) {
-		var ret string
-		return ret
-	}
-	return *o.Safety
-}
-
-// GetSafetyOk returns a tuple with the Safety field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryMCvssV40) GetSafetyOk() (*string, bool) {
-	if o == nil || IsNil(o.Safety) {
-		return nil, false
-	}
-	return o.Safety, true
-}
-
-// HasSafety returns a boolean if a field has been set.
-func (o *AdvisoryMCvssV40) HasSafety() bool {
-	if o != nil && !IsNil(o.Safety) {
-		return true
-	}
-
-	return false
-}
-
-// SetSafety gets a reference to the given string and assigns it to the Safety field.
-func (o *AdvisoryMCvssV40) SetSafety(v string) {
-	o.Safety = &v
 }
 
 // GetAttackComplexity returns the AttackComplexity field value if set, zero value otherwise.
@@ -250,6 +154,38 @@ func (o *AdvisoryMCvssV40) HasAttackVector() bool {
 // SetAttackVector gets a reference to the given string and assigns it to the AttackVector field.
 func (o *AdvisoryMCvssV40) SetAttackVector(v string) {
 	o.AttackVector = &v
+}
+
+// GetAutomatable returns the Automatable field value if set, zero value otherwise.
+func (o *AdvisoryMCvssV40) GetAutomatable() string {
+	if o == nil || IsNil(o.Automatable) {
+		var ret string
+		return ret
+	}
+	return *o.Automatable
+}
+
+// GetAutomatableOk returns a tuple with the Automatable field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCvssV40) GetAutomatableOk() (*string, bool) {
+	if o == nil || IsNil(o.Automatable) {
+		return nil, false
+	}
+	return o.Automatable, true
+}
+
+// HasAutomatable returns a boolean if a field has been set.
+func (o *AdvisoryMCvssV40) HasAutomatable() bool {
+	if o != nil && !IsNil(o.Automatable) {
+		return true
+	}
+
+	return false
+}
+
+// SetAutomatable gets a reference to the given string and assigns it to the Automatable field.
+func (o *AdvisoryMCvssV40) SetAutomatable(v string) {
+	o.Automatable = &v
 }
 
 // GetBaseScore returns the BaseScore field value if set, zero value otherwise.
@@ -378,6 +314,70 @@ func (o *AdvisoryMCvssV40) HasProviderUrgency() bool {
 // SetProviderUrgency gets a reference to the given string and assigns it to the ProviderUrgency field.
 func (o *AdvisoryMCvssV40) SetProviderUrgency(v string) {
 	o.ProviderUrgency = &v
+}
+
+// GetRecovery returns the Recovery field value if set, zero value otherwise.
+func (o *AdvisoryMCvssV40) GetRecovery() string {
+	if o == nil || IsNil(o.Recovery) {
+		var ret string
+		return ret
+	}
+	return *o.Recovery
+}
+
+// GetRecoveryOk returns a tuple with the Recovery field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCvssV40) GetRecoveryOk() (*string, bool) {
+	if o == nil || IsNil(o.Recovery) {
+		return nil, false
+	}
+	return o.Recovery, true
+}
+
+// HasRecovery returns a boolean if a field has been set.
+func (o *AdvisoryMCvssV40) HasRecovery() bool {
+	if o != nil && !IsNil(o.Recovery) {
+		return true
+	}
+
+	return false
+}
+
+// SetRecovery gets a reference to the given string and assigns it to the Recovery field.
+func (o *AdvisoryMCvssV40) SetRecovery(v string) {
+	o.Recovery = &v
+}
+
+// GetSafety returns the Safety field value if set, zero value otherwise.
+func (o *AdvisoryMCvssV40) GetSafety() string {
+	if o == nil || IsNil(o.Safety) {
+		var ret string
+		return ret
+	}
+	return *o.Safety
+}
+
+// GetSafetyOk returns a tuple with the Safety field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCvssV40) GetSafetyOk() (*string, bool) {
+	if o == nil || IsNil(o.Safety) {
+		return nil, false
+	}
+	return o.Safety, true
+}
+
+// HasSafety returns a boolean if a field has been set.
+func (o *AdvisoryMCvssV40) HasSafety() bool {
+	if o != nil && !IsNil(o.Safety) {
+		return true
+	}
+
+	return false
+}
+
+// SetSafety gets a reference to the given string and assigns it to the Safety field.
+func (o *AdvisoryMCvssV40) SetSafety(v string) {
+	o.Safety = &v
 }
 
 // GetSubAvailabilityImpact returns the SubAvailabilityImpact field value if set, zero value otherwise.
@@ -742,15 +742,6 @@ func (o AdvisoryMCvssV40) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryMCvssV40) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Automatable) {
-		toSerialize["Automatable"] = o.Automatable
-	}
-	if !IsNil(o.Recovery) {
-		toSerialize["Recovery"] = o.Recovery
-	}
-	if !IsNil(o.Safety) {
-		toSerialize["Safety"] = o.Safety
-	}
 	if !IsNil(o.AttackComplexity) {
 		toSerialize["attackComplexity"] = o.AttackComplexity
 	}
@@ -759,6 +750,9 @@ func (o AdvisoryMCvssV40) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.AttackVector) {
 		toSerialize["attackVector"] = o.AttackVector
+	}
+	if !IsNil(o.Automatable) {
+		toSerialize["automatable"] = o.Automatable
 	}
 	if !IsNil(o.BaseScore) {
 		toSerialize["baseScore"] = o.BaseScore
@@ -771,6 +765,12 @@ func (o AdvisoryMCvssV40) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ProviderUrgency) {
 		toSerialize["providerUrgency"] = o.ProviderUrgency
+	}
+	if !IsNil(o.Recovery) {
+		toSerialize["recovery"] = o.Recovery
+	}
+	if !IsNil(o.Safety) {
+		toSerialize["safety"] = o.Safety
 	}
 	if !IsNil(o.SubAvailabilityImpact) {
 		toSerialize["subAvailabilityImpact"] = o.SubAvailabilityImpact

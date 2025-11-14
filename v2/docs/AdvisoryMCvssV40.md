@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Automatable** | Pointer to **string** |  | [optional] 
-**Recovery** | Pointer to **string** |  | [optional] 
-**Safety** | Pointer to **string** |  | [optional] 
 **AttackComplexity** | Pointer to **string** |  | [optional] 
 **AttackRequirements** | Pointer to **string** |  | [optional] 
 **AttackVector** | Pointer to **string** |  | [optional] 
+**Automatable** | Pointer to **string** |  | [optional] 
 **BaseScore** | Pointer to **float32** |  | [optional] 
 **BaseSeverity** | Pointer to **string** |  | [optional] 
 **PrivilegesRequired** | Pointer to **string** |  | [optional] 
 **ProviderUrgency** | Pointer to **string** |  | [optional] 
+**Recovery** | Pointer to **string** |  | [optional] 
+**Safety** | Pointer to **string** |  | [optional] 
 **SubAvailabilityImpact** | Pointer to **string** |  | [optional] 
 **SubConfidentialityImpact** | Pointer to **string** |  | [optional] 
 **SubIntegrityImpact** | Pointer to **string** |  | [optional] 
@@ -44,81 +44,6 @@ will change when the set of required properties is changed
 NewAdvisoryMCvssV40WithDefaults instantiates a new AdvisoryMCvssV40 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetAutomatable
-
-`func (o *AdvisoryMCvssV40) GetAutomatable() string`
-
-GetAutomatable returns the Automatable field if non-nil, zero value otherwise.
-
-### GetAutomatableOk
-
-`func (o *AdvisoryMCvssV40) GetAutomatableOk() (*string, bool)`
-
-GetAutomatableOk returns a tuple with the Automatable field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAutomatable
-
-`func (o *AdvisoryMCvssV40) SetAutomatable(v string)`
-
-SetAutomatable sets Automatable field to given value.
-
-### HasAutomatable
-
-`func (o *AdvisoryMCvssV40) HasAutomatable() bool`
-
-HasAutomatable returns a boolean if a field has been set.
-
-### GetRecovery
-
-`func (o *AdvisoryMCvssV40) GetRecovery() string`
-
-GetRecovery returns the Recovery field if non-nil, zero value otherwise.
-
-### GetRecoveryOk
-
-`func (o *AdvisoryMCvssV40) GetRecoveryOk() (*string, bool)`
-
-GetRecoveryOk returns a tuple with the Recovery field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecovery
-
-`func (o *AdvisoryMCvssV40) SetRecovery(v string)`
-
-SetRecovery sets Recovery field to given value.
-
-### HasRecovery
-
-`func (o *AdvisoryMCvssV40) HasRecovery() bool`
-
-HasRecovery returns a boolean if a field has been set.
-
-### GetSafety
-
-`func (o *AdvisoryMCvssV40) GetSafety() string`
-
-GetSafety returns the Safety field if non-nil, zero value otherwise.
-
-### GetSafetyOk
-
-`func (o *AdvisoryMCvssV40) GetSafetyOk() (*string, bool)`
-
-GetSafetyOk returns a tuple with the Safety field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSafety
-
-`func (o *AdvisoryMCvssV40) SetSafety(v string)`
-
-SetSafety sets Safety field to given value.
-
-### HasSafety
-
-`func (o *AdvisoryMCvssV40) HasSafety() bool`
-
-HasSafety returns a boolean if a field has been set.
 
 ### GetAttackComplexity
 
@@ -194,6 +119,31 @@ SetAttackVector sets AttackVector field to given value.
 `func (o *AdvisoryMCvssV40) HasAttackVector() bool`
 
 HasAttackVector returns a boolean if a field has been set.
+
+### GetAutomatable
+
+`func (o *AdvisoryMCvssV40) GetAutomatable() string`
+
+GetAutomatable returns the Automatable field if non-nil, zero value otherwise.
+
+### GetAutomatableOk
+
+`func (o *AdvisoryMCvssV40) GetAutomatableOk() (*string, bool)`
+
+GetAutomatableOk returns a tuple with the Automatable field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAutomatable
+
+`func (o *AdvisoryMCvssV40) SetAutomatable(v string)`
+
+SetAutomatable sets Automatable field to given value.
+
+### HasAutomatable
+
+`func (o *AdvisoryMCvssV40) HasAutomatable() bool`
+
+HasAutomatable returns a boolean if a field has been set.
 
 ### GetBaseScore
 
@@ -294,6 +244,56 @@ SetProviderUrgency sets ProviderUrgency field to given value.
 `func (o *AdvisoryMCvssV40) HasProviderUrgency() bool`
 
 HasProviderUrgency returns a boolean if a field has been set.
+
+### GetRecovery
+
+`func (o *AdvisoryMCvssV40) GetRecovery() string`
+
+GetRecovery returns the Recovery field if non-nil, zero value otherwise.
+
+### GetRecoveryOk
+
+`func (o *AdvisoryMCvssV40) GetRecoveryOk() (*string, bool)`
+
+GetRecoveryOk returns a tuple with the Recovery field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecovery
+
+`func (o *AdvisoryMCvssV40) SetRecovery(v string)`
+
+SetRecovery sets Recovery field to given value.
+
+### HasRecovery
+
+`func (o *AdvisoryMCvssV40) HasRecovery() bool`
+
+HasRecovery returns a boolean if a field has been set.
+
+### GetSafety
+
+`func (o *AdvisoryMCvssV40) GetSafety() string`
+
+GetSafety returns the Safety field if non-nil, zero value otherwise.
+
+### GetSafetyOk
+
+`func (o *AdvisoryMCvssV40) GetSafetyOk() (*string, bool)`
+
+GetSafetyOk returns a tuple with the Safety field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSafety
+
+`func (o *AdvisoryMCvssV40) SetSafety(v string)`
+
+SetSafety sets Safety field to given value.
+
+### HasSafety
+
+`func (o *AdvisoryMCvssV40) HasSafety() bool`
+
+HasSafety returns a boolean if a field has been set.
 
 ### GetSubAvailabilityImpact
 

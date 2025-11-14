@@ -410,6 +410,7 @@ docs/AdvisoryMendix.md
 docs/AdvisoryMetaData.md
 docs/AdvisoryMetasploitExploit.md
 docs/AdvisoryMetric.md
+docs/AdvisoryMetricScenario.md
 docs/AdvisoryMetricsOther.md
 docs/AdvisoryMicrosoftCVRF.md
 docs/AdvisoryMicrosoftKb.md
@@ -1704,6 +1705,7 @@ model_advisory_mendix.go
 model_advisory_meta_data.go
 model_advisory_metasploit_exploit.go
 model_advisory_metric.go
+model_advisory_metric_scenario.go
 model_advisory_metrics_other.go
 model_advisory_microsoft_cvrf.go
 model_advisory_microsoft_kb.go
