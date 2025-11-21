@@ -113,6 +113,7 @@ paths:
           - autodesk
           - avaya
           - aveva
+          - avidml-advs
           - avigilon
           - aws
           - axis
@@ -199,6 +200,7 @@ paths:
           - emerging-threats-snort
           - emerson
           - endoflife
+          - endress
           - eol
           - eol-alibaba
           - eol-microsoft
@@ -267,6 +269,7 @@ paths:
           - iava
           - ibm
           - idemia
+          - igel
           - il-alerts
           - il-vulnerabilities
           - incibe
@@ -312,6 +315,7 @@ paths:
           - mendix
           - metasploit
           - microsoft-cvrf
+          - microsoft-driver-block-list
           - microsoft-kb
           - mikrotik
           - mindray
@@ -348,6 +352,7 @@ paths:
           - nozomi
           - npm
           - ntp
+          - nuclei
           - nuget
           - nvd-cpe-dictionary
           - nvidia
@@ -415,6 +420,7 @@ paths:
           - salesforce
           - samba
           - sandisk
+          - sans-dshield
           - sap
           - schneider-electric
           - schutzwerk
@@ -470,6 +476,7 @@ paths:
           - twcert
           - ubiquiti
           - ubuntu
+          - ubuntu-purls
           - unify
           - unisoc
           - usd
@@ -10781,6 +10788,162 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "aveva"
+      tags:
+      - indices
+  /index/avidml-advs:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the avidml-advs index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** AI Vulnerability Database
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/avidml-advs?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/avidml-advs?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_AVIDMLAdvs-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "avidml-advs"
       tags:
       - indices
   /index/avigilon:
@@ -24199,6 +24362,162 @@ paths:
       summary: Return vulnerability data stored in index "endoflife"
       tags:
       - indices
+  /index/endress:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the endress index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Endress & Hauser Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/endress?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/endress?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Endress-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "endress"
+      tags:
+      - indices
   /index/eol:
     get:
       description: |
@@ -34807,6 +35126,162 @@ paths:
       summary: Return vulnerability data stored in index "idemia"
       tags:
       - indices
+  /index/igel:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the igel index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** IGEL Security Notices
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/igel?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/igel?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Igel-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "igel"
+      tags:
+      - indices
   /index/il-alerts:
     get:
       description: |
@@ -41927,6 +42402,162 @@ paths:
       summary: Return vulnerability data stored in index "microsoft-cvrf"
       tags:
       - indices
+  /index/microsoft-driver-block-list:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the microsoft-driver-block-list index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Microsoft's Vulnerable Drivers Blocklist
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/microsoft-driver-block-list?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/microsoft-driver-block-list?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_MicrosoftDriverBlockList-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "microsoft-driver-block-list"
+      tags:
+      - indices
   /index/microsoft-kb:
     get:
       description: |
@@ -47541,6 +48172,162 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "ntp"
+      tags:
+      - indices
+  /index/nuclei:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the nuclei index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Nuclei Templates
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/nuclei?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/nuclei?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Nuclei-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "nuclei"
       tags:
       - indices
   /index/nuget:
@@ -57995,6 +58782,162 @@ paths:
       summary: Return vulnerability data stored in index "sandisk"
       tags:
       - indices
+  /index/sans-dshield:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the sans-dshield index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** SANS DShield Honeypot Data
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/sans-dshield?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/sans-dshield?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_SansDshield-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "sans-dshield"
+      tags:
+      - indices
   /index/sap:
     get:
       description: |
@@ -66573,6 +67516,162 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "ubuntu"
+      tags:
+      - indices
+  /index/ubuntu-purls:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the ubuntu-purls index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Ubuntu Purls
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/ubuntu-purls?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/ubuntu-purls?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_purls_PurlResponse-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "ubuntu-purls"
       tags:
       - indices
   /index/unify:
@@ -75157,6 +76256,35 @@ components:
         url:
           type: string
       type: object
+    advisory.AVIDMLAdvs:
+      example:
+        date_added: date_added
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        description: description
+        id: id
+        title: title
+        url: url
+      properties:
+        date_added:
+          type: string
+        description:
+          type: string
+        id:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.AWS:
       example:
         summary: summary
@@ -83324,6 +84452,41 @@ components:
         url:
           type: string
       type: object
+    advisory.Endress:
+      example:
+        summary: summary
+        date_added: date_added
+        mitigation: mitigation
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        impact: impact
+        id: id
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        id:
+          type: string
+        impact:
+          type: string
+        mitigation:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.EnisaIDProduct:
       example:
         product_version: product_version
@@ -85992,6 +87155,41 @@ components:
       type: object
     advisory.IdentificationHelper:
       additionalProperties: true
+      type: object
+    advisory.Igel:
+      example:
+        summary: summary
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        cvss_score: cvss_score
+        updated_at: updated_at
+        cvss_vector: cvss_vector
+        id: id
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        cvss_score:
+          type: string
+        cvss_vector:
+          type: string
+        date_added:
+          type: string
+        id:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
       type: object
     advisory.Impact:
       example:
@@ -90730,6 +91928,39 @@ components:
         url:
           type: string
       type: object
+    advisory.MicrosoftDriverBlockList:
+      example:
+        date_added: date_added
+        file_id: file_id
+        file_metadata: "{}"
+      properties:
+        date_added:
+          type: string
+        file_id:
+          description: From FileAttrib or Deny
+          type: string
+        file_metadata:
+          allOf:
+          - $ref: '#/components/schemas/advisory.MicrosoftFileMetadata'
+          description: File-level metadata
+          type: object
+      type: object
+    advisory.MicrosoftFileMetadata:
+      properties:
+        file_name:
+          description: Full path (FilePath + FileName or FriendlyName)
+          type: string
+        maximum_file_version:
+          type: string
+        minimum_file_version:
+          type: string
+        product_name:
+          type: string
+        sha1_hash:
+          type: string
+        sha256_hash:
+          type: string
+      type: object
     advisory.MicrosoftKb:
       example:
         date_added: date_added
@@ -94575,6 +95806,39 @@ components:
         url:
           type: string
       type: object
+    advisory.Nuclei:
+      example:
+        summary: summary
+        template: "{}"
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        id: id
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        id:
+          type: string
+        summary:
+          type: string
+        template:
+          properties: {}
+          type: object
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.NvidiaRevision:
       example:
         date: date
@@ -96499,6 +97763,9 @@ components:
       type: object
     advisory.PhilipsAdvisory:
       example:
+        affected_products:
+        - affected_products
+        - affected_products
         date_added: date_added
         cve:
         - cve
@@ -96508,6 +97775,10 @@ components:
         url: url
         date_last_updated: date_last_updated
       properties:
+        affected_products:
+          items:
+            type: string
+          type: array
         cve:
           items:
             type: string
@@ -99281,6 +100552,35 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
+    advisory.SansDshield:
+      example:
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        lastSeen: lastSeen
+        updated_at: updated_at
+        firstSeen: firstSeen
+        count: 6
+        url: url
+      properties:
+        count:
+          type: integer
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        firstSeen:
+          type: string
+        lastSeen:
           type: string
         updated_at:
           type: string
@@ -102906,6 +104206,7 @@ components:
         cve:
         - cve
         - cve
+        csaf_url: csaf_url
         updated_at: updated_at
         vde: vde
         csaf_json:
@@ -103242,6 +104543,8 @@ components:
       properties:
         csaf_json:
           $ref: '#/components/schemas/advisory.CSAF'
+        csaf_url:
+          type: string
         cve:
           items:
             type: string
@@ -114229,6 +115532,73 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.AVEVAAdvisory'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_AVIDMLAdvs-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          description: description
+          id: id
+          title: title
+          url: url
+        - date_added: date_added
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          description: description
+          id: id
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.AVIDMLAdvs'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_AWS-paginate_Pagination:
@@ -126039,6 +127409,77 @@ components:
             $ref: '#/components/schemas/advisory.EndOfLife'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_Endress-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          impact: impact
+          id: id
+          title: title
+          url: url
+        - summary: summary
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          impact: impact
+          id: id
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Endress'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_ExodusIntel-paginate_Pagination:
       example:
         data:
@@ -130274,6 +131715,77 @@ components:
             $ref: '#/components/schemas/advisory.Idemia'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_Igel-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          cvss_score: cvss_score
+          updated_at: updated_at
+          cvss_vector: cvss_vector
+          id: id
+          title: title
+          url: url
+        - summary: summary
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          cvss_score: cvss_score
+          updated_at: updated_at
+          cvss_vector: cvss_vector
+          id: id
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Igel'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_IncibeAdvisory-paginate_Pagination:
       example:
         data:
@@ -134198,6 +135710,61 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.MicrosoftCVRF'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_MicrosoftDriverBlockList-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          file_id: file_id
+          file_metadata: "{}"
+        - date_added: date_added
+          file_id: file_id
+          file_metadata: "{}"
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.MicrosoftDriverBlockList'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_MicrosoftKb-paginate_Pagination:
@@ -139627,6 +141194,75 @@ components:
             $ref: '#/components/schemas/advisory.Nozomi'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_Nuclei-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          template: "{}"
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          id: id
+          title: title
+          url: url
+        - summary: summary
+          template: "{}"
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          id: id
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Nuclei'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_OSV-paginate_Pagination:
       example:
         data:
@@ -142283,7 +143919,10 @@ components:
     render.ResponseWithMetadata-array_advisory_PhilipsAdvisory-paginate_Pagination:
       example:
         data:
-        - date_added: date_added
+        - affected_products:
+          - affected_products
+          - affected_products
+          date_added: date_added
           cve:
           - cve
           - cve
@@ -142291,7 +143930,10 @@ components:
           title: title
           url: url
           date_last_updated: date_last_updated
-        - date_added: date_added
+        - affected_products:
+          - affected_products
+          - affected_products
+          date_added: date_added
           cve:
           - cve
           - cve
@@ -145926,6 +147568,73 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.Sandisk'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_SansDshield-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          lastSeen: lastSeen
+          updated_at: updated_at
+          firstSeen: firstSeen
+          count: 6
+          url: url
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          lastSeen: lastSeen
+          updated_at: updated_at
+          firstSeen: firstSeen
+          count: 6
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.SansDshield'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_SchneiderElectricAdvisory-paginate_Pagination:
@@ -151381,6 +153090,7 @@ components:
           cve:
           - cve
           - cve
+          csaf_url: csaf_url
           updated_at: updated_at
           vde: vde
           csaf_json:
@@ -151722,6 +153432,7 @@ components:
           cve:
           - cve
           - cve
+          csaf_url: csaf_url
           updated_at: updated_at
           vde: vde
           csaf_json:

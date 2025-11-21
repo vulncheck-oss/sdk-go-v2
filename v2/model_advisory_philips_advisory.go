@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryPhilipsAdvisory{}
 
 // AdvisoryPhilipsAdvisory struct for AdvisoryPhilipsAdvisory
 type AdvisoryPhilipsAdvisory struct {
+	AffectedProducts []string `json:"affected_products,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	DateLastUpdated *string `json:"date_last_updated,omitempty"`
@@ -43,6 +44,38 @@ func NewAdvisoryPhilipsAdvisory() *AdvisoryPhilipsAdvisory {
 func NewAdvisoryPhilipsAdvisoryWithDefaults() *AdvisoryPhilipsAdvisory {
 	this := AdvisoryPhilipsAdvisory{}
 	return &this
+}
+
+// GetAffectedProducts returns the AffectedProducts field value if set, zero value otherwise.
+func (o *AdvisoryPhilipsAdvisory) GetAffectedProducts() []string {
+	if o == nil || IsNil(o.AffectedProducts) {
+		var ret []string
+		return ret
+	}
+	return o.AffectedProducts
+}
+
+// GetAffectedProductsOk returns a tuple with the AffectedProducts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryPhilipsAdvisory) GetAffectedProductsOk() ([]string, bool) {
+	if o == nil || IsNil(o.AffectedProducts) {
+		return nil, false
+	}
+	return o.AffectedProducts, true
+}
+
+// HasAffectedProducts returns a boolean if a field has been set.
+func (o *AdvisoryPhilipsAdvisory) HasAffectedProducts() bool {
+	if o != nil && !IsNil(o.AffectedProducts) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffectedProducts gets a reference to the given []string and assigns it to the AffectedProducts field.
+func (o *AdvisoryPhilipsAdvisory) SetAffectedProducts(v []string) {
+	o.AffectedProducts = v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
@@ -247,6 +280,9 @@ func (o AdvisoryPhilipsAdvisory) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryPhilipsAdvisory) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AffectedProducts) {
+		toSerialize["affected_products"] = o.AffectedProducts
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
