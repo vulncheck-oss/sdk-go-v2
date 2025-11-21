@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CsafJson** | Pointer to [**AdvisoryCSAF**](AdvisoryCSAF.md) |  | [optional] 
+**CsafUrl** | Pointer to **string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **Cwe** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
@@ -57,6 +58,31 @@ SetCsafJson sets CsafJson field to given value.
 `func (o *AdvisoryVDEAdvisory) HasCsafJson() bool`
 
 HasCsafJson returns a boolean if a field has been set.
+
+### GetCsafUrl
+
+`func (o *AdvisoryVDEAdvisory) GetCsafUrl() string`
+
+GetCsafUrl returns the CsafUrl field if non-nil, zero value otherwise.
+
+### GetCsafUrlOk
+
+`func (o *AdvisoryVDEAdvisory) GetCsafUrlOk() (*string, bool)`
+
+GetCsafUrlOk returns a tuple with the CsafUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCsafUrl
+
+`func (o *AdvisoryVDEAdvisory) SetCsafUrl(v string)`
+
+SetCsafUrl sets CsafUrl field to given value.
+
+### HasCsafUrl
+
+`func (o *AdvisoryVDEAdvisory) HasCsafUrl() bool`
+
+HasCsafUrl returns a boolean if a field has been set.
 
 ### GetCve
 

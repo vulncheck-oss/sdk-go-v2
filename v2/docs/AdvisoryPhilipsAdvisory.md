@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AffectedProducts** | Pointer to **[]string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **DateLastUpdated** | Pointer to **string** |  | [optional] 
@@ -29,6 +30,31 @@ will change when the set of required properties is changed
 NewAdvisoryPhilipsAdvisoryWithDefaults instantiates a new AdvisoryPhilipsAdvisory object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAffectedProducts
+
+`func (o *AdvisoryPhilipsAdvisory) GetAffectedProducts() []string`
+
+GetAffectedProducts returns the AffectedProducts field if non-nil, zero value otherwise.
+
+### GetAffectedProductsOk
+
+`func (o *AdvisoryPhilipsAdvisory) GetAffectedProductsOk() (*[]string, bool)`
+
+GetAffectedProductsOk returns a tuple with the AffectedProducts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffectedProducts
+
+`func (o *AdvisoryPhilipsAdvisory) SetAffectedProducts(v []string)`
+
+SetAffectedProducts sets AffectedProducts field to given value.
+
+### HasAffectedProducts
+
+`func (o *AdvisoryPhilipsAdvisory) HasAffectedProducts() bool`
+
+HasAffectedProducts returns a boolean if a field has been set.
 
 ### GetCve
 
