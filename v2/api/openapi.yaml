@@ -179,6 +179,7 @@ paths:
           - curl
           - cwe
           - dahua
+          - danfoss
           - dassault
           - debian
           - debian-dsa
@@ -297,6 +298,7 @@ paths:
           - krcert-vulnerabilities
           - kubernetes
           - kunbus
+          - lantronix
           - lenovo
           - lexmark
           - lg
@@ -21086,6 +21088,162 @@ paths:
       summary: Return vulnerability data stored in index "dahua"
       tags:
       - indices
+  /index/danfoss:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the danfoss index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Danfoss Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/danfoss?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/danfoss?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Danfoss-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "danfoss"
+      tags:
+      - indices
   /index/dassault:
     get:
       description: |
@@ -39592,6 +39750,162 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "kunbus"
+      tags:
+      - indices
+  /index/lantronix:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the lantronix index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Lantronix Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/lantronix?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/lantronix?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_Lantronix-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "lantronix"
       tags:
       - indices
   /index/lenovo:
@@ -83461,6 +83775,75 @@ components:
         url:
           type: string
       type: object
+    advisory.DanFossCVEDetails:
+      example:
+        severity: severity
+        base_score: base_score
+        cve: cve
+      properties:
+        base_score:
+          type: string
+        cve:
+          type: string
+        severity:
+          type: string
+      type: object
+    advisory.Danfoss:
+      example:
+        summary: summary
+        affected_products: affected_products
+        date_added: date_added
+        mitigation: mitigation
+        cve:
+        - cve
+        - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        cve_details:
+        - severity: severity
+          base_score: base_score
+          cve: cve
+        - severity: severity
+          base_score: base_score
+          cve: cve
+        description: description
+        id: id
+        title: title
+        url: url
+      properties:
+        affected_products:
+          type: string
+        cve:
+          items:
+            type: string
+          type: array
+        cve_details:
+          items:
+            $ref: '#/components/schemas/advisory.DanFossCVEDetails'
+          type: array
+        date_added:
+          type: string
+        description:
+          type: string
+        id:
+          type: string
+        mitigation:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.Dassault:
       example:
         severity: severity
@@ -88152,6 +88535,36 @@ components:
         summary:
           type: string
         title:
+          type: string
+        url:
+          type: string
+      type: object
+    advisory.Lantronix:
+      example:
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
+        title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -125843,6 +126256,99 @@ components:
             $ref: '#/components/schemas/advisory.Dahua'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_Danfoss-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          affected_products: affected_products
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          cve_details:
+          - severity: severity
+            base_score: base_score
+            cve: cve
+          - severity: severity
+            base_score: base_score
+            cve: cve
+          description: description
+          id: id
+          title: title
+          url: url
+        - summary: summary
+          affected_products: affected_products
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          cve_details:
+          - severity: severity
+            base_score: base_score
+            cve: cve
+          - severity: severity
+            base_score: base_score
+            cve: cve
+          description: description
+          id: id
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Danfoss'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_Dassault-paginate_Pagination:
       example:
         data:
@@ -133521,6 +134027,75 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.LG'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_Lantronix-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          title: title
+          url: url
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.Lantronix'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_Lenovo-paginate_Pagination:
