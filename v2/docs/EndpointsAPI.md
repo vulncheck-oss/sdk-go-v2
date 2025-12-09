@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**OpenapiGet**](EndpointsAPI.md#OpenapiGet) | **Get** /openapi | Return OpenAPI specification
 [**PdnsVulncheckC2Get**](EndpointsAPI.md#PdnsVulncheckC2Get) | **Get** /pdns/vulncheck-c2 | Retrieve a list of C2 Hostnames
 [**PurlGet**](EndpointsAPI.md#PurlGet) | **Get** /purl | Request vulnerabilities related to a PURL
+[**PurlsPost**](EndpointsAPI.md#PurlsPost) | **Post** /purls | Request vulnerabilities related to a list of PURLs
 [**RulesInitialAccessTypeGet**](EndpointsAPI.md#RulesInitialAccessTypeGet) | **Get** /rules/initial-access/{type} | Retrieve set of initial-access detection rules
 [**TagsVulncheckC2Get**](EndpointsAPI.md#TagsVulncheckC2Get) | **Get** /tags/vulncheck-c2 | Retrieve a list of C2 IP addresses
 
@@ -516,6 +517,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RenderResponseWithMetadataV3controllersPurlResponseDataV3controllersPurlResponseMetadata**](RenderResponseWithMetadataV3controllersPurlResponseDataV3controllersPurlResponseMetadata.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PurlsPost
+
+> RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata PurlsPost(ctx).Purls(purls).Execute()
+
+Request vulnerabilities related to a list of PURLs
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+	purls := []string{"Property_example"} // []string | PURL strings used to identify and locate software packages
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EndpointsAPI.PurlsPost(context.Background()).Purls(purls).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EndpointsAPI.PurlsPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `PurlsPost`: RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata
+	fmt.Fprintf(os.Stdout, "Response from `EndpointsAPI.PurlsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPurlsPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **purls** | **[]string** | PURL strings used to identify and locate software packages | 
+
+### Return type
+
+[**RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata**](RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata.md)
 
 ### Authorization
 

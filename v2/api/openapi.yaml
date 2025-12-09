@@ -76022,6 +76022,44 @@ paths:
       summary: Request vulnerabilities related to a PURL
       tags:
       - endpoints
+  /purls:
+    post:
+      description: Accepts a JSON array of PURLs in the request body and returns a
+        list of vulnerabilities
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              items:
+                type: string
+              type: array
+        description: PURL strings used to identify and locate software packages
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-v3controllers_PurlsResponseData-v3controllers_PurlsResponseMetadata'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Request vulnerabilities related to a list of PURLs
+      tags:
+      - endpoints
+      x-codegen-request-body-name: purls
   /rules/initial-access/{type}:
     get:
       description: Retrieve set of initial-access detection rules by type
@@ -78769,6 +78807,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         name: name
         url: url
       properties:
@@ -78783,6 +78822,8 @@ components:
         date_added:
           type: string
         name:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -85437,6 +85478,7 @@ components:
         references:
         - references
         - references
+        updated_at: updated_at
         solutions:
         - solutions
         - solutions
@@ -85476,6 +85518,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
       type: object
     advisory.FortinetIPS:
@@ -115513,6 +115557,47 @@ components:
         name:
           type: string
       type: object
+    purl.BatchVulnFinding:
+      example:
+        purl_struct: "{}"
+        research_attributes:
+          is_malicious: true
+          malicious_source: malicious_source
+          eol: true
+          repo_hijackable: true
+          abandoned: true
+          squatted_package: squatted_package
+        vulnerabilities:
+        - detection: detection
+          fixed_version: fixed_version
+        - detection: detection
+          fixed_version: fixed_version
+        purl: purl
+        cves:
+        - cves
+        - cves
+      properties:
+        cves:
+          description: list of associated CVE 's
+          items:
+            type: string
+          type: array
+        purl:
+          description: "the purl, ex. hex/coherence@0.1.2"
+          type: string
+        purl_struct:
+          allOf:
+          - $ref: '#/components/schemas/purl.PackageURLJSON'
+          description: meta-data about the purl
+          type: object
+        research_attributes:
+          $ref: '#/components/schemas/api.OSSPackageResearchAttributes'
+        vulnerabilities:
+          description: list of associated vulnerabilities
+          items:
+            $ref: '#/components/schemas/api.OSSPackageVulnerability'
+          type: array
+      type: object
     purl.PackageURLJSON:
       properties:
         name:
@@ -119462,6 +119547,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           name: name
           url: url
         - date_added: date_added
@@ -119485,6 +119571,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           name: name
           url: url
         _meta:
@@ -128926,6 +129013,7 @@ components:
           references:
           - references
           - references
+          updated_at: updated_at
           solutions:
           - solutions
           - solutions
@@ -128945,6 +129033,7 @@ components:
           references:
           - references
           - references
+          updated_at: updated_at
           solutions:
           - solutions
           - solutions
@@ -166015,6 +166104,57 @@ components:
         data:
           $ref: '#/components/schemas/v3controllers.PurlResponseData'
       type: object
+    render.ResponseWithMetadata-v3controllers_PurlsResponseData-v3controllers_PurlsResponseMetadata:
+      example:
+        data:
+        - purl_struct: "{}"
+          research_attributes:
+            is_malicious: true
+            malicious_source: malicious_source
+            eol: true
+            repo_hijackable: true
+            abandoned: true
+            squatted_package: squatted_package
+          vulnerabilities:
+          - detection: detection
+            fixed_version: fixed_version
+          - detection: detection
+            fixed_version: fixed_version
+          purl: purl
+          cves:
+          - cves
+          - cves
+        - purl_struct: "{}"
+          research_attributes:
+            is_malicious: true
+            malicious_source: malicious_source
+            eol: true
+            repo_hijackable: true
+            abandoned: true
+            squatted_package: squatted_package
+          vulnerabilities:
+          - detection: detection
+            fixed_version: fixed_version
+          - detection: detection
+            fixed_version: fixed_version
+          purl: purl
+          cves:
+          - cves
+          - cves
+        _meta:
+          total_documents: 6
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/v3controllers.PurlsResponseMetadata'
+        data:
+          items:
+            $ref: '#/components/schemas/purl.BatchVulnFinding'
+          type: array
+      type: object
     v3controllers.BackupResponseMetadata:
       example:
         index: index
@@ -166058,6 +166198,18 @@ components:
           - $ref: '#/components/schemas/purl.PackageURLJSON'
           description: meta-data about the purl
           type: object
+        timestamp:
+          description: time of the transaction
+          type: string
+        total_documents:
+          description: number of results found
+          type: integer
+      type: object
+    v3controllers.PurlsResponseMetadata:
+      example:
+        total_documents: 6
+        timestamp: timestamp
+      properties:
         timestamp:
           description: time of the transaction
           type: string
