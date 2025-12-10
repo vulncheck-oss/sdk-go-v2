@@ -262,6 +262,7 @@ paths:
           - hitachi
           - hitachi-energy
           - hkcert
+          - hms
           - honeywell
           - hp
           - hpe
@@ -405,6 +406,7 @@ paths:
           - qualys-qids
           - qubes-qsb
           - ransomware
+          - red-lion
           - redhat
           - redhat-cves
           - renesas
@@ -34037,6 +34039,162 @@ paths:
       summary: Return vulnerability data stored in index "hkcert"
       tags:
       - indices
+  /index/hms:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the hms index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** HMS (Hardware Meets Software) Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/hms?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/hms?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_HMS-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "hms"
+      tags:
+      - indices
   /index/honeywell:
     get:
       description: |
@@ -56443,6 +56601,162 @@ paths:
       security:
       - Bearer: []
       summary: Return vulnerability data stored in index "ransomware"
+      tags:
+      - indices
+  /index/red-lion:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the red-lion index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Red-Lion Security Advisories
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/red-lion?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/red-lion?cursor=<next_cursor_id>`
+      parameters:
+      - description: set the page number of the response
+        in: query
+        name: page
+        schema:
+          type: integer
+      - description: limit the number of findings in the response
+        in: query
+        name: limit
+        schema:
+          type: integer
+      - description: continue server-side paging using a cursor id
+        in: query
+        name: cursor
+        schema:
+          type: string
+      - description: request server-side paging
+        in: query
+        name: start_cursor
+        schema:
+          enum:
+          - "true"
+          type: string
+      - description: Specify a CVE ID to search with.
+        in: query
+        name: cve
+        schema:
+          type: string
+      - description: Specify a vulnerability alias to search with.
+        in: query
+        name: alias
+        schema:
+          type: string
+      - description: Specify an IAVA ID to search with.
+        in: query
+        name: iava
+        schema:
+          type: string
+      - description: Specify a JVNDB ID to search with.
+        in: query
+        name: jvndb
+        schema:
+          type: string
+      - description: Specify an ILVN ID to search with.
+        in: query
+        name: ilvn
+        schema:
+          type: string
+      - description: Specify a threat actor name to search with.
+        in: query
+        name: threat_actor
+        schema:
+          type: string
+      - description: Specify a MITRE ID to search with.
+        in: query
+        name: mitre_id
+        schema:
+          type: string
+      - description: Specify a MISP ID to search with.
+        in: query
+        name: misp_id
+        schema:
+          type: string
+      - description: Specify a ransomeware family name to search with.
+        in: query
+        name: ransomware
+        schema:
+          type: string
+      - description: Specify a botnet name to search with.
+        in: query
+        name: botnet
+        schema:
+          type: string
+      - description: Specify a published date
+        in: query
+        name: published
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: date
+        schema:
+          type: string
+      - description: Specify a starting 'updated-at' date to filter with.
+        in: query
+        name: updatedAtStartDate
+        schema:
+          type: string
+      - description: Specify an ending 'updated-at' date to filter with.
+        in: query
+        name: updatedAtEndDate
+        schema:
+          type: string
+      - description: Specify a starting last modified date to filter with.
+        in: query
+        name: lastModStartDate
+        schema:
+          type: string
+      - description: Specify an ending last modified date to filter with.
+        in: query
+        name: lastModEndDate
+        schema:
+          type: string
+      - description: Specify a starting published date to filter with.
+        in: query
+        name: pubStartDate
+        schema:
+          type: string
+      - description: Specify an ending published date to filter with.
+        in: query
+        name: pubEndDate
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_RedLion-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      summary: Return vulnerability data stored in index "red-lion"
       tags:
       - indices
   /index/redhat:
@@ -87083,6 +87397,44 @@ components:
         type:
           type: string
       type: object
+    advisory.HMS:
+      example:
+        summary: summary
+        affected_products: affected_products
+        date_added: date_added
+        mitigation: mitigation
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        impact: impact
+        id: id
+        title: title
+        url: url
+      properties:
+        affected_products:
+          type: string
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        id:
+          type: string
+        impact:
+          type: string
+        mitigation:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+      type: object
     advisory.HP:
       example:
         severity: severity
@@ -99411,6 +99763,29 @@ components:
         id:
           type: string
         kind:
+          type: string
+      type: object
+    advisory.RedLion:
+      example:
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        updated_at: updated_at
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+        date_added:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
           type: string
       type: object
     advisory.RedhatCVE:
@@ -131320,6 +131695,79 @@ components:
             $ref: '#/components/schemas/advisory.HKCert'
           type: array
       type: object
+    render.ResponseWithMetadata-array_advisory_HMS-paginate_Pagination:
+      example:
+        data:
+        - summary: summary
+          affected_products: affected_products
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          impact: impact
+          id: id
+          title: title
+          url: url
+        - summary: summary
+          affected_products: affected_products
+          date_added: date_added
+          mitigation: mitigation
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          impact: impact
+          id: id
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.HMS'
+          type: array
+      type: object
     render.ResponseWithMetadata-array_advisory_HP-paginate_Pagination:
       example:
         data:
@@ -146254,6 +146702,69 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.RansomwareExploit'
+          type: array
+      type: object
+    render.ResponseWithMetadata-array_advisory_RedLion-paginate_Pagination:
+      example:
+        data:
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        - date_added: date_added
+          cve:
+          - cve
+          - cve
+          updated_at: updated_at
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.RedLion'
           type: array
       type: object
     render.ResponseWithMetadata-array_advisory_RedhatCVE-paginate_Pagination:
