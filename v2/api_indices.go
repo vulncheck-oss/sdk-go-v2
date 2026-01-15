@@ -30,6 +30,8 @@ type ApiIndex7zipGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -72,6 +74,18 @@ func (r ApiIndex7zipGetRequest) Cursor(cursor string) ApiIndex7zipGetRequest {
 // request server-side paging
 func (r ApiIndex7zipGetRequest) StartCursor(startCursor string) ApiIndex7zipGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndex7zipGetRequest) Order(order string) ApiIndex7zipGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndex7zipGetRequest) Sort(sort string) ApiIndex7zipGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -252,6 +266,12 @@ func (a *IndicesAPIService) Index7zipGetExecute(r ApiIndex7zipGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -405,6 +425,8 @@ type ApiIndexA10GetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -447,6 +469,18 @@ func (r ApiIndexA10GetRequest) Cursor(cursor string) ApiIndexA10GetRequest {
 // request server-side paging
 func (r ApiIndexA10GetRequest) StartCursor(startCursor string) ApiIndexA10GetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexA10GetRequest) Order(order string) ApiIndexA10GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexA10GetRequest) Sort(sort string) ApiIndexA10GetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -627,6 +661,12 @@ func (a *IndicesAPIService) IndexA10GetExecute(r ApiIndexA10GetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -780,6 +820,8 @@ type ApiIndexAbbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -822,6 +864,18 @@ func (r ApiIndexAbbGetRequest) Cursor(cursor string) ApiIndexAbbGetRequest {
 // request server-side paging
 func (r ApiIndexAbbGetRequest) StartCursor(startCursor string) ApiIndexAbbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAbbGetRequest) Order(order string) ApiIndexAbbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAbbGetRequest) Sort(sort string) ApiIndexAbbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -1002,6 +1056,12 @@ func (a *IndicesAPIService) IndexAbbGetExecute(r ApiIndexAbbGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -1155,6 +1215,8 @@ type ApiIndexAbbottGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -1197,6 +1259,18 @@ func (r ApiIndexAbbottGetRequest) Cursor(cursor string) ApiIndexAbbottGetRequest
 // request server-side paging
 func (r ApiIndexAbbottGetRequest) StartCursor(startCursor string) ApiIndexAbbottGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAbbottGetRequest) Order(order string) ApiIndexAbbottGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAbbottGetRequest) Sort(sort string) ApiIndexAbbottGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -1377,6 +1451,12 @@ func (a *IndicesAPIService) IndexAbbottGetExecute(r ApiIndexAbbottGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -1530,6 +1610,8 @@ type ApiIndexAbsoluteGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -1572,6 +1654,18 @@ func (r ApiIndexAbsoluteGetRequest) Cursor(cursor string) ApiIndexAbsoluteGetReq
 // request server-side paging
 func (r ApiIndexAbsoluteGetRequest) StartCursor(startCursor string) ApiIndexAbsoluteGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAbsoluteGetRequest) Order(order string) ApiIndexAbsoluteGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAbsoluteGetRequest) Sort(sort string) ApiIndexAbsoluteGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -1752,6 +1846,12 @@ func (a *IndicesAPIService) IndexAbsoluteGetExecute(r ApiIndexAbsoluteGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -1905,6 +2005,8 @@ type ApiIndexAcronisGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -1947,6 +2049,18 @@ func (r ApiIndexAcronisGetRequest) Cursor(cursor string) ApiIndexAcronisGetReque
 // request server-side paging
 func (r ApiIndexAcronisGetRequest) StartCursor(startCursor string) ApiIndexAcronisGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAcronisGetRequest) Order(order string) ApiIndexAcronisGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAcronisGetRequest) Sort(sort string) ApiIndexAcronisGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -2127,6 +2241,12 @@ func (a *IndicesAPIService) IndexAcronisGetExecute(r ApiIndexAcronisGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -2280,6 +2400,8 @@ type ApiIndexAdobeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -2322,6 +2444,18 @@ func (r ApiIndexAdobeGetRequest) Cursor(cursor string) ApiIndexAdobeGetRequest {
 // request server-side paging
 func (r ApiIndexAdobeGetRequest) StartCursor(startCursor string) ApiIndexAdobeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAdobeGetRequest) Order(order string) ApiIndexAdobeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAdobeGetRequest) Sort(sort string) ApiIndexAdobeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -2502,6 +2636,12 @@ func (a *IndicesAPIService) IndexAdobeGetExecute(r ApiIndexAdobeGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -2655,6 +2795,8 @@ type ApiIndexAdvantechGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -2697,6 +2839,18 @@ func (r ApiIndexAdvantechGetRequest) Cursor(cursor string) ApiIndexAdvantechGetR
 // request server-side paging
 func (r ApiIndexAdvantechGetRequest) StartCursor(startCursor string) ApiIndexAdvantechGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAdvantechGetRequest) Order(order string) ApiIndexAdvantechGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAdvantechGetRequest) Sort(sort string) ApiIndexAdvantechGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -2877,6 +3031,12 @@ func (a *IndicesAPIService) IndexAdvantechGetExecute(r ApiIndexAdvantechGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -3030,6 +3190,8 @@ type ApiIndexAdvisoriesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -3072,6 +3234,18 @@ func (r ApiIndexAdvisoriesGetRequest) Cursor(cursor string) ApiIndexAdvisoriesGe
 // request server-side paging
 func (r ApiIndexAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexAdvisoriesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAdvisoriesGetRequest) Order(order string) ApiIndexAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAdvisoriesGetRequest) Sort(sort string) ApiIndexAdvisoriesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -3252,6 +3426,12 @@ func (a *IndicesAPIService) IndexAdvisoriesGetExecute(r ApiIndexAdvisoriesGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -3405,6 +3585,8 @@ type ApiIndexAixGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -3447,6 +3629,18 @@ func (r ApiIndexAixGetRequest) Cursor(cursor string) ApiIndexAixGetRequest {
 // request server-side paging
 func (r ApiIndexAixGetRequest) StartCursor(startCursor string) ApiIndexAixGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAixGetRequest) Order(order string) ApiIndexAixGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAixGetRequest) Sort(sort string) ApiIndexAixGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -3627,6 +3821,12 @@ func (a *IndicesAPIService) IndexAixGetExecute(r ApiIndexAixGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -3780,6 +3980,8 @@ type ApiIndexAlephResearchGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -3822,6 +4024,18 @@ func (r ApiIndexAlephResearchGetRequest) Cursor(cursor string) ApiIndexAlephRese
 // request server-side paging
 func (r ApiIndexAlephResearchGetRequest) StartCursor(startCursor string) ApiIndexAlephResearchGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAlephResearchGetRequest) Order(order string) ApiIndexAlephResearchGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAlephResearchGetRequest) Sort(sort string) ApiIndexAlephResearchGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -4002,6 +4216,12 @@ func (a *IndicesAPIService) IndexAlephResearchGetExecute(r ApiIndexAlephResearch
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -4155,6 +4375,8 @@ type ApiIndexAlibabaAdvsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -4197,6 +4419,18 @@ func (r ApiIndexAlibabaAdvsGetRequest) Cursor(cursor string) ApiIndexAlibabaAdvs
 // request server-side paging
 func (r ApiIndexAlibabaAdvsGetRequest) StartCursor(startCursor string) ApiIndexAlibabaAdvsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAlibabaAdvsGetRequest) Order(order string) ApiIndexAlibabaAdvsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAlibabaAdvsGetRequest) Sort(sort string) ApiIndexAlibabaAdvsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -4377,6 +4611,12 @@ func (a *IndicesAPIService) IndexAlibabaAdvsGetExecute(r ApiIndexAlibabaAdvsGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -4530,6 +4770,8 @@ type ApiIndexAlmaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -4572,6 +4814,18 @@ func (r ApiIndexAlmaGetRequest) Cursor(cursor string) ApiIndexAlmaGetRequest {
 // request server-side paging
 func (r ApiIndexAlmaGetRequest) StartCursor(startCursor string) ApiIndexAlmaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAlmaGetRequest) Order(order string) ApiIndexAlmaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAlmaGetRequest) Sort(sort string) ApiIndexAlmaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -4752,6 +5006,12 @@ func (a *IndicesAPIService) IndexAlmaGetExecute(r ApiIndexAlmaGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -4905,6 +5165,8 @@ type ApiIndexAlpineGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -4947,6 +5209,18 @@ func (r ApiIndexAlpineGetRequest) Cursor(cursor string) ApiIndexAlpineGetRequest
 // request server-side paging
 func (r ApiIndexAlpineGetRequest) StartCursor(startCursor string) ApiIndexAlpineGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAlpineGetRequest) Order(order string) ApiIndexAlpineGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAlpineGetRequest) Sort(sort string) ApiIndexAlpineGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -5127,6 +5401,12 @@ func (a *IndicesAPIService) IndexAlpineGetExecute(r ApiIndexAlpineGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -5280,6 +5560,8 @@ type ApiIndexAlpinePurlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -5322,6 +5604,18 @@ func (r ApiIndexAlpinePurlsGetRequest) Cursor(cursor string) ApiIndexAlpinePurls
 // request server-side paging
 func (r ApiIndexAlpinePurlsGetRequest) StartCursor(startCursor string) ApiIndexAlpinePurlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAlpinePurlsGetRequest) Order(order string) ApiIndexAlpinePurlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAlpinePurlsGetRequest) Sort(sort string) ApiIndexAlpinePurlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -5502,6 +5796,12 @@ func (a *IndicesAPIService) IndexAlpinePurlsGetExecute(r ApiIndexAlpinePurlsGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -5655,6 +5955,8 @@ type ApiIndexAmazonCveGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -5697,6 +5999,18 @@ func (r ApiIndexAmazonCveGetRequest) Cursor(cursor string) ApiIndexAmazonCveGetR
 // request server-side paging
 func (r ApiIndexAmazonCveGetRequest) StartCursor(startCursor string) ApiIndexAmazonCveGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAmazonCveGetRequest) Order(order string) ApiIndexAmazonCveGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAmazonCveGetRequest) Sort(sort string) ApiIndexAmazonCveGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -5877,6 +6191,12 @@ func (a *IndicesAPIService) IndexAmazonCveGetExecute(r ApiIndexAmazonCveGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -6030,6 +6350,8 @@ type ApiIndexAmazonGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -6072,6 +6394,18 @@ func (r ApiIndexAmazonGetRequest) Cursor(cursor string) ApiIndexAmazonGetRequest
 // request server-side paging
 func (r ApiIndexAmazonGetRequest) StartCursor(startCursor string) ApiIndexAmazonGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAmazonGetRequest) Order(order string) ApiIndexAmazonGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAmazonGetRequest) Sort(sort string) ApiIndexAmazonGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -6252,6 +6586,12 @@ func (a *IndicesAPIService) IndexAmazonGetExecute(r ApiIndexAmazonGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -6405,6 +6745,8 @@ type ApiIndexAmdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -6447,6 +6789,18 @@ func (r ApiIndexAmdGetRequest) Cursor(cursor string) ApiIndexAmdGetRequest {
 // request server-side paging
 func (r ApiIndexAmdGetRequest) StartCursor(startCursor string) ApiIndexAmdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAmdGetRequest) Order(order string) ApiIndexAmdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAmdGetRequest) Sort(sort string) ApiIndexAmdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -6627,6 +6981,12 @@ func (a *IndicesAPIService) IndexAmdGetExecute(r ApiIndexAmdGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -6780,6 +7140,8 @@ type ApiIndexAmiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -6822,6 +7184,18 @@ func (r ApiIndexAmiGetRequest) Cursor(cursor string) ApiIndexAmiGetRequest {
 // request server-side paging
 func (r ApiIndexAmiGetRequest) StartCursor(startCursor string) ApiIndexAmiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAmiGetRequest) Order(order string) ApiIndexAmiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAmiGetRequest) Sort(sort string) ApiIndexAmiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -7002,6 +7376,12 @@ func (a *IndicesAPIService) IndexAmiGetExecute(r ApiIndexAmiGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -7155,6 +7535,8 @@ type ApiIndexAnchoreNvdOverrideGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -7197,6 +7579,18 @@ func (r ApiIndexAnchoreNvdOverrideGetRequest) Cursor(cursor string) ApiIndexAnch
 // request server-side paging
 func (r ApiIndexAnchoreNvdOverrideGetRequest) StartCursor(startCursor string) ApiIndexAnchoreNvdOverrideGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAnchoreNvdOverrideGetRequest) Order(order string) ApiIndexAnchoreNvdOverrideGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAnchoreNvdOverrideGetRequest) Sort(sort string) ApiIndexAnchoreNvdOverrideGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -7377,6 +7771,12 @@ func (a *IndicesAPIService) IndexAnchoreNvdOverrideGetExecute(r ApiIndexAnchoreN
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -7530,6 +7930,8 @@ type ApiIndexAndroidGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -7572,6 +7974,18 @@ func (r ApiIndexAndroidGetRequest) Cursor(cursor string) ApiIndexAndroidGetReque
 // request server-side paging
 func (r ApiIndexAndroidGetRequest) StartCursor(startCursor string) ApiIndexAndroidGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAndroidGetRequest) Order(order string) ApiIndexAndroidGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAndroidGetRequest) Sort(sort string) ApiIndexAndroidGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -7752,6 +8166,12 @@ func (a *IndicesAPIService) IndexAndroidGetExecute(r ApiIndexAndroidGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -7905,6 +8325,8 @@ type ApiIndexApacheActivemqGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -7947,6 +8369,18 @@ func (r ApiIndexApacheActivemqGetRequest) Cursor(cursor string) ApiIndexApacheAc
 // request server-side paging
 func (r ApiIndexApacheActivemqGetRequest) StartCursor(startCursor string) ApiIndexApacheActivemqGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheActivemqGetRequest) Order(order string) ApiIndexApacheActivemqGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheActivemqGetRequest) Sort(sort string) ApiIndexApacheActivemqGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -8127,6 +8561,12 @@ func (a *IndicesAPIService) IndexApacheActivemqGetExecute(r ApiIndexApacheActive
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -8280,6 +8720,8 @@ type ApiIndexApacheArchivaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -8322,6 +8764,18 @@ func (r ApiIndexApacheArchivaGetRequest) Cursor(cursor string) ApiIndexApacheArc
 // request server-side paging
 func (r ApiIndexApacheArchivaGetRequest) StartCursor(startCursor string) ApiIndexApacheArchivaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheArchivaGetRequest) Order(order string) ApiIndexApacheArchivaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheArchivaGetRequest) Sort(sort string) ApiIndexApacheArchivaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -8502,6 +8956,12 @@ func (a *IndicesAPIService) IndexApacheArchivaGetExecute(r ApiIndexApacheArchiva
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -8655,6 +9115,8 @@ type ApiIndexApacheArrowGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -8697,6 +9159,18 @@ func (r ApiIndexApacheArrowGetRequest) Cursor(cursor string) ApiIndexApacheArrow
 // request server-side paging
 func (r ApiIndexApacheArrowGetRequest) StartCursor(startCursor string) ApiIndexApacheArrowGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheArrowGetRequest) Order(order string) ApiIndexApacheArrowGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheArrowGetRequest) Sort(sort string) ApiIndexApacheArrowGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -8877,6 +9351,12 @@ func (a *IndicesAPIService) IndexApacheArrowGetExecute(r ApiIndexApacheArrowGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -9030,6 +9510,8 @@ type ApiIndexApacheCamelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -9072,6 +9554,18 @@ func (r ApiIndexApacheCamelGetRequest) Cursor(cursor string) ApiIndexApacheCamel
 // request server-side paging
 func (r ApiIndexApacheCamelGetRequest) StartCursor(startCursor string) ApiIndexApacheCamelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheCamelGetRequest) Order(order string) ApiIndexApacheCamelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheCamelGetRequest) Sort(sort string) ApiIndexApacheCamelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -9252,6 +9746,12 @@ func (a *IndicesAPIService) IndexApacheCamelGetExecute(r ApiIndexApacheCamelGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -9405,6 +9905,8 @@ type ApiIndexApacheCommonsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -9447,6 +9949,18 @@ func (r ApiIndexApacheCommonsGetRequest) Cursor(cursor string) ApiIndexApacheCom
 // request server-side paging
 func (r ApiIndexApacheCommonsGetRequest) StartCursor(startCursor string) ApiIndexApacheCommonsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheCommonsGetRequest) Order(order string) ApiIndexApacheCommonsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheCommonsGetRequest) Sort(sort string) ApiIndexApacheCommonsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -9627,6 +10141,12 @@ func (a *IndicesAPIService) IndexApacheCommonsGetExecute(r ApiIndexApacheCommons
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -9780,6 +10300,8 @@ type ApiIndexApacheCouchdbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -9822,6 +10344,18 @@ func (r ApiIndexApacheCouchdbGetRequest) Cursor(cursor string) ApiIndexApacheCou
 // request server-side paging
 func (r ApiIndexApacheCouchdbGetRequest) StartCursor(startCursor string) ApiIndexApacheCouchdbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheCouchdbGetRequest) Order(order string) ApiIndexApacheCouchdbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheCouchdbGetRequest) Sort(sort string) ApiIndexApacheCouchdbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -10002,6 +10536,12 @@ func (a *IndicesAPIService) IndexApacheCouchdbGetExecute(r ApiIndexApacheCouchdb
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -10155,6 +10695,8 @@ type ApiIndexApacheFlinkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -10197,6 +10739,18 @@ func (r ApiIndexApacheFlinkGetRequest) Cursor(cursor string) ApiIndexApacheFlink
 // request server-side paging
 func (r ApiIndexApacheFlinkGetRequest) StartCursor(startCursor string) ApiIndexApacheFlinkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheFlinkGetRequest) Order(order string) ApiIndexApacheFlinkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheFlinkGetRequest) Sort(sort string) ApiIndexApacheFlinkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -10377,6 +10931,12 @@ func (a *IndicesAPIService) IndexApacheFlinkGetExecute(r ApiIndexApacheFlinkGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -10530,6 +11090,8 @@ type ApiIndexApacheGuacamoleGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -10572,6 +11134,18 @@ func (r ApiIndexApacheGuacamoleGetRequest) Cursor(cursor string) ApiIndexApacheG
 // request server-side paging
 func (r ApiIndexApacheGuacamoleGetRequest) StartCursor(startCursor string) ApiIndexApacheGuacamoleGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheGuacamoleGetRequest) Order(order string) ApiIndexApacheGuacamoleGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheGuacamoleGetRequest) Sort(sort string) ApiIndexApacheGuacamoleGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -10752,6 +11326,12 @@ func (a *IndicesAPIService) IndexApacheGuacamoleGetExecute(r ApiIndexApacheGuaca
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -10905,6 +11485,8 @@ type ApiIndexApacheHadoopGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -10947,6 +11529,18 @@ func (r ApiIndexApacheHadoopGetRequest) Cursor(cursor string) ApiIndexApacheHado
 // request server-side paging
 func (r ApiIndexApacheHadoopGetRequest) StartCursor(startCursor string) ApiIndexApacheHadoopGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheHadoopGetRequest) Order(order string) ApiIndexApacheHadoopGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheHadoopGetRequest) Sort(sort string) ApiIndexApacheHadoopGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -11127,6 +11721,12 @@ func (a *IndicesAPIService) IndexApacheHadoopGetExecute(r ApiIndexApacheHadoopGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -11280,6 +11880,8 @@ type ApiIndexApacheHttpGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -11322,6 +11924,18 @@ func (r ApiIndexApacheHttpGetRequest) Cursor(cursor string) ApiIndexApacheHttpGe
 // request server-side paging
 func (r ApiIndexApacheHttpGetRequest) StartCursor(startCursor string) ApiIndexApacheHttpGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheHttpGetRequest) Order(order string) ApiIndexApacheHttpGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheHttpGetRequest) Sort(sort string) ApiIndexApacheHttpGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -11502,6 +12116,12 @@ func (a *IndicesAPIService) IndexApacheHttpGetExecute(r ApiIndexApacheHttpGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -11655,6 +12275,8 @@ type ApiIndexApacheJspwikiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -11697,6 +12319,18 @@ func (r ApiIndexApacheJspwikiGetRequest) Cursor(cursor string) ApiIndexApacheJsp
 // request server-side paging
 func (r ApiIndexApacheJspwikiGetRequest) StartCursor(startCursor string) ApiIndexApacheJspwikiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheJspwikiGetRequest) Order(order string) ApiIndexApacheJspwikiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheJspwikiGetRequest) Sort(sort string) ApiIndexApacheJspwikiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -11877,6 +12511,12 @@ func (a *IndicesAPIService) IndexApacheJspwikiGetExecute(r ApiIndexApacheJspwiki
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -12030,6 +12670,8 @@ type ApiIndexApacheKafkaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -12072,6 +12714,18 @@ func (r ApiIndexApacheKafkaGetRequest) Cursor(cursor string) ApiIndexApacheKafka
 // request server-side paging
 func (r ApiIndexApacheKafkaGetRequest) StartCursor(startCursor string) ApiIndexApacheKafkaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheKafkaGetRequest) Order(order string) ApiIndexApacheKafkaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheKafkaGetRequest) Sort(sort string) ApiIndexApacheKafkaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -12252,6 +12906,12 @@ func (a *IndicesAPIService) IndexApacheKafkaGetExecute(r ApiIndexApacheKafkaGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -12405,6 +13065,8 @@ type ApiIndexApacheLoggingservicesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -12447,6 +13109,18 @@ func (r ApiIndexApacheLoggingservicesGetRequest) Cursor(cursor string) ApiIndexA
 // request server-side paging
 func (r ApiIndexApacheLoggingservicesGetRequest) StartCursor(startCursor string) ApiIndexApacheLoggingservicesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheLoggingservicesGetRequest) Order(order string) ApiIndexApacheLoggingservicesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheLoggingservicesGetRequest) Sort(sort string) ApiIndexApacheLoggingservicesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -12627,6 +13301,12 @@ func (a *IndicesAPIService) IndexApacheLoggingservicesGetExecute(r ApiIndexApach
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -12780,6 +13460,8 @@ type ApiIndexApacheNifiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -12822,6 +13504,18 @@ func (r ApiIndexApacheNifiGetRequest) Cursor(cursor string) ApiIndexApacheNifiGe
 // request server-side paging
 func (r ApiIndexApacheNifiGetRequest) StartCursor(startCursor string) ApiIndexApacheNifiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheNifiGetRequest) Order(order string) ApiIndexApacheNifiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheNifiGetRequest) Sort(sort string) ApiIndexApacheNifiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -13002,6 +13696,12 @@ func (a *IndicesAPIService) IndexApacheNifiGetExecute(r ApiIndexApacheNifiGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -13155,6 +13855,8 @@ type ApiIndexApacheOfbizGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -13197,6 +13899,18 @@ func (r ApiIndexApacheOfbizGetRequest) Cursor(cursor string) ApiIndexApacheOfbiz
 // request server-side paging
 func (r ApiIndexApacheOfbizGetRequest) StartCursor(startCursor string) ApiIndexApacheOfbizGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheOfbizGetRequest) Order(order string) ApiIndexApacheOfbizGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheOfbizGetRequest) Sort(sort string) ApiIndexApacheOfbizGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -13377,6 +14091,12 @@ func (a *IndicesAPIService) IndexApacheOfbizGetExecute(r ApiIndexApacheOfbizGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -13530,6 +14250,8 @@ type ApiIndexApacheOpenmeetingsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -13572,6 +14294,18 @@ func (r ApiIndexApacheOpenmeetingsGetRequest) Cursor(cursor string) ApiIndexApac
 // request server-side paging
 func (r ApiIndexApacheOpenmeetingsGetRequest) StartCursor(startCursor string) ApiIndexApacheOpenmeetingsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheOpenmeetingsGetRequest) Order(order string) ApiIndexApacheOpenmeetingsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheOpenmeetingsGetRequest) Sort(sort string) ApiIndexApacheOpenmeetingsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -13752,6 +14486,12 @@ func (a *IndicesAPIService) IndexApacheOpenmeetingsGetExecute(r ApiIndexApacheOp
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -13905,6 +14645,8 @@ type ApiIndexApacheOpenofficeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -13947,6 +14689,18 @@ func (r ApiIndexApacheOpenofficeGetRequest) Cursor(cursor string) ApiIndexApache
 // request server-side paging
 func (r ApiIndexApacheOpenofficeGetRequest) StartCursor(startCursor string) ApiIndexApacheOpenofficeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheOpenofficeGetRequest) Order(order string) ApiIndexApacheOpenofficeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheOpenofficeGetRequest) Sort(sort string) ApiIndexApacheOpenofficeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -14127,6 +14881,12 @@ func (a *IndicesAPIService) IndexApacheOpenofficeGetExecute(r ApiIndexApacheOpen
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -14280,6 +15040,8 @@ type ApiIndexApachePulsarGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -14322,6 +15084,18 @@ func (r ApiIndexApachePulsarGetRequest) Cursor(cursor string) ApiIndexApachePuls
 // request server-side paging
 func (r ApiIndexApachePulsarGetRequest) StartCursor(startCursor string) ApiIndexApachePulsarGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApachePulsarGetRequest) Order(order string) ApiIndexApachePulsarGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApachePulsarGetRequest) Sort(sort string) ApiIndexApachePulsarGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -14502,6 +15276,12 @@ func (a *IndicesAPIService) IndexApachePulsarGetExecute(r ApiIndexApachePulsarGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -14655,6 +15435,8 @@ type ApiIndexApacheShiroGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -14697,6 +15479,18 @@ func (r ApiIndexApacheShiroGetRequest) Cursor(cursor string) ApiIndexApacheShiro
 // request server-side paging
 func (r ApiIndexApacheShiroGetRequest) StartCursor(startCursor string) ApiIndexApacheShiroGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheShiroGetRequest) Order(order string) ApiIndexApacheShiroGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheShiroGetRequest) Sort(sort string) ApiIndexApacheShiroGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -14877,6 +15671,12 @@ func (a *IndicesAPIService) IndexApacheShiroGetExecute(r ApiIndexApacheShiroGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -15030,6 +15830,8 @@ type ApiIndexApacheSparkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -15072,6 +15874,18 @@ func (r ApiIndexApacheSparkGetRequest) Cursor(cursor string) ApiIndexApacheSpark
 // request server-side paging
 func (r ApiIndexApacheSparkGetRequest) StartCursor(startCursor string) ApiIndexApacheSparkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheSparkGetRequest) Order(order string) ApiIndexApacheSparkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheSparkGetRequest) Sort(sort string) ApiIndexApacheSparkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -15252,6 +16066,12 @@ func (a *IndicesAPIService) IndexApacheSparkGetExecute(r ApiIndexApacheSparkGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -15405,6 +16225,8 @@ type ApiIndexApacheStrutsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -15447,6 +16269,18 @@ func (r ApiIndexApacheStrutsGetRequest) Cursor(cursor string) ApiIndexApacheStru
 // request server-side paging
 func (r ApiIndexApacheStrutsGetRequest) StartCursor(startCursor string) ApiIndexApacheStrutsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheStrutsGetRequest) Order(order string) ApiIndexApacheStrutsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheStrutsGetRequest) Sort(sort string) ApiIndexApacheStrutsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -15627,6 +16461,12 @@ func (a *IndicesAPIService) IndexApacheStrutsGetExecute(r ApiIndexApacheStrutsGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -15780,6 +16620,8 @@ type ApiIndexApacheSubversionGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -15822,6 +16664,18 @@ func (r ApiIndexApacheSubversionGetRequest) Cursor(cursor string) ApiIndexApache
 // request server-side paging
 func (r ApiIndexApacheSubversionGetRequest) StartCursor(startCursor string) ApiIndexApacheSubversionGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheSubversionGetRequest) Order(order string) ApiIndexApacheSubversionGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheSubversionGetRequest) Sort(sort string) ApiIndexApacheSubversionGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -16002,6 +16856,12 @@ func (a *IndicesAPIService) IndexApacheSubversionGetExecute(r ApiIndexApacheSubv
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -16155,6 +17015,8 @@ type ApiIndexApacheSupersetGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -16197,6 +17059,18 @@ func (r ApiIndexApacheSupersetGetRequest) Cursor(cursor string) ApiIndexApacheSu
 // request server-side paging
 func (r ApiIndexApacheSupersetGetRequest) StartCursor(startCursor string) ApiIndexApacheSupersetGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheSupersetGetRequest) Order(order string) ApiIndexApacheSupersetGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheSupersetGetRequest) Sort(sort string) ApiIndexApacheSupersetGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -16377,6 +17251,12 @@ func (a *IndicesAPIService) IndexApacheSupersetGetExecute(r ApiIndexApacheSupers
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -16530,6 +17410,8 @@ type ApiIndexApacheTomcatGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -16572,6 +17454,18 @@ func (r ApiIndexApacheTomcatGetRequest) Cursor(cursor string) ApiIndexApacheTomc
 // request server-side paging
 func (r ApiIndexApacheTomcatGetRequest) StartCursor(startCursor string) ApiIndexApacheTomcatGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheTomcatGetRequest) Order(order string) ApiIndexApacheTomcatGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheTomcatGetRequest) Sort(sort string) ApiIndexApacheTomcatGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -16752,6 +17646,12 @@ func (a *IndicesAPIService) IndexApacheTomcatGetExecute(r ApiIndexApacheTomcatGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -16905,6 +17805,8 @@ type ApiIndexApacheZookeeperGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -16947,6 +17849,18 @@ func (r ApiIndexApacheZookeeperGetRequest) Cursor(cursor string) ApiIndexApacheZ
 // request server-side paging
 func (r ApiIndexApacheZookeeperGetRequest) StartCursor(startCursor string) ApiIndexApacheZookeeperGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexApacheZookeeperGetRequest) Order(order string) ApiIndexApacheZookeeperGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexApacheZookeeperGetRequest) Sort(sort string) ApiIndexApacheZookeeperGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -17127,6 +18041,12 @@ func (a *IndicesAPIService) IndexApacheZookeeperGetExecute(r ApiIndexApacheZooke
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -17280,6 +18200,8 @@ type ApiIndexAppcheckGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -17322,6 +18244,18 @@ func (r ApiIndexAppcheckGetRequest) Cursor(cursor string) ApiIndexAppcheckGetReq
 // request server-side paging
 func (r ApiIndexAppcheckGetRequest) StartCursor(startCursor string) ApiIndexAppcheckGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAppcheckGetRequest) Order(order string) ApiIndexAppcheckGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAppcheckGetRequest) Sort(sort string) ApiIndexAppcheckGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -17502,6 +18436,12 @@ func (a *IndicesAPIService) IndexAppcheckGetExecute(r ApiIndexAppcheckGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -17655,6 +18595,8 @@ type ApiIndexAppgateGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -17697,6 +18639,18 @@ func (r ApiIndexAppgateGetRequest) Cursor(cursor string) ApiIndexAppgateGetReque
 // request server-side paging
 func (r ApiIndexAppgateGetRequest) StartCursor(startCursor string) ApiIndexAppgateGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAppgateGetRequest) Order(order string) ApiIndexAppgateGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAppgateGetRequest) Sort(sort string) ApiIndexAppgateGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -17877,6 +18831,12 @@ func (a *IndicesAPIService) IndexAppgateGetExecute(r ApiIndexAppgateGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -18030,6 +18990,8 @@ type ApiIndexAppleGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -18072,6 +19034,18 @@ func (r ApiIndexAppleGetRequest) Cursor(cursor string) ApiIndexAppleGetRequest {
 // request server-side paging
 func (r ApiIndexAppleGetRequest) StartCursor(startCursor string) ApiIndexAppleGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAppleGetRequest) Order(order string) ApiIndexAppleGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAppleGetRequest) Sort(sort string) ApiIndexAppleGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -18252,6 +19226,12 @@ func (a *IndicesAPIService) IndexAppleGetExecute(r ApiIndexAppleGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -18405,6 +19385,8 @@ type ApiIndexArchGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -18447,6 +19429,18 @@ func (r ApiIndexArchGetRequest) Cursor(cursor string) ApiIndexArchGetRequest {
 // request server-side paging
 func (r ApiIndexArchGetRequest) StartCursor(startCursor string) ApiIndexArchGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexArchGetRequest) Order(order string) ApiIndexArchGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexArchGetRequest) Sort(sort string) ApiIndexArchGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -18627,6 +19621,12 @@ func (a *IndicesAPIService) IndexArchGetExecute(r ApiIndexArchGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -18780,6 +19780,8 @@ type ApiIndexAristaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -18822,6 +19824,18 @@ func (r ApiIndexAristaGetRequest) Cursor(cursor string) ApiIndexAristaGetRequest
 // request server-side paging
 func (r ApiIndexAristaGetRequest) StartCursor(startCursor string) ApiIndexAristaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAristaGetRequest) Order(order string) ApiIndexAristaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAristaGetRequest) Sort(sort string) ApiIndexAristaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -19002,6 +20016,12 @@ func (a *IndicesAPIService) IndexAristaGetExecute(r ApiIndexAristaGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -19155,6 +20175,8 @@ type ApiIndexArubaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -19197,6 +20219,18 @@ func (r ApiIndexArubaGetRequest) Cursor(cursor string) ApiIndexArubaGetRequest {
 // request server-side paging
 func (r ApiIndexArubaGetRequest) StartCursor(startCursor string) ApiIndexArubaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexArubaGetRequest) Order(order string) ApiIndexArubaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexArubaGetRequest) Sort(sort string) ApiIndexArubaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -19377,6 +20411,12 @@ func (a *IndicesAPIService) IndexArubaGetExecute(r ApiIndexArubaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -19530,6 +20570,8 @@ type ApiIndexAsrgGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -19572,6 +20614,18 @@ func (r ApiIndexAsrgGetRequest) Cursor(cursor string) ApiIndexAsrgGetRequest {
 // request server-side paging
 func (r ApiIndexAsrgGetRequest) StartCursor(startCursor string) ApiIndexAsrgGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAsrgGetRequest) Order(order string) ApiIndexAsrgGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAsrgGetRequest) Sort(sort string) ApiIndexAsrgGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -19752,6 +20806,12 @@ func (a *IndicesAPIService) IndexAsrgGetExecute(r ApiIndexAsrgGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -19905,6 +20965,8 @@ type ApiIndexAssetnoteGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -19947,6 +21009,18 @@ func (r ApiIndexAssetnoteGetRequest) Cursor(cursor string) ApiIndexAssetnoteGetR
 // request server-side paging
 func (r ApiIndexAssetnoteGetRequest) StartCursor(startCursor string) ApiIndexAssetnoteGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAssetnoteGetRequest) Order(order string) ApiIndexAssetnoteGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAssetnoteGetRequest) Sort(sort string) ApiIndexAssetnoteGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -20127,6 +21201,12 @@ func (a *IndicesAPIService) IndexAssetnoteGetExecute(r ApiIndexAssetnoteGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -20280,6 +21360,8 @@ type ApiIndexAsteriskGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -20322,6 +21404,18 @@ func (r ApiIndexAsteriskGetRequest) Cursor(cursor string) ApiIndexAsteriskGetReq
 // request server-side paging
 func (r ApiIndexAsteriskGetRequest) StartCursor(startCursor string) ApiIndexAsteriskGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAsteriskGetRequest) Order(order string) ApiIndexAsteriskGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAsteriskGetRequest) Sort(sort string) ApiIndexAsteriskGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -20502,6 +21596,12 @@ func (a *IndicesAPIService) IndexAsteriskGetExecute(r ApiIndexAsteriskGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -20655,6 +21755,8 @@ type ApiIndexAstraGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -20697,6 +21799,18 @@ func (r ApiIndexAstraGetRequest) Cursor(cursor string) ApiIndexAstraGetRequest {
 // request server-side paging
 func (r ApiIndexAstraGetRequest) StartCursor(startCursor string) ApiIndexAstraGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAstraGetRequest) Order(order string) ApiIndexAstraGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAstraGetRequest) Sort(sort string) ApiIndexAstraGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -20877,6 +21991,12 @@ func (a *IndicesAPIService) IndexAstraGetExecute(r ApiIndexAstraGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -21030,6 +22150,8 @@ type ApiIndexAsusGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -21072,6 +22194,18 @@ func (r ApiIndexAsusGetRequest) Cursor(cursor string) ApiIndexAsusGetRequest {
 // request server-side paging
 func (r ApiIndexAsusGetRequest) StartCursor(startCursor string) ApiIndexAsusGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAsusGetRequest) Order(order string) ApiIndexAsusGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAsusGetRequest) Sort(sort string) ApiIndexAsusGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -21252,6 +22386,12 @@ func (a *IndicesAPIService) IndexAsusGetExecute(r ApiIndexAsusGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -21405,6 +22545,8 @@ type ApiIndexAtlassianGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -21447,6 +22589,18 @@ func (r ApiIndexAtlassianGetRequest) Cursor(cursor string) ApiIndexAtlassianGetR
 // request server-side paging
 func (r ApiIndexAtlassianGetRequest) StartCursor(startCursor string) ApiIndexAtlassianGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAtlassianGetRequest) Order(order string) ApiIndexAtlassianGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAtlassianGetRequest) Sort(sort string) ApiIndexAtlassianGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -21627,6 +22781,12 @@ func (a *IndicesAPIService) IndexAtlassianGetExecute(r ApiIndexAtlassianGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -21780,6 +22940,8 @@ type ApiIndexAtlassianVulnsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -21822,6 +22984,18 @@ func (r ApiIndexAtlassianVulnsGetRequest) Cursor(cursor string) ApiIndexAtlassia
 // request server-side paging
 func (r ApiIndexAtlassianVulnsGetRequest) StartCursor(startCursor string) ApiIndexAtlassianVulnsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAtlassianVulnsGetRequest) Order(order string) ApiIndexAtlassianVulnsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAtlassianVulnsGetRequest) Sort(sort string) ApiIndexAtlassianVulnsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -22002,6 +23176,12 @@ func (a *IndicesAPIService) IndexAtlassianVulnsGetExecute(r ApiIndexAtlassianVul
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -22155,6 +23335,8 @@ type ApiIndexAtredisGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -22197,6 +23379,18 @@ func (r ApiIndexAtredisGetRequest) Cursor(cursor string) ApiIndexAtredisGetReque
 // request server-side paging
 func (r ApiIndexAtredisGetRequest) StartCursor(startCursor string) ApiIndexAtredisGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAtredisGetRequest) Order(order string) ApiIndexAtredisGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAtredisGetRequest) Sort(sort string) ApiIndexAtredisGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -22377,6 +23571,12 @@ func (a *IndicesAPIService) IndexAtredisGetExecute(r ApiIndexAtredisGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -22530,6 +23730,8 @@ type ApiIndexAudiocodesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -22572,6 +23774,18 @@ func (r ApiIndexAudiocodesGetRequest) Cursor(cursor string) ApiIndexAudiocodesGe
 // request server-side paging
 func (r ApiIndexAudiocodesGetRequest) StartCursor(startCursor string) ApiIndexAudiocodesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAudiocodesGetRequest) Order(order string) ApiIndexAudiocodesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAudiocodesGetRequest) Sort(sort string) ApiIndexAudiocodesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -22752,6 +23966,12 @@ func (a *IndicesAPIService) IndexAudiocodesGetExecute(r ApiIndexAudiocodesGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -22905,6 +24125,8 @@ type ApiIndexAuscertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -22947,6 +24169,18 @@ func (r ApiIndexAuscertGetRequest) Cursor(cursor string) ApiIndexAuscertGetReque
 // request server-side paging
 func (r ApiIndexAuscertGetRequest) StartCursor(startCursor string) ApiIndexAuscertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAuscertGetRequest) Order(order string) ApiIndexAuscertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAuscertGetRequest) Sort(sort string) ApiIndexAuscertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -23127,6 +24361,12 @@ func (a *IndicesAPIService) IndexAuscertGetExecute(r ApiIndexAuscertGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -23280,6 +24520,8 @@ type ApiIndexAutodeskGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -23322,6 +24564,18 @@ func (r ApiIndexAutodeskGetRequest) Cursor(cursor string) ApiIndexAutodeskGetReq
 // request server-side paging
 func (r ApiIndexAutodeskGetRequest) StartCursor(startCursor string) ApiIndexAutodeskGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAutodeskGetRequest) Order(order string) ApiIndexAutodeskGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAutodeskGetRequest) Sort(sort string) ApiIndexAutodeskGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -23502,6 +24756,12 @@ func (a *IndicesAPIService) IndexAutodeskGetExecute(r ApiIndexAutodeskGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -23655,6 +24915,8 @@ type ApiIndexAvayaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -23697,6 +24959,18 @@ func (r ApiIndexAvayaGetRequest) Cursor(cursor string) ApiIndexAvayaGetRequest {
 // request server-side paging
 func (r ApiIndexAvayaGetRequest) StartCursor(startCursor string) ApiIndexAvayaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAvayaGetRequest) Order(order string) ApiIndexAvayaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAvayaGetRequest) Sort(sort string) ApiIndexAvayaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -23877,6 +25151,12 @@ func (a *IndicesAPIService) IndexAvayaGetExecute(r ApiIndexAvayaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -24030,6 +25310,8 @@ type ApiIndexAvevaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -24072,6 +25354,18 @@ func (r ApiIndexAvevaGetRequest) Cursor(cursor string) ApiIndexAvevaGetRequest {
 // request server-side paging
 func (r ApiIndexAvevaGetRequest) StartCursor(startCursor string) ApiIndexAvevaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAvevaGetRequest) Order(order string) ApiIndexAvevaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAvevaGetRequest) Sort(sort string) ApiIndexAvevaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -24252,6 +25546,12 @@ func (a *IndicesAPIService) IndexAvevaGetExecute(r ApiIndexAvevaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -24405,6 +25705,8 @@ type ApiIndexAvidmlAdvsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -24447,6 +25749,18 @@ func (r ApiIndexAvidmlAdvsGetRequest) Cursor(cursor string) ApiIndexAvidmlAdvsGe
 // request server-side paging
 func (r ApiIndexAvidmlAdvsGetRequest) StartCursor(startCursor string) ApiIndexAvidmlAdvsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAvidmlAdvsGetRequest) Order(order string) ApiIndexAvidmlAdvsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAvidmlAdvsGetRequest) Sort(sort string) ApiIndexAvidmlAdvsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -24627,6 +25941,12 @@ func (a *IndicesAPIService) IndexAvidmlAdvsGetExecute(r ApiIndexAvidmlAdvsGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -24780,6 +26100,8 @@ type ApiIndexAvigilonGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -24822,6 +26144,18 @@ func (r ApiIndexAvigilonGetRequest) Cursor(cursor string) ApiIndexAvigilonGetReq
 // request server-side paging
 func (r ApiIndexAvigilonGetRequest) StartCursor(startCursor string) ApiIndexAvigilonGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAvigilonGetRequest) Order(order string) ApiIndexAvigilonGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAvigilonGetRequest) Sort(sort string) ApiIndexAvigilonGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -25002,6 +26336,12 @@ func (a *IndicesAPIService) IndexAvigilonGetExecute(r ApiIndexAvigilonGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -25155,6 +26495,8 @@ type ApiIndexAwsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -25197,6 +26539,18 @@ func (r ApiIndexAwsGetRequest) Cursor(cursor string) ApiIndexAwsGetRequest {
 // request server-side paging
 func (r ApiIndexAwsGetRequest) StartCursor(startCursor string) ApiIndexAwsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAwsGetRequest) Order(order string) ApiIndexAwsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAwsGetRequest) Sort(sort string) ApiIndexAwsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -25377,6 +26731,12 @@ func (a *IndicesAPIService) IndexAwsGetExecute(r ApiIndexAwsGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -25530,6 +26890,8 @@ type ApiIndexAxisGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -25572,6 +26934,18 @@ func (r ApiIndexAxisGetRequest) Cursor(cursor string) ApiIndexAxisGetRequest {
 // request server-side paging
 func (r ApiIndexAxisGetRequest) StartCursor(startCursor string) ApiIndexAxisGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAxisGetRequest) Order(order string) ApiIndexAxisGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAxisGetRequest) Sort(sort string) ApiIndexAxisGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -25752,6 +27126,12 @@ func (a *IndicesAPIService) IndexAxisGetExecute(r ApiIndexAxisGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -25905,6 +27285,8 @@ type ApiIndexAzulGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -25947,6 +27329,18 @@ func (r ApiIndexAzulGetRequest) Cursor(cursor string) ApiIndexAzulGetRequest {
 // request server-side paging
 func (r ApiIndexAzulGetRequest) StartCursor(startCursor string) ApiIndexAzulGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexAzulGetRequest) Order(order string) ApiIndexAzulGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexAzulGetRequest) Sort(sort string) ApiIndexAzulGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -26127,6 +27521,12 @@ func (a *IndicesAPIService) IndexAzulGetExecute(r ApiIndexAzulGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -26280,6 +27680,8 @@ type ApiIndexBandrGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -26322,6 +27724,18 @@ func (r ApiIndexBandrGetRequest) Cursor(cursor string) ApiIndexBandrGetRequest {
 // request server-side paging
 func (r ApiIndexBandrGetRequest) StartCursor(startCursor string) ApiIndexBandrGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBandrGetRequest) Order(order string) ApiIndexBandrGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBandrGetRequest) Sort(sort string) ApiIndexBandrGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -26502,6 +27916,12 @@ func (a *IndicesAPIService) IndexBandrGetExecute(r ApiIndexBandrGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -26655,6 +28075,8 @@ type ApiIndexBaxterGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -26697,6 +28119,18 @@ func (r ApiIndexBaxterGetRequest) Cursor(cursor string) ApiIndexBaxterGetRequest
 // request server-side paging
 func (r ApiIndexBaxterGetRequest) StartCursor(startCursor string) ApiIndexBaxterGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBaxterGetRequest) Order(order string) ApiIndexBaxterGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBaxterGetRequest) Sort(sort string) ApiIndexBaxterGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -26877,6 +28311,12 @@ func (a *IndicesAPIService) IndexBaxterGetExecute(r ApiIndexBaxterGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -27030,6 +28470,8 @@ type ApiIndexBbraunGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -27072,6 +28514,18 @@ func (r ApiIndexBbraunGetRequest) Cursor(cursor string) ApiIndexBbraunGetRequest
 // request server-side paging
 func (r ApiIndexBbraunGetRequest) StartCursor(startCursor string) ApiIndexBbraunGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBbraunGetRequest) Order(order string) ApiIndexBbraunGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBbraunGetRequest) Sort(sort string) ApiIndexBbraunGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -27252,6 +28706,12 @@ func (a *IndicesAPIService) IndexBbraunGetExecute(r ApiIndexBbraunGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -27405,6 +28865,8 @@ type ApiIndexBdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -27447,6 +28909,18 @@ func (r ApiIndexBdGetRequest) Cursor(cursor string) ApiIndexBdGetRequest {
 // request server-side paging
 func (r ApiIndexBdGetRequest) StartCursor(startCursor string) ApiIndexBdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBdGetRequest) Order(order string) ApiIndexBdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBdGetRequest) Sort(sort string) ApiIndexBdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -27627,6 +29101,12 @@ func (a *IndicesAPIService) IndexBdGetExecute(r ApiIndexBdGetRequest) (*RenderRe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -27780,6 +29260,8 @@ type ApiIndexBduGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -27822,6 +29304,18 @@ func (r ApiIndexBduGetRequest) Cursor(cursor string) ApiIndexBduGetRequest {
 // request server-side paging
 func (r ApiIndexBduGetRequest) StartCursor(startCursor string) ApiIndexBduGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBduGetRequest) Order(order string) ApiIndexBduGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBduGetRequest) Sort(sort string) ApiIndexBduGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -28002,6 +29496,12 @@ func (a *IndicesAPIService) IndexBduGetExecute(r ApiIndexBduGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -28155,6 +29655,8 @@ type ApiIndexBeckhoffGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -28197,6 +29699,18 @@ func (r ApiIndexBeckhoffGetRequest) Cursor(cursor string) ApiIndexBeckhoffGetReq
 // request server-side paging
 func (r ApiIndexBeckhoffGetRequest) StartCursor(startCursor string) ApiIndexBeckhoffGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBeckhoffGetRequest) Order(order string) ApiIndexBeckhoffGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBeckhoffGetRequest) Sort(sort string) ApiIndexBeckhoffGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -28377,6 +29891,12 @@ func (a *IndicesAPIService) IndexBeckhoffGetExecute(r ApiIndexBeckhoffGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -28530,6 +30050,8 @@ type ApiIndexBeckmanCoulterGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -28572,6 +30094,18 @@ func (r ApiIndexBeckmanCoulterGetRequest) Cursor(cursor string) ApiIndexBeckmanC
 // request server-side paging
 func (r ApiIndexBeckmanCoulterGetRequest) StartCursor(startCursor string) ApiIndexBeckmanCoulterGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBeckmanCoulterGetRequest) Order(order string) ApiIndexBeckmanCoulterGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBeckmanCoulterGetRequest) Sort(sort string) ApiIndexBeckmanCoulterGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -28752,6 +30286,12 @@ func (a *IndicesAPIService) IndexBeckmanCoulterGetExecute(r ApiIndexBeckmanCoult
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -28905,6 +30445,8 @@ type ApiIndexBeldenGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -28947,6 +30489,18 @@ func (r ApiIndexBeldenGetRequest) Cursor(cursor string) ApiIndexBeldenGetRequest
 // request server-side paging
 func (r ApiIndexBeldenGetRequest) StartCursor(startCursor string) ApiIndexBeldenGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBeldenGetRequest) Order(order string) ApiIndexBeldenGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBeldenGetRequest) Sort(sort string) ApiIndexBeldenGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -29127,6 +30681,12 @@ func (a *IndicesAPIService) IndexBeldenGetExecute(r ApiIndexBeldenGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -29280,6 +30840,8 @@ type ApiIndexBeyondTrustGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -29322,6 +30884,18 @@ func (r ApiIndexBeyondTrustGetRequest) Cursor(cursor string) ApiIndexBeyondTrust
 // request server-side paging
 func (r ApiIndexBeyondTrustGetRequest) StartCursor(startCursor string) ApiIndexBeyondTrustGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBeyondTrustGetRequest) Order(order string) ApiIndexBeyondTrustGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBeyondTrustGetRequest) Sort(sort string) ApiIndexBeyondTrustGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -29502,6 +31076,12 @@ func (a *IndicesAPIService) IndexBeyondTrustGetExecute(r ApiIndexBeyondTrustGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -29655,6 +31235,8 @@ type ApiIndexBinarlyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -29697,6 +31279,18 @@ func (r ApiIndexBinarlyGetRequest) Cursor(cursor string) ApiIndexBinarlyGetReque
 // request server-side paging
 func (r ApiIndexBinarlyGetRequest) StartCursor(startCursor string) ApiIndexBinarlyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBinarlyGetRequest) Order(order string) ApiIndexBinarlyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBinarlyGetRequest) Sort(sort string) ApiIndexBinarlyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -29877,6 +31471,12 @@ func (a *IndicesAPIService) IndexBinarlyGetExecute(r ApiIndexBinarlyGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -30030,6 +31630,8 @@ type ApiIndexBitdefenderGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -30072,6 +31674,18 @@ func (r ApiIndexBitdefenderGetRequest) Cursor(cursor string) ApiIndexBitdefender
 // request server-side paging
 func (r ApiIndexBitdefenderGetRequest) StartCursor(startCursor string) ApiIndexBitdefenderGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBitdefenderGetRequest) Order(order string) ApiIndexBitdefenderGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBitdefenderGetRequest) Sort(sort string) ApiIndexBitdefenderGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -30252,6 +31866,12 @@ func (a *IndicesAPIService) IndexBitdefenderGetExecute(r ApiIndexBitdefenderGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -30405,6 +32025,8 @@ type ApiIndexBlackberryGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -30447,6 +32069,18 @@ func (r ApiIndexBlackberryGetRequest) Cursor(cursor string) ApiIndexBlackberryGe
 // request server-side paging
 func (r ApiIndexBlackberryGetRequest) StartCursor(startCursor string) ApiIndexBlackberryGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBlackberryGetRequest) Order(order string) ApiIndexBlackberryGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBlackberryGetRequest) Sort(sort string) ApiIndexBlackberryGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -30627,6 +32261,12 @@ func (a *IndicesAPIService) IndexBlackberryGetExecute(r ApiIndexBlackberryGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -30780,6 +32420,8 @@ type ApiIndexBlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -30822,6 +32464,18 @@ func (r ApiIndexBlsGetRequest) Cursor(cursor string) ApiIndexBlsGetRequest {
 // request server-side paging
 func (r ApiIndexBlsGetRequest) StartCursor(startCursor string) ApiIndexBlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBlsGetRequest) Order(order string) ApiIndexBlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBlsGetRequest) Sort(sort string) ApiIndexBlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -31002,6 +32656,12 @@ func (a *IndicesAPIService) IndexBlsGetExecute(r ApiIndexBlsGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -31155,6 +32815,8 @@ type ApiIndexBoschGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -31197,6 +32859,18 @@ func (r ApiIndexBoschGetRequest) Cursor(cursor string) ApiIndexBoschGetRequest {
 // request server-side paging
 func (r ApiIndexBoschGetRequest) StartCursor(startCursor string) ApiIndexBoschGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBoschGetRequest) Order(order string) ApiIndexBoschGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBoschGetRequest) Sort(sort string) ApiIndexBoschGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -31377,6 +33051,12 @@ func (a *IndicesAPIService) IndexBoschGetExecute(r ApiIndexBoschGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -31530,6 +33210,8 @@ type ApiIndexBostonScientificGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -31572,6 +33254,18 @@ func (r ApiIndexBostonScientificGetRequest) Cursor(cursor string) ApiIndexBoston
 // request server-side paging
 func (r ApiIndexBostonScientificGetRequest) StartCursor(startCursor string) ApiIndexBostonScientificGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBostonScientificGetRequest) Order(order string) ApiIndexBostonScientificGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBostonScientificGetRequest) Sort(sort string) ApiIndexBostonScientificGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -31752,6 +33446,12 @@ func (a *IndicesAPIService) IndexBostonScientificGetExecute(r ApiIndexBostonScie
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -31905,6 +33605,8 @@ type ApiIndexBotnetsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -31947,6 +33649,18 @@ func (r ApiIndexBotnetsGetRequest) Cursor(cursor string) ApiIndexBotnetsGetReque
 // request server-side paging
 func (r ApiIndexBotnetsGetRequest) StartCursor(startCursor string) ApiIndexBotnetsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexBotnetsGetRequest) Order(order string) ApiIndexBotnetsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexBotnetsGetRequest) Sort(sort string) ApiIndexBotnetsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -32127,6 +33841,12 @@ func (a *IndicesAPIService) IndexBotnetsGetExecute(r ApiIndexBotnetsGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -32280,6 +34000,8 @@ type ApiIndexCaCyberCentreGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -32322,6 +34044,18 @@ func (r ApiIndexCaCyberCentreGetRequest) Cursor(cursor string) ApiIndexCaCyberCe
 // request server-side paging
 func (r ApiIndexCaCyberCentreGetRequest) StartCursor(startCursor string) ApiIndexCaCyberCentreGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCaCyberCentreGetRequest) Order(order string) ApiIndexCaCyberCentreGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCaCyberCentreGetRequest) Sort(sort string) ApiIndexCaCyberCentreGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -32502,6 +34236,12 @@ func (a *IndicesAPIService) IndexCaCyberCentreGetExecute(r ApiIndexCaCyberCentre
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -32655,6 +34395,8 @@ type ApiIndexCanvasGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -32697,6 +34439,18 @@ func (r ApiIndexCanvasGetRequest) Cursor(cursor string) ApiIndexCanvasGetRequest
 // request server-side paging
 func (r ApiIndexCanvasGetRequest) StartCursor(startCursor string) ApiIndexCanvasGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCanvasGetRequest) Order(order string) ApiIndexCanvasGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCanvasGetRequest) Sort(sort string) ApiIndexCanvasGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -32877,6 +34631,12 @@ func (a *IndicesAPIService) IndexCanvasGetExecute(r ApiIndexCanvasGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -33030,6 +34790,8 @@ type ApiIndexCarestreamGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -33072,6 +34834,18 @@ func (r ApiIndexCarestreamGetRequest) Cursor(cursor string) ApiIndexCarestreamGe
 // request server-side paging
 func (r ApiIndexCarestreamGetRequest) StartCursor(startCursor string) ApiIndexCarestreamGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCarestreamGetRequest) Order(order string) ApiIndexCarestreamGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCarestreamGetRequest) Sort(sort string) ApiIndexCarestreamGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -33252,6 +35026,12 @@ func (a *IndicesAPIService) IndexCarestreamGetExecute(r ApiIndexCarestreamGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -33405,6 +35185,8 @@ type ApiIndexCargoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -33447,6 +35229,18 @@ func (r ApiIndexCargoGetRequest) Cursor(cursor string) ApiIndexCargoGetRequest {
 // request server-side paging
 func (r ApiIndexCargoGetRequest) StartCursor(startCursor string) ApiIndexCargoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCargoGetRequest) Order(order string) ApiIndexCargoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCargoGetRequest) Sort(sort string) ApiIndexCargoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -33627,6 +35421,12 @@ func (a *IndicesAPIService) IndexCargoGetExecute(r ApiIndexCargoGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -33780,6 +35580,8 @@ type ApiIndexCarrierGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -33822,6 +35624,18 @@ func (r ApiIndexCarrierGetRequest) Cursor(cursor string) ApiIndexCarrierGetReque
 // request server-side paging
 func (r ApiIndexCarrierGetRequest) StartCursor(startCursor string) ApiIndexCarrierGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCarrierGetRequest) Order(order string) ApiIndexCarrierGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCarrierGetRequest) Sort(sort string) ApiIndexCarrierGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -34002,6 +35816,12 @@ func (a *IndicesAPIService) IndexCarrierGetExecute(r ApiIndexCarrierGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -34155,6 +35975,8 @@ type ApiIndexCblMarinerGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -34197,6 +36019,18 @@ func (r ApiIndexCblMarinerGetRequest) Cursor(cursor string) ApiIndexCblMarinerGe
 // request server-side paging
 func (r ApiIndexCblMarinerGetRequest) StartCursor(startCursor string) ApiIndexCblMarinerGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCblMarinerGetRequest) Order(order string) ApiIndexCblMarinerGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCblMarinerGetRequest) Sort(sort string) ApiIndexCblMarinerGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -34377,6 +36211,12 @@ func (a *IndicesAPIService) IndexCblMarinerGetExecute(r ApiIndexCblMarinerGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -34530,6 +36370,8 @@ type ApiIndexCentosGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -34572,6 +36414,18 @@ func (r ApiIndexCentosGetRequest) Cursor(cursor string) ApiIndexCentosGetRequest
 // request server-side paging
 func (r ApiIndexCentosGetRequest) StartCursor(startCursor string) ApiIndexCentosGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCentosGetRequest) Order(order string) ApiIndexCentosGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCentosGetRequest) Sort(sort string) ApiIndexCentosGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -34752,6 +36606,12 @@ func (a *IndicesAPIService) IndexCentosGetExecute(r ApiIndexCentosGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -34905,6 +36765,8 @@ type ApiIndexCertBeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -34947,6 +36809,18 @@ func (r ApiIndexCertBeGetRequest) Cursor(cursor string) ApiIndexCertBeGetRequest
 // request server-side paging
 func (r ApiIndexCertBeGetRequest) StartCursor(startCursor string) ApiIndexCertBeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCertBeGetRequest) Order(order string) ApiIndexCertBeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCertBeGetRequest) Sort(sort string) ApiIndexCertBeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -35127,6 +37001,12 @@ func (a *IndicesAPIService) IndexCertBeGetExecute(r ApiIndexCertBeGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -35280,6 +37160,8 @@ type ApiIndexCertInGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -35322,6 +37204,18 @@ func (r ApiIndexCertInGetRequest) Cursor(cursor string) ApiIndexCertInGetRequest
 // request server-side paging
 func (r ApiIndexCertInGetRequest) StartCursor(startCursor string) ApiIndexCertInGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCertInGetRequest) Order(order string) ApiIndexCertInGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCertInGetRequest) Sort(sort string) ApiIndexCertInGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -35502,6 +37396,12 @@ func (a *IndicesAPIService) IndexCertInGetExecute(r ApiIndexCertInGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -35655,6 +37555,8 @@ type ApiIndexCertIrSecurityAlertsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -35697,6 +37599,18 @@ func (r ApiIndexCertIrSecurityAlertsGetRequest) Cursor(cursor string) ApiIndexCe
 // request server-side paging
 func (r ApiIndexCertIrSecurityAlertsGetRequest) StartCursor(startCursor string) ApiIndexCertIrSecurityAlertsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCertIrSecurityAlertsGetRequest) Order(order string) ApiIndexCertIrSecurityAlertsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCertIrSecurityAlertsGetRequest) Sort(sort string) ApiIndexCertIrSecurityAlertsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -35877,6 +37791,12 @@ func (a *IndicesAPIService) IndexCertIrSecurityAlertsGetExecute(r ApiIndexCertIr
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -36030,6 +37950,8 @@ type ApiIndexCertSeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -36072,6 +37994,18 @@ func (r ApiIndexCertSeGetRequest) Cursor(cursor string) ApiIndexCertSeGetRequest
 // request server-side paging
 func (r ApiIndexCertSeGetRequest) StartCursor(startCursor string) ApiIndexCertSeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCertSeGetRequest) Order(order string) ApiIndexCertSeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCertSeGetRequest) Sort(sort string) ApiIndexCertSeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -36252,6 +38186,12 @@ func (a *IndicesAPIService) IndexCertSeGetExecute(r ApiIndexCertSeGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -36405,6 +38345,8 @@ type ApiIndexCertUaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -36447,6 +38389,18 @@ func (r ApiIndexCertUaGetRequest) Cursor(cursor string) ApiIndexCertUaGetRequest
 // request server-side paging
 func (r ApiIndexCertUaGetRequest) StartCursor(startCursor string) ApiIndexCertUaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCertUaGetRequest) Order(order string) ApiIndexCertUaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCertUaGetRequest) Sort(sort string) ApiIndexCertUaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -36627,6 +38581,12 @@ func (a *IndicesAPIService) IndexCertUaGetExecute(r ApiIndexCertUaGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -36780,6 +38740,8 @@ type ApiIndexCerteuGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -36822,6 +38784,18 @@ func (r ApiIndexCerteuGetRequest) Cursor(cursor string) ApiIndexCerteuGetRequest
 // request server-side paging
 func (r ApiIndexCerteuGetRequest) StartCursor(startCursor string) ApiIndexCerteuGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCerteuGetRequest) Order(order string) ApiIndexCerteuGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCerteuGetRequest) Sort(sort string) ApiIndexCerteuGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -37002,6 +38976,12 @@ func (a *IndicesAPIService) IndexCerteuGetExecute(r ApiIndexCerteuGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -37155,6 +39135,8 @@ type ApiIndexCertfrGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -37197,6 +39179,18 @@ func (r ApiIndexCertfrGetRequest) Cursor(cursor string) ApiIndexCertfrGetRequest
 // request server-side paging
 func (r ApiIndexCertfrGetRequest) StartCursor(startCursor string) ApiIndexCertfrGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCertfrGetRequest) Order(order string) ApiIndexCertfrGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCertfrGetRequest) Sort(sort string) ApiIndexCertfrGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -37377,6 +39371,12 @@ func (a *IndicesAPIService) IndexCertfrGetExecute(r ApiIndexCertfrGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -37530,6 +39530,8 @@ type ApiIndexChainguardGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -37572,6 +39574,18 @@ func (r ApiIndexChainguardGetRequest) Cursor(cursor string) ApiIndexChainguardGe
 // request server-side paging
 func (r ApiIndexChainguardGetRequest) StartCursor(startCursor string) ApiIndexChainguardGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexChainguardGetRequest) Order(order string) ApiIndexChainguardGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexChainguardGetRequest) Sort(sort string) ApiIndexChainguardGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -37752,6 +39766,12 @@ func (a *IndicesAPIService) IndexChainguardGetExecute(r ApiIndexChainguardGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -37905,6 +39925,8 @@ type ApiIndexCheckpointGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -37947,6 +39969,18 @@ func (r ApiIndexCheckpointGetRequest) Cursor(cursor string) ApiIndexCheckpointGe
 // request server-side paging
 func (r ApiIndexCheckpointGetRequest) StartCursor(startCursor string) ApiIndexCheckpointGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCheckpointGetRequest) Order(order string) ApiIndexCheckpointGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCheckpointGetRequest) Sort(sort string) ApiIndexCheckpointGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -38127,6 +40161,12 @@ func (a *IndicesAPIService) IndexCheckpointGetExecute(r ApiIndexCheckpointGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -38280,6 +40320,8 @@ type ApiIndexChromeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -38322,6 +40364,18 @@ func (r ApiIndexChromeGetRequest) Cursor(cursor string) ApiIndexChromeGetRequest
 // request server-side paging
 func (r ApiIndexChromeGetRequest) StartCursor(startCursor string) ApiIndexChromeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexChromeGetRequest) Order(order string) ApiIndexChromeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexChromeGetRequest) Sort(sort string) ApiIndexChromeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -38502,6 +40556,12 @@ func (a *IndicesAPIService) IndexChromeGetExecute(r ApiIndexChromeGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -38655,6 +40715,8 @@ type ApiIndexCienaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -38697,6 +40759,18 @@ func (r ApiIndexCienaGetRequest) Cursor(cursor string) ApiIndexCienaGetRequest {
 // request server-side paging
 func (r ApiIndexCienaGetRequest) StartCursor(startCursor string) ApiIndexCienaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCienaGetRequest) Order(order string) ApiIndexCienaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCienaGetRequest) Sort(sort string) ApiIndexCienaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -38877,6 +40951,12 @@ func (a *IndicesAPIService) IndexCienaGetExecute(r ApiIndexCienaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -39030,6 +41110,8 @@ type ApiIndexCisaAlertsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -39072,6 +41154,18 @@ func (r ApiIndexCisaAlertsGetRequest) Cursor(cursor string) ApiIndexCisaAlertsGe
 // request server-side paging
 func (r ApiIndexCisaAlertsGetRequest) StartCursor(startCursor string) ApiIndexCisaAlertsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCisaAlertsGetRequest) Order(order string) ApiIndexCisaAlertsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCisaAlertsGetRequest) Sort(sort string) ApiIndexCisaAlertsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -39252,6 +41346,12 @@ func (a *IndicesAPIService) IndexCisaAlertsGetExecute(r ApiIndexCisaAlertsGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -39405,6 +41505,8 @@ type ApiIndexCisaCsafGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -39447,6 +41549,18 @@ func (r ApiIndexCisaCsafGetRequest) Cursor(cursor string) ApiIndexCisaCsafGetReq
 // request server-side paging
 func (r ApiIndexCisaCsafGetRequest) StartCursor(startCursor string) ApiIndexCisaCsafGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCisaCsafGetRequest) Order(order string) ApiIndexCisaCsafGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCisaCsafGetRequest) Sort(sort string) ApiIndexCisaCsafGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -39627,6 +41741,12 @@ func (a *IndicesAPIService) IndexCisaCsafGetExecute(r ApiIndexCisaCsafGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -39780,6 +41900,8 @@ type ApiIndexCisaKevGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -39822,6 +41944,18 @@ func (r ApiIndexCisaKevGetRequest) Cursor(cursor string) ApiIndexCisaKevGetReque
 // request server-side paging
 func (r ApiIndexCisaKevGetRequest) StartCursor(startCursor string) ApiIndexCisaKevGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCisaKevGetRequest) Order(order string) ApiIndexCisaKevGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCisaKevGetRequest) Sort(sort string) ApiIndexCisaKevGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -40002,6 +42136,12 @@ func (a *IndicesAPIService) IndexCisaKevGetExecute(r ApiIndexCisaKevGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -40155,6 +42295,8 @@ type ApiIndexCiscoCsafGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -40197,6 +42339,18 @@ func (r ApiIndexCiscoCsafGetRequest) Cursor(cursor string) ApiIndexCiscoCsafGetR
 // request server-side paging
 func (r ApiIndexCiscoCsafGetRequest) StartCursor(startCursor string) ApiIndexCiscoCsafGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCiscoCsafGetRequest) Order(order string) ApiIndexCiscoCsafGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCiscoCsafGetRequest) Sort(sort string) ApiIndexCiscoCsafGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -40377,6 +42531,12 @@ func (a *IndicesAPIService) IndexCiscoCsafGetExecute(r ApiIndexCiscoCsafGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -40530,6 +42690,8 @@ type ApiIndexCiscoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -40572,6 +42734,18 @@ func (r ApiIndexCiscoGetRequest) Cursor(cursor string) ApiIndexCiscoGetRequest {
 // request server-side paging
 func (r ApiIndexCiscoGetRequest) StartCursor(startCursor string) ApiIndexCiscoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCiscoGetRequest) Order(order string) ApiIndexCiscoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCiscoGetRequest) Sort(sort string) ApiIndexCiscoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -40752,6 +42926,12 @@ func (a *IndicesAPIService) IndexCiscoGetExecute(r ApiIndexCiscoGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -40905,6 +43085,8 @@ type ApiIndexCiscoKnownGoodValuesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -40947,6 +43129,18 @@ func (r ApiIndexCiscoKnownGoodValuesGetRequest) Cursor(cursor string) ApiIndexCi
 // request server-side paging
 func (r ApiIndexCiscoKnownGoodValuesGetRequest) StartCursor(startCursor string) ApiIndexCiscoKnownGoodValuesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Order(order string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCiscoKnownGoodValuesGetRequest) Sort(sort string) ApiIndexCiscoKnownGoodValuesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -41127,6 +43321,12 @@ func (a *IndicesAPIService) IndexCiscoKnownGoodValuesGetExecute(r ApiIndexCiscoK
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -41280,6 +43480,8 @@ type ApiIndexCiscoTalosGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -41322,6 +43524,18 @@ func (r ApiIndexCiscoTalosGetRequest) Cursor(cursor string) ApiIndexCiscoTalosGe
 // request server-side paging
 func (r ApiIndexCiscoTalosGetRequest) StartCursor(startCursor string) ApiIndexCiscoTalosGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCiscoTalosGetRequest) Order(order string) ApiIndexCiscoTalosGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCiscoTalosGetRequest) Sort(sort string) ApiIndexCiscoTalosGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -41502,6 +43716,12 @@ func (a *IndicesAPIService) IndexCiscoTalosGetExecute(r ApiIndexCiscoTalosGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -41655,6 +43875,8 @@ type ApiIndexCitrixGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -41697,6 +43919,18 @@ func (r ApiIndexCitrixGetRequest) Cursor(cursor string) ApiIndexCitrixGetRequest
 // request server-side paging
 func (r ApiIndexCitrixGetRequest) StartCursor(startCursor string) ApiIndexCitrixGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCitrixGetRequest) Order(order string) ApiIndexCitrixGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCitrixGetRequest) Sort(sort string) ApiIndexCitrixGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -41877,6 +44111,12 @@ func (a *IndicesAPIService) IndexCitrixGetExecute(r ApiIndexCitrixGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -42030,6 +44270,8 @@ type ApiIndexClarotyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -42072,6 +44314,18 @@ func (r ApiIndexClarotyGetRequest) Cursor(cursor string) ApiIndexClarotyGetReque
 // request server-side paging
 func (r ApiIndexClarotyGetRequest) StartCursor(startCursor string) ApiIndexClarotyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexClarotyGetRequest) Order(order string) ApiIndexClarotyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexClarotyGetRequest) Sort(sort string) ApiIndexClarotyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -42252,6 +44506,12 @@ func (a *IndicesAPIService) IndexClarotyGetExecute(r ApiIndexClarotyGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -42405,6 +44665,8 @@ type ApiIndexCloudbeesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -42447,6 +44709,18 @@ func (r ApiIndexCloudbeesGetRequest) Cursor(cursor string) ApiIndexCloudbeesGetR
 // request server-side paging
 func (r ApiIndexCloudbeesGetRequest) StartCursor(startCursor string) ApiIndexCloudbeesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCloudbeesGetRequest) Order(order string) ApiIndexCloudbeesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCloudbeesGetRequest) Sort(sort string) ApiIndexCloudbeesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -42627,6 +44901,12 @@ func (a *IndicesAPIService) IndexCloudbeesGetExecute(r ApiIndexCloudbeesGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -42780,6 +45060,8 @@ type ApiIndexCloudvulndbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -42822,6 +45104,18 @@ func (r ApiIndexCloudvulndbGetRequest) Cursor(cursor string) ApiIndexCloudvulndb
 // request server-side paging
 func (r ApiIndexCloudvulndbGetRequest) StartCursor(startCursor string) ApiIndexCloudvulndbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCloudvulndbGetRequest) Order(order string) ApiIndexCloudvulndbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCloudvulndbGetRequest) Sort(sort string) ApiIndexCloudvulndbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -43002,6 +45296,12 @@ func (a *IndicesAPIService) IndexCloudvulndbGetExecute(r ApiIndexCloudvulndbGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -43155,6 +45455,8 @@ type ApiIndexCnnvdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -43197,6 +45499,18 @@ func (r ApiIndexCnnvdGetRequest) Cursor(cursor string) ApiIndexCnnvdGetRequest {
 // request server-side paging
 func (r ApiIndexCnnvdGetRequest) StartCursor(startCursor string) ApiIndexCnnvdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCnnvdGetRequest) Order(order string) ApiIndexCnnvdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCnnvdGetRequest) Sort(sort string) ApiIndexCnnvdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -43377,6 +45691,12 @@ func (a *IndicesAPIService) IndexCnnvdGetExecute(r ApiIndexCnnvdGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -43530,6 +45850,8 @@ type ApiIndexCnvdBulletinsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -43572,6 +45894,18 @@ func (r ApiIndexCnvdBulletinsGetRequest) Cursor(cursor string) ApiIndexCnvdBulle
 // request server-side paging
 func (r ApiIndexCnvdBulletinsGetRequest) StartCursor(startCursor string) ApiIndexCnvdBulletinsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCnvdBulletinsGetRequest) Order(order string) ApiIndexCnvdBulletinsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCnvdBulletinsGetRequest) Sort(sort string) ApiIndexCnvdBulletinsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -43752,6 +46086,12 @@ func (a *IndicesAPIService) IndexCnvdBulletinsGetExecute(r ApiIndexCnvdBulletins
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -43905,6 +46245,8 @@ type ApiIndexCnvdFlawsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -43947,6 +46289,18 @@ func (r ApiIndexCnvdFlawsGetRequest) Cursor(cursor string) ApiIndexCnvdFlawsGetR
 // request server-side paging
 func (r ApiIndexCnvdFlawsGetRequest) StartCursor(startCursor string) ApiIndexCnvdFlawsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCnvdFlawsGetRequest) Order(order string) ApiIndexCnvdFlawsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCnvdFlawsGetRequest) Sort(sort string) ApiIndexCnvdFlawsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -44127,6 +46481,12 @@ func (a *IndicesAPIService) IndexCnvdFlawsGetExecute(r ApiIndexCnvdFlawsGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -44280,6 +46640,8 @@ type ApiIndexCocoapodsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -44322,6 +46684,18 @@ func (r ApiIndexCocoapodsGetRequest) Cursor(cursor string) ApiIndexCocoapodsGetR
 // request server-side paging
 func (r ApiIndexCocoapodsGetRequest) StartCursor(startCursor string) ApiIndexCocoapodsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCocoapodsGetRequest) Order(order string) ApiIndexCocoapodsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCocoapodsGetRequest) Sort(sort string) ApiIndexCocoapodsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -44502,6 +46876,12 @@ func (a *IndicesAPIService) IndexCocoapodsGetExecute(r ApiIndexCocoapodsGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -44655,6 +47035,8 @@ type ApiIndexCodesysGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -44697,6 +47079,18 @@ func (r ApiIndexCodesysGetRequest) Cursor(cursor string) ApiIndexCodesysGetReque
 // request server-side paging
 func (r ApiIndexCodesysGetRequest) StartCursor(startCursor string) ApiIndexCodesysGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCodesysGetRequest) Order(order string) ApiIndexCodesysGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCodesysGetRequest) Sort(sort string) ApiIndexCodesysGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -44877,6 +47271,12 @@ func (a *IndicesAPIService) IndexCodesysGetExecute(r ApiIndexCodesysGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -45030,6 +47430,8 @@ type ApiIndexCommvaultGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -45072,6 +47474,18 @@ func (r ApiIndexCommvaultGetRequest) Cursor(cursor string) ApiIndexCommvaultGetR
 // request server-side paging
 func (r ApiIndexCommvaultGetRequest) StartCursor(startCursor string) ApiIndexCommvaultGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCommvaultGetRequest) Order(order string) ApiIndexCommvaultGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCommvaultGetRequest) Sort(sort string) ApiIndexCommvaultGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -45252,6 +47666,12 @@ func (a *IndicesAPIService) IndexCommvaultGetExecute(r ApiIndexCommvaultGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -45405,6 +47825,8 @@ type ApiIndexCompassSecurityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -45447,6 +47869,18 @@ func (r ApiIndexCompassSecurityGetRequest) Cursor(cursor string) ApiIndexCompass
 // request server-side paging
 func (r ApiIndexCompassSecurityGetRequest) StartCursor(startCursor string) ApiIndexCompassSecurityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCompassSecurityGetRequest) Order(order string) ApiIndexCompassSecurityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCompassSecurityGetRequest) Sort(sort string) ApiIndexCompassSecurityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -45627,6 +48061,12 @@ func (a *IndicesAPIService) IndexCompassSecurityGetExecute(r ApiIndexCompassSecu
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -45780,6 +48220,8 @@ type ApiIndexComposerGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -45822,6 +48264,18 @@ func (r ApiIndexComposerGetRequest) Cursor(cursor string) ApiIndexComposerGetReq
 // request server-side paging
 func (r ApiIndexComposerGetRequest) StartCursor(startCursor string) ApiIndexComposerGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexComposerGetRequest) Order(order string) ApiIndexComposerGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexComposerGetRequest) Sort(sort string) ApiIndexComposerGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -46002,6 +48456,12 @@ func (a *IndicesAPIService) IndexComposerGetExecute(r ApiIndexComposerGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -46155,6 +48615,8 @@ type ApiIndexConanGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -46197,6 +48659,18 @@ func (r ApiIndexConanGetRequest) Cursor(cursor string) ApiIndexConanGetRequest {
 // request server-side paging
 func (r ApiIndexConanGetRequest) StartCursor(startCursor string) ApiIndexConanGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexConanGetRequest) Order(order string) ApiIndexConanGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexConanGetRequest) Sort(sort string) ApiIndexConanGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -46377,6 +48851,12 @@ func (a *IndicesAPIService) IndexConanGetExecute(r ApiIndexConanGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -46530,6 +49010,8 @@ type ApiIndexCoreimpactGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -46572,6 +49054,18 @@ func (r ApiIndexCoreimpactGetRequest) Cursor(cursor string) ApiIndexCoreimpactGe
 // request server-side paging
 func (r ApiIndexCoreimpactGetRequest) StartCursor(startCursor string) ApiIndexCoreimpactGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCoreimpactGetRequest) Order(order string) ApiIndexCoreimpactGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCoreimpactGetRequest) Sort(sort string) ApiIndexCoreimpactGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -46752,6 +49246,12 @@ func (a *IndicesAPIService) IndexCoreimpactGetExecute(r ApiIndexCoreimpactGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -46905,6 +49405,8 @@ type ApiIndexCpeVulnerableGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -46947,6 +49449,18 @@ func (r ApiIndexCpeVulnerableGetRequest) Cursor(cursor string) ApiIndexCpeVulner
 // request server-side paging
 func (r ApiIndexCpeVulnerableGetRequest) StartCursor(startCursor string) ApiIndexCpeVulnerableGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCpeVulnerableGetRequest) Order(order string) ApiIndexCpeVulnerableGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCpeVulnerableGetRequest) Sort(sort string) ApiIndexCpeVulnerableGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -47127,6 +49641,12 @@ func (a *IndicesAPIService) IndexCpeVulnerableGetExecute(r ApiIndexCpeVulnerable
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -47280,6 +49800,8 @@ type ApiIndexCrestronGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -47322,6 +49844,18 @@ func (r ApiIndexCrestronGetRequest) Cursor(cursor string) ApiIndexCrestronGetReq
 // request server-side paging
 func (r ApiIndexCrestronGetRequest) StartCursor(startCursor string) ApiIndexCrestronGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCrestronGetRequest) Order(order string) ApiIndexCrestronGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCrestronGetRequest) Sort(sort string) ApiIndexCrestronGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -47502,6 +50036,12 @@ func (a *IndicesAPIService) IndexCrestronGetExecute(r ApiIndexCrestronGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -47655,6 +50195,8 @@ type ApiIndexCrowdsecGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -47697,6 +50239,18 @@ func (r ApiIndexCrowdsecGetRequest) Cursor(cursor string) ApiIndexCrowdsecGetReq
 // request server-side paging
 func (r ApiIndexCrowdsecGetRequest) StartCursor(startCursor string) ApiIndexCrowdsecGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCrowdsecGetRequest) Order(order string) ApiIndexCrowdsecGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCrowdsecGetRequest) Sort(sort string) ApiIndexCrowdsecGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -47877,6 +50431,12 @@ func (a *IndicesAPIService) IndexCrowdsecGetExecute(r ApiIndexCrowdsecGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -48030,6 +50590,8 @@ type ApiIndexCurlGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -48072,6 +50634,18 @@ func (r ApiIndexCurlGetRequest) Cursor(cursor string) ApiIndexCurlGetRequest {
 // request server-side paging
 func (r ApiIndexCurlGetRequest) StartCursor(startCursor string) ApiIndexCurlGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCurlGetRequest) Order(order string) ApiIndexCurlGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCurlGetRequest) Sort(sort string) ApiIndexCurlGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -48252,6 +50826,12 @@ func (a *IndicesAPIService) IndexCurlGetExecute(r ApiIndexCurlGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -48405,6 +50985,8 @@ type ApiIndexCweGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -48447,6 +51029,18 @@ func (r ApiIndexCweGetRequest) Cursor(cursor string) ApiIndexCweGetRequest {
 // request server-side paging
 func (r ApiIndexCweGetRequest) StartCursor(startCursor string) ApiIndexCweGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexCweGetRequest) Order(order string) ApiIndexCweGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexCweGetRequest) Sort(sort string) ApiIndexCweGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -48627,6 +51221,12 @@ func (a *IndicesAPIService) IndexCweGetExecute(r ApiIndexCweGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -48780,6 +51380,8 @@ type ApiIndexDahuaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -48822,6 +51424,18 @@ func (r ApiIndexDahuaGetRequest) Cursor(cursor string) ApiIndexDahuaGetRequest {
 // request server-side paging
 func (r ApiIndexDahuaGetRequest) StartCursor(startCursor string) ApiIndexDahuaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDahuaGetRequest) Order(order string) ApiIndexDahuaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDahuaGetRequest) Sort(sort string) ApiIndexDahuaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -49002,6 +51616,12 @@ func (a *IndicesAPIService) IndexDahuaGetExecute(r ApiIndexDahuaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -49155,6 +51775,8 @@ type ApiIndexDanfossGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -49197,6 +51819,18 @@ func (r ApiIndexDanfossGetRequest) Cursor(cursor string) ApiIndexDanfossGetReque
 // request server-side paging
 func (r ApiIndexDanfossGetRequest) StartCursor(startCursor string) ApiIndexDanfossGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDanfossGetRequest) Order(order string) ApiIndexDanfossGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDanfossGetRequest) Sort(sort string) ApiIndexDanfossGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -49377,6 +52011,12 @@ func (a *IndicesAPIService) IndexDanfossGetExecute(r ApiIndexDanfossGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -49530,6 +52170,8 @@ type ApiIndexDassaultGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -49572,6 +52214,18 @@ func (r ApiIndexDassaultGetRequest) Cursor(cursor string) ApiIndexDassaultGetReq
 // request server-side paging
 func (r ApiIndexDassaultGetRequest) StartCursor(startCursor string) ApiIndexDassaultGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDassaultGetRequest) Order(order string) ApiIndexDassaultGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDassaultGetRequest) Sort(sort string) ApiIndexDassaultGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -49752,6 +52406,12 @@ func (a *IndicesAPIService) IndexDassaultGetExecute(r ApiIndexDassaultGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -49905,6 +52565,8 @@ type ApiIndexDebianDsaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -49947,6 +52609,18 @@ func (r ApiIndexDebianDsaGetRequest) Cursor(cursor string) ApiIndexDebianDsaGetR
 // request server-side paging
 func (r ApiIndexDebianDsaGetRequest) StartCursor(startCursor string) ApiIndexDebianDsaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDebianDsaGetRequest) Order(order string) ApiIndexDebianDsaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDebianDsaGetRequest) Sort(sort string) ApiIndexDebianDsaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -50127,6 +52801,12 @@ func (a *IndicesAPIService) IndexDebianDsaGetExecute(r ApiIndexDebianDsaGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -50280,6 +52960,8 @@ type ApiIndexDebianGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -50322,6 +53004,18 @@ func (r ApiIndexDebianGetRequest) Cursor(cursor string) ApiIndexDebianGetRequest
 // request server-side paging
 func (r ApiIndexDebianGetRequest) StartCursor(startCursor string) ApiIndexDebianGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDebianGetRequest) Order(order string) ApiIndexDebianGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDebianGetRequest) Sort(sort string) ApiIndexDebianGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -50502,6 +53196,12 @@ func (a *IndicesAPIService) IndexDebianGetExecute(r ApiIndexDebianGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -50655,6 +53355,8 @@ type ApiIndexDebianPackagesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -50697,6 +53399,18 @@ func (r ApiIndexDebianPackagesGetRequest) Cursor(cursor string) ApiIndexDebianPa
 // request server-side paging
 func (r ApiIndexDebianPackagesGetRequest) StartCursor(startCursor string) ApiIndexDebianPackagesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDebianPackagesGetRequest) Order(order string) ApiIndexDebianPackagesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDebianPackagesGetRequest) Sort(sort string) ApiIndexDebianPackagesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -50877,6 +53591,12 @@ func (a *IndicesAPIService) IndexDebianPackagesGetExecute(r ApiIndexDebianPackag
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -51030,6 +53750,8 @@ type ApiIndexDebianPurlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -51072,6 +53794,18 @@ func (r ApiIndexDebianPurlsGetRequest) Cursor(cursor string) ApiIndexDebianPurls
 // request server-side paging
 func (r ApiIndexDebianPurlsGetRequest) StartCursor(startCursor string) ApiIndexDebianPurlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDebianPurlsGetRequest) Order(order string) ApiIndexDebianPurlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDebianPurlsGetRequest) Sort(sort string) ApiIndexDebianPurlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -51252,6 +53986,12 @@ func (a *IndicesAPIService) IndexDebianPurlsGetExecute(r ApiIndexDebianPurlsGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -51405,6 +54145,8 @@ type ApiIndexDellGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -51447,6 +54189,18 @@ func (r ApiIndexDellGetRequest) Cursor(cursor string) ApiIndexDellGetRequest {
 // request server-side paging
 func (r ApiIndexDellGetRequest) StartCursor(startCursor string) ApiIndexDellGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDellGetRequest) Order(order string) ApiIndexDellGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDellGetRequest) Sort(sort string) ApiIndexDellGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -51627,6 +54381,12 @@ func (a *IndicesAPIService) IndexDellGetExecute(r ApiIndexDellGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -51780,6 +54540,8 @@ type ApiIndexDeltaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -51822,6 +54584,18 @@ func (r ApiIndexDeltaGetRequest) Cursor(cursor string) ApiIndexDeltaGetRequest {
 // request server-side paging
 func (r ApiIndexDeltaGetRequest) StartCursor(startCursor string) ApiIndexDeltaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDeltaGetRequest) Order(order string) ApiIndexDeltaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDeltaGetRequest) Sort(sort string) ApiIndexDeltaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -52002,6 +54776,12 @@ func (a *IndicesAPIService) IndexDeltaGetExecute(r ApiIndexDeltaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -52155,6 +54935,8 @@ type ApiIndexDfnCertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -52197,6 +54979,18 @@ func (r ApiIndexDfnCertGetRequest) Cursor(cursor string) ApiIndexDfnCertGetReque
 // request server-side paging
 func (r ApiIndexDfnCertGetRequest) StartCursor(startCursor string) ApiIndexDfnCertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDfnCertGetRequest) Order(order string) ApiIndexDfnCertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDfnCertGetRequest) Sort(sort string) ApiIndexDfnCertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -52377,6 +55171,12 @@ func (a *IndicesAPIService) IndexDfnCertGetExecute(r ApiIndexDfnCertGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -52530,6 +55330,8 @@ type ApiIndexDjangoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -52572,6 +55374,18 @@ func (r ApiIndexDjangoGetRequest) Cursor(cursor string) ApiIndexDjangoGetRequest
 // request server-side paging
 func (r ApiIndexDjangoGetRequest) StartCursor(startCursor string) ApiIndexDjangoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDjangoGetRequest) Order(order string) ApiIndexDjangoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDjangoGetRequest) Sort(sort string) ApiIndexDjangoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -52752,6 +55566,12 @@ func (a *IndicesAPIService) IndexDjangoGetExecute(r ApiIndexDjangoGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -52905,6 +55725,8 @@ type ApiIndexDlinkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -52947,6 +55769,18 @@ func (r ApiIndexDlinkGetRequest) Cursor(cursor string) ApiIndexDlinkGetRequest {
 // request server-side paging
 func (r ApiIndexDlinkGetRequest) StartCursor(startCursor string) ApiIndexDlinkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDlinkGetRequest) Order(order string) ApiIndexDlinkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDlinkGetRequest) Sort(sort string) ApiIndexDlinkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -53127,6 +55961,12 @@ func (a *IndicesAPIService) IndexDlinkGetExecute(r ApiIndexDlinkGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -53280,6 +56120,8 @@ type ApiIndexDnnGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -53322,6 +56164,18 @@ func (r ApiIndexDnnGetRequest) Cursor(cursor string) ApiIndexDnnGetRequest {
 // request server-side paging
 func (r ApiIndexDnnGetRequest) StartCursor(startCursor string) ApiIndexDnnGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDnnGetRequest) Order(order string) ApiIndexDnnGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDnnGetRequest) Sort(sort string) ApiIndexDnnGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -53502,6 +56356,12 @@ func (a *IndicesAPIService) IndexDnnGetExecute(r ApiIndexDnnGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -53655,6 +56515,8 @@ type ApiIndexDotcmsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -53697,6 +56559,18 @@ func (r ApiIndexDotcmsGetRequest) Cursor(cursor string) ApiIndexDotcmsGetRequest
 // request server-side paging
 func (r ApiIndexDotcmsGetRequest) StartCursor(startCursor string) ApiIndexDotcmsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDotcmsGetRequest) Order(order string) ApiIndexDotcmsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDotcmsGetRequest) Sort(sort string) ApiIndexDotcmsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -53877,6 +56751,12 @@ func (a *IndicesAPIService) IndexDotcmsGetExecute(r ApiIndexDotcmsGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -54030,6 +56910,8 @@ type ApiIndexDragosGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -54072,6 +56954,18 @@ func (r ApiIndexDragosGetRequest) Cursor(cursor string) ApiIndexDragosGetRequest
 // request server-side paging
 func (r ApiIndexDragosGetRequest) StartCursor(startCursor string) ApiIndexDragosGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDragosGetRequest) Order(order string) ApiIndexDragosGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDragosGetRequest) Sort(sort string) ApiIndexDragosGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -54252,6 +57146,12 @@ func (a *IndicesAPIService) IndexDragosGetExecute(r ApiIndexDragosGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -54405,6 +57305,8 @@ type ApiIndexDraytekGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -54447,6 +57349,18 @@ func (r ApiIndexDraytekGetRequest) Cursor(cursor string) ApiIndexDraytekGetReque
 // request server-side paging
 func (r ApiIndexDraytekGetRequest) StartCursor(startCursor string) ApiIndexDraytekGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDraytekGetRequest) Order(order string) ApiIndexDraytekGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDraytekGetRequest) Sort(sort string) ApiIndexDraytekGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -54627,6 +57541,12 @@ func (a *IndicesAPIService) IndexDraytekGetExecute(r ApiIndexDraytekGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -54780,6 +57700,8 @@ type ApiIndexDrupalGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -54822,6 +57744,18 @@ func (r ApiIndexDrupalGetRequest) Cursor(cursor string) ApiIndexDrupalGetRequest
 // request server-side paging
 func (r ApiIndexDrupalGetRequest) StartCursor(startCursor string) ApiIndexDrupalGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexDrupalGetRequest) Order(order string) ApiIndexDrupalGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexDrupalGetRequest) Sort(sort string) ApiIndexDrupalGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -55002,6 +57936,12 @@ func (a *IndicesAPIService) IndexDrupalGetExecute(r ApiIndexDrupalGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -55155,6 +58095,8 @@ type ApiIndexEatonGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -55197,6 +58139,18 @@ func (r ApiIndexEatonGetRequest) Cursor(cursor string) ApiIndexEatonGetRequest {
 // request server-side paging
 func (r ApiIndexEatonGetRequest) StartCursor(startCursor string) ApiIndexEatonGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEatonGetRequest) Order(order string) ApiIndexEatonGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEatonGetRequest) Sort(sort string) ApiIndexEatonGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -55377,6 +58331,12 @@ func (a *IndicesAPIService) IndexEatonGetExecute(r ApiIndexEatonGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -55530,6 +58490,8 @@ type ApiIndexElasticGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -55572,6 +58534,18 @@ func (r ApiIndexElasticGetRequest) Cursor(cursor string) ApiIndexElasticGetReque
 // request server-side paging
 func (r ApiIndexElasticGetRequest) StartCursor(startCursor string) ApiIndexElasticGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexElasticGetRequest) Order(order string) ApiIndexElasticGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexElasticGetRequest) Sort(sort string) ApiIndexElasticGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -55752,6 +58726,12 @@ func (a *IndicesAPIService) IndexElasticGetExecute(r ApiIndexElasticGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -55905,6 +58885,8 @@ type ApiIndexElspecGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -55947,6 +58929,18 @@ func (r ApiIndexElspecGetRequest) Cursor(cursor string) ApiIndexElspecGetRequest
 // request server-side paging
 func (r ApiIndexElspecGetRequest) StartCursor(startCursor string) ApiIndexElspecGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexElspecGetRequest) Order(order string) ApiIndexElspecGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexElspecGetRequest) Sort(sort string) ApiIndexElspecGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -56127,6 +59121,12 @@ func (a *IndicesAPIService) IndexElspecGetExecute(r ApiIndexElspecGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -56280,6 +59280,8 @@ type ApiIndexEmergingThreatsSnortGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -56322,6 +59324,18 @@ func (r ApiIndexEmergingThreatsSnortGetRequest) Cursor(cursor string) ApiIndexEm
 // request server-side paging
 func (r ApiIndexEmergingThreatsSnortGetRequest) StartCursor(startCursor string) ApiIndexEmergingThreatsSnortGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEmergingThreatsSnortGetRequest) Order(order string) ApiIndexEmergingThreatsSnortGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEmergingThreatsSnortGetRequest) Sort(sort string) ApiIndexEmergingThreatsSnortGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -56502,6 +59516,12 @@ func (a *IndicesAPIService) IndexEmergingThreatsSnortGetExecute(r ApiIndexEmergi
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -56655,6 +59675,8 @@ type ApiIndexEmersonGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -56697,6 +59719,18 @@ func (r ApiIndexEmersonGetRequest) Cursor(cursor string) ApiIndexEmersonGetReque
 // request server-side paging
 func (r ApiIndexEmersonGetRequest) StartCursor(startCursor string) ApiIndexEmersonGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEmersonGetRequest) Order(order string) ApiIndexEmersonGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEmersonGetRequest) Sort(sort string) ApiIndexEmersonGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -56877,6 +59911,12 @@ func (a *IndicesAPIService) IndexEmersonGetExecute(r ApiIndexEmersonGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -57030,6 +60070,8 @@ type ApiIndexEndoflifeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -57072,6 +60114,18 @@ func (r ApiIndexEndoflifeGetRequest) Cursor(cursor string) ApiIndexEndoflifeGetR
 // request server-side paging
 func (r ApiIndexEndoflifeGetRequest) StartCursor(startCursor string) ApiIndexEndoflifeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEndoflifeGetRequest) Order(order string) ApiIndexEndoflifeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEndoflifeGetRequest) Sort(sort string) ApiIndexEndoflifeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -57252,6 +60306,12 @@ func (a *IndicesAPIService) IndexEndoflifeGetExecute(r ApiIndexEndoflifeGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -57405,6 +60465,8 @@ type ApiIndexEndressGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -57447,6 +60509,18 @@ func (r ApiIndexEndressGetRequest) Cursor(cursor string) ApiIndexEndressGetReque
 // request server-side paging
 func (r ApiIndexEndressGetRequest) StartCursor(startCursor string) ApiIndexEndressGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEndressGetRequest) Order(order string) ApiIndexEndressGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEndressGetRequest) Sort(sort string) ApiIndexEndressGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -57627,6 +60701,12 @@ func (a *IndicesAPIService) IndexEndressGetExecute(r ApiIndexEndressGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -57780,6 +60860,8 @@ type ApiIndexEolAlibabaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -57822,6 +60904,18 @@ func (r ApiIndexEolAlibabaGetRequest) Cursor(cursor string) ApiIndexEolAlibabaGe
 // request server-side paging
 func (r ApiIndexEolAlibabaGetRequest) StartCursor(startCursor string) ApiIndexEolAlibabaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEolAlibabaGetRequest) Order(order string) ApiIndexEolAlibabaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEolAlibabaGetRequest) Sort(sort string) ApiIndexEolAlibabaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -58002,6 +61096,12 @@ func (a *IndicesAPIService) IndexEolAlibabaGetExecute(r ApiIndexEolAlibabaGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -58155,6 +61255,8 @@ type ApiIndexEolGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -58197,6 +61299,18 @@ func (r ApiIndexEolGetRequest) Cursor(cursor string) ApiIndexEolGetRequest {
 // request server-side paging
 func (r ApiIndexEolGetRequest) StartCursor(startCursor string) ApiIndexEolGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEolGetRequest) Order(order string) ApiIndexEolGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEolGetRequest) Sort(sort string) ApiIndexEolGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -58377,6 +61491,12 @@ func (a *IndicesAPIService) IndexEolGetExecute(r ApiIndexEolGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -58530,6 +61650,8 @@ type ApiIndexEolMicrosoftGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -58572,6 +61694,18 @@ func (r ApiIndexEolMicrosoftGetRequest) Cursor(cursor string) ApiIndexEolMicroso
 // request server-side paging
 func (r ApiIndexEolMicrosoftGetRequest) StartCursor(startCursor string) ApiIndexEolMicrosoftGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEolMicrosoftGetRequest) Order(order string) ApiIndexEolMicrosoftGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEolMicrosoftGetRequest) Sort(sort string) ApiIndexEolMicrosoftGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -58752,6 +61886,12 @@ func (a *IndicesAPIService) IndexEolMicrosoftGetExecute(r ApiIndexEolMicrosoftGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -58905,6 +62045,8 @@ type ApiIndexEpssGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -58947,6 +62089,18 @@ func (r ApiIndexEpssGetRequest) Cursor(cursor string) ApiIndexEpssGetRequest {
 // request server-side paging
 func (r ApiIndexEpssGetRequest) StartCursor(startCursor string) ApiIndexEpssGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEpssGetRequest) Order(order string) ApiIndexEpssGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEpssGetRequest) Sort(sort string) ApiIndexEpssGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -59127,6 +62281,12 @@ func (a *IndicesAPIService) IndexEpssGetExecute(r ApiIndexEpssGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -59280,6 +62440,8 @@ type ApiIndexEuvdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -59322,6 +62484,18 @@ func (r ApiIndexEuvdGetRequest) Cursor(cursor string) ApiIndexEuvdGetRequest {
 // request server-side paging
 func (r ApiIndexEuvdGetRequest) StartCursor(startCursor string) ApiIndexEuvdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexEuvdGetRequest) Order(order string) ApiIndexEuvdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexEuvdGetRequest) Sort(sort string) ApiIndexEuvdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -59502,6 +62676,12 @@ func (a *IndicesAPIService) IndexEuvdGetExecute(r ApiIndexEuvdGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -59655,6 +62835,8 @@ type ApiIndexExodusIntelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -59697,6 +62879,18 @@ func (r ApiIndexExodusIntelGetRequest) Cursor(cursor string) ApiIndexExodusIntel
 // request server-side paging
 func (r ApiIndexExodusIntelGetRequest) StartCursor(startCursor string) ApiIndexExodusIntelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexExodusIntelGetRequest) Order(order string) ApiIndexExodusIntelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexExodusIntelGetRequest) Sort(sort string) ApiIndexExodusIntelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -59877,6 +63071,12 @@ func (a *IndicesAPIService) IndexExodusIntelGetExecute(r ApiIndexExodusIntelGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -60030,6 +63230,8 @@ type ApiIndexExploitChainsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -60072,6 +63274,18 @@ func (r ApiIndexExploitChainsGetRequest) Cursor(cursor string) ApiIndexExploitCh
 // request server-side paging
 func (r ApiIndexExploitChainsGetRequest) StartCursor(startCursor string) ApiIndexExploitChainsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexExploitChainsGetRequest) Order(order string) ApiIndexExploitChainsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexExploitChainsGetRequest) Sort(sort string) ApiIndexExploitChainsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -60252,6 +63466,12 @@ func (a *IndicesAPIService) IndexExploitChainsGetExecute(r ApiIndexExploitChains
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -60405,6 +63625,8 @@ type ApiIndexExploitdbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -60447,6 +63669,18 @@ func (r ApiIndexExploitdbGetRequest) Cursor(cursor string) ApiIndexExploitdbGetR
 // request server-side paging
 func (r ApiIndexExploitdbGetRequest) StartCursor(startCursor string) ApiIndexExploitdbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexExploitdbGetRequest) Order(order string) ApiIndexExploitdbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexExploitdbGetRequest) Sort(sort string) ApiIndexExploitdbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -60627,6 +63861,12 @@ func (a *IndicesAPIService) IndexExploitdbGetExecute(r ApiIndexExploitdbGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -60780,6 +64020,8 @@ type ApiIndexExploitsChangelogGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -60822,6 +64064,18 @@ func (r ApiIndexExploitsChangelogGetRequest) Cursor(cursor string) ApiIndexExplo
 // request server-side paging
 func (r ApiIndexExploitsChangelogGetRequest) StartCursor(startCursor string) ApiIndexExploitsChangelogGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexExploitsChangelogGetRequest) Order(order string) ApiIndexExploitsChangelogGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexExploitsChangelogGetRequest) Sort(sort string) ApiIndexExploitsChangelogGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -61002,6 +64256,12 @@ func (a *IndicesAPIService) IndexExploitsChangelogGetExecute(r ApiIndexExploitsC
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -61155,6 +64415,8 @@ type ApiIndexExploitsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -61197,6 +64459,18 @@ func (r ApiIndexExploitsGetRequest) Cursor(cursor string) ApiIndexExploitsGetReq
 // request server-side paging
 func (r ApiIndexExploitsGetRequest) StartCursor(startCursor string) ApiIndexExploitsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexExploitsGetRequest) Order(order string) ApiIndexExploitsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexExploitsGetRequest) Sort(sort string) ApiIndexExploitsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -61377,6 +64651,12 @@ func (a *IndicesAPIService) IndexExploitsGetExecute(r ApiIndexExploitsGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -61530,6 +64810,8 @@ type ApiIndexF5GetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -61572,6 +64854,18 @@ func (r ApiIndexF5GetRequest) Cursor(cursor string) ApiIndexF5GetRequest {
 // request server-side paging
 func (r ApiIndexF5GetRequest) StartCursor(startCursor string) ApiIndexF5GetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexF5GetRequest) Order(order string) ApiIndexF5GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexF5GetRequest) Sort(sort string) ApiIndexF5GetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -61752,6 +65046,12 @@ func (a *IndicesAPIService) IndexF5GetExecute(r ApiIndexF5GetRequest) (*RenderRe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -61905,6 +65205,8 @@ type ApiIndexFSecureGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -61947,6 +65249,18 @@ func (r ApiIndexFSecureGetRequest) Cursor(cursor string) ApiIndexFSecureGetReque
 // request server-side paging
 func (r ApiIndexFSecureGetRequest) StartCursor(startCursor string) ApiIndexFSecureGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFSecureGetRequest) Order(order string) ApiIndexFSecureGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFSecureGetRequest) Sort(sort string) ApiIndexFSecureGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -62127,6 +65441,12 @@ func (a *IndicesAPIService) IndexFSecureGetExecute(r ApiIndexFSecureGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -62280,6 +65600,8 @@ type ApiIndexFanucGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -62322,6 +65644,18 @@ func (r ApiIndexFanucGetRequest) Cursor(cursor string) ApiIndexFanucGetRequest {
 // request server-side paging
 func (r ApiIndexFanucGetRequest) StartCursor(startCursor string) ApiIndexFanucGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFanucGetRequest) Order(order string) ApiIndexFanucGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFanucGetRequest) Sort(sort string) ApiIndexFanucGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -62502,6 +65836,12 @@ func (a *IndicesAPIService) IndexFanucGetExecute(r ApiIndexFanucGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -62655,6 +65995,8 @@ type ApiIndexFastlyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -62697,6 +66039,18 @@ func (r ApiIndexFastlyGetRequest) Cursor(cursor string) ApiIndexFastlyGetRequest
 // request server-side paging
 func (r ApiIndexFastlyGetRequest) StartCursor(startCursor string) ApiIndexFastlyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFastlyGetRequest) Order(order string) ApiIndexFastlyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFastlyGetRequest) Sort(sort string) ApiIndexFastlyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -62877,6 +66231,12 @@ func (a *IndicesAPIService) IndexFastlyGetExecute(r ApiIndexFastlyGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -63030,6 +66390,8 @@ type ApiIndexFedoraGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -63072,6 +66434,18 @@ func (r ApiIndexFedoraGetRequest) Cursor(cursor string) ApiIndexFedoraGetRequest
 // request server-side paging
 func (r ApiIndexFedoraGetRequest) StartCursor(startCursor string) ApiIndexFedoraGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFedoraGetRequest) Order(order string) ApiIndexFedoraGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFedoraGetRequest) Sort(sort string) ApiIndexFedoraGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -63252,6 +66626,12 @@ func (a *IndicesAPIService) IndexFedoraGetExecute(r ApiIndexFedoraGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -63405,6 +66785,8 @@ type ApiIndexFestoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -63447,6 +66829,18 @@ func (r ApiIndexFestoGetRequest) Cursor(cursor string) ApiIndexFestoGetRequest {
 // request server-side paging
 func (r ApiIndexFestoGetRequest) StartCursor(startCursor string) ApiIndexFestoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFestoGetRequest) Order(order string) ApiIndexFestoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFestoGetRequest) Sort(sort string) ApiIndexFestoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -63627,6 +67021,12 @@ func (a *IndicesAPIService) IndexFestoGetExecute(r ApiIndexFestoGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -63780,6 +67180,8 @@ type ApiIndexFilecloudGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -63822,6 +67224,18 @@ func (r ApiIndexFilecloudGetRequest) Cursor(cursor string) ApiIndexFilecloudGetR
 // request server-side paging
 func (r ApiIndexFilecloudGetRequest) StartCursor(startCursor string) ApiIndexFilecloudGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFilecloudGetRequest) Order(order string) ApiIndexFilecloudGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFilecloudGetRequest) Sort(sort string) ApiIndexFilecloudGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -64002,6 +67416,12 @@ func (a *IndicesAPIService) IndexFilecloudGetExecute(r ApiIndexFilecloudGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -64155,6 +67575,8 @@ type ApiIndexFilezillaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -64197,6 +67619,18 @@ func (r ApiIndexFilezillaGetRequest) Cursor(cursor string) ApiIndexFilezillaGetR
 // request server-side paging
 func (r ApiIndexFilezillaGetRequest) StartCursor(startCursor string) ApiIndexFilezillaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFilezillaGetRequest) Order(order string) ApiIndexFilezillaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFilezillaGetRequest) Sort(sort string) ApiIndexFilezillaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -64377,6 +67811,12 @@ func (a *IndicesAPIService) IndexFilezillaGetExecute(r ApiIndexFilezillaGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -64530,6 +67970,8 @@ type ApiIndexFlattSecurityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -64572,6 +68014,18 @@ func (r ApiIndexFlattSecurityGetRequest) Cursor(cursor string) ApiIndexFlattSecu
 // request server-side paging
 func (r ApiIndexFlattSecurityGetRequest) StartCursor(startCursor string) ApiIndexFlattSecurityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFlattSecurityGetRequest) Order(order string) ApiIndexFlattSecurityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFlattSecurityGetRequest) Sort(sort string) ApiIndexFlattSecurityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -64752,6 +68206,12 @@ func (a *IndicesAPIService) IndexFlattSecurityGetExecute(r ApiIndexFlattSecurity
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -64905,6 +68365,8 @@ type ApiIndexForgerockGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -64947,6 +68409,18 @@ func (r ApiIndexForgerockGetRequest) Cursor(cursor string) ApiIndexForgerockGetR
 // request server-side paging
 func (r ApiIndexForgerockGetRequest) StartCursor(startCursor string) ApiIndexForgerockGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexForgerockGetRequest) Order(order string) ApiIndexForgerockGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexForgerockGetRequest) Sort(sort string) ApiIndexForgerockGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -65127,6 +68601,12 @@ func (a *IndicesAPIService) IndexForgerockGetExecute(r ApiIndexForgerockGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -65280,6 +68760,8 @@ type ApiIndexFortinetGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -65322,6 +68804,18 @@ func (r ApiIndexFortinetGetRequest) Cursor(cursor string) ApiIndexFortinetGetReq
 // request server-side paging
 func (r ApiIndexFortinetGetRequest) StartCursor(startCursor string) ApiIndexFortinetGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFortinetGetRequest) Order(order string) ApiIndexFortinetGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFortinetGetRequest) Sort(sort string) ApiIndexFortinetGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -65502,6 +68996,12 @@ func (a *IndicesAPIService) IndexFortinetGetExecute(r ApiIndexFortinetGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -65655,6 +69155,8 @@ type ApiIndexFortinetIpsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -65697,6 +69199,18 @@ func (r ApiIndexFortinetIpsGetRequest) Cursor(cursor string) ApiIndexFortinetIps
 // request server-side paging
 func (r ApiIndexFortinetIpsGetRequest) StartCursor(startCursor string) ApiIndexFortinetIpsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFortinetIpsGetRequest) Order(order string) ApiIndexFortinetIpsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFortinetIpsGetRequest) Sort(sort string) ApiIndexFortinetIpsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -65877,6 +69391,12 @@ func (a *IndicesAPIService) IndexFortinetIpsGetExecute(r ApiIndexFortinetIpsGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -66030,6 +69550,8 @@ type ApiIndexFoxitGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -66072,6 +69594,18 @@ func (r ApiIndexFoxitGetRequest) Cursor(cursor string) ApiIndexFoxitGetRequest {
 // request server-side paging
 func (r ApiIndexFoxitGetRequest) StartCursor(startCursor string) ApiIndexFoxitGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFoxitGetRequest) Order(order string) ApiIndexFoxitGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFoxitGetRequest) Sort(sort string) ApiIndexFoxitGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -66252,6 +69786,12 @@ func (a *IndicesAPIService) IndexFoxitGetExecute(r ApiIndexFoxitGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -66405,6 +69945,8 @@ type ApiIndexFreebsdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -66447,6 +69989,18 @@ func (r ApiIndexFreebsdGetRequest) Cursor(cursor string) ApiIndexFreebsdGetReque
 // request server-side paging
 func (r ApiIndexFreebsdGetRequest) StartCursor(startCursor string) ApiIndexFreebsdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFreebsdGetRequest) Order(order string) ApiIndexFreebsdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFreebsdGetRequest) Sort(sort string) ApiIndexFreebsdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -66627,6 +70181,12 @@ func (a *IndicesAPIService) IndexFreebsdGetExecute(r ApiIndexFreebsdGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -66780,6 +70340,8 @@ type ApiIndexFreseniusGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -66822,6 +70384,18 @@ func (r ApiIndexFreseniusGetRequest) Cursor(cursor string) ApiIndexFreseniusGetR
 // request server-side paging
 func (r ApiIndexFreseniusGetRequest) StartCursor(startCursor string) ApiIndexFreseniusGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexFreseniusGetRequest) Order(order string) ApiIndexFreseniusGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexFreseniusGetRequest) Sort(sort string) ApiIndexFreseniusGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -67002,6 +70576,12 @@ func (a *IndicesAPIService) IndexFreseniusGetExecute(r ApiIndexFreseniusGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -67155,6 +70735,8 @@ type ApiIndexGallagherGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -67197,6 +70779,18 @@ func (r ApiIndexGallagherGetRequest) Cursor(cursor string) ApiIndexGallagherGetR
 // request server-side paging
 func (r ApiIndexGallagherGetRequest) StartCursor(startCursor string) ApiIndexGallagherGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGallagherGetRequest) Order(order string) ApiIndexGallagherGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGallagherGetRequest) Sort(sort string) ApiIndexGallagherGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -67377,6 +70971,12 @@ func (a *IndicesAPIService) IndexGallagherGetExecute(r ApiIndexGallagherGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -67530,6 +71130,8 @@ type ApiIndexGcpGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -67572,6 +71174,18 @@ func (r ApiIndexGcpGetRequest) Cursor(cursor string) ApiIndexGcpGetRequest {
 // request server-side paging
 func (r ApiIndexGcpGetRequest) StartCursor(startCursor string) ApiIndexGcpGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGcpGetRequest) Order(order string) ApiIndexGcpGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGcpGetRequest) Sort(sort string) ApiIndexGcpGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -67752,6 +71366,12 @@ func (a *IndicesAPIService) IndexGcpGetExecute(r ApiIndexGcpGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -67905,6 +71525,8 @@ type ApiIndexGeGasGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -67947,6 +71569,18 @@ func (r ApiIndexGeGasGetRequest) Cursor(cursor string) ApiIndexGeGasGetRequest {
 // request server-side paging
 func (r ApiIndexGeGasGetRequest) StartCursor(startCursor string) ApiIndexGeGasGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGeGasGetRequest) Order(order string) ApiIndexGeGasGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGeGasGetRequest) Sort(sort string) ApiIndexGeGasGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -68127,6 +71761,12 @@ func (a *IndicesAPIService) IndexGeGasGetExecute(r ApiIndexGeGasGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -68280,6 +71920,8 @@ type ApiIndexGeHealthcareGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -68322,6 +71964,18 @@ func (r ApiIndexGeHealthcareGetRequest) Cursor(cursor string) ApiIndexGeHealthca
 // request server-side paging
 func (r ApiIndexGeHealthcareGetRequest) StartCursor(startCursor string) ApiIndexGeHealthcareGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGeHealthcareGetRequest) Order(order string) ApiIndexGeHealthcareGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGeHealthcareGetRequest) Sort(sort string) ApiIndexGeHealthcareGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -68502,6 +72156,12 @@ func (a *IndicesAPIService) IndexGeHealthcareGetExecute(r ApiIndexGeHealthcareGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -68655,6 +72315,8 @@ type ApiIndexGemGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -68697,6 +72359,18 @@ func (r ApiIndexGemGetRequest) Cursor(cursor string) ApiIndexGemGetRequest {
 // request server-side paging
 func (r ApiIndexGemGetRequest) StartCursor(startCursor string) ApiIndexGemGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGemGetRequest) Order(order string) ApiIndexGemGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGemGetRequest) Sort(sort string) ApiIndexGemGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -68877,6 +72551,12 @@ func (a *IndicesAPIService) IndexGemGetExecute(r ApiIndexGemGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -69030,6 +72710,8 @@ type ApiIndexGenGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -69072,6 +72754,18 @@ func (r ApiIndexGenGetRequest) Cursor(cursor string) ApiIndexGenGetRequest {
 // request server-side paging
 func (r ApiIndexGenGetRequest) StartCursor(startCursor string) ApiIndexGenGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGenGetRequest) Order(order string) ApiIndexGenGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGenGetRequest) Sort(sort string) ApiIndexGenGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -69252,6 +72946,12 @@ func (a *IndicesAPIService) IndexGenGetExecute(r ApiIndexGenGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -69405,6 +73105,8 @@ type ApiIndexGenetecGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -69447,6 +73149,18 @@ func (r ApiIndexGenetecGetRequest) Cursor(cursor string) ApiIndexGenetecGetReque
 // request server-side paging
 func (r ApiIndexGenetecGetRequest) StartCursor(startCursor string) ApiIndexGenetecGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGenetecGetRequest) Order(order string) ApiIndexGenetecGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGenetecGetRequest) Sort(sort string) ApiIndexGenetecGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -69627,6 +73341,12 @@ func (a *IndicesAPIService) IndexGenetecGetExecute(r ApiIndexGenetecGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -69780,6 +73500,8 @@ type ApiIndexGhsaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -69822,6 +73544,18 @@ func (r ApiIndexGhsaGetRequest) Cursor(cursor string) ApiIndexGhsaGetRequest {
 // request server-side paging
 func (r ApiIndexGhsaGetRequest) StartCursor(startCursor string) ApiIndexGhsaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGhsaGetRequest) Order(order string) ApiIndexGhsaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGhsaGetRequest) Sort(sort string) ApiIndexGhsaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -70002,6 +73736,12 @@ func (a *IndicesAPIService) IndexGhsaGetExecute(r ApiIndexGhsaGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -70155,6 +73895,8 @@ type ApiIndexGigabyteGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -70197,6 +73939,18 @@ func (r ApiIndexGigabyteGetRequest) Cursor(cursor string) ApiIndexGigabyteGetReq
 // request server-side paging
 func (r ApiIndexGigabyteGetRequest) StartCursor(startCursor string) ApiIndexGigabyteGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGigabyteGetRequest) Order(order string) ApiIndexGigabyteGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGigabyteGetRequest) Sort(sort string) ApiIndexGigabyteGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -70377,6 +74131,12 @@ func (a *IndicesAPIService) IndexGigabyteGetExecute(r ApiIndexGigabyteGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -70530,6 +74290,8 @@ type ApiIndexGiteeExploitsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -70572,6 +74334,18 @@ func (r ApiIndexGiteeExploitsGetRequest) Cursor(cursor string) ApiIndexGiteeExpl
 // request server-side paging
 func (r ApiIndexGiteeExploitsGetRequest) StartCursor(startCursor string) ApiIndexGiteeExploitsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGiteeExploitsGetRequest) Order(order string) ApiIndexGiteeExploitsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGiteeExploitsGetRequest) Sort(sort string) ApiIndexGiteeExploitsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -70752,6 +74526,12 @@ func (a *IndicesAPIService) IndexGiteeExploitsGetExecute(r ApiIndexGiteeExploits
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -70905,6 +74685,8 @@ type ApiIndexGithubExploitsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -70947,6 +74729,18 @@ func (r ApiIndexGithubExploitsGetRequest) Cursor(cursor string) ApiIndexGithubEx
 // request server-side paging
 func (r ApiIndexGithubExploitsGetRequest) StartCursor(startCursor string) ApiIndexGithubExploitsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGithubExploitsGetRequest) Order(order string) ApiIndexGithubExploitsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGithubExploitsGetRequest) Sort(sort string) ApiIndexGithubExploitsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -71127,6 +74921,12 @@ func (a *IndicesAPIService) IndexGithubExploitsGetExecute(r ApiIndexGithubExploi
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -71280,6 +75080,8 @@ type ApiIndexGithubSecurityAdvisoriesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -71322,6 +75124,18 @@ func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Cursor(cursor string) ApiInd
 // request server-side paging
 func (r ApiIndexGithubSecurityAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexGithubSecurityAdvisoriesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Order(order string) ApiIndexGithubSecurityAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGithubSecurityAdvisoriesGetRequest) Sort(sort string) ApiIndexGithubSecurityAdvisoriesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -71502,6 +75316,12 @@ func (a *IndicesAPIService) IndexGithubSecurityAdvisoriesGetExecute(r ApiIndexGi
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -71655,6 +75475,8 @@ type ApiIndexGitlabAdvisoriesCommunityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -71697,6 +75519,18 @@ func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Cursor(cursor string) ApiIn
 // request server-side paging
 func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) StartCursor(startCursor string) ApiIndexGitlabAdvisoriesCommunityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Order(order string) ApiIndexGitlabAdvisoriesCommunityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGitlabAdvisoriesCommunityGetRequest) Sort(sort string) ApiIndexGitlabAdvisoriesCommunityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -71877,6 +75711,12 @@ func (a *IndicesAPIService) IndexGitlabAdvisoriesCommunityGetExecute(r ApiIndexG
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -72030,6 +75870,8 @@ type ApiIndexGitlabExploitsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -72072,6 +75914,18 @@ func (r ApiIndexGitlabExploitsGetRequest) Cursor(cursor string) ApiIndexGitlabEx
 // request server-side paging
 func (r ApiIndexGitlabExploitsGetRequest) StartCursor(startCursor string) ApiIndexGitlabExploitsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGitlabExploitsGetRequest) Order(order string) ApiIndexGitlabExploitsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGitlabExploitsGetRequest) Sort(sort string) ApiIndexGitlabExploitsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -72252,6 +76106,12 @@ func (a *IndicesAPIService) IndexGitlabExploitsGetExecute(r ApiIndexGitlabExploi
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -72405,6 +76265,8 @@ type ApiIndexGlibcGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -72447,6 +76309,18 @@ func (r ApiIndexGlibcGetRequest) Cursor(cursor string) ApiIndexGlibcGetRequest {
 // request server-side paging
 func (r ApiIndexGlibcGetRequest) StartCursor(startCursor string) ApiIndexGlibcGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGlibcGetRequest) Order(order string) ApiIndexGlibcGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGlibcGetRequest) Sort(sort string) ApiIndexGlibcGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -72627,6 +76501,12 @@ func (a *IndicesAPIService) IndexGlibcGetExecute(r ApiIndexGlibcGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -72780,6 +76660,8 @@ type ApiIndexGmoCybersecurityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -72822,6 +76704,18 @@ func (r ApiIndexGmoCybersecurityGetRequest) Cursor(cursor string) ApiIndexGmoCyb
 // request server-side paging
 func (r ApiIndexGmoCybersecurityGetRequest) StartCursor(startCursor string) ApiIndexGmoCybersecurityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGmoCybersecurityGetRequest) Order(order string) ApiIndexGmoCybersecurityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGmoCybersecurityGetRequest) Sort(sort string) ApiIndexGmoCybersecurityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -73002,6 +76896,12 @@ func (a *IndicesAPIService) IndexGmoCybersecurityGetExecute(r ApiIndexGmoCyberse
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -73155,6 +77055,8 @@ type ApiIndexGnutlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -73197,6 +77099,18 @@ func (r ApiIndexGnutlsGetRequest) Cursor(cursor string) ApiIndexGnutlsGetRequest
 // request server-side paging
 func (r ApiIndexGnutlsGetRequest) StartCursor(startCursor string) ApiIndexGnutlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGnutlsGetRequest) Order(order string) ApiIndexGnutlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGnutlsGetRequest) Sort(sort string) ApiIndexGnutlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -73377,6 +77291,12 @@ func (a *IndicesAPIService) IndexGnutlsGetExecute(r ApiIndexGnutlsGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -73530,6 +77450,8 @@ type ApiIndexGoVulndbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -73572,6 +77494,18 @@ func (r ApiIndexGoVulndbGetRequest) Cursor(cursor string) ApiIndexGoVulndbGetReq
 // request server-side paging
 func (r ApiIndexGoVulndbGetRequest) StartCursor(startCursor string) ApiIndexGoVulndbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGoVulndbGetRequest) Order(order string) ApiIndexGoVulndbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGoVulndbGetRequest) Sort(sort string) ApiIndexGoVulndbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -73752,6 +77686,12 @@ func (a *IndicesAPIService) IndexGoVulndbGetExecute(r ApiIndexGoVulndbGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -73905,6 +77845,8 @@ type ApiIndexGolangGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -73947,6 +77889,18 @@ func (r ApiIndexGolangGetRequest) Cursor(cursor string) ApiIndexGolangGetRequest
 // request server-side paging
 func (r ApiIndexGolangGetRequest) StartCursor(startCursor string) ApiIndexGolangGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGolangGetRequest) Order(order string) ApiIndexGolangGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGolangGetRequest) Sort(sort string) ApiIndexGolangGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -74127,6 +78081,12 @@ func (a *IndicesAPIService) IndexGolangGetExecute(r ApiIndexGolangGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -74280,6 +78240,8 @@ type ApiIndexGoogle0dayItwGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -74322,6 +78284,18 @@ func (r ApiIndexGoogle0dayItwGetRequest) Cursor(cursor string) ApiIndexGoogle0da
 // request server-side paging
 func (r ApiIndexGoogle0dayItwGetRequest) StartCursor(startCursor string) ApiIndexGoogle0dayItwGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGoogle0dayItwGetRequest) Order(order string) ApiIndexGoogle0dayItwGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGoogle0dayItwGetRequest) Sort(sort string) ApiIndexGoogle0dayItwGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -74502,6 +78476,12 @@ func (a *IndicesAPIService) IndexGoogle0dayItwGetExecute(r ApiIndexGoogle0dayItw
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -74655,6 +78635,8 @@ type ApiIndexGoogleContainerOptimizedOsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -74697,6 +78679,18 @@ func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Cursor(cursor string) ApiI
 // request server-side paging
 func (r ApiIndexGoogleContainerOptimizedOsGetRequest) StartCursor(startCursor string) ApiIndexGoogleContainerOptimizedOsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Order(order string) ApiIndexGoogleContainerOptimizedOsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGoogleContainerOptimizedOsGetRequest) Sort(sort string) ApiIndexGoogleContainerOptimizedOsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -74877,6 +78871,12 @@ func (a *IndicesAPIService) IndexGoogleContainerOptimizedOsGetExecute(r ApiIndex
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -75030,6 +79030,8 @@ type ApiIndexGrafanaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -75072,6 +79074,18 @@ func (r ApiIndexGrafanaGetRequest) Cursor(cursor string) ApiIndexGrafanaGetReque
 // request server-side paging
 func (r ApiIndexGrafanaGetRequest) StartCursor(startCursor string) ApiIndexGrafanaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGrafanaGetRequest) Order(order string) ApiIndexGrafanaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGrafanaGetRequest) Sort(sort string) ApiIndexGrafanaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -75252,6 +79266,12 @@ func (a *IndicesAPIService) IndexGrafanaGetExecute(r ApiIndexGrafanaGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -75405,6 +79425,8 @@ type ApiIndexGreynoiseMetadataGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -75447,6 +79469,18 @@ func (r ApiIndexGreynoiseMetadataGetRequest) Cursor(cursor string) ApiIndexGreyn
 // request server-side paging
 func (r ApiIndexGreynoiseMetadataGetRequest) StartCursor(startCursor string) ApiIndexGreynoiseMetadataGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexGreynoiseMetadataGetRequest) Order(order string) ApiIndexGreynoiseMetadataGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexGreynoiseMetadataGetRequest) Sort(sort string) ApiIndexGreynoiseMetadataGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -75627,6 +79661,12 @@ func (a *IndicesAPIService) IndexGreynoiseMetadataGetExecute(r ApiIndexGreynoise
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -75780,6 +79820,8 @@ type ApiIndexHackageGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -75822,6 +79864,18 @@ func (r ApiIndexHackageGetRequest) Cursor(cursor string) ApiIndexHackageGetReque
 // request server-side paging
 func (r ApiIndexHackageGetRequest) StartCursor(startCursor string) ApiIndexHackageGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHackageGetRequest) Order(order string) ApiIndexHackageGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHackageGetRequest) Sort(sort string) ApiIndexHackageGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -76002,6 +80056,12 @@ func (a *IndicesAPIService) IndexHackageGetExecute(r ApiIndexHackageGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -76155,6 +80215,8 @@ type ApiIndexHacktivityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -76197,6 +80259,18 @@ func (r ApiIndexHacktivityGetRequest) Cursor(cursor string) ApiIndexHacktivityGe
 // request server-side paging
 func (r ApiIndexHacktivityGetRequest) StartCursor(startCursor string) ApiIndexHacktivityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHacktivityGetRequest) Order(order string) ApiIndexHacktivityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHacktivityGetRequest) Sort(sort string) ApiIndexHacktivityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -76377,6 +80451,12 @@ func (a *IndicesAPIService) IndexHacktivityGetExecute(r ApiIndexHacktivityGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -76530,6 +80610,8 @@ type ApiIndexHarmonyosGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -76572,6 +80654,18 @@ func (r ApiIndexHarmonyosGetRequest) Cursor(cursor string) ApiIndexHarmonyosGetR
 // request server-side paging
 func (r ApiIndexHarmonyosGetRequest) StartCursor(startCursor string) ApiIndexHarmonyosGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHarmonyosGetRequest) Order(order string) ApiIndexHarmonyosGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHarmonyosGetRequest) Sort(sort string) ApiIndexHarmonyosGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -76752,6 +80846,12 @@ func (a *IndicesAPIService) IndexHarmonyosGetExecute(r ApiIndexHarmonyosGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -76905,6 +81005,8 @@ type ApiIndexHashicorpGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -76947,6 +81049,18 @@ func (r ApiIndexHashicorpGetRequest) Cursor(cursor string) ApiIndexHashicorpGetR
 // request server-side paging
 func (r ApiIndexHashicorpGetRequest) StartCursor(startCursor string) ApiIndexHashicorpGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHashicorpGetRequest) Order(order string) ApiIndexHashicorpGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHashicorpGetRequest) Sort(sort string) ApiIndexHashicorpGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -77127,6 +81241,12 @@ func (a *IndicesAPIService) IndexHashicorpGetExecute(r ApiIndexHashicorpGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -77280,6 +81400,8 @@ type ApiIndexHaskellSadbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -77322,6 +81444,18 @@ func (r ApiIndexHaskellSadbGetRequest) Cursor(cursor string) ApiIndexHaskellSadb
 // request server-side paging
 func (r ApiIndexHaskellSadbGetRequest) StartCursor(startCursor string) ApiIndexHaskellSadbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHaskellSadbGetRequest) Order(order string) ApiIndexHaskellSadbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHaskellSadbGetRequest) Sort(sort string) ApiIndexHaskellSadbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -77502,6 +81636,12 @@ func (a *IndicesAPIService) IndexHaskellSadbGetExecute(r ApiIndexHaskellSadbGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -77655,6 +81795,8 @@ type ApiIndexHclGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -77697,6 +81839,18 @@ func (r ApiIndexHclGetRequest) Cursor(cursor string) ApiIndexHclGetRequest {
 // request server-side paging
 func (r ApiIndexHclGetRequest) StartCursor(startCursor string) ApiIndexHclGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHclGetRequest) Order(order string) ApiIndexHclGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHclGetRequest) Sort(sort string) ApiIndexHclGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -77877,6 +82031,12 @@ func (a *IndicesAPIService) IndexHclGetExecute(r ApiIndexHclGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -78030,6 +82190,8 @@ type ApiIndexHexGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -78072,6 +82234,18 @@ func (r ApiIndexHexGetRequest) Cursor(cursor string) ApiIndexHexGetRequest {
 // request server-side paging
 func (r ApiIndexHexGetRequest) StartCursor(startCursor string) ApiIndexHexGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHexGetRequest) Order(order string) ApiIndexHexGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHexGetRequest) Sort(sort string) ApiIndexHexGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -78252,6 +82426,12 @@ func (a *IndicesAPIService) IndexHexGetExecute(r ApiIndexHexGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -78405,6 +82585,8 @@ type ApiIndexHikvisionGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -78447,6 +82629,18 @@ func (r ApiIndexHikvisionGetRequest) Cursor(cursor string) ApiIndexHikvisionGetR
 // request server-side paging
 func (r ApiIndexHikvisionGetRequest) StartCursor(startCursor string) ApiIndexHikvisionGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHikvisionGetRequest) Order(order string) ApiIndexHikvisionGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHikvisionGetRequest) Sort(sort string) ApiIndexHikvisionGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -78627,6 +82821,12 @@ func (a *IndicesAPIService) IndexHikvisionGetExecute(r ApiIndexHikvisionGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -78780,6 +82980,8 @@ type ApiIndexHillromGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -78822,6 +83024,18 @@ func (r ApiIndexHillromGetRequest) Cursor(cursor string) ApiIndexHillromGetReque
 // request server-side paging
 func (r ApiIndexHillromGetRequest) StartCursor(startCursor string) ApiIndexHillromGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHillromGetRequest) Order(order string) ApiIndexHillromGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHillromGetRequest) Sort(sort string) ApiIndexHillromGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -79002,6 +83216,12 @@ func (a *IndicesAPIService) IndexHillromGetExecute(r ApiIndexHillromGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -79155,6 +83375,8 @@ type ApiIndexHitachiEnergyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -79197,6 +83419,18 @@ func (r ApiIndexHitachiEnergyGetRequest) Cursor(cursor string) ApiIndexHitachiEn
 // request server-side paging
 func (r ApiIndexHitachiEnergyGetRequest) StartCursor(startCursor string) ApiIndexHitachiEnergyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHitachiEnergyGetRequest) Order(order string) ApiIndexHitachiEnergyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHitachiEnergyGetRequest) Sort(sort string) ApiIndexHitachiEnergyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -79377,6 +83611,12 @@ func (a *IndicesAPIService) IndexHitachiEnergyGetExecute(r ApiIndexHitachiEnergy
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -79530,6 +83770,8 @@ type ApiIndexHitachiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -79572,6 +83814,18 @@ func (r ApiIndexHitachiGetRequest) Cursor(cursor string) ApiIndexHitachiGetReque
 // request server-side paging
 func (r ApiIndexHitachiGetRequest) StartCursor(startCursor string) ApiIndexHitachiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHitachiGetRequest) Order(order string) ApiIndexHitachiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHitachiGetRequest) Sort(sort string) ApiIndexHitachiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -79752,6 +84006,12 @@ func (a *IndicesAPIService) IndexHitachiGetExecute(r ApiIndexHitachiGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -79905,6 +84165,8 @@ type ApiIndexHkcertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -79947,6 +84209,18 @@ func (r ApiIndexHkcertGetRequest) Cursor(cursor string) ApiIndexHkcertGetRequest
 // request server-side paging
 func (r ApiIndexHkcertGetRequest) StartCursor(startCursor string) ApiIndexHkcertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHkcertGetRequest) Order(order string) ApiIndexHkcertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHkcertGetRequest) Sort(sort string) ApiIndexHkcertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -80127,6 +84401,12 @@ func (a *IndicesAPIService) IndexHkcertGetExecute(r ApiIndexHkcertGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -80280,6 +84560,8 @@ type ApiIndexHmsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -80322,6 +84604,18 @@ func (r ApiIndexHmsGetRequest) Cursor(cursor string) ApiIndexHmsGetRequest {
 // request server-side paging
 func (r ApiIndexHmsGetRequest) StartCursor(startCursor string) ApiIndexHmsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHmsGetRequest) Order(order string) ApiIndexHmsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHmsGetRequest) Sort(sort string) ApiIndexHmsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -80502,6 +84796,12 @@ func (a *IndicesAPIService) IndexHmsGetExecute(r ApiIndexHmsGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -80655,6 +84955,8 @@ type ApiIndexHoneywellGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -80697,6 +84999,18 @@ func (r ApiIndexHoneywellGetRequest) Cursor(cursor string) ApiIndexHoneywellGetR
 // request server-side paging
 func (r ApiIndexHoneywellGetRequest) StartCursor(startCursor string) ApiIndexHoneywellGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHoneywellGetRequest) Order(order string) ApiIndexHoneywellGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHoneywellGetRequest) Sort(sort string) ApiIndexHoneywellGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -80877,6 +85191,12 @@ func (a *IndicesAPIService) IndexHoneywellGetExecute(r ApiIndexHoneywellGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -81030,6 +85350,8 @@ type ApiIndexHpGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -81072,6 +85394,18 @@ func (r ApiIndexHpGetRequest) Cursor(cursor string) ApiIndexHpGetRequest {
 // request server-side paging
 func (r ApiIndexHpGetRequest) StartCursor(startCursor string) ApiIndexHpGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHpGetRequest) Order(order string) ApiIndexHpGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHpGetRequest) Sort(sort string) ApiIndexHpGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -81252,6 +85586,12 @@ func (a *IndicesAPIService) IndexHpGetExecute(r ApiIndexHpGetRequest) (*RenderRe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -81405,6 +85745,8 @@ type ApiIndexHpeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -81447,6 +85789,18 @@ func (r ApiIndexHpeGetRequest) Cursor(cursor string) ApiIndexHpeGetRequest {
 // request server-side paging
 func (r ApiIndexHpeGetRequest) StartCursor(startCursor string) ApiIndexHpeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHpeGetRequest) Order(order string) ApiIndexHpeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHpeGetRequest) Sort(sort string) ApiIndexHpeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -81627,6 +85981,12 @@ func (a *IndicesAPIService) IndexHpeGetExecute(r ApiIndexHpeGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -81780,6 +86140,8 @@ type ApiIndexHuaweiEulerosGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -81822,6 +86184,18 @@ func (r ApiIndexHuaweiEulerosGetRequest) Cursor(cursor string) ApiIndexHuaweiEul
 // request server-side paging
 func (r ApiIndexHuaweiEulerosGetRequest) StartCursor(startCursor string) ApiIndexHuaweiEulerosGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHuaweiEulerosGetRequest) Order(order string) ApiIndexHuaweiEulerosGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHuaweiEulerosGetRequest) Sort(sort string) ApiIndexHuaweiEulerosGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -82002,6 +86376,12 @@ func (a *IndicesAPIService) IndexHuaweiEulerosGetExecute(r ApiIndexHuaweiEuleros
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -82155,6 +86535,8 @@ type ApiIndexHuaweiIpsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -82197,6 +86579,18 @@ func (r ApiIndexHuaweiIpsGetRequest) Cursor(cursor string) ApiIndexHuaweiIpsGetR
 // request server-side paging
 func (r ApiIndexHuaweiIpsGetRequest) StartCursor(startCursor string) ApiIndexHuaweiIpsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHuaweiIpsGetRequest) Order(order string) ApiIndexHuaweiIpsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHuaweiIpsGetRequest) Sort(sort string) ApiIndexHuaweiIpsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -82377,6 +86771,12 @@ func (a *IndicesAPIService) IndexHuaweiIpsGetExecute(r ApiIndexHuaweiIpsGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -82530,6 +86930,8 @@ type ApiIndexHuaweiPsirtGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -82572,6 +86974,18 @@ func (r ApiIndexHuaweiPsirtGetRequest) Cursor(cursor string) ApiIndexHuaweiPsirt
 // request server-side paging
 func (r ApiIndexHuaweiPsirtGetRequest) StartCursor(startCursor string) ApiIndexHuaweiPsirtGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexHuaweiPsirtGetRequest) Order(order string) ApiIndexHuaweiPsirtGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexHuaweiPsirtGetRequest) Sort(sort string) ApiIndexHuaweiPsirtGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -82752,6 +87166,12 @@ func (a *IndicesAPIService) IndexHuaweiPsirtGetExecute(r ApiIndexHuaweiPsirtGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -82905,6 +87325,8 @@ type ApiIndexIavaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -82947,6 +87369,18 @@ func (r ApiIndexIavaGetRequest) Cursor(cursor string) ApiIndexIavaGetRequest {
 // request server-side paging
 func (r ApiIndexIavaGetRequest) StartCursor(startCursor string) ApiIndexIavaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIavaGetRequest) Order(order string) ApiIndexIavaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIavaGetRequest) Sort(sort string) ApiIndexIavaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -83127,6 +87561,12 @@ func (a *IndicesAPIService) IndexIavaGetExecute(r ApiIndexIavaGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -83280,6 +87720,8 @@ type ApiIndexIbmGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -83322,6 +87764,18 @@ func (r ApiIndexIbmGetRequest) Cursor(cursor string) ApiIndexIbmGetRequest {
 // request server-side paging
 func (r ApiIndexIbmGetRequest) StartCursor(startCursor string) ApiIndexIbmGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIbmGetRequest) Order(order string) ApiIndexIbmGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIbmGetRequest) Sort(sort string) ApiIndexIbmGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -83502,6 +87956,12 @@ func (a *IndicesAPIService) IndexIbmGetExecute(r ApiIndexIbmGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -83655,6 +88115,8 @@ type ApiIndexIdemiaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -83697,6 +88159,18 @@ func (r ApiIndexIdemiaGetRequest) Cursor(cursor string) ApiIndexIdemiaGetRequest
 // request server-side paging
 func (r ApiIndexIdemiaGetRequest) StartCursor(startCursor string) ApiIndexIdemiaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIdemiaGetRequest) Order(order string) ApiIndexIdemiaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIdemiaGetRequest) Sort(sort string) ApiIndexIdemiaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -83877,6 +88351,12 @@ func (a *IndicesAPIService) IndexIdemiaGetExecute(r ApiIndexIdemiaGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -84030,6 +88510,8 @@ type ApiIndexIgelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -84072,6 +88554,18 @@ func (r ApiIndexIgelGetRequest) Cursor(cursor string) ApiIndexIgelGetRequest {
 // request server-side paging
 func (r ApiIndexIgelGetRequest) StartCursor(startCursor string) ApiIndexIgelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIgelGetRequest) Order(order string) ApiIndexIgelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIgelGetRequest) Sort(sort string) ApiIndexIgelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -84252,6 +88746,12 @@ func (a *IndicesAPIService) IndexIgelGetExecute(r ApiIndexIgelGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -84405,6 +88905,8 @@ type ApiIndexIlAlertsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -84447,6 +88949,18 @@ func (r ApiIndexIlAlertsGetRequest) Cursor(cursor string) ApiIndexIlAlertsGetReq
 // request server-side paging
 func (r ApiIndexIlAlertsGetRequest) StartCursor(startCursor string) ApiIndexIlAlertsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIlAlertsGetRequest) Order(order string) ApiIndexIlAlertsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIlAlertsGetRequest) Sort(sort string) ApiIndexIlAlertsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -84627,6 +89141,12 @@ func (a *IndicesAPIService) IndexIlAlertsGetExecute(r ApiIndexIlAlertsGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -84780,6 +89300,8 @@ type ApiIndexIlVulnerabilitiesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -84822,6 +89344,18 @@ func (r ApiIndexIlVulnerabilitiesGetRequest) Cursor(cursor string) ApiIndexIlVul
 // request server-side paging
 func (r ApiIndexIlVulnerabilitiesGetRequest) StartCursor(startCursor string) ApiIndexIlVulnerabilitiesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIlVulnerabilitiesGetRequest) Order(order string) ApiIndexIlVulnerabilitiesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIlVulnerabilitiesGetRequest) Sort(sort string) ApiIndexIlVulnerabilitiesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -85002,6 +89536,12 @@ func (a *IndicesAPIService) IndexIlVulnerabilitiesGetExecute(r ApiIndexIlVulnera
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -85155,6 +89695,8 @@ type ApiIndexIncibeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -85197,6 +89739,18 @@ func (r ApiIndexIncibeGetRequest) Cursor(cursor string) ApiIndexIncibeGetRequest
 // request server-side paging
 func (r ApiIndexIncibeGetRequest) StartCursor(startCursor string) ApiIndexIncibeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIncibeGetRequest) Order(order string) ApiIndexIncibeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIncibeGetRequest) Sort(sort string) ApiIndexIncibeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -85377,6 +89931,12 @@ func (a *IndicesAPIService) IndexIncibeGetExecute(r ApiIndexIncibeGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -85530,6 +90090,8 @@ type ApiIndexInitialAccessGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -85572,6 +90134,18 @@ func (r ApiIndexInitialAccessGetRequest) Cursor(cursor string) ApiIndexInitialAc
 // request server-side paging
 func (r ApiIndexInitialAccessGetRequest) StartCursor(startCursor string) ApiIndexInitialAccessGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexInitialAccessGetRequest) Order(order string) ApiIndexInitialAccessGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexInitialAccessGetRequest) Sort(sort string) ApiIndexInitialAccessGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -85752,6 +90326,12 @@ func (a *IndicesAPIService) IndexInitialAccessGetExecute(r ApiIndexInitialAccess
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -85905,6 +90485,8 @@ type ApiIndexInitialAccessGitGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -85947,6 +90529,18 @@ func (r ApiIndexInitialAccessGitGetRequest) Cursor(cursor string) ApiIndexInitia
 // request server-side paging
 func (r ApiIndexInitialAccessGitGetRequest) StartCursor(startCursor string) ApiIndexInitialAccessGitGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexInitialAccessGitGetRequest) Order(order string) ApiIndexInitialAccessGitGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexInitialAccessGitGetRequest) Sort(sort string) ApiIndexInitialAccessGitGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -86127,6 +90721,12 @@ func (a *IndicesAPIService) IndexInitialAccessGitGetExecute(r ApiIndexInitialAcc
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -86280,6 +90880,8 @@ type ApiIndexIntelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -86322,6 +90924,18 @@ func (r ApiIndexIntelGetRequest) Cursor(cursor string) ApiIndexIntelGetRequest {
 // request server-side paging
 func (r ApiIndexIntelGetRequest) StartCursor(startCursor string) ApiIndexIntelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIntelGetRequest) Order(order string) ApiIndexIntelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIntelGetRequest) Sort(sort string) ApiIndexIntelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -86502,6 +91116,12 @@ func (a *IndicesAPIService) IndexIntelGetExecute(r ApiIndexIntelGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -86655,6 +91275,8 @@ type ApiIndexIpintel10dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -86702,6 +91324,18 @@ func (r ApiIndexIpintel10dGetRequest) Cursor(cursor string) ApiIndexIpintel10dGe
 // request server-side paging
 func (r ApiIndexIpintel10dGetRequest) StartCursor(startCursor string) ApiIndexIpintel10dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIpintel10dGetRequest) Order(order string) ApiIndexIpintel10dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIpintel10dGetRequest) Sort(sort string) ApiIndexIpintel10dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -86912,6 +91546,12 @@ func (a *IndicesAPIService) IndexIpintel10dGetExecute(r ApiIndexIpintel10dGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -87080,6 +91720,8 @@ type ApiIndexIpintel30dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -87127,6 +91769,18 @@ func (r ApiIndexIpintel30dGetRequest) Cursor(cursor string) ApiIndexIpintel30dGe
 // request server-side paging
 func (r ApiIndexIpintel30dGetRequest) StartCursor(startCursor string) ApiIndexIpintel30dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIpintel30dGetRequest) Order(order string) ApiIndexIpintel30dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIpintel30dGetRequest) Sort(sort string) ApiIndexIpintel30dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -87337,6 +91991,12 @@ func (a *IndicesAPIService) IndexIpintel30dGetExecute(r ApiIndexIpintel30dGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -87505,6 +92165,8 @@ type ApiIndexIpintel3dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -87552,6 +92214,18 @@ func (r ApiIndexIpintel3dGetRequest) Cursor(cursor string) ApiIndexIpintel3dGetR
 // request server-side paging
 func (r ApiIndexIpintel3dGetRequest) StartCursor(startCursor string) ApiIndexIpintel3dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIpintel3dGetRequest) Order(order string) ApiIndexIpintel3dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIpintel3dGetRequest) Sort(sort string) ApiIndexIpintel3dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -87762,6 +92436,12 @@ func (a *IndicesAPIService) IndexIpintel3dGetExecute(r ApiIndexIpintel3dGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -87930,6 +92610,8 @@ type ApiIndexIpintel90dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -87977,6 +92659,18 @@ func (r ApiIndexIpintel90dGetRequest) Cursor(cursor string) ApiIndexIpintel90dGe
 // request server-side paging
 func (r ApiIndexIpintel90dGetRequest) StartCursor(startCursor string) ApiIndexIpintel90dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIpintel90dGetRequest) Order(order string) ApiIndexIpintel90dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIpintel90dGetRequest) Sort(sort string) ApiIndexIpintel90dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -88187,6 +92881,12 @@ func (a *IndicesAPIService) IndexIpintel90dGetExecute(r ApiIndexIpintel90dGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -88355,6 +93055,8 @@ type ApiIndexIstioGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -88397,6 +93099,18 @@ func (r ApiIndexIstioGetRequest) Cursor(cursor string) ApiIndexIstioGetRequest {
 // request server-side paging
 func (r ApiIndexIstioGetRequest) StartCursor(startCursor string) ApiIndexIstioGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIstioGetRequest) Order(order string) ApiIndexIstioGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIstioGetRequest) Sort(sort string) ApiIndexIstioGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -88577,6 +93291,12 @@ func (a *IndicesAPIService) IndexIstioGetExecute(r ApiIndexIstioGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -88730,6 +93450,8 @@ type ApiIndexIvantiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -88772,6 +93494,18 @@ func (r ApiIndexIvantiGetRequest) Cursor(cursor string) ApiIndexIvantiGetRequest
 // request server-side paging
 func (r ApiIndexIvantiGetRequest) StartCursor(startCursor string) ApiIndexIvantiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIvantiGetRequest) Order(order string) ApiIndexIvantiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIvantiGetRequest) Sort(sort string) ApiIndexIvantiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -88952,6 +93686,12 @@ func (a *IndicesAPIService) IndexIvantiGetExecute(r ApiIndexIvantiGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -89105,6 +93845,8 @@ type ApiIndexIvantiRssGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -89147,6 +93889,18 @@ func (r ApiIndexIvantiRssGetRequest) Cursor(cursor string) ApiIndexIvantiRssGetR
 // request server-side paging
 func (r ApiIndexIvantiRssGetRequest) StartCursor(startCursor string) ApiIndexIvantiRssGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexIvantiRssGetRequest) Order(order string) ApiIndexIvantiRssGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexIvantiRssGetRequest) Sort(sort string) ApiIndexIvantiRssGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -89327,6 +94081,12 @@ func (a *IndicesAPIService) IndexIvantiRssGetExecute(r ApiIndexIvantiRssGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -89480,6 +94240,8 @@ type ApiIndexJenkinsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -89522,6 +94284,18 @@ func (r ApiIndexJenkinsGetRequest) Cursor(cursor string) ApiIndexJenkinsGetReque
 // request server-side paging
 func (r ApiIndexJenkinsGetRequest) StartCursor(startCursor string) ApiIndexJenkinsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJenkinsGetRequest) Order(order string) ApiIndexJenkinsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJenkinsGetRequest) Sort(sort string) ApiIndexJenkinsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -89702,6 +94476,12 @@ func (a *IndicesAPIService) IndexJenkinsGetExecute(r ApiIndexJenkinsGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -89855,6 +94635,8 @@ type ApiIndexJetbrainsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -89897,6 +94679,18 @@ func (r ApiIndexJetbrainsGetRequest) Cursor(cursor string) ApiIndexJetbrainsGetR
 // request server-side paging
 func (r ApiIndexJetbrainsGetRequest) StartCursor(startCursor string) ApiIndexJetbrainsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJetbrainsGetRequest) Order(order string) ApiIndexJetbrainsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJetbrainsGetRequest) Sort(sort string) ApiIndexJetbrainsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -90077,6 +94871,12 @@ func (a *IndicesAPIService) IndexJetbrainsGetExecute(r ApiIndexJetbrainsGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -90230,6 +95030,8 @@ type ApiIndexJfrogGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -90272,6 +95074,18 @@ func (r ApiIndexJfrogGetRequest) Cursor(cursor string) ApiIndexJfrogGetRequest {
 // request server-side paging
 func (r ApiIndexJfrogGetRequest) StartCursor(startCursor string) ApiIndexJfrogGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJfrogGetRequest) Order(order string) ApiIndexJfrogGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJfrogGetRequest) Sort(sort string) ApiIndexJfrogGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -90452,6 +95266,12 @@ func (a *IndicesAPIService) IndexJfrogGetExecute(r ApiIndexJfrogGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -90605,6 +95425,8 @@ type ApiIndexJnjGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -90647,6 +95469,18 @@ func (r ApiIndexJnjGetRequest) Cursor(cursor string) ApiIndexJnjGetRequest {
 // request server-side paging
 func (r ApiIndexJnjGetRequest) StartCursor(startCursor string) ApiIndexJnjGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJnjGetRequest) Order(order string) ApiIndexJnjGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJnjGetRequest) Sort(sort string) ApiIndexJnjGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -90827,6 +95661,12 @@ func (a *IndicesAPIService) IndexJnjGetExecute(r ApiIndexJnjGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -90980,6 +95820,8 @@ type ApiIndexJohnsonControlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -91022,6 +95864,18 @@ func (r ApiIndexJohnsonControlsGetRequest) Cursor(cursor string) ApiIndexJohnson
 // request server-side paging
 func (r ApiIndexJohnsonControlsGetRequest) StartCursor(startCursor string) ApiIndexJohnsonControlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJohnsonControlsGetRequest) Order(order string) ApiIndexJohnsonControlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJohnsonControlsGetRequest) Sort(sort string) ApiIndexJohnsonControlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -91202,6 +96056,12 @@ func (a *IndicesAPIService) IndexJohnsonControlsGetExecute(r ApiIndexJohnsonCont
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -91355,6 +96215,8 @@ type ApiIndexJuniperGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -91397,6 +96259,18 @@ func (r ApiIndexJuniperGetRequest) Cursor(cursor string) ApiIndexJuniperGetReque
 // request server-side paging
 func (r ApiIndexJuniperGetRequest) StartCursor(startCursor string) ApiIndexJuniperGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJuniperGetRequest) Order(order string) ApiIndexJuniperGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJuniperGetRequest) Sort(sort string) ApiIndexJuniperGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -91577,6 +96451,12 @@ func (a *IndicesAPIService) IndexJuniperGetExecute(r ApiIndexJuniperGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -91730,6 +96610,8 @@ type ApiIndexJvnGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -91772,6 +96654,18 @@ func (r ApiIndexJvnGetRequest) Cursor(cursor string) ApiIndexJvnGetRequest {
 // request server-side paging
 func (r ApiIndexJvnGetRequest) StartCursor(startCursor string) ApiIndexJvnGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJvnGetRequest) Order(order string) ApiIndexJvnGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJvnGetRequest) Sort(sort string) ApiIndexJvnGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -91952,6 +96846,12 @@ func (a *IndicesAPIService) IndexJvnGetExecute(r ApiIndexJvnGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -92105,6 +97005,8 @@ type ApiIndexJvndbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -92147,6 +97049,18 @@ func (r ApiIndexJvndbGetRequest) Cursor(cursor string) ApiIndexJvndbGetRequest {
 // request server-side paging
 func (r ApiIndexJvndbGetRequest) StartCursor(startCursor string) ApiIndexJvndbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexJvndbGetRequest) Order(order string) ApiIndexJvndbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexJvndbGetRequest) Sort(sort string) ApiIndexJvndbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -92327,6 +97241,12 @@ func (a *IndicesAPIService) IndexJvndbGetExecute(r ApiIndexJvndbGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -92480,6 +97400,8 @@ type ApiIndexKasperskyIcsCertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -92522,6 +97444,18 @@ func (r ApiIndexKasperskyIcsCertGetRequest) Cursor(cursor string) ApiIndexKasper
 // request server-side paging
 func (r ApiIndexKasperskyIcsCertGetRequest) StartCursor(startCursor string) ApiIndexKasperskyIcsCertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexKasperskyIcsCertGetRequest) Order(order string) ApiIndexKasperskyIcsCertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexKasperskyIcsCertGetRequest) Sort(sort string) ApiIndexKasperskyIcsCertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -92702,6 +97636,12 @@ func (a *IndicesAPIService) IndexKasperskyIcsCertGetExecute(r ApiIndexKasperskyI
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -92855,6 +97795,8 @@ type ApiIndexKorelogicGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -92897,6 +97839,18 @@ func (r ApiIndexKorelogicGetRequest) Cursor(cursor string) ApiIndexKorelogicGetR
 // request server-side paging
 func (r ApiIndexKorelogicGetRequest) StartCursor(startCursor string) ApiIndexKorelogicGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexKorelogicGetRequest) Order(order string) ApiIndexKorelogicGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexKorelogicGetRequest) Sort(sort string) ApiIndexKorelogicGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -93077,6 +98031,12 @@ func (a *IndicesAPIService) IndexKorelogicGetExecute(r ApiIndexKorelogicGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -93230,6 +98190,8 @@ type ApiIndexKrcertSecurityNoticesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -93272,6 +98234,18 @@ func (r ApiIndexKrcertSecurityNoticesGetRequest) Cursor(cursor string) ApiIndexK
 // request server-side paging
 func (r ApiIndexKrcertSecurityNoticesGetRequest) StartCursor(startCursor string) ApiIndexKrcertSecurityNoticesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexKrcertSecurityNoticesGetRequest) Order(order string) ApiIndexKrcertSecurityNoticesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexKrcertSecurityNoticesGetRequest) Sort(sort string) ApiIndexKrcertSecurityNoticesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -93452,6 +98426,12 @@ func (a *IndicesAPIService) IndexKrcertSecurityNoticesGetExecute(r ApiIndexKrcer
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -93605,6 +98585,8 @@ type ApiIndexKrcertVulnerabilitiesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -93647,6 +98629,18 @@ func (r ApiIndexKrcertVulnerabilitiesGetRequest) Cursor(cursor string) ApiIndexK
 // request server-side paging
 func (r ApiIndexKrcertVulnerabilitiesGetRequest) StartCursor(startCursor string) ApiIndexKrcertVulnerabilitiesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexKrcertVulnerabilitiesGetRequest) Order(order string) ApiIndexKrcertVulnerabilitiesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexKrcertVulnerabilitiesGetRequest) Sort(sort string) ApiIndexKrcertVulnerabilitiesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -93827,6 +98821,12 @@ func (a *IndicesAPIService) IndexKrcertVulnerabilitiesGetExecute(r ApiIndexKrcer
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -93980,6 +98980,8 @@ type ApiIndexKubernetesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -94022,6 +99024,18 @@ func (r ApiIndexKubernetesGetRequest) Cursor(cursor string) ApiIndexKubernetesGe
 // request server-side paging
 func (r ApiIndexKubernetesGetRequest) StartCursor(startCursor string) ApiIndexKubernetesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexKubernetesGetRequest) Order(order string) ApiIndexKubernetesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexKubernetesGetRequest) Sort(sort string) ApiIndexKubernetesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -94202,6 +99216,12 @@ func (a *IndicesAPIService) IndexKubernetesGetExecute(r ApiIndexKubernetesGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -94355,6 +99375,8 @@ type ApiIndexKunbusGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -94397,6 +99419,18 @@ func (r ApiIndexKunbusGetRequest) Cursor(cursor string) ApiIndexKunbusGetRequest
 // request server-side paging
 func (r ApiIndexKunbusGetRequest) StartCursor(startCursor string) ApiIndexKunbusGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexKunbusGetRequest) Order(order string) ApiIndexKunbusGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexKunbusGetRequest) Sort(sort string) ApiIndexKunbusGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -94577,6 +99611,12 @@ func (a *IndicesAPIService) IndexKunbusGetExecute(r ApiIndexKunbusGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -94730,6 +99770,8 @@ type ApiIndexLantronixGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -94772,6 +99814,18 @@ func (r ApiIndexLantronixGetRequest) Cursor(cursor string) ApiIndexLantronixGetR
 // request server-side paging
 func (r ApiIndexLantronixGetRequest) StartCursor(startCursor string) ApiIndexLantronixGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLantronixGetRequest) Order(order string) ApiIndexLantronixGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLantronixGetRequest) Sort(sort string) ApiIndexLantronixGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -94952,6 +100006,12 @@ func (a *IndicesAPIService) IndexLantronixGetExecute(r ApiIndexLantronixGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -95105,6 +100165,8 @@ type ApiIndexLenovoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -95147,6 +100209,18 @@ func (r ApiIndexLenovoGetRequest) Cursor(cursor string) ApiIndexLenovoGetRequest
 // request server-side paging
 func (r ApiIndexLenovoGetRequest) StartCursor(startCursor string) ApiIndexLenovoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLenovoGetRequest) Order(order string) ApiIndexLenovoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLenovoGetRequest) Sort(sort string) ApiIndexLenovoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -95327,6 +100401,12 @@ func (a *IndicesAPIService) IndexLenovoGetExecute(r ApiIndexLenovoGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -95480,6 +100560,8 @@ type ApiIndexLexmarkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -95522,6 +100604,18 @@ func (r ApiIndexLexmarkGetRequest) Cursor(cursor string) ApiIndexLexmarkGetReque
 // request server-side paging
 func (r ApiIndexLexmarkGetRequest) StartCursor(startCursor string) ApiIndexLexmarkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLexmarkGetRequest) Order(order string) ApiIndexLexmarkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLexmarkGetRequest) Sort(sort string) ApiIndexLexmarkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -95702,6 +100796,12 @@ func (a *IndicesAPIService) IndexLexmarkGetExecute(r ApiIndexLexmarkGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -95855,6 +100955,8 @@ type ApiIndexLgGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -95897,6 +100999,18 @@ func (r ApiIndexLgGetRequest) Cursor(cursor string) ApiIndexLgGetRequest {
 // request server-side paging
 func (r ApiIndexLgGetRequest) StartCursor(startCursor string) ApiIndexLgGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLgGetRequest) Order(order string) ApiIndexLgGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLgGetRequest) Sort(sort string) ApiIndexLgGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -96077,6 +101191,12 @@ func (a *IndicesAPIService) IndexLgGetExecute(r ApiIndexLgGetRequest) (*RenderRe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -96230,6 +101350,8 @@ type ApiIndexLibreOfficeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -96272,6 +101394,18 @@ func (r ApiIndexLibreOfficeGetRequest) Cursor(cursor string) ApiIndexLibreOffice
 // request server-side paging
 func (r ApiIndexLibreOfficeGetRequest) StartCursor(startCursor string) ApiIndexLibreOfficeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLibreOfficeGetRequest) Order(order string) ApiIndexLibreOfficeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLibreOfficeGetRequest) Sort(sort string) ApiIndexLibreOfficeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -96452,6 +101586,12 @@ func (a *IndicesAPIService) IndexLibreOfficeGetExecute(r ApiIndexLibreOfficeGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -96605,6 +101745,8 @@ type ApiIndexLinuxGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -96647,6 +101789,18 @@ func (r ApiIndexLinuxGetRequest) Cursor(cursor string) ApiIndexLinuxGetRequest {
 // request server-side paging
 func (r ApiIndexLinuxGetRequest) StartCursor(startCursor string) ApiIndexLinuxGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLinuxGetRequest) Order(order string) ApiIndexLinuxGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLinuxGetRequest) Sort(sort string) ApiIndexLinuxGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -96827,6 +101981,12 @@ func (a *IndicesAPIService) IndexLinuxGetExecute(r ApiIndexLinuxGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -96980,6 +102140,8 @@ type ApiIndexLolAdvsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -97022,6 +102184,18 @@ func (r ApiIndexLolAdvsGetRequest) Cursor(cursor string) ApiIndexLolAdvsGetReque
 // request server-side paging
 func (r ApiIndexLolAdvsGetRequest) StartCursor(startCursor string) ApiIndexLolAdvsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexLolAdvsGetRequest) Order(order string) ApiIndexLolAdvsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexLolAdvsGetRequest) Sort(sort string) ApiIndexLolAdvsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -97202,6 +102376,12 @@ func (a *IndicesAPIService) IndexLolAdvsGetExecute(r ApiIndexLolAdvsGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -97355,6 +102535,8 @@ type ApiIndexMFilesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -97397,6 +102579,18 @@ func (r ApiIndexMFilesGetRequest) Cursor(cursor string) ApiIndexMFilesGetRequest
 // request server-side paging
 func (r ApiIndexMFilesGetRequest) StartCursor(startCursor string) ApiIndexMFilesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMFilesGetRequest) Order(order string) ApiIndexMFilesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMFilesGetRequest) Sort(sort string) ApiIndexMFilesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -97577,6 +102771,12 @@ func (a *IndicesAPIService) IndexMFilesGetExecute(r ApiIndexMFilesGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -97730,6 +102930,8 @@ type ApiIndexMacertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -97772,6 +102974,18 @@ func (r ApiIndexMacertGetRequest) Cursor(cursor string) ApiIndexMacertGetRequest
 // request server-side paging
 func (r ApiIndexMacertGetRequest) StartCursor(startCursor string) ApiIndexMacertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMacertGetRequest) Order(order string) ApiIndexMacertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMacertGetRequest) Sort(sort string) ApiIndexMacertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -97952,6 +103166,12 @@ func (a *IndicesAPIService) IndexMacertGetExecute(r ApiIndexMacertGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -98105,6 +103325,8 @@ type ApiIndexMaliciousPackagesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -98147,6 +103369,18 @@ func (r ApiIndexMaliciousPackagesGetRequest) Cursor(cursor string) ApiIndexMalic
 // request server-side paging
 func (r ApiIndexMaliciousPackagesGetRequest) StartCursor(startCursor string) ApiIndexMaliciousPackagesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMaliciousPackagesGetRequest) Order(order string) ApiIndexMaliciousPackagesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMaliciousPackagesGetRequest) Sort(sort string) ApiIndexMaliciousPackagesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -98327,6 +103561,12 @@ func (a *IndicesAPIService) IndexMaliciousPackagesGetExecute(r ApiIndexMalicious
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -98480,6 +103720,8 @@ type ApiIndexManageengineGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -98522,6 +103764,18 @@ func (r ApiIndexManageengineGetRequest) Cursor(cursor string) ApiIndexManageengi
 // request server-side paging
 func (r ApiIndexManageengineGetRequest) StartCursor(startCursor string) ApiIndexManageengineGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexManageengineGetRequest) Order(order string) ApiIndexManageengineGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexManageengineGetRequest) Sort(sort string) ApiIndexManageengineGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -98702,6 +103956,12 @@ func (a *IndicesAPIService) IndexManageengineGetExecute(r ApiIndexManageengineGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -98855,6 +104115,8 @@ type ApiIndexMavenGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -98897,6 +104159,18 @@ func (r ApiIndexMavenGetRequest) Cursor(cursor string) ApiIndexMavenGetRequest {
 // request server-side paging
 func (r ApiIndexMavenGetRequest) StartCursor(startCursor string) ApiIndexMavenGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMavenGetRequest) Order(order string) ApiIndexMavenGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMavenGetRequest) Sort(sort string) ApiIndexMavenGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -99077,6 +104351,12 @@ func (a *IndicesAPIService) IndexMavenGetExecute(r ApiIndexMavenGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -99230,6 +104510,8 @@ type ApiIndexMbedTlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -99272,6 +104554,18 @@ func (r ApiIndexMbedTlsGetRequest) Cursor(cursor string) ApiIndexMbedTlsGetReque
 // request server-side paging
 func (r ApiIndexMbedTlsGetRequest) StartCursor(startCursor string) ApiIndexMbedTlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMbedTlsGetRequest) Order(order string) ApiIndexMbedTlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMbedTlsGetRequest) Sort(sort string) ApiIndexMbedTlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -99452,6 +104746,12 @@ func (a *IndicesAPIService) IndexMbedTlsGetExecute(r ApiIndexMbedTlsGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -99605,6 +104905,8 @@ type ApiIndexMcafeeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -99647,6 +104949,18 @@ func (r ApiIndexMcafeeGetRequest) Cursor(cursor string) ApiIndexMcafeeGetRequest
 // request server-side paging
 func (r ApiIndexMcafeeGetRequest) StartCursor(startCursor string) ApiIndexMcafeeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMcafeeGetRequest) Order(order string) ApiIndexMcafeeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMcafeeGetRequest) Sort(sort string) ApiIndexMcafeeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -99827,6 +105141,12 @@ func (a *IndicesAPIService) IndexMcafeeGetExecute(r ApiIndexMcafeeGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -99980,6 +105300,8 @@ type ApiIndexMediatekGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -100022,6 +105344,18 @@ func (r ApiIndexMediatekGetRequest) Cursor(cursor string) ApiIndexMediatekGetReq
 // request server-side paging
 func (r ApiIndexMediatekGetRequest) StartCursor(startCursor string) ApiIndexMediatekGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMediatekGetRequest) Order(order string) ApiIndexMediatekGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMediatekGetRequest) Sort(sort string) ApiIndexMediatekGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -100202,6 +105536,12 @@ func (a *IndicesAPIService) IndexMediatekGetExecute(r ApiIndexMediatekGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -100355,6 +105695,8 @@ type ApiIndexMedtronicGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -100397,6 +105739,18 @@ func (r ApiIndexMedtronicGetRequest) Cursor(cursor string) ApiIndexMedtronicGetR
 // request server-side paging
 func (r ApiIndexMedtronicGetRequest) StartCursor(startCursor string) ApiIndexMedtronicGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMedtronicGetRequest) Order(order string) ApiIndexMedtronicGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMedtronicGetRequest) Sort(sort string) ApiIndexMedtronicGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -100577,6 +105931,12 @@ func (a *IndicesAPIService) IndexMedtronicGetExecute(r ApiIndexMedtronicGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -100730,6 +106090,8 @@ type ApiIndexMendixGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -100772,6 +106134,18 @@ func (r ApiIndexMendixGetRequest) Cursor(cursor string) ApiIndexMendixGetRequest
 // request server-side paging
 func (r ApiIndexMendixGetRequest) StartCursor(startCursor string) ApiIndexMendixGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMendixGetRequest) Order(order string) ApiIndexMendixGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMendixGetRequest) Sort(sort string) ApiIndexMendixGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -100952,6 +106326,407 @@ func (a *IndicesAPIService) IndexMendixGetExecute(r ApiIndexMendixGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "", "")
+	}
+	if r.date2 != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date2, "", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexMetaAdvisoriesGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	order *string
+	sort *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	date2 *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexMetaAdvisoriesGetRequest) Page(page int32) ApiIndexMetaAdvisoriesGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexMetaAdvisoriesGetRequest) Limit(limit int32) ApiIndexMetaAdvisoriesGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexMetaAdvisoriesGetRequest) Cursor(cursor string) ApiIndexMetaAdvisoriesGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexMetaAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexMetaAdvisoriesGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMetaAdvisoriesGetRequest) Order(order string) ApiIndexMetaAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMetaAdvisoriesGetRequest) Sort(sort string) ApiIndexMetaAdvisoriesGetRequest {
+	r.sort = &sort
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Cve(cve string) ApiIndexMetaAdvisoriesGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Alias(alias string) ApiIndexMetaAdvisoriesGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Iava(iava string) ApiIndexMetaAdvisoriesGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Jvndb(jvndb string) ApiIndexMetaAdvisoriesGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Ilvn(ilvn string) ApiIndexMetaAdvisoriesGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) ThreatActor(threatActor string) ApiIndexMetaAdvisoriesGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) MitreId(mitreId string) ApiIndexMetaAdvisoriesGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) MispId(mispId string) ApiIndexMetaAdvisoriesGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Ransomware(ransomware string) ApiIndexMetaAdvisoriesGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Botnet(botnet string) ApiIndexMetaAdvisoriesGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexMetaAdvisoriesGetRequest) Published(published string) ApiIndexMetaAdvisoriesGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Date(date string) ApiIndexMetaAdvisoriesGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) Date2(date2 string) ApiIndexMetaAdvisoriesGetRequest {
+	r.date2 = &date2
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexMetaAdvisoriesGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexMetaAdvisoriesGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) LastModStartDate(lastModStartDate string) ApiIndexMetaAdvisoriesGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) LastModEndDate(lastModEndDate string) ApiIndexMetaAdvisoriesGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) PubStartDate(pubStartDate string) ApiIndexMetaAdvisoriesGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMetaAdvisoriesGetRequest) PubEndDate(pubEndDate string) ApiIndexMetaAdvisoriesGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexMetaAdvisoriesGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryMetaAdvisoriesPaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexMetaAdvisoriesGetExecute(r)
+}
+
+/*
+IndexMetaAdvisoriesGet Return vulnerability data stored in index \"meta-advisories\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the meta-advisories index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** Meta Security Advisories
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/meta-advisories?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/meta-advisories?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexMetaAdvisoriesGetRequest
+*/
+func (a *IndicesAPIService) IndexMetaAdvisoriesGet(ctx context.Context) ApiIndexMetaAdvisoriesGetRequest {
+	return ApiIndexMetaAdvisoriesGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayAdvisoryMetaAdvisoriesPaginatePagination
+func (a *IndicesAPIService) IndexMetaAdvisoriesGetExecute(r ApiIndexMetaAdvisoriesGetRequest) (*RenderResponseWithMetadataArrayAdvisoryMetaAdvisoriesPaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryMetaAdvisoriesPaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexMetaAdvisoriesGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/index/meta-advisories"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
+	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -101105,6 +106880,8 @@ type ApiIndexMetasploitGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -101147,6 +106924,18 @@ func (r ApiIndexMetasploitGetRequest) Cursor(cursor string) ApiIndexMetasploitGe
 // request server-side paging
 func (r ApiIndexMetasploitGetRequest) StartCursor(startCursor string) ApiIndexMetasploitGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMetasploitGetRequest) Order(order string) ApiIndexMetasploitGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMetasploitGetRequest) Sort(sort string) ApiIndexMetasploitGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -101327,6 +107116,12 @@ func (a *IndicesAPIService) IndexMetasploitGetExecute(r ApiIndexMetasploitGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -101480,6 +107275,8 @@ type ApiIndexMicrosoftCvrfGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -101522,6 +107319,18 @@ func (r ApiIndexMicrosoftCvrfGetRequest) Cursor(cursor string) ApiIndexMicrosoft
 // request server-side paging
 func (r ApiIndexMicrosoftCvrfGetRequest) StartCursor(startCursor string) ApiIndexMicrosoftCvrfGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMicrosoftCvrfGetRequest) Order(order string) ApiIndexMicrosoftCvrfGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMicrosoftCvrfGetRequest) Sort(sort string) ApiIndexMicrosoftCvrfGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -101702,6 +107511,12 @@ func (a *IndicesAPIService) IndexMicrosoftCvrfGetExecute(r ApiIndexMicrosoftCvrf
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -101855,6 +107670,8 @@ type ApiIndexMicrosoftDriverBlockListGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -101897,6 +107714,18 @@ func (r ApiIndexMicrosoftDriverBlockListGetRequest) Cursor(cursor string) ApiInd
 // request server-side paging
 func (r ApiIndexMicrosoftDriverBlockListGetRequest) StartCursor(startCursor string) ApiIndexMicrosoftDriverBlockListGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMicrosoftDriverBlockListGetRequest) Order(order string) ApiIndexMicrosoftDriverBlockListGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMicrosoftDriverBlockListGetRequest) Sort(sort string) ApiIndexMicrosoftDriverBlockListGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -102077,6 +107906,12 @@ func (a *IndicesAPIService) IndexMicrosoftDriverBlockListGetExecute(r ApiIndexMi
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -102230,6 +108065,8 @@ type ApiIndexMicrosoftKbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -102272,6 +108109,18 @@ func (r ApiIndexMicrosoftKbGetRequest) Cursor(cursor string) ApiIndexMicrosoftKb
 // request server-side paging
 func (r ApiIndexMicrosoftKbGetRequest) StartCursor(startCursor string) ApiIndexMicrosoftKbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMicrosoftKbGetRequest) Order(order string) ApiIndexMicrosoftKbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMicrosoftKbGetRequest) Sort(sort string) ApiIndexMicrosoftKbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -102452,6 +108301,12 @@ func (a *IndicesAPIService) IndexMicrosoftKbGetExecute(r ApiIndexMicrosoftKbGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -102605,6 +108460,8 @@ type ApiIndexMikrotikGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -102647,6 +108504,18 @@ func (r ApiIndexMikrotikGetRequest) Cursor(cursor string) ApiIndexMikrotikGetReq
 // request server-side paging
 func (r ApiIndexMikrotikGetRequest) StartCursor(startCursor string) ApiIndexMikrotikGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMikrotikGetRequest) Order(order string) ApiIndexMikrotikGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMikrotikGetRequest) Sort(sort string) ApiIndexMikrotikGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -102827,6 +108696,12 @@ func (a *IndicesAPIService) IndexMikrotikGetExecute(r ApiIndexMikrotikGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -102980,6 +108855,8 @@ type ApiIndexMindrayGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -103022,6 +108899,18 @@ func (r ApiIndexMindrayGetRequest) Cursor(cursor string) ApiIndexMindrayGetReque
 // request server-side paging
 func (r ApiIndexMindrayGetRequest) StartCursor(startCursor string) ApiIndexMindrayGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMindrayGetRequest) Order(order string) ApiIndexMindrayGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMindrayGetRequest) Sort(sort string) ApiIndexMindrayGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -103202,6 +109091,12 @@ func (a *IndicesAPIService) IndexMindrayGetExecute(r ApiIndexMindrayGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -103355,6 +109250,8 @@ type ApiIndexMispThreatActorsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -103397,6 +109294,18 @@ func (r ApiIndexMispThreatActorsGetRequest) Cursor(cursor string) ApiIndexMispTh
 // request server-side paging
 func (r ApiIndexMispThreatActorsGetRequest) StartCursor(startCursor string) ApiIndexMispThreatActorsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMispThreatActorsGetRequest) Order(order string) ApiIndexMispThreatActorsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMispThreatActorsGetRequest) Sort(sort string) ApiIndexMispThreatActorsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -103577,6 +109486,12 @@ func (a *IndicesAPIService) IndexMispThreatActorsGetExecute(r ApiIndexMispThreat
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -103730,6 +109645,8 @@ type ApiIndexMitelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -103772,6 +109689,18 @@ func (r ApiIndexMitelGetRequest) Cursor(cursor string) ApiIndexMitelGetRequest {
 // request server-side paging
 func (r ApiIndexMitelGetRequest) StartCursor(startCursor string) ApiIndexMitelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMitelGetRequest) Order(order string) ApiIndexMitelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMitelGetRequest) Sort(sort string) ApiIndexMitelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -103952,6 +109881,12 @@ func (a *IndicesAPIService) IndexMitelGetExecute(r ApiIndexMitelGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -104105,6 +110040,8 @@ type ApiIndexMitreAttackCveGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -104147,6 +110084,18 @@ func (r ApiIndexMitreAttackCveGetRequest) Cursor(cursor string) ApiIndexMitreAtt
 // request server-side paging
 func (r ApiIndexMitreAttackCveGetRequest) StartCursor(startCursor string) ApiIndexMitreAttackCveGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMitreAttackCveGetRequest) Order(order string) ApiIndexMitreAttackCveGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMitreAttackCveGetRequest) Sort(sort string) ApiIndexMitreAttackCveGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -104327,6 +110276,12 @@ func (a *IndicesAPIService) IndexMitreAttackCveGetExecute(r ApiIndexMitreAttackC
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -104480,6 +110435,8 @@ type ApiIndexMitreCvelistV5GetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -104522,6 +110479,18 @@ func (r ApiIndexMitreCvelistV5GetRequest) Cursor(cursor string) ApiIndexMitreCve
 // request server-side paging
 func (r ApiIndexMitreCvelistV5GetRequest) StartCursor(startCursor string) ApiIndexMitreCvelistV5GetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMitreCvelistV5GetRequest) Order(order string) ApiIndexMitreCvelistV5GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMitreCvelistV5GetRequest) Sort(sort string) ApiIndexMitreCvelistV5GetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -104702,6 +110671,12 @@ func (a *IndicesAPIService) IndexMitreCvelistV5GetExecute(r ApiIndexMitreCvelist
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -104855,6 +110830,8 @@ type ApiIndexMitsubishiElectricGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -104897,6 +110874,18 @@ func (r ApiIndexMitsubishiElectricGetRequest) Cursor(cursor string) ApiIndexMits
 // request server-side paging
 func (r ApiIndexMitsubishiElectricGetRequest) StartCursor(startCursor string) ApiIndexMitsubishiElectricGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMitsubishiElectricGetRequest) Order(order string) ApiIndexMitsubishiElectricGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMitsubishiElectricGetRequest) Sort(sort string) ApiIndexMitsubishiElectricGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -105077,6 +111066,12 @@ func (a *IndicesAPIService) IndexMitsubishiElectricGetExecute(r ApiIndexMitsubis
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -105230,6 +111225,8 @@ type ApiIndexMongodbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -105272,6 +111269,18 @@ func (r ApiIndexMongodbGetRequest) Cursor(cursor string) ApiIndexMongodbGetReque
 // request server-side paging
 func (r ApiIndexMongodbGetRequest) StartCursor(startCursor string) ApiIndexMongodbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMongodbGetRequest) Order(order string) ApiIndexMongodbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMongodbGetRequest) Sort(sort string) ApiIndexMongodbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -105452,6 +111461,12 @@ func (a *IndicesAPIService) IndexMongodbGetExecute(r ApiIndexMongodbGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -105605,6 +111620,8 @@ type ApiIndexMoxaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -105647,6 +111664,18 @@ func (r ApiIndexMoxaGetRequest) Cursor(cursor string) ApiIndexMoxaGetRequest {
 // request server-side paging
 func (r ApiIndexMoxaGetRequest) StartCursor(startCursor string) ApiIndexMoxaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMoxaGetRequest) Order(order string) ApiIndexMoxaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMoxaGetRequest) Sort(sort string) ApiIndexMoxaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -105827,6 +111856,12 @@ func (a *IndicesAPIService) IndexMoxaGetExecute(r ApiIndexMoxaGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -105980,6 +112015,8 @@ type ApiIndexMozillaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -106022,6 +112059,18 @@ func (r ApiIndexMozillaGetRequest) Cursor(cursor string) ApiIndexMozillaGetReque
 // request server-side paging
 func (r ApiIndexMozillaGetRequest) StartCursor(startCursor string) ApiIndexMozillaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMozillaGetRequest) Order(order string) ApiIndexMozillaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMozillaGetRequest) Sort(sort string) ApiIndexMozillaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -106202,6 +112251,12 @@ func (a *IndicesAPIService) IndexMozillaGetExecute(r ApiIndexMozillaGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -106355,6 +112410,8 @@ type ApiIndexNaverGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -106397,6 +112454,18 @@ func (r ApiIndexNaverGetRequest) Cursor(cursor string) ApiIndexNaverGetRequest {
 // request server-side paging
 func (r ApiIndexNaverGetRequest) StartCursor(startCursor string) ApiIndexNaverGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNaverGetRequest) Order(order string) ApiIndexNaverGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNaverGetRequest) Sort(sort string) ApiIndexNaverGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -106577,6 +112646,12 @@ func (a *IndicesAPIService) IndexNaverGetExecute(r ApiIndexNaverGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -106730,6 +112805,8 @@ type ApiIndexNcscCvesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -106772,6 +112849,18 @@ func (r ApiIndexNcscCvesGetRequest) Cursor(cursor string) ApiIndexNcscCvesGetReq
 // request server-side paging
 func (r ApiIndexNcscCvesGetRequest) StartCursor(startCursor string) ApiIndexNcscCvesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNcscCvesGetRequest) Order(order string) ApiIndexNcscCvesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNcscCvesGetRequest) Sort(sort string) ApiIndexNcscCvesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -106952,6 +113041,12 @@ func (a *IndicesAPIService) IndexNcscCvesGetExecute(r ApiIndexNcscCvesGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -107105,6 +113200,8 @@ type ApiIndexNcscGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -107147,6 +113244,18 @@ func (r ApiIndexNcscGetRequest) Cursor(cursor string) ApiIndexNcscGetRequest {
 // request server-side paging
 func (r ApiIndexNcscGetRequest) StartCursor(startCursor string) ApiIndexNcscGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNcscGetRequest) Order(order string) ApiIndexNcscGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNcscGetRequest) Sort(sort string) ApiIndexNcscGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -107327,6 +113436,12 @@ func (a *IndicesAPIService) IndexNcscGetExecute(r ApiIndexNcscGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -107480,6 +113595,8 @@ type ApiIndexNecGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -107522,6 +113639,18 @@ func (r ApiIndexNecGetRequest) Cursor(cursor string) ApiIndexNecGetRequest {
 // request server-side paging
 func (r ApiIndexNecGetRequest) StartCursor(startCursor string) ApiIndexNecGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNecGetRequest) Order(order string) ApiIndexNecGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNecGetRequest) Sort(sort string) ApiIndexNecGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -107702,6 +113831,12 @@ func (a *IndicesAPIService) IndexNecGetExecute(r ApiIndexNecGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -107855,6 +113990,8 @@ type ApiIndexNessusGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -107897,6 +114034,18 @@ func (r ApiIndexNessusGetRequest) Cursor(cursor string) ApiIndexNessusGetRequest
 // request server-side paging
 func (r ApiIndexNessusGetRequest) StartCursor(startCursor string) ApiIndexNessusGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNessusGetRequest) Order(order string) ApiIndexNessusGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNessusGetRequest) Sort(sort string) ApiIndexNessusGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -108077,6 +114226,12 @@ func (a *IndicesAPIService) IndexNessusGetExecute(r ApiIndexNessusGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -108230,6 +114385,8 @@ type ApiIndexNetappGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -108272,6 +114429,18 @@ func (r ApiIndexNetappGetRequest) Cursor(cursor string) ApiIndexNetappGetRequest
 // request server-side paging
 func (r ApiIndexNetappGetRequest) StartCursor(startCursor string) ApiIndexNetappGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNetappGetRequest) Order(order string) ApiIndexNetappGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNetappGetRequest) Sort(sort string) ApiIndexNetappGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -108452,6 +114621,12 @@ func (a *IndicesAPIService) IndexNetappGetExecute(r ApiIndexNetappGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -108605,6 +114780,8 @@ type ApiIndexNetatalkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -108647,6 +114824,18 @@ func (r ApiIndexNetatalkGetRequest) Cursor(cursor string) ApiIndexNetatalkGetReq
 // request server-side paging
 func (r ApiIndexNetatalkGetRequest) StartCursor(startCursor string) ApiIndexNetatalkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNetatalkGetRequest) Order(order string) ApiIndexNetatalkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNetatalkGetRequest) Sort(sort string) ApiIndexNetatalkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -108827,6 +115016,12 @@ func (a *IndicesAPIService) IndexNetatalkGetExecute(r ApiIndexNetatalkGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -108980,6 +115175,8 @@ type ApiIndexNetgateGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -109022,6 +115219,18 @@ func (r ApiIndexNetgateGetRequest) Cursor(cursor string) ApiIndexNetgateGetReque
 // request server-side paging
 func (r ApiIndexNetgateGetRequest) StartCursor(startCursor string) ApiIndexNetgateGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNetgateGetRequest) Order(order string) ApiIndexNetgateGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNetgateGetRequest) Sort(sort string) ApiIndexNetgateGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -109202,6 +115411,12 @@ func (a *IndicesAPIService) IndexNetgateGetExecute(r ApiIndexNetgateGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -109355,6 +115570,8 @@ type ApiIndexNetgearGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -109397,6 +115614,18 @@ func (r ApiIndexNetgearGetRequest) Cursor(cursor string) ApiIndexNetgearGetReque
 // request server-side paging
 func (r ApiIndexNetgearGetRequest) StartCursor(startCursor string) ApiIndexNetgearGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNetgearGetRequest) Order(order string) ApiIndexNetgearGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNetgearGetRequest) Sort(sort string) ApiIndexNetgearGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -109577,6 +115806,12 @@ func (a *IndicesAPIService) IndexNetgearGetExecute(r ApiIndexNetgearGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -109730,6 +115965,8 @@ type ApiIndexNetskopeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -109772,6 +116009,18 @@ func (r ApiIndexNetskopeGetRequest) Cursor(cursor string) ApiIndexNetskopeGetReq
 // request server-side paging
 func (r ApiIndexNetskopeGetRequest) StartCursor(startCursor string) ApiIndexNetskopeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNetskopeGetRequest) Order(order string) ApiIndexNetskopeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNetskopeGetRequest) Sort(sort string) ApiIndexNetskopeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -109952,6 +116201,12 @@ func (a *IndicesAPIService) IndexNetskopeGetExecute(r ApiIndexNetskopeGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -110105,6 +116360,8 @@ type ApiIndexNexposeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -110147,6 +116404,18 @@ func (r ApiIndexNexposeGetRequest) Cursor(cursor string) ApiIndexNexposeGetReque
 // request server-side paging
 func (r ApiIndexNexposeGetRequest) StartCursor(startCursor string) ApiIndexNexposeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNexposeGetRequest) Order(order string) ApiIndexNexposeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNexposeGetRequest) Sort(sort string) ApiIndexNexposeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -110327,6 +116596,12 @@ func (a *IndicesAPIService) IndexNexposeGetExecute(r ApiIndexNexposeGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -110480,6 +116755,8 @@ type ApiIndexNginxGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -110522,6 +116799,18 @@ func (r ApiIndexNginxGetRequest) Cursor(cursor string) ApiIndexNginxGetRequest {
 // request server-side paging
 func (r ApiIndexNginxGetRequest) StartCursor(startCursor string) ApiIndexNginxGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNginxGetRequest) Order(order string) ApiIndexNginxGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNginxGetRequest) Sort(sort string) ApiIndexNginxGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -110702,6 +116991,12 @@ func (a *IndicesAPIService) IndexNginxGetExecute(r ApiIndexNginxGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -110855,6 +117150,8 @@ type ApiIndexNhsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -110897,6 +117194,18 @@ func (r ApiIndexNhsGetRequest) Cursor(cursor string) ApiIndexNhsGetRequest {
 // request server-side paging
 func (r ApiIndexNhsGetRequest) StartCursor(startCursor string) ApiIndexNhsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNhsGetRequest) Order(order string) ApiIndexNhsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNhsGetRequest) Sort(sort string) ApiIndexNhsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -111077,6 +117386,12 @@ func (a *IndicesAPIService) IndexNhsGetExecute(r ApiIndexNhsGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -111230,6 +117545,8 @@ type ApiIndexNiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -111272,6 +117589,18 @@ func (r ApiIndexNiGetRequest) Cursor(cursor string) ApiIndexNiGetRequest {
 // request server-side paging
 func (r ApiIndexNiGetRequest) StartCursor(startCursor string) ApiIndexNiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNiGetRequest) Order(order string) ApiIndexNiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNiGetRequest) Sort(sort string) ApiIndexNiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -111452,6 +117781,12 @@ func (a *IndicesAPIService) IndexNiGetExecute(r ApiIndexNiGetRequest) (*RenderRe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -111605,6 +117940,8 @@ type ApiIndexNistNvd2CpematchGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -111647,6 +117984,18 @@ func (r ApiIndexNistNvd2CpematchGetRequest) Cursor(cursor string) ApiIndexNistNv
 // request server-side paging
 func (r ApiIndexNistNvd2CpematchGetRequest) StartCursor(startCursor string) ApiIndexNistNvd2CpematchGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNistNvd2CpematchGetRequest) Order(order string) ApiIndexNistNvd2CpematchGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNistNvd2CpematchGetRequest) Sort(sort string) ApiIndexNistNvd2CpematchGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -111827,6 +118176,12 @@ func (a *IndicesAPIService) IndexNistNvd2CpematchGetExecute(r ApiIndexNistNvd2Cp
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -111980,6 +118335,8 @@ type ApiIndexNistNvd2GetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -112022,6 +118379,18 @@ func (r ApiIndexNistNvd2GetRequest) Cursor(cursor string) ApiIndexNistNvd2GetReq
 // request server-side paging
 func (r ApiIndexNistNvd2GetRequest) StartCursor(startCursor string) ApiIndexNistNvd2GetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNistNvd2GetRequest) Order(order string) ApiIndexNistNvd2GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNistNvd2GetRequest) Sort(sort string) ApiIndexNistNvd2GetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -112202,6 +118571,12 @@ func (a *IndicesAPIService) IndexNistNvd2GetExecute(r ApiIndexNistNvd2GetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -112355,6 +118730,8 @@ type ApiIndexNistNvd2SourcesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -112397,6 +118774,18 @@ func (r ApiIndexNistNvd2SourcesGetRequest) Cursor(cursor string) ApiIndexNistNvd
 // request server-side paging
 func (r ApiIndexNistNvd2SourcesGetRequest) StartCursor(startCursor string) ApiIndexNistNvd2SourcesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNistNvd2SourcesGetRequest) Order(order string) ApiIndexNistNvd2SourcesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNistNvd2SourcesGetRequest) Sort(sort string) ApiIndexNistNvd2SourcesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -112577,6 +118966,12 @@ func (a *IndicesAPIService) IndexNistNvd2SourcesGetExecute(r ApiIndexNistNvd2Sou
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -112730,6 +119125,8 @@ type ApiIndexNistNvdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -112772,6 +119169,18 @@ func (r ApiIndexNistNvdGetRequest) Cursor(cursor string) ApiIndexNistNvdGetReque
 // request server-side paging
 func (r ApiIndexNistNvdGetRequest) StartCursor(startCursor string) ApiIndexNistNvdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNistNvdGetRequest) Order(order string) ApiIndexNistNvdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNistNvdGetRequest) Sort(sort string) ApiIndexNistNvdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -112952,6 +119361,12 @@ func (a *IndicesAPIService) IndexNistNvdGetExecute(r ApiIndexNistNvdGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -113105,6 +119520,8 @@ type ApiIndexNodeSecurityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -113147,6 +119564,18 @@ func (r ApiIndexNodeSecurityGetRequest) Cursor(cursor string) ApiIndexNodeSecuri
 // request server-side paging
 func (r ApiIndexNodeSecurityGetRequest) StartCursor(startCursor string) ApiIndexNodeSecurityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNodeSecurityGetRequest) Order(order string) ApiIndexNodeSecurityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNodeSecurityGetRequest) Sort(sort string) ApiIndexNodeSecurityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -113327,6 +119756,12 @@ func (a *IndicesAPIService) IndexNodeSecurityGetExecute(r ApiIndexNodeSecurityGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -113480,6 +119915,8 @@ type ApiIndexNodejsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -113522,6 +119959,18 @@ func (r ApiIndexNodejsGetRequest) Cursor(cursor string) ApiIndexNodejsGetRequest
 // request server-side paging
 func (r ApiIndexNodejsGetRequest) StartCursor(startCursor string) ApiIndexNodejsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNodejsGetRequest) Order(order string) ApiIndexNodejsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNodejsGetRequest) Sort(sort string) ApiIndexNodejsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -113702,6 +120151,12 @@ func (a *IndicesAPIService) IndexNodejsGetExecute(r ApiIndexNodejsGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -113855,6 +120310,8 @@ type ApiIndexNokiaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -113897,6 +120354,18 @@ func (r ApiIndexNokiaGetRequest) Cursor(cursor string) ApiIndexNokiaGetRequest {
 // request server-side paging
 func (r ApiIndexNokiaGetRequest) StartCursor(startCursor string) ApiIndexNokiaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNokiaGetRequest) Order(order string) ApiIndexNokiaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNokiaGetRequest) Sort(sort string) ApiIndexNokiaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -114077,6 +120546,12 @@ func (a *IndicesAPIService) IndexNokiaGetExecute(r ApiIndexNokiaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -114230,6 +120705,8 @@ type ApiIndexNotepadplusplusGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -114272,6 +120749,18 @@ func (r ApiIndexNotepadplusplusGetRequest) Cursor(cursor string) ApiIndexNotepad
 // request server-side paging
 func (r ApiIndexNotepadplusplusGetRequest) StartCursor(startCursor string) ApiIndexNotepadplusplusGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNotepadplusplusGetRequest) Order(order string) ApiIndexNotepadplusplusGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNotepadplusplusGetRequest) Sort(sort string) ApiIndexNotepadplusplusGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -114452,6 +120941,12 @@ func (a *IndicesAPIService) IndexNotepadplusplusGetExecute(r ApiIndexNotepadplus
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -114605,6 +121100,8 @@ type ApiIndexNozomiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -114647,6 +121144,18 @@ func (r ApiIndexNozomiGetRequest) Cursor(cursor string) ApiIndexNozomiGetRequest
 // request server-side paging
 func (r ApiIndexNozomiGetRequest) StartCursor(startCursor string) ApiIndexNozomiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNozomiGetRequest) Order(order string) ApiIndexNozomiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNozomiGetRequest) Sort(sort string) ApiIndexNozomiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -114827,6 +121336,12 @@ func (a *IndicesAPIService) IndexNozomiGetExecute(r ApiIndexNozomiGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -114980,6 +121495,8 @@ type ApiIndexNpmGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -115022,6 +121539,18 @@ func (r ApiIndexNpmGetRequest) Cursor(cursor string) ApiIndexNpmGetRequest {
 // request server-side paging
 func (r ApiIndexNpmGetRequest) StartCursor(startCursor string) ApiIndexNpmGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNpmGetRequest) Order(order string) ApiIndexNpmGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNpmGetRequest) Sort(sort string) ApiIndexNpmGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -115202,6 +121731,12 @@ func (a *IndicesAPIService) IndexNpmGetExecute(r ApiIndexNpmGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -115355,6 +121890,8 @@ type ApiIndexNtpGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -115397,6 +121934,18 @@ func (r ApiIndexNtpGetRequest) Cursor(cursor string) ApiIndexNtpGetRequest {
 // request server-side paging
 func (r ApiIndexNtpGetRequest) StartCursor(startCursor string) ApiIndexNtpGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNtpGetRequest) Order(order string) ApiIndexNtpGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNtpGetRequest) Sort(sort string) ApiIndexNtpGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -115577,6 +122126,12 @@ func (a *IndicesAPIService) IndexNtpGetExecute(r ApiIndexNtpGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -115730,6 +122285,8 @@ type ApiIndexNucleiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -115772,6 +122329,18 @@ func (r ApiIndexNucleiGetRequest) Cursor(cursor string) ApiIndexNucleiGetRequest
 // request server-side paging
 func (r ApiIndexNucleiGetRequest) StartCursor(startCursor string) ApiIndexNucleiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNucleiGetRequest) Order(order string) ApiIndexNucleiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNucleiGetRequest) Sort(sort string) ApiIndexNucleiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -115952,6 +122521,12 @@ func (a *IndicesAPIService) IndexNucleiGetExecute(r ApiIndexNucleiGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -116105,6 +122680,8 @@ type ApiIndexNugetGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -116147,6 +122724,18 @@ func (r ApiIndexNugetGetRequest) Cursor(cursor string) ApiIndexNugetGetRequest {
 // request server-side paging
 func (r ApiIndexNugetGetRequest) StartCursor(startCursor string) ApiIndexNugetGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNugetGetRequest) Order(order string) ApiIndexNugetGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNugetGetRequest) Sort(sort string) ApiIndexNugetGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -116327,6 +122916,12 @@ func (a *IndicesAPIService) IndexNugetGetExecute(r ApiIndexNugetGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -116480,6 +123075,8 @@ type ApiIndexNvdCpeDictionaryGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -116522,6 +123119,18 @@ func (r ApiIndexNvdCpeDictionaryGetRequest) Cursor(cursor string) ApiIndexNvdCpe
 // request server-side paging
 func (r ApiIndexNvdCpeDictionaryGetRequest) StartCursor(startCursor string) ApiIndexNvdCpeDictionaryGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNvdCpeDictionaryGetRequest) Order(order string) ApiIndexNvdCpeDictionaryGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNvdCpeDictionaryGetRequest) Sort(sort string) ApiIndexNvdCpeDictionaryGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -116702,6 +123311,12 @@ func (a *IndicesAPIService) IndexNvdCpeDictionaryGetExecute(r ApiIndexNvdCpeDict
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -116855,6 +123470,8 @@ type ApiIndexNvidiaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -116897,6 +123514,18 @@ func (r ApiIndexNvidiaGetRequest) Cursor(cursor string) ApiIndexNvidiaGetRequest
 // request server-side paging
 func (r ApiIndexNvidiaGetRequest) StartCursor(startCursor string) ApiIndexNvidiaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNvidiaGetRequest) Order(order string) ApiIndexNvidiaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNvidiaGetRequest) Sort(sort string) ApiIndexNvidiaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -117077,6 +123706,12 @@ func (a *IndicesAPIService) IndexNvidiaGetExecute(r ApiIndexNvidiaGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -117230,6 +123865,8 @@ type ApiIndexNzAdvisoriesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -117272,6 +123909,18 @@ func (r ApiIndexNzAdvisoriesGetRequest) Cursor(cursor string) ApiIndexNzAdvisori
 // request server-side paging
 func (r ApiIndexNzAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexNzAdvisoriesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexNzAdvisoriesGetRequest) Order(order string) ApiIndexNzAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexNzAdvisoriesGetRequest) Sort(sort string) ApiIndexNzAdvisoriesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -117452,6 +124101,12 @@ func (a *IndicesAPIService) IndexNzAdvisoriesGetExecute(r ApiIndexNzAdvisoriesGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -117605,6 +124260,8 @@ type ApiIndexOctopusDeployGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -117647,6 +124304,18 @@ func (r ApiIndexOctopusDeployGetRequest) Cursor(cursor string) ApiIndexOctopusDe
 // request server-side paging
 func (r ApiIndexOctopusDeployGetRequest) StartCursor(startCursor string) ApiIndexOctopusDeployGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOctopusDeployGetRequest) Order(order string) ApiIndexOctopusDeployGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOctopusDeployGetRequest) Sort(sort string) ApiIndexOctopusDeployGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -117827,6 +124496,12 @@ func (a *IndicesAPIService) IndexOctopusDeployGetExecute(r ApiIndexOctopusDeploy
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -117980,6 +124655,8 @@ type ApiIndexOktaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -118022,6 +124699,18 @@ func (r ApiIndexOktaGetRequest) Cursor(cursor string) ApiIndexOktaGetRequest {
 // request server-side paging
 func (r ApiIndexOktaGetRequest) StartCursor(startCursor string) ApiIndexOktaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOktaGetRequest) Order(order string) ApiIndexOktaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOktaGetRequest) Sort(sort string) ApiIndexOktaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -118202,6 +124891,12 @@ func (a *IndicesAPIService) IndexOktaGetExecute(r ApiIndexOktaGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -118355,6 +125050,8 @@ type ApiIndexOmronGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -118397,6 +125094,18 @@ func (r ApiIndexOmronGetRequest) Cursor(cursor string) ApiIndexOmronGetRequest {
 // request server-side paging
 func (r ApiIndexOmronGetRequest) StartCursor(startCursor string) ApiIndexOmronGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOmronGetRequest) Order(order string) ApiIndexOmronGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOmronGetRequest) Sort(sort string) ApiIndexOmronGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -118577,6 +125286,12 @@ func (a *IndicesAPIService) IndexOmronGetExecute(r ApiIndexOmronGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -118730,6 +125445,8 @@ type ApiIndexOneEGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -118772,6 +125489,18 @@ func (r ApiIndexOneEGetRequest) Cursor(cursor string) ApiIndexOneEGetRequest {
 // request server-side paging
 func (r ApiIndexOneEGetRequest) StartCursor(startCursor string) ApiIndexOneEGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOneEGetRequest) Order(order string) ApiIndexOneEGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOneEGetRequest) Sort(sort string) ApiIndexOneEGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -118952,6 +125681,12 @@ func (a *IndicesAPIService) IndexOneEGetExecute(r ApiIndexOneEGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -119105,6 +125840,8 @@ type ApiIndexOpamGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -119147,6 +125884,18 @@ func (r ApiIndexOpamGetRequest) Cursor(cursor string) ApiIndexOpamGetRequest {
 // request server-side paging
 func (r ApiIndexOpamGetRequest) StartCursor(startCursor string) ApiIndexOpamGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpamGetRequest) Order(order string) ApiIndexOpamGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpamGetRequest) Sort(sort string) ApiIndexOpamGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -119327,6 +126076,12 @@ func (a *IndicesAPIService) IndexOpamGetExecute(r ApiIndexOpamGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -119480,6 +126235,8 @@ type ApiIndexOpenCvdbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -119522,6 +126279,18 @@ func (r ApiIndexOpenCvdbGetRequest) Cursor(cursor string) ApiIndexOpenCvdbGetReq
 // request server-side paging
 func (r ApiIndexOpenCvdbGetRequest) StartCursor(startCursor string) ApiIndexOpenCvdbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpenCvdbGetRequest) Order(order string) ApiIndexOpenCvdbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpenCvdbGetRequest) Sort(sort string) ApiIndexOpenCvdbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -119702,6 +126471,12 @@ func (a *IndicesAPIService) IndexOpenCvdbGetExecute(r ApiIndexOpenCvdbGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -119855,6 +126630,8 @@ type ApiIndexOpenbsdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -119897,6 +126674,18 @@ func (r ApiIndexOpenbsdGetRequest) Cursor(cursor string) ApiIndexOpenbsdGetReque
 // request server-side paging
 func (r ApiIndexOpenbsdGetRequest) StartCursor(startCursor string) ApiIndexOpenbsdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpenbsdGetRequest) Order(order string) ApiIndexOpenbsdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpenbsdGetRequest) Sort(sort string) ApiIndexOpenbsdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -120077,6 +126866,12 @@ func (a *IndicesAPIService) IndexOpenbsdGetExecute(r ApiIndexOpenbsdGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -120230,6 +127025,8 @@ type ApiIndexOpengearGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -120272,6 +127069,18 @@ func (r ApiIndexOpengearGetRequest) Cursor(cursor string) ApiIndexOpengearGetReq
 // request server-side paging
 func (r ApiIndexOpengearGetRequest) StartCursor(startCursor string) ApiIndexOpengearGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpengearGetRequest) Order(order string) ApiIndexOpengearGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpengearGetRequest) Sort(sort string) ApiIndexOpengearGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -120452,6 +127261,12 @@ func (a *IndicesAPIService) IndexOpengearGetExecute(r ApiIndexOpengearGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -120605,6 +127420,8 @@ type ApiIndexOpenjdkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -120647,6 +127464,18 @@ func (r ApiIndexOpenjdkGetRequest) Cursor(cursor string) ApiIndexOpenjdkGetReque
 // request server-side paging
 func (r ApiIndexOpenjdkGetRequest) StartCursor(startCursor string) ApiIndexOpenjdkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpenjdkGetRequest) Order(order string) ApiIndexOpenjdkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpenjdkGetRequest) Sort(sort string) ApiIndexOpenjdkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -120827,6 +127656,12 @@ func (a *IndicesAPIService) IndexOpenjdkGetExecute(r ApiIndexOpenjdkGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -120980,6 +127815,8 @@ type ApiIndexOpensshGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -121022,6 +127859,18 @@ func (r ApiIndexOpensshGetRequest) Cursor(cursor string) ApiIndexOpensshGetReque
 // request server-side paging
 func (r ApiIndexOpensshGetRequest) StartCursor(startCursor string) ApiIndexOpensshGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpensshGetRequest) Order(order string) ApiIndexOpensshGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpensshGetRequest) Sort(sort string) ApiIndexOpensshGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -121202,6 +128051,12 @@ func (a *IndicesAPIService) IndexOpensshGetExecute(r ApiIndexOpensshGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -121355,6 +128210,8 @@ type ApiIndexOpensslSecadvGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -121397,6 +128254,18 @@ func (r ApiIndexOpensslSecadvGetRequest) Cursor(cursor string) ApiIndexOpensslSe
 // request server-side paging
 func (r ApiIndexOpensslSecadvGetRequest) StartCursor(startCursor string) ApiIndexOpensslSecadvGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpensslSecadvGetRequest) Order(order string) ApiIndexOpensslSecadvGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpensslSecadvGetRequest) Sort(sort string) ApiIndexOpensslSecadvGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -121577,6 +128446,12 @@ func (a *IndicesAPIService) IndexOpensslSecadvGetExecute(r ApiIndexOpensslSecadv
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -121730,6 +128605,8 @@ type ApiIndexOpenstackGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -121772,6 +128649,18 @@ func (r ApiIndexOpenstackGetRequest) Cursor(cursor string) ApiIndexOpenstackGetR
 // request server-side paging
 func (r ApiIndexOpenstackGetRequest) StartCursor(startCursor string) ApiIndexOpenstackGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpenstackGetRequest) Order(order string) ApiIndexOpenstackGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpenstackGetRequest) Sort(sort string) ApiIndexOpenstackGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -121952,6 +128841,12 @@ func (a *IndicesAPIService) IndexOpenstackGetExecute(r ApiIndexOpenstackGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -122105,6 +129000,8 @@ type ApiIndexOpenwrtGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -122147,6 +129044,18 @@ func (r ApiIndexOpenwrtGetRequest) Cursor(cursor string) ApiIndexOpenwrtGetReque
 // request server-side paging
 func (r ApiIndexOpenwrtGetRequest) StartCursor(startCursor string) ApiIndexOpenwrtGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOpenwrtGetRequest) Order(order string) ApiIndexOpenwrtGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOpenwrtGetRequest) Sort(sort string) ApiIndexOpenwrtGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -122327,6 +129236,12 @@ func (a *IndicesAPIService) IndexOpenwrtGetExecute(r ApiIndexOpenwrtGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -122480,6 +129395,8 @@ type ApiIndexOracleCpuCsafGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -122522,6 +129439,18 @@ func (r ApiIndexOracleCpuCsafGetRequest) Cursor(cursor string) ApiIndexOracleCpu
 // request server-side paging
 func (r ApiIndexOracleCpuCsafGetRequest) StartCursor(startCursor string) ApiIndexOracleCpuCsafGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOracleCpuCsafGetRequest) Order(order string) ApiIndexOracleCpuCsafGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOracleCpuCsafGetRequest) Sort(sort string) ApiIndexOracleCpuCsafGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -122702,6 +129631,12 @@ func (a *IndicesAPIService) IndexOracleCpuCsafGetExecute(r ApiIndexOracleCpuCsaf
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -122855,6 +129790,8 @@ type ApiIndexOracleCpuGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -122897,6 +129834,18 @@ func (r ApiIndexOracleCpuGetRequest) Cursor(cursor string) ApiIndexOracleCpuGetR
 // request server-side paging
 func (r ApiIndexOracleCpuGetRequest) StartCursor(startCursor string) ApiIndexOracleCpuGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOracleCpuGetRequest) Order(order string) ApiIndexOracleCpuGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOracleCpuGetRequest) Sort(sort string) ApiIndexOracleCpuGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -123077,6 +130026,12 @@ func (a *IndicesAPIService) IndexOracleCpuGetExecute(r ApiIndexOracleCpuGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -123230,6 +130185,8 @@ type ApiIndexOracleGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -123272,6 +130229,18 @@ func (r ApiIndexOracleGetRequest) Cursor(cursor string) ApiIndexOracleGetRequest
 // request server-side paging
 func (r ApiIndexOracleGetRequest) StartCursor(startCursor string) ApiIndexOracleGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOracleGetRequest) Order(order string) ApiIndexOracleGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOracleGetRequest) Sort(sort string) ApiIndexOracleGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -123452,6 +130421,12 @@ func (a *IndicesAPIService) IndexOracleGetExecute(r ApiIndexOracleGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -123605,6 +130580,8 @@ type ApiIndexOsvGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -123647,6 +130624,18 @@ func (r ApiIndexOsvGetRequest) Cursor(cursor string) ApiIndexOsvGetRequest {
 // request server-side paging
 func (r ApiIndexOsvGetRequest) StartCursor(startCursor string) ApiIndexOsvGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOsvGetRequest) Order(order string) ApiIndexOsvGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOsvGetRequest) Sort(sort string) ApiIndexOsvGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -123827,6 +130816,12 @@ func (a *IndicesAPIService) IndexOsvGetExecute(r ApiIndexOsvGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -123980,6 +130975,8 @@ type ApiIndexOtrsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -124022,6 +131019,18 @@ func (r ApiIndexOtrsGetRequest) Cursor(cursor string) ApiIndexOtrsGetRequest {
 // request server-side paging
 func (r ApiIndexOtrsGetRequest) StartCursor(startCursor string) ApiIndexOtrsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOtrsGetRequest) Order(order string) ApiIndexOtrsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOtrsGetRequest) Sort(sort string) ApiIndexOtrsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -124202,6 +131211,12 @@ func (a *IndicesAPIService) IndexOtrsGetExecute(r ApiIndexOtrsGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -124355,6 +131370,8 @@ type ApiIndexOwncloudGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -124397,6 +131414,18 @@ func (r ApiIndexOwncloudGetRequest) Cursor(cursor string) ApiIndexOwncloudGetReq
 // request server-side paging
 func (r ApiIndexOwncloudGetRequest) StartCursor(startCursor string) ApiIndexOwncloudGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexOwncloudGetRequest) Order(order string) ApiIndexOwncloudGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexOwncloudGetRequest) Sort(sort string) ApiIndexOwncloudGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -124577,6 +131606,12 @@ func (a *IndicesAPIService) IndexOwncloudGetExecute(r ApiIndexOwncloudGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -124730,6 +131765,8 @@ type ApiIndexPacketstormGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -124772,6 +131809,18 @@ func (r ApiIndexPacketstormGetRequest) Cursor(cursor string) ApiIndexPacketstorm
 // request server-side paging
 func (r ApiIndexPacketstormGetRequest) StartCursor(startCursor string) ApiIndexPacketstormGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPacketstormGetRequest) Order(order string) ApiIndexPacketstormGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPacketstormGetRequest) Sort(sort string) ApiIndexPacketstormGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -124952,6 +132001,12 @@ func (a *IndicesAPIService) IndexPacketstormGetExecute(r ApiIndexPacketstormGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -125105,6 +132160,8 @@ type ApiIndexPalantirGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -125147,6 +132204,18 @@ func (r ApiIndexPalantirGetRequest) Cursor(cursor string) ApiIndexPalantirGetReq
 // request server-side paging
 func (r ApiIndexPalantirGetRequest) StartCursor(startCursor string) ApiIndexPalantirGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPalantirGetRequest) Order(order string) ApiIndexPalantirGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPalantirGetRequest) Sort(sort string) ApiIndexPalantirGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -125327,6 +132396,12 @@ func (a *IndicesAPIService) IndexPalantirGetExecute(r ApiIndexPalantirGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -125480,6 +132555,8 @@ type ApiIndexPaloAltoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -125522,6 +132599,18 @@ func (r ApiIndexPaloAltoGetRequest) Cursor(cursor string) ApiIndexPaloAltoGetReq
 // request server-side paging
 func (r ApiIndexPaloAltoGetRequest) StartCursor(startCursor string) ApiIndexPaloAltoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPaloAltoGetRequest) Order(order string) ApiIndexPaloAltoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPaloAltoGetRequest) Sort(sort string) ApiIndexPaloAltoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -125702,6 +132791,12 @@ func (a *IndicesAPIService) IndexPaloAltoGetExecute(r ApiIndexPaloAltoGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -125855,6 +132950,8 @@ type ApiIndexPanasonicGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -125897,6 +132994,18 @@ func (r ApiIndexPanasonicGetRequest) Cursor(cursor string) ApiIndexPanasonicGetR
 // request server-side paging
 func (r ApiIndexPanasonicGetRequest) StartCursor(startCursor string) ApiIndexPanasonicGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPanasonicGetRequest) Order(order string) ApiIndexPanasonicGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPanasonicGetRequest) Sort(sort string) ApiIndexPanasonicGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -126077,6 +133186,12 @@ func (a *IndicesAPIService) IndexPanasonicGetExecute(r ApiIndexPanasonicGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -126230,6 +133345,8 @@ type ApiIndexPapercutGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -126272,6 +133389,18 @@ func (r ApiIndexPapercutGetRequest) Cursor(cursor string) ApiIndexPapercutGetReq
 // request server-side paging
 func (r ApiIndexPapercutGetRequest) StartCursor(startCursor string) ApiIndexPapercutGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPapercutGetRequest) Order(order string) ApiIndexPapercutGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPapercutGetRequest) Sort(sort string) ApiIndexPapercutGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -126452,6 +133581,12 @@ func (a *IndicesAPIService) IndexPapercutGetExecute(r ApiIndexPapercutGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -126605,6 +133740,8 @@ type ApiIndexPegaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -126647,6 +133784,18 @@ func (r ApiIndexPegaGetRequest) Cursor(cursor string) ApiIndexPegaGetRequest {
 // request server-side paging
 func (r ApiIndexPegaGetRequest) StartCursor(startCursor string) ApiIndexPegaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPegaGetRequest) Order(order string) ApiIndexPegaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPegaGetRequest) Sort(sort string) ApiIndexPegaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -126827,6 +133976,12 @@ func (a *IndicesAPIService) IndexPegaGetExecute(r ApiIndexPegaGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -126980,6 +134135,8 @@ type ApiIndexPhilipsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -127022,6 +134179,18 @@ func (r ApiIndexPhilipsGetRequest) Cursor(cursor string) ApiIndexPhilipsGetReque
 // request server-side paging
 func (r ApiIndexPhilipsGetRequest) StartCursor(startCursor string) ApiIndexPhilipsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPhilipsGetRequest) Order(order string) ApiIndexPhilipsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPhilipsGetRequest) Sort(sort string) ApiIndexPhilipsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -127202,6 +134371,12 @@ func (a *IndicesAPIService) IndexPhilipsGetExecute(r ApiIndexPhilipsGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -127355,6 +134530,8 @@ type ApiIndexPhoenixContactGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -127397,6 +134574,18 @@ func (r ApiIndexPhoenixContactGetRequest) Cursor(cursor string) ApiIndexPhoenixC
 // request server-side paging
 func (r ApiIndexPhoenixContactGetRequest) StartCursor(startCursor string) ApiIndexPhoenixContactGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPhoenixContactGetRequest) Order(order string) ApiIndexPhoenixContactGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPhoenixContactGetRequest) Sort(sort string) ApiIndexPhoenixContactGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -127577,6 +134766,12 @@ func (a *IndicesAPIService) IndexPhoenixContactGetExecute(r ApiIndexPhoenixConta
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -127730,6 +134925,8 @@ type ApiIndexPhpMyAdminGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -127772,6 +134969,18 @@ func (r ApiIndexPhpMyAdminGetRequest) Cursor(cursor string) ApiIndexPhpMyAdminGe
 // request server-side paging
 func (r ApiIndexPhpMyAdminGetRequest) StartCursor(startCursor string) ApiIndexPhpMyAdminGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPhpMyAdminGetRequest) Order(order string) ApiIndexPhpMyAdminGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPhpMyAdminGetRequest) Sort(sort string) ApiIndexPhpMyAdminGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -127952,6 +135161,12 @@ func (a *IndicesAPIService) IndexPhpMyAdminGetExecute(r ApiIndexPhpMyAdminGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -128105,6 +135320,8 @@ type ApiIndexPkcertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -128147,6 +135364,18 @@ func (r ApiIndexPkcertGetRequest) Cursor(cursor string) ApiIndexPkcertGetRequest
 // request server-side paging
 func (r ApiIndexPkcertGetRequest) StartCursor(startCursor string) ApiIndexPkcertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPkcertGetRequest) Order(order string) ApiIndexPkcertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPkcertGetRequest) Sort(sort string) ApiIndexPkcertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -128327,6 +135556,12 @@ func (a *IndicesAPIService) IndexPkcertGetExecute(r ApiIndexPkcertGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -128480,6 +135715,8 @@ type ApiIndexPostgressqlGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -128522,6 +135759,18 @@ func (r ApiIndexPostgressqlGetRequest) Cursor(cursor string) ApiIndexPostgressql
 // request server-side paging
 func (r ApiIndexPostgressqlGetRequest) StartCursor(startCursor string) ApiIndexPostgressqlGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPostgressqlGetRequest) Order(order string) ApiIndexPostgressqlGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPostgressqlGetRequest) Sort(sort string) ApiIndexPostgressqlGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -128702,6 +135951,12 @@ func (a *IndicesAPIService) IndexPostgressqlGetExecute(r ApiIndexPostgressqlGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -128855,6 +136110,8 @@ type ApiIndexPowerdnsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -128897,6 +136154,18 @@ func (r ApiIndexPowerdnsGetRequest) Cursor(cursor string) ApiIndexPowerdnsGetReq
 // request server-side paging
 func (r ApiIndexPowerdnsGetRequest) StartCursor(startCursor string) ApiIndexPowerdnsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPowerdnsGetRequest) Order(order string) ApiIndexPowerdnsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPowerdnsGetRequest) Sort(sort string) ApiIndexPowerdnsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -129077,6 +136346,12 @@ func (a *IndicesAPIService) IndexPowerdnsGetExecute(r ApiIndexPowerdnsGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -129230,6 +136505,8 @@ type ApiIndexProgressGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -129272,6 +136549,18 @@ func (r ApiIndexProgressGetRequest) Cursor(cursor string) ApiIndexProgressGetReq
 // request server-side paging
 func (r ApiIndexProgressGetRequest) StartCursor(startCursor string) ApiIndexProgressGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexProgressGetRequest) Order(order string) ApiIndexProgressGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexProgressGetRequest) Sort(sort string) ApiIndexProgressGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -129452,6 +136741,12 @@ func (a *IndicesAPIService) IndexProgressGetExecute(r ApiIndexProgressGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -129605,6 +136900,8 @@ type ApiIndexProofpointGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -129647,6 +136944,18 @@ func (r ApiIndexProofpointGetRequest) Cursor(cursor string) ApiIndexProofpointGe
 // request server-side paging
 func (r ApiIndexProofpointGetRequest) StartCursor(startCursor string) ApiIndexProofpointGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexProofpointGetRequest) Order(order string) ApiIndexProofpointGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexProofpointGetRequest) Sort(sort string) ApiIndexProofpointGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -129827,6 +137136,12 @@ func (a *IndicesAPIService) IndexProofpointGetExecute(r ApiIndexProofpointGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -129980,6 +137295,8 @@ type ApiIndexPtcGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -130022,6 +137339,18 @@ func (r ApiIndexPtcGetRequest) Cursor(cursor string) ApiIndexPtcGetRequest {
 // request server-side paging
 func (r ApiIndexPtcGetRequest) StartCursor(startCursor string) ApiIndexPtcGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPtcGetRequest) Order(order string) ApiIndexPtcGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPtcGetRequest) Sort(sort string) ApiIndexPtcGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -130202,6 +137531,12 @@ func (a *IndicesAPIService) IndexPtcGetExecute(r ApiIndexPtcGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -130355,6 +137690,8 @@ type ApiIndexPubGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -130397,6 +137734,18 @@ func (r ApiIndexPubGetRequest) Cursor(cursor string) ApiIndexPubGetRequest {
 // request server-side paging
 func (r ApiIndexPubGetRequest) StartCursor(startCursor string) ApiIndexPubGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPubGetRequest) Order(order string) ApiIndexPubGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPubGetRequest) Sort(sort string) ApiIndexPubGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -130577,6 +137926,12 @@ func (a *IndicesAPIService) IndexPubGetExecute(r ApiIndexPubGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -130730,6 +138085,8 @@ type ApiIndexPureStorageGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -130772,6 +138129,18 @@ func (r ApiIndexPureStorageGetRequest) Cursor(cursor string) ApiIndexPureStorage
 // request server-side paging
 func (r ApiIndexPureStorageGetRequest) StartCursor(startCursor string) ApiIndexPureStorageGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPureStorageGetRequest) Order(order string) ApiIndexPureStorageGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPureStorageGetRequest) Sort(sort string) ApiIndexPureStorageGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -130952,6 +138321,12 @@ func (a *IndicesAPIService) IndexPureStorageGetExecute(r ApiIndexPureStorageGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -131105,6 +138480,8 @@ type ApiIndexPypaAdvisoriesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -131147,6 +138524,18 @@ func (r ApiIndexPypaAdvisoriesGetRequest) Cursor(cursor string) ApiIndexPypaAdvi
 // request server-side paging
 func (r ApiIndexPypaAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexPypaAdvisoriesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPypaAdvisoriesGetRequest) Order(order string) ApiIndexPypaAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPypaAdvisoriesGetRequest) Sort(sort string) ApiIndexPypaAdvisoriesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -131327,6 +138716,12 @@ func (a *IndicesAPIService) IndexPypaAdvisoriesGetExecute(r ApiIndexPypaAdvisori
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -131480,6 +138875,8 @@ type ApiIndexPypiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -131522,6 +138919,18 @@ func (r ApiIndexPypiGetRequest) Cursor(cursor string) ApiIndexPypiGetRequest {
 // request server-side paging
 func (r ApiIndexPypiGetRequest) StartCursor(startCursor string) ApiIndexPypiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexPypiGetRequest) Order(order string) ApiIndexPypiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexPypiGetRequest) Sort(sort string) ApiIndexPypiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -131702,6 +139111,12 @@ func (a *IndicesAPIService) IndexPypiGetExecute(r ApiIndexPypiGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -131855,6 +139270,8 @@ type ApiIndexQnapGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -131897,6 +139314,18 @@ func (r ApiIndexQnapGetRequest) Cursor(cursor string) ApiIndexQnapGetRequest {
 // request server-side paging
 func (r ApiIndexQnapGetRequest) StartCursor(startCursor string) ApiIndexQnapGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexQnapGetRequest) Order(order string) ApiIndexQnapGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexQnapGetRequest) Sort(sort string) ApiIndexQnapGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -132077,6 +139506,12 @@ func (a *IndicesAPIService) IndexQnapGetExecute(r ApiIndexQnapGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -132230,6 +139665,8 @@ type ApiIndexQqidsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -132272,6 +139709,18 @@ func (r ApiIndexQqidsGetRequest) Cursor(cursor string) ApiIndexQqidsGetRequest {
 // request server-side paging
 func (r ApiIndexQqidsGetRequest) StartCursor(startCursor string) ApiIndexQqidsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexQqidsGetRequest) Order(order string) ApiIndexQqidsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexQqidsGetRequest) Sort(sort string) ApiIndexQqidsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -132452,6 +139901,12 @@ func (a *IndicesAPIService) IndexQqidsGetExecute(r ApiIndexQqidsGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -132605,6 +140060,8 @@ type ApiIndexQualcommGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -132647,6 +140104,18 @@ func (r ApiIndexQualcommGetRequest) Cursor(cursor string) ApiIndexQualcommGetReq
 // request server-side paging
 func (r ApiIndexQualcommGetRequest) StartCursor(startCursor string) ApiIndexQualcommGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexQualcommGetRequest) Order(order string) ApiIndexQualcommGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexQualcommGetRequest) Sort(sort string) ApiIndexQualcommGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -132827,6 +140296,12 @@ func (a *IndicesAPIService) IndexQualcommGetExecute(r ApiIndexQualcommGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -132980,6 +140455,8 @@ type ApiIndexQualysGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -133022,6 +140499,18 @@ func (r ApiIndexQualysGetRequest) Cursor(cursor string) ApiIndexQualysGetRequest
 // request server-side paging
 func (r ApiIndexQualysGetRequest) StartCursor(startCursor string) ApiIndexQualysGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexQualysGetRequest) Order(order string) ApiIndexQualysGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexQualysGetRequest) Sort(sort string) ApiIndexQualysGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -133202,6 +140691,12 @@ func (a *IndicesAPIService) IndexQualysGetExecute(r ApiIndexQualysGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -133355,6 +140850,8 @@ type ApiIndexQualysQidsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -133397,6 +140894,18 @@ func (r ApiIndexQualysQidsGetRequest) Cursor(cursor string) ApiIndexQualysQidsGe
 // request server-side paging
 func (r ApiIndexQualysQidsGetRequest) StartCursor(startCursor string) ApiIndexQualysQidsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexQualysQidsGetRequest) Order(order string) ApiIndexQualysQidsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexQualysQidsGetRequest) Sort(sort string) ApiIndexQualysQidsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -133577,6 +141086,12 @@ func (a *IndicesAPIService) IndexQualysQidsGetExecute(r ApiIndexQualysQidsGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -133730,6 +141245,8 @@ type ApiIndexQubesQsbGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -133772,6 +141289,18 @@ func (r ApiIndexQubesQsbGetRequest) Cursor(cursor string) ApiIndexQubesQsbGetReq
 // request server-side paging
 func (r ApiIndexQubesQsbGetRequest) StartCursor(startCursor string) ApiIndexQubesQsbGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexQubesQsbGetRequest) Order(order string) ApiIndexQubesQsbGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexQubesQsbGetRequest) Sort(sort string) ApiIndexQubesQsbGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -133952,6 +141481,12 @@ func (a *IndicesAPIService) IndexQubesQsbGetExecute(r ApiIndexQubesQsbGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -134105,6 +141640,8 @@ type ApiIndexRansomwareGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -134147,6 +141684,18 @@ func (r ApiIndexRansomwareGetRequest) Cursor(cursor string) ApiIndexRansomwareGe
 // request server-side paging
 func (r ApiIndexRansomwareGetRequest) StartCursor(startCursor string) ApiIndexRansomwareGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRansomwareGetRequest) Order(order string) ApiIndexRansomwareGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRansomwareGetRequest) Sort(sort string) ApiIndexRansomwareGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -134327,6 +141876,12 @@ func (a *IndicesAPIService) IndexRansomwareGetExecute(r ApiIndexRansomwareGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -134480,6 +142035,8 @@ type ApiIndexRedLionGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -134522,6 +142079,18 @@ func (r ApiIndexRedLionGetRequest) Cursor(cursor string) ApiIndexRedLionGetReque
 // request server-side paging
 func (r ApiIndexRedLionGetRequest) StartCursor(startCursor string) ApiIndexRedLionGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRedLionGetRequest) Order(order string) ApiIndexRedLionGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRedLionGetRequest) Sort(sort string) ApiIndexRedLionGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -134702,6 +142271,12 @@ func (a *IndicesAPIService) IndexRedLionGetExecute(r ApiIndexRedLionGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -134855,6 +142430,8 @@ type ApiIndexRedhatCvesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -134897,6 +142474,18 @@ func (r ApiIndexRedhatCvesGetRequest) Cursor(cursor string) ApiIndexRedhatCvesGe
 // request server-side paging
 func (r ApiIndexRedhatCvesGetRequest) StartCursor(startCursor string) ApiIndexRedhatCvesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRedhatCvesGetRequest) Order(order string) ApiIndexRedhatCvesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRedhatCvesGetRequest) Sort(sort string) ApiIndexRedhatCvesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -135077,6 +142666,12 @@ func (a *IndicesAPIService) IndexRedhatCvesGetExecute(r ApiIndexRedhatCvesGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -135230,6 +142825,8 @@ type ApiIndexRedhatGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -135272,6 +142869,18 @@ func (r ApiIndexRedhatGetRequest) Cursor(cursor string) ApiIndexRedhatGetRequest
 // request server-side paging
 func (r ApiIndexRedhatGetRequest) StartCursor(startCursor string) ApiIndexRedhatGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRedhatGetRequest) Order(order string) ApiIndexRedhatGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRedhatGetRequest) Sort(sort string) ApiIndexRedhatGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -135452,6 +143061,12 @@ func (a *IndicesAPIService) IndexRedhatGetExecute(r ApiIndexRedhatGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -135605,6 +143220,8 @@ type ApiIndexRenesasGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -135647,6 +143264,18 @@ func (r ApiIndexRenesasGetRequest) Cursor(cursor string) ApiIndexRenesasGetReque
 // request server-side paging
 func (r ApiIndexRenesasGetRequest) StartCursor(startCursor string) ApiIndexRenesasGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRenesasGetRequest) Order(order string) ApiIndexRenesasGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRenesasGetRequest) Sort(sort string) ApiIndexRenesasGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -135827,6 +143456,12 @@ func (a *IndicesAPIService) IndexRenesasGetExecute(r ApiIndexRenesasGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -135980,6 +143615,8 @@ type ApiIndexReviveGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -136022,6 +143659,18 @@ func (r ApiIndexReviveGetRequest) Cursor(cursor string) ApiIndexReviveGetRequest
 // request server-side paging
 func (r ApiIndexReviveGetRequest) StartCursor(startCursor string) ApiIndexReviveGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexReviveGetRequest) Order(order string) ApiIndexReviveGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexReviveGetRequest) Sort(sort string) ApiIndexReviveGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -136202,6 +143851,12 @@ func (a *IndicesAPIService) IndexReviveGetExecute(r ApiIndexReviveGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -136355,6 +144010,8 @@ type ApiIndexRocheGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -136397,6 +144054,18 @@ func (r ApiIndexRocheGetRequest) Cursor(cursor string) ApiIndexRocheGetRequest {
 // request server-side paging
 func (r ApiIndexRocheGetRequest) StartCursor(startCursor string) ApiIndexRocheGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRocheGetRequest) Order(order string) ApiIndexRocheGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRocheGetRequest) Sort(sort string) ApiIndexRocheGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -136577,6 +144246,12 @@ func (a *IndicesAPIService) IndexRocheGetExecute(r ApiIndexRocheGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -136730,6 +144405,8 @@ type ApiIndexRockwellGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -136772,6 +144449,18 @@ func (r ApiIndexRockwellGetRequest) Cursor(cursor string) ApiIndexRockwellGetReq
 // request server-side paging
 func (r ApiIndexRockwellGetRequest) StartCursor(startCursor string) ApiIndexRockwellGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRockwellGetRequest) Order(order string) ApiIndexRockwellGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRockwellGetRequest) Sort(sort string) ApiIndexRockwellGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -136952,6 +144641,12 @@ func (a *IndicesAPIService) IndexRockwellGetExecute(r ApiIndexRockwellGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -137105,6 +144800,8 @@ type ApiIndexRockyErrataGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -137147,6 +144844,18 @@ func (r ApiIndexRockyErrataGetRequest) Cursor(cursor string) ApiIndexRockyErrata
 // request server-side paging
 func (r ApiIndexRockyErrataGetRequest) StartCursor(startCursor string) ApiIndexRockyErrataGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRockyErrataGetRequest) Order(order string) ApiIndexRockyErrataGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRockyErrataGetRequest) Sort(sort string) ApiIndexRockyErrataGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -137327,6 +145036,12 @@ func (a *IndicesAPIService) IndexRockyErrataGetExecute(r ApiIndexRockyErrataGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -137480,6 +145195,8 @@ type ApiIndexRockyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -137522,6 +145239,18 @@ func (r ApiIndexRockyGetRequest) Cursor(cursor string) ApiIndexRockyGetRequest {
 // request server-side paging
 func (r ApiIndexRockyGetRequest) StartCursor(startCursor string) ApiIndexRockyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRockyGetRequest) Order(order string) ApiIndexRockyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRockyGetRequest) Sort(sort string) ApiIndexRockyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -137702,6 +145431,12 @@ func (a *IndicesAPIService) IndexRockyGetExecute(r ApiIndexRockyGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -137855,6 +145590,8 @@ type ApiIndexRockyPurlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -137897,6 +145634,18 @@ func (r ApiIndexRockyPurlsGetRequest) Cursor(cursor string) ApiIndexRockyPurlsGe
 // request server-side paging
 func (r ApiIndexRockyPurlsGetRequest) StartCursor(startCursor string) ApiIndexRockyPurlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRockyPurlsGetRequest) Order(order string) ApiIndexRockyPurlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRockyPurlsGetRequest) Sort(sort string) ApiIndexRockyPurlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -138077,6 +145826,12 @@ func (a *IndicesAPIService) IndexRockyPurlsGetExecute(r ApiIndexRockyPurlsGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -138230,6 +145985,8 @@ type ApiIndexRsyncGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -138272,6 +146029,18 @@ func (r ApiIndexRsyncGetRequest) Cursor(cursor string) ApiIndexRsyncGetRequest {
 // request server-side paging
 func (r ApiIndexRsyncGetRequest) StartCursor(startCursor string) ApiIndexRsyncGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRsyncGetRequest) Order(order string) ApiIndexRsyncGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRsyncGetRequest) Sort(sort string) ApiIndexRsyncGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -138452,6 +146221,12 @@ func (a *IndicesAPIService) IndexRsyncGetExecute(r ApiIndexRsyncGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -138605,6 +146380,8 @@ type ApiIndexRuckusGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -138647,6 +146424,18 @@ func (r ApiIndexRuckusGetRequest) Cursor(cursor string) ApiIndexRuckusGetRequest
 // request server-side paging
 func (r ApiIndexRuckusGetRequest) StartCursor(startCursor string) ApiIndexRuckusGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRuckusGetRequest) Order(order string) ApiIndexRuckusGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRuckusGetRequest) Sort(sort string) ApiIndexRuckusGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -138827,6 +146616,12 @@ func (a *IndicesAPIService) IndexRuckusGetExecute(r ApiIndexRuckusGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -138980,6 +146775,8 @@ type ApiIndexRustsecAdvisoriesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -139022,6 +146819,18 @@ func (r ApiIndexRustsecAdvisoriesGetRequest) Cursor(cursor string) ApiIndexRusts
 // request server-side paging
 func (r ApiIndexRustsecAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexRustsecAdvisoriesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRustsecAdvisoriesGetRequest) Order(order string) ApiIndexRustsecAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRustsecAdvisoriesGetRequest) Sort(sort string) ApiIndexRustsecAdvisoriesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -139202,6 +147011,12 @@ func (a *IndicesAPIService) IndexRustsecAdvisoriesGetExecute(r ApiIndexRustsecAd
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -139355,6 +147170,8 @@ type ApiIndexSacertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -139397,6 +147214,18 @@ func (r ApiIndexSacertGetRequest) Cursor(cursor string) ApiIndexSacertGetRequest
 // request server-side paging
 func (r ApiIndexSacertGetRequest) StartCursor(startCursor string) ApiIndexSacertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSacertGetRequest) Order(order string) ApiIndexSacertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSacertGetRequest) Sort(sort string) ApiIndexSacertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -139577,6 +147406,12 @@ func (a *IndicesAPIService) IndexSacertGetExecute(r ApiIndexSacertGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -139730,6 +147565,8 @@ type ApiIndexSafranGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -139772,6 +147609,18 @@ func (r ApiIndexSafranGetRequest) Cursor(cursor string) ApiIndexSafranGetRequest
 // request server-side paging
 func (r ApiIndexSafranGetRequest) StartCursor(startCursor string) ApiIndexSafranGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSafranGetRequest) Order(order string) ApiIndexSafranGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSafranGetRequest) Sort(sort string) ApiIndexSafranGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -139952,6 +147801,12 @@ func (a *IndicesAPIService) IndexSafranGetExecute(r ApiIndexSafranGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -140105,6 +147960,8 @@ type ApiIndexSaintGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -140147,6 +148004,18 @@ func (r ApiIndexSaintGetRequest) Cursor(cursor string) ApiIndexSaintGetRequest {
 // request server-side paging
 func (r ApiIndexSaintGetRequest) StartCursor(startCursor string) ApiIndexSaintGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSaintGetRequest) Order(order string) ApiIndexSaintGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSaintGetRequest) Sort(sort string) ApiIndexSaintGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -140327,6 +148196,12 @@ func (a *IndicesAPIService) IndexSaintGetExecute(r ApiIndexSaintGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -140480,6 +148355,8 @@ type ApiIndexSalesforceGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -140522,6 +148399,18 @@ func (r ApiIndexSalesforceGetRequest) Cursor(cursor string) ApiIndexSalesforceGe
 // request server-side paging
 func (r ApiIndexSalesforceGetRequest) StartCursor(startCursor string) ApiIndexSalesforceGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSalesforceGetRequest) Order(order string) ApiIndexSalesforceGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSalesforceGetRequest) Sort(sort string) ApiIndexSalesforceGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -140702,6 +148591,12 @@ func (a *IndicesAPIService) IndexSalesforceGetExecute(r ApiIndexSalesforceGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -140855,6 +148750,8 @@ type ApiIndexSambaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -140897,6 +148794,18 @@ func (r ApiIndexSambaGetRequest) Cursor(cursor string) ApiIndexSambaGetRequest {
 // request server-side paging
 func (r ApiIndexSambaGetRequest) StartCursor(startCursor string) ApiIndexSambaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSambaGetRequest) Order(order string) ApiIndexSambaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSambaGetRequest) Sort(sort string) ApiIndexSambaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -141077,6 +148986,12 @@ func (a *IndicesAPIService) IndexSambaGetExecute(r ApiIndexSambaGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -141230,6 +149145,8 @@ type ApiIndexSandiskGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -141272,6 +149189,18 @@ func (r ApiIndexSandiskGetRequest) Cursor(cursor string) ApiIndexSandiskGetReque
 // request server-side paging
 func (r ApiIndexSandiskGetRequest) StartCursor(startCursor string) ApiIndexSandiskGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSandiskGetRequest) Order(order string) ApiIndexSandiskGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSandiskGetRequest) Sort(sort string) ApiIndexSandiskGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -141452,6 +149381,12 @@ func (a *IndicesAPIService) IndexSandiskGetExecute(r ApiIndexSandiskGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -141605,6 +149540,8 @@ type ApiIndexSansDshieldGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -141647,6 +149584,18 @@ func (r ApiIndexSansDshieldGetRequest) Cursor(cursor string) ApiIndexSansDshield
 // request server-side paging
 func (r ApiIndexSansDshieldGetRequest) StartCursor(startCursor string) ApiIndexSansDshieldGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSansDshieldGetRequest) Order(order string) ApiIndexSansDshieldGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSansDshieldGetRequest) Sort(sort string) ApiIndexSansDshieldGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -141827,6 +149776,12 @@ func (a *IndicesAPIService) IndexSansDshieldGetExecute(r ApiIndexSansDshieldGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -141980,6 +149935,8 @@ type ApiIndexSapGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -142022,6 +149979,18 @@ func (r ApiIndexSapGetRequest) Cursor(cursor string) ApiIndexSapGetRequest {
 // request server-side paging
 func (r ApiIndexSapGetRequest) StartCursor(startCursor string) ApiIndexSapGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSapGetRequest) Order(order string) ApiIndexSapGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSapGetRequest) Sort(sort string) ApiIndexSapGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -142202,6 +150171,12 @@ func (a *IndicesAPIService) IndexSapGetExecute(r ApiIndexSapGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -142355,6 +150330,8 @@ type ApiIndexSchneiderElectricGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -142397,6 +150374,18 @@ func (r ApiIndexSchneiderElectricGetRequest) Cursor(cursor string) ApiIndexSchne
 // request server-side paging
 func (r ApiIndexSchneiderElectricGetRequest) StartCursor(startCursor string) ApiIndexSchneiderElectricGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSchneiderElectricGetRequest) Order(order string) ApiIndexSchneiderElectricGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSchneiderElectricGetRequest) Sort(sort string) ApiIndexSchneiderElectricGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -142577,6 +150566,12 @@ func (a *IndicesAPIService) IndexSchneiderElectricGetExecute(r ApiIndexSchneider
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -142730,6 +150725,8 @@ type ApiIndexSchutzwerkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -142772,6 +150769,18 @@ func (r ApiIndexSchutzwerkGetRequest) Cursor(cursor string) ApiIndexSchutzwerkGe
 // request server-side paging
 func (r ApiIndexSchutzwerkGetRequest) StartCursor(startCursor string) ApiIndexSchutzwerkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSchutzwerkGetRequest) Order(order string) ApiIndexSchutzwerkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSchutzwerkGetRequest) Sort(sort string) ApiIndexSchutzwerkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -142952,6 +150961,12 @@ func (a *IndicesAPIService) IndexSchutzwerkGetExecute(r ApiIndexSchutzwerkGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -143105,6 +151120,8 @@ type ApiIndexSecConsultGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -143147,6 +151164,18 @@ func (r ApiIndexSecConsultGetRequest) Cursor(cursor string) ApiIndexSecConsultGe
 // request server-side paging
 func (r ApiIndexSecConsultGetRequest) StartCursor(startCursor string) ApiIndexSecConsultGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSecConsultGetRequest) Order(order string) ApiIndexSecConsultGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSecConsultGetRequest) Sort(sort string) ApiIndexSecConsultGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -143327,6 +151356,12 @@ func (a *IndicesAPIService) IndexSecConsultGetExecute(r ApiIndexSecConsultGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -143480,6 +151515,8 @@ type ApiIndexSecuritylabGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -143522,6 +151559,18 @@ func (r ApiIndexSecuritylabGetRequest) Cursor(cursor string) ApiIndexSecuritylab
 // request server-side paging
 func (r ApiIndexSecuritylabGetRequest) StartCursor(startCursor string) ApiIndexSecuritylabGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSecuritylabGetRequest) Order(order string) ApiIndexSecuritylabGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSecuritylabGetRequest) Sort(sort string) ApiIndexSecuritylabGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -143702,6 +151751,12 @@ func (a *IndicesAPIService) IndexSecuritylabGetExecute(r ApiIndexSecuritylabGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -143855,6 +151910,8 @@ type ApiIndexSeebugGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -143897,6 +151954,18 @@ func (r ApiIndexSeebugGetRequest) Cursor(cursor string) ApiIndexSeebugGetRequest
 // request server-side paging
 func (r ApiIndexSeebugGetRequest) StartCursor(startCursor string) ApiIndexSeebugGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSeebugGetRequest) Order(order string) ApiIndexSeebugGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSeebugGetRequest) Sort(sort string) ApiIndexSeebugGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -144077,6 +152146,12 @@ func (a *IndicesAPIService) IndexSeebugGetExecute(r ApiIndexSeebugGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -144230,6 +152305,8 @@ type ApiIndexSelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -144272,6 +152349,18 @@ func (r ApiIndexSelGetRequest) Cursor(cursor string) ApiIndexSelGetRequest {
 // request server-side paging
 func (r ApiIndexSelGetRequest) StartCursor(startCursor string) ApiIndexSelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSelGetRequest) Order(order string) ApiIndexSelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSelGetRequest) Sort(sort string) ApiIndexSelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -144452,6 +152541,12 @@ func (a *IndicesAPIService) IndexSelGetExecute(r ApiIndexSelGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -144605,6 +152700,8 @@ type ApiIndexSentineloneGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -144647,6 +152744,18 @@ func (r ApiIndexSentineloneGetRequest) Cursor(cursor string) ApiIndexSentinelone
 // request server-side paging
 func (r ApiIndexSentineloneGetRequest) StartCursor(startCursor string) ApiIndexSentineloneGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSentineloneGetRequest) Order(order string) ApiIndexSentineloneGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSentineloneGetRequest) Sort(sort string) ApiIndexSentineloneGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -144827,6 +152936,12 @@ func (a *IndicesAPIService) IndexSentineloneGetExecute(r ApiIndexSentineloneGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -144980,6 +153095,8 @@ type ApiIndexServicenowGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -145022,6 +153139,18 @@ func (r ApiIndexServicenowGetRequest) Cursor(cursor string) ApiIndexServicenowGe
 // request server-side paging
 func (r ApiIndexServicenowGetRequest) StartCursor(startCursor string) ApiIndexServicenowGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexServicenowGetRequest) Order(order string) ApiIndexServicenowGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexServicenowGetRequest) Sort(sort string) ApiIndexServicenowGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -145202,6 +153331,12 @@ func (a *IndicesAPIService) IndexServicenowGetExecute(r ApiIndexServicenowGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -145355,6 +153490,8 @@ type ApiIndexShadowserverExploitedGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -145397,6 +153534,18 @@ func (r ApiIndexShadowserverExploitedGetRequest) Cursor(cursor string) ApiIndexS
 // request server-side paging
 func (r ApiIndexShadowserverExploitedGetRequest) StartCursor(startCursor string) ApiIndexShadowserverExploitedGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexShadowserverExploitedGetRequest) Order(order string) ApiIndexShadowserverExploitedGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexShadowserverExploitedGetRequest) Sort(sort string) ApiIndexShadowserverExploitedGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -145577,6 +153726,12 @@ func (a *IndicesAPIService) IndexShadowserverExploitedGetExecute(r ApiIndexShado
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -145730,6 +153885,8 @@ type ApiIndexShielderGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -145772,6 +153929,18 @@ func (r ApiIndexShielderGetRequest) Cursor(cursor string) ApiIndexShielderGetReq
 // request server-side paging
 func (r ApiIndexShielderGetRequest) StartCursor(startCursor string) ApiIndexShielderGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexShielderGetRequest) Order(order string) ApiIndexShielderGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexShielderGetRequest) Sort(sort string) ApiIndexShielderGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -145952,6 +154121,12 @@ func (a *IndicesAPIService) IndexShielderGetExecute(r ApiIndexShielderGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -146105,6 +154280,8 @@ type ApiIndexSickGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -146147,6 +154324,18 @@ func (r ApiIndexSickGetRequest) Cursor(cursor string) ApiIndexSickGetRequest {
 // request server-side paging
 func (r ApiIndexSickGetRequest) StartCursor(startCursor string) ApiIndexSickGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSickGetRequest) Order(order string) ApiIndexSickGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSickGetRequest) Sort(sort string) ApiIndexSickGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -146327,6 +154516,12 @@ func (a *IndicesAPIService) IndexSickGetExecute(r ApiIndexSickGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -146480,6 +154675,8 @@ type ApiIndexSiemensGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -146522,6 +154719,18 @@ func (r ApiIndexSiemensGetRequest) Cursor(cursor string) ApiIndexSiemensGetReque
 // request server-side paging
 func (r ApiIndexSiemensGetRequest) StartCursor(startCursor string) ApiIndexSiemensGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSiemensGetRequest) Order(order string) ApiIndexSiemensGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSiemensGetRequest) Sort(sort string) ApiIndexSiemensGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -146702,6 +154911,12 @@ func (a *IndicesAPIService) IndexSiemensGetExecute(r ApiIndexSiemensGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -146855,6 +155070,8 @@ type ApiIndexSierraWirelessGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -146897,6 +155114,18 @@ func (r ApiIndexSierraWirelessGetRequest) Cursor(cursor string) ApiIndexSierraWi
 // request server-side paging
 func (r ApiIndexSierraWirelessGetRequest) StartCursor(startCursor string) ApiIndexSierraWirelessGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSierraWirelessGetRequest) Order(order string) ApiIndexSierraWirelessGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSierraWirelessGetRequest) Sort(sort string) ApiIndexSierraWirelessGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -147077,6 +155306,12 @@ func (a *IndicesAPIService) IndexSierraWirelessGetExecute(r ApiIndexSierraWirele
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -147230,6 +155465,8 @@ type ApiIndexSigmahqSigmaRulesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -147272,6 +155509,18 @@ func (r ApiIndexSigmahqSigmaRulesGetRequest) Cursor(cursor string) ApiIndexSigma
 // request server-side paging
 func (r ApiIndexSigmahqSigmaRulesGetRequest) StartCursor(startCursor string) ApiIndexSigmahqSigmaRulesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSigmahqSigmaRulesGetRequest) Order(order string) ApiIndexSigmahqSigmaRulesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSigmahqSigmaRulesGetRequest) Sort(sort string) ApiIndexSigmahqSigmaRulesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -147452,6 +155701,12 @@ func (a *IndicesAPIService) IndexSigmahqSigmaRulesGetExecute(r ApiIndexSigmahqSi
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -147605,6 +155860,8 @@ type ApiIndexSingcertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -147647,6 +155904,18 @@ func (r ApiIndexSingcertGetRequest) Cursor(cursor string) ApiIndexSingcertGetReq
 // request server-side paging
 func (r ApiIndexSingcertGetRequest) StartCursor(startCursor string) ApiIndexSingcertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSingcertGetRequest) Order(order string) ApiIndexSingcertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSingcertGetRequest) Sort(sort string) ApiIndexSingcertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -147827,6 +156096,12 @@ func (a *IndicesAPIService) IndexSingcertGetExecute(r ApiIndexSingcertGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -147980,6 +156255,8 @@ type ApiIndexSitecoreGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -148022,6 +156299,18 @@ func (r ApiIndexSitecoreGetRequest) Cursor(cursor string) ApiIndexSitecoreGetReq
 // request server-side paging
 func (r ApiIndexSitecoreGetRequest) StartCursor(startCursor string) ApiIndexSitecoreGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSitecoreGetRequest) Order(order string) ApiIndexSitecoreGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSitecoreGetRequest) Sort(sort string) ApiIndexSitecoreGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -148202,6 +156491,12 @@ func (a *IndicesAPIService) IndexSitecoreGetExecute(r ApiIndexSitecoreGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -148355,6 +156650,8 @@ type ApiIndexSlackwareGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -148397,6 +156694,18 @@ func (r ApiIndexSlackwareGetRequest) Cursor(cursor string) ApiIndexSlackwareGetR
 // request server-side paging
 func (r ApiIndexSlackwareGetRequest) StartCursor(startCursor string) ApiIndexSlackwareGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSlackwareGetRequest) Order(order string) ApiIndexSlackwareGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSlackwareGetRequest) Sort(sort string) ApiIndexSlackwareGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -148577,6 +156886,12 @@ func (a *IndicesAPIService) IndexSlackwareGetExecute(r ApiIndexSlackwareGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -148730,6 +157045,8 @@ type ApiIndexSolarwindsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -148772,6 +157089,18 @@ func (r ApiIndexSolarwindsGetRequest) Cursor(cursor string) ApiIndexSolarwindsGe
 // request server-side paging
 func (r ApiIndexSolarwindsGetRequest) StartCursor(startCursor string) ApiIndexSolarwindsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSolarwindsGetRequest) Order(order string) ApiIndexSolarwindsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSolarwindsGetRequest) Sort(sort string) ApiIndexSolarwindsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -148952,6 +157281,12 @@ func (a *IndicesAPIService) IndexSolarwindsGetExecute(r ApiIndexSolarwindsGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -149105,6 +157440,8 @@ type ApiIndexSolrGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -149147,6 +157484,18 @@ func (r ApiIndexSolrGetRequest) Cursor(cursor string) ApiIndexSolrGetRequest {
 // request server-side paging
 func (r ApiIndexSolrGetRequest) StartCursor(startCursor string) ApiIndexSolrGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSolrGetRequest) Order(order string) ApiIndexSolrGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSolrGetRequest) Sort(sort string) ApiIndexSolrGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -149327,6 +157676,12 @@ func (a *IndicesAPIService) IndexSolrGetExecute(r ApiIndexSolrGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -149480,6 +157835,8 @@ type ApiIndexSonatypeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -149522,6 +157879,18 @@ func (r ApiIndexSonatypeGetRequest) Cursor(cursor string) ApiIndexSonatypeGetReq
 // request server-side paging
 func (r ApiIndexSonatypeGetRequest) StartCursor(startCursor string) ApiIndexSonatypeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSonatypeGetRequest) Order(order string) ApiIndexSonatypeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSonatypeGetRequest) Sort(sort string) ApiIndexSonatypeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -149702,6 +158071,12 @@ func (a *IndicesAPIService) IndexSonatypeGetExecute(r ApiIndexSonatypeGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -149855,6 +158230,8 @@ type ApiIndexSonicwallGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -149897,6 +158274,18 @@ func (r ApiIndexSonicwallGetRequest) Cursor(cursor string) ApiIndexSonicwallGetR
 // request server-side paging
 func (r ApiIndexSonicwallGetRequest) StartCursor(startCursor string) ApiIndexSonicwallGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSonicwallGetRequest) Order(order string) ApiIndexSonicwallGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSonicwallGetRequest) Sort(sort string) ApiIndexSonicwallGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -150077,6 +158466,12 @@ func (a *IndicesAPIService) IndexSonicwallGetExecute(r ApiIndexSonicwallGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -150230,6 +158625,8 @@ type ApiIndexSpacelabsHealthcareGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -150272,6 +158669,18 @@ func (r ApiIndexSpacelabsHealthcareGetRequest) Cursor(cursor string) ApiIndexSpa
 // request server-side paging
 func (r ApiIndexSpacelabsHealthcareGetRequest) StartCursor(startCursor string) ApiIndexSpacelabsHealthcareGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSpacelabsHealthcareGetRequest) Order(order string) ApiIndexSpacelabsHealthcareGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSpacelabsHealthcareGetRequest) Sort(sort string) ApiIndexSpacelabsHealthcareGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -150452,6 +158861,12 @@ func (a *IndicesAPIService) IndexSpacelabsHealthcareGetExecute(r ApiIndexSpacela
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -150605,6 +159020,8 @@ type ApiIndexSplunkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -150647,6 +159064,18 @@ func (r ApiIndexSplunkGetRequest) Cursor(cursor string) ApiIndexSplunkGetRequest
 // request server-side paging
 func (r ApiIndexSplunkGetRequest) StartCursor(startCursor string) ApiIndexSplunkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSplunkGetRequest) Order(order string) ApiIndexSplunkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSplunkGetRequest) Sort(sort string) ApiIndexSplunkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -150827,6 +159256,12 @@ func (a *IndicesAPIService) IndexSplunkGetExecute(r ApiIndexSplunkGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -150980,6 +159415,8 @@ type ApiIndexSpringGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -151022,6 +159459,18 @@ func (r ApiIndexSpringGetRequest) Cursor(cursor string) ApiIndexSpringGetRequest
 // request server-side paging
 func (r ApiIndexSpringGetRequest) StartCursor(startCursor string) ApiIndexSpringGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSpringGetRequest) Order(order string) ApiIndexSpringGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSpringGetRequest) Sort(sort string) ApiIndexSpringGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -151202,6 +159651,12 @@ func (a *IndicesAPIService) IndexSpringGetExecute(r ApiIndexSpringGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -151355,6 +159810,8 @@ type ApiIndexSsdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -151397,6 +159854,18 @@ func (r ApiIndexSsdGetRequest) Cursor(cursor string) ApiIndexSsdGetRequest {
 // request server-side paging
 func (r ApiIndexSsdGetRequest) StartCursor(startCursor string) ApiIndexSsdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSsdGetRequest) Order(order string) ApiIndexSsdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSsdGetRequest) Sort(sort string) ApiIndexSsdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -151577,6 +160046,12 @@ func (a *IndicesAPIService) IndexSsdGetExecute(r ApiIndexSsdGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -151730,6 +160205,8 @@ type ApiIndexStormshieldGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -151772,6 +160249,18 @@ func (r ApiIndexStormshieldGetRequest) Cursor(cursor string) ApiIndexStormshield
 // request server-side paging
 func (r ApiIndexStormshieldGetRequest) StartCursor(startCursor string) ApiIndexStormshieldGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexStormshieldGetRequest) Order(order string) ApiIndexStormshieldGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexStormshieldGetRequest) Sort(sort string) ApiIndexStormshieldGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -151952,6 +160441,12 @@ func (a *IndicesAPIService) IndexStormshieldGetExecute(r ApiIndexStormshieldGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -152105,6 +160600,8 @@ type ApiIndexStrykerGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -152147,6 +160644,18 @@ func (r ApiIndexStrykerGetRequest) Cursor(cursor string) ApiIndexStrykerGetReque
 // request server-side paging
 func (r ApiIndexStrykerGetRequest) StartCursor(startCursor string) ApiIndexStrykerGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexStrykerGetRequest) Order(order string) ApiIndexStrykerGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexStrykerGetRequest) Sort(sort string) ApiIndexStrykerGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -152327,6 +160836,12 @@ func (a *IndicesAPIService) IndexStrykerGetExecute(r ApiIndexStrykerGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -152480,6 +160995,8 @@ type ApiIndexSudoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -152522,6 +161039,18 @@ func (r ApiIndexSudoGetRequest) Cursor(cursor string) ApiIndexSudoGetRequest {
 // request server-side paging
 func (r ApiIndexSudoGetRequest) StartCursor(startCursor string) ApiIndexSudoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSudoGetRequest) Order(order string) ApiIndexSudoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSudoGetRequest) Sort(sort string) ApiIndexSudoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -152702,6 +161231,12 @@ func (a *IndicesAPIService) IndexSudoGetExecute(r ApiIndexSudoGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -152855,6 +161390,8 @@ type ApiIndexSuseGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -152897,6 +161434,18 @@ func (r ApiIndexSuseGetRequest) Cursor(cursor string) ApiIndexSuseGetRequest {
 // request server-side paging
 func (r ApiIndexSuseGetRequest) StartCursor(startCursor string) ApiIndexSuseGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSuseGetRequest) Order(order string) ApiIndexSuseGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSuseGetRequest) Sort(sort string) ApiIndexSuseGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -153077,6 +161626,12 @@ func (a *IndicesAPIService) IndexSuseGetExecute(r ApiIndexSuseGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -153230,6 +161785,8 @@ type ApiIndexSuseSecurityGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -153272,6 +161829,18 @@ func (r ApiIndexSuseSecurityGetRequest) Cursor(cursor string) ApiIndexSuseSecuri
 // request server-side paging
 func (r ApiIndexSuseSecurityGetRequest) StartCursor(startCursor string) ApiIndexSuseSecurityGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSuseSecurityGetRequest) Order(order string) ApiIndexSuseSecurityGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSuseSecurityGetRequest) Sort(sort string) ApiIndexSuseSecurityGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -153452,6 +162021,12 @@ func (a *IndicesAPIService) IndexSuseSecurityGetExecute(r ApiIndexSuseSecurityGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -153605,6 +162180,8 @@ type ApiIndexSwiftGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -153647,6 +162224,18 @@ func (r ApiIndexSwiftGetRequest) Cursor(cursor string) ApiIndexSwiftGetRequest {
 // request server-side paging
 func (r ApiIndexSwiftGetRequest) StartCursor(startCursor string) ApiIndexSwiftGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSwiftGetRequest) Order(order string) ApiIndexSwiftGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSwiftGetRequest) Sort(sort string) ApiIndexSwiftGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -153827,6 +162416,12 @@ func (a *IndicesAPIService) IndexSwiftGetExecute(r ApiIndexSwiftGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -153980,6 +162575,8 @@ type ApiIndexSwisslogHealthcareGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -154022,6 +162619,18 @@ func (r ApiIndexSwisslogHealthcareGetRequest) Cursor(cursor string) ApiIndexSwis
 // request server-side paging
 func (r ApiIndexSwisslogHealthcareGetRequest) StartCursor(startCursor string) ApiIndexSwisslogHealthcareGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSwisslogHealthcareGetRequest) Order(order string) ApiIndexSwisslogHealthcareGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSwisslogHealthcareGetRequest) Sort(sort string) ApiIndexSwisslogHealthcareGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -154202,6 +162811,12 @@ func (a *IndicesAPIService) IndexSwisslogHealthcareGetExecute(r ApiIndexSwisslog
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -154355,6 +162970,8 @@ type ApiIndexSymfonyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -154397,6 +163014,18 @@ func (r ApiIndexSymfonyGetRequest) Cursor(cursor string) ApiIndexSymfonyGetReque
 // request server-side paging
 func (r ApiIndexSymfonyGetRequest) StartCursor(startCursor string) ApiIndexSymfonyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSymfonyGetRequest) Order(order string) ApiIndexSymfonyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSymfonyGetRequest) Sort(sort string) ApiIndexSymfonyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -154577,6 +163206,12 @@ func (a *IndicesAPIService) IndexSymfonyGetExecute(r ApiIndexSymfonyGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -154730,6 +163365,8 @@ type ApiIndexSynacktivGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -154772,6 +163409,18 @@ func (r ApiIndexSynacktivGetRequest) Cursor(cursor string) ApiIndexSynacktivGetR
 // request server-side paging
 func (r ApiIndexSynacktivGetRequest) StartCursor(startCursor string) ApiIndexSynacktivGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSynacktivGetRequest) Order(order string) ApiIndexSynacktivGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSynacktivGetRequest) Sort(sort string) ApiIndexSynacktivGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -154952,6 +163601,12 @@ func (a *IndicesAPIService) IndexSynacktivGetExecute(r ApiIndexSynacktivGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -155105,6 +163760,8 @@ type ApiIndexSyncrosoftGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -155147,6 +163804,18 @@ func (r ApiIndexSyncrosoftGetRequest) Cursor(cursor string) ApiIndexSyncrosoftGe
 // request server-side paging
 func (r ApiIndexSyncrosoftGetRequest) StartCursor(startCursor string) ApiIndexSyncrosoftGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSyncrosoftGetRequest) Order(order string) ApiIndexSyncrosoftGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSyncrosoftGetRequest) Sort(sort string) ApiIndexSyncrosoftGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -155327,6 +163996,12 @@ func (a *IndicesAPIService) IndexSyncrosoftGetExecute(r ApiIndexSyncrosoftGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -155480,6 +164155,8 @@ type ApiIndexSynologyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -155522,6 +164199,18 @@ func (r ApiIndexSynologyGetRequest) Cursor(cursor string) ApiIndexSynologyGetReq
 // request server-side paging
 func (r ApiIndexSynologyGetRequest) StartCursor(startCursor string) ApiIndexSynologyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSynologyGetRequest) Order(order string) ApiIndexSynologyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSynologyGetRequest) Sort(sort string) ApiIndexSynologyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -155702,6 +164391,12 @@ func (a *IndicesAPIService) IndexSynologyGetExecute(r ApiIndexSynologyGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -155855,6 +164550,8 @@ type ApiIndexSyssGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -155897,6 +164594,18 @@ func (r ApiIndexSyssGetRequest) Cursor(cursor string) ApiIndexSyssGetRequest {
 // request server-side paging
 func (r ApiIndexSyssGetRequest) StartCursor(startCursor string) ApiIndexSyssGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexSyssGetRequest) Order(order string) ApiIndexSyssGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexSyssGetRequest) Sort(sort string) ApiIndexSyssGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -156077,6 +164786,12 @@ func (a *IndicesAPIService) IndexSyssGetExecute(r ApiIndexSyssGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -156230,6 +164945,8 @@ type ApiIndexTailscaleGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -156272,6 +164989,18 @@ func (r ApiIndexTailscaleGetRequest) Cursor(cursor string) ApiIndexTailscaleGetR
 // request server-side paging
 func (r ApiIndexTailscaleGetRequest) StartCursor(startCursor string) ApiIndexTailscaleGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTailscaleGetRequest) Order(order string) ApiIndexTailscaleGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTailscaleGetRequest) Sort(sort string) ApiIndexTailscaleGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -156452,6 +165181,12 @@ func (a *IndicesAPIService) IndexTailscaleGetExecute(r ApiIndexTailscaleGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -156605,6 +165340,8 @@ type ApiIndexTeamviewerGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -156647,6 +165384,18 @@ func (r ApiIndexTeamviewerGetRequest) Cursor(cursor string) ApiIndexTeamviewerGe
 // request server-side paging
 func (r ApiIndexTeamviewerGetRequest) StartCursor(startCursor string) ApiIndexTeamviewerGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTeamviewerGetRequest) Order(order string) ApiIndexTeamviewerGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTeamviewerGetRequest) Sort(sort string) ApiIndexTeamviewerGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -156827,6 +165576,12 @@ func (a *IndicesAPIService) IndexTeamviewerGetExecute(r ApiIndexTeamviewerGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -156980,6 +165735,8 @@ type ApiIndexTenableResearchAdvisoriesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -157022,6 +165779,18 @@ func (r ApiIndexTenableResearchAdvisoriesGetRequest) Cursor(cursor string) ApiIn
 // request server-side paging
 func (r ApiIndexTenableResearchAdvisoriesGetRequest) StartCursor(startCursor string) ApiIndexTenableResearchAdvisoriesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTenableResearchAdvisoriesGetRequest) Order(order string) ApiIndexTenableResearchAdvisoriesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTenableResearchAdvisoriesGetRequest) Sort(sort string) ApiIndexTenableResearchAdvisoriesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -157202,6 +165971,12 @@ func (a *IndicesAPIService) IndexTenableResearchAdvisoriesGetExecute(r ApiIndexT
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -157355,6 +166130,8 @@ type ApiIndexTencentGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -157397,6 +166174,18 @@ func (r ApiIndexTencentGetRequest) Cursor(cursor string) ApiIndexTencentGetReque
 // request server-side paging
 func (r ApiIndexTencentGetRequest) StartCursor(startCursor string) ApiIndexTencentGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTencentGetRequest) Order(order string) ApiIndexTencentGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTencentGetRequest) Sort(sort string) ApiIndexTencentGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -157577,6 +166366,12 @@ func (a *IndicesAPIService) IndexTencentGetExecute(r ApiIndexTencentGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -157730,6 +166525,8 @@ type ApiIndexThalesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -157772,6 +166569,18 @@ func (r ApiIndexThalesGetRequest) Cursor(cursor string) ApiIndexThalesGetRequest
 // request server-side paging
 func (r ApiIndexThalesGetRequest) StartCursor(startCursor string) ApiIndexThalesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexThalesGetRequest) Order(order string) ApiIndexThalesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexThalesGetRequest) Sort(sort string) ApiIndexThalesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -157952,6 +166761,12 @@ func (a *IndicesAPIService) IndexThalesGetExecute(r ApiIndexThalesGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -158105,6 +166920,8 @@ type ApiIndexThemissinglinkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -158147,6 +166964,18 @@ func (r ApiIndexThemissinglinkGetRequest) Cursor(cursor string) ApiIndexThemissi
 // request server-side paging
 func (r ApiIndexThemissinglinkGetRequest) StartCursor(startCursor string) ApiIndexThemissinglinkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexThemissinglinkGetRequest) Order(order string) ApiIndexThemissinglinkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexThemissinglinkGetRequest) Sort(sort string) ApiIndexThemissinglinkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -158327,6 +167156,12 @@ func (a *IndicesAPIService) IndexThemissinglinkGetExecute(r ApiIndexThemissingli
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -158480,6 +167315,8 @@ type ApiIndexThermoFisherGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -158522,6 +167359,18 @@ func (r ApiIndexThermoFisherGetRequest) Cursor(cursor string) ApiIndexThermoFish
 // request server-side paging
 func (r ApiIndexThermoFisherGetRequest) StartCursor(startCursor string) ApiIndexThermoFisherGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexThermoFisherGetRequest) Order(order string) ApiIndexThermoFisherGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexThermoFisherGetRequest) Sort(sort string) ApiIndexThermoFisherGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -158702,6 +167551,12 @@ func (a *IndicesAPIService) IndexThermoFisherGetExecute(r ApiIndexThermoFisherGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -158855,6 +167710,8 @@ type ApiIndexThreatActorsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -158897,6 +167754,18 @@ func (r ApiIndexThreatActorsGetRequest) Cursor(cursor string) ApiIndexThreatActo
 // request server-side paging
 func (r ApiIndexThreatActorsGetRequest) StartCursor(startCursor string) ApiIndexThreatActorsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexThreatActorsGetRequest) Order(order string) ApiIndexThreatActorsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexThreatActorsGetRequest) Sort(sort string) ApiIndexThreatActorsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -159077,6 +167946,12 @@ func (a *IndicesAPIService) IndexThreatActorsGetExecute(r ApiIndexThreatActorsGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -159230,6 +168105,8 @@ type ApiIndexTiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -159272,6 +168149,18 @@ func (r ApiIndexTiGetRequest) Cursor(cursor string) ApiIndexTiGetRequest {
 // request server-side paging
 func (r ApiIndexTiGetRequest) StartCursor(startCursor string) ApiIndexTiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTiGetRequest) Order(order string) ApiIndexTiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTiGetRequest) Sort(sort string) ApiIndexTiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -159452,6 +168341,12 @@ func (a *IndicesAPIService) IndexTiGetExecute(r ApiIndexTiGetRequest) (*RenderRe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -159605,6 +168500,8 @@ type ApiIndexTibcoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -159647,6 +168544,18 @@ func (r ApiIndexTibcoGetRequest) Cursor(cursor string) ApiIndexTibcoGetRequest {
 // request server-side paging
 func (r ApiIndexTibcoGetRequest) StartCursor(startCursor string) ApiIndexTibcoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTibcoGetRequest) Order(order string) ApiIndexTibcoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTibcoGetRequest) Sort(sort string) ApiIndexTibcoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -159827,6 +168736,12 @@ func (a *IndicesAPIService) IndexTibcoGetExecute(r ApiIndexTibcoGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -159980,6 +168895,8 @@ type ApiIndexTpLinkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -160022,6 +168939,18 @@ func (r ApiIndexTpLinkGetRequest) Cursor(cursor string) ApiIndexTpLinkGetRequest
 // request server-side paging
 func (r ApiIndexTpLinkGetRequest) StartCursor(startCursor string) ApiIndexTpLinkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTpLinkGetRequest) Order(order string) ApiIndexTpLinkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTpLinkGetRequest) Sort(sort string) ApiIndexTpLinkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -160202,6 +169131,12 @@ func (a *IndicesAPIService) IndexTpLinkGetExecute(r ApiIndexTpLinkGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -160355,6 +169290,8 @@ type ApiIndexTraneTechnologyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -160397,6 +169334,18 @@ func (r ApiIndexTraneTechnologyGetRequest) Cursor(cursor string) ApiIndexTraneTe
 // request server-side paging
 func (r ApiIndexTraneTechnologyGetRequest) StartCursor(startCursor string) ApiIndexTraneTechnologyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTraneTechnologyGetRequest) Order(order string) ApiIndexTraneTechnologyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTraneTechnologyGetRequest) Sort(sort string) ApiIndexTraneTechnologyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -160577,6 +169526,12 @@ func (a *IndicesAPIService) IndexTraneTechnologyGetExecute(r ApiIndexTraneTechno
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -160730,6 +169685,8 @@ type ApiIndexTrendmicroGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -160772,6 +169729,18 @@ func (r ApiIndexTrendmicroGetRequest) Cursor(cursor string) ApiIndexTrendmicroGe
 // request server-side paging
 func (r ApiIndexTrendmicroGetRequest) StartCursor(startCursor string) ApiIndexTrendmicroGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTrendmicroGetRequest) Order(order string) ApiIndexTrendmicroGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTrendmicroGetRequest) Sort(sort string) ApiIndexTrendmicroGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -160952,6 +169921,12 @@ func (a *IndicesAPIService) IndexTrendmicroGetExecute(r ApiIndexTrendmicroGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -161105,6 +170080,8 @@ type ApiIndexTrustwaveGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -161147,6 +170124,18 @@ func (r ApiIndexTrustwaveGetRequest) Cursor(cursor string) ApiIndexTrustwaveGetR
 // request server-side paging
 func (r ApiIndexTrustwaveGetRequest) StartCursor(startCursor string) ApiIndexTrustwaveGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTrustwaveGetRequest) Order(order string) ApiIndexTrustwaveGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTrustwaveGetRequest) Sort(sort string) ApiIndexTrustwaveGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -161327,6 +170316,12 @@ func (a *IndicesAPIService) IndexTrustwaveGetExecute(r ApiIndexTrustwaveGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -161480,6 +170475,8 @@ type ApiIndexTwcertGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -161522,6 +170519,18 @@ func (r ApiIndexTwcertGetRequest) Cursor(cursor string) ApiIndexTwcertGetRequest
 // request server-side paging
 func (r ApiIndexTwcertGetRequest) StartCursor(startCursor string) ApiIndexTwcertGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexTwcertGetRequest) Order(order string) ApiIndexTwcertGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexTwcertGetRequest) Sort(sort string) ApiIndexTwcertGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -161702,6 +170711,12 @@ func (a *IndicesAPIService) IndexTwcertGetExecute(r ApiIndexTwcertGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -161855,6 +170870,8 @@ type ApiIndexUbiquitiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -161897,6 +170914,18 @@ func (r ApiIndexUbiquitiGetRequest) Cursor(cursor string) ApiIndexUbiquitiGetReq
 // request server-side paging
 func (r ApiIndexUbiquitiGetRequest) StartCursor(startCursor string) ApiIndexUbiquitiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUbiquitiGetRequest) Order(order string) ApiIndexUbiquitiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUbiquitiGetRequest) Sort(sort string) ApiIndexUbiquitiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -162077,6 +171106,12 @@ func (a *IndicesAPIService) IndexUbiquitiGetExecute(r ApiIndexUbiquitiGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -162230,6 +171265,8 @@ type ApiIndexUbuntuGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -162272,6 +171309,18 @@ func (r ApiIndexUbuntuGetRequest) Cursor(cursor string) ApiIndexUbuntuGetRequest
 // request server-side paging
 func (r ApiIndexUbuntuGetRequest) StartCursor(startCursor string) ApiIndexUbuntuGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUbuntuGetRequest) Order(order string) ApiIndexUbuntuGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUbuntuGetRequest) Sort(sort string) ApiIndexUbuntuGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -162452,6 +171501,12 @@ func (a *IndicesAPIService) IndexUbuntuGetExecute(r ApiIndexUbuntuGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -162605,6 +171660,8 @@ type ApiIndexUbuntuPurlsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -162647,6 +171704,18 @@ func (r ApiIndexUbuntuPurlsGetRequest) Cursor(cursor string) ApiIndexUbuntuPurls
 // request server-side paging
 func (r ApiIndexUbuntuPurlsGetRequest) StartCursor(startCursor string) ApiIndexUbuntuPurlsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUbuntuPurlsGetRequest) Order(order string) ApiIndexUbuntuPurlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUbuntuPurlsGetRequest) Sort(sort string) ApiIndexUbuntuPurlsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -162827,6 +171896,12 @@ func (a *IndicesAPIService) IndexUbuntuPurlsGetExecute(r ApiIndexUbuntuPurlsGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -162980,6 +172055,8 @@ type ApiIndexUnifyGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -163022,6 +172099,18 @@ func (r ApiIndexUnifyGetRequest) Cursor(cursor string) ApiIndexUnifyGetRequest {
 // request server-side paging
 func (r ApiIndexUnifyGetRequest) StartCursor(startCursor string) ApiIndexUnifyGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUnifyGetRequest) Order(order string) ApiIndexUnifyGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUnifyGetRequest) Sort(sort string) ApiIndexUnifyGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -163202,6 +172291,12 @@ func (a *IndicesAPIService) IndexUnifyGetExecute(r ApiIndexUnifyGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -163355,6 +172450,8 @@ type ApiIndexUnisocGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -163397,6 +172494,18 @@ func (r ApiIndexUnisocGetRequest) Cursor(cursor string) ApiIndexUnisocGetRequest
 // request server-side paging
 func (r ApiIndexUnisocGetRequest) StartCursor(startCursor string) ApiIndexUnisocGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUnisocGetRequest) Order(order string) ApiIndexUnisocGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUnisocGetRequest) Sort(sort string) ApiIndexUnisocGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -163577,6 +172686,12 @@ func (a *IndicesAPIService) IndexUnisocGetExecute(r ApiIndexUnisocGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -163730,6 +172845,8 @@ type ApiIndexUsdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -163772,6 +172889,18 @@ func (r ApiIndexUsdGetRequest) Cursor(cursor string) ApiIndexUsdGetRequest {
 // request server-side paging
 func (r ApiIndexUsdGetRequest) StartCursor(startCursor string) ApiIndexUsdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUsdGetRequest) Order(order string) ApiIndexUsdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUsdGetRequest) Sort(sort string) ApiIndexUsdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -163952,6 +173081,12 @@ func (a *IndicesAPIService) IndexUsdGetExecute(r ApiIndexUsdGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -164105,6 +173240,8 @@ type ApiIndexUsomGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -164147,6 +173284,18 @@ func (r ApiIndexUsomGetRequest) Cursor(cursor string) ApiIndexUsomGetRequest {
 // request server-side paging
 func (r ApiIndexUsomGetRequest) StartCursor(startCursor string) ApiIndexUsomGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexUsomGetRequest) Order(order string) ApiIndexUsomGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexUsomGetRequest) Sort(sort string) ApiIndexUsomGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -164327,6 +173476,12 @@ func (a *IndicesAPIService) IndexUsomGetExecute(r ApiIndexUsomGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -164480,6 +173635,8 @@ type ApiIndexVandykeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -164522,6 +173679,18 @@ func (r ApiIndexVandykeGetRequest) Cursor(cursor string) ApiIndexVandykeGetReque
 // request server-side paging
 func (r ApiIndexVandykeGetRequest) StartCursor(startCursor string) ApiIndexVandykeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVandykeGetRequest) Order(order string) ApiIndexVandykeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVandykeGetRequest) Sort(sort string) ApiIndexVandykeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -164702,6 +173871,12 @@ func (a *IndicesAPIService) IndexVandykeGetExecute(r ApiIndexVandykeGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -164855,6 +174030,8 @@ type ApiIndexVapidlabsGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -164897,6 +174074,18 @@ func (r ApiIndexVapidlabsGetRequest) Cursor(cursor string) ApiIndexVapidlabsGetR
 // request server-side paging
 func (r ApiIndexVapidlabsGetRequest) StartCursor(startCursor string) ApiIndexVapidlabsGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVapidlabsGetRequest) Order(order string) ApiIndexVapidlabsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVapidlabsGetRequest) Sort(sort string) ApiIndexVapidlabsGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -165077,6 +174266,12 @@ func (a *IndicesAPIService) IndexVapidlabsGetExecute(r ApiIndexVapidlabsGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -165230,6 +174425,8 @@ type ApiIndexVcCpeDictionaryGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -165272,6 +174469,18 @@ func (r ApiIndexVcCpeDictionaryGetRequest) Cursor(cursor string) ApiIndexVcCpeDi
 // request server-side paging
 func (r ApiIndexVcCpeDictionaryGetRequest) StartCursor(startCursor string) ApiIndexVcCpeDictionaryGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVcCpeDictionaryGetRequest) Order(order string) ApiIndexVcCpeDictionaryGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVcCpeDictionaryGetRequest) Sort(sort string) ApiIndexVcCpeDictionaryGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -165452,6 +174661,12 @@ func (a *IndicesAPIService) IndexVcCpeDictionaryGetExecute(r ApiIndexVcCpeDictio
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -165605,6 +174820,8 @@ type ApiIndexVdeGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -165647,6 +174864,18 @@ func (r ApiIndexVdeGetRequest) Cursor(cursor string) ApiIndexVdeGetRequest {
 // request server-side paging
 func (r ApiIndexVdeGetRequest) StartCursor(startCursor string) ApiIndexVdeGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVdeGetRequest) Order(order string) ApiIndexVdeGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVdeGetRequest) Sort(sort string) ApiIndexVdeGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -165827,6 +175056,12 @@ func (a *IndicesAPIService) IndexVdeGetExecute(r ApiIndexVdeGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -165980,6 +175215,8 @@ type ApiIndexVeeamGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -166022,6 +175259,18 @@ func (r ApiIndexVeeamGetRequest) Cursor(cursor string) ApiIndexVeeamGetRequest {
 // request server-side paging
 func (r ApiIndexVeeamGetRequest) StartCursor(startCursor string) ApiIndexVeeamGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVeeamGetRequest) Order(order string) ApiIndexVeeamGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVeeamGetRequest) Sort(sort string) ApiIndexVeeamGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -166202,6 +175451,12 @@ func (a *IndicesAPIService) IndexVeeamGetExecute(r ApiIndexVeeamGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -166355,6 +175610,8 @@ type ApiIndexVeritasGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -166397,6 +175654,18 @@ func (r ApiIndexVeritasGetRequest) Cursor(cursor string) ApiIndexVeritasGetReque
 // request server-side paging
 func (r ApiIndexVeritasGetRequest) StartCursor(startCursor string) ApiIndexVeritasGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVeritasGetRequest) Order(order string) ApiIndexVeritasGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVeritasGetRequest) Sort(sort string) ApiIndexVeritasGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -166577,6 +175846,12 @@ func (a *IndicesAPIService) IndexVeritasGetExecute(r ApiIndexVeritasGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -166730,6 +176005,8 @@ type ApiIndexVirtuozzoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -166772,6 +176049,18 @@ func (r ApiIndexVirtuozzoGetRequest) Cursor(cursor string) ApiIndexVirtuozzoGetR
 // request server-side paging
 func (r ApiIndexVirtuozzoGetRequest) StartCursor(startCursor string) ApiIndexVirtuozzoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVirtuozzoGetRequest) Order(order string) ApiIndexVirtuozzoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVirtuozzoGetRequest) Sort(sort string) ApiIndexVirtuozzoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -166952,6 +176241,12 @@ func (a *IndicesAPIService) IndexVirtuozzoGetExecute(r ApiIndexVirtuozzoGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -167105,6 +176400,8 @@ type ApiIndexVlcGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -167147,6 +176444,18 @@ func (r ApiIndexVlcGetRequest) Cursor(cursor string) ApiIndexVlcGetRequest {
 // request server-side paging
 func (r ApiIndexVlcGetRequest) StartCursor(startCursor string) ApiIndexVlcGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVlcGetRequest) Order(order string) ApiIndexVlcGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVlcGetRequest) Sort(sort string) ApiIndexVlcGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -167327,6 +176636,12 @@ func (a *IndicesAPIService) IndexVlcGetExecute(r ApiIndexVlcGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -167480,6 +176795,8 @@ type ApiIndexVmwareGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -167522,6 +176839,18 @@ func (r ApiIndexVmwareGetRequest) Cursor(cursor string) ApiIndexVmwareGetRequest
 // request server-side paging
 func (r ApiIndexVmwareGetRequest) StartCursor(startCursor string) ApiIndexVmwareGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVmwareGetRequest) Order(order string) ApiIndexVmwareGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVmwareGetRequest) Sort(sort string) ApiIndexVmwareGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -167702,6 +177031,12 @@ func (a *IndicesAPIService) IndexVmwareGetExecute(r ApiIndexVmwareGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -167855,6 +177190,8 @@ type ApiIndexVoidsecGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -167897,6 +177234,18 @@ func (r ApiIndexVoidsecGetRequest) Cursor(cursor string) ApiIndexVoidsecGetReque
 // request server-side paging
 func (r ApiIndexVoidsecGetRequest) StartCursor(startCursor string) ApiIndexVoidsecGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVoidsecGetRequest) Order(order string) ApiIndexVoidsecGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVoidsecGetRequest) Sort(sort string) ApiIndexVoidsecGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -168077,6 +177426,12 @@ func (a *IndicesAPIService) IndexVoidsecGetExecute(r ApiIndexVoidsecGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -168230,6 +177585,8 @@ type ApiIndexVulncheckCanaries10dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	published *string
 	srcCountry *string
@@ -168265,6 +177622,18 @@ func (r ApiIndexVulncheckCanaries10dGetRequest) Cursor(cursor string) ApiIndexVu
 // request server-side paging
 func (r ApiIndexVulncheckCanaries10dGetRequest) StartCursor(startCursor string) ApiIndexVulncheckCanaries10dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckCanaries10dGetRequest) Order(order string) ApiIndexVulncheckCanaries10dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckCanaries10dGetRequest) Sort(sort string) ApiIndexVulncheckCanaries10dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -168403,6 +177772,12 @@ func (a *IndicesAPIService) IndexVulncheckCanaries10dGetExecute(r ApiIndexVulnch
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -168535,6 +177910,8 @@ type ApiIndexVulncheckCanaries30dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	published *string
 	srcCountry *string
@@ -168570,6 +177947,18 @@ func (r ApiIndexVulncheckCanaries30dGetRequest) Cursor(cursor string) ApiIndexVu
 // request server-side paging
 func (r ApiIndexVulncheckCanaries30dGetRequest) StartCursor(startCursor string) ApiIndexVulncheckCanaries30dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckCanaries30dGetRequest) Order(order string) ApiIndexVulncheckCanaries30dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckCanaries30dGetRequest) Sort(sort string) ApiIndexVulncheckCanaries30dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -168708,6 +178097,12 @@ func (a *IndicesAPIService) IndexVulncheckCanaries30dGetExecute(r ApiIndexVulnch
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -168840,6 +178235,8 @@ type ApiIndexVulncheckCanaries3dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	published *string
 	srcCountry *string
@@ -168875,6 +178272,18 @@ func (r ApiIndexVulncheckCanaries3dGetRequest) Cursor(cursor string) ApiIndexVul
 // request server-side paging
 func (r ApiIndexVulncheckCanaries3dGetRequest) StartCursor(startCursor string) ApiIndexVulncheckCanaries3dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckCanaries3dGetRequest) Order(order string) ApiIndexVulncheckCanaries3dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckCanaries3dGetRequest) Sort(sort string) ApiIndexVulncheckCanaries3dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -169013,6 +178422,12 @@ func (a *IndicesAPIService) IndexVulncheckCanaries3dGetExecute(r ApiIndexVulnche
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -169145,6 +178560,8 @@ type ApiIndexVulncheckCanaries90dGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	published *string
 	srcCountry *string
@@ -169180,6 +178597,18 @@ func (r ApiIndexVulncheckCanaries90dGetRequest) Cursor(cursor string) ApiIndexVu
 // request server-side paging
 func (r ApiIndexVulncheckCanaries90dGetRequest) StartCursor(startCursor string) ApiIndexVulncheckCanaries90dGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckCanaries90dGetRequest) Order(order string) ApiIndexVulncheckCanaries90dGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckCanaries90dGetRequest) Sort(sort string) ApiIndexVulncheckCanaries90dGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -169318,6 +178747,12 @@ func (a *IndicesAPIService) IndexVulncheckCanaries90dGetExecute(r ApiIndexVulnch
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -169450,6 +178885,8 @@ type ApiIndexVulncheckCanariesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	published *string
 	srcCountry *string
@@ -169485,6 +178922,18 @@ func (r ApiIndexVulncheckCanariesGetRequest) Cursor(cursor string) ApiIndexVulnc
 // request server-side paging
 func (r ApiIndexVulncheckCanariesGetRequest) StartCursor(startCursor string) ApiIndexVulncheckCanariesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckCanariesGetRequest) Order(order string) ApiIndexVulncheckCanariesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckCanariesGetRequest) Sort(sort string) ApiIndexVulncheckCanariesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -169623,6 +179072,12 @@ func (a *IndicesAPIService) IndexVulncheckCanariesGetExecute(r ApiIndexVulncheck
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -169755,6 +179210,8 @@ type ApiIndexVulncheckConfigGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -169797,6 +179254,18 @@ func (r ApiIndexVulncheckConfigGetRequest) Cursor(cursor string) ApiIndexVulnche
 // request server-side paging
 func (r ApiIndexVulncheckConfigGetRequest) StartCursor(startCursor string) ApiIndexVulncheckConfigGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckConfigGetRequest) Order(order string) ApiIndexVulncheckConfigGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckConfigGetRequest) Sort(sort string) ApiIndexVulncheckConfigGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -169977,6 +179446,12 @@ func (a *IndicesAPIService) IndexVulncheckConfigGetExecute(r ApiIndexVulncheckCo
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -170130,6 +179605,8 @@ type ApiIndexVulncheckCvelistV5GetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -170172,6 +179649,18 @@ func (r ApiIndexVulncheckCvelistV5GetRequest) Cursor(cursor string) ApiIndexVuln
 // request server-side paging
 func (r ApiIndexVulncheckCvelistV5GetRequest) StartCursor(startCursor string) ApiIndexVulncheckCvelistV5GetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckCvelistV5GetRequest) Order(order string) ApiIndexVulncheckCvelistV5GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckCvelistV5GetRequest) Sort(sort string) ApiIndexVulncheckCvelistV5GetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -170352,6 +179841,12 @@ func (a *IndicesAPIService) IndexVulncheckCvelistV5GetExecute(r ApiIndexVulnchec
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -170505,6 +180000,8 @@ type ApiIndexVulncheckGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -170547,6 +180044,18 @@ func (r ApiIndexVulncheckGetRequest) Cursor(cursor string) ApiIndexVulncheckGetR
 // request server-side paging
 func (r ApiIndexVulncheckGetRequest) StartCursor(startCursor string) ApiIndexVulncheckGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckGetRequest) Order(order string) ApiIndexVulncheckGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckGetRequest) Sort(sort string) ApiIndexVulncheckGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -170727,6 +180236,12 @@ func (a *IndicesAPIService) IndexVulncheckGetExecute(r ApiIndexVulncheckGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -170880,6 +180395,8 @@ type ApiIndexVulncheckKevGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -170922,6 +180439,18 @@ func (r ApiIndexVulncheckKevGetRequest) Cursor(cursor string) ApiIndexVulncheckK
 // request server-side paging
 func (r ApiIndexVulncheckKevGetRequest) StartCursor(startCursor string) ApiIndexVulncheckKevGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckKevGetRequest) Order(order string) ApiIndexVulncheckKevGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckKevGetRequest) Sort(sort string) ApiIndexVulncheckKevGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -171102,6 +180631,12 @@ func (a *IndicesAPIService) IndexVulncheckKevGetExecute(r ApiIndexVulncheckKevGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -171255,6 +180790,8 @@ type ApiIndexVulncheckNvd2GetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -171297,6 +180834,18 @@ func (r ApiIndexVulncheckNvd2GetRequest) Cursor(cursor string) ApiIndexVulncheck
 // request server-side paging
 func (r ApiIndexVulncheckNvd2GetRequest) StartCursor(startCursor string) ApiIndexVulncheckNvd2GetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckNvd2GetRequest) Order(order string) ApiIndexVulncheckNvd2GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckNvd2GetRequest) Sort(sort string) ApiIndexVulncheckNvd2GetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -171477,6 +181026,12 @@ func (a *IndicesAPIService) IndexVulncheckNvd2GetExecute(r ApiIndexVulncheckNvd2
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -171630,6 +181185,8 @@ type ApiIndexVulncheckNvdGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -171672,6 +181229,18 @@ func (r ApiIndexVulncheckNvdGetRequest) Cursor(cursor string) ApiIndexVulncheckN
 // request server-side paging
 func (r ApiIndexVulncheckNvdGetRequest) StartCursor(startCursor string) ApiIndexVulncheckNvdGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckNvdGetRequest) Order(order string) ApiIndexVulncheckNvdGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckNvdGetRequest) Sort(sort string) ApiIndexVulncheckNvdGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -171852,6 +181421,12 @@ func (a *IndicesAPIService) IndexVulncheckNvdGetExecute(r ApiIndexVulncheckNvdGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -172005,6 +181580,8 @@ type ApiIndexVulnerabilityAliasesGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -172047,6 +181624,18 @@ func (r ApiIndexVulnerabilityAliasesGetRequest) Cursor(cursor string) ApiIndexVu
 // request server-side paging
 func (r ApiIndexVulnerabilityAliasesGetRequest) StartCursor(startCursor string) ApiIndexVulnerabilityAliasesGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulnerabilityAliasesGetRequest) Order(order string) ApiIndexVulnerabilityAliasesGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulnerabilityAliasesGetRequest) Sort(sort string) ApiIndexVulnerabilityAliasesGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -172227,6 +181816,12 @@ func (a *IndicesAPIService) IndexVulnerabilityAliasesGetExecute(r ApiIndexVulner
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -172380,6 +181975,8 @@ type ApiIndexVulnrichmentGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -172422,6 +182019,18 @@ func (r ApiIndexVulnrichmentGetRequest) Cursor(cursor string) ApiIndexVulnrichme
 // request server-side paging
 func (r ApiIndexVulnrichmentGetRequest) StartCursor(startCursor string) ApiIndexVulnrichmentGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulnrichmentGetRequest) Order(order string) ApiIndexVulnrichmentGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulnrichmentGetRequest) Sort(sort string) ApiIndexVulnrichmentGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -172602,6 +182211,12 @@ func (a *IndicesAPIService) IndexVulnrichmentGetExecute(r ApiIndexVulnrichmentGe
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -172755,6 +182370,8 @@ type ApiIndexVyaireGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -172797,6 +182414,18 @@ func (r ApiIndexVyaireGetRequest) Cursor(cursor string) ApiIndexVyaireGetRequest
 // request server-side paging
 func (r ApiIndexVyaireGetRequest) StartCursor(startCursor string) ApiIndexVyaireGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVyaireGetRequest) Order(order string) ApiIndexVyaireGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVyaireGetRequest) Sort(sort string) ApiIndexVyaireGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -172977,6 +182606,12 @@ func (a *IndicesAPIService) IndexVyaireGetExecute(r ApiIndexVyaireGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -173130,6 +182765,8 @@ type ApiIndexWatchguardGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -173172,6 +182809,18 @@ func (r ApiIndexWatchguardGetRequest) Cursor(cursor string) ApiIndexWatchguardGe
 // request server-side paging
 func (r ApiIndexWatchguardGetRequest) StartCursor(startCursor string) ApiIndexWatchguardGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWatchguardGetRequest) Order(order string) ApiIndexWatchguardGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWatchguardGetRequest) Sort(sort string) ApiIndexWatchguardGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -173352,6 +183001,12 @@ func (a *IndicesAPIService) IndexWatchguardGetExecute(r ApiIndexWatchguardGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -173505,6 +183160,8 @@ type ApiIndexWhatsappGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -173547,6 +183204,18 @@ func (r ApiIndexWhatsappGetRequest) Cursor(cursor string) ApiIndexWhatsappGetReq
 // request server-side paging
 func (r ApiIndexWhatsappGetRequest) StartCursor(startCursor string) ApiIndexWhatsappGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWhatsappGetRequest) Order(order string) ApiIndexWhatsappGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWhatsappGetRequest) Sort(sort string) ApiIndexWhatsappGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -173727,6 +183396,12 @@ func (a *IndicesAPIService) IndexWhatsappGetExecute(r ApiIndexWhatsappGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -173880,6 +183555,8 @@ type ApiIndexWibuGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -173922,6 +183599,18 @@ func (r ApiIndexWibuGetRequest) Cursor(cursor string) ApiIndexWibuGetRequest {
 // request server-side paging
 func (r ApiIndexWibuGetRequest) StartCursor(startCursor string) ApiIndexWibuGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWibuGetRequest) Order(order string) ApiIndexWibuGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWibuGetRequest) Sort(sort string) ApiIndexWibuGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -174102,6 +183791,12 @@ func (a *IndicesAPIService) IndexWibuGetExecute(r ApiIndexWibuGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -174255,6 +183950,8 @@ type ApiIndexWiresharkGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -174297,6 +183994,18 @@ func (r ApiIndexWiresharkGetRequest) Cursor(cursor string) ApiIndexWiresharkGetR
 // request server-side paging
 func (r ApiIndexWiresharkGetRequest) StartCursor(startCursor string) ApiIndexWiresharkGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWiresharkGetRequest) Order(order string) ApiIndexWiresharkGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWiresharkGetRequest) Sort(sort string) ApiIndexWiresharkGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -174477,6 +184186,12 @@ func (a *IndicesAPIService) IndexWiresharkGetExecute(r ApiIndexWiresharkGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -174630,6 +184345,8 @@ type ApiIndexWithSecureGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -174672,6 +184389,18 @@ func (r ApiIndexWithSecureGetRequest) Cursor(cursor string) ApiIndexWithSecureGe
 // request server-side paging
 func (r ApiIndexWithSecureGetRequest) StartCursor(startCursor string) ApiIndexWithSecureGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWithSecureGetRequest) Order(order string) ApiIndexWithSecureGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWithSecureGetRequest) Sort(sort string) ApiIndexWithSecureGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -174852,6 +184581,12 @@ func (a *IndicesAPIService) IndexWithSecureGetExecute(r ApiIndexWithSecureGetReq
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -175005,6 +184740,8 @@ type ApiIndexWolfiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -175047,6 +184784,18 @@ func (r ApiIndexWolfiGetRequest) Cursor(cursor string) ApiIndexWolfiGetRequest {
 // request server-side paging
 func (r ApiIndexWolfiGetRequest) StartCursor(startCursor string) ApiIndexWolfiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWolfiGetRequest) Order(order string) ApiIndexWolfiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWolfiGetRequest) Sort(sort string) ApiIndexWolfiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -175227,6 +184976,12 @@ func (a *IndicesAPIService) IndexWolfiGetExecute(r ApiIndexWolfiGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -175380,6 +185135,8 @@ type ApiIndexWolfsslGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -175422,6 +185179,18 @@ func (r ApiIndexWolfsslGetRequest) Cursor(cursor string) ApiIndexWolfsslGetReque
 // request server-side paging
 func (r ApiIndexWolfsslGetRequest) StartCursor(startCursor string) ApiIndexWolfsslGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWolfsslGetRequest) Order(order string) ApiIndexWolfsslGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWolfsslGetRequest) Sort(sort string) ApiIndexWolfsslGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -175602,6 +185371,12 @@ func (a *IndicesAPIService) IndexWolfsslGetExecute(r ApiIndexWolfsslGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -175755,6 +185530,8 @@ type ApiIndexWordfenceGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -175797,6 +185574,18 @@ func (r ApiIndexWordfenceGetRequest) Cursor(cursor string) ApiIndexWordfenceGetR
 // request server-side paging
 func (r ApiIndexWordfenceGetRequest) StartCursor(startCursor string) ApiIndexWordfenceGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexWordfenceGetRequest) Order(order string) ApiIndexWordfenceGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexWordfenceGetRequest) Sort(sort string) ApiIndexWordfenceGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -175977,6 +185766,12 @@ func (a *IndicesAPIService) IndexWordfenceGetExecute(r ApiIndexWordfenceGetReque
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -176130,6 +185925,8 @@ type ApiIndexXenGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -176172,6 +185969,18 @@ func (r ApiIndexXenGetRequest) Cursor(cursor string) ApiIndexXenGetRequest {
 // request server-side paging
 func (r ApiIndexXenGetRequest) StartCursor(startCursor string) ApiIndexXenGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexXenGetRequest) Order(order string) ApiIndexXenGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexXenGetRequest) Sort(sort string) ApiIndexXenGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -176352,6 +186161,12 @@ func (a *IndicesAPIService) IndexXenGetExecute(r ApiIndexXenGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -176505,6 +186320,8 @@ type ApiIndexXeroxGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -176547,6 +186364,18 @@ func (r ApiIndexXeroxGetRequest) Cursor(cursor string) ApiIndexXeroxGetRequest {
 // request server-side paging
 func (r ApiIndexXeroxGetRequest) StartCursor(startCursor string) ApiIndexXeroxGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexXeroxGetRequest) Order(order string) ApiIndexXeroxGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexXeroxGetRequest) Sort(sort string) ApiIndexXeroxGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -176727,6 +186556,12 @@ func (a *IndicesAPIService) IndexXeroxGetExecute(r ApiIndexXeroxGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -176880,6 +186715,8 @@ type ApiIndexXiaomiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -176922,6 +186759,18 @@ func (r ApiIndexXiaomiGetRequest) Cursor(cursor string) ApiIndexXiaomiGetRequest
 // request server-side paging
 func (r ApiIndexXiaomiGetRequest) StartCursor(startCursor string) ApiIndexXiaomiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexXiaomiGetRequest) Order(order string) ApiIndexXiaomiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexXiaomiGetRequest) Sort(sort string) ApiIndexXiaomiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -177102,6 +186951,12 @@ func (a *IndicesAPIService) IndexXiaomiGetExecute(r ApiIndexXiaomiGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -177255,6 +187110,8 @@ type ApiIndexXylemGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -177297,6 +187154,18 @@ func (r ApiIndexXylemGetRequest) Cursor(cursor string) ApiIndexXylemGetRequest {
 // request server-side paging
 func (r ApiIndexXylemGetRequest) StartCursor(startCursor string) ApiIndexXylemGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexXylemGetRequest) Order(order string) ApiIndexXylemGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexXylemGetRequest) Sort(sort string) ApiIndexXylemGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -177477,6 +187346,12 @@ func (a *IndicesAPIService) IndexXylemGetExecute(r ApiIndexXylemGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -177630,6 +187505,8 @@ type ApiIndexYamahaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -177672,6 +187549,18 @@ func (r ApiIndexYamahaGetRequest) Cursor(cursor string) ApiIndexYamahaGetRequest
 // request server-side paging
 func (r ApiIndexYamahaGetRequest) StartCursor(startCursor string) ApiIndexYamahaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexYamahaGetRequest) Order(order string) ApiIndexYamahaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexYamahaGetRequest) Sort(sort string) ApiIndexYamahaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -177852,6 +187741,12 @@ func (a *IndicesAPIService) IndexYamahaGetExecute(r ApiIndexYamahaGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -178005,6 +187900,8 @@ type ApiIndexYokogawaGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -178047,6 +187944,18 @@ func (r ApiIndexYokogawaGetRequest) Cursor(cursor string) ApiIndexYokogawaGetReq
 // request server-side paging
 func (r ApiIndexYokogawaGetRequest) StartCursor(startCursor string) ApiIndexYokogawaGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexYokogawaGetRequest) Order(order string) ApiIndexYokogawaGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexYokogawaGetRequest) Sort(sort string) ApiIndexYokogawaGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -178227,6 +188136,12 @@ func (a *IndicesAPIService) IndexYokogawaGetExecute(r ApiIndexYokogawaGetRequest
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -178380,6 +188295,8 @@ type ApiIndexYubicoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -178422,6 +188339,18 @@ func (r ApiIndexYubicoGetRequest) Cursor(cursor string) ApiIndexYubicoGetRequest
 // request server-side paging
 func (r ApiIndexYubicoGetRequest) StartCursor(startCursor string) ApiIndexYubicoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexYubicoGetRequest) Order(order string) ApiIndexYubicoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexYubicoGetRequest) Sort(sort string) ApiIndexYubicoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -178602,6 +188531,12 @@ func (a *IndicesAPIService) IndexYubicoGetExecute(r ApiIndexYubicoGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -178755,6 +188690,8 @@ type ApiIndexZdiGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -178797,6 +188734,18 @@ func (r ApiIndexZdiGetRequest) Cursor(cursor string) ApiIndexZdiGetRequest {
 // request server-side paging
 func (r ApiIndexZdiGetRequest) StartCursor(startCursor string) ApiIndexZdiGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZdiGetRequest) Order(order string) ApiIndexZdiGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZdiGetRequest) Sort(sort string) ApiIndexZdiGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -178977,6 +188926,12 @@ func (a *IndicesAPIService) IndexZdiGetExecute(r ApiIndexZdiGetRequest) (*Render
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -179130,6 +189085,8 @@ type ApiIndexZebraGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -179172,6 +189129,18 @@ func (r ApiIndexZebraGetRequest) Cursor(cursor string) ApiIndexZebraGetRequest {
 // request server-side paging
 func (r ApiIndexZebraGetRequest) StartCursor(startCursor string) ApiIndexZebraGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZebraGetRequest) Order(order string) ApiIndexZebraGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZebraGetRequest) Sort(sort string) ApiIndexZebraGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -179352,6 +189321,12 @@ func (a *IndicesAPIService) IndexZebraGetExecute(r ApiIndexZebraGetRequest) (*Re
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -179505,6 +189480,8 @@ type ApiIndexZeroscienceGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -179547,6 +189524,18 @@ func (r ApiIndexZeroscienceGetRequest) Cursor(cursor string) ApiIndexZeroscience
 // request server-side paging
 func (r ApiIndexZeroscienceGetRequest) StartCursor(startCursor string) ApiIndexZeroscienceGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZeroscienceGetRequest) Order(order string) ApiIndexZeroscienceGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZeroscienceGetRequest) Sort(sort string) ApiIndexZeroscienceGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -179727,6 +189716,12 @@ func (a *IndicesAPIService) IndexZeroscienceGetExecute(r ApiIndexZeroscienceGetR
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -179880,6 +189875,8 @@ type ApiIndexZimbraGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -179922,6 +189919,18 @@ func (r ApiIndexZimbraGetRequest) Cursor(cursor string) ApiIndexZimbraGetRequest
 // request server-side paging
 func (r ApiIndexZimbraGetRequest) StartCursor(startCursor string) ApiIndexZimbraGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZimbraGetRequest) Order(order string) ApiIndexZimbraGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZimbraGetRequest) Sort(sort string) ApiIndexZimbraGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -180102,6 +190111,12 @@ func (a *IndicesAPIService) IndexZimbraGetExecute(r ApiIndexZimbraGetRequest) (*
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -180255,6 +190270,8 @@ type ApiIndexZoomGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -180297,6 +190314,18 @@ func (r ApiIndexZoomGetRequest) Cursor(cursor string) ApiIndexZoomGetRequest {
 // request server-side paging
 func (r ApiIndexZoomGetRequest) StartCursor(startCursor string) ApiIndexZoomGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZoomGetRequest) Order(order string) ApiIndexZoomGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZoomGetRequest) Sort(sort string) ApiIndexZoomGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -180477,6 +190506,12 @@ func (a *IndicesAPIService) IndexZoomGetExecute(r ApiIndexZoomGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -180630,6 +190665,8 @@ type ApiIndexZscalerGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -180672,6 +190709,18 @@ func (r ApiIndexZscalerGetRequest) Cursor(cursor string) ApiIndexZscalerGetReque
 // request server-side paging
 func (r ApiIndexZscalerGetRequest) StartCursor(startCursor string) ApiIndexZscalerGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZscalerGetRequest) Order(order string) ApiIndexZscalerGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZscalerGetRequest) Sort(sort string) ApiIndexZscalerGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -180852,6 +190901,12 @@ func (a *IndicesAPIService) IndexZscalerGetExecute(r ApiIndexZscalerGetRequest) 
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -181005,6 +191060,8 @@ type ApiIndexZusoGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -181047,6 +191104,18 @@ func (r ApiIndexZusoGetRequest) Cursor(cursor string) ApiIndexZusoGetRequest {
 // request server-side paging
 func (r ApiIndexZusoGetRequest) StartCursor(startCursor string) ApiIndexZusoGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZusoGetRequest) Order(order string) ApiIndexZusoGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZusoGetRequest) Sort(sort string) ApiIndexZusoGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -181227,6 +191296,12 @@ func (a *IndicesAPIService) IndexZusoGetExecute(r ApiIndexZusoGetRequest) (*Rend
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
 	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
+	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
 	}
@@ -181380,6 +191455,8 @@ type ApiIndexZyxelGetRequest struct {
 	limit *int32
 	cursor *string
 	startCursor *string
+	order *string
+	sort *string
 	cve *string
 	alias *string
 	iava *string
@@ -181422,6 +191499,18 @@ func (r ApiIndexZyxelGetRequest) Cursor(cursor string) ApiIndexZyxelGetRequest {
 // request server-side paging
 func (r ApiIndexZyxelGetRequest) StartCursor(startCursor string) ApiIndexZyxelGetRequest {
 	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexZyxelGetRequest) Order(order string) ApiIndexZyxelGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexZyxelGetRequest) Sort(sort string) ApiIndexZyxelGetRequest {
+	r.sort = &sort
 	return r
 }
 
@@ -181601,6 +191690,12 @@ func (a *IndicesAPIService) IndexZyxelGetExecute(r ApiIndexZyxelGetRequest) (*Re
 	}
 	if r.startCursor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "", "")
+	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "", "")
 	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "", "")
