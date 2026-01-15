@@ -27,6 +27,8 @@ type ParamsIndexBackup struct {
 	UrlApSoutheast2 *string `json:"url_ap-southeast-2,omitempty"`
 	UrlEuWest2 *string `json:"url_eu-west-2,omitempty"`
 	UrlExpires *string `json:"url_expires,omitempty"`
+	UrlIlCentral1 *string `json:"url_il-central-1,omitempty"`
+	UrlMeCentral1 *string `json:"url_me-central-1,omitempty"`
 	UrlMrap *string `json:"url_mrap,omitempty"`
 	UrlTtlMinutes *int32 `json:"url_ttl_minutes,omitempty"`
 	UrlUsEast1 *string `json:"url_us-east-1,omitempty"`
@@ -274,6 +276,70 @@ func (o *ParamsIndexBackup) SetUrlExpires(v string) {
 	o.UrlExpires = &v
 }
 
+// GetUrlIlCentral1 returns the UrlIlCentral1 field value if set, zero value otherwise.
+func (o *ParamsIndexBackup) GetUrlIlCentral1() string {
+	if o == nil || IsNil(o.UrlIlCentral1) {
+		var ret string
+		return ret
+	}
+	return *o.UrlIlCentral1
+}
+
+// GetUrlIlCentral1Ok returns a tuple with the UrlIlCentral1 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ParamsIndexBackup) GetUrlIlCentral1Ok() (*string, bool) {
+	if o == nil || IsNil(o.UrlIlCentral1) {
+		return nil, false
+	}
+	return o.UrlIlCentral1, true
+}
+
+// HasUrlIlCentral1 returns a boolean if a field has been set.
+func (o *ParamsIndexBackup) HasUrlIlCentral1() bool {
+	if o != nil && !IsNil(o.UrlIlCentral1) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlIlCentral1 gets a reference to the given string and assigns it to the UrlIlCentral1 field.
+func (o *ParamsIndexBackup) SetUrlIlCentral1(v string) {
+	o.UrlIlCentral1 = &v
+}
+
+// GetUrlMeCentral1 returns the UrlMeCentral1 field value if set, zero value otherwise.
+func (o *ParamsIndexBackup) GetUrlMeCentral1() string {
+	if o == nil || IsNil(o.UrlMeCentral1) {
+		var ret string
+		return ret
+	}
+	return *o.UrlMeCentral1
+}
+
+// GetUrlMeCentral1Ok returns a tuple with the UrlMeCentral1 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ParamsIndexBackup) GetUrlMeCentral1Ok() (*string, bool) {
+	if o == nil || IsNil(o.UrlMeCentral1) {
+		return nil, false
+	}
+	return o.UrlMeCentral1, true
+}
+
+// HasUrlMeCentral1 returns a boolean if a field has been set.
+func (o *ParamsIndexBackup) HasUrlMeCentral1() bool {
+	if o != nil && !IsNil(o.UrlMeCentral1) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlMeCentral1 gets a reference to the given string and assigns it to the UrlMeCentral1 field.
+func (o *ParamsIndexBackup) SetUrlMeCentral1(v string) {
+	o.UrlMeCentral1 = &v
+}
+
 // GetUrlMrap returns the UrlMrap field value if set, zero value otherwise.
 func (o *ParamsIndexBackup) GetUrlMrap() string {
 	if o == nil || IsNil(o.UrlMrap) {
@@ -432,6 +498,12 @@ func (o ParamsIndexBackup) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.UrlExpires) {
 		toSerialize["url_expires"] = o.UrlExpires
+	}
+	if !IsNil(o.UrlIlCentral1) {
+		toSerialize["url_il-central-1"] = o.UrlIlCentral1
+	}
+	if !IsNil(o.UrlMeCentral1) {
+		toSerialize["url_me-central-1"] = o.UrlMeCentral1
 	}
 	if !IsNil(o.UrlMrap) {
 		toSerialize["url_mrap"] = o.UrlMrap
