@@ -85147,6 +85147,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         title: title
         url: url
       properties:
@@ -85159,6 +85160,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -91023,9 +91026,11 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         affectedProducts: affectedProducts
         link: link
         description: description
+        id: id
         title: title
         cvss: cvss
       properties:
@@ -91041,11 +91046,15 @@ components:
           type: string
         description:
           type: string
+        id:
+          type: string
         link:
           type: string
         recommendedAction:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
       type: object
     advisory.DistroPackage:
@@ -92126,6 +92135,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         fixed: fixed
         title: title
         affected: affected
@@ -92144,6 +92154,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -104198,6 +104210,7 @@ components:
         references:
         - references
         - references
+        updated_at: updated_at
         affects:
         - affects
         - affects
@@ -104224,6 +104237,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -105375,6 +105390,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         vde:
         - vde
         - vde
@@ -105392,6 +105408,8 @@ components:
         date_added:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -116073,6 +116091,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         title: title
         url: url
       properties:
@@ -116085,6 +116104,8 @@ components:
         summary:
           type: string
         title:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -125421,6 +125442,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           title: title
           url: url
         - summary: summary
@@ -125428,6 +125450,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           title: title
           url: url
         _meta:
@@ -133821,9 +133844,11 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           affectedProducts: affectedProducts
           link: link
           description: description
+          id: id
           title: title
           cvss: cvss
         - recommendedAction: recommendedAction
@@ -133831,9 +133856,11 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           affectedProducts: affectedProducts
           link: link
           description: description
+          id: id
           title: title
           cvss: cvss
         _meta:
@@ -135698,6 +135725,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           fixed: fixed
           title: title
           affected: affected
@@ -135707,6 +135735,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           fixed: fixed
           title: title
           affected: affected
@@ -150422,6 +150451,7 @@ components:
           references:
           - references
           - references
+          updated_at: updated_at
           affects:
           - affects
           - affects
@@ -150436,6 +150466,7 @@ components:
           references:
           - references
           - references
+          updated_at: updated_at
           affects:
           - affects
           - affects
@@ -152126,6 +152157,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vde:
           - vde
           - vde
@@ -152138,6 +152170,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vde:
           - vde
           - vde
@@ -167149,6 +167182,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           title: title
           url: url
         - summary: summary
@@ -167156,6 +167190,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           title: title
           url: url
         _meta:
