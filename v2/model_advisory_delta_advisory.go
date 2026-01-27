@@ -25,9 +25,11 @@ type AdvisoryDeltaAdvisory struct {
 	Cvss *string `json:"cvss,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Description *string `json:"description,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Link *string `json:"link,omitempty"`
 	RecommendedAction *string `json:"recommendedAction,omitempty"`
 	Title *string `json:"title,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 // NewAdvisoryDeltaAdvisory instantiates a new AdvisoryDeltaAdvisory object
@@ -207,6 +209,38 @@ func (o *AdvisoryDeltaAdvisory) SetDescription(v string) {
 	o.Description = &v
 }
 
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *AdvisoryDeltaAdvisory) GetId() string {
+	if o == nil || IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
+}
+
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryDeltaAdvisory) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
+}
+
+// HasId returns a boolean if a field has been set.
+func (o *AdvisoryDeltaAdvisory) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
+		return true
+	}
+
+	return false
+}
+
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *AdvisoryDeltaAdvisory) SetId(v string) {
+	o.Id = &v
+}
+
 // GetLink returns the Link field value if set, zero value otherwise.
 func (o *AdvisoryDeltaAdvisory) GetLink() string {
 	if o == nil || IsNil(o.Link) {
@@ -303,6 +337,38 @@ func (o *AdvisoryDeltaAdvisory) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryDeltaAdvisory) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryDeltaAdvisory) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryDeltaAdvisory) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryDeltaAdvisory) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 func (o AdvisoryDeltaAdvisory) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -328,6 +394,9 @@ func (o AdvisoryDeltaAdvisory) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
 	if !IsNil(o.Link) {
 		toSerialize["link"] = o.Link
 	}
@@ -336,6 +405,9 @@ func (o AdvisoryDeltaAdvisory) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	return toSerialize, nil
 }
