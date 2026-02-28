@@ -1,9 +1,10 @@
-# AdvisoryGrafana
+# AdvisoryMicrosoftCSAF
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Csaf** | Pointer to [**AdvisoryCSAF**](AdvisoryCSAF.md) |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
@@ -12,145 +13,170 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewAdvisoryGrafana
+### NewAdvisoryMicrosoftCSAF
 
-`func NewAdvisoryGrafana() *AdvisoryGrafana`
+`func NewAdvisoryMicrosoftCSAF() *AdvisoryMicrosoftCSAF`
 
-NewAdvisoryGrafana instantiates a new AdvisoryGrafana object
+NewAdvisoryMicrosoftCSAF instantiates a new AdvisoryMicrosoftCSAF object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewAdvisoryGrafanaWithDefaults
+### NewAdvisoryMicrosoftCSAFWithDefaults
 
-`func NewAdvisoryGrafanaWithDefaults() *AdvisoryGrafana`
+`func NewAdvisoryMicrosoftCSAFWithDefaults() *AdvisoryMicrosoftCSAF`
 
-NewAdvisoryGrafanaWithDefaults instantiates a new AdvisoryGrafana object
+NewAdvisoryMicrosoftCSAFWithDefaults instantiates a new AdvisoryMicrosoftCSAF object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetCsaf
+
+`func (o *AdvisoryMicrosoftCSAF) GetCsaf() AdvisoryCSAF`
+
+GetCsaf returns the Csaf field if non-nil, zero value otherwise.
+
+### GetCsafOk
+
+`func (o *AdvisoryMicrosoftCSAF) GetCsafOk() (*AdvisoryCSAF, bool)`
+
+GetCsafOk returns a tuple with the Csaf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCsaf
+
+`func (o *AdvisoryMicrosoftCSAF) SetCsaf(v AdvisoryCSAF)`
+
+SetCsaf sets Csaf field to given value.
+
+### HasCsaf
+
+`func (o *AdvisoryMicrosoftCSAF) HasCsaf() bool`
+
+HasCsaf returns a boolean if a field has been set.
+
 ### GetCve
 
-`func (o *AdvisoryGrafana) GetCve() []string`
+`func (o *AdvisoryMicrosoftCSAF) GetCve() []string`
 
 GetCve returns the Cve field if non-nil, zero value otherwise.
 
 ### GetCveOk
 
-`func (o *AdvisoryGrafana) GetCveOk() (*[]string, bool)`
+`func (o *AdvisoryMicrosoftCSAF) GetCveOk() (*[]string, bool)`
 
 GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCve
 
-`func (o *AdvisoryGrafana) SetCve(v []string)`
+`func (o *AdvisoryMicrosoftCSAF) SetCve(v []string)`
 
 SetCve sets Cve field to given value.
 
 ### HasCve
 
-`func (o *AdvisoryGrafana) HasCve() bool`
+`func (o *AdvisoryMicrosoftCSAF) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 
-`func (o *AdvisoryGrafana) GetDateAdded() string`
+`func (o *AdvisoryMicrosoftCSAF) GetDateAdded() string`
 
 GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
 
 ### GetDateAddedOk
 
-`func (o *AdvisoryGrafana) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisoryMicrosoftCSAF) GetDateAddedOk() (*string, bool)`
 
 GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateAdded
 
-`func (o *AdvisoryGrafana) SetDateAdded(v string)`
+`func (o *AdvisoryMicrosoftCSAF) SetDateAdded(v string)`
 
 SetDateAdded sets DateAdded field to given value.
 
 ### HasDateAdded
 
-`func (o *AdvisoryGrafana) HasDateAdded() bool`
+`func (o *AdvisoryMicrosoftCSAF) HasDateAdded() bool`
 
 HasDateAdded returns a boolean if a field has been set.
 
 ### GetTitle
 
-`func (o *AdvisoryGrafana) GetTitle() string`
+`func (o *AdvisoryMicrosoftCSAF) GetTitle() string`
 
 GetTitle returns the Title field if non-nil, zero value otherwise.
 
 ### GetTitleOk
 
-`func (o *AdvisoryGrafana) GetTitleOk() (*string, bool)`
+`func (o *AdvisoryMicrosoftCSAF) GetTitleOk() (*string, bool)`
 
 GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTitle
 
-`func (o *AdvisoryGrafana) SetTitle(v string)`
+`func (o *AdvisoryMicrosoftCSAF) SetTitle(v string)`
 
 SetTitle sets Title field to given value.
 
 ### HasTitle
 
-`func (o *AdvisoryGrafana) HasTitle() bool`
+`func (o *AdvisoryMicrosoftCSAF) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 
-`func (o *AdvisoryGrafana) GetUpdatedAt() string`
+`func (o *AdvisoryMicrosoftCSAF) GetUpdatedAt() string`
 
 GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
 ### GetUpdatedAtOk
 
-`func (o *AdvisoryGrafana) GetUpdatedAtOk() (*string, bool)`
+`func (o *AdvisoryMicrosoftCSAF) GetUpdatedAtOk() (*string, bool)`
 
 GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdatedAt
 
-`func (o *AdvisoryGrafana) SetUpdatedAt(v string)`
+`func (o *AdvisoryMicrosoftCSAF) SetUpdatedAt(v string)`
 
 SetUpdatedAt sets UpdatedAt field to given value.
 
 ### HasUpdatedAt
 
-`func (o *AdvisoryGrafana) HasUpdatedAt() bool`
+`func (o *AdvisoryMicrosoftCSAF) HasUpdatedAt() bool`
 
 HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
-`func (o *AdvisoryGrafana) GetUrl() string`
+`func (o *AdvisoryMicrosoftCSAF) GetUrl() string`
 
 GetUrl returns the Url field if non-nil, zero value otherwise.
 
 ### GetUrlOk
 
-`func (o *AdvisoryGrafana) GetUrlOk() (*string, bool)`
+`func (o *AdvisoryMicrosoftCSAF) GetUrlOk() (*string, bool)`
 
 GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUrl
 
-`func (o *AdvisoryGrafana) SetUrl(v string)`
+`func (o *AdvisoryMicrosoftCSAF) SetUrl(v string)`
 
 SetUrl sets Url field to given value.
 
 ### HasUrl
 
-`func (o *AdvisoryGrafana) HasUrl() bool`
+`func (o *AdvisoryMicrosoftCSAF) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
 
