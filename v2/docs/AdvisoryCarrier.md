@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -154,6 +155,31 @@ SetSummary sets Summary field to given value.
 `func (o *AdvisoryCarrier) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryCarrier) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryCarrier) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryCarrier) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryCarrier) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

@@ -15,38 +15,70 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvisoryFileZilla type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvisoryFileZilla{}
+// checks if the AdvisoryMicrosoftCSAF type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryMicrosoftCSAF{}
 
-// AdvisoryFileZilla struct for AdvisoryFileZilla
-type AdvisoryFileZilla struct {
+// AdvisoryMicrosoftCSAF struct for AdvisoryMicrosoftCSAF
+type AdvisoryMicrosoftCSAF struct {
+	Csaf *AdvisoryCSAF `json:"csaf,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Summary *string `json:"summary,omitempty"`
 	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewAdvisoryFileZilla instantiates a new AdvisoryFileZilla object
+// NewAdvisoryMicrosoftCSAF instantiates a new AdvisoryMicrosoftCSAF object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAdvisoryFileZilla() *AdvisoryFileZilla {
-	this := AdvisoryFileZilla{}
+func NewAdvisoryMicrosoftCSAF() *AdvisoryMicrosoftCSAF {
+	this := AdvisoryMicrosoftCSAF{}
 	return &this
 }
 
-// NewAdvisoryFileZillaWithDefaults instantiates a new AdvisoryFileZilla object
+// NewAdvisoryMicrosoftCSAFWithDefaults instantiates a new AdvisoryMicrosoftCSAF object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewAdvisoryFileZillaWithDefaults() *AdvisoryFileZilla {
-	this := AdvisoryFileZilla{}
+func NewAdvisoryMicrosoftCSAFWithDefaults() *AdvisoryMicrosoftCSAF {
+	this := AdvisoryMicrosoftCSAF{}
 	return &this
+}
+
+// GetCsaf returns the Csaf field value if set, zero value otherwise.
+func (o *AdvisoryMicrosoftCSAF) GetCsaf() AdvisoryCSAF {
+	if o == nil || IsNil(o.Csaf) {
+		var ret AdvisoryCSAF
+		return ret
+	}
+	return *o.Csaf
+}
+
+// GetCsafOk returns a tuple with the Csaf field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMicrosoftCSAF) GetCsafOk() (*AdvisoryCSAF, bool) {
+	if o == nil || IsNil(o.Csaf) {
+		return nil, false
+	}
+	return o.Csaf, true
+}
+
+// HasCsaf returns a boolean if a field has been set.
+func (o *AdvisoryMicrosoftCSAF) HasCsaf() bool {
+	if o != nil && !IsNil(o.Csaf) {
+		return true
+	}
+
+	return false
+}
+
+// SetCsaf gets a reference to the given AdvisoryCSAF and assigns it to the Csaf field.
+func (o *AdvisoryMicrosoftCSAF) SetCsaf(v AdvisoryCSAF) {
+	o.Csaf = &v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryFileZilla) GetCve() []string {
+func (o *AdvisoryMicrosoftCSAF) GetCve() []string {
 	if o == nil || IsNil(o.Cve) {
 		var ret []string
 		return ret
@@ -56,7 +88,7 @@ func (o *AdvisoryFileZilla) GetCve() []string {
 
 // GetCveOk returns a tuple with the Cve field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryFileZilla) GetCveOk() ([]string, bool) {
+func (o *AdvisoryMicrosoftCSAF) GetCveOk() ([]string, bool) {
 	if o == nil || IsNil(o.Cve) {
 		return nil, false
 	}
@@ -64,7 +96,7 @@ func (o *AdvisoryFileZilla) GetCveOk() ([]string, bool) {
 }
 
 // HasCve returns a boolean if a field has been set.
-func (o *AdvisoryFileZilla) HasCve() bool {
+func (o *AdvisoryMicrosoftCSAF) HasCve() bool {
 	if o != nil && !IsNil(o.Cve) {
 		return true
 	}
@@ -73,12 +105,12 @@ func (o *AdvisoryFileZilla) HasCve() bool {
 }
 
 // SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryFileZilla) SetCve(v []string) {
+func (o *AdvisoryMicrosoftCSAF) SetCve(v []string) {
 	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryFileZilla) GetDateAdded() string {
+func (o *AdvisoryMicrosoftCSAF) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
 		var ret string
 		return ret
@@ -88,7 +120,7 @@ func (o *AdvisoryFileZilla) GetDateAdded() string {
 
 // GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryFileZilla) GetDateAddedOk() (*string, bool) {
+func (o *AdvisoryMicrosoftCSAF) GetDateAddedOk() (*string, bool) {
 	if o == nil || IsNil(o.DateAdded) {
 		return nil, false
 	}
@@ -96,7 +128,7 @@ func (o *AdvisoryFileZilla) GetDateAddedOk() (*string, bool) {
 }
 
 // HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryFileZilla) HasDateAdded() bool {
+func (o *AdvisoryMicrosoftCSAF) HasDateAdded() bool {
 	if o != nil && !IsNil(o.DateAdded) {
 		return true
 	}
@@ -105,44 +137,12 @@ func (o *AdvisoryFileZilla) HasDateAdded() bool {
 }
 
 // SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryFileZilla) SetDateAdded(v string) {
+func (o *AdvisoryMicrosoftCSAF) SetDateAdded(v string) {
 	o.DateAdded = &v
 }
 
-// GetSummary returns the Summary field value if set, zero value otherwise.
-func (o *AdvisoryFileZilla) GetSummary() string {
-	if o == nil || IsNil(o.Summary) {
-		var ret string
-		return ret
-	}
-	return *o.Summary
-}
-
-// GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryFileZilla) GetSummaryOk() (*string, bool) {
-	if o == nil || IsNil(o.Summary) {
-		return nil, false
-	}
-	return o.Summary, true
-}
-
-// HasSummary returns a boolean if a field has been set.
-func (o *AdvisoryFileZilla) HasSummary() bool {
-	if o != nil && !IsNil(o.Summary) {
-		return true
-	}
-
-	return false
-}
-
-// SetSummary gets a reference to the given string and assigns it to the Summary field.
-func (o *AdvisoryFileZilla) SetSummary(v string) {
-	o.Summary = &v
-}
-
 // GetTitle returns the Title field value if set, zero value otherwise.
-func (o *AdvisoryFileZilla) GetTitle() string {
+func (o *AdvisoryMicrosoftCSAF) GetTitle() string {
 	if o == nil || IsNil(o.Title) {
 		var ret string
 		return ret
@@ -152,7 +152,7 @@ func (o *AdvisoryFileZilla) GetTitle() string {
 
 // GetTitleOk returns a tuple with the Title field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryFileZilla) GetTitleOk() (*string, bool) {
+func (o *AdvisoryMicrosoftCSAF) GetTitleOk() (*string, bool) {
 	if o == nil || IsNil(o.Title) {
 		return nil, false
 	}
@@ -160,7 +160,7 @@ func (o *AdvisoryFileZilla) GetTitleOk() (*string, bool) {
 }
 
 // HasTitle returns a boolean if a field has been set.
-func (o *AdvisoryFileZilla) HasTitle() bool {
+func (o *AdvisoryMicrosoftCSAF) HasTitle() bool {
 	if o != nil && !IsNil(o.Title) {
 		return true
 	}
@@ -169,12 +169,12 @@ func (o *AdvisoryFileZilla) HasTitle() bool {
 }
 
 // SetTitle gets a reference to the given string and assigns it to the Title field.
-func (o *AdvisoryFileZilla) SetTitle(v string) {
+func (o *AdvisoryMicrosoftCSAF) SetTitle(v string) {
 	o.Title = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryFileZilla) GetUpdatedAt() string {
+func (o *AdvisoryMicrosoftCSAF) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -184,7 +184,7 @@ func (o *AdvisoryFileZilla) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryFileZilla) GetUpdatedAtOk() (*string, bool) {
+func (o *AdvisoryMicrosoftCSAF) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -192,7 +192,7 @@ func (o *AdvisoryFileZilla) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryFileZilla) HasUpdatedAt() bool {
+func (o *AdvisoryMicrosoftCSAF) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -201,12 +201,12 @@ func (o *AdvisoryFileZilla) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryFileZilla) SetUpdatedAt(v string) {
+func (o *AdvisoryMicrosoftCSAF) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryFileZilla) GetUrl() string {
+func (o *AdvisoryMicrosoftCSAF) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -216,7 +216,7 @@ func (o *AdvisoryFileZilla) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryFileZilla) GetUrlOk() (*string, bool) {
+func (o *AdvisoryMicrosoftCSAF) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -224,7 +224,7 @@ func (o *AdvisoryFileZilla) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryFileZilla) HasUrl() bool {
+func (o *AdvisoryMicrosoftCSAF) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -233,11 +233,11 @@ func (o *AdvisoryFileZilla) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryFileZilla) SetUrl(v string) {
+func (o *AdvisoryMicrosoftCSAF) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o AdvisoryFileZilla) MarshalJSON() ([]byte, error) {
+func (o AdvisoryMicrosoftCSAF) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -245,16 +245,16 @@ func (o AdvisoryFileZilla) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o AdvisoryFileZilla) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryMicrosoftCSAF) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Csaf) {
+		toSerialize["csaf"] = o.Csaf
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
-	}
-	if !IsNil(o.Summary) {
-		toSerialize["summary"] = o.Summary
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
@@ -268,38 +268,38 @@ func (o AdvisoryFileZilla) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableAdvisoryFileZilla struct {
-	value *AdvisoryFileZilla
+type NullableAdvisoryMicrosoftCSAF struct {
+	value *AdvisoryMicrosoftCSAF
 	isSet bool
 }
 
-func (v NullableAdvisoryFileZilla) Get() *AdvisoryFileZilla {
+func (v NullableAdvisoryMicrosoftCSAF) Get() *AdvisoryMicrosoftCSAF {
 	return v.value
 }
 
-func (v *NullableAdvisoryFileZilla) Set(val *AdvisoryFileZilla) {
+func (v *NullableAdvisoryMicrosoftCSAF) Set(val *AdvisoryMicrosoftCSAF) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableAdvisoryFileZilla) IsSet() bool {
+func (v NullableAdvisoryMicrosoftCSAF) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableAdvisoryFileZilla) Unset() {
+func (v *NullableAdvisoryMicrosoftCSAF) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableAdvisoryFileZilla(val *AdvisoryFileZilla) *NullableAdvisoryFileZilla {
-	return &NullableAdvisoryFileZilla{value: val, isSet: true}
+func NewNullableAdvisoryMicrosoftCSAF(val *AdvisoryMicrosoftCSAF) *NullableAdvisoryMicrosoftCSAF {
+	return &NullableAdvisoryMicrosoftCSAF{value: val, isSet: true}
 }
 
-func (v NullableAdvisoryFileZilla) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryMicrosoftCSAF) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableAdvisoryFileZilla) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryMicrosoftCSAF) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

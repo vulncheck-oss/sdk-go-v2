@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -102,6 +103,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryMikrotik) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryMikrotik) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryMikrotik) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryMikrotik) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryMikrotik) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 
