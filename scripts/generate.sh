@@ -69,11 +69,10 @@ check_git_status() {
 
 get_openapi_spec() {
   # use the combined output
-  #curl --silent --fail \
-  #  --url https://api.vulncheck.com/v3/openapi \
-  #  --header "Accept: application/json" \
-  #  >"$OPENAPI_JSON"
-  cat /Users/dgrossman/v3_combined.json >"$OPENAPI_JSON"
+  curl --silent --fail \
+   --url https://api.vulncheck.com/openapi/combined \
+   --header "Accept: application/json" \
+   >"$OPENAPI_JSON"
 }
 
 clean_openapi_spec() {
