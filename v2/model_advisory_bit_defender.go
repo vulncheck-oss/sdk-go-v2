@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryBitDefender type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryBitDefender{}
 
-// AdvisoryBitDefender struct for AdvisoryBitDefender
+// AdvisoryBitDefender advisory.BitDefender
 type AdvisoryBitDefender struct {
 	AdditionalDetails *string `json:"additional_details,omitempty"`
 	AffectedProducts *string `json:"affected_products,omitempty"`

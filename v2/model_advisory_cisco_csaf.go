@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,9 +18,9 @@ import (
 // checks if the AdvisoryCiscoCSAF type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCiscoCSAF{}
 
-// AdvisoryCiscoCSAF struct for AdvisoryCiscoCSAF
+// AdvisoryCiscoCSAF advisory.CiscoCSAF
 type AdvisoryCiscoCSAF struct {
-	Csaf map[string]interface{} `json:"csaf,omitempty"`
+	Csaf interface{} `json:"csaf,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Identifier *string `json:"identifier,omitempty"`
@@ -46,10 +46,10 @@ func NewAdvisoryCiscoCSAFWithDefaults() *AdvisoryCiscoCSAF {
 	return &this
 }
 
-// GetCsaf returns the Csaf field value if set, zero value otherwise.
-func (o *AdvisoryCiscoCSAF) GetCsaf() map[string]interface{} {
-	if o == nil || IsNil(o.Csaf) {
-		var ret map[string]interface{}
+// GetCsaf returns the Csaf field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryCiscoCSAF) GetCsaf() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.Csaf
@@ -57,11 +57,12 @@ func (o *AdvisoryCiscoCSAF) GetCsaf() map[string]interface{} {
 
 // GetCsafOk returns a tuple with the Csaf field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCiscoCSAF) GetCsafOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryCiscoCSAF) GetCsafOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.Csaf) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.Csaf, true
+	return &o.Csaf, true
 }
 
 // HasCsaf returns a boolean if a field has been set.
@@ -73,8 +74,8 @@ func (o *AdvisoryCiscoCSAF) HasCsaf() bool {
 	return false
 }
 
-// SetCsaf gets a reference to the given map[string]interface{} and assigns it to the Csaf field.
-func (o *AdvisoryCiscoCSAF) SetCsaf(v map[string]interface{}) {
+// SetCsaf gets a reference to the given interface{} and assigns it to the Csaf field.
+func (o *AdvisoryCiscoCSAF) SetCsaf(v interface{}) {
 	o.Csaf = v
 }
 
@@ -280,7 +281,7 @@ func (o AdvisoryCiscoCSAF) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryCiscoCSAF) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Csaf) {
+	if o.Csaf != nil {
 		toSerialize["csaf"] = o.Csaf
 	}
 	if !IsNil(o.Cve) {

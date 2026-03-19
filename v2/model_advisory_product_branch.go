@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryProductBranch type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryProductBranch{}
 
-// AdvisoryProductBranch struct for AdvisoryProductBranch
+// AdvisoryProductBranch ProductTree contains information about the product tree (branches only).  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#322-product-tree-property
 type AdvisoryProductBranch struct {
 	Branches []AdvisoryProductBranch `json:"branches,omitempty"`
 	Category *string `json:"category,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisorySiemensProduct type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisorySiemensProduct{}
 
-// AdvisorySiemensProduct struct for AdvisorySiemensProduct
+// AdvisorySiemensProduct advisory.SiemensProduct
 type AdvisorySiemensProduct struct {
 	Name *string `json:"name,omitempty"`
 	ProductId *string `json:"product_id,omitempty"`

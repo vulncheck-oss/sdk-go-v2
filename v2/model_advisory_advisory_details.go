@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,13 +18,15 @@ import (
 // checks if the AdvisoryAdvisoryDetails type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAdvisoryDetails{}
 
-// AdvisoryAdvisoryDetails struct for AdvisoryAdvisoryDetails
+// AdvisoryAdvisoryDetails advisory.AdvisoryDetails
 type AdvisoryAdvisoryDetails struct {
 	Bugzilla *AdvisoryBugzilla `json:"bugzilla,omitempty"`
 	Cve *AdvisoryOvalCVE `json:"cve,omitempty"`
-	Issued *AdvisoryIssued `json:"issued,omitempty"`
+	// advisory.Issued
+	Issued map[string]interface{} `json:"issued,omitempty"`
 	Severity *string `json:"severity,omitempty"`
-	Updated *AdvisoryUpdated `json:"updated,omitempty"`
+	// advisory.Updated
+	Updated map[string]interface{} `json:"updated,omitempty"`
 }
 
 // NewAdvisoryAdvisoryDetails instantiates a new AdvisoryAdvisoryDetails object
@@ -109,19 +111,19 @@ func (o *AdvisoryAdvisoryDetails) SetCve(v AdvisoryOvalCVE) {
 }
 
 // GetIssued returns the Issued field value if set, zero value otherwise.
-func (o *AdvisoryAdvisoryDetails) GetIssued() AdvisoryIssued {
+func (o *AdvisoryAdvisoryDetails) GetIssued() map[string]interface{} {
 	if o == nil || IsNil(o.Issued) {
-		var ret AdvisoryIssued
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Issued
+	return o.Issued
 }
 
 // GetIssuedOk returns a tuple with the Issued field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAdvisoryDetails) GetIssuedOk() (*AdvisoryIssued, bool) {
+func (o *AdvisoryAdvisoryDetails) GetIssuedOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Issued) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Issued, true
 }
@@ -135,9 +137,9 @@ func (o *AdvisoryAdvisoryDetails) HasIssued() bool {
 	return false
 }
 
-// SetIssued gets a reference to the given AdvisoryIssued and assigns it to the Issued field.
-func (o *AdvisoryAdvisoryDetails) SetIssued(v AdvisoryIssued) {
-	o.Issued = &v
+// SetIssued gets a reference to the given map[string]interface{} and assigns it to the Issued field.
+func (o *AdvisoryAdvisoryDetails) SetIssued(v map[string]interface{}) {
+	o.Issued = v
 }
 
 // GetSeverity returns the Severity field value if set, zero value otherwise.
@@ -173,19 +175,19 @@ func (o *AdvisoryAdvisoryDetails) SetSeverity(v string) {
 }
 
 // GetUpdated returns the Updated field value if set, zero value otherwise.
-func (o *AdvisoryAdvisoryDetails) GetUpdated() AdvisoryUpdated {
+func (o *AdvisoryAdvisoryDetails) GetUpdated() map[string]interface{} {
 	if o == nil || IsNil(o.Updated) {
-		var ret AdvisoryUpdated
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Updated
+	return o.Updated
 }
 
 // GetUpdatedOk returns a tuple with the Updated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAdvisoryDetails) GetUpdatedOk() (*AdvisoryUpdated, bool) {
+func (o *AdvisoryAdvisoryDetails) GetUpdatedOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Updated) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Updated, true
 }
@@ -199,9 +201,9 @@ func (o *AdvisoryAdvisoryDetails) HasUpdated() bool {
 	return false
 }
 
-// SetUpdated gets a reference to the given AdvisoryUpdated and assigns it to the Updated field.
-func (o *AdvisoryAdvisoryDetails) SetUpdated(v AdvisoryUpdated) {
-	o.Updated = &v
+// SetUpdated gets a reference to the given map[string]interface{} and assigns it to the Updated field.
+func (o *AdvisoryAdvisoryDetails) SetUpdated(v map[string]interface{}) {
+	o.Updated = v
 }
 
 func (o AdvisoryAdvisoryDetails) MarshalJSON() ([]byte, error) {

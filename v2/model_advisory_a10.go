@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryA10 type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryA10{}
 
-// AdvisoryA10 struct for AdvisoryA10
+// AdvisoryA10 advisory.A10
 type AdvisoryA10 struct {
 	Affected []string `json:"affected,omitempty"`
 	Cve []string `json:"cve,omitempty"`

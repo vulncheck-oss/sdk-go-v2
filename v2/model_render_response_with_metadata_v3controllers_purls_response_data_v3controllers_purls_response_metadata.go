@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata{}
 
-// RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata struct for RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata
+// RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata render.ResponseWithMetadata-v3controllers_PurlsResponseData-v3controllers_PurlsResponseMetadata
 type RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *V3controllersPurlsResponseMetadata `json:"_meta,omitempty"`

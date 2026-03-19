@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,13 +18,13 @@ import (
 // checks if the AdvisoryLolAdvs type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryLolAdvs{}
 
-// AdvisoryLolAdvs struct for AdvisoryLolAdvs
+// AdvisoryLolAdvs advisory.LolAdvs
 type AdvisoryLolAdvs struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Description *string `json:"description,omitempty"`
 	Id *string `json:"id,omitempty"`
-	LolJson map[string]map[string]interface{} `json:"lol_json,omitempty"`
+	LolJson map[string]interface{} `json:"lol_json,omitempty"`
 	MitreId *string `json:"mitre_id,omitempty"`
 	References []string `json:"references,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
@@ -177,9 +177,9 @@ func (o *AdvisoryLolAdvs) SetId(v string) {
 }
 
 // GetLolJson returns the LolJson field value if set, zero value otherwise.
-func (o *AdvisoryLolAdvs) GetLolJson() map[string]map[string]interface{} {
+func (o *AdvisoryLolAdvs) GetLolJson() map[string]interface{} {
 	if o == nil || IsNil(o.LolJson) {
-		var ret map[string]map[string]interface{}
+		var ret map[string]interface{}
 		return ret
 	}
 	return o.LolJson
@@ -187,9 +187,9 @@ func (o *AdvisoryLolAdvs) GetLolJson() map[string]map[string]interface{} {
 
 // GetLolJsonOk returns a tuple with the LolJson field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryLolAdvs) GetLolJsonOk() (map[string]map[string]interface{}, bool) {
+func (o *AdvisoryLolAdvs) GetLolJsonOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.LolJson) {
-		return map[string]map[string]interface{}{}, false
+		return map[string]interface{}{}, false
 	}
 	return o.LolJson, true
 }
@@ -203,8 +203,8 @@ func (o *AdvisoryLolAdvs) HasLolJson() bool {
 	return false
 }
 
-// SetLolJson gets a reference to the given map[string]map[string]interface{} and assigns it to the LolJson field.
-func (o *AdvisoryLolAdvs) SetLolJson(v map[string]map[string]interface{}) {
+// SetLolJson gets a reference to the given map[string]interface{} and assigns it to the LolJson field.
+func (o *AdvisoryLolAdvs) SetLolJson(v map[string]interface{}) {
 	o.LolJson = v
 }
 

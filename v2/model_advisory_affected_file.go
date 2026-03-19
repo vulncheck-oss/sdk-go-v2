@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAffectedFile type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAffectedFile{}
 
-// AdvisoryAffectedFile struct for AdvisoryAffectedFile
+// AdvisoryAffectedFile advisory.AffectedFile
 type AdvisoryAffectedFile struct {
 	FileLastModified *string `json:"file_last_modified,omitempty"`
 	FileName *string `json:"file_name,omitempty"`

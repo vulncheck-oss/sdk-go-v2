@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCiscoKnownGoodValue type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCiscoKnownGoodValue{}
 
-// AdvisoryCiscoKnownGoodValue struct for AdvisoryCiscoKnownGoodValue
+// AdvisoryCiscoKnownGoodValue advisory.CiscoKnownGoodValue
 type AdvisoryCiscoKnownGoodValue struct {
 	BivCategory *string `json:"biv_category,omitempty"`
 	BivHash *string `json:"biv_hash,omitempty"`

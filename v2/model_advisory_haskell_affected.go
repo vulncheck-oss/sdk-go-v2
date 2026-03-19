@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryHaskellAffected type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryHaskellAffected{}
 
-// AdvisoryHaskellAffected struct for AdvisoryHaskellAffected
+// AdvisoryHaskellAffected advisory.HaskellAffected
 type AdvisoryHaskellAffected struct {
 	AffectedConstraint *string `json:"affected_constraint,omitempty"`
 	AffectedVersions []AdvisoryHaskellVersion `json:"affected_versions,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiCVE type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiCVE{}
 
-// ApiCVE struct for ApiCVE
+// ApiCVE api.CVE
 type ApiCVE struct {
 	CVEDataMeta *ApiCVEDataMeta `json:"CVE_data_meta,omitempty"`
 	DataFormat *string `json:"data_format,omitempty"`

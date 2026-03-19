@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryThreatActorWithExternalObjects type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryThreatActorWithExternalObjects{}
 
-// AdvisoryThreatActorWithExternalObjects struct for AdvisoryThreatActorWithExternalObjects
+// AdvisoryThreatActorWithExternalObjects advisory.ThreatActorWithExternalObjects
 type AdvisoryThreatActorWithExternalObjects struct {
 	AssociatedCapecs []AdvisoryCapec `json:"associated_capecs,omitempty"`
 	AssociatedCwes []AdvisoryCweData `json:"associated_cwes,omitempty"`

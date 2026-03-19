@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DatabaseSpecific** | Pointer to **map[string]interface{}** | The meaning of the values within the object is entirely defined by the database | [optional] 
-**EcosystemSpecific** | Pointer to **map[string]interface{}** | The meaning of the values within the object is entirely defined by the ecosystem | [optional] 
+**DatabaseSpecific** | Pointer to **interface{}** |  | [optional] 
+**EcosystemSpecific** | Pointer to **interface{}** |  | [optional] 
 **Package** | Pointer to [**AdvisoryOSVPackage**](AdvisoryOSVPackage.md) |  | [optional] 
 **Ranges** | Pointer to [**[]AdvisoryRange**](AdvisoryRange.md) |  | [optional] 
 **Severity** | Pointer to [**[]AdvisorySeverity**](AdvisorySeverity.md) |  | [optional] 
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDatabaseSpecific
 
-`func (o *AdvisoryAffected) GetDatabaseSpecific() map[string]interface{}`
+`func (o *AdvisoryAffected) GetDatabaseSpecific() interface{}`
 
 GetDatabaseSpecific returns the DatabaseSpecific field if non-nil, zero value otherwise.
 
 ### GetDatabaseSpecificOk
 
-`func (o *AdvisoryAffected) GetDatabaseSpecificOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryAffected) GetDatabaseSpecificOk() (*interface{}, bool)`
 
 GetDatabaseSpecificOk returns a tuple with the DatabaseSpecific field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDatabaseSpecific
 
-`func (o *AdvisoryAffected) SetDatabaseSpecific(v map[string]interface{})`
+`func (o *AdvisoryAffected) SetDatabaseSpecific(v interface{})`
 
 SetDatabaseSpecific sets DatabaseSpecific field to given value.
 
@@ -55,22 +55,32 @@ SetDatabaseSpecific sets DatabaseSpecific field to given value.
 
 HasDatabaseSpecific returns a boolean if a field has been set.
 
+### SetDatabaseSpecificNil
+
+`func (o *AdvisoryAffected) SetDatabaseSpecificNil(b bool)`
+
+ SetDatabaseSpecificNil sets the value for DatabaseSpecific to be an explicit nil
+
+### UnsetDatabaseSpecific
+`func (o *AdvisoryAffected) UnsetDatabaseSpecific()`
+
+UnsetDatabaseSpecific ensures that no value is present for DatabaseSpecific, not even an explicit nil
 ### GetEcosystemSpecific
 
-`func (o *AdvisoryAffected) GetEcosystemSpecific() map[string]interface{}`
+`func (o *AdvisoryAffected) GetEcosystemSpecific() interface{}`
 
 GetEcosystemSpecific returns the EcosystemSpecific field if non-nil, zero value otherwise.
 
 ### GetEcosystemSpecificOk
 
-`func (o *AdvisoryAffected) GetEcosystemSpecificOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryAffected) GetEcosystemSpecificOk() (*interface{}, bool)`
 
 GetEcosystemSpecificOk returns a tuple with the EcosystemSpecific field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEcosystemSpecific
 
-`func (o *AdvisoryAffected) SetEcosystemSpecific(v map[string]interface{})`
+`func (o *AdvisoryAffected) SetEcosystemSpecific(v interface{})`
 
 SetEcosystemSpecific sets EcosystemSpecific field to given value.
 
@@ -80,6 +90,16 @@ SetEcosystemSpecific sets EcosystemSpecific field to given value.
 
 HasEcosystemSpecific returns a boolean if a field has been set.
 
+### SetEcosystemSpecificNil
+
+`func (o *AdvisoryAffected) SetEcosystemSpecificNil(b bool)`
+
+ SetEcosystemSpecificNil sets the value for EcosystemSpecific to be an explicit nil
+
+### UnsetEcosystemSpecific
+`func (o *AdvisoryAffected) UnsetEcosystemSpecific()`
+
+UnsetEcosystemSpecific ensures that no value is present for EcosystemSpecific, not even an explicit nil
 ### GetPackage
 
 `func (o *AdvisoryAffected) GetPackage() AdvisoryOSVPackage`

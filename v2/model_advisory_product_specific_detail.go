@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryProductSpecificDetail type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryProductSpecificDetail{}
 
-// AdvisoryProductSpecificDetail struct for AdvisoryProductSpecificDetail
+// AdvisoryProductSpecificDetail advisory.ProductSpecificDetail
 type AdvisoryProductSpecificDetail struct {
 	ID *string `json:"ID,omitempty"`
 	DisplayValue *string `json:"display_value,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryNVD20CVECPEMatch type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryNVD20CVECPEMatch{}
 
-// AdvisoryNVD20CVECPEMatch struct for AdvisoryNVD20CVECPEMatch
+// AdvisoryNVD20CVECPEMatch advisory.NVD20CVECPEMatch
 type AdvisoryNVD20CVECPEMatch struct {
 	Criteria *string `json:"criteria,omitempty"`
 	MatchCriteriaId *string `json:"matchCriteriaId,omitempty"`

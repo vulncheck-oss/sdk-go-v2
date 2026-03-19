@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAzul type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAzul{}
 
-// AdvisoryAzul struct for AdvisoryAzul
+// AdvisoryAzul advisory.Azul
 type AdvisoryAzul struct {
 	BaseScore *string `json:"base_score,omitempty"`
 	Cve []string `json:"cve,omitempty"`

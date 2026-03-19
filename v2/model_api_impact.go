@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,11 +18,10 @@ import (
 // checks if the ApiImpact type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiImpact{}
 
-// ApiImpact struct for ApiImpact
+// ApiImpact api.Impact
 type ApiImpact struct {
 	BaseMetricV2 *ApiBaseMetricV2 `json:"baseMetricV2,omitempty"`
 	BaseMetricV3 *ApiBaseMetricV3 `json:"baseMetricV3,omitempty"`
-	// this isn't called baseMetric, because it can contain other metrics -- typically supplemental metrics
 	MetricV40 *AdvisoryCVSSV40 `json:"metricV40,omitempty"`
 }
 

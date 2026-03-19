@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryFoxitAffected type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryFoxitAffected{}
 
-// AdvisoryFoxitAffected struct for AdvisoryFoxitAffected
+// AdvisoryFoxitAffected advisory.FoxitAffected
 type AdvisoryFoxitAffected struct {
 	Product *string `json:"product,omitempty"`
 	Version *string `json:"version,omitempty"`

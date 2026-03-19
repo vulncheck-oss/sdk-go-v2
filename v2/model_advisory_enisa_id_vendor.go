@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryEnisaIDVendor type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryEnisaIDVendor{}
 
-// AdvisoryEnisaIDVendor struct for AdvisoryEnisaIDVendor
+// AdvisoryEnisaIDVendor advisory.EnisaIDVendor
 type AdvisoryEnisaIDVendor struct {
 	Id *string `json:"id,omitempty"`
 	VendorName *string `json:"vendor_name,omitempty"`

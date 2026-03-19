@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryRockyPackage type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryRockyPackage{}
 
-// AdvisoryRockyPackage struct for AdvisoryRockyPackage
+// AdvisoryRockyPackage advisory.RockyPackage
 type AdvisoryRockyPackage struct {
 	Distro *string `json:"distro,omitempty"`
 	Name *string `json:"name,omitempty"`

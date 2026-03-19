@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataArrayAdvisoryWordfencePaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryWordfencePaginatePagination{}
 
-// RenderResponseWithMetadataArrayAdvisoryWordfencePaginatePagination struct for RenderResponseWithMetadataArrayAdvisoryWordfencePaginatePagination
+// RenderResponseWithMetadataArrayAdvisoryWordfencePaginatePagination render.ResponseWithMetadata-array_advisory_Wordfence-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryWordfencePaginatePagination struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`

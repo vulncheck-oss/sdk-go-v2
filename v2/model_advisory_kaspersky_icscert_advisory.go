@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryKasperskyICSCERTAdvisory type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryKasperskyICSCERTAdvisory{}
 
-// AdvisoryKasperskyICSCERTAdvisory struct for AdvisoryKasperskyICSCERTAdvisory
+// AdvisoryKasperskyICSCERTAdvisory advisory.KasperskyICSCERTAdvisory
 type AdvisoryKasperskyICSCERTAdvisory struct {
 	Cve []string `json:"cve,omitempty"`
 	Cwe []string `json:"cwe,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCISControl type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCISControl{}
 
-// AdvisoryCISControl struct for AdvisoryCISControl
+// AdvisoryCISControl advisory.CISControl
 type AdvisoryCISControl struct {
 	CisControlDescription *string `json:"cis_control_description,omitempty"`
 	CisControlId *string `json:"cis_control_id,omitempty"`

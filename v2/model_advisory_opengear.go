@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryOpengear type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryOpengear{}
 
-// AdvisoryOpengear struct for AdvisoryOpengear
+// AdvisoryOpengear advisory.Opengear
 type AdvisoryOpengear struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`

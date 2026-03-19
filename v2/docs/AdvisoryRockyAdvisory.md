@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **PublishedAt** | Pointer to **string** |  | [optional] 
 **RebootSuggested** | Pointer to **bool** |  | [optional] 
 **References** | Pointer to **[]string** |  | [optional] 
-**Rpms** | Pointer to [**map[string]AdvisoryRockyVersion**](AdvisoryRockyVersion.md) |  | [optional] 
+**Rpms** | Pointer to [**map[string]AdvisoryRockyVersion**](AdvisoryRockyVersion.md) | advisory.RockyRpms | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
 **ShortCode** | Pointer to **string** |  | [optional] 
 **Solution** | Pointer to **string** |  | [optional] 

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiReferencesExtended type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiReferencesExtended{}
 
-// ApiReferencesExtended struct for ApiReferencesExtended
+// ApiReferencesExtended api.ReferencesExtended
 type ApiReferencesExtended struct {
 	// ExploitData     []NormalizedExploit       `json:\"exploit_data,omitempty\"`   ThreatActorData []ThreatActorExtended     `json:\"threat_actor_data,omitempty\"`   RansomwareData  []RansomwareReferenceData `json:\"ransomware_data,omitempty\"`   AdvisoryData    []AdvisoryExtended        `json:\"advisory_data,omitempty\"`   IdentifierData  []IdentifierExtended      `json:\"identifier_data,omitempty\"`
 	ReferenceData []ApiReferenceDataExtended `json:"reference_data,omitempty"`

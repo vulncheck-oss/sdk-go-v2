@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAstra type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAstra{}
 
-// AdvisoryAstra struct for AdvisoryAstra
+// AdvisoryAstra advisory.Astra
 type AdvisoryAstra struct {
 	Bdu []string `json:"bdu,omitempty"`
 	BulletinId *string `json:"bulletin_id,omitempty"`

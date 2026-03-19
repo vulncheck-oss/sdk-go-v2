@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryHitachi type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryHitachi{}
 
-// AdvisoryHitachi struct for AdvisoryHitachi
+// AdvisoryHitachi advisory.Hitachi
 type AdvisoryHitachi struct {
 	AffectedProducts *string `json:"affectedProducts,omitempty"`
 	Cve []string `json:"cve,omitempty"`

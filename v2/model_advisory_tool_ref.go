@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryToolRef type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryToolRef{}
 
-// AdvisoryToolRef struct for AdvisoryToolRef
+// AdvisoryToolRef advisory.ToolRef
 type AdvisoryToolRef struct {
 	DateAdded *string `json:"date_added,omitempty"`
 	Url *string `json:"url,omitempty"`

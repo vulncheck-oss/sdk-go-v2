@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMitreGroupCTI type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMitreGroupCTI{}
 
-// AdvisoryMitreGroupCTI struct for AdvisoryMitreGroupCTI
+// AdvisoryMitreGroupCTI advisory.MitreGroupCTI
 type AdvisoryMitreGroupCTI struct {
 	Aliases []string `json:"aliases,omitempty"`
 	Description *string `json:"description,omitempty"`

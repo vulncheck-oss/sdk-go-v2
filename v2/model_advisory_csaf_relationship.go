@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCSAFRelationship type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCSAFRelationship{}
 
-// AdvisoryCSAFRelationship struct for AdvisoryCSAFRelationship
+// AdvisoryCSAFRelationship advisory.CSAFRelationship
 type AdvisoryCSAFRelationship struct {
 	Category *string `json:"category,omitempty"`
 	FullProductName *AdvisoryProduct `json:"full_product_name,omitempty"`

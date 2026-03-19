@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryUnisoc type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryUnisoc{}
 
-// AdvisoryUnisoc struct for AdvisoryUnisoc
+// AdvisoryUnisoc advisory.Unisoc
 type AdvisoryUnisoc struct {
 	AccessVector *string `json:"access_vector,omitempty"`
 	AffectedChipsets *string `json:"affected_chipsets,omitempty"`

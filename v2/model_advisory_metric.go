@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMetric type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMetric{}
 
-// AdvisoryMetric struct for AdvisoryMetric
+// AdvisoryMetric advisory.Metric
 type AdvisoryMetric struct {
 	CvssV20 *AdvisoryMCvssV20 `json:"cvssV2_0,omitempty"`
 	CvssV30 *AdvisoryMCvssV30 `json:"cvssV3_0,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataArrayAdvisoryMicrosoftCVRFPaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryMicrosoftCVRFPaginatePagination{}
 
-// RenderResponseWithMetadataArrayAdvisoryMicrosoftCVRFPaginatePagination struct for RenderResponseWithMetadataArrayAdvisoryMicrosoftCVRFPaginatePagination
+// RenderResponseWithMetadataArrayAdvisoryMicrosoftCVRFPaginatePagination render.ResponseWithMetadata-array_advisory_MicrosoftCVRF-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryMicrosoftCVRFPaginatePagination struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`

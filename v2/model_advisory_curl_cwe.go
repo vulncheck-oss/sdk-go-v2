@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCurlCWE type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCurlCWE{}
 
-// AdvisoryCurlCWE struct for AdvisoryCurlCWE
+// AdvisoryCurlCWE advisory.CurlCWE
 type AdvisoryCurlCWE struct {
 	Desc *string `json:"desc,omitempty"`
 	Id *string `json:"id,omitempty"`
