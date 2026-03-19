@@ -22,16 +22,16 @@ var _ MappedNullable = &AdvisoryCycle{}
 type AdvisoryCycle struct {
 	Codename *string `json:"codename,omitempty"`
 	Cycle *string `json:"cycle,omitempty"`
-	Discontinued map[string]interface{} `json:"discontinued,omitempty"`
-	Eol map[string]interface{} `json:"eol,omitempty"`
-	ExtendedSupport map[string]interface{} `json:"extendedSupport,omitempty"`
+	Discontinued interface{} `json:"discontinued,omitempty"`
+	Eol interface{} `json:"eol,omitempty"`
+	ExtendedSupport interface{} `json:"extendedSupport,omitempty"`
 	Latest *string `json:"latest,omitempty"`
 	LatestReleaseDate *string `json:"latestReleaseDate,omitempty"`
 	Link *string `json:"link,omitempty"`
-	Lts map[string]interface{} `json:"lts,omitempty"`
+	Lts interface{} `json:"lts,omitempty"`
 	ReleaseDate *string `json:"releaseDate,omitempty"`
 	ReleaseLabel *string `json:"releaseLabel,omitempty"`
-	Support map[string]interface{} `json:"support,omitempty"`
+	Support interface{} `json:"support,omitempty"`
 }
 
 // NewAdvisoryCycle instantiates a new AdvisoryCycle object
@@ -115,10 +115,10 @@ func (o *AdvisoryCycle) SetCycle(v string) {
 	o.Cycle = &v
 }
 
-// GetDiscontinued returns the Discontinued field value if set, zero value otherwise.
-func (o *AdvisoryCycle) GetDiscontinued() map[string]interface{} {
-	if o == nil || IsNil(o.Discontinued) {
-		var ret map[string]interface{}
+// GetDiscontinued returns the Discontinued field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryCycle) GetDiscontinued() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.Discontinued
@@ -126,11 +126,12 @@ func (o *AdvisoryCycle) GetDiscontinued() map[string]interface{} {
 
 // GetDiscontinuedOk returns a tuple with the Discontinued field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCycle) GetDiscontinuedOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryCycle) GetDiscontinuedOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.Discontinued) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.Discontinued, true
+	return &o.Discontinued, true
 }
 
 // HasDiscontinued returns a boolean if a field has been set.
@@ -142,15 +143,15 @@ func (o *AdvisoryCycle) HasDiscontinued() bool {
 	return false
 }
 
-// SetDiscontinued gets a reference to the given map[string]interface{} and assigns it to the Discontinued field.
-func (o *AdvisoryCycle) SetDiscontinued(v map[string]interface{}) {
+// SetDiscontinued gets a reference to the given interface{} and assigns it to the Discontinued field.
+func (o *AdvisoryCycle) SetDiscontinued(v interface{}) {
 	o.Discontinued = v
 }
 
-// GetEol returns the Eol field value if set, zero value otherwise.
-func (o *AdvisoryCycle) GetEol() map[string]interface{} {
-	if o == nil || IsNil(o.Eol) {
-		var ret map[string]interface{}
+// GetEol returns the Eol field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryCycle) GetEol() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.Eol
@@ -158,11 +159,12 @@ func (o *AdvisoryCycle) GetEol() map[string]interface{} {
 
 // GetEolOk returns a tuple with the Eol field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCycle) GetEolOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryCycle) GetEolOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.Eol) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.Eol, true
+	return &o.Eol, true
 }
 
 // HasEol returns a boolean if a field has been set.
@@ -174,15 +176,15 @@ func (o *AdvisoryCycle) HasEol() bool {
 	return false
 }
 
-// SetEol gets a reference to the given map[string]interface{} and assigns it to the Eol field.
-func (o *AdvisoryCycle) SetEol(v map[string]interface{}) {
+// SetEol gets a reference to the given interface{} and assigns it to the Eol field.
+func (o *AdvisoryCycle) SetEol(v interface{}) {
 	o.Eol = v
 }
 
-// GetExtendedSupport returns the ExtendedSupport field value if set, zero value otherwise.
-func (o *AdvisoryCycle) GetExtendedSupport() map[string]interface{} {
-	if o == nil || IsNil(o.ExtendedSupport) {
-		var ret map[string]interface{}
+// GetExtendedSupport returns the ExtendedSupport field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryCycle) GetExtendedSupport() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.ExtendedSupport
@@ -190,11 +192,12 @@ func (o *AdvisoryCycle) GetExtendedSupport() map[string]interface{} {
 
 // GetExtendedSupportOk returns a tuple with the ExtendedSupport field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCycle) GetExtendedSupportOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryCycle) GetExtendedSupportOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.ExtendedSupport) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.ExtendedSupport, true
+	return &o.ExtendedSupport, true
 }
 
 // HasExtendedSupport returns a boolean if a field has been set.
@@ -206,8 +209,8 @@ func (o *AdvisoryCycle) HasExtendedSupport() bool {
 	return false
 }
 
-// SetExtendedSupport gets a reference to the given map[string]interface{} and assigns it to the ExtendedSupport field.
-func (o *AdvisoryCycle) SetExtendedSupport(v map[string]interface{}) {
+// SetExtendedSupport gets a reference to the given interface{} and assigns it to the ExtendedSupport field.
+func (o *AdvisoryCycle) SetExtendedSupport(v interface{}) {
 	o.ExtendedSupport = v
 }
 
@@ -307,10 +310,10 @@ func (o *AdvisoryCycle) SetLink(v string) {
 	o.Link = &v
 }
 
-// GetLts returns the Lts field value if set, zero value otherwise.
-func (o *AdvisoryCycle) GetLts() map[string]interface{} {
-	if o == nil || IsNil(o.Lts) {
-		var ret map[string]interface{}
+// GetLts returns the Lts field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryCycle) GetLts() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.Lts
@@ -318,11 +321,12 @@ func (o *AdvisoryCycle) GetLts() map[string]interface{} {
 
 // GetLtsOk returns a tuple with the Lts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCycle) GetLtsOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryCycle) GetLtsOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.Lts) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.Lts, true
+	return &o.Lts, true
 }
 
 // HasLts returns a boolean if a field has been set.
@@ -334,8 +338,8 @@ func (o *AdvisoryCycle) HasLts() bool {
 	return false
 }
 
-// SetLts gets a reference to the given map[string]interface{} and assigns it to the Lts field.
-func (o *AdvisoryCycle) SetLts(v map[string]interface{}) {
+// SetLts gets a reference to the given interface{} and assigns it to the Lts field.
+func (o *AdvisoryCycle) SetLts(v interface{}) {
 	o.Lts = v
 }
 
@@ -403,10 +407,10 @@ func (o *AdvisoryCycle) SetReleaseLabel(v string) {
 	o.ReleaseLabel = &v
 }
 
-// GetSupport returns the Support field value if set, zero value otherwise.
-func (o *AdvisoryCycle) GetSupport() map[string]interface{} {
-	if o == nil || IsNil(o.Support) {
-		var ret map[string]interface{}
+// GetSupport returns the Support field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryCycle) GetSupport() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.Support
@@ -414,11 +418,12 @@ func (o *AdvisoryCycle) GetSupport() map[string]interface{} {
 
 // GetSupportOk returns a tuple with the Support field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCycle) GetSupportOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryCycle) GetSupportOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.Support) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.Support, true
+	return &o.Support, true
 }
 
 // HasSupport returns a boolean if a field has been set.
@@ -430,8 +435,8 @@ func (o *AdvisoryCycle) HasSupport() bool {
 	return false
 }
 
-// SetSupport gets a reference to the given map[string]interface{} and assigns it to the Support field.
-func (o *AdvisoryCycle) SetSupport(v map[string]interface{}) {
+// SetSupport gets a reference to the given interface{} and assigns it to the Support field.
+func (o *AdvisoryCycle) SetSupport(v interface{}) {
 	o.Support = v
 }
 
@@ -451,13 +456,13 @@ func (o AdvisoryCycle) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Cycle) {
 		toSerialize["cycle"] = o.Cycle
 	}
-	if !IsNil(o.Discontinued) {
+	if o.Discontinued != nil {
 		toSerialize["discontinued"] = o.Discontinued
 	}
-	if !IsNil(o.Eol) {
+	if o.Eol != nil {
 		toSerialize["eol"] = o.Eol
 	}
-	if !IsNil(o.ExtendedSupport) {
+	if o.ExtendedSupport != nil {
 		toSerialize["extendedSupport"] = o.ExtendedSupport
 	}
 	if !IsNil(o.Latest) {
@@ -469,7 +474,7 @@ func (o AdvisoryCycle) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Link) {
 		toSerialize["link"] = o.Link
 	}
-	if !IsNil(o.Lts) {
+	if o.Lts != nil {
 		toSerialize["lts"] = o.Lts
 	}
 	if !IsNil(o.ReleaseDate) {
@@ -478,7 +483,7 @@ func (o AdvisoryCycle) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ReleaseLabel) {
 		toSerialize["releaseLabel"] = o.ReleaseLabel
 	}
-	if !IsNil(o.Support) {
+	if o.Support != nil {
 		toSerialize["support"] = o.Support
 	}
 	return toSerialize, nil

@@ -20,8 +20,7 @@ var _ MappedNullable = &AdvisoryCwes{}
 
 // AdvisoryCwes struct for AdvisoryCwes
 type AdvisoryCwes struct {
-	Nodes []AdvisoryCWENode `json:"nodes,omitempty"`
-	TotalCount *int32 `json:"totalCount,omitempty"`
+	Nodes []map[string]interface{} `json:"nodes,omitempty"`
 }
 
 // NewAdvisoryCwes instantiates a new AdvisoryCwes object
@@ -42,9 +41,9 @@ func NewAdvisoryCwesWithDefaults() *AdvisoryCwes {
 }
 
 // GetNodes returns the Nodes field value if set, zero value otherwise.
-func (o *AdvisoryCwes) GetNodes() []AdvisoryCWENode {
+func (o *AdvisoryCwes) GetNodes() []map[string]interface{} {
 	if o == nil || IsNil(o.Nodes) {
-		var ret []AdvisoryCWENode
+		var ret []map[string]interface{}
 		return ret
 	}
 	return o.Nodes
@@ -52,7 +51,7 @@ func (o *AdvisoryCwes) GetNodes() []AdvisoryCWENode {
 
 // GetNodesOk returns a tuple with the Nodes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCwes) GetNodesOk() ([]AdvisoryCWENode, bool) {
+func (o *AdvisoryCwes) GetNodesOk() ([]map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Nodes) {
 		return nil, false
 	}
@@ -68,41 +67,9 @@ func (o *AdvisoryCwes) HasNodes() bool {
 	return false
 }
 
-// SetNodes gets a reference to the given []AdvisoryCWENode and assigns it to the Nodes field.
-func (o *AdvisoryCwes) SetNodes(v []AdvisoryCWENode) {
+// SetNodes gets a reference to the given []map[string]interface{} and assigns it to the Nodes field.
+func (o *AdvisoryCwes) SetNodes(v []map[string]interface{}) {
 	o.Nodes = v
-}
-
-// GetTotalCount returns the TotalCount field value if set, zero value otherwise.
-func (o *AdvisoryCwes) GetTotalCount() int32 {
-	if o == nil || IsNil(o.TotalCount) {
-		var ret int32
-		return ret
-	}
-	return *o.TotalCount
-}
-
-// GetTotalCountOk returns a tuple with the TotalCount field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCwes) GetTotalCountOk() (*int32, bool) {
-	if o == nil || IsNil(o.TotalCount) {
-		return nil, false
-	}
-	return o.TotalCount, true
-}
-
-// HasTotalCount returns a boolean if a field has been set.
-func (o *AdvisoryCwes) HasTotalCount() bool {
-	if o != nil && !IsNil(o.TotalCount) {
-		return true
-	}
-
-	return false
-}
-
-// SetTotalCount gets a reference to the given int32 and assigns it to the TotalCount field.
-func (o *AdvisoryCwes) SetTotalCount(v int32) {
-	o.TotalCount = &v
 }
 
 func (o AdvisoryCwes) MarshalJSON() ([]byte, error) {
@@ -117,9 +84,6 @@ func (o AdvisoryCwes) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Nodes) {
 		toSerialize["nodes"] = o.Nodes
-	}
-	if !IsNil(o.TotalCount) {
-		toSerialize["totalCount"] = o.TotalCount
 	}
 	return toSerialize, nil
 }

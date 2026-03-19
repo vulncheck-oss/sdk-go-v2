@@ -6,16 +6,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Codename** | Pointer to **string** |  | [optional] 
 **Cycle** | Pointer to **string** |  | [optional] 
-**Discontinued** | Pointer to **map[string]interface{}** |  | [optional] 
-**Eol** | Pointer to **map[string]interface{}** |  | [optional] 
-**ExtendedSupport** | Pointer to **map[string]interface{}** |  | [optional] 
+**Discontinued** | Pointer to **interface{}** |  | [optional] 
+**Eol** | Pointer to **interface{}** |  | [optional] 
+**ExtendedSupport** | Pointer to **interface{}** |  | [optional] 
 **Latest** | Pointer to **string** |  | [optional] 
 **LatestReleaseDate** | Pointer to **string** |  | [optional] 
 **Link** | Pointer to **string** |  | [optional] 
-**Lts** | Pointer to **map[string]interface{}** |  | [optional] 
+**Lts** | Pointer to **interface{}** |  | [optional] 
 **ReleaseDate** | Pointer to **string** |  | [optional] 
 **ReleaseLabel** | Pointer to **string** |  | [optional] 
-**Support** | Pointer to **map[string]interface{}** |  | [optional] 
+**Support** | Pointer to **interface{}** |  | [optional] 
 
 ## Methods
 
@@ -88,20 +88,20 @@ HasCycle returns a boolean if a field has been set.
 
 ### GetDiscontinued
 
-`func (o *AdvisoryCycle) GetDiscontinued() map[string]interface{}`
+`func (o *AdvisoryCycle) GetDiscontinued() interface{}`
 
 GetDiscontinued returns the Discontinued field if non-nil, zero value otherwise.
 
 ### GetDiscontinuedOk
 
-`func (o *AdvisoryCycle) GetDiscontinuedOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryCycle) GetDiscontinuedOk() (*interface{}, bool)`
 
 GetDiscontinuedOk returns a tuple with the Discontinued field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiscontinued
 
-`func (o *AdvisoryCycle) SetDiscontinued(v map[string]interface{})`
+`func (o *AdvisoryCycle) SetDiscontinued(v interface{})`
 
 SetDiscontinued sets Discontinued field to given value.
 
@@ -111,22 +111,32 @@ SetDiscontinued sets Discontinued field to given value.
 
 HasDiscontinued returns a boolean if a field has been set.
 
+### SetDiscontinuedNil
+
+`func (o *AdvisoryCycle) SetDiscontinuedNil(b bool)`
+
+ SetDiscontinuedNil sets the value for Discontinued to be an explicit nil
+
+### UnsetDiscontinued
+`func (o *AdvisoryCycle) UnsetDiscontinued()`
+
+UnsetDiscontinued ensures that no value is present for Discontinued, not even an explicit nil
 ### GetEol
 
-`func (o *AdvisoryCycle) GetEol() map[string]interface{}`
+`func (o *AdvisoryCycle) GetEol() interface{}`
 
 GetEol returns the Eol field if non-nil, zero value otherwise.
 
 ### GetEolOk
 
-`func (o *AdvisoryCycle) GetEolOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryCycle) GetEolOk() (*interface{}, bool)`
 
 GetEolOk returns a tuple with the Eol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEol
 
-`func (o *AdvisoryCycle) SetEol(v map[string]interface{})`
+`func (o *AdvisoryCycle) SetEol(v interface{})`
 
 SetEol sets Eol field to given value.
 
@@ -136,22 +146,32 @@ SetEol sets Eol field to given value.
 
 HasEol returns a boolean if a field has been set.
 
+### SetEolNil
+
+`func (o *AdvisoryCycle) SetEolNil(b bool)`
+
+ SetEolNil sets the value for Eol to be an explicit nil
+
+### UnsetEol
+`func (o *AdvisoryCycle) UnsetEol()`
+
+UnsetEol ensures that no value is present for Eol, not even an explicit nil
 ### GetExtendedSupport
 
-`func (o *AdvisoryCycle) GetExtendedSupport() map[string]interface{}`
+`func (o *AdvisoryCycle) GetExtendedSupport() interface{}`
 
 GetExtendedSupport returns the ExtendedSupport field if non-nil, zero value otherwise.
 
 ### GetExtendedSupportOk
 
-`func (o *AdvisoryCycle) GetExtendedSupportOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryCycle) GetExtendedSupportOk() (*interface{}, bool)`
 
 GetExtendedSupportOk returns a tuple with the ExtendedSupport field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtendedSupport
 
-`func (o *AdvisoryCycle) SetExtendedSupport(v map[string]interface{})`
+`func (o *AdvisoryCycle) SetExtendedSupport(v interface{})`
 
 SetExtendedSupport sets ExtendedSupport field to given value.
 
@@ -161,6 +181,16 @@ SetExtendedSupport sets ExtendedSupport field to given value.
 
 HasExtendedSupport returns a boolean if a field has been set.
 
+### SetExtendedSupportNil
+
+`func (o *AdvisoryCycle) SetExtendedSupportNil(b bool)`
+
+ SetExtendedSupportNil sets the value for ExtendedSupport to be an explicit nil
+
+### UnsetExtendedSupport
+`func (o *AdvisoryCycle) UnsetExtendedSupport()`
+
+UnsetExtendedSupport ensures that no value is present for ExtendedSupport, not even an explicit nil
 ### GetLatest
 
 `func (o *AdvisoryCycle) GetLatest() string`
@@ -238,20 +268,20 @@ HasLink returns a boolean if a field has been set.
 
 ### GetLts
 
-`func (o *AdvisoryCycle) GetLts() map[string]interface{}`
+`func (o *AdvisoryCycle) GetLts() interface{}`
 
 GetLts returns the Lts field if non-nil, zero value otherwise.
 
 ### GetLtsOk
 
-`func (o *AdvisoryCycle) GetLtsOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryCycle) GetLtsOk() (*interface{}, bool)`
 
 GetLtsOk returns a tuple with the Lts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLts
 
-`func (o *AdvisoryCycle) SetLts(v map[string]interface{})`
+`func (o *AdvisoryCycle) SetLts(v interface{})`
 
 SetLts sets Lts field to given value.
 
@@ -261,6 +291,16 @@ SetLts sets Lts field to given value.
 
 HasLts returns a boolean if a field has been set.
 
+### SetLtsNil
+
+`func (o *AdvisoryCycle) SetLtsNil(b bool)`
+
+ SetLtsNil sets the value for Lts to be an explicit nil
+
+### UnsetLts
+`func (o *AdvisoryCycle) UnsetLts()`
+
+UnsetLts ensures that no value is present for Lts, not even an explicit nil
 ### GetReleaseDate
 
 `func (o *AdvisoryCycle) GetReleaseDate() string`
@@ -313,20 +353,20 @@ HasReleaseLabel returns a boolean if a field has been set.
 
 ### GetSupport
 
-`func (o *AdvisoryCycle) GetSupport() map[string]interface{}`
+`func (o *AdvisoryCycle) GetSupport() interface{}`
 
 GetSupport returns the Support field if non-nil, zero value otherwise.
 
 ### GetSupportOk
 
-`func (o *AdvisoryCycle) GetSupportOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryCycle) GetSupportOk() (*interface{}, bool)`
 
 GetSupportOk returns a tuple with the Support field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSupport
 
-`func (o *AdvisoryCycle) SetSupport(v map[string]interface{})`
+`func (o *AdvisoryCycle) SetSupport(v interface{})`
 
 SetSupport sets Support field to given value.
 
@@ -336,6 +376,16 @@ SetSupport sets Support field to given value.
 
 HasSupport returns a boolean if a field has been set.
 
+### SetSupportNil
+
+`func (o *AdvisoryCycle) SetSupportNil(b bool)`
+
+ SetSupportNil sets the value for Support to be an explicit nil
+
+### UnsetSupport
+`func (o *AdvisoryCycle) UnsetSupport()`
+
+UnsetSupport ensures that no value is present for Support, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

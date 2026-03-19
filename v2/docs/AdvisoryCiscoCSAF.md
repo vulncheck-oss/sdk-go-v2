@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Csaf** | Pointer to **map[string]interface{}** |  | [optional] 
+**Csaf** | Pointer to **interface{}** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Identifier** | Pointer to **string** |  | [optional] 
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCsaf
 
-`func (o *AdvisoryCiscoCSAF) GetCsaf() map[string]interface{}`
+`func (o *AdvisoryCiscoCSAF) GetCsaf() interface{}`
 
 GetCsaf returns the Csaf field if non-nil, zero value otherwise.
 
 ### GetCsafOk
 
-`func (o *AdvisoryCiscoCSAF) GetCsafOk() (*map[string]interface{}, bool)`
+`func (o *AdvisoryCiscoCSAF) GetCsafOk() (*interface{}, bool)`
 
 GetCsafOk returns a tuple with the Csaf field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCsaf
 
-`func (o *AdvisoryCiscoCSAF) SetCsaf(v map[string]interface{})`
+`func (o *AdvisoryCiscoCSAF) SetCsaf(v interface{})`
 
 SetCsaf sets Csaf field to given value.
 
@@ -56,6 +56,16 @@ SetCsaf sets Csaf field to given value.
 
 HasCsaf returns a boolean if a field has been set.
 
+### SetCsafNil
+
+`func (o *AdvisoryCiscoCSAF) SetCsafNil(b bool)`
+
+ SetCsafNil sets the value for Csaf to be an explicit nil
+
+### UnsetCsaf
+`func (o *AdvisoryCiscoCSAF) UnsetCsaf()`
+
+UnsetCsaf ensures that no value is present for Csaf, not even an explicit nil
 ### GetCve
 
 `func (o *AdvisoryCiscoCSAF) GetCve() []string`

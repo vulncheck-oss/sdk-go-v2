@@ -25,7 +25,7 @@ type AdvisoryUpdate struct {
 	Description *string `json:"description,omitempty"`
 	// sort // key
 	Id *string `json:"id,omitempty"`
-	Issued *AdvisoryDateTime `json:"issued,omitempty"`
+	Issued map[string]interface{} `json:"issued,omitempty"`
 	OsArch *string `json:"os_arch,omitempty"`
 	OsVersion *string `json:"os_version,omitempty"`
 	Packages []AdvisoryPackage `json:"packages,omitempty"`
@@ -33,7 +33,7 @@ type AdvisoryUpdate struct {
 	Severity *string `json:"severity,omitempty"`
 	Title *string `json:"title,omitempty"`
 	Type *string `json:"type,omitempty"`
-	Updated *AdvisoryDateTime `json:"updated,omitempty"`
+	Updated map[string]interface{} `json:"updated,omitempty"`
 }
 
 // NewAdvisoryUpdate instantiates a new AdvisoryUpdate object
@@ -182,19 +182,19 @@ func (o *AdvisoryUpdate) SetId(v string) {
 }
 
 // GetIssued returns the Issued field value if set, zero value otherwise.
-func (o *AdvisoryUpdate) GetIssued() AdvisoryDateTime {
+func (o *AdvisoryUpdate) GetIssued() map[string]interface{} {
 	if o == nil || IsNil(o.Issued) {
-		var ret AdvisoryDateTime
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Issued
+	return o.Issued
 }
 
 // GetIssuedOk returns a tuple with the Issued field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryUpdate) GetIssuedOk() (*AdvisoryDateTime, bool) {
+func (o *AdvisoryUpdate) GetIssuedOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Issued) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Issued, true
 }
@@ -208,9 +208,9 @@ func (o *AdvisoryUpdate) HasIssued() bool {
 	return false
 }
 
-// SetIssued gets a reference to the given AdvisoryDateTime and assigns it to the Issued field.
-func (o *AdvisoryUpdate) SetIssued(v AdvisoryDateTime) {
-	o.Issued = &v
+// SetIssued gets a reference to the given map[string]interface{} and assigns it to the Issued field.
+func (o *AdvisoryUpdate) SetIssued(v map[string]interface{}) {
+	o.Issued = v
 }
 
 // GetOsArch returns the OsArch field value if set, zero value otherwise.
@@ -438,19 +438,19 @@ func (o *AdvisoryUpdate) SetType(v string) {
 }
 
 // GetUpdated returns the Updated field value if set, zero value otherwise.
-func (o *AdvisoryUpdate) GetUpdated() AdvisoryDateTime {
+func (o *AdvisoryUpdate) GetUpdated() map[string]interface{} {
 	if o == nil || IsNil(o.Updated) {
-		var ret AdvisoryDateTime
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Updated
+	return o.Updated
 }
 
 // GetUpdatedOk returns a tuple with the Updated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryUpdate) GetUpdatedOk() (*AdvisoryDateTime, bool) {
+func (o *AdvisoryUpdate) GetUpdatedOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Updated) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Updated, true
 }
@@ -464,9 +464,9 @@ func (o *AdvisoryUpdate) HasUpdated() bool {
 	return false
 }
 
-// SetUpdated gets a reference to the given AdvisoryDateTime and assigns it to the Updated field.
-func (o *AdvisoryUpdate) SetUpdated(v AdvisoryDateTime) {
-	o.Updated = &v
+// SetUpdated gets a reference to the given map[string]interface{} and assigns it to the Updated field.
+func (o *AdvisoryUpdate) SetUpdated(v map[string]interface{}) {
+	o.Updated = v
 }
 
 func (o AdvisoryUpdate) MarshalJSON() ([]byte, error) {

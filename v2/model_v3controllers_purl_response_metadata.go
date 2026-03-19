@@ -20,7 +20,6 @@ var _ MappedNullable = &V3controllersPurlResponseMetadata{}
 
 // V3controllersPurlResponseMetadata struct for V3controllersPurlResponseMetadata
 type V3controllersPurlResponseMetadata struct {
-	// meta-data about the purl
 	PurlStruct *PurlPackageURLJSON `json:"purl_struct,omitempty"`
 	// time of the transaction
 	Timestamp *string `json:"timestamp,omitempty"`

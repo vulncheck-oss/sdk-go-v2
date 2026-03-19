@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Bugzilla** | Pointer to [**AdvisoryBugzilla**](AdvisoryBugzilla.md) |  | [optional] 
 **Cve** | Pointer to [**AdvisoryOvalCVE**](AdvisoryOvalCVE.md) |  | [optional] 
-**Issued** | Pointer to [**AdvisoryIssued**](AdvisoryIssued.md) |  | [optional] 
+**Issued** | Pointer to **map[string]interface{}** |  | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
-**Updated** | Pointer to [**AdvisoryUpdated**](AdvisoryUpdated.md) |  | [optional] 
+**Updated** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -81,20 +81,20 @@ HasCve returns a boolean if a field has been set.
 
 ### GetIssued
 
-`func (o *AdvisoryAdvisoryDetails) GetIssued() AdvisoryIssued`
+`func (o *AdvisoryAdvisoryDetails) GetIssued() map[string]interface{}`
 
 GetIssued returns the Issued field if non-nil, zero value otherwise.
 
 ### GetIssuedOk
 
-`func (o *AdvisoryAdvisoryDetails) GetIssuedOk() (*AdvisoryIssued, bool)`
+`func (o *AdvisoryAdvisoryDetails) GetIssuedOk() (*map[string]interface{}, bool)`
 
 GetIssuedOk returns a tuple with the Issued field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIssued
 
-`func (o *AdvisoryAdvisoryDetails) SetIssued(v AdvisoryIssued)`
+`func (o *AdvisoryAdvisoryDetails) SetIssued(v map[string]interface{})`
 
 SetIssued sets Issued field to given value.
 
@@ -131,20 +131,20 @@ HasSeverity returns a boolean if a field has been set.
 
 ### GetUpdated
 
-`func (o *AdvisoryAdvisoryDetails) GetUpdated() AdvisoryUpdated`
+`func (o *AdvisoryAdvisoryDetails) GetUpdated() map[string]interface{}`
 
 GetUpdated returns the Updated field if non-nil, zero value otherwise.
 
 ### GetUpdatedOk
 
-`func (o *AdvisoryAdvisoryDetails) GetUpdatedOk() (*AdvisoryUpdated, bool)`
+`func (o *AdvisoryAdvisoryDetails) GetUpdatedOk() (*map[string]interface{}, bool)`
 
 GetUpdatedOk returns a tuple with the Updated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdated
 
-`func (o *AdvisoryAdvisoryDetails) SetUpdated(v AdvisoryUpdated)`
+`func (o *AdvisoryAdvisoryDetails) SetUpdated(v map[string]interface{})`
 
 SetUpdated sets Updated field to given value.
 

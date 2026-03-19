@@ -29,7 +29,7 @@ type AdvisoryRockyAdvisory struct {
 	PublishedAt *string `json:"publishedAt,omitempty"`
 	RebootSuggested *bool `json:"rebootSuggested,omitempty"`
 	References []string `json:"references,omitempty"`
-	Rpms *map[string]AdvisoryRockyVersion `json:"rpms,omitempty"`
+	Rpms map[string]AdvisoryRockyVersion `json:"rpms,omitempty"`
 	Severity *string `json:"severity,omitempty"`
 	ShortCode *string `json:"shortCode,omitempty"`
 	Solution *string `json:"solution,omitempty"`
@@ -349,14 +349,14 @@ func (o *AdvisoryRockyAdvisory) GetRpms() map[string]AdvisoryRockyVersion {
 		var ret map[string]AdvisoryRockyVersion
 		return ret
 	}
-	return *o.Rpms
+	return o.Rpms
 }
 
 // GetRpmsOk returns a tuple with the Rpms field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryRockyAdvisory) GetRpmsOk() (*map[string]AdvisoryRockyVersion, bool) {
+func (o *AdvisoryRockyAdvisory) GetRpmsOk() (map[string]AdvisoryRockyVersion, bool) {
 	if o == nil || IsNil(o.Rpms) {
-		return nil, false
+		return map[string]AdvisoryRockyVersion{}, false
 	}
 	return o.Rpms, true
 }
@@ -372,7 +372,7 @@ func (o *AdvisoryRockyAdvisory) HasRpms() bool {
 
 // SetRpms gets a reference to the given map[string]AdvisoryRockyVersion and assigns it to the Rpms field.
 func (o *AdvisoryRockyAdvisory) SetRpms(v map[string]AdvisoryRockyVersion) {
-	o.Rpms = &v
+	o.Rpms = v
 }
 
 // GetSeverity returns the Severity field value if set, zero value otherwise.

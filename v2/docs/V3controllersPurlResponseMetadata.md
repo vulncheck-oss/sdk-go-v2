@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PurlStruct** | Pointer to [**PurlPackageURLJSON**](PurlPackageURLJSON.md) | meta-data about the purl | [optional] 
+**PurlStruct** | Pointer to [**PurlPackageURLJSON**](PurlPackageURLJSON.md) |  | [optional] 
 **Timestamp** | Pointer to **string** | time of the transaction | [optional] 
 **TotalDocuments** | Pointer to **int32** | number of results found | [optional] 
 

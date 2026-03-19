@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCVSSV40 type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCVSSV40{}
 
-// AdvisoryCVSSV40 struct for AdvisoryCVSSV40
+// AdvisoryCVSSV40 this isn't called baseMetric, because it can contain other metrics -- typically supplemental metrics
 type AdvisoryCVSSV40 struct {
 	Automatable *string `json:"Automatable,omitempty"`
 	Recovery *string `json:"Recovery,omitempty"`

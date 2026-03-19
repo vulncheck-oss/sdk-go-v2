@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DateAdded** | Pointer to **string** |  | [optional] 
 **FileId** | Pointer to **string** | From FileAttrib or Deny | [optional] 
-**FileMetadata** | Pointer to [**AdvisoryMicrosoftFileMetadata**](AdvisoryMicrosoftFileMetadata.md) | File-level metadata | [optional] 
+**FileMetadata** | Pointer to [**AdvisoryMicrosoftFileMetadata**](AdvisoryMicrosoftFileMetadata.md) |  | [optional] 
 
 ## Methods
 

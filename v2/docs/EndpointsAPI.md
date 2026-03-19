@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
 
 ## PurlsPost
 
-> RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata PurlsPost(ctx).Purls(purls).Execute()
+> RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata PurlsPost(ctx).RequestBody(requestBody).Execute()
 
 Request vulnerabilities related to a list of PURLs
 
@@ -553,11 +553,11 @@ import (
 )
 
 func main() {
-	purls := []string{"Property_example"} // []string | PURL strings used to identify and locate software packages
+	requestBody := []string{"Property_example"} // []string | PURL strings used to identify and locate software packages
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.EndpointsAPI.PurlsPost(context.Background()).Purls(purls).Execute()
+	resp, r, err := apiClient.EndpointsAPI.PurlsPost(context.Background()).RequestBody(requestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `EndpointsAPI.PurlsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -578,7 +578,7 @@ Other parameters are passed through a pointer to a apiPurlsPostRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **purls** | **[]string** | PURL strings used to identify and locate software packages | 
+ **requestBody** | **[]string** | PURL strings used to identify and locate software packages | 
 
 ### Return type
 
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

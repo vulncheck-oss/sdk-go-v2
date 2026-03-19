@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryDocumentMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryDocumentMetadata{}
 
-// AdvisoryDocumentMetadata struct for AdvisoryDocumentMetadata
+// AdvisoryDocumentMetadata Document contains metadata about the CSAF document itself.  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321-document-property
 type AdvisoryDocumentMetadata struct {
 	Category *string `json:"category,omitempty"`
 	CsafVersion *string `json:"csaf_version,omitempty"`

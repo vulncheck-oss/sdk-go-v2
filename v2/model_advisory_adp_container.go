@@ -31,7 +31,6 @@ type AdvisoryADPContainer struct {
 	Metrics []AdvisoryMetric `json:"metrics,omitempty"`
 	// OK
 	ProblemTypes []AdvisoryMProblemTypes `json:"problemTypes,omitempty"`
-	// OK
 	ProviderMetadata *AdvisoryMProviderMetadata `json:"providerMetadata,omitempty"`
 	References []AdvisoryMReference `json:"references,omitempty"`
 	// OK
