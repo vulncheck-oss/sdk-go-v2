@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAVIDMLAdvs type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAVIDMLAdvs{}
 
-// AdvisoryAVIDMLAdvs struct for AdvisoryAVIDMLAdvs
+// AdvisoryAVIDMLAdvs advisory.AVIDMLAdvs
 type AdvisoryAVIDMLAdvs struct {
 	DateAdded *string `json:"date_added,omitempty"`
 	Description *string `json:"description,omitempty"`

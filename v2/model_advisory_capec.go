@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCapec type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCapec{}
 
-// AdvisoryCapec struct for AdvisoryCapec
+// AdvisoryCapec advisory.Capec
 type AdvisoryCapec struct {
 	CapecId *string `json:"capec_id,omitempty"`
 	CapecName *string `json:"capec_name,omitempty"`

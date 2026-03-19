@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryNodeAuthor type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryNodeAuthor{}
 
-// AdvisoryNodeAuthor struct for AdvisoryNodeAuthor
+// AdvisoryNodeAuthor advisory.NodeAuthor
 type AdvisoryNodeAuthor struct {
 	Author *string `json:"author,omitempty"`
 	Username *string `json:"username,omitempty"`

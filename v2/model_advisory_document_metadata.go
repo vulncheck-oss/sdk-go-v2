@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,10 +18,11 @@ import (
 // checks if the AdvisoryDocumentMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryDocumentMetadata{}
 
-// AdvisoryDocumentMetadata struct for AdvisoryDocumentMetadata
+// AdvisoryDocumentMetadata Document contains metadata about the CSAF document itself.  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321-document-property
 type AdvisoryDocumentMetadata struct {
 	Category *string `json:"category,omitempty"`
 	CsafVersion *string `json:"csaf_version,omitempty"`
+	// advisory.CSAFDistribution
 	Distribution map[string]interface{} `json:"distribution,omitempty"`
 	Lang *string `json:"lang,omitempty"`
 	// used by ncsc

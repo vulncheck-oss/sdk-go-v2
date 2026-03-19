@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMitreAttackTechWithRefs type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMitreAttackTechWithRefs{}
 
-// AdvisoryMitreAttackTechWithRefs struct for AdvisoryMitreAttackTechWithRefs
+// AdvisoryMitreAttackTechWithRefs advisory.MitreAttackTechWithRefs
 type AdvisoryMitreAttackTechWithRefs struct {
 	Domain *string `json:"domain,omitempty"`
 	Id *string `json:"id,omitempty"`

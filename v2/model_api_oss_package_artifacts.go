@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiOSSPackageArtifacts type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiOSSPackageArtifacts{}
 
-// ApiOSSPackageArtifacts struct for ApiOSSPackageArtifacts
+// ApiOSSPackageArtifacts api.OSSPackageArtifacts
 type ApiOSSPackageArtifacts struct {
 	Binary []ApiOSSPackageDownloadInfo `json:"binary,omitempty"`
 	Source []ApiOSSPackageDownloadInfo `json:"source,omitempty"`

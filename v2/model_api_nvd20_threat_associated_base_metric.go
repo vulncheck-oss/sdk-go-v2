@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiNVD20ThreatAssociatedBaseMetric type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiNVD20ThreatAssociatedBaseMetric{}
 
-// ApiNVD20ThreatAssociatedBaseMetric struct for ApiNVD20ThreatAssociatedBaseMetric
+// ApiNVD20ThreatAssociatedBaseMetric api.NVD20ThreatAssociatedBaseMetric
 type ApiNVD20ThreatAssociatedBaseMetric struct {
 	BaseScore *float32 `json:"baseScore,omitempty"`
 	Source *string `json:"source,omitempty"`

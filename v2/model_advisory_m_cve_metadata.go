@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMCveMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMCveMetadata{}
 
-// AdvisoryMCveMetadata struct for AdvisoryMCveMetadata
+// AdvisoryMCveMetadata advisory.MCveMetadata
 type AdvisoryMCveMetadata struct {
 	AssignerOrgId *string `json:"assignerOrgId,omitempty"`
 	AssignerShortName *string `json:"assignerShortName,omitempty"`

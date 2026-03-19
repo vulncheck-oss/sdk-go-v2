@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryKb type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryKb{}
 
-// AdvisoryKb struct for AdvisoryKb
+// AdvisoryKb advisory.Kb
 type AdvisoryKb struct {
 	KbUrl *string `json:"kb_url,omitempty"`
 	MsDateAdded *string `json:"ms_date_added,omitempty"`

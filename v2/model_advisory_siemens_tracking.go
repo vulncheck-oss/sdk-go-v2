@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisorySiemensTracking type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisorySiemensTracking{}
 
-// AdvisorySiemensTracking struct for AdvisorySiemensTracking
+// AdvisorySiemensTracking advisory.SiemensTracking
 type AdvisorySiemensTracking struct {
 	CurrentReleaseDate *string `json:"current_release_date,omitempty"`
 	Generator *AdvisorySiemensGenerator `json:"generator,omitempty"`

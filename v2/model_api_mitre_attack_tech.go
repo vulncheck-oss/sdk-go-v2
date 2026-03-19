@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiMitreAttackTech type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiMitreAttackTech{}
 
-// ApiMitreAttackTech struct for ApiMitreAttackTech
+// ApiMitreAttackTech api.MitreAttackTech
 type ApiMitreAttackTech struct {
 	D3fendmapping []ApiMitreMitigation2D3fendMapping `json:"d3fendmapping,omitempty"`
 	Detections []ApiMitreDetectionTech `json:"detections,omitempty"`

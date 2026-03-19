@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryGnuTLS type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryGnuTLS{}
 
-// AdvisoryGnuTLS struct for AdvisoryGnuTLS
+// AdvisoryGnuTLS advisory.GnuTLS
 type AdvisoryGnuTLS struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`

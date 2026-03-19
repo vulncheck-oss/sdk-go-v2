@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCweData type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCweData{}
 
-// AdvisoryCweData struct for AdvisoryCweData
+// AdvisoryCweData advisory.CweData
 type AdvisoryCweData struct {
 	Lang *string `json:"lang,omitempty"`
 	Name *string `json:"name,omitempty"`

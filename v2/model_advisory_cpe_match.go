@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCPEMatch type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCPEMatch{}
 
-// AdvisoryCPEMatch struct for AdvisoryCPEMatch
+// AdvisoryCPEMatch advisory.CPEMatch
 type AdvisoryCPEMatch struct {
 	Criteria *string `json:"criteria,omitempty"`
 	MatchCriteriaId *string `json:"matchCriteriaId,omitempty"`

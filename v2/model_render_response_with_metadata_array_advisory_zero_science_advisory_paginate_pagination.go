@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataArrayAdvisoryZeroScienceAdvisoryPaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryZeroScienceAdvisoryPaginatePagination{}
 
-// RenderResponseWithMetadataArrayAdvisoryZeroScienceAdvisoryPaginatePagination struct for RenderResponseWithMetadataArrayAdvisoryZeroScienceAdvisoryPaginatePagination
+// RenderResponseWithMetadataArrayAdvisoryZeroScienceAdvisoryPaginatePagination render.ResponseWithMetadata-array_advisory_ZeroScienceAdvisory-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryZeroScienceAdvisoryPaginatePagination struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`

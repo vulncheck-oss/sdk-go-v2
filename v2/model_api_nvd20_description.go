@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiNVD20Description type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiNVD20Description{}
 
-// ApiNVD20Description struct for ApiNVD20Description
+// ApiNVD20Description api.NVD20Description
 type ApiNVD20Description struct {
 	Lang *string `json:"lang,omitempty"`
 	Value *string `json:"value,omitempty"`

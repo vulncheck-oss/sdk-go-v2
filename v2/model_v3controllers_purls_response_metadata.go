@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the V3controllersPurlsResponseMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &V3controllersPurlsResponseMetadata{}
 
-// V3controllersPurlsResponseMetadata struct for V3controllersPurlsResponseMetadata
+// V3controllersPurlsResponseMetadata v3controllers.PurlsResponseMetadata
 type V3controllersPurlsResponseMetadata struct {
 	// time of the transaction
 	Timestamp *string `json:"timestamp,omitempty"`

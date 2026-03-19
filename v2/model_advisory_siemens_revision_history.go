@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisorySiemensRevisionHistory type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisorySiemensRevisionHistory{}
 
-// AdvisorySiemensRevisionHistory struct for AdvisorySiemensRevisionHistory
+// AdvisorySiemensRevisionHistory advisory.SiemensRevisionHistory
 type AdvisorySiemensRevisionHistory struct {
 	Date *string `json:"date,omitempty"`
 	LegacyVersion *string `json:"legacy_version,omitempty"`

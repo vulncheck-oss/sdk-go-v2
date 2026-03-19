@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryJFrog type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryJFrog{}
 
-// AdvisoryJFrog struct for AdvisoryJFrog
+// AdvisoryJFrog advisory.JFrog
 type AdvisoryJFrog struct {
 	Cpes []AdvisoryNVD20CVECPEMatch `json:"cpes,omitempty"`
 	Cve []string `json:"cve,omitempty"`

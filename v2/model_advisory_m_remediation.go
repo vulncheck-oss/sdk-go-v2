@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMRemediation type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMRemediation{}
 
-// AdvisoryMRemediation struct for AdvisoryMRemediation
+// AdvisoryMRemediation advisory.MRemediation
 type AdvisoryMRemediation struct {
 	AffectedFiles []AdvisoryAffectedFile `json:"AffectedFiles,omitempty"`
 	Date *string `json:"Date,omitempty"`

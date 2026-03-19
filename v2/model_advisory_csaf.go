@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,13 +18,11 @@ import (
 // checks if the AdvisoryCSAF type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCSAF{}
 
-// AdvisoryCSAF struct for AdvisoryCSAF
+// AdvisoryCSAF advisory.CSAF
 type AdvisoryCSAF struct {
-	// Document contains metadata about the CSAF document itself.  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321-document-property
 	Document *AdvisoryDocumentMetadata `json:"document,omitempty"`
 	// Notes holds notes associated with the whole document. https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3217-document-property---notes
 	Notes []AdvisoryCSAFNote `json:"notes,omitempty"`
-	// ProductTree contains information about the product tree (branches only).  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#322-product-tree-property
 	ProductTree *AdvisoryProductBranch `json:"product_tree,omitempty"`
 	// Vulnerabilities contains information about the vulnerabilities, (i.e. CVEs), associated threats, and product status.  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#323-vulnerabilities-property
 	Vulnerabilities []AdvisoryCSAFVulnerability `json:"vulnerabilities,omitempty"`

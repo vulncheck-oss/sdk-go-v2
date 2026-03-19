@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiClientFingerprints type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiClientFingerprints{}
 
-// ApiClientFingerprints struct for ApiClientFingerprints
+// ApiClientFingerprints api.ClientFingerprints
 type ApiClientFingerprints struct {
 	Hassh *string `json:"hassh,omitempty"`
 	Ja3 *string `json:"ja3,omitempty"`

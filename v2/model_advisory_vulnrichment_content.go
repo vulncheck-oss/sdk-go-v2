@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryVulnrichmentContent type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryVulnrichmentContent{}
 
-// AdvisoryVulnrichmentContent struct for AdvisoryVulnrichmentContent
+// AdvisoryVulnrichmentContent advisory.VulnrichmentContent
 type AdvisoryVulnrichmentContent struct {
 	Id *string `json:"id,omitempty"`
 	Options []AdvisoryVulnrichmentOption `json:"options,omitempty"`

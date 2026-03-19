@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryGHCvss type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryGHCvss{}
 
-// AdvisoryGHCvss struct for AdvisoryGHCvss
+// AdvisoryGHCvss advisory.GHCvss
 type AdvisoryGHCvss struct {
 	Score *float32 `json:"score,omitempty"`
 	VectorString *string `json:"vectorString,omitempty"`

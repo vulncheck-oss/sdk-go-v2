@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAppgate type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAppgate{}
 
-// AdvisoryAppgate struct for AdvisoryAppgate
+// AdvisoryAppgate advisory.Appgate
 type AdvisoryAppgate struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`

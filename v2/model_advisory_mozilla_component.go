@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMozillaComponent type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMozillaComponent{}
 
-// AdvisoryMozillaComponent struct for AdvisoryMozillaComponent
+// AdvisoryMozillaComponent advisory.MozillaComponent
 type AdvisoryMozillaComponent struct {
 	Bugzilla []string `json:"bugzilla,omitempty"`
 	Cve []string `json:"cve,omitempty"`

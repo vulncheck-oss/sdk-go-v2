@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMetricScenario type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMetricScenario{}
 
-// AdvisoryMetricScenario struct for AdvisoryMetricScenario
+// AdvisoryMetricScenario advisory.MetricScenario
 type AdvisoryMetricScenario struct {
 	Lang *string `json:"lang,omitempty"`
 	Value *string `json:"value,omitempty"`

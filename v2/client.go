@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -42,13 +42,15 @@ var (
 	queryDescape    = strings.NewReplacer( "%5B", "[", "%5D", "]" )
 )
 
-// APIClient manages communication with the VulnCheck API API v3.0
+// APIClient manages communication with the VulnCheck API API vlatest
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
 	common service // Reuse a single struct instead of allocating one for each service on the heap.
 
 	// API Services
+
+	AdvisoryAPI *AdvisoryAPIService
 
 	EndpointsAPI *EndpointsAPIService
 
@@ -71,6 +73,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
+	c.AdvisoryAPI = (*AdvisoryAPIService)(&c.common)
 	c.EndpointsAPI = (*EndpointsAPIService)(&c.common)
 	c.IndicesAPI = (*IndicesAPIService)(&c.common)
 

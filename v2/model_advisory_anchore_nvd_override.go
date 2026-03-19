@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAnchoreNVDOverride type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAnchoreNVDOverride{}
 
-// AdvisoryAnchoreNVDOverride struct for AdvisoryAnchoreNVDOverride
+// AdvisoryAnchoreNVDOverride advisory.AnchoreNVDOverride
 type AdvisoryAnchoreNVDOverride struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`

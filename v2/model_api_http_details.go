@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiHTTPDetails type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiHTTPDetails{}
 
-// ApiHTTPDetails struct for ApiHTTPDetails
+// ApiHTTPDetails api.HTTPDetails
 type ApiHTTPDetails struct {
 	HttpRequestBody *string `json:"http_request_body,omitempty"`
 	HttpUserAgent *string `json:"http_user_agent,omitempty"`

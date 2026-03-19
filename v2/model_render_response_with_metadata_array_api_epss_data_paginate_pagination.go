@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataArrayApiEPSSDataPaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataArrayApiEPSSDataPaginatePagination{}
 
-// RenderResponseWithMetadataArrayApiEPSSDataPaginatePagination struct for RenderResponseWithMetadataArrayApiEPSSDataPaginatePagination
+// RenderResponseWithMetadataArrayApiEPSSDataPaginatePagination render.ResponseWithMetadata-array_api_EPSSData-paginate_Pagination
 type RenderResponseWithMetadataArrayApiEPSSDataPaginatePagination struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryDassault type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryDassault{}
 
-// AdvisoryDassault struct for AdvisoryDassault
+// AdvisoryDassault advisory.Dassault
 type AdvisoryDassault struct {
 	AffectedProducts *string `json:"affected_products,omitempty"`
 	AffectedVersions *string `json:"affected_versions,omitempty"`

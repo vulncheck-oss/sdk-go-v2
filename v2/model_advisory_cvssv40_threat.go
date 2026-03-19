@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCVSSV40Threat type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCVSSV40Threat{}
 
-// AdvisoryCVSSV40Threat struct for AdvisoryCVSSV40Threat
+// AdvisoryCVSSV40Threat advisory.CVSSV40Threat
 type AdvisoryCVSSV40Threat struct {
 	BaseThreatScore *float32 `json:"baseThreatScore,omitempty"`
 	BaseThreatSeverity *string `json:"baseThreatSeverity,omitempty"`

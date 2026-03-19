@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryBDUCvss3 type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryBDUCvss3{}
 
-// AdvisoryBDUCvss3 struct for AdvisoryBDUCvss3
+// AdvisoryBDUCvss3 advisory.BDUCvss3
 type AdvisoryBDUCvss3 struct {
 	Vector *AdvisoryBDUVector `json:"vector,omitempty"`
 }

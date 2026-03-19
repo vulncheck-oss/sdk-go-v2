@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryRockyCve type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryRockyCve{}
 
-// AdvisoryRockyCve struct for AdvisoryRockyCve
+// AdvisoryRockyCve advisory.RockyCve
 type AdvisoryRockyCve struct {
 	Cvss3BaseScore *string `json:"cvss3BaseScore,omitempty"`
 	Cvss3ScoringVector *string `json:"cvss3ScoringVector,omitempty"`

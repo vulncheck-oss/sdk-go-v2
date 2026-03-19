@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryDebianCVE type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryDebianCVE{}
 
-// AdvisoryDebianCVE struct for AdvisoryDebianCVE
+// AdvisoryDebianCVE advisory.DebianCVE
 type AdvisoryDebianCVE struct {
 	Cve *string `json:"cve,omitempty"`
 	Debianbug *int32 `json:"debianbug,omitempty"`

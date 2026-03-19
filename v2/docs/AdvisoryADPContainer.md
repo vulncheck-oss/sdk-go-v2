@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Impacts** | Pointer to [**[]AdvisoryImpact**](AdvisoryImpact.md) | OK | [optional] 
 **Metrics** | Pointer to [**[]AdvisoryMetric**](AdvisoryMetric.md) | OK | [optional] 
 **ProblemTypes** | Pointer to [**[]AdvisoryMProblemTypes**](AdvisoryMProblemTypes.md) | OK | [optional] 
-**ProviderMetadata** | Pointer to [**AdvisoryMProviderMetadata**](AdvisoryMProviderMetadata.md) | OK | [optional] 
+**ProviderMetadata** | Pointer to [**AdvisoryMProviderMetadata**](AdvisoryMProviderMetadata.md) |  | [optional] 
 **References** | Pointer to [**[]AdvisoryMReference**](AdvisoryMReference.md) |  | [optional] 
 **Tags** | Pointer to **[]string** | OK | [optional] 
 **Title** | Pointer to **string** | OK | [optional] 

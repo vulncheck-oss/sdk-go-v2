@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryPyPAReference type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryPyPAReference{}
 
-// AdvisoryPyPAReference struct for AdvisoryPyPAReference
+// AdvisoryPyPAReference advisory.PyPAReference
 type AdvisoryPyPAReference struct {
 	RefsType *string `json:"refs_type,omitempty"`
 	Url *string `json:"url,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryGitlabAdvisory type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryGitlabAdvisory{}
 
-// AdvisoryGitlabAdvisory struct for AdvisoryGitlabAdvisory
+// AdvisoryGitlabAdvisory advisory.GitlabAdvisory
 type AdvisoryGitlabAdvisory struct {
 	AffectedRange *string `json:"affected_range,omitempty"`
 	AffectedVersions *string `json:"affected_versions,omitempty"`

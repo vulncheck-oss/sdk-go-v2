@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiInitialAccess type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiInitialAccess{}
 
-// ApiInitialAccess struct for ApiInitialAccess
+// ApiInitialAccess api.InitialAccess
 type ApiInitialAccess struct {
 	// Artifacts holds the set of available artifacts for this vulnerability, such as exploit, shodan queries, PCAP traces, and others.
 	Artifacts []ApiInitialAccessArtifact `json:"artifacts,omitempty"`

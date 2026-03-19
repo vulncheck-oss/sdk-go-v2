@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiCveItemsExtended type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiCveItemsExtended{}
 
-// ApiCveItemsExtended struct for ApiCveItemsExtended
+// ApiCveItemsExtended api.CveItemsExtended
 type ApiCveItemsExtended struct {
 	Timestamp *string `json:"_timestamp,omitempty"`
 	Configurations *ApiConfigurations `json:"configurations,omitempty"`
