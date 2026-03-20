@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BaseMetricV2** | Pointer to [**ApiBaseMetricV2**](ApiBaseMetricV2.md) |  | [optional] 
 **BaseMetricV3** | Pointer to [**ApiBaseMetricV3**](ApiBaseMetricV3.md) |  | [optional] 
-**MetricV40** | Pointer to [**AdvisoryCVSSV40**](AdvisoryCVSSV40.md) | this isn&#39;t called baseMetric, because it can contain other metrics -- typically supplemental metrics | [optional] 
+**MetricV40** | Pointer to [**AdvisoryCVSSV40**](AdvisoryCVSSV40.md) |  | [optional] 
 
 ## Methods
 

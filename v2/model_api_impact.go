@@ -22,7 +22,6 @@ var _ MappedNullable = &ApiImpact{}
 type ApiImpact struct {
 	BaseMetricV2 *ApiBaseMetricV2 `json:"baseMetricV2,omitempty"`
 	BaseMetricV3 *ApiBaseMetricV3 `json:"baseMetricV3,omitempty"`
-	// this isn't called baseMetric, because it can contain other metrics -- typically supplemental metrics
 	MetricV40 *AdvisoryCVSSV40 `json:"metricV40,omitempty"`
 }
 

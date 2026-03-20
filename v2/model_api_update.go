@@ -25,7 +25,7 @@ type ApiUpdate struct {
 	Description *string `json:"description,omitempty"`
 	// sort // key
 	Id *string `json:"id,omitempty"`
-	Issued *ApiDateTime `json:"issued,omitempty"`
+	Issued map[string]interface{} `json:"issued,omitempty"`
 	OsArch *string `json:"os_arch,omitempty"`
 	OsVersion *string `json:"os_version,omitempty"`
 	Packages []ApiPackage `json:"packages,omitempty"`
@@ -33,7 +33,7 @@ type ApiUpdate struct {
 	Severity *string `json:"severity,omitempty"`
 	Title *string `json:"title,omitempty"`
 	Type *string `json:"type,omitempty"`
-	Updated *ApiDateTime `json:"updated,omitempty"`
+	Updated map[string]interface{} `json:"updated,omitempty"`
 }
 
 // NewApiUpdate instantiates a new ApiUpdate object
@@ -182,19 +182,19 @@ func (o *ApiUpdate) SetId(v string) {
 }
 
 // GetIssued returns the Issued field value if set, zero value otherwise.
-func (o *ApiUpdate) GetIssued() ApiDateTime {
+func (o *ApiUpdate) GetIssued() map[string]interface{} {
 	if o == nil || IsNil(o.Issued) {
-		var ret ApiDateTime
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Issued
+	return o.Issued
 }
 
 // GetIssuedOk returns a tuple with the Issued field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiUpdate) GetIssuedOk() (*ApiDateTime, bool) {
+func (o *ApiUpdate) GetIssuedOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Issued) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Issued, true
 }
@@ -208,9 +208,9 @@ func (o *ApiUpdate) HasIssued() bool {
 	return false
 }
 
-// SetIssued gets a reference to the given ApiDateTime and assigns it to the Issued field.
-func (o *ApiUpdate) SetIssued(v ApiDateTime) {
-	o.Issued = &v
+// SetIssued gets a reference to the given map[string]interface{} and assigns it to the Issued field.
+func (o *ApiUpdate) SetIssued(v map[string]interface{}) {
+	o.Issued = v
 }
 
 // GetOsArch returns the OsArch field value if set, zero value otherwise.
@@ -438,19 +438,19 @@ func (o *ApiUpdate) SetType(v string) {
 }
 
 // GetUpdated returns the Updated field value if set, zero value otherwise.
-func (o *ApiUpdate) GetUpdated() ApiDateTime {
+func (o *ApiUpdate) GetUpdated() map[string]interface{} {
 	if o == nil || IsNil(o.Updated) {
-		var ret ApiDateTime
+		var ret map[string]interface{}
 		return ret
 	}
-	return *o.Updated
+	return o.Updated
 }
 
 // GetUpdatedOk returns a tuple with the Updated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiUpdate) GetUpdatedOk() (*ApiDateTime, bool) {
+func (o *ApiUpdate) GetUpdatedOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Updated) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Updated, true
 }
@@ -464,9 +464,9 @@ func (o *ApiUpdate) HasUpdated() bool {
 	return false
 }
 
-// SetUpdated gets a reference to the given ApiDateTime and assigns it to the Updated field.
-func (o *ApiUpdate) SetUpdated(v ApiDateTime) {
-	o.Updated = &v
+// SetUpdated gets a reference to the given map[string]interface{} and assigns it to the Updated field.
+func (o *ApiUpdate) SetUpdated(v map[string]interface{}) {
+	o.Updated = v
 }
 
 func (o ApiUpdate) MarshalJSON() ([]byte, error) {

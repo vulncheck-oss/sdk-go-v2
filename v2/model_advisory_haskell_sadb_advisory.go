@@ -27,7 +27,7 @@ type AdvisoryHaskellSADBAdvisory struct {
 	Cwes []int32 `json:"cwes,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Keywords []string `json:"keywords,omitempty"`
-	References *map[string][]string `json:"references,omitempty"`
+	References map[string][]string `json:"references,omitempty"`
 	RelatedVulns []string `json:"related_vulns,omitempty"`
 }
 
@@ -278,14 +278,14 @@ func (o *AdvisoryHaskellSADBAdvisory) GetReferences() map[string][]string {
 		var ret map[string][]string
 		return ret
 	}
-	return *o.References
+	return o.References
 }
 
 // GetReferencesOk returns a tuple with the References field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryHaskellSADBAdvisory) GetReferencesOk() (*map[string][]string, bool) {
+func (o *AdvisoryHaskellSADBAdvisory) GetReferencesOk() (map[string][]string, bool) {
 	if o == nil || IsNil(o.References) {
-		return nil, false
+		return map[string][]string{}, false
 	}
 	return o.References, true
 }
@@ -301,7 +301,7 @@ func (o *AdvisoryHaskellSADBAdvisory) HasReferences() bool {
 
 // SetReferences gets a reference to the given map[string][]string and assigns it to the References field.
 func (o *AdvisoryHaskellSADBAdvisory) SetReferences(v map[string][]string) {
-	o.References = &v
+	o.References = v
 }
 
 // GetRelatedVulns returns the RelatedVulns field value if set, zero value otherwise.

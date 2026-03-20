@@ -24,7 +24,6 @@ type PurlBatchVulnFinding struct {
 	Cves []string `json:"cves,omitempty"`
 	// the purl, ex. hex/coherence@0.1.2
 	Purl *string `json:"purl,omitempty"`
-	// meta-data about the purl
 	PurlStruct *PurlPackageURLJSON `json:"purl_struct,omitempty"`
 	ResearchAttributes *ApiOSSPackageResearchAttributes `json:"research_attributes,omitempty"`
 	// list of associated vulnerabilities

@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMProviderMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMProviderMetadata{}
 
-// AdvisoryMProviderMetadata struct for AdvisoryMProviderMetadata
+// AdvisoryMProviderMetadata OK
 type AdvisoryMProviderMetadata struct {
 	// FIXME: flip to time
 	DateUpdated *string `json:"dateUpdated,omitempty"`

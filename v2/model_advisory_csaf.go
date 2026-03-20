@@ -20,11 +20,9 @@ var _ MappedNullable = &AdvisoryCSAF{}
 
 // AdvisoryCSAF struct for AdvisoryCSAF
 type AdvisoryCSAF struct {
-	// Document contains metadata about the CSAF document itself.  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321-document-property
 	Document *AdvisoryDocumentMetadata `json:"document,omitempty"`
 	// Notes holds notes associated with the whole document. https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3217-document-property---notes
 	Notes []AdvisoryCSAFNote `json:"notes,omitempty"`
-	// ProductTree contains information about the product tree (branches only).  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#322-product-tree-property
 	ProductTree *AdvisoryProductBranch `json:"product_tree,omitempty"`
 	// Vulnerabilities contains information about the vulnerabilities, (i.e. CVEs), associated threats, and product status.  https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#323-vulnerabilities-property
 	Vulnerabilities []AdvisoryCSAFVulnerability `json:"vulnerabilities,omitempty"`

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** | sort // key | [optional] 
-**Issued** | Pointer to [**AdvisoryDateTime**](AdvisoryDateTime.md) |  | [optional] 
+**Issued** | Pointer to **map[string]interface{}** |  | [optional] 
 **OsArch** | Pointer to **string** |  | [optional] 
 **OsVersion** | Pointer to **string** |  | [optional] 
 **Packages** | Pointer to [**[]AdvisoryPackage**](AdvisoryPackage.md) |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **Severity** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
-**Updated** | Pointer to [**AdvisoryDateTime**](AdvisoryDateTime.md) |  | [optional] 
+**Updated** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -139,20 +139,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetIssued
 
-`func (o *AdvisoryUpdate) GetIssued() AdvisoryDateTime`
+`func (o *AdvisoryUpdate) GetIssued() map[string]interface{}`
 
 GetIssued returns the Issued field if non-nil, zero value otherwise.
 
 ### GetIssuedOk
 
-`func (o *AdvisoryUpdate) GetIssuedOk() (*AdvisoryDateTime, bool)`
+`func (o *AdvisoryUpdate) GetIssuedOk() (*map[string]interface{}, bool)`
 
 GetIssuedOk returns a tuple with the Issued field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIssued
 
-`func (o *AdvisoryUpdate) SetIssued(v AdvisoryDateTime)`
+`func (o *AdvisoryUpdate) SetIssued(v map[string]interface{})`
 
 SetIssued sets Issued field to given value.
 
@@ -339,20 +339,20 @@ HasType returns a boolean if a field has been set.
 
 ### GetUpdated
 
-`func (o *AdvisoryUpdate) GetUpdated() AdvisoryDateTime`
+`func (o *AdvisoryUpdate) GetUpdated() map[string]interface{}`
 
 GetUpdated returns the Updated field if non-nil, zero value otherwise.
 
 ### GetUpdatedOk
 
-`func (o *AdvisoryUpdate) GetUpdatedOk() (*AdvisoryDateTime, bool)`
+`func (o *AdvisoryUpdate) GetUpdatedOk() (*map[string]interface{}, bool)`
 
 GetUpdatedOk returns a tuple with the Updated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdated
 
-`func (o *AdvisoryUpdate) SetUpdated(v AdvisoryDateTime)`
+`func (o *AdvisoryUpdate) SetUpdated(v map[string]interface{})`
 
 SetUpdated sets Updated field to given value.
 

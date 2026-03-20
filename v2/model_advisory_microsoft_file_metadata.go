@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMicrosoftFileMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMicrosoftFileMetadata{}
 
-// AdvisoryMicrosoftFileMetadata struct for AdvisoryMicrosoftFileMetadata
+// AdvisoryMicrosoftFileMetadata File-level metadata
 type AdvisoryMicrosoftFileMetadata struct {
 	// Full path (FilePath + FileName or FriendlyName)
 	FileName *string `json:"file_name,omitempty"`

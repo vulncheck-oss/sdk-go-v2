@@ -134,7 +134,7 @@ func (a *EndpointsAPIService) BackupGetExecute(r ApiBackupGetRequest) (*RenderRe
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
-			var v string
+			var v BackupGet500Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -358,9 +358,9 @@ func (a *EndpointsAPIService) CpeGetExecute(r ApiCpeGetRequest) (*RenderResponse
 		return localVarReturnValue, nil, reportError("cpe is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "cpe", r.cpe, "", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "cpe", r.cpe, "form", "")
 	if r.isVulnerable != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isVulnerable", r.isVulnerable, "", "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isVulnerable", r.isVulnerable, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -695,7 +695,7 @@ func (a *EndpointsAPIService) IndexGetExecute(r ApiIndexGetRequest) (*RenderResp
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
-			var v string
+			var v BackupGet500Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -895,7 +895,7 @@ func (a *EndpointsAPIService) PdnsVulncheckC2GetExecute(r ApiPdnsVulncheckC2GetR
 	localVarFormParams := url.Values{}
 
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "", "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1041,7 +1041,7 @@ func (a *EndpointsAPIService) PurlGetExecute(r ApiPurlGetRequest) (*RenderRespon
 		return localVarReturnValue, nil, reportError("purl is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "purl", r.purl, "", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "purl", r.purl, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1134,12 +1134,12 @@ func (a *EndpointsAPIService) PurlGetExecute(r ApiPurlGetRequest) (*RenderRespon
 type ApiPurlsPostRequest struct {
 	ctx context.Context
 	ApiService *EndpointsAPIService
-	purls *[]string
+	requestBody *[]string
 }
 
 // PURL strings used to identify and locate software packages
-func (r ApiPurlsPostRequest) Purls(purls []string) ApiPurlsPostRequest {
-	r.purls = &purls
+func (r ApiPurlsPostRequest) RequestBody(requestBody []string) ApiPurlsPostRequest {
+	r.requestBody = &requestBody
 	return r
 }
 
@@ -1182,12 +1182,12 @@ func (a *EndpointsAPIService) PurlsPostExecute(r ApiPurlsPostRequest) (*RenderRe
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.purls == nil {
-		return localVarReturnValue, nil, reportError("purls is required and must be specified")
+	if r.requestBody == nil {
+		return localVarReturnValue, nil, reportError("requestBody is required and must be specified")
 	}
 
 	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
+	localVarHTTPContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
@@ -1204,7 +1204,7 @@ func (a *EndpointsAPIService) PurlsPostExecute(r ApiPurlsPostRequest) (*RenderRe
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.purls
+	localVarPostBody = r.requestBody
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -1468,7 +1468,7 @@ func (a *EndpointsAPIService) TagsVulncheckC2GetExecute(r ApiTagsVulncheckC2GetR
 	localVarFormParams := url.Values{}
 
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "", "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

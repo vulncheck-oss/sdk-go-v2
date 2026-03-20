@@ -23,7 +23,6 @@ type AdvisoryMicrosoftDriverBlockList struct {
 	DateAdded *string `json:"date_added,omitempty"`
 	// From FileAttrib or Deny
 	FileId *string `json:"file_id,omitempty"`
-	// File-level metadata
 	FileMetadata *AdvisoryMicrosoftFileMetadata `json:"file_metadata,omitempty"`
 }
 
