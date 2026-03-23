@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,10 +18,10 @@ import (
 // checks if the ModelsEntitlements type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ModelsEntitlements{}
 
-// ModelsEntitlements struct for ModelsEntitlements
+// ModelsEntitlements models.Entitlements
 type ModelsEntitlements struct {
 	// Entitlements provides a map of roles to a list of entitlements
-	Entitlements *map[string][]string `json:"entitlements,omitempty"`
+	Entitlements map[string][]string `json:"entitlements,omitempty"`
 }
 
 // NewModelsEntitlements instantiates a new ModelsEntitlements object
@@ -47,14 +47,14 @@ func (o *ModelsEntitlements) GetEntitlements() map[string][]string {
 		var ret map[string][]string
 		return ret
 	}
-	return *o.Entitlements
+	return o.Entitlements
 }
 
 // GetEntitlementsOk returns a tuple with the Entitlements field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ModelsEntitlements) GetEntitlementsOk() (*map[string][]string, bool) {
+func (o *ModelsEntitlements) GetEntitlementsOk() (map[string][]string, bool) {
 	if o == nil || IsNil(o.Entitlements) {
-		return nil, false
+		return map[string][]string{}, false
 	}
 	return o.Entitlements, true
 }
@@ -70,7 +70,7 @@ func (o *ModelsEntitlements) HasEntitlements() bool {
 
 // SetEntitlements gets a reference to the given map[string][]string and assigns it to the Entitlements field.
 func (o *ModelsEntitlements) SetEntitlements(v map[string][]string) {
-	o.Entitlements = &v
+	o.Entitlements = v
 }
 
 func (o ModelsEntitlements) MarshalJSON() ([]byte, error) {

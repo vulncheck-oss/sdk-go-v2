@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryK8S type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryK8S{}
 
-// AdvisoryK8S struct for AdvisoryK8S
+// AdvisoryK8S advisory.K8S
 type AdvisoryK8S struct {
 	Content *string `json:"content,omitempty"`
 	Cve []string `json:"cve,omitempty"`

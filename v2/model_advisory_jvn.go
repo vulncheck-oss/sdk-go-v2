@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryJVN type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryJVN{}
 
-// AdvisoryJVN struct for AdvisoryJVN
+// AdvisoryJVN advisory.JVN
 type AdvisoryJVN struct {
 	AffectedEn *string `json:"affected_en,omitempty"`
 	AffectedJa *string `json:"affected_ja,omitempty"`

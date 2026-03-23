@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiNVD20CVEExtended type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiNVD20CVEExtended{}
 
-// ApiNVD20CVEExtended struct for ApiNVD20CVEExtended
+// ApiNVD20CVEExtended api.NVD20CVEExtended
 type ApiNVD20CVEExtended struct {
 	ALIAS *string `json:"ALIAS,omitempty"`
 	STATUS *string `json:"STATUS,omitempty"`

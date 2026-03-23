@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Artifacts** | Pointer to **map[string]interface{}** |  | [optional] 
+**Artifacts** | Pointer to **map[string]interface{}** | purls.Artifact | [optional] 
 **Cves** | Pointer to **[]string** |  | [optional] 
 **Licenses** | Pointer to **[]string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 

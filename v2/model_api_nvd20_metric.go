@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiNVD20Metric type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiNVD20Metric{}
 
-// ApiNVD20Metric struct for ApiNVD20Metric
+// ApiNVD20Metric api.NVD20Metric
 type ApiNVD20Metric struct {
 	CvssMetricV2 []ApiNVD20CvssMetricV2 `json:"cvssMetricV2,omitempty"`
 	CvssMetricV30 []ApiNVD20CvssMetricV3 `json:"cvssMetricV30,omitempty"`

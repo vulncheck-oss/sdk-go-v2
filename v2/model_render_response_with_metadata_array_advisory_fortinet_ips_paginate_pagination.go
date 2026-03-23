@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataArrayAdvisoryFortinetIPSPaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryFortinetIPSPaginatePagination{}
 
-// RenderResponseWithMetadataArrayAdvisoryFortinetIPSPaginatePagination struct for RenderResponseWithMetadataArrayAdvisoryFortinetIPSPaginatePagination
+// RenderResponseWithMetadataArrayAdvisoryFortinetIPSPaginatePagination render.ResponseWithMetadata-array_advisory_FortinetIPS-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryFortinetIPSPaginatePagination struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`

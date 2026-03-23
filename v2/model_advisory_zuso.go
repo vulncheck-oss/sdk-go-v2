@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryZuso type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryZuso{}
 
-// AdvisoryZuso struct for AdvisoryZuso
+// AdvisoryZuso advisory.Zuso
 type AdvisoryZuso struct {
 	Cve []string `json:"cve,omitempty"`
 	Cvss *string `json:"cvss,omitempty"`

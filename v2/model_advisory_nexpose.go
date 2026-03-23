@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryNexpose type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryNexpose{}
 
-// AdvisoryNexpose struct for AdvisoryNexpose
+// AdvisoryNexpose advisory.Nexpose
 type AdvisoryNexpose struct {
 	Cve []string `json:"cve,omitempty"`
 	CvssScore *string `json:"cvss_score,omitempty"`

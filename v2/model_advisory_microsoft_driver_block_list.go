@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,12 +18,11 @@ import (
 // checks if the AdvisoryMicrosoftDriverBlockList type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMicrosoftDriverBlockList{}
 
-// AdvisoryMicrosoftDriverBlockList struct for AdvisoryMicrosoftDriverBlockList
+// AdvisoryMicrosoftDriverBlockList advisory.MicrosoftDriverBlockList
 type AdvisoryMicrosoftDriverBlockList struct {
 	DateAdded *string `json:"date_added,omitempty"`
 	// From FileAttrib or Deny
 	FileId *string `json:"file_id,omitempty"`
-	// File-level metadata
 	FileMetadata *AdvisoryMicrosoftFileMetadata `json:"file_metadata,omitempty"`
 }
 

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryDanFossCVEDetails type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryDanFossCVEDetails{}
 
-// AdvisoryDanFossCVEDetails struct for AdvisoryDanFossCVEDetails
+// AdvisoryDanFossCVEDetails advisory.DanFossCVEDetails
 type AdvisoryDanFossCVEDetails struct {
 	BaseScore *string `json:"base_score,omitempty"`
 	Cve *string `json:"cve,omitempty"`

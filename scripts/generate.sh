@@ -5,6 +5,16 @@ OPENAPI_GENERATOR_VERSION=7.13.0
 OPENAPI_JSON=openapi.json
 OPENAPI_CLIENT_DIR=v2
 
+# Detect flavor
+sed --version >/dev/null 2>&1 && SED_FLAVOR="GNU" || SED_FLAVOR="BSD"
+
+# Set flags based on flavor
+if [[ "$SED_FLAVOR" == "BSD" ]]; then
+  SED_FLAGS=(-i '')
+else
+  SED_FLAGS=(-i)
+fi
+
 # Pre-Generation Steps ########################################################
 
 clean_sdk() {
@@ -25,7 +35,7 @@ bump_patch() {
   patch=$((patch + 1))
   new_version="${major}.${minor}.${patch}"
 
-  sed -i "s/packageVersion: \"$current_version\"/packageVersion: \"$new_version\"/" "$GO_GENERATOR_YAML"
+  sed "${SED_FLAGS[@]}" "s/packageVersion: \"$current_version\"/packageVersion: \"$new_version\"/" "$GO_GENERATOR_YAML"
 
   echo "SDK Version bumped to $new_version"
 }
@@ -58,9 +68,11 @@ check_git_status() {
 }
 
 get_openapi_spec() {
-  curl --url https://api.vulncheck.com/v3/openapi \
-    --header "Accept: application/json" \
-    >"$OPENAPI_JSON"
+  # use the combined output
+  curl --silent --fail \
+   --url https://api.vulncheck.com/openapi/combined \
+   --header "Accept: application/json" \
+   >"$OPENAPI_JSON"
 }
 
 clean_openapi_spec() {

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAruba type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAruba{}
 
-// AdvisoryAruba struct for AdvisoryAruba
+// AdvisoryAruba advisory.Aruba
 type AdvisoryAruba struct {
 	Csaf *string `json:"csaf,omitempty"`
 	Cve []string `json:"cve,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryOpenCVDB type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryOpenCVDB{}
 
-// AdvisoryOpenCVDB struct for AdvisoryOpenCVDB
+// AdvisoryOpenCVDB advisory.OpenCVDB
 type AdvisoryOpenCVDB struct {
 	AffectedPlatforms []string `json:"affected_platforms,omitempty"`
 	AffectedServices []string `json:"affected_services,omitempty"`

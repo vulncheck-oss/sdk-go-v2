@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryBlackBerry type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryBlackBerry{}
 
-// AdvisoryBlackBerry struct for AdvisoryBlackBerry
+// AdvisoryBlackBerry advisory.BlackBerry
 type AdvisoryBlackBerry struct {
 	Bsrt *string `json:"bsrt,omitempty"`
 	Cve []string `json:"cve,omitempty"`

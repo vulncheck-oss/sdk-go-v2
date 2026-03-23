@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryGoVulnDatabaseSpecific type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryGoVulnDatabaseSpecific{}
 
-// AdvisoryGoVulnDatabaseSpecific struct for AdvisoryGoVulnDatabaseSpecific
+// AdvisoryGoVulnDatabaseSpecific advisory.GoVulnDatabaseSpecific
 type AdvisoryGoVulnDatabaseSpecific struct {
 	Url *string `json:"url,omitempty"`
 }

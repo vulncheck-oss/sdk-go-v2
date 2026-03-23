@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiEPSS type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiEPSS{}
 
-// ApiEPSS struct for ApiEPSS
+// ApiEPSS exclude EPSS from changelog
 type ApiEPSS struct {
 	EpssPercentile *float32 `json:"epss_percentile,omitempty"`
 	EpssScore *float32 `json:"epss_score,omitempty"`

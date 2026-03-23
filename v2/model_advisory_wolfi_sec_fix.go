@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryWolfiSecFix type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryWolfiSecFix{}
 
-// AdvisoryWolfiSecFix struct for AdvisoryWolfiSecFix
+// AdvisoryWolfiSecFix advisory.WolfiSecFix
 type AdvisoryWolfiSecFix struct {
 	Cve []string `json:"cve,omitempty"`
 	Version *string `json:"version,omitempty"`

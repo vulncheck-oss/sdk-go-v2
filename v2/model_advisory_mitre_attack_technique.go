@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryMitreAttackTechnique type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryMitreAttackTechnique{}
 
-// AdvisoryMitreAttackTechnique struct for AdvisoryMitreAttackTechnique
+// AdvisoryMitreAttackTechnique advisory.MitreAttackTechnique
 type AdvisoryMitreAttackTechnique struct {
 	SubTechnique *string `json:"sub_technique,omitempty"`
 	SubTechniqueName *string `json:"sub_technique_name,omitempty"`

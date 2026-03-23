@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCweAcceptanceLevel type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCweAcceptanceLevel{}
 
-// AdvisoryCweAcceptanceLevel struct for AdvisoryCweAcceptanceLevel
+// AdvisoryCweAcceptanceLevel advisory.CweAcceptanceLevel
 type AdvisoryCweAcceptanceLevel struct {
 	Description *string `json:"description,omitempty"`
 	LastModified *string `json:"lastModified,omitempty"`

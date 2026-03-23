@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryPyPARange type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryPyPARange{}
 
-// AdvisoryPyPARange struct for AdvisoryPyPARange
+// AdvisoryPyPARange advisory.PyPARange
 type AdvisoryPyPARange struct {
 	Events []AdvisoryPyPAEvent `json:"events,omitempty"`
 	RangesType *string `json:"ranges_type,omitempty"`

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
-**LolJson** | Pointer to **map[string]map[string]interface{}** |  | [optional] 
+**LolJson** | Pointer to **map[string]interface{}** |  | [optional] 
 **MitreId** | Pointer to **string** |  | [optional] 
 **References** | Pointer to **[]string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
@@ -135,20 +135,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetLolJson
 
-`func (o *AdvisoryLolAdvs) GetLolJson() map[string]map[string]interface{}`
+`func (o *AdvisoryLolAdvs) GetLolJson() map[string]interface{}`
 
 GetLolJson returns the LolJson field if non-nil, zero value otherwise.
 
 ### GetLolJsonOk
 
-`func (o *AdvisoryLolAdvs) GetLolJsonOk() (*map[string]map[string]interface{}, bool)`
+`func (o *AdvisoryLolAdvs) GetLolJsonOk() (*map[string]interface{}, bool)`
 
 GetLolJsonOk returns a tuple with the LolJson field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLolJson
 
-`func (o *AdvisoryLolAdvs) SetLolJson(v map[string]map[string]interface{})`
+`func (o *AdvisoryLolAdvs) SetLolJson(v map[string]interface{})`
 
 SetLolJson sets LolJson field to given value.
 

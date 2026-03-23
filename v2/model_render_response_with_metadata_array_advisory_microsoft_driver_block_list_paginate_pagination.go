@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the RenderResponseWithMetadataArrayAdvisoryMicrosoftDriverBlockListPaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryMicrosoftDriverBlockListPaginatePagination{}
 
-// RenderResponseWithMetadataArrayAdvisoryMicrosoftDriverBlockListPaginatePagination struct for RenderResponseWithMetadataArrayAdvisoryMicrosoftDriverBlockListPaginatePagination
+// RenderResponseWithMetadataArrayAdvisoryMicrosoftDriverBlockListPaginatePagination render.ResponseWithMetadata-array_advisory_MicrosoftDriverBlockList-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryMicrosoftDriverBlockListPaginatePagination struct {
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`

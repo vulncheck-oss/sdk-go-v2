@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,12 +18,10 @@ import (
 // checks if the AdvisoryAffected type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAffected{}
 
-// AdvisoryAffected struct for AdvisoryAffected
+// AdvisoryAffected advisory.Affected
 type AdvisoryAffected struct {
-	// The meaning of the values within the object is entirely defined by the database
-	DatabaseSpecific map[string]interface{} `json:"database_specific,omitempty"`
-	// The meaning of the values within the object is entirely defined by the ecosystem
-	EcosystemSpecific map[string]interface{} `json:"ecosystem_specific,omitempty"`
+	DatabaseSpecific interface{} `json:"database_specific,omitempty"`
+	EcosystemSpecific interface{} `json:"ecosystem_specific,omitempty"`
 	Package *AdvisoryOSVPackage `json:"package,omitempty"`
 	Ranges []AdvisoryRange `json:"ranges,omitempty"`
 	Severity []AdvisorySeverity `json:"severity,omitempty"`
@@ -47,10 +45,10 @@ func NewAdvisoryAffectedWithDefaults() *AdvisoryAffected {
 	return &this
 }
 
-// GetDatabaseSpecific returns the DatabaseSpecific field value if set, zero value otherwise.
-func (o *AdvisoryAffected) GetDatabaseSpecific() map[string]interface{} {
-	if o == nil || IsNil(o.DatabaseSpecific) {
-		var ret map[string]interface{}
+// GetDatabaseSpecific returns the DatabaseSpecific field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryAffected) GetDatabaseSpecific() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.DatabaseSpecific
@@ -58,11 +56,12 @@ func (o *AdvisoryAffected) GetDatabaseSpecific() map[string]interface{} {
 
 // GetDatabaseSpecificOk returns a tuple with the DatabaseSpecific field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAffected) GetDatabaseSpecificOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryAffected) GetDatabaseSpecificOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.DatabaseSpecific) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.DatabaseSpecific, true
+	return &o.DatabaseSpecific, true
 }
 
 // HasDatabaseSpecific returns a boolean if a field has been set.
@@ -74,15 +73,15 @@ func (o *AdvisoryAffected) HasDatabaseSpecific() bool {
 	return false
 }
 
-// SetDatabaseSpecific gets a reference to the given map[string]interface{} and assigns it to the DatabaseSpecific field.
-func (o *AdvisoryAffected) SetDatabaseSpecific(v map[string]interface{}) {
+// SetDatabaseSpecific gets a reference to the given interface{} and assigns it to the DatabaseSpecific field.
+func (o *AdvisoryAffected) SetDatabaseSpecific(v interface{}) {
 	o.DatabaseSpecific = v
 }
 
-// GetEcosystemSpecific returns the EcosystemSpecific field value if set, zero value otherwise.
-func (o *AdvisoryAffected) GetEcosystemSpecific() map[string]interface{} {
-	if o == nil || IsNil(o.EcosystemSpecific) {
-		var ret map[string]interface{}
+// GetEcosystemSpecific returns the EcosystemSpecific field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AdvisoryAffected) GetEcosystemSpecific() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
 	return o.EcosystemSpecific
@@ -90,11 +89,12 @@ func (o *AdvisoryAffected) GetEcosystemSpecific() map[string]interface{} {
 
 // GetEcosystemSpecificOk returns a tuple with the EcosystemSpecific field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryAffected) GetEcosystemSpecificOk() (map[string]interface{}, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AdvisoryAffected) GetEcosystemSpecificOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.EcosystemSpecific) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
-	return o.EcosystemSpecific, true
+	return &o.EcosystemSpecific, true
 }
 
 // HasEcosystemSpecific returns a boolean if a field has been set.
@@ -106,8 +106,8 @@ func (o *AdvisoryAffected) HasEcosystemSpecific() bool {
 	return false
 }
 
-// SetEcosystemSpecific gets a reference to the given map[string]interface{} and assigns it to the EcosystemSpecific field.
-func (o *AdvisoryAffected) SetEcosystemSpecific(v map[string]interface{}) {
+// SetEcosystemSpecific gets a reference to the given interface{} and assigns it to the EcosystemSpecific field.
+func (o *AdvisoryAffected) SetEcosystemSpecific(v interface{}) {
 	o.EcosystemSpecific = v
 }
 
@@ -249,10 +249,10 @@ func (o AdvisoryAffected) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryAffected) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.DatabaseSpecific) {
+	if o.DatabaseSpecific != nil {
 		toSerialize["database_specific"] = o.DatabaseSpecific
 	}
-	if !IsNil(o.EcosystemSpecific) {
+	if o.EcosystemSpecific != nil {
 		toSerialize["ecosystem_specific"] = o.EcosystemSpecific
 	}
 	if !IsNil(o.Package) {

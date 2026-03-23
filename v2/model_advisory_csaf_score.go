@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCSAFScore type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCSAFScore{}
 
-// AdvisoryCSAFScore struct for AdvisoryCSAFScore
+// AdvisoryCSAFScore advisory.CSAFScore
 type AdvisoryCSAFScore struct {
 	CvssV2 *AdvisoryCVSSV2 `json:"cvss_v2,omitempty"`
 	CvssV3 *AdvisoryCVSSV3 `json:"cvss_v3,omitempty"`

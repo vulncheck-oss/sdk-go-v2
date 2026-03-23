@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisorySiemensEngine type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisorySiemensEngine{}
 
-// AdvisorySiemensEngine struct for AdvisorySiemensEngine
+// AdvisorySiemensEngine advisory.SiemensEngine
 type AdvisorySiemensEngine struct {
 	Name *string `json:"name,omitempty"`
 	Version *string `json:"version,omitempty"`

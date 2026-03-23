@@ -1,6 +1,7 @@
 .gitignore
 README.md
 api/openapi.yaml
+api_advisory.go
 api_endpoints.go
 api_indices.go
 client.go
@@ -12,6 +13,7 @@ docs/AdvisoryADPContainer.md
 docs/AdvisoryAIX.md
 docs/AdvisoryAMD.md
 docs/AdvisoryAMI.md
+docs/AdvisoryAPI.md
 docs/AdvisoryASRG.md
 docs/AdvisoryAVEVAAdvisory.md
 docs/AdvisoryAVIDMLAdvs.md
@@ -151,13 +153,11 @@ docs/AdvisoryCSAFVulnerability.md
 docs/AdvisoryCVEDetail.md
 docs/AdvisoryCVEDetailsLink.md
 docs/AdvisoryCVEReference.md
-docs/AdvisoryCVRFReference.md
 docs/AdvisoryCVSS.md
 docs/AdvisoryCVSSV2.md
 docs/AdvisoryCVSSV3.md
 docs/AdvisoryCVSSV40.md
 docs/AdvisoryCVSSV40Threat.md
-docs/AdvisoryCWENode.md
 docs/AdvisoryCanvasExploit.md
 docs/AdvisoryCapec.md
 docs/AdvisoryCarestreamAdvisory.md
@@ -217,7 +217,6 @@ docs/AdvisoryDahua.md
 docs/AdvisoryDanFossCVEDetails.md
 docs/AdvisoryDanfoss.md
 docs/AdvisoryDassault.md
-docs/AdvisoryDateTime.md
 docs/AdvisoryDebianCVE.md
 docs/AdvisoryDebianSecurityAdvisory.md
 docs/AdvisoryDell.md
@@ -227,9 +226,7 @@ docs/AdvisoryDistroPackage.md
 docs/AdvisoryDistroVersion.md
 docs/AdvisoryDjango.md
 docs/AdvisoryDocumentMetadata.md
-docs/AdvisoryDocumentNote.md
 docs/AdvisoryDocumentPublisher.md
-docs/AdvisoryDocumentTracking.md
 docs/AdvisoryDotCMS.md
 docs/AdvisoryDragosAdvisory.md
 docs/AdvisoryDraytek.md
@@ -344,7 +341,6 @@ docs/AdvisoryIntel.md
 docs/AdvisoryIpIntelRecord.md
 docs/AdvisoryIsraeliAlert.md
 docs/AdvisoryIsraeliVulnerability.md
-docs/AdvisoryIssued.md
 docs/AdvisoryIstio.md
 docs/AdvisoryIvanti.md
 docs/AdvisoryIvantiRSS.md
@@ -525,7 +521,6 @@ docs/AdvisoryPrimeVersion.md
 docs/AdvisoryProduct.md
 docs/AdvisoryProductBranch.md
 docs/AdvisoryProductSpecificDetail.md
-docs/AdvisoryProductTree.md
 docs/AdvisoryProductsAffected.md
 docs/AdvisoryProgress.md
 docs/AdvisoryProofpoint.md
@@ -555,12 +550,10 @@ docs/AdvisoryRedLion.md
 docs/AdvisoryRedhatCVE.md
 docs/AdvisoryReference.md
 docs/AdvisoryRelatedRule.md
-docs/AdvisoryRelationship.md
 docs/AdvisoryRemediationData.md
 docs/AdvisoryRenesas.md
 docs/AdvisoryReportedExploit.md
 docs/AdvisoryRestartData.md
-docs/AdvisoryRevision.md
 docs/AdvisoryRevisionHistory.md
 docs/AdvisoryRevive.md
 docs/AdvisoryRhelCVE.md
@@ -594,7 +587,6 @@ docs/AdvisorySansDshield.md
 docs/AdvisorySchneiderCVE.md
 docs/AdvisorySchneiderElectricAdvisory.md
 docs/AdvisorySchutzwerk.md
-docs/AdvisoryScoreSet.md
 docs/AdvisorySecFix.md
 docs/AdvisorySecurityBulletin.md
 docs/AdvisorySecurityLab.md
@@ -646,7 +638,6 @@ docs/AdvisorySpacelabsHealthcareAdvisory.md
 docs/AdvisorySplunk.md
 docs/AdvisorySplunkProduct.md
 docs/AdvisorySpring.md
-docs/AdvisoryStatus.md
 docs/AdvisoryStormshield.md
 docs/AdvisoryStrykerAdvisory.md
 docs/AdvisorySudo.md
@@ -668,7 +659,6 @@ docs/AdvisoryTencent.md
 docs/AdvisoryThales.md
 docs/AdvisoryTheMissingLink.md
 docs/AdvisoryThermoFisher.md
-docs/AdvisoryThreat.md
 docs/AdvisoryThreatActorWithExternalObjects.md
 docs/AdvisoryThreatData.md
 docs/AdvisoryTibco.md
@@ -689,7 +679,6 @@ docs/AdvisoryUbuntuPackageReleaseStatus.md
 docs/AdvisoryUnify.md
 docs/AdvisoryUnisoc.md
 docs/AdvisoryUpdate.md
-docs/AdvisoryUpdated.md
 docs/AdvisoryV3AcceptanceLevel.md
 docs/AdvisoryVCCPEDictionary.md
 docs/AdvisoryVCVulnerableCPEs.md
@@ -711,7 +700,6 @@ docs/AdvisoryVulnCheckCVEListV5.md
 docs/AdvisoryVulnCheckConfig.md
 docs/AdvisoryVulnCheckKEV.md
 docs/AdvisoryVulnCheckPackage.md
-docs/AdvisoryVulnerability.md
 docs/AdvisoryVulnerableDebianPackage.md
 docs/AdvisoryVulnerableProduct.md
 docs/AdvisoryVulnrichment.md
@@ -771,7 +759,6 @@ docs/ApiClientFingerprints.md
 docs/ApiConfigurations.md
 docs/ApiCveItems.md
 docs/ApiCveItemsExtended.md
-docs/ApiDateTime.md
 docs/ApiDescription.md
 docs/ApiDescriptionData.md
 docs/ApiEPSS.md
@@ -848,6 +835,7 @@ docs/ApiTemporalMetricV3.md
 docs/ApiUpdate.md
 docs/ApiVulnCheckCanary.md
 docs/ApiVulnerabilityAlias.md
+docs/BackupGet500Response.md
 docs/EndpointsAPI.md
 docs/IndicesAPI.md
 docs/ModelsEntitlements.md
@@ -1328,6 +1316,11 @@ docs/RenderResponseWithMetadataArrayStringV3controllersResponseMetadata.md
 docs/RenderResponseWithMetadataV3controllersBackupResponseDataV3controllersBackupResponseMetadata.md
 docs/RenderResponseWithMetadataV3controllersPurlResponseDataV3controllersPurlResponseMetadata.md
 docs/RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata.md
+docs/SearchErrorResponse.md
+docs/SearchV4AdvisoryMeta.md
+docs/SearchV4AdvisoryReturnValue.md
+docs/SearchV4FeedItem.md
+docs/SearchV4ListFeedReturnValue.md
 docs/V3controllersBackupResponseMetadata.md
 docs/V3controllersPurlResponseData.md
 docs/V3controllersPurlResponseMetadata.md
@@ -1335,6 +1328,7 @@ docs/V3controllersPurlsResponseMetadata.md
 docs/V3controllersResponseMetadata.md
 go.mod
 go.sum
+model__backup_get_500_response.go
 model_advisory_a10.go
 model_advisory_abb_advisory.go
 model_advisory_abbott.go
@@ -1526,7 +1520,6 @@ model_advisory_cve_detail.go
 model_advisory_cve_details_link.go
 model_advisory_cve_reference.go
 model_advisory_cvrf.go
-model_advisory_cvrf_reference.go
 model_advisory_cvss.go
 model_advisory_cvsss_v2_3.go
 model_advisory_cvssv2.go
@@ -1536,7 +1529,6 @@ model_advisory_cvssv40_threat.go
 model_advisory_cwe.go
 model_advisory_cwe_acceptance_level.go
 model_advisory_cwe_data.go
-model_advisory_cwe_node.go
 model_advisory_cwes.go
 model_advisory_cycle.go
 model_advisory_d_link.go
@@ -1544,7 +1536,6 @@ model_advisory_dahua.go
 model_advisory_dan_foss_cve_details.go
 model_advisory_danfoss.go
 model_advisory_dassault.go
-model_advisory_date_time.go
 model_advisory_db_specific.go
 model_advisory_debian_cve.go
 model_advisory_debian_security_advisory.go
@@ -1557,9 +1548,7 @@ model_advisory_distro_version.go
 model_advisory_django.go
 model_advisory_dnn.go
 model_advisory_document_metadata.go
-model_advisory_document_note.go
 model_advisory_document_publisher.go
-model_advisory_document_tracking.go
 model_advisory_dot_cms.go
 model_advisory_dragos_advisory.go
 model_advisory_draytek.go
@@ -1672,7 +1661,6 @@ model_advisory_intel.go
 model_advisory_ip_intel_record.go
 model_advisory_israeli_alert.go
 model_advisory_israeli_vulnerability.go
-model_advisory_issued.go
 model_advisory_istio.go
 model_advisory_itw.go
 model_advisory_itw_exploit.go
@@ -1853,7 +1841,6 @@ model_advisory_prime_version.go
 model_advisory_product.go
 model_advisory_product_branch.go
 model_advisory_product_specific_detail.go
-model_advisory_product_tree.go
 model_advisory_products_affected.go
 model_advisory_progress.go
 model_advisory_proofpoint.go
@@ -1885,12 +1872,10 @@ model_advisory_red_lion.go
 model_advisory_redhat_cve.go
 model_advisory_reference.go
 model_advisory_related_rule.go
-model_advisory_relationship.go
 model_advisory_remediation_data.go
 model_advisory_renesas.go
 model_advisory_reported_exploit.go
 model_advisory_restart_data.go
-model_advisory_revision.go
 model_advisory_revision_history.go
 model_advisory_revive.go
 model_advisory_rhel_cve.go
@@ -1921,7 +1906,6 @@ model_advisory_sap.go
 model_advisory_schneider_cve.go
 model_advisory_schneider_electric_advisory.go
 model_advisory_schutzwerk.go
-model_advisory_score_set.go
 model_advisory_sec_consult.go
 model_advisory_sec_fix.go
 model_advisory_security_bulletin.go
@@ -1976,7 +1960,6 @@ model_advisory_splunk_product.go
 model_advisory_spring.go
 model_advisory_ssa_source.go
 model_advisory_ssd_advisory.go
-model_advisory_status.go
 model_advisory_stormshield.go
 model_advisory_stryker_advisory.go
 model_advisory_sudo.go
@@ -1995,7 +1978,6 @@ model_advisory_tencent.go
 model_advisory_thales.go
 model_advisory_the_missing_link.go
 model_advisory_thermo_fisher.go
-model_advisory_threat.go
 model_advisory_threat_actor_with_external_objects.go
 model_advisory_threat_data.go
 model_advisory_ti.go
@@ -2017,7 +1999,6 @@ model_advisory_ubuntu_package_release_status.go
 model_advisory_unify.go
 model_advisory_unisoc.go
 model_advisory_update.go
-model_advisory_updated.go
 model_advisory_usd.go
 model_advisory_usom_advisory.go
 model_advisory_v3_acceptance_level.go
@@ -2040,7 +2021,6 @@ model_advisory_vuln_check_config.go
 model_advisory_vuln_check_cve_list_v5.go
 model_advisory_vuln_check_kev.go
 model_advisory_vuln_check_package.go
-model_advisory_vulnerability.go
 model_advisory_vulnerable_debian_package.go
 model_advisory_vulnerable_product.go
 model_advisory_vulnrichment.go
@@ -2101,7 +2081,6 @@ model_api_cve_items_extended.go
 model_api_cvssv2.go
 model_api_cvssv3.go
 model_api_cwe.go
-model_api_date_time.go
 model_api_description.go
 model_api_description_data.go
 model_api_epss.go
@@ -2656,12 +2635,18 @@ model_render_response_with_metadata_array_string_v3controllers_response_metadata
 model_render_response_with_metadata_v3controllers_backup_response_data_v3controllers_backup_response_metadata.go
 model_render_response_with_metadata_v3controllers_purl_response_data_v3controllers_purl_response_metadata.go
 model_render_response_with_metadata_v3controllers_purls_response_data_v3controllers_purls_response_metadata.go
+model_search_error_response.go
+model_search_v4_advisory_meta.go
+model_search_v4_advisory_return_value.go
+model_search_v4_feed_item.go
+model_search_v4_list_feed_return_value.go
 model_v3controllers_backup_response_metadata.go
 model_v3controllers_purl_response_data.go
 model_v3controllers_purl_response_metadata.go
 model_v3controllers_purls_response_metadata.go
 model_v3controllers_response_metadata.go
 response.go
+test/api_advisory_test.go
 test/api_endpoints_test.go
 test/api_indices_test.go
 utils.go

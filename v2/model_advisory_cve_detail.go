@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCVEDetail type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCVEDetail{}
 
-// AdvisoryCVEDetail struct for AdvisoryCVEDetail
+// AdvisoryCVEDetail advisory.CVEDetail
 type AdvisoryCVEDetail struct {
 	BaseScore *string `json:"baseScore,omitempty"`
 	Cveid *string `json:"cveid,omitempty"`

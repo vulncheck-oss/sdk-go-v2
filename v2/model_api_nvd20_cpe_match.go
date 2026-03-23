@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiNVD20CPEMatch type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiNVD20CPEMatch{}
 
-// ApiNVD20CPEMatch struct for ApiNVD20CPEMatch
+// ApiNVD20CPEMatch api.NVD20CPEMatch
 type ApiNVD20CPEMatch struct {
 	CpeLastModified *string `json:"cpeLastModified,omitempty"`
 	Created *string `json:"created,omitempty"`

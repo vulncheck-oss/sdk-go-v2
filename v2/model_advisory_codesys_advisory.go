@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCodesysAdvisory type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCodesysAdvisory{}
 
-// AdvisoryCodesysAdvisory struct for AdvisoryCodesysAdvisory
+// AdvisoryCodesysAdvisory advisory.CodesysAdvisory
 type AdvisoryCodesysAdvisory struct {
 	CodesysId *string `json:"codesys_id,omitempty"`
 	CsafUrl *string `json:"csaf_url,omitempty"`

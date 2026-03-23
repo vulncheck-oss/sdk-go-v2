@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryRenesas type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryRenesas{}
 
-// AdvisoryRenesas struct for AdvisoryRenesas
+// AdvisoryRenesas advisory.Renesas
 type AdvisoryRenesas struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`

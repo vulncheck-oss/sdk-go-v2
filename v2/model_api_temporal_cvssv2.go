@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiTemporalCVSSV2 type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiTemporalCVSSV2{}
 
-// ApiTemporalCVSSV2 struct for ApiTemporalCVSSV2
+// ApiTemporalCVSSV2 api.TemporalCVSSV2
 type ApiTemporalCVSSV2 struct {
 	Exploitability *string `json:"exploitability,omitempty"`
 	RemediationLevel *string `json:"remediationLevel,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiBaseMetricV3 type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiBaseMetricV3{}
 
-// ApiBaseMetricV3 struct for ApiBaseMetricV3
+// ApiBaseMetricV3 api.BaseMetricV3
 type ApiBaseMetricV3 struct {
 	CvssV3 *ApiCVSSV3 `json:"cvssV3,omitempty"`
 	ExploitabilityScore *float32 `json:"exploitabilityScore,omitempty"`

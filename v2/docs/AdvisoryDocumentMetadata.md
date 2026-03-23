@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Category** | Pointer to **string** |  | [optional] 
 **CsafVersion** | Pointer to **string** |  | [optional] 
-**Distribution** | Pointer to **map[string]interface{}** |  | [optional] 
+**Distribution** | Pointer to **map[string]interface{}** | advisory.CSAFDistribution | [optional] 
 **Lang** | Pointer to **string** |  | [optional] 
 **Notes** | Pointer to [**[]AdvisoryCSAFNote**](AdvisoryCSAFNote.md) | used by ncsc | [optional] 
 **Publisher** | Pointer to [**AdvisoryPublisher**](AdvisoryPublisher.md) |  | [optional] 

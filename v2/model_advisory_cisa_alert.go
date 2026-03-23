@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryCISAAlert type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryCISAAlert{}
 
-// AdvisoryCISAAlert struct for AdvisoryCISAAlert
+// AdvisoryCISAAlert advisory.CISAAlert
 type AdvisoryCISAAlert struct {
 	AffectedProducts *string `json:"affectedProducts,omitempty"`
 	AlertID *string `json:"alertID,omitempty"`

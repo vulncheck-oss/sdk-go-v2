@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **ProductId** | Pointer to **string** |  | [optional] 
-**ProductIdentificationHelper** | Pointer to **map[string]interface{}** |  | [optional] 
+**ProductIdentificationHelper** | Pointer to **map[string]interface{}** | advisory.IdentificationHelper | [optional] 
 
 ## Methods
 

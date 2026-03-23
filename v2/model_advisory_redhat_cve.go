@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryRedhatCVE type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryRedhatCVE{}
 
-// AdvisoryRedhatCVE struct for AdvisoryRedhatCVE
+// AdvisoryRedhatCVE advisory.RedhatCVE
 type AdvisoryRedhatCVE struct {
 	Advisories []string `json:"advisories,omitempty"`
 	AdvisoryCsafVexUrl []string `json:"advisory_csaf_vex_url,omitempty"`

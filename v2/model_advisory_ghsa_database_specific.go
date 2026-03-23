@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryGHSADatabaseSpecific type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryGHSADatabaseSpecific{}
 
-// AdvisoryGHSADatabaseSpecific struct for AdvisoryGHSADatabaseSpecific
+// AdvisoryGHSADatabaseSpecific advisory.GHSADatabaseSpecific
 type AdvisoryGHSADatabaseSpecific struct {
 	CweIds []string `json:"cwe_ids,omitempty"`
 	GithubReviewed *bool `json:"github_reviewed,omitempty"`

@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryAlephResearch type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryAlephResearch{}
 
-// AdvisoryAlephResearch struct for AdvisoryAlephResearch
+// AdvisoryAlephResearch advisory.AlephResearch
 type AdvisoryAlephResearch struct {
 	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`

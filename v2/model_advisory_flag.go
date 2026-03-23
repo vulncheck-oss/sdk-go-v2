@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryFlag type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryFlag{}
 
-// AdvisoryFlag struct for AdvisoryFlag
+// AdvisoryFlag advisory.Flag
 type AdvisoryFlag struct {
 	Date *string `json:"date,omitempty"`
 	GroupIds []string `json:"group_ids,omitempty"`

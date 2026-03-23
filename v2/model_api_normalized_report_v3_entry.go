@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the ApiNormalizedReportV3Entry type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ApiNormalizedReportV3Entry{}
 
-// ApiNormalizedReportV3Entry struct for ApiNormalizedReportV3Entry
+// ApiNormalizedReportV3Entry api.NormalizedReportV3Entry
 type ApiNormalizedReportV3Entry struct {
 	DateAdded *string `json:"date_added,omitempty"`
 	Name *string `json:"name,omitempty"`

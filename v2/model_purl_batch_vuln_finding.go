@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,13 +18,12 @@ import (
 // checks if the PurlBatchVulnFinding type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &PurlBatchVulnFinding{}
 
-// PurlBatchVulnFinding struct for PurlBatchVulnFinding
+// PurlBatchVulnFinding purl.BatchVulnFinding
 type PurlBatchVulnFinding struct {
 	// list of associated CVE 's
 	Cves []string `json:"cves,omitempty"`
 	// the purl, ex. hex/coherence@0.1.2
 	Purl *string `json:"purl,omitempty"`
-	// meta-data about the purl
 	PurlStruct *PurlPackageURLJSON `json:"purl_struct,omitempty"`
 	ResearchAttributes *ApiOSSPackageResearchAttributes `json:"research_attributes,omitempty"`
 	// list of associated vulnerabilities

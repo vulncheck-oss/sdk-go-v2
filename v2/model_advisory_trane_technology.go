@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryTraneTechnology type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryTraneTechnology{}
 
-// AdvisoryTraneTechnology struct for AdvisoryTraneTechnology
+// AdvisoryTraneTechnology advisory.TraneTechnology
 type AdvisoryTraneTechnology struct {
 	Brand *string `json:"brand,omitempty"`
 	Cve []string `json:"cve,omitempty"`

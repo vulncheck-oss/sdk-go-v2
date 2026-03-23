@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the V3controllersPurlResponseData type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &V3controllersPurlResponseData{}
 
-// V3controllersPurlResponseData struct for V3controllersPurlResponseData
+// V3controllersPurlResponseData v3controllers.PurlResponseData
 type V3controllersPurlResponseData struct {
 	// list of associated CVE 's
 	Cves []string `json:"cves,omitempty"`

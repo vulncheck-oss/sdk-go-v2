@@ -1,9 +1,9 @@
 /*
 VulnCheck API
 
-Version 3 of the VulnCheck API
+VulnCheck API (v3 + v4)
 
-API version: 3.0
+API version: latest
 Contact: support@vulncheck.com
 */
 
@@ -18,7 +18,7 @@ import (
 // checks if the AdvisoryDraytek type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &AdvisoryDraytek{}
 
-// AdvisoryDraytek struct for AdvisoryDraytek
+// AdvisoryDraytek advisory.Draytek
 type AdvisoryDraytek struct {
 	Affected []string `json:"affected,omitempty"`
 	Cve []string `json:"cve,omitempty"`
