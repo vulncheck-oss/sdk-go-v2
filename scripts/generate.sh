@@ -56,6 +56,11 @@ generate_sdk() {
     -o /local/"$OPENAPI_CLIENT_DIR"
 }
 
+generate_readme() {
+  echo "Hydrating README.template"
+  cog -d -o README.md ./README.template
+}
+
 # Helpers #####################################################################
 
 check_git_status() {
@@ -88,11 +93,13 @@ main() {
   clean_openapi_spec
   get_openapi_spec
   generate_sdk
+  generate_readme
   check_git_status # If there's no new changes, we exit here
   # If there's new changes, let's bump the version and prepare for a new PR
   clean_sdk
   bump_patch
   generate_sdk
+  generate_readme
 }
 
 main
