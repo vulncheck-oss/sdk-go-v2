@@ -13,8 +13,12 @@ import (
 
 func main() {
   configuration := vulncheck.NewConfiguration()
-  configuration.Scheme = "https"
-  configuration.Host = "api.vulncheck.com"
+  configuration.OperationServers["BackupAPIService.BackupGet"] = vulncheck.ServerConfigurations{
+    {URL: "https://api.vulncheck.com/v3"},
+  }
+  configuration.OperationServers["BackupAPIService.BackupIndexGet"] = vulncheck.ServerConfigurations{
+    {URL: "https://api.vulncheck.com/v3"},
+  }
 
   client := vulncheck.NewAPIClient(configuration)
 
@@ -27,15 +31,13 @@ func main() {
     },
   )
 
-  req := client.EndpointsAPI.BackupIndexGet(auth, "initial-access")
+  req := client.BackupAPI.BackupGet(auth)
   resp, httpRes, err := req.Execute()
   if err != nil || httpRes.StatusCode != 200 {
     log.Fatal(err)
   }
 
-  data := resp.GetData()
-
-  for _, v := range data {
-    fmt.Println(v.GetUrl())
+  for _, v := range resp.GetData() {
+    fmt.Println(v.GetHref())
   }
 }
