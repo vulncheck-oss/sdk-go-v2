@@ -52,6 +52,8 @@ type APIClient struct {
 
 	AdvisoryAPI *AdvisoryAPIService
 
+	BackupAPI *BackupAPIService
+
 	EndpointsAPI *EndpointsAPIService
 
 	IndicesAPI *IndicesAPIService
@@ -74,6 +76,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 
 	// API Services
 	c.AdvisoryAPI = (*AdvisoryAPIService)(&c.common)
+	c.BackupAPI = (*BackupAPIService)(&c.common)
 	c.EndpointsAPI = (*EndpointsAPIService)(&c.common)
 	c.IndicesAPI = (*IndicesAPIService)(&c.common)
 

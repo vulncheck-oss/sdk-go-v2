@@ -241,7 +241,7 @@ func (a *IndicesAPIService) Index7zipGetExecute(r ApiIndex7zipGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/7zip"
+	localVarPath := localBasePath + "/v3/index/7zip"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -626,7 +626,7 @@ func (a *IndicesAPIService) IndexA10GetExecute(r ApiIndexA10GetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/a10"
+	localVarPath := localBasePath + "/v3/index/a10"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1011,7 +1011,7 @@ func (a *IndicesAPIService) IndexAbbGetExecute(r ApiIndexAbbGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/abb"
+	localVarPath := localBasePath + "/v3/index/abb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1396,7 +1396,7 @@ func (a *IndicesAPIService) IndexAbbottGetExecute(r ApiIndexAbbottGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/abbott"
+	localVarPath := localBasePath + "/v3/index/abbott"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1781,7 +1781,7 @@ func (a *IndicesAPIService) IndexAbsoluteGetExecute(r ApiIndexAbsoluteGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/absolute"
+	localVarPath := localBasePath + "/v3/index/absolute"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2166,7 +2166,7 @@ func (a *IndicesAPIService) IndexAcronisGetExecute(r ApiIndexAcronisGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/acronis"
+	localVarPath := localBasePath + "/v3/index/acronis"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2551,7 +2551,7 @@ func (a *IndicesAPIService) IndexAdobeGetExecute(r ApiIndexAdobeGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/adobe"
+	localVarPath := localBasePath + "/v3/index/adobe"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2936,7 +2936,7 @@ func (a *IndicesAPIService) IndexAdvantechGetExecute(r ApiIndexAdvantechGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/advantech"
+	localVarPath := localBasePath + "/v3/index/advantech"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3321,7 +3321,7 @@ func (a *IndicesAPIService) IndexAdvisoriesGetExecute(r ApiIndexAdvisoriesGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/advisories"
+	localVarPath := localBasePath + "/v3/index/advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3706,7 +3706,7 @@ func (a *IndicesAPIService) IndexAixGetExecute(r ApiIndexAixGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/aix"
+	localVarPath := localBasePath + "/v3/index/aix"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4091,7 +4091,7 @@ func (a *IndicesAPIService) IndexAlephResearchGetExecute(r ApiIndexAlephResearch
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/aleph-research"
+	localVarPath := localBasePath + "/v3/index/aleph-research"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4476,7 +4476,7 @@ func (a *IndicesAPIService) IndexAlibabaAdvsGetExecute(r ApiIndexAlibabaAdvsGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/alibaba-advs"
+	localVarPath := localBasePath + "/v3/index/alibaba-advs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4861,7 +4861,7 @@ func (a *IndicesAPIService) IndexAlmaGetExecute(r ApiIndexAlmaGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/alma"
+	localVarPath := localBasePath + "/v3/index/alma"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5246,7 +5246,7 @@ func (a *IndicesAPIService) IndexAlpineGetExecute(r ApiIndexAlpineGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/alpine"
+	localVarPath := localBasePath + "/v3/index/alpine"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5631,7 +5631,7 @@ func (a *IndicesAPIService) IndexAlpinePurlsGetExecute(r ApiIndexAlpinePurlsGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/alpine-purls"
+	localVarPath := localBasePath + "/v3/index/alpine-purls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -6016,7 +6016,7 @@ func (a *IndicesAPIService) IndexAmazonCveGetExecute(r ApiIndexAmazonCveGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/amazon-cve"
+	localVarPath := localBasePath + "/v3/index/amazon-cve"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -6401,7 +6401,7 @@ func (a *IndicesAPIService) IndexAmazonGetExecute(r ApiIndexAmazonGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/amazon"
+	localVarPath := localBasePath + "/v3/index/amazon"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -6786,7 +6786,7 @@ func (a *IndicesAPIService) IndexAmdGetExecute(r ApiIndexAmdGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/amd"
+	localVarPath := localBasePath + "/v3/index/amd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -7171,7 +7171,7 @@ func (a *IndicesAPIService) IndexAmiGetExecute(r ApiIndexAmiGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ami"
+	localVarPath := localBasePath + "/v3/index/ami"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -7556,7 +7556,7 @@ func (a *IndicesAPIService) IndexAnchoreNvdOverrideGetExecute(r ApiIndexAnchoreN
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/anchore-nvd-override"
+	localVarPath := localBasePath + "/v3/index/anchore-nvd-override"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -7941,7 +7941,7 @@ func (a *IndicesAPIService) IndexAndroidGetExecute(r ApiIndexAndroidGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/android"
+	localVarPath := localBasePath + "/v3/index/android"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -8326,7 +8326,7 @@ func (a *IndicesAPIService) IndexApacheActivemqGetExecute(r ApiIndexApacheActive
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-activemq"
+	localVarPath := localBasePath + "/v3/index/apache-activemq"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -8711,7 +8711,7 @@ func (a *IndicesAPIService) IndexApacheArchivaGetExecute(r ApiIndexApacheArchiva
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-archiva"
+	localVarPath := localBasePath + "/v3/index/apache-archiva"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -9096,7 +9096,7 @@ func (a *IndicesAPIService) IndexApacheArrowGetExecute(r ApiIndexApacheArrowGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-arrow"
+	localVarPath := localBasePath + "/v3/index/apache-arrow"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -9481,7 +9481,7 @@ func (a *IndicesAPIService) IndexApacheCamelGetExecute(r ApiIndexApacheCamelGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-camel"
+	localVarPath := localBasePath + "/v3/index/apache-camel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -9866,7 +9866,7 @@ func (a *IndicesAPIService) IndexApacheCommonsGetExecute(r ApiIndexApacheCommons
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-commons"
+	localVarPath := localBasePath + "/v3/index/apache-commons"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -10251,7 +10251,7 @@ func (a *IndicesAPIService) IndexApacheCouchdbGetExecute(r ApiIndexApacheCouchdb
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-couchdb"
+	localVarPath := localBasePath + "/v3/index/apache-couchdb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -10636,7 +10636,7 @@ func (a *IndicesAPIService) IndexApacheFlinkGetExecute(r ApiIndexApacheFlinkGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-flink"
+	localVarPath := localBasePath + "/v3/index/apache-flink"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -11021,7 +11021,7 @@ func (a *IndicesAPIService) IndexApacheGuacamoleGetExecute(r ApiIndexApacheGuaca
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-guacamole"
+	localVarPath := localBasePath + "/v3/index/apache-guacamole"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -11406,7 +11406,7 @@ func (a *IndicesAPIService) IndexApacheHadoopGetExecute(r ApiIndexApacheHadoopGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-hadoop"
+	localVarPath := localBasePath + "/v3/index/apache-hadoop"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -11791,7 +11791,7 @@ func (a *IndicesAPIService) IndexApacheHttpGetExecute(r ApiIndexApacheHttpGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-http"
+	localVarPath := localBasePath + "/v3/index/apache-http"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -12176,7 +12176,7 @@ func (a *IndicesAPIService) IndexApacheJspwikiGetExecute(r ApiIndexApacheJspwiki
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-jspwiki"
+	localVarPath := localBasePath + "/v3/index/apache-jspwiki"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -12561,7 +12561,7 @@ func (a *IndicesAPIService) IndexApacheKafkaGetExecute(r ApiIndexApacheKafkaGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-kafka"
+	localVarPath := localBasePath + "/v3/index/apache-kafka"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -12946,7 +12946,7 @@ func (a *IndicesAPIService) IndexApacheLoggingservicesGetExecute(r ApiIndexApach
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-loggingservices"
+	localVarPath := localBasePath + "/v3/index/apache-loggingservices"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -13331,7 +13331,7 @@ func (a *IndicesAPIService) IndexApacheNifiGetExecute(r ApiIndexApacheNifiGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-nifi"
+	localVarPath := localBasePath + "/v3/index/apache-nifi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -13716,7 +13716,7 @@ func (a *IndicesAPIService) IndexApacheOfbizGetExecute(r ApiIndexApacheOfbizGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-ofbiz"
+	localVarPath := localBasePath + "/v3/index/apache-ofbiz"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -14101,7 +14101,7 @@ func (a *IndicesAPIService) IndexApacheOpenmeetingsGetExecute(r ApiIndexApacheOp
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-openmeetings"
+	localVarPath := localBasePath + "/v3/index/apache-openmeetings"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -14486,7 +14486,7 @@ func (a *IndicesAPIService) IndexApacheOpenofficeGetExecute(r ApiIndexApacheOpen
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-openoffice"
+	localVarPath := localBasePath + "/v3/index/apache-openoffice"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -14871,7 +14871,7 @@ func (a *IndicesAPIService) IndexApachePulsarGetExecute(r ApiIndexApachePulsarGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-pulsar"
+	localVarPath := localBasePath + "/v3/index/apache-pulsar"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -15256,7 +15256,7 @@ func (a *IndicesAPIService) IndexApacheShiroGetExecute(r ApiIndexApacheShiroGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-shiro"
+	localVarPath := localBasePath + "/v3/index/apache-shiro"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -15641,7 +15641,7 @@ func (a *IndicesAPIService) IndexApacheSparkGetExecute(r ApiIndexApacheSparkGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-spark"
+	localVarPath := localBasePath + "/v3/index/apache-spark"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -16026,7 +16026,7 @@ func (a *IndicesAPIService) IndexApacheStrutsGetExecute(r ApiIndexApacheStrutsGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-struts"
+	localVarPath := localBasePath + "/v3/index/apache-struts"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -16411,7 +16411,7 @@ func (a *IndicesAPIService) IndexApacheSubversionGetExecute(r ApiIndexApacheSubv
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-subversion"
+	localVarPath := localBasePath + "/v3/index/apache-subversion"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -16796,7 +16796,7 @@ func (a *IndicesAPIService) IndexApacheSupersetGetExecute(r ApiIndexApacheSupers
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-superset"
+	localVarPath := localBasePath + "/v3/index/apache-superset"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -17181,7 +17181,7 @@ func (a *IndicesAPIService) IndexApacheTomcatGetExecute(r ApiIndexApacheTomcatGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-tomcat"
+	localVarPath := localBasePath + "/v3/index/apache-tomcat"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -17566,7 +17566,7 @@ func (a *IndicesAPIService) IndexApacheZookeeperGetExecute(r ApiIndexApacheZooke
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apache-zookeeper"
+	localVarPath := localBasePath + "/v3/index/apache-zookeeper"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -17951,7 +17951,7 @@ func (a *IndicesAPIService) IndexAppcheckGetExecute(r ApiIndexAppcheckGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/appcheck"
+	localVarPath := localBasePath + "/v3/index/appcheck"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -18336,7 +18336,7 @@ func (a *IndicesAPIService) IndexAppgateGetExecute(r ApiIndexAppgateGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/appgate"
+	localVarPath := localBasePath + "/v3/index/appgate"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -18721,7 +18721,7 @@ func (a *IndicesAPIService) IndexAppleGetExecute(r ApiIndexAppleGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/apple"
+	localVarPath := localBasePath + "/v3/index/apple"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -19106,7 +19106,7 @@ func (a *IndicesAPIService) IndexArchGetExecute(r ApiIndexArchGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/arch"
+	localVarPath := localBasePath + "/v3/index/arch"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -19491,7 +19491,7 @@ func (a *IndicesAPIService) IndexAristaGetExecute(r ApiIndexAristaGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/arista"
+	localVarPath := localBasePath + "/v3/index/arista"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -19876,7 +19876,7 @@ func (a *IndicesAPIService) IndexArubaGetExecute(r ApiIndexArubaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/aruba"
+	localVarPath := localBasePath + "/v3/index/aruba"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -20261,7 +20261,7 @@ func (a *IndicesAPIService) IndexAsrgGetExecute(r ApiIndexAsrgGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/asrg"
+	localVarPath := localBasePath + "/v3/index/asrg"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -20646,7 +20646,7 @@ func (a *IndicesAPIService) IndexAssetnoteGetExecute(r ApiIndexAssetnoteGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/assetnote"
+	localVarPath := localBasePath + "/v3/index/assetnote"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -21031,7 +21031,7 @@ func (a *IndicesAPIService) IndexAsteriskGetExecute(r ApiIndexAsteriskGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/asterisk"
+	localVarPath := localBasePath + "/v3/index/asterisk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -21416,7 +21416,7 @@ func (a *IndicesAPIService) IndexAstraGetExecute(r ApiIndexAstraGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/astra"
+	localVarPath := localBasePath + "/v3/index/astra"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -21801,7 +21801,7 @@ func (a *IndicesAPIService) IndexAsusGetExecute(r ApiIndexAsusGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/asus"
+	localVarPath := localBasePath + "/v3/index/asus"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -22186,7 +22186,7 @@ func (a *IndicesAPIService) IndexAtlassianGetExecute(r ApiIndexAtlassianGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/atlassian"
+	localVarPath := localBasePath + "/v3/index/atlassian"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -22571,7 +22571,7 @@ func (a *IndicesAPIService) IndexAtlassianVulnsGetExecute(r ApiIndexAtlassianVul
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/atlassian-vulns"
+	localVarPath := localBasePath + "/v3/index/atlassian-vulns"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -22956,7 +22956,7 @@ func (a *IndicesAPIService) IndexAtredisGetExecute(r ApiIndexAtredisGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/atredis"
+	localVarPath := localBasePath + "/v3/index/atredis"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -23341,7 +23341,7 @@ func (a *IndicesAPIService) IndexAudiocodesGetExecute(r ApiIndexAudiocodesGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/audiocodes"
+	localVarPath := localBasePath + "/v3/index/audiocodes"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -23726,7 +23726,7 @@ func (a *IndicesAPIService) IndexAuscertGetExecute(r ApiIndexAuscertGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/auscert"
+	localVarPath := localBasePath + "/v3/index/auscert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -24111,7 +24111,7 @@ func (a *IndicesAPIService) IndexAutodeskGetExecute(r ApiIndexAutodeskGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/autodesk"
+	localVarPath := localBasePath + "/v3/index/autodesk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -24496,7 +24496,7 @@ func (a *IndicesAPIService) IndexAvayaGetExecute(r ApiIndexAvayaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/avaya"
+	localVarPath := localBasePath + "/v3/index/avaya"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -24881,7 +24881,7 @@ func (a *IndicesAPIService) IndexAvevaGetExecute(r ApiIndexAvevaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/aveva"
+	localVarPath := localBasePath + "/v3/index/aveva"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -25266,7 +25266,7 @@ func (a *IndicesAPIService) IndexAvidmlAdvsGetExecute(r ApiIndexAvidmlAdvsGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/avidml-advs"
+	localVarPath := localBasePath + "/v3/index/avidml-advs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -25651,7 +25651,7 @@ func (a *IndicesAPIService) IndexAvigilonGetExecute(r ApiIndexAvigilonGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/avigilon"
+	localVarPath := localBasePath + "/v3/index/avigilon"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -26036,7 +26036,7 @@ func (a *IndicesAPIService) IndexAwsGetExecute(r ApiIndexAwsGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/aws"
+	localVarPath := localBasePath + "/v3/index/aws"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -26421,7 +26421,7 @@ func (a *IndicesAPIService) IndexAxisGetExecute(r ApiIndexAxisGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/axis"
+	localVarPath := localBasePath + "/v3/index/axis"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -26806,7 +26806,7 @@ func (a *IndicesAPIService) IndexAzulGetExecute(r ApiIndexAzulGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/azul"
+	localVarPath := localBasePath + "/v3/index/azul"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -27191,7 +27191,7 @@ func (a *IndicesAPIService) IndexBandrGetExecute(r ApiIndexBandrGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bandr"
+	localVarPath := localBasePath + "/v3/index/bandr"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -27576,7 +27576,7 @@ func (a *IndicesAPIService) IndexBaxterGetExecute(r ApiIndexBaxterGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/baxter"
+	localVarPath := localBasePath + "/v3/index/baxter"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -27961,7 +27961,7 @@ func (a *IndicesAPIService) IndexBbraunGetExecute(r ApiIndexBbraunGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bbraun"
+	localVarPath := localBasePath + "/v3/index/bbraun"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -28346,7 +28346,7 @@ func (a *IndicesAPIService) IndexBdGetExecute(r ApiIndexBdGetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bd"
+	localVarPath := localBasePath + "/v3/index/bd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -28731,7 +28731,7 @@ func (a *IndicesAPIService) IndexBduGetExecute(r ApiIndexBduGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bdu"
+	localVarPath := localBasePath + "/v3/index/bdu"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -29116,7 +29116,7 @@ func (a *IndicesAPIService) IndexBeckhoffGetExecute(r ApiIndexBeckhoffGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/beckhoff"
+	localVarPath := localBasePath + "/v3/index/beckhoff"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -29501,7 +29501,7 @@ func (a *IndicesAPIService) IndexBeckmanCoulterGetExecute(r ApiIndexBeckmanCoult
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/beckman-coulter"
+	localVarPath := localBasePath + "/v3/index/beckman-coulter"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -29886,7 +29886,7 @@ func (a *IndicesAPIService) IndexBeldenGetExecute(r ApiIndexBeldenGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/belden"
+	localVarPath := localBasePath + "/v3/index/belden"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -30271,7 +30271,7 @@ func (a *IndicesAPIService) IndexBeyondTrustGetExecute(r ApiIndexBeyondTrustGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/beyond-trust"
+	localVarPath := localBasePath + "/v3/index/beyond-trust"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -30656,7 +30656,7 @@ func (a *IndicesAPIService) IndexBinarlyGetExecute(r ApiIndexBinarlyGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/binarly"
+	localVarPath := localBasePath + "/v3/index/binarly"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -31041,7 +31041,7 @@ func (a *IndicesAPIService) IndexBitdefenderGetExecute(r ApiIndexBitdefenderGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bitdefender"
+	localVarPath := localBasePath + "/v3/index/bitdefender"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -31426,7 +31426,7 @@ func (a *IndicesAPIService) IndexBlackberryGetExecute(r ApiIndexBlackberryGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/blackberry"
+	localVarPath := localBasePath + "/v3/index/blackberry"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -31811,7 +31811,7 @@ func (a *IndicesAPIService) IndexBlsGetExecute(r ApiIndexBlsGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bls"
+	localVarPath := localBasePath + "/v3/index/bls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -32196,7 +32196,7 @@ func (a *IndicesAPIService) IndexBoschGetExecute(r ApiIndexBoschGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/bosch"
+	localVarPath := localBasePath + "/v3/index/bosch"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -32581,7 +32581,7 @@ func (a *IndicesAPIService) IndexBostonScientificGetExecute(r ApiIndexBostonScie
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/boston-scientific"
+	localVarPath := localBasePath + "/v3/index/boston-scientific"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -32966,7 +32966,7 @@ func (a *IndicesAPIService) IndexBotnetsGetExecute(r ApiIndexBotnetsGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/botnets"
+	localVarPath := localBasePath + "/v3/index/botnets"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -33351,7 +33351,7 @@ func (a *IndicesAPIService) IndexCaCyberCentreGetExecute(r ApiIndexCaCyberCentre
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ca-cyber-centre"
+	localVarPath := localBasePath + "/v3/index/ca-cyber-centre"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -33736,7 +33736,7 @@ func (a *IndicesAPIService) IndexCanvasGetExecute(r ApiIndexCanvasGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/canvas"
+	localVarPath := localBasePath + "/v3/index/canvas"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -34121,7 +34121,7 @@ func (a *IndicesAPIService) IndexCarestreamGetExecute(r ApiIndexCarestreamGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/carestream"
+	localVarPath := localBasePath + "/v3/index/carestream"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -34506,7 +34506,7 @@ func (a *IndicesAPIService) IndexCargoGetExecute(r ApiIndexCargoGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cargo"
+	localVarPath := localBasePath + "/v3/index/cargo"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -34891,7 +34891,7 @@ func (a *IndicesAPIService) IndexCarrierGetExecute(r ApiIndexCarrierGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/carrier"
+	localVarPath := localBasePath + "/v3/index/carrier"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -35276,7 +35276,7 @@ func (a *IndicesAPIService) IndexCblMarinerGetExecute(r ApiIndexCblMarinerGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cbl-mariner"
+	localVarPath := localBasePath + "/v3/index/cbl-mariner"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -35661,7 +35661,7 @@ func (a *IndicesAPIService) IndexCentosGetExecute(r ApiIndexCentosGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/centos"
+	localVarPath := localBasePath + "/v3/index/centos"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -36046,7 +36046,7 @@ func (a *IndicesAPIService) IndexCertBeGetExecute(r ApiIndexCertBeGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cert-be"
+	localVarPath := localBasePath + "/v3/index/cert-be"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -36431,7 +36431,7 @@ func (a *IndicesAPIService) IndexCertInGetExecute(r ApiIndexCertInGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cert-in"
+	localVarPath := localBasePath + "/v3/index/cert-in"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -36816,7 +36816,7 @@ func (a *IndicesAPIService) IndexCertIrSecurityAlertsGetExecute(r ApiIndexCertIr
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cert-ir-security-alerts"
+	localVarPath := localBasePath + "/v3/index/cert-ir-security-alerts"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -37201,7 +37201,7 @@ func (a *IndicesAPIService) IndexCertSeGetExecute(r ApiIndexCertSeGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cert-se"
+	localVarPath := localBasePath + "/v3/index/cert-se"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -37586,7 +37586,7 @@ func (a *IndicesAPIService) IndexCertUaGetExecute(r ApiIndexCertUaGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cert-ua"
+	localVarPath := localBasePath + "/v3/index/cert-ua"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -37971,7 +37971,7 @@ func (a *IndicesAPIService) IndexCerteuGetExecute(r ApiIndexCerteuGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/certeu"
+	localVarPath := localBasePath + "/v3/index/certeu"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -38356,7 +38356,7 @@ func (a *IndicesAPIService) IndexCertfrGetExecute(r ApiIndexCertfrGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/certfr"
+	localVarPath := localBasePath + "/v3/index/certfr"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -38741,7 +38741,7 @@ func (a *IndicesAPIService) IndexChainguardGetExecute(r ApiIndexChainguardGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/chainguard"
+	localVarPath := localBasePath + "/v3/index/chainguard"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -39126,7 +39126,7 @@ func (a *IndicesAPIService) IndexCheckpointGetExecute(r ApiIndexCheckpointGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/checkpoint"
+	localVarPath := localBasePath + "/v3/index/checkpoint"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -39511,7 +39511,7 @@ func (a *IndicesAPIService) IndexChromeGetExecute(r ApiIndexChromeGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/chrome"
+	localVarPath := localBasePath + "/v3/index/chrome"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -39896,7 +39896,7 @@ func (a *IndicesAPIService) IndexCienaGetExecute(r ApiIndexCienaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ciena"
+	localVarPath := localBasePath + "/v3/index/ciena"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -40281,7 +40281,7 @@ func (a *IndicesAPIService) IndexCisaAlertsGetExecute(r ApiIndexCisaAlertsGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisa-alerts"
+	localVarPath := localBasePath + "/v3/index/cisa-alerts"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -40666,7 +40666,7 @@ func (a *IndicesAPIService) IndexCisaCsafGetExecute(r ApiIndexCisaCsafGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisa-csaf"
+	localVarPath := localBasePath + "/v3/index/cisa-csaf"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -41051,7 +41051,7 @@ func (a *IndicesAPIService) IndexCisaKevGetExecute(r ApiIndexCisaKevGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisa-kev"
+	localVarPath := localBasePath + "/v3/index/cisa-kev"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -41436,7 +41436,7 @@ func (a *IndicesAPIService) IndexCiscoCsafGetExecute(r ApiIndexCiscoCsafGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisco-csaf"
+	localVarPath := localBasePath + "/v3/index/cisco-csaf"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -41821,7 +41821,7 @@ func (a *IndicesAPIService) IndexCiscoGetExecute(r ApiIndexCiscoGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisco"
+	localVarPath := localBasePath + "/v3/index/cisco"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -42206,7 +42206,7 @@ func (a *IndicesAPIService) IndexCiscoKnownGoodValuesGetExecute(r ApiIndexCiscoK
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisco-known-good-values"
+	localVarPath := localBasePath + "/v3/index/cisco-known-good-values"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -42591,7 +42591,7 @@ func (a *IndicesAPIService) IndexCiscoTalosGetExecute(r ApiIndexCiscoTalosGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cisco-talos"
+	localVarPath := localBasePath + "/v3/index/cisco-talos"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -42976,7 +42976,7 @@ func (a *IndicesAPIService) IndexCitrixGetExecute(r ApiIndexCitrixGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/citrix"
+	localVarPath := localBasePath + "/v3/index/citrix"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -43361,7 +43361,7 @@ func (a *IndicesAPIService) IndexClarotyGetExecute(r ApiIndexClarotyGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/claroty"
+	localVarPath := localBasePath + "/v3/index/claroty"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -43746,7 +43746,7 @@ func (a *IndicesAPIService) IndexCloudbeesGetExecute(r ApiIndexCloudbeesGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cloudbees"
+	localVarPath := localBasePath + "/v3/index/cloudbees"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -44131,7 +44131,7 @@ func (a *IndicesAPIService) IndexCloudvulndbGetExecute(r ApiIndexCloudvulndbGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cloudvulndb"
+	localVarPath := localBasePath + "/v3/index/cloudvulndb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -44516,7 +44516,7 @@ func (a *IndicesAPIService) IndexCnnvdGetExecute(r ApiIndexCnnvdGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cnnvd"
+	localVarPath := localBasePath + "/v3/index/cnnvd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -44901,7 +44901,7 @@ func (a *IndicesAPIService) IndexCnvdBulletinsGetExecute(r ApiIndexCnvdBulletins
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cnvd-bulletins"
+	localVarPath := localBasePath + "/v3/index/cnvd-bulletins"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -45286,7 +45286,7 @@ func (a *IndicesAPIService) IndexCnvdFlawsGetExecute(r ApiIndexCnvdFlawsGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cnvd-flaws"
+	localVarPath := localBasePath + "/v3/index/cnvd-flaws"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -45671,7 +45671,7 @@ func (a *IndicesAPIService) IndexCocoapodsGetExecute(r ApiIndexCocoapodsGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cocoapods"
+	localVarPath := localBasePath + "/v3/index/cocoapods"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -46056,7 +46056,7 @@ func (a *IndicesAPIService) IndexCodesysGetExecute(r ApiIndexCodesysGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/codesys"
+	localVarPath := localBasePath + "/v3/index/codesys"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -46441,7 +46441,7 @@ func (a *IndicesAPIService) IndexCommvaultGetExecute(r ApiIndexCommvaultGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/commvault"
+	localVarPath := localBasePath + "/v3/index/commvault"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -46826,7 +46826,7 @@ func (a *IndicesAPIService) IndexCompassSecurityGetExecute(r ApiIndexCompassSecu
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/compass-security"
+	localVarPath := localBasePath + "/v3/index/compass-security"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -47211,7 +47211,7 @@ func (a *IndicesAPIService) IndexComposerGetExecute(r ApiIndexComposerGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/composer"
+	localVarPath := localBasePath + "/v3/index/composer"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -47596,7 +47596,7 @@ func (a *IndicesAPIService) IndexConanGetExecute(r ApiIndexConanGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/conan"
+	localVarPath := localBasePath + "/v3/index/conan"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -47981,7 +47981,7 @@ func (a *IndicesAPIService) IndexCoreimpactGetExecute(r ApiIndexCoreimpactGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/coreimpact"
+	localVarPath := localBasePath + "/v3/index/coreimpact"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -48366,7 +48366,7 @@ func (a *IndicesAPIService) IndexCpeVulnerableGetExecute(r ApiIndexCpeVulnerable
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cpe-vulnerable"
+	localVarPath := localBasePath + "/v3/index/cpe-vulnerable"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -48751,7 +48751,7 @@ func (a *IndicesAPIService) IndexCrestronGetExecute(r ApiIndexCrestronGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/crestron"
+	localVarPath := localBasePath + "/v3/index/crestron"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -49136,7 +49136,7 @@ func (a *IndicesAPIService) IndexCrowdsecGetExecute(r ApiIndexCrowdsecGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/crowdsec"
+	localVarPath := localBasePath + "/v3/index/crowdsec"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -49521,7 +49521,7 @@ func (a *IndicesAPIService) IndexCurlGetExecute(r ApiIndexCurlGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/curl"
+	localVarPath := localBasePath + "/v3/index/curl"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -49906,7 +49906,7 @@ func (a *IndicesAPIService) IndexCweGetExecute(r ApiIndexCweGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/cwe"
+	localVarPath := localBasePath + "/v3/index/cwe"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -50291,7 +50291,7 @@ func (a *IndicesAPIService) IndexDahuaGetExecute(r ApiIndexDahuaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dahua"
+	localVarPath := localBasePath + "/v3/index/dahua"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -50676,7 +50676,7 @@ func (a *IndicesAPIService) IndexDanfossGetExecute(r ApiIndexDanfossGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/danfoss"
+	localVarPath := localBasePath + "/v3/index/danfoss"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -51061,7 +51061,7 @@ func (a *IndicesAPIService) IndexDassaultGetExecute(r ApiIndexDassaultGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dassault"
+	localVarPath := localBasePath + "/v3/index/dassault"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -51446,7 +51446,7 @@ func (a *IndicesAPIService) IndexDebianDsaGetExecute(r ApiIndexDebianDsaGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/debian-dsa"
+	localVarPath := localBasePath + "/v3/index/debian-dsa"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -51831,7 +51831,7 @@ func (a *IndicesAPIService) IndexDebianGetExecute(r ApiIndexDebianGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/debian"
+	localVarPath := localBasePath + "/v3/index/debian"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -52216,7 +52216,7 @@ func (a *IndicesAPIService) IndexDebianPackagesGetExecute(r ApiIndexDebianPackag
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/debian-packages"
+	localVarPath := localBasePath + "/v3/index/debian-packages"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -52601,7 +52601,7 @@ func (a *IndicesAPIService) IndexDebianPurlsGetExecute(r ApiIndexDebianPurlsGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/debian-purls"
+	localVarPath := localBasePath + "/v3/index/debian-purls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -52986,7 +52986,7 @@ func (a *IndicesAPIService) IndexDellGetExecute(r ApiIndexDellGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dell"
+	localVarPath := localBasePath + "/v3/index/dell"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -53371,7 +53371,7 @@ func (a *IndicesAPIService) IndexDeltaGetExecute(r ApiIndexDeltaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/delta"
+	localVarPath := localBasePath + "/v3/index/delta"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -53756,7 +53756,7 @@ func (a *IndicesAPIService) IndexDfnCertGetExecute(r ApiIndexDfnCertGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dfn-cert"
+	localVarPath := localBasePath + "/v3/index/dfn-cert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -54141,7 +54141,7 @@ func (a *IndicesAPIService) IndexDjangoGetExecute(r ApiIndexDjangoGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/django"
+	localVarPath := localBasePath + "/v3/index/django"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -54526,7 +54526,7 @@ func (a *IndicesAPIService) IndexDlinkGetExecute(r ApiIndexDlinkGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dlink"
+	localVarPath := localBasePath + "/v3/index/dlink"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -54911,7 +54911,7 @@ func (a *IndicesAPIService) IndexDnnGetExecute(r ApiIndexDnnGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dnn"
+	localVarPath := localBasePath + "/v3/index/dnn"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -55296,7 +55296,7 @@ func (a *IndicesAPIService) IndexDotcmsGetExecute(r ApiIndexDotcmsGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dotcms"
+	localVarPath := localBasePath + "/v3/index/dotcms"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -55681,7 +55681,7 @@ func (a *IndicesAPIService) IndexDragosGetExecute(r ApiIndexDragosGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/dragos"
+	localVarPath := localBasePath + "/v3/index/dragos"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -56066,7 +56066,7 @@ func (a *IndicesAPIService) IndexDraytekGetExecute(r ApiIndexDraytekGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/draytek"
+	localVarPath := localBasePath + "/v3/index/draytek"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -56451,7 +56451,7 @@ func (a *IndicesAPIService) IndexDrupalGetExecute(r ApiIndexDrupalGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/drupal"
+	localVarPath := localBasePath + "/v3/index/drupal"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -56836,7 +56836,7 @@ func (a *IndicesAPIService) IndexEatonGetExecute(r ApiIndexEatonGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/eaton"
+	localVarPath := localBasePath + "/v3/index/eaton"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -57221,7 +57221,7 @@ func (a *IndicesAPIService) IndexElasticGetExecute(r ApiIndexElasticGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/elastic"
+	localVarPath := localBasePath + "/v3/index/elastic"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -57606,7 +57606,7 @@ func (a *IndicesAPIService) IndexElspecGetExecute(r ApiIndexElspecGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/elspec"
+	localVarPath := localBasePath + "/v3/index/elspec"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -57991,7 +57991,7 @@ func (a *IndicesAPIService) IndexEmergingThreatsSnortGetExecute(r ApiIndexEmergi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/emerging-threats-snort"
+	localVarPath := localBasePath + "/v3/index/emerging-threats-snort"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -58376,7 +58376,7 @@ func (a *IndicesAPIService) IndexEmersonGetExecute(r ApiIndexEmersonGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/emerson"
+	localVarPath := localBasePath + "/v3/index/emerson"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -58761,7 +58761,7 @@ func (a *IndicesAPIService) IndexEndoflifeGetExecute(r ApiIndexEndoflifeGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/endoflife"
+	localVarPath := localBasePath + "/v3/index/endoflife"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -59146,7 +59146,7 @@ func (a *IndicesAPIService) IndexEndressGetExecute(r ApiIndexEndressGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/endress"
+	localVarPath := localBasePath + "/v3/index/endress"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -59531,7 +59531,7 @@ func (a *IndicesAPIService) IndexEolAlibabaGetExecute(r ApiIndexEolAlibabaGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/eol-alibaba"
+	localVarPath := localBasePath + "/v3/index/eol-alibaba"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -59916,7 +59916,7 @@ func (a *IndicesAPIService) IndexEolGetExecute(r ApiIndexEolGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/eol"
+	localVarPath := localBasePath + "/v3/index/eol"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -60301,7 +60301,7 @@ func (a *IndicesAPIService) IndexEolMicrosoftGetExecute(r ApiIndexEolMicrosoftGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/eol-microsoft"
+	localVarPath := localBasePath + "/v3/index/eol-microsoft"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -60686,7 +60686,7 @@ func (a *IndicesAPIService) IndexEpssGetExecute(r ApiIndexEpssGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/epss"
+	localVarPath := localBasePath + "/v3/index/epss"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -61071,7 +61071,7 @@ func (a *IndicesAPIService) IndexEuvdGetExecute(r ApiIndexEuvdGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/euvd"
+	localVarPath := localBasePath + "/v3/index/euvd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -61456,7 +61456,7 @@ func (a *IndicesAPIService) IndexExodusIntelGetExecute(r ApiIndexExodusIntelGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/exodus-intel"
+	localVarPath := localBasePath + "/v3/index/exodus-intel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -61841,7 +61841,7 @@ func (a *IndicesAPIService) IndexExploitChainsGetExecute(r ApiIndexExploitChains
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/exploit-chains"
+	localVarPath := localBasePath + "/v3/index/exploit-chains"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -62226,7 +62226,7 @@ func (a *IndicesAPIService) IndexExploitdbGetExecute(r ApiIndexExploitdbGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/exploitdb"
+	localVarPath := localBasePath + "/v3/index/exploitdb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -62611,7 +62611,7 @@ func (a *IndicesAPIService) IndexExploitsChangelogGetExecute(r ApiIndexExploitsC
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/exploits-changelog"
+	localVarPath := localBasePath + "/v3/index/exploits-changelog"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -62996,7 +62996,7 @@ func (a *IndicesAPIService) IndexExploitsGetExecute(r ApiIndexExploitsGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/exploits"
+	localVarPath := localBasePath + "/v3/index/exploits"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -63381,7 +63381,7 @@ func (a *IndicesAPIService) IndexF5GetExecute(r ApiIndexF5GetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/f5"
+	localVarPath := localBasePath + "/v3/index/f5"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -63766,7 +63766,7 @@ func (a *IndicesAPIService) IndexFSecureGetExecute(r ApiIndexFSecureGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/f-secure"
+	localVarPath := localBasePath + "/v3/index/f-secure"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -64151,7 +64151,7 @@ func (a *IndicesAPIService) IndexFanucGetExecute(r ApiIndexFanucGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/fanuc"
+	localVarPath := localBasePath + "/v3/index/fanuc"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -64536,7 +64536,7 @@ func (a *IndicesAPIService) IndexFastlyGetExecute(r ApiIndexFastlyGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/fastly"
+	localVarPath := localBasePath + "/v3/index/fastly"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -64921,7 +64921,7 @@ func (a *IndicesAPIService) IndexFedoraGetExecute(r ApiIndexFedoraGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/fedora"
+	localVarPath := localBasePath + "/v3/index/fedora"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -65306,7 +65306,7 @@ func (a *IndicesAPIService) IndexFestoGetExecute(r ApiIndexFestoGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/festo"
+	localVarPath := localBasePath + "/v3/index/festo"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -65691,7 +65691,7 @@ func (a *IndicesAPIService) IndexFilecloudGetExecute(r ApiIndexFilecloudGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/filecloud"
+	localVarPath := localBasePath + "/v3/index/filecloud"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -66076,7 +66076,7 @@ func (a *IndicesAPIService) IndexFilezillaGetExecute(r ApiIndexFilezillaGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/filezilla"
+	localVarPath := localBasePath + "/v3/index/filezilla"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -66461,7 +66461,7 @@ func (a *IndicesAPIService) IndexFlattSecurityGetExecute(r ApiIndexFlattSecurity
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/flatt-security"
+	localVarPath := localBasePath + "/v3/index/flatt-security"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -66846,7 +66846,7 @@ func (a *IndicesAPIService) IndexForgerockGetExecute(r ApiIndexForgerockGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/forgerock"
+	localVarPath := localBasePath + "/v3/index/forgerock"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -67231,7 +67231,7 @@ func (a *IndicesAPIService) IndexFortinetGetExecute(r ApiIndexFortinetGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/fortinet"
+	localVarPath := localBasePath + "/v3/index/fortinet"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -67616,7 +67616,7 @@ func (a *IndicesAPIService) IndexFortinetIpsGetExecute(r ApiIndexFortinetIpsGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/fortinet-ips"
+	localVarPath := localBasePath + "/v3/index/fortinet-ips"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -68001,7 +68001,7 @@ func (a *IndicesAPIService) IndexFoxitGetExecute(r ApiIndexFoxitGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/foxit"
+	localVarPath := localBasePath + "/v3/index/foxit"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -68386,7 +68386,7 @@ func (a *IndicesAPIService) IndexFreebsdGetExecute(r ApiIndexFreebsdGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/freebsd"
+	localVarPath := localBasePath + "/v3/index/freebsd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -68771,7 +68771,7 @@ func (a *IndicesAPIService) IndexFreseniusGetExecute(r ApiIndexFreseniusGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/fresenius"
+	localVarPath := localBasePath + "/v3/index/fresenius"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -69156,7 +69156,7 @@ func (a *IndicesAPIService) IndexGallagherGetExecute(r ApiIndexGallagherGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gallagher"
+	localVarPath := localBasePath + "/v3/index/gallagher"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -69541,7 +69541,7 @@ func (a *IndicesAPIService) IndexGcpGetExecute(r ApiIndexGcpGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gcp"
+	localVarPath := localBasePath + "/v3/index/gcp"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -69926,7 +69926,7 @@ func (a *IndicesAPIService) IndexGeGasGetExecute(r ApiIndexGeGasGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ge-gas"
+	localVarPath := localBasePath + "/v3/index/ge-gas"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -70311,7 +70311,7 @@ func (a *IndicesAPIService) IndexGeHealthcareGetExecute(r ApiIndexGeHealthcareGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ge-healthcare"
+	localVarPath := localBasePath + "/v3/index/ge-healthcare"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -70696,7 +70696,7 @@ func (a *IndicesAPIService) IndexGemGetExecute(r ApiIndexGemGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gem"
+	localVarPath := localBasePath + "/v3/index/gem"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -71081,7 +71081,7 @@ func (a *IndicesAPIService) IndexGenGetExecute(r ApiIndexGenGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gen"
+	localVarPath := localBasePath + "/v3/index/gen"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -71466,7 +71466,7 @@ func (a *IndicesAPIService) IndexGenetecGetExecute(r ApiIndexGenetecGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/genetec"
+	localVarPath := localBasePath + "/v3/index/genetec"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -71851,7 +71851,7 @@ func (a *IndicesAPIService) IndexGhsaGetExecute(r ApiIndexGhsaGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ghsa"
+	localVarPath := localBasePath + "/v3/index/ghsa"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -72236,7 +72236,7 @@ func (a *IndicesAPIService) IndexGigabyteGetExecute(r ApiIndexGigabyteGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gigabyte"
+	localVarPath := localBasePath + "/v3/index/gigabyte"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -72621,7 +72621,7 @@ func (a *IndicesAPIService) IndexGiteeExploitsGetExecute(r ApiIndexGiteeExploits
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gitee-exploits"
+	localVarPath := localBasePath + "/v3/index/gitee-exploits"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -73006,7 +73006,7 @@ func (a *IndicesAPIService) IndexGithubExploitsGetExecute(r ApiIndexGithubExploi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/github-exploits"
+	localVarPath := localBasePath + "/v3/index/github-exploits"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -73391,7 +73391,7 @@ func (a *IndicesAPIService) IndexGithubSecurityAdvisoriesGetExecute(r ApiIndexGi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/github-security-advisories"
+	localVarPath := localBasePath + "/v3/index/github-security-advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -73776,7 +73776,7 @@ func (a *IndicesAPIService) IndexGitlabAdvisoriesCommunityGetExecute(r ApiIndexG
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gitlab-advisories-community"
+	localVarPath := localBasePath + "/v3/index/gitlab-advisories-community"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -74161,7 +74161,7 @@ func (a *IndicesAPIService) IndexGitlabExploitsGetExecute(r ApiIndexGitlabExploi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gitlab-exploits"
+	localVarPath := localBasePath + "/v3/index/gitlab-exploits"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -74546,7 +74546,7 @@ func (a *IndicesAPIService) IndexGlibcGetExecute(r ApiIndexGlibcGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/glibc"
+	localVarPath := localBasePath + "/v3/index/glibc"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -74931,7 +74931,7 @@ func (a *IndicesAPIService) IndexGmoCybersecurityGetExecute(r ApiIndexGmoCyberse
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gmo-cybersecurity"
+	localVarPath := localBasePath + "/v3/index/gmo-cybersecurity"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -75316,7 +75316,7 @@ func (a *IndicesAPIService) IndexGnutlsGetExecute(r ApiIndexGnutlsGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/gnutls"
+	localVarPath := localBasePath + "/v3/index/gnutls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -75701,7 +75701,7 @@ func (a *IndicesAPIService) IndexGoVulndbGetExecute(r ApiIndexGoVulndbGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/go-vulndb"
+	localVarPath := localBasePath + "/v3/index/go-vulndb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -76086,7 +76086,7 @@ func (a *IndicesAPIService) IndexGolangGetExecute(r ApiIndexGolangGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/golang"
+	localVarPath := localBasePath + "/v3/index/golang"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -76471,7 +76471,7 @@ func (a *IndicesAPIService) IndexGoogle0dayItwGetExecute(r ApiIndexGoogle0dayItw
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/google-0day-itw"
+	localVarPath := localBasePath + "/v3/index/google-0day-itw"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -76856,7 +76856,7 @@ func (a *IndicesAPIService) IndexGoogleContainerOptimizedOsGetExecute(r ApiIndex
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/google-container-optimized-os"
+	localVarPath := localBasePath + "/v3/index/google-container-optimized-os"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -77241,7 +77241,7 @@ func (a *IndicesAPIService) IndexGrafanaGetExecute(r ApiIndexGrafanaGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/grafana"
+	localVarPath := localBasePath + "/v3/index/grafana"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -77626,7 +77626,7 @@ func (a *IndicesAPIService) IndexGreynoiseMetadataGetExecute(r ApiIndexGreynoise
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/greynoise-metadata"
+	localVarPath := localBasePath + "/v3/index/greynoise-metadata"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -78011,7 +78011,7 @@ func (a *IndicesAPIService) IndexHackageGetExecute(r ApiIndexHackageGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hackage"
+	localVarPath := localBasePath + "/v3/index/hackage"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -78396,7 +78396,7 @@ func (a *IndicesAPIService) IndexHacktivityGetExecute(r ApiIndexHacktivityGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hacktivity"
+	localVarPath := localBasePath + "/v3/index/hacktivity"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -78781,7 +78781,7 @@ func (a *IndicesAPIService) IndexHarmonyosGetExecute(r ApiIndexHarmonyosGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/harmonyos"
+	localVarPath := localBasePath + "/v3/index/harmonyos"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -79166,7 +79166,7 @@ func (a *IndicesAPIService) IndexHashicorpGetExecute(r ApiIndexHashicorpGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hashicorp"
+	localVarPath := localBasePath + "/v3/index/hashicorp"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -79551,7 +79551,7 @@ func (a *IndicesAPIService) IndexHaskellSadbGetExecute(r ApiIndexHaskellSadbGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/haskell-sadb"
+	localVarPath := localBasePath + "/v3/index/haskell-sadb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -79936,7 +79936,7 @@ func (a *IndicesAPIService) IndexHclGetExecute(r ApiIndexHclGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hcl"
+	localVarPath := localBasePath + "/v3/index/hcl"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -80321,7 +80321,7 @@ func (a *IndicesAPIService) IndexHexGetExecute(r ApiIndexHexGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hex"
+	localVarPath := localBasePath + "/v3/index/hex"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -80706,7 +80706,7 @@ func (a *IndicesAPIService) IndexHikvisionGetExecute(r ApiIndexHikvisionGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hikvision"
+	localVarPath := localBasePath + "/v3/index/hikvision"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -81091,7 +81091,7 @@ func (a *IndicesAPIService) IndexHillromGetExecute(r ApiIndexHillromGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hillrom"
+	localVarPath := localBasePath + "/v3/index/hillrom"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -81476,7 +81476,7 @@ func (a *IndicesAPIService) IndexHitachiEnergyGetExecute(r ApiIndexHitachiEnergy
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hitachi-energy"
+	localVarPath := localBasePath + "/v3/index/hitachi-energy"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -81861,7 +81861,7 @@ func (a *IndicesAPIService) IndexHitachiGetExecute(r ApiIndexHitachiGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hitachi"
+	localVarPath := localBasePath + "/v3/index/hitachi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -82246,7 +82246,7 @@ func (a *IndicesAPIService) IndexHkcertGetExecute(r ApiIndexHkcertGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hkcert"
+	localVarPath := localBasePath + "/v3/index/hkcert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -82631,7 +82631,7 @@ func (a *IndicesAPIService) IndexHmsGetExecute(r ApiIndexHmsGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hms"
+	localVarPath := localBasePath + "/v3/index/hms"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -83016,7 +83016,7 @@ func (a *IndicesAPIService) IndexHoneywellGetExecute(r ApiIndexHoneywellGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/honeywell"
+	localVarPath := localBasePath + "/v3/index/honeywell"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -83401,7 +83401,7 @@ func (a *IndicesAPIService) IndexHpGetExecute(r ApiIndexHpGetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hp"
+	localVarPath := localBasePath + "/v3/index/hp"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -83786,7 +83786,7 @@ func (a *IndicesAPIService) IndexHpeGetExecute(r ApiIndexHpeGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/hpe"
+	localVarPath := localBasePath + "/v3/index/hpe"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -84171,7 +84171,7 @@ func (a *IndicesAPIService) IndexHuaweiEulerosGetExecute(r ApiIndexHuaweiEuleros
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/huawei-euleros"
+	localVarPath := localBasePath + "/v3/index/huawei-euleros"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -84556,7 +84556,7 @@ func (a *IndicesAPIService) IndexHuaweiIpsGetExecute(r ApiIndexHuaweiIpsGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/huawei-ips"
+	localVarPath := localBasePath + "/v3/index/huawei-ips"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -84941,7 +84941,7 @@ func (a *IndicesAPIService) IndexHuaweiPsirtGetExecute(r ApiIndexHuaweiPsirtGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/huawei-psirt"
+	localVarPath := localBasePath + "/v3/index/huawei-psirt"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -85326,7 +85326,7 @@ func (a *IndicesAPIService) IndexIavaGetExecute(r ApiIndexIavaGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/iava"
+	localVarPath := localBasePath + "/v3/index/iava"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -85711,7 +85711,7 @@ func (a *IndicesAPIService) IndexIbmGetExecute(r ApiIndexIbmGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ibm"
+	localVarPath := localBasePath + "/v3/index/ibm"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -86096,7 +86096,7 @@ func (a *IndicesAPIService) IndexIdemiaGetExecute(r ApiIndexIdemiaGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/idemia"
+	localVarPath := localBasePath + "/v3/index/idemia"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -86481,7 +86481,7 @@ func (a *IndicesAPIService) IndexIgelGetExecute(r ApiIndexIgelGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/igel"
+	localVarPath := localBasePath + "/v3/index/igel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -86866,7 +86866,7 @@ func (a *IndicesAPIService) IndexIlAlertsGetExecute(r ApiIndexIlAlertsGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/il-alerts"
+	localVarPath := localBasePath + "/v3/index/il-alerts"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -87251,7 +87251,7 @@ func (a *IndicesAPIService) IndexIlVulnerabilitiesGetExecute(r ApiIndexIlVulnera
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/il-vulnerabilities"
+	localVarPath := localBasePath + "/v3/index/il-vulnerabilities"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -87636,7 +87636,7 @@ func (a *IndicesAPIService) IndexIncibeGetExecute(r ApiIndexIncibeGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/incibe"
+	localVarPath := localBasePath + "/v3/index/incibe"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -88021,7 +88021,7 @@ func (a *IndicesAPIService) IndexInitialAccessGetExecute(r ApiIndexInitialAccess
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/initial-access"
+	localVarPath := localBasePath + "/v3/index/initial-access"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -88406,7 +88406,7 @@ func (a *IndicesAPIService) IndexInitialAccessGitGetExecute(r ApiIndexInitialAcc
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/initial-access-git"
+	localVarPath := localBasePath + "/v3/index/initial-access-git"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -88791,7 +88791,7 @@ func (a *IndicesAPIService) IndexIntelGetExecute(r ApiIndexIntelGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/intel"
+	localVarPath := localBasePath + "/v3/index/intel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -89211,7 +89211,7 @@ func (a *IndicesAPIService) IndexIpintel10dGetExecute(r ApiIndexIpintel10dGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ipintel-10d"
+	localVarPath := localBasePath + "/v3/index/ipintel-10d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -89646,7 +89646,7 @@ func (a *IndicesAPIService) IndexIpintel30dGetExecute(r ApiIndexIpintel30dGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ipintel-30d"
+	localVarPath := localBasePath + "/v3/index/ipintel-30d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -90081,7 +90081,7 @@ func (a *IndicesAPIService) IndexIpintel3dGetExecute(r ApiIndexIpintel3dGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ipintel-3d"
+	localVarPath := localBasePath + "/v3/index/ipintel-3d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -90516,7 +90516,7 @@ func (a *IndicesAPIService) IndexIpintel90dGetExecute(r ApiIndexIpintel90dGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ipintel-90d"
+	localVarPath := localBasePath + "/v3/index/ipintel-90d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -90916,7 +90916,7 @@ func (a *IndicesAPIService) IndexIstioGetExecute(r ApiIndexIstioGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/istio"
+	localVarPath := localBasePath + "/v3/index/istio"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -91301,7 +91301,7 @@ func (a *IndicesAPIService) IndexIvantiGetExecute(r ApiIndexIvantiGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ivanti"
+	localVarPath := localBasePath + "/v3/index/ivanti"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -91686,7 +91686,7 @@ func (a *IndicesAPIService) IndexIvantiRssGetExecute(r ApiIndexIvantiRssGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ivanti-rss"
+	localVarPath := localBasePath + "/v3/index/ivanti-rss"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -92071,7 +92071,7 @@ func (a *IndicesAPIService) IndexJenkinsGetExecute(r ApiIndexJenkinsGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/jenkins"
+	localVarPath := localBasePath + "/v3/index/jenkins"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -92456,7 +92456,7 @@ func (a *IndicesAPIService) IndexJetbrainsGetExecute(r ApiIndexJetbrainsGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/jetbrains"
+	localVarPath := localBasePath + "/v3/index/jetbrains"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -92841,7 +92841,7 @@ func (a *IndicesAPIService) IndexJfrogGetExecute(r ApiIndexJfrogGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/jfrog"
+	localVarPath := localBasePath + "/v3/index/jfrog"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -93226,7 +93226,7 @@ func (a *IndicesAPIService) IndexJnjGetExecute(r ApiIndexJnjGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/jnj"
+	localVarPath := localBasePath + "/v3/index/jnj"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -93611,7 +93611,7 @@ func (a *IndicesAPIService) IndexJohnsonControlsGetExecute(r ApiIndexJohnsonCont
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/johnson-controls"
+	localVarPath := localBasePath + "/v3/index/johnson-controls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -93996,7 +93996,7 @@ func (a *IndicesAPIService) IndexJuniperGetExecute(r ApiIndexJuniperGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/juniper"
+	localVarPath := localBasePath + "/v3/index/juniper"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -94381,7 +94381,7 @@ func (a *IndicesAPIService) IndexJvnGetExecute(r ApiIndexJvnGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/jvn"
+	localVarPath := localBasePath + "/v3/index/jvn"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -94766,7 +94766,7 @@ func (a *IndicesAPIService) IndexJvndbGetExecute(r ApiIndexJvndbGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/jvndb"
+	localVarPath := localBasePath + "/v3/index/jvndb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -95151,7 +95151,7 @@ func (a *IndicesAPIService) IndexKasperskyIcsCertGetExecute(r ApiIndexKasperskyI
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/kaspersky-ics-cert"
+	localVarPath := localBasePath + "/v3/index/kaspersky-ics-cert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -95536,7 +95536,7 @@ func (a *IndicesAPIService) IndexKorelogicGetExecute(r ApiIndexKorelogicGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/korelogic"
+	localVarPath := localBasePath + "/v3/index/korelogic"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -95921,7 +95921,7 @@ func (a *IndicesAPIService) IndexKrcertSecurityNoticesGetExecute(r ApiIndexKrcer
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/krcert-security-notices"
+	localVarPath := localBasePath + "/v3/index/krcert-security-notices"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -96306,7 +96306,7 @@ func (a *IndicesAPIService) IndexKrcertVulnerabilitiesGetExecute(r ApiIndexKrcer
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/krcert-vulnerabilities"
+	localVarPath := localBasePath + "/v3/index/krcert-vulnerabilities"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -96691,7 +96691,7 @@ func (a *IndicesAPIService) IndexKubernetesGetExecute(r ApiIndexKubernetesGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/kubernetes"
+	localVarPath := localBasePath + "/v3/index/kubernetes"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -97076,7 +97076,7 @@ func (a *IndicesAPIService) IndexKunbusGetExecute(r ApiIndexKunbusGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/kunbus"
+	localVarPath := localBasePath + "/v3/index/kunbus"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -97461,7 +97461,7 @@ func (a *IndicesAPIService) IndexLantronixGetExecute(r ApiIndexLantronixGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/lantronix"
+	localVarPath := localBasePath + "/v3/index/lantronix"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -97846,7 +97846,7 @@ func (a *IndicesAPIService) IndexLenovoGetExecute(r ApiIndexLenovoGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/lenovo"
+	localVarPath := localBasePath + "/v3/index/lenovo"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -98231,7 +98231,7 @@ func (a *IndicesAPIService) IndexLexmarkGetExecute(r ApiIndexLexmarkGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/lexmark"
+	localVarPath := localBasePath + "/v3/index/lexmark"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -98616,7 +98616,7 @@ func (a *IndicesAPIService) IndexLgGetExecute(r ApiIndexLgGetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/lg"
+	localVarPath := localBasePath + "/v3/index/lg"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -99001,7 +99001,7 @@ func (a *IndicesAPIService) IndexLibreOfficeGetExecute(r ApiIndexLibreOfficeGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/libre-office"
+	localVarPath := localBasePath + "/v3/index/libre-office"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -99386,7 +99386,7 @@ func (a *IndicesAPIService) IndexLinuxGetExecute(r ApiIndexLinuxGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/linux"
+	localVarPath := localBasePath + "/v3/index/linux"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -99771,7 +99771,7 @@ func (a *IndicesAPIService) IndexLolAdvsGetExecute(r ApiIndexLolAdvsGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/lol-advs"
+	localVarPath := localBasePath + "/v3/index/lol-advs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -100156,7 +100156,7 @@ func (a *IndicesAPIService) IndexMFilesGetExecute(r ApiIndexMFilesGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/m-files"
+	localVarPath := localBasePath + "/v3/index/m-files"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -100541,7 +100541,7 @@ func (a *IndicesAPIService) IndexMacertGetExecute(r ApiIndexMacertGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/macert"
+	localVarPath := localBasePath + "/v3/index/macert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -100926,7 +100926,392 @@ func (a *IndicesAPIService) IndexMaliciousPackagesGetExecute(r ApiIndexMalicious
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/malicious-packages"
+	localVarPath := localBasePath + "/v3/index/malicious-packages"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
+	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "form", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "form", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "form", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "form", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "form", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "form", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "form", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "form", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "form", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "form", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "form", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "form", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "form", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "form", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "form", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "form", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexMaliciousVscodeExtsGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	order *string
+	sort *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Page(page int32) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Limit(limit int32) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Cursor(cursor string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexMaliciousVscodeExtsGetRequest) StartCursor(startCursor string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Order(order string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Sort(sort string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.sort = &sort
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Cve(cve string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Alias(alias string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Iava(iava string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Jvndb(jvndb string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Ilvn(ilvn string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) ThreatActor(threatActor string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) MitreId(mitreId string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) MispId(mispId string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Ransomware(ransomware string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Botnet(botnet string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Published(published string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify an exact published date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Date(date string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) LastModStartDate(lastModStartDate string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) LastModEndDate(lastModEndDate string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) PubStartDate(pubStartDate string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexMaliciousVscodeExtsGetRequest) PubEndDate(pubEndDate string) ApiIndexMaliciousVscodeExtsGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexMaliciousVscodeExtsGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryMaliciousVSCodeExtsPaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexMaliciousVscodeExtsGetExecute(r)
+}
+
+/*
+IndexMaliciousVscodeExtsGet Return vulnerability data stored in index \"malicious-vscode-exts\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the malicious-vscode-exts index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** Malicious Visual Studio Code Extensions
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/malicious-vscode-exts?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/malicious-vscode-exts?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexMaliciousVscodeExtsGetRequest
+*/
+func (a *IndicesAPIService) IndexMaliciousVscodeExtsGet(ctx context.Context) ApiIndexMaliciousVscodeExtsGetRequest {
+	return ApiIndexMaliciousVscodeExtsGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayAdvisoryMaliciousVSCodeExtsPaginatePagination
+func (a *IndicesAPIService) IndexMaliciousVscodeExtsGetExecute(r ApiIndexMaliciousVscodeExtsGetRequest) (*RenderResponseWithMetadataArrayAdvisoryMaliciousVSCodeExtsPaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryMaliciousVSCodeExtsPaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexMaliciousVscodeExtsGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v3/index/malicious-vscode-exts"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -101311,7 +101696,7 @@ func (a *IndicesAPIService) IndexManageengineGetExecute(r ApiIndexManageengineGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/manageengine"
+	localVarPath := localBasePath + "/v3/index/manageengine"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -101696,7 +102081,7 @@ func (a *IndicesAPIService) IndexMavenGetExecute(r ApiIndexMavenGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/maven"
+	localVarPath := localBasePath + "/v3/index/maven"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -102081,7 +102466,7 @@ func (a *IndicesAPIService) IndexMbedTlsGetExecute(r ApiIndexMbedTlsGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mbed-tls"
+	localVarPath := localBasePath + "/v3/index/mbed-tls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -102466,7 +102851,7 @@ func (a *IndicesAPIService) IndexMcafeeGetExecute(r ApiIndexMcafeeGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mcafee"
+	localVarPath := localBasePath + "/v3/index/mcafee"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -102851,7 +103236,7 @@ func (a *IndicesAPIService) IndexMediatekGetExecute(r ApiIndexMediatekGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mediatek"
+	localVarPath := localBasePath + "/v3/index/mediatek"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -103236,7 +103621,7 @@ func (a *IndicesAPIService) IndexMedtronicGetExecute(r ApiIndexMedtronicGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/medtronic"
+	localVarPath := localBasePath + "/v3/index/medtronic"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -103621,7 +104006,7 @@ func (a *IndicesAPIService) IndexMendixGetExecute(r ApiIndexMendixGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mendix"
+	localVarPath := localBasePath + "/v3/index/mendix"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -104006,7 +104391,7 @@ func (a *IndicesAPIService) IndexMetaAdvisoriesGetExecute(r ApiIndexMetaAdvisori
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/meta-advisories"
+	localVarPath := localBasePath + "/v3/index/meta-advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -104391,7 +104776,7 @@ func (a *IndicesAPIService) IndexMetasploitGetExecute(r ApiIndexMetasploitGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/metasploit"
+	localVarPath := localBasePath + "/v3/index/metasploit"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -104776,7 +105161,7 @@ func (a *IndicesAPIService) IndexMicrosoftCsafGetExecute(r ApiIndexMicrosoftCsaf
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/microsoft-csaf"
+	localVarPath := localBasePath + "/v3/index/microsoft-csaf"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -105161,7 +105546,7 @@ func (a *IndicesAPIService) IndexMicrosoftCvrfGetExecute(r ApiIndexMicrosoftCvrf
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/microsoft-cvrf"
+	localVarPath := localBasePath + "/v3/index/microsoft-cvrf"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -105546,7 +105931,7 @@ func (a *IndicesAPIService) IndexMicrosoftDriverBlockListGetExecute(r ApiIndexMi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/microsoft-driver-block-list"
+	localVarPath := localBasePath + "/v3/index/microsoft-driver-block-list"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -105931,7 +106316,7 @@ func (a *IndicesAPIService) IndexMicrosoftKbGetExecute(r ApiIndexMicrosoftKbGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/microsoft-kb"
+	localVarPath := localBasePath + "/v3/index/microsoft-kb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -106316,7 +106701,7 @@ func (a *IndicesAPIService) IndexMikrotikGetExecute(r ApiIndexMikrotikGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mikrotik"
+	localVarPath := localBasePath + "/v3/index/mikrotik"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -106701,7 +107086,7 @@ func (a *IndicesAPIService) IndexMindrayGetExecute(r ApiIndexMindrayGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mindray"
+	localVarPath := localBasePath + "/v3/index/mindray"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -107086,7 +107471,7 @@ func (a *IndicesAPIService) IndexMispThreatActorsGetExecute(r ApiIndexMispThreat
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/misp-threat-actors"
+	localVarPath := localBasePath + "/v3/index/misp-threat-actors"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -107471,7 +107856,7 @@ func (a *IndicesAPIService) IndexMitelGetExecute(r ApiIndexMitelGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mitel"
+	localVarPath := localBasePath + "/v3/index/mitel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -107856,7 +108241,7 @@ func (a *IndicesAPIService) IndexMitreAttackCveGetExecute(r ApiIndexMitreAttackC
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mitre-attack-cve"
+	localVarPath := localBasePath + "/v3/index/mitre-attack-cve"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -108241,7 +108626,7 @@ func (a *IndicesAPIService) IndexMitreCvelistV5GetExecute(r ApiIndexMitreCvelist
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mitre-cvelist-v5"
+	localVarPath := localBasePath + "/v3/index/mitre-cvelist-v5"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -108626,7 +109011,7 @@ func (a *IndicesAPIService) IndexMitsubishiElectricGetExecute(r ApiIndexMitsubis
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mitsubishi-electric"
+	localVarPath := localBasePath + "/v3/index/mitsubishi-electric"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -109011,7 +109396,7 @@ func (a *IndicesAPIService) IndexMongodbGetExecute(r ApiIndexMongodbGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mongodb"
+	localVarPath := localBasePath + "/v3/index/mongodb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -109396,7 +109781,7 @@ func (a *IndicesAPIService) IndexMoxaGetExecute(r ApiIndexMoxaGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/moxa"
+	localVarPath := localBasePath + "/v3/index/moxa"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -109781,7 +110166,7 @@ func (a *IndicesAPIService) IndexMozillaGetExecute(r ApiIndexMozillaGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/mozilla"
+	localVarPath := localBasePath + "/v3/index/mozilla"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -110166,7 +110551,7 @@ func (a *IndicesAPIService) IndexNaverGetExecute(r ApiIndexNaverGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/naver"
+	localVarPath := localBasePath + "/v3/index/naver"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -110551,7 +110936,7 @@ func (a *IndicesAPIService) IndexNcscCvesGetExecute(r ApiIndexNcscCvesGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ncsc-cves"
+	localVarPath := localBasePath + "/v3/index/ncsc-cves"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -110936,7 +111321,7 @@ func (a *IndicesAPIService) IndexNcscGetExecute(r ApiIndexNcscGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ncsc"
+	localVarPath := localBasePath + "/v3/index/ncsc"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -111321,7 +111706,7 @@ func (a *IndicesAPIService) IndexNecGetExecute(r ApiIndexNecGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nec"
+	localVarPath := localBasePath + "/v3/index/nec"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -111706,7 +112091,7 @@ func (a *IndicesAPIService) IndexNessusGetExecute(r ApiIndexNessusGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nessus"
+	localVarPath := localBasePath + "/v3/index/nessus"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -112091,7 +112476,7 @@ func (a *IndicesAPIService) IndexNetappGetExecute(r ApiIndexNetappGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/netapp"
+	localVarPath := localBasePath + "/v3/index/netapp"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -112476,7 +112861,7 @@ func (a *IndicesAPIService) IndexNetatalkGetExecute(r ApiIndexNetatalkGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/netatalk"
+	localVarPath := localBasePath + "/v3/index/netatalk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -112861,7 +113246,7 @@ func (a *IndicesAPIService) IndexNetgateGetExecute(r ApiIndexNetgateGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/netgate"
+	localVarPath := localBasePath + "/v3/index/netgate"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -113246,7 +113631,7 @@ func (a *IndicesAPIService) IndexNetgearGetExecute(r ApiIndexNetgearGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/netgear"
+	localVarPath := localBasePath + "/v3/index/netgear"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -113631,7 +114016,7 @@ func (a *IndicesAPIService) IndexNetskopeGetExecute(r ApiIndexNetskopeGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/netskope"
+	localVarPath := localBasePath + "/v3/index/netskope"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -114016,7 +114401,7 @@ func (a *IndicesAPIService) IndexNexposeGetExecute(r ApiIndexNexposeGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nexpose"
+	localVarPath := localBasePath + "/v3/index/nexpose"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -114401,7 +114786,7 @@ func (a *IndicesAPIService) IndexNginxGetExecute(r ApiIndexNginxGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nginx"
+	localVarPath := localBasePath + "/v3/index/nginx"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -114786,7 +115171,7 @@ func (a *IndicesAPIService) IndexNhsGetExecute(r ApiIndexNhsGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nhs"
+	localVarPath := localBasePath + "/v3/index/nhs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -115171,7 +115556,7 @@ func (a *IndicesAPIService) IndexNiGetExecute(r ApiIndexNiGetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ni"
+	localVarPath := localBasePath + "/v3/index/ni"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -115556,7 +115941,7 @@ func (a *IndicesAPIService) IndexNistNvd2CpematchGetExecute(r ApiIndexNistNvd2Cp
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nist-nvd2-cpematch"
+	localVarPath := localBasePath + "/v3/index/nist-nvd2-cpematch"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -115941,7 +116326,7 @@ func (a *IndicesAPIService) IndexNistNvd2GetExecute(r ApiIndexNistNvd2GetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nist-nvd2"
+	localVarPath := localBasePath + "/v3/index/nist-nvd2"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -116326,7 +116711,7 @@ func (a *IndicesAPIService) IndexNistNvd2SourcesGetExecute(r ApiIndexNistNvd2Sou
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nist-nvd2-sources"
+	localVarPath := localBasePath + "/v3/index/nist-nvd2-sources"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -116711,7 +117096,7 @@ func (a *IndicesAPIService) IndexNistNvdGetExecute(r ApiIndexNistNvdGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nist-nvd"
+	localVarPath := localBasePath + "/v3/index/nist-nvd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -117096,7 +117481,7 @@ func (a *IndicesAPIService) IndexNodeSecurityGetExecute(r ApiIndexNodeSecurityGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/node-security"
+	localVarPath := localBasePath + "/v3/index/node-security"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -117481,7 +117866,7 @@ func (a *IndicesAPIService) IndexNodejsGetExecute(r ApiIndexNodejsGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nodejs"
+	localVarPath := localBasePath + "/v3/index/nodejs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -117866,7 +118251,7 @@ func (a *IndicesAPIService) IndexNokiaGetExecute(r ApiIndexNokiaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nokia"
+	localVarPath := localBasePath + "/v3/index/nokia"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -118251,7 +118636,7 @@ func (a *IndicesAPIService) IndexNotepadplusplusGetExecute(r ApiIndexNotepadplus
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/notepadplusplus"
+	localVarPath := localBasePath + "/v3/index/notepadplusplus"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -118636,7 +119021,7 @@ func (a *IndicesAPIService) IndexNozomiGetExecute(r ApiIndexNozomiGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nozomi"
+	localVarPath := localBasePath + "/v3/index/nozomi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -119021,7 +119406,7 @@ func (a *IndicesAPIService) IndexNpmGetExecute(r ApiIndexNpmGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/npm"
+	localVarPath := localBasePath + "/v3/index/npm"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -119406,7 +119791,7 @@ func (a *IndicesAPIService) IndexNtpGetExecute(r ApiIndexNtpGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ntp"
+	localVarPath := localBasePath + "/v3/index/ntp"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -119791,7 +120176,7 @@ func (a *IndicesAPIService) IndexNucleiGetExecute(r ApiIndexNucleiGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nuclei"
+	localVarPath := localBasePath + "/v3/index/nuclei"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -120176,7 +120561,7 @@ func (a *IndicesAPIService) IndexNugetGetExecute(r ApiIndexNugetGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nuget"
+	localVarPath := localBasePath + "/v3/index/nuget"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -120561,7 +120946,7 @@ func (a *IndicesAPIService) IndexNvdCpeDictionaryGetExecute(r ApiIndexNvdCpeDict
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nvd-cpe-dictionary"
+	localVarPath := localBasePath + "/v3/index/nvd-cpe-dictionary"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -120946,7 +121331,7 @@ func (a *IndicesAPIService) IndexNvidiaGetExecute(r ApiIndexNvidiaGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nvidia"
+	localVarPath := localBasePath + "/v3/index/nvidia"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -121331,7 +121716,7 @@ func (a *IndicesAPIService) IndexNzAdvisoriesGetExecute(r ApiIndexNzAdvisoriesGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/nz-advisories"
+	localVarPath := localBasePath + "/v3/index/nz-advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -121716,7 +122101,7 @@ func (a *IndicesAPIService) IndexOctopusDeployGetExecute(r ApiIndexOctopusDeploy
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/octopus-deploy"
+	localVarPath := localBasePath + "/v3/index/octopus-deploy"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -122101,7 +122486,7 @@ func (a *IndicesAPIService) IndexOktaGetExecute(r ApiIndexOktaGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/okta"
+	localVarPath := localBasePath + "/v3/index/okta"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -122486,7 +122871,7 @@ func (a *IndicesAPIService) IndexOmronGetExecute(r ApiIndexOmronGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/omron"
+	localVarPath := localBasePath + "/v3/index/omron"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -122871,7 +123256,7 @@ func (a *IndicesAPIService) IndexOneEGetExecute(r ApiIndexOneEGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/one-e"
+	localVarPath := localBasePath + "/v3/index/one-e"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -123256,7 +123641,7 @@ func (a *IndicesAPIService) IndexOpamGetExecute(r ApiIndexOpamGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/opam"
+	localVarPath := localBasePath + "/v3/index/opam"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -123641,7 +124026,7 @@ func (a *IndicesAPIService) IndexOpenCvdbGetExecute(r ApiIndexOpenCvdbGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/open-cvdb"
+	localVarPath := localBasePath + "/v3/index/open-cvdb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -124026,7 +124411,7 @@ func (a *IndicesAPIService) IndexOpenbsdGetExecute(r ApiIndexOpenbsdGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/openbsd"
+	localVarPath := localBasePath + "/v3/index/openbsd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -124411,7 +124796,7 @@ func (a *IndicesAPIService) IndexOpengearGetExecute(r ApiIndexOpengearGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/opengear"
+	localVarPath := localBasePath + "/v3/index/opengear"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -124796,7 +125181,7 @@ func (a *IndicesAPIService) IndexOpenjdkGetExecute(r ApiIndexOpenjdkGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/openjdk"
+	localVarPath := localBasePath + "/v3/index/openjdk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -125181,7 +125566,7 @@ func (a *IndicesAPIService) IndexOpensshGetExecute(r ApiIndexOpensshGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/openssh"
+	localVarPath := localBasePath + "/v3/index/openssh"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -125566,7 +125951,7 @@ func (a *IndicesAPIService) IndexOpensslSecadvGetExecute(r ApiIndexOpensslSecadv
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/openssl-secadv"
+	localVarPath := localBasePath + "/v3/index/openssl-secadv"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -125951,7 +126336,7 @@ func (a *IndicesAPIService) IndexOpenstackGetExecute(r ApiIndexOpenstackGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/openstack"
+	localVarPath := localBasePath + "/v3/index/openstack"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -126336,7 +126721,7 @@ func (a *IndicesAPIService) IndexOpenwrtGetExecute(r ApiIndexOpenwrtGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/openwrt"
+	localVarPath := localBasePath + "/v3/index/openwrt"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -126721,7 +127106,7 @@ func (a *IndicesAPIService) IndexOracleCpuCsafGetExecute(r ApiIndexOracleCpuCsaf
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/oracle-cpu-csaf"
+	localVarPath := localBasePath + "/v3/index/oracle-cpu-csaf"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -127106,7 +127491,7 @@ func (a *IndicesAPIService) IndexOracleCpuGetExecute(r ApiIndexOracleCpuGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/oracle-cpu"
+	localVarPath := localBasePath + "/v3/index/oracle-cpu"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -127491,7 +127876,7 @@ func (a *IndicesAPIService) IndexOracleGetExecute(r ApiIndexOracleGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/oracle"
+	localVarPath := localBasePath + "/v3/index/oracle"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -127876,7 +128261,7 @@ func (a *IndicesAPIService) IndexOsvGetExecute(r ApiIndexOsvGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/osv"
+	localVarPath := localBasePath + "/v3/index/osv"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -128261,7 +128646,7 @@ func (a *IndicesAPIService) IndexOtrsGetExecute(r ApiIndexOtrsGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/otrs"
+	localVarPath := localBasePath + "/v3/index/otrs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -128646,7 +129031,7 @@ func (a *IndicesAPIService) IndexOwncloudGetExecute(r ApiIndexOwncloudGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/owncloud"
+	localVarPath := localBasePath + "/v3/index/owncloud"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -129031,7 +129416,7 @@ func (a *IndicesAPIService) IndexPacketstormGetExecute(r ApiIndexPacketstormGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/packetstorm"
+	localVarPath := localBasePath + "/v3/index/packetstorm"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -129416,7 +129801,7 @@ func (a *IndicesAPIService) IndexPalantirGetExecute(r ApiIndexPalantirGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/palantir"
+	localVarPath := localBasePath + "/v3/index/palantir"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -129801,7 +130186,7 @@ func (a *IndicesAPIService) IndexPaloAltoGetExecute(r ApiIndexPaloAltoGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/palo-alto"
+	localVarPath := localBasePath + "/v3/index/palo-alto"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -130186,7 +130571,7 @@ func (a *IndicesAPIService) IndexPanasonicGetExecute(r ApiIndexPanasonicGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/panasonic"
+	localVarPath := localBasePath + "/v3/index/panasonic"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -130571,7 +130956,7 @@ func (a *IndicesAPIService) IndexPapercutGetExecute(r ApiIndexPapercutGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/papercut"
+	localVarPath := localBasePath + "/v3/index/papercut"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -130956,7 +131341,7 @@ func (a *IndicesAPIService) IndexPegaGetExecute(r ApiIndexPegaGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/pega"
+	localVarPath := localBasePath + "/v3/index/pega"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -131341,7 +131726,7 @@ func (a *IndicesAPIService) IndexPhilipsGetExecute(r ApiIndexPhilipsGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/philips"
+	localVarPath := localBasePath + "/v3/index/philips"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -131726,7 +132111,7 @@ func (a *IndicesAPIService) IndexPhoenixContactGetExecute(r ApiIndexPhoenixConta
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/phoenix-contact"
+	localVarPath := localBasePath + "/v3/index/phoenix-contact"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -132111,7 +132496,7 @@ func (a *IndicesAPIService) IndexPhpMyAdminGetExecute(r ApiIndexPhpMyAdminGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/php-my-admin"
+	localVarPath := localBasePath + "/v3/index/php-my-admin"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -132496,7 +132881,7 @@ func (a *IndicesAPIService) IndexPkcertGetExecute(r ApiIndexPkcertGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/pkcert"
+	localVarPath := localBasePath + "/v3/index/pkcert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -132881,7 +133266,7 @@ func (a *IndicesAPIService) IndexPostgressqlGetExecute(r ApiIndexPostgressqlGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/postgressql"
+	localVarPath := localBasePath + "/v3/index/postgressql"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -133266,7 +133651,7 @@ func (a *IndicesAPIService) IndexPowerdnsGetExecute(r ApiIndexPowerdnsGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/powerdns"
+	localVarPath := localBasePath + "/v3/index/powerdns"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -133651,7 +134036,7 @@ func (a *IndicesAPIService) IndexProgressGetExecute(r ApiIndexProgressGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/progress"
+	localVarPath := localBasePath + "/v3/index/progress"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -134036,7 +134421,7 @@ func (a *IndicesAPIService) IndexProofpointGetExecute(r ApiIndexProofpointGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/proofpoint"
+	localVarPath := localBasePath + "/v3/index/proofpoint"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -134421,7 +134806,7 @@ func (a *IndicesAPIService) IndexPtcGetExecute(r ApiIndexPtcGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ptc"
+	localVarPath := localBasePath + "/v3/index/ptc"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -134806,7 +135191,7 @@ func (a *IndicesAPIService) IndexPubGetExecute(r ApiIndexPubGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/pub"
+	localVarPath := localBasePath + "/v3/index/pub"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -135191,7 +135576,7 @@ func (a *IndicesAPIService) IndexPureStorageGetExecute(r ApiIndexPureStorageGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/pure-storage"
+	localVarPath := localBasePath + "/v3/index/pure-storage"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -135576,7 +135961,7 @@ func (a *IndicesAPIService) IndexPypaAdvisoriesGetExecute(r ApiIndexPypaAdvisori
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/pypa-advisories"
+	localVarPath := localBasePath + "/v3/index/pypa-advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -135961,7 +136346,7 @@ func (a *IndicesAPIService) IndexPypiGetExecute(r ApiIndexPypiGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/pypi"
+	localVarPath := localBasePath + "/v3/index/pypi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -136346,7 +136731,7 @@ func (a *IndicesAPIService) IndexQnapGetExecute(r ApiIndexQnapGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/qnap"
+	localVarPath := localBasePath + "/v3/index/qnap"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -136731,7 +137116,7 @@ func (a *IndicesAPIService) IndexQqidsGetExecute(r ApiIndexQqidsGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/qqids"
+	localVarPath := localBasePath + "/v3/index/qqids"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -137116,7 +137501,7 @@ func (a *IndicesAPIService) IndexQualcommGetExecute(r ApiIndexQualcommGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/qualcomm"
+	localVarPath := localBasePath + "/v3/index/qualcomm"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -137501,7 +137886,7 @@ func (a *IndicesAPIService) IndexQualysGetExecute(r ApiIndexQualysGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/qualys"
+	localVarPath := localBasePath + "/v3/index/qualys"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -137886,7 +138271,7 @@ func (a *IndicesAPIService) IndexQualysQidsGetExecute(r ApiIndexQualysQidsGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/qualys-qids"
+	localVarPath := localBasePath + "/v3/index/qualys-qids"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -138271,7 +138656,7 @@ func (a *IndicesAPIService) IndexQubesQsbGetExecute(r ApiIndexQubesQsbGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/qubes-qsb"
+	localVarPath := localBasePath + "/v3/index/qubes-qsb"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -138656,7 +139041,7 @@ func (a *IndicesAPIService) IndexRansomwareGetExecute(r ApiIndexRansomwareGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ransomware"
+	localVarPath := localBasePath + "/v3/index/ransomware"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -139041,7 +139426,7 @@ func (a *IndicesAPIService) IndexRedLionGetExecute(r ApiIndexRedLionGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/red-lion"
+	localVarPath := localBasePath + "/v3/index/red-lion"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -139426,7 +139811,7 @@ func (a *IndicesAPIService) IndexRedhatCvesGetExecute(r ApiIndexRedhatCvesGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/redhat-cves"
+	localVarPath := localBasePath + "/v3/index/redhat-cves"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -139811,7 +140196,7 @@ func (a *IndicesAPIService) IndexRedhatGetExecute(r ApiIndexRedhatGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/redhat"
+	localVarPath := localBasePath + "/v3/index/redhat"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -140196,7 +140581,7 @@ func (a *IndicesAPIService) IndexRenesasGetExecute(r ApiIndexRenesasGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/renesas"
+	localVarPath := localBasePath + "/v3/index/renesas"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -140581,7 +140966,7 @@ func (a *IndicesAPIService) IndexReviveGetExecute(r ApiIndexReviveGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/revive"
+	localVarPath := localBasePath + "/v3/index/revive"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -140966,7 +141351,7 @@ func (a *IndicesAPIService) IndexRocheGetExecute(r ApiIndexRocheGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/roche"
+	localVarPath := localBasePath + "/v3/index/roche"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -141351,7 +141736,7 @@ func (a *IndicesAPIService) IndexRockwellGetExecute(r ApiIndexRockwellGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/rockwell"
+	localVarPath := localBasePath + "/v3/index/rockwell"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -141736,7 +142121,7 @@ func (a *IndicesAPIService) IndexRockyErrataGetExecute(r ApiIndexRockyErrataGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/rocky-errata"
+	localVarPath := localBasePath + "/v3/index/rocky-errata"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -142121,7 +142506,7 @@ func (a *IndicesAPIService) IndexRockyGetExecute(r ApiIndexRockyGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/rocky"
+	localVarPath := localBasePath + "/v3/index/rocky"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -142506,7 +142891,7 @@ func (a *IndicesAPIService) IndexRockyPurlsGetExecute(r ApiIndexRockyPurlsGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/rocky-purls"
+	localVarPath := localBasePath + "/v3/index/rocky-purls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -142891,7 +143276,7 @@ func (a *IndicesAPIService) IndexRsyncGetExecute(r ApiIndexRsyncGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/rsync"
+	localVarPath := localBasePath + "/v3/index/rsync"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -143276,7 +143661,7 @@ func (a *IndicesAPIService) IndexRuckusGetExecute(r ApiIndexRuckusGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ruckus"
+	localVarPath := localBasePath + "/v3/index/ruckus"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -143661,7 +144046,7 @@ func (a *IndicesAPIService) IndexRustsecAdvisoriesGetExecute(r ApiIndexRustsecAd
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/rustsec-advisories"
+	localVarPath := localBasePath + "/v3/index/rustsec-advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -144046,7 +144431,7 @@ func (a *IndicesAPIService) IndexSacertGetExecute(r ApiIndexSacertGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sacert"
+	localVarPath := localBasePath + "/v3/index/sacert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -144431,7 +144816,7 @@ func (a *IndicesAPIService) IndexSafranGetExecute(r ApiIndexSafranGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/safran"
+	localVarPath := localBasePath + "/v3/index/safran"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -144816,7 +145201,7 @@ func (a *IndicesAPIService) IndexSaintGetExecute(r ApiIndexSaintGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/saint"
+	localVarPath := localBasePath + "/v3/index/saint"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -145201,7 +145586,7 @@ func (a *IndicesAPIService) IndexSalesforceGetExecute(r ApiIndexSalesforceGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/salesforce"
+	localVarPath := localBasePath + "/v3/index/salesforce"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -145586,7 +145971,7 @@ func (a *IndicesAPIService) IndexSambaGetExecute(r ApiIndexSambaGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/samba"
+	localVarPath := localBasePath + "/v3/index/samba"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -145971,7 +146356,7 @@ func (a *IndicesAPIService) IndexSandiskGetExecute(r ApiIndexSandiskGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sandisk"
+	localVarPath := localBasePath + "/v3/index/sandisk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -146356,7 +146741,7 @@ func (a *IndicesAPIService) IndexSansDshieldGetExecute(r ApiIndexSansDshieldGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sans-dshield"
+	localVarPath := localBasePath + "/v3/index/sans-dshield"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -146741,7 +147126,7 @@ func (a *IndicesAPIService) IndexSapGetExecute(r ApiIndexSapGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sap"
+	localVarPath := localBasePath + "/v3/index/sap"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -147126,7 +147511,7 @@ func (a *IndicesAPIService) IndexSchneiderElectricGetExecute(r ApiIndexSchneider
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/schneider-electric"
+	localVarPath := localBasePath + "/v3/index/schneider-electric"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -147511,7 +147896,7 @@ func (a *IndicesAPIService) IndexSchutzwerkGetExecute(r ApiIndexSchutzwerkGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/schutzwerk"
+	localVarPath := localBasePath + "/v3/index/schutzwerk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -147896,7 +148281,7 @@ func (a *IndicesAPIService) IndexSecConsultGetExecute(r ApiIndexSecConsultGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sec-consult"
+	localVarPath := localBasePath + "/v3/index/sec-consult"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -148281,7 +148666,7 @@ func (a *IndicesAPIService) IndexSecuritylabGetExecute(r ApiIndexSecuritylabGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/securitylab"
+	localVarPath := localBasePath + "/v3/index/securitylab"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -148666,7 +149051,7 @@ func (a *IndicesAPIService) IndexSeebugGetExecute(r ApiIndexSeebugGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/seebug"
+	localVarPath := localBasePath + "/v3/index/seebug"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -149051,7 +149436,7 @@ func (a *IndicesAPIService) IndexSelGetExecute(r ApiIndexSelGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sel"
+	localVarPath := localBasePath + "/v3/index/sel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -149436,7 +149821,7 @@ func (a *IndicesAPIService) IndexSentineloneGetExecute(r ApiIndexSentineloneGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sentinelone"
+	localVarPath := localBasePath + "/v3/index/sentinelone"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -149821,7 +150206,7 @@ func (a *IndicesAPIService) IndexServicenowGetExecute(r ApiIndexServicenowGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/servicenow"
+	localVarPath := localBasePath + "/v3/index/servicenow"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -150206,7 +150591,7 @@ func (a *IndicesAPIService) IndexShadowserverExploitedGetExecute(r ApiIndexShado
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/shadowserver-exploited"
+	localVarPath := localBasePath + "/v3/index/shadowserver-exploited"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -150591,7 +150976,7 @@ func (a *IndicesAPIService) IndexShielderGetExecute(r ApiIndexShielderGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/shielder"
+	localVarPath := localBasePath + "/v3/index/shielder"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -150976,7 +151361,7 @@ func (a *IndicesAPIService) IndexSickGetExecute(r ApiIndexSickGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sick"
+	localVarPath := localBasePath + "/v3/index/sick"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -151361,7 +151746,7 @@ func (a *IndicesAPIService) IndexSiemensGetExecute(r ApiIndexSiemensGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/siemens"
+	localVarPath := localBasePath + "/v3/index/siemens"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -151746,7 +152131,7 @@ func (a *IndicesAPIService) IndexSierraWirelessGetExecute(r ApiIndexSierraWirele
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sierra-wireless"
+	localVarPath := localBasePath + "/v3/index/sierra-wireless"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -152131,7 +152516,7 @@ func (a *IndicesAPIService) IndexSigmahqSigmaRulesGetExecute(r ApiIndexSigmahqSi
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sigmahq-sigma-rules"
+	localVarPath := localBasePath + "/v3/index/sigmahq-sigma-rules"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -152516,7 +152901,7 @@ func (a *IndicesAPIService) IndexSingcertGetExecute(r ApiIndexSingcertGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/singcert"
+	localVarPath := localBasePath + "/v3/index/singcert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -152901,7 +153286,7 @@ func (a *IndicesAPIService) IndexSitecoreGetExecute(r ApiIndexSitecoreGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sitecore"
+	localVarPath := localBasePath + "/v3/index/sitecore"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -153286,7 +153671,7 @@ func (a *IndicesAPIService) IndexSlackwareGetExecute(r ApiIndexSlackwareGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/slackware"
+	localVarPath := localBasePath + "/v3/index/slackware"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -153671,7 +154056,7 @@ func (a *IndicesAPIService) IndexSolarwindsGetExecute(r ApiIndexSolarwindsGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/solarwinds"
+	localVarPath := localBasePath + "/v3/index/solarwinds"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -154056,7 +154441,7 @@ func (a *IndicesAPIService) IndexSolrGetExecute(r ApiIndexSolrGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/solr"
+	localVarPath := localBasePath + "/v3/index/solr"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -154441,7 +154826,7 @@ func (a *IndicesAPIService) IndexSonatypeGetExecute(r ApiIndexSonatypeGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sonatype"
+	localVarPath := localBasePath + "/v3/index/sonatype"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -154826,7 +155211,7 @@ func (a *IndicesAPIService) IndexSonicwallGetExecute(r ApiIndexSonicwallGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sonicwall"
+	localVarPath := localBasePath + "/v3/index/sonicwall"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -155211,7 +155596,7 @@ func (a *IndicesAPIService) IndexSpacelabsHealthcareGetExecute(r ApiIndexSpacela
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/spacelabs-healthcare"
+	localVarPath := localBasePath + "/v3/index/spacelabs-healthcare"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -155596,7 +155981,7 @@ func (a *IndicesAPIService) IndexSplunkGetExecute(r ApiIndexSplunkGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/splunk"
+	localVarPath := localBasePath + "/v3/index/splunk"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -155981,7 +156366,7 @@ func (a *IndicesAPIService) IndexSpringGetExecute(r ApiIndexSpringGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/spring"
+	localVarPath := localBasePath + "/v3/index/spring"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -156366,7 +156751,7 @@ func (a *IndicesAPIService) IndexSsdGetExecute(r ApiIndexSsdGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ssd"
+	localVarPath := localBasePath + "/v3/index/ssd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -156751,7 +157136,7 @@ func (a *IndicesAPIService) IndexStormshieldGetExecute(r ApiIndexStormshieldGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/stormshield"
+	localVarPath := localBasePath + "/v3/index/stormshield"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -157136,7 +157521,7 @@ func (a *IndicesAPIService) IndexStrykerGetExecute(r ApiIndexStrykerGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/stryker"
+	localVarPath := localBasePath + "/v3/index/stryker"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -157521,7 +157906,7 @@ func (a *IndicesAPIService) IndexSudoGetExecute(r ApiIndexSudoGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/sudo"
+	localVarPath := localBasePath + "/v3/index/sudo"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -157906,7 +158291,7 @@ func (a *IndicesAPIService) IndexSuseGetExecute(r ApiIndexSuseGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/suse"
+	localVarPath := localBasePath + "/v3/index/suse"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -158291,7 +158676,7 @@ func (a *IndicesAPIService) IndexSuseSecurityGetExecute(r ApiIndexSuseSecurityGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/suse-security"
+	localVarPath := localBasePath + "/v3/index/suse-security"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -158676,7 +159061,7 @@ func (a *IndicesAPIService) IndexSwiftGetExecute(r ApiIndexSwiftGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/swift"
+	localVarPath := localBasePath + "/v3/index/swift"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -159061,7 +159446,7 @@ func (a *IndicesAPIService) IndexSwisslogHealthcareGetExecute(r ApiIndexSwisslog
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/swisslog-healthcare"
+	localVarPath := localBasePath + "/v3/index/swisslog-healthcare"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -159446,7 +159831,7 @@ func (a *IndicesAPIService) IndexSymfonyGetExecute(r ApiIndexSymfonyGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/symfony"
+	localVarPath := localBasePath + "/v3/index/symfony"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -159831,7 +160216,7 @@ func (a *IndicesAPIService) IndexSynacktivGetExecute(r ApiIndexSynacktivGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/synacktiv"
+	localVarPath := localBasePath + "/v3/index/synacktiv"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -160216,7 +160601,7 @@ func (a *IndicesAPIService) IndexSyncrosoftGetExecute(r ApiIndexSyncrosoftGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/syncrosoft"
+	localVarPath := localBasePath + "/v3/index/syncrosoft"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -160601,7 +160986,7 @@ func (a *IndicesAPIService) IndexSynologyGetExecute(r ApiIndexSynologyGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/synology"
+	localVarPath := localBasePath + "/v3/index/synology"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -160986,7 +161371,7 @@ func (a *IndicesAPIService) IndexSyssGetExecute(r ApiIndexSyssGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/syss"
+	localVarPath := localBasePath + "/v3/index/syss"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -161371,7 +161756,7 @@ func (a *IndicesAPIService) IndexTailscaleGetExecute(r ApiIndexTailscaleGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/tailscale"
+	localVarPath := localBasePath + "/v3/index/tailscale"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -161756,7 +162141,7 @@ func (a *IndicesAPIService) IndexTeamviewerGetExecute(r ApiIndexTeamviewerGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/teamviewer"
+	localVarPath := localBasePath + "/v3/index/teamviewer"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -162141,7 +162526,7 @@ func (a *IndicesAPIService) IndexTenableResearchAdvisoriesGetExecute(r ApiIndexT
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/tenable-research-advisories"
+	localVarPath := localBasePath + "/v3/index/tenable-research-advisories"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -162526,7 +162911,7 @@ func (a *IndicesAPIService) IndexTencentGetExecute(r ApiIndexTencentGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/tencent"
+	localVarPath := localBasePath + "/v3/index/tencent"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -162911,7 +163296,7 @@ func (a *IndicesAPIService) IndexThalesGetExecute(r ApiIndexThalesGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/thales"
+	localVarPath := localBasePath + "/v3/index/thales"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -163296,7 +163681,7 @@ func (a *IndicesAPIService) IndexThemissinglinkGetExecute(r ApiIndexThemissingli
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/themissinglink"
+	localVarPath := localBasePath + "/v3/index/themissinglink"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -163681,7 +164066,7 @@ func (a *IndicesAPIService) IndexThermoFisherGetExecute(r ApiIndexThermoFisherGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/thermo-fisher"
+	localVarPath := localBasePath + "/v3/index/thermo-fisher"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -164066,7 +164451,7 @@ func (a *IndicesAPIService) IndexThreatActorsGetExecute(r ApiIndexThreatActorsGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/threat-actors"
+	localVarPath := localBasePath + "/v3/index/threat-actors"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -164451,7 +164836,7 @@ func (a *IndicesAPIService) IndexTiGetExecute(r ApiIndexTiGetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ti"
+	localVarPath := localBasePath + "/v3/index/ti"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -164836,7 +165221,7 @@ func (a *IndicesAPIService) IndexTibcoGetExecute(r ApiIndexTibcoGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/tibco"
+	localVarPath := localBasePath + "/v3/index/tibco"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -165221,7 +165606,7 @@ func (a *IndicesAPIService) IndexTpLinkGetExecute(r ApiIndexTpLinkGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/tp-link"
+	localVarPath := localBasePath + "/v3/index/tp-link"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -165606,7 +165991,7 @@ func (a *IndicesAPIService) IndexTraneTechnologyGetExecute(r ApiIndexTraneTechno
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/trane-technology"
+	localVarPath := localBasePath + "/v3/index/trane-technology"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -165991,7 +166376,7 @@ func (a *IndicesAPIService) IndexTrendmicroGetExecute(r ApiIndexTrendmicroGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/trendmicro"
+	localVarPath := localBasePath + "/v3/index/trendmicro"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -166376,7 +166761,7 @@ func (a *IndicesAPIService) IndexTrustwaveGetExecute(r ApiIndexTrustwaveGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/trustwave"
+	localVarPath := localBasePath + "/v3/index/trustwave"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -166761,7 +167146,7 @@ func (a *IndicesAPIService) IndexTwcertGetExecute(r ApiIndexTwcertGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/twcert"
+	localVarPath := localBasePath + "/v3/index/twcert"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -167146,7 +167531,7 @@ func (a *IndicesAPIService) IndexUbiquitiGetExecute(r ApiIndexUbiquitiGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ubiquiti"
+	localVarPath := localBasePath + "/v3/index/ubiquiti"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -167531,7 +167916,7 @@ func (a *IndicesAPIService) IndexUbuntuGetExecute(r ApiIndexUbuntuGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ubuntu"
+	localVarPath := localBasePath + "/v3/index/ubuntu"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -167916,7 +168301,7 @@ func (a *IndicesAPIService) IndexUbuntuPurlsGetExecute(r ApiIndexUbuntuPurlsGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/ubuntu-purls"
+	localVarPath := localBasePath + "/v3/index/ubuntu-purls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -168301,7 +168686,7 @@ func (a *IndicesAPIService) IndexUnifyGetExecute(r ApiIndexUnifyGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/unify"
+	localVarPath := localBasePath + "/v3/index/unify"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -168686,7 +169071,7 @@ func (a *IndicesAPIService) IndexUnisocGetExecute(r ApiIndexUnisocGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/unisoc"
+	localVarPath := localBasePath + "/v3/index/unisoc"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -169071,7 +169456,7 @@ func (a *IndicesAPIService) IndexUsdGetExecute(r ApiIndexUsdGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/usd"
+	localVarPath := localBasePath + "/v3/index/usd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -169456,7 +169841,7 @@ func (a *IndicesAPIService) IndexUsomGetExecute(r ApiIndexUsomGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/usom"
+	localVarPath := localBasePath + "/v3/index/usom"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -169841,7 +170226,7 @@ func (a *IndicesAPIService) IndexVandykeGetExecute(r ApiIndexVandykeGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vandyke"
+	localVarPath := localBasePath + "/v3/index/vandyke"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -170226,7 +170611,7 @@ func (a *IndicesAPIService) IndexVapidlabsGetExecute(r ApiIndexVapidlabsGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vapidlabs"
+	localVarPath := localBasePath + "/v3/index/vapidlabs"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -170611,7 +170996,7 @@ func (a *IndicesAPIService) IndexVcCpeDictionaryGetExecute(r ApiIndexVcCpeDictio
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vc-cpe-dictionary"
+	localVarPath := localBasePath + "/v3/index/vc-cpe-dictionary"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -170996,7 +171381,7 @@ func (a *IndicesAPIService) IndexVdeGetExecute(r ApiIndexVdeGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vde"
+	localVarPath := localBasePath + "/v3/index/vde"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -171381,7 +171766,7 @@ func (a *IndicesAPIService) IndexVeeamGetExecute(r ApiIndexVeeamGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/veeam"
+	localVarPath := localBasePath + "/v3/index/veeam"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -171766,7 +172151,7 @@ func (a *IndicesAPIService) IndexVeritasGetExecute(r ApiIndexVeritasGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/veritas"
+	localVarPath := localBasePath + "/v3/index/veritas"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -172151,7 +172536,7 @@ func (a *IndicesAPIService) IndexVirtuozzoGetExecute(r ApiIndexVirtuozzoGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/virtuozzo"
+	localVarPath := localBasePath + "/v3/index/virtuozzo"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -172536,7 +172921,7 @@ func (a *IndicesAPIService) IndexVlcGetExecute(r ApiIndexVlcGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vlc"
+	localVarPath := localBasePath + "/v3/index/vlc"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -172921,7 +173306,7 @@ func (a *IndicesAPIService) IndexVmwareGetExecute(r ApiIndexVmwareGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vmware"
+	localVarPath := localBasePath + "/v3/index/vmware"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -173306,7 +173691,7 @@ func (a *IndicesAPIService) IndexVoidsecGetExecute(r ApiIndexVoidsecGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/voidsec"
+	localVarPath := localBasePath + "/v3/index/voidsec"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -173649,7 +174034,7 @@ func (a *IndicesAPIService) IndexVulncheckCanaries10dGetExecute(r ApiIndexVulnch
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-canaries-10d"
+	localVarPath := localBasePath + "/v3/index/vulncheck-canaries-10d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -173974,7 +174359,7 @@ func (a *IndicesAPIService) IndexVulncheckCanaries30dGetExecute(r ApiIndexVulnch
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-canaries-30d"
+	localVarPath := localBasePath + "/v3/index/vulncheck-canaries-30d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -174299,7 +174684,7 @@ func (a *IndicesAPIService) IndexVulncheckCanaries3dGetExecute(r ApiIndexVulnche
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-canaries-3d"
+	localVarPath := localBasePath + "/v3/index/vulncheck-canaries-3d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -174624,7 +175009,7 @@ func (a *IndicesAPIService) IndexVulncheckCanaries90dGetExecute(r ApiIndexVulnch
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-canaries-90d"
+	localVarPath := localBasePath + "/v3/index/vulncheck-canaries-90d"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -174949,7 +175334,7 @@ func (a *IndicesAPIService) IndexVulncheckCanariesGetExecute(r ApiIndexVulncheck
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-canaries"
+	localVarPath := localBasePath + "/v3/index/vulncheck-canaries"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -175316,7 +175701,7 @@ func (a *IndicesAPIService) IndexVulncheckConfigGetExecute(r ApiIndexVulncheckCo
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-config"
+	localVarPath := localBasePath + "/v3/index/vulncheck-config"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -175701,7 +176086,7 @@ func (a *IndicesAPIService) IndexVulncheckCvelistV5GetExecute(r ApiIndexVulnchec
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-cvelist-v5"
+	localVarPath := localBasePath + "/v3/index/vulncheck-cvelist-v5"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -176086,7 +176471,7 @@ func (a *IndicesAPIService) IndexVulncheckGetExecute(r ApiIndexVulncheckGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck"
+	localVarPath := localBasePath + "/v3/index/vulncheck"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -176471,7 +176856,7 @@ func (a *IndicesAPIService) IndexVulncheckKevGetExecute(r ApiIndexVulncheckKevGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-kev"
+	localVarPath := localBasePath + "/v3/index/vulncheck-kev"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -176856,7 +177241,7 @@ func (a *IndicesAPIService) IndexVulncheckNvd2GetExecute(r ApiIndexVulncheckNvd2
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-nvd2"
+	localVarPath := localBasePath + "/v3/index/vulncheck-nvd2"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -177241,7 +177626,7 @@ func (a *IndicesAPIService) IndexVulncheckNvdGetExecute(r ApiIndexVulncheckNvdGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulncheck-nvd"
+	localVarPath := localBasePath + "/v3/index/vulncheck-nvd"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -177626,7 +178011,7 @@ func (a *IndicesAPIService) IndexVulnerabilityAliasesGetExecute(r ApiIndexVulner
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulnerability-aliases"
+	localVarPath := localBasePath + "/v3/index/vulnerability-aliases"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -178011,7 +178396,7 @@ func (a *IndicesAPIService) IndexVulnrichmentGetExecute(r ApiIndexVulnrichmentGe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vulnrichment"
+	localVarPath := localBasePath + "/v3/index/vulnrichment"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -178396,7 +178781,7 @@ func (a *IndicesAPIService) IndexVyaireGetExecute(r ApiIndexVyaireGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/vyaire"
+	localVarPath := localBasePath + "/v3/index/vyaire"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -178781,7 +179166,7 @@ func (a *IndicesAPIService) IndexWatchguardGetExecute(r ApiIndexWatchguardGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/watchguard"
+	localVarPath := localBasePath + "/v3/index/watchguard"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -179166,7 +179551,7 @@ func (a *IndicesAPIService) IndexWhatsappGetExecute(r ApiIndexWhatsappGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/whatsapp"
+	localVarPath := localBasePath + "/v3/index/whatsapp"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -179551,7 +179936,7 @@ func (a *IndicesAPIService) IndexWibuGetExecute(r ApiIndexWibuGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/wibu"
+	localVarPath := localBasePath + "/v3/index/wibu"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -179936,7 +180321,7 @@ func (a *IndicesAPIService) IndexWiresharkGetExecute(r ApiIndexWiresharkGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/wireshark"
+	localVarPath := localBasePath + "/v3/index/wireshark"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -180321,7 +180706,7 @@ func (a *IndicesAPIService) IndexWithSecureGetExecute(r ApiIndexWithSecureGetReq
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/with-secure"
+	localVarPath := localBasePath + "/v3/index/with-secure"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -180706,7 +181091,7 @@ func (a *IndicesAPIService) IndexWolfiGetExecute(r ApiIndexWolfiGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/wolfi"
+	localVarPath := localBasePath + "/v3/index/wolfi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -181091,7 +181476,7 @@ func (a *IndicesAPIService) IndexWolfsslGetExecute(r ApiIndexWolfsslGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/wolfssl"
+	localVarPath := localBasePath + "/v3/index/wolfssl"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -181476,7 +181861,7 @@ func (a *IndicesAPIService) IndexWordfenceGetExecute(r ApiIndexWordfenceGetReque
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/wordfence"
+	localVarPath := localBasePath + "/v3/index/wordfence"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -181861,7 +182246,7 @@ func (a *IndicesAPIService) IndexXenGetExecute(r ApiIndexXenGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/xen"
+	localVarPath := localBasePath + "/v3/index/xen"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -182246,7 +182631,7 @@ func (a *IndicesAPIService) IndexXeroxGetExecute(r ApiIndexXeroxGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/xerox"
+	localVarPath := localBasePath + "/v3/index/xerox"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -182631,7 +183016,7 @@ func (a *IndicesAPIService) IndexXiaomiGetExecute(r ApiIndexXiaomiGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/xiaomi"
+	localVarPath := localBasePath + "/v3/index/xiaomi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -183016,7 +183401,7 @@ func (a *IndicesAPIService) IndexXylemGetExecute(r ApiIndexXylemGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/xylem"
+	localVarPath := localBasePath + "/v3/index/xylem"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -183401,7 +183786,7 @@ func (a *IndicesAPIService) IndexYamahaGetExecute(r ApiIndexYamahaGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/yamaha"
+	localVarPath := localBasePath + "/v3/index/yamaha"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -183786,7 +184171,7 @@ func (a *IndicesAPIService) IndexYokogawaGetExecute(r ApiIndexYokogawaGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/yokogawa"
+	localVarPath := localBasePath + "/v3/index/yokogawa"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -184171,7 +184556,7 @@ func (a *IndicesAPIService) IndexYubicoGetExecute(r ApiIndexYubicoGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/yubico"
+	localVarPath := localBasePath + "/v3/index/yubico"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -184556,7 +184941,7 @@ func (a *IndicesAPIService) IndexZdiGetExecute(r ApiIndexZdiGetRequest) (*Render
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zdi"
+	localVarPath := localBasePath + "/v3/index/zdi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -184941,7 +185326,7 @@ func (a *IndicesAPIService) IndexZebraGetExecute(r ApiIndexZebraGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zebra"
+	localVarPath := localBasePath + "/v3/index/zebra"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -185326,7 +185711,7 @@ func (a *IndicesAPIService) IndexZeroscienceGetExecute(r ApiIndexZeroscienceGetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zeroscience"
+	localVarPath := localBasePath + "/v3/index/zeroscience"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -185711,7 +186096,7 @@ func (a *IndicesAPIService) IndexZimbraGetExecute(r ApiIndexZimbraGetRequest) (*
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zimbra"
+	localVarPath := localBasePath + "/v3/index/zimbra"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -186096,7 +186481,7 @@ func (a *IndicesAPIService) IndexZoomGetExecute(r ApiIndexZoomGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zoom"
+	localVarPath := localBasePath + "/v3/index/zoom"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -186481,7 +186866,7 @@ func (a *IndicesAPIService) IndexZscalerGetExecute(r ApiIndexZscalerGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zscaler"
+	localVarPath := localBasePath + "/v3/index/zscaler"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -186866,7 +187251,7 @@ func (a *IndicesAPIService) IndexZusoGetExecute(r ApiIndexZusoGetRequest) (*Rend
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zuso"
+	localVarPath := localBasePath + "/v3/index/zuso"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -187251,7 +187636,7 @@ func (a *IndicesAPIService) IndexZyxelGetExecute(r ApiIndexZyxelGetRequest) (*Re
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index/zyxel"
+	localVarPath := localBasePath + "/v3/index/zyxel"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

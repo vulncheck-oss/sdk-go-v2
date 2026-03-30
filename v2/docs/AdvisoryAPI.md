@@ -1,17 +1,78 @@
 # \AdvisoryAPI
 
-All URIs are relative to *https://api.vulncheck.com/v3*
+All URIs are relative to *https://api.vulncheck.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AdvisoryGet**](AdvisoryAPI.md#AdvisoryGet) | **Get** /advisory | Query advisories
-[**AdvisoryListGet**](AdvisoryAPI.md#AdvisoryListGet) | **Get** /advisory/list | List advisory feeds
+[**V4ListAdvisoryFeeds**](AdvisoryAPI.md#V4ListAdvisoryFeeds) | **Get** /v4/advisory/list | List advisory feeds
+[**V4QueryAdvisories**](AdvisoryAPI.md#V4QueryAdvisories) | **Get** /v4/advisory | Query advisories
 
 
 
-## AdvisoryGet
+## V4ListAdvisoryFeeds
 
-> SearchV4AdvisoryReturnValue AdvisoryGet(ctx).Name(name).CveId(cveId).Vendor(vendor).Product(product).Platform(platform).Version(version).Cpe(cpe).PackageName(packageName).Purl(purl).ReferenceUrl(referenceUrl).ReferenceTag(referenceTag).DescriptionLang(descriptionLang).UpdatedAfter(updatedAfter).UpdatedBefore(updatedBefore).Page(page).Limit(limit).StartCursor(startCursor).Cursor(cursor).Execute()
+> SearchV4ListFeedReturnValue V4ListAdvisoryFeeds(ctx).Execute()
+
+List advisory feeds
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AdvisoryAPI.V4ListAdvisoryFeeds(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AdvisoryAPI.V4ListAdvisoryFeeds``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V4ListAdvisoryFeeds`: SearchV4ListFeedReturnValue
+	fmt.Fprintf(os.Stdout, "Response from `AdvisoryAPI.V4ListAdvisoryFeeds`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV4ListAdvisoryFeedsRequest struct via the builder pattern
+
+
+### Return type
+
+[**SearchV4ListFeedReturnValue**](SearchV4ListFeedReturnValue.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V4QueryAdvisories
+
+> SearchV4AdvisoryReturnValue V4QueryAdvisories(ctx).Name(name).CveId(cveId).Vendor(vendor).Product(product).Platform(platform).Version(version).Cpe(cpe).PackageName(packageName).Purl(purl).ReferenceUrl(referenceUrl).ReferenceTag(referenceTag).DescriptionLang(descriptionLang).UpdatedAfter(updatedAfter).UpdatedBefore(updatedBefore).Page(page).Limit(limit).StartCursor(startCursor).Cursor(cursor).Execute()
 
 Query advisories
 
@@ -51,13 +112,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AdvisoryAPI.AdvisoryGet(context.Background()).Name(name).CveId(cveId).Vendor(vendor).Product(product).Platform(platform).Version(version).Cpe(cpe).PackageName(packageName).Purl(purl).ReferenceUrl(referenceUrl).ReferenceTag(referenceTag).DescriptionLang(descriptionLang).UpdatedAfter(updatedAfter).UpdatedBefore(updatedBefore).Page(page).Limit(limit).StartCursor(startCursor).Cursor(cursor).Execute()
+	resp, r, err := apiClient.AdvisoryAPI.V4QueryAdvisories(context.Background()).Name(name).CveId(cveId).Vendor(vendor).Product(product).Platform(platform).Version(version).Cpe(cpe).PackageName(packageName).Purl(purl).ReferenceUrl(referenceUrl).ReferenceTag(referenceTag).DescriptionLang(descriptionLang).UpdatedAfter(updatedAfter).UpdatedBefore(updatedBefore).Page(page).Limit(limit).StartCursor(startCursor).Cursor(cursor).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AdvisoryAPI.AdvisoryGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AdvisoryAPI.V4QueryAdvisories``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `AdvisoryGet`: SearchV4AdvisoryReturnValue
-	fmt.Fprintf(os.Stdout, "Response from `AdvisoryAPI.AdvisoryGet`: %v\n", resp)
+	// response from `V4QueryAdvisories`: SearchV4AdvisoryReturnValue
+	fmt.Fprintf(os.Stdout, "Response from `AdvisoryAPI.V4QueryAdvisories`: %v\n", resp)
 }
 ```
 
@@ -67,7 +128,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiAdvisoryGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiV4QueryAdvisoriesRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -94,67 +155,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SearchV4AdvisoryReturnValue**](SearchV4AdvisoryReturnValue.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## AdvisoryListGet
-
-> SearchV4ListFeedReturnValue AdvisoryListGet(ctx).Execute()
-
-List advisory feeds
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/vulncheck-oss/sdk-go-v2/v2"
-)
-
-func main() {
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AdvisoryAPI.AdvisoryListGet(context.Background()).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AdvisoryAPI.AdvisoryListGet``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `AdvisoryListGet`: SearchV4ListFeedReturnValue
-	fmt.Fprintf(os.Stdout, "Response from `AdvisoryAPI.AdvisoryListGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiAdvisoryListGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**SearchV4ListFeedReturnValue**](SearchV4ListFeedReturnValue.md)
 
 ### Authorization
 

@@ -23,231 +23,51 @@ import (
 // AdvisoryAPIService AdvisoryAPI service
 type AdvisoryAPIService service
 
-type ApiAdvisoryGetRequest struct {
+type ApiV4ListAdvisoryFeedsRequest struct {
 	ctx context.Context
 	ApiService *AdvisoryAPIService
-	name *string
-	cveId *string
-	vendor *string
-	product *string
-	platform *string
-	version *string
-	cpe *string
-	packageName *string
-	purl *string
-	referenceUrl *string
-	referenceTag *string
-	descriptionLang *string
-	updatedAfter *string
-	updatedBefore *string
-	page *int32
-	limit *int32
-	startCursor *string
-	cursor *string
 }
 
-// Filter by advisory feed name (e.g. &#39;vulncheck&#39;)
-func (r ApiAdvisoryGetRequest) Name(name string) ApiAdvisoryGetRequest {
-	r.name = &name
-	return r
-}
-
-// Filter by CVE ID (e.g. &#39;CVE-2024-1234&#39;)
-func (r ApiAdvisoryGetRequest) CveId(cveId string) ApiAdvisoryGetRequest {
-	r.cveId = &cveId
-	return r
-}
-
-// Filter by vendor name
-func (r ApiAdvisoryGetRequest) Vendor(vendor string) ApiAdvisoryGetRequest {
-	r.vendor = &vendor
-	return r
-}
-
-// Filter by product name
-func (r ApiAdvisoryGetRequest) Product(product string) ApiAdvisoryGetRequest {
-	r.product = &product
-	return r
-}
-
-// Filter by OS/platform
-func (r ApiAdvisoryGetRequest) Platform(platform string) ApiAdvisoryGetRequest {
-	r.platform = &platform
-	return r
-}
-
-// Filter by product version (semver-aware)
-func (r ApiAdvisoryGetRequest) Version(version string) ApiAdvisoryGetRequest {
-	r.version = &version
-	return r
-}
-
-// Filter by CPE (e.g. &#39;cpe:2.3:a:vendor:product:*&#39;)
-func (r ApiAdvisoryGetRequest) Cpe(cpe string) ApiAdvisoryGetRequest {
-	r.cpe = &cpe
-	return r
-}
-
-// Filter by package name
-func (r ApiAdvisoryGetRequest) PackageName(packageName string) ApiAdvisoryGetRequest {
-	r.packageName = &packageName
-	return r
-}
-
-// Filter by package URL (PURL)
-func (r ApiAdvisoryGetRequest) Purl(purl string) ApiAdvisoryGetRequest {
-	r.purl = &purl
-	return r
-}
-
-// Filter by reference URL
-func (r ApiAdvisoryGetRequest) ReferenceUrl(referenceUrl string) ApiAdvisoryGetRequest {
-	r.referenceUrl = &referenceUrl
-	return r
-}
-
-// Filter by reference tag (e.g. &#39;patch&#39;, &#39;advisory&#39;)
-func (r ApiAdvisoryGetRequest) ReferenceTag(referenceTag string) ApiAdvisoryGetRequest {
-	r.referenceTag = &referenceTag
-	return r
-}
-
-// Filter by description language (e.g. &#39;en&#39;)
-func (r ApiAdvisoryGetRequest) DescriptionLang(descriptionLang string) ApiAdvisoryGetRequest {
-	r.descriptionLang = &descriptionLang
-	return r
-}
-
-// Return advisories updated after this date (RFC3339 or date-math e.g. &#39;now-30d&#39;)
-func (r ApiAdvisoryGetRequest) UpdatedAfter(updatedAfter string) ApiAdvisoryGetRequest {
-	r.updatedAfter = &updatedAfter
-	return r
-}
-
-// Return advisories updated before this date (RFC3339 or date-math)
-func (r ApiAdvisoryGetRequest) UpdatedBefore(updatedBefore string) ApiAdvisoryGetRequest {
-	r.updatedBefore = &updatedBefore
-	return r
-}
-
-// Page number (default: 1)
-func (r ApiAdvisoryGetRequest) Page(page int32) ApiAdvisoryGetRequest {
-	r.page = &page
-	return r
-}
-
-// Results per page, max 100 (default: 10)
-func (r ApiAdvisoryGetRequest) Limit(limit int32) ApiAdvisoryGetRequest {
-	r.limit = &limit
-	return r
-}
-
-// Presence activates cursor mode from the first page (value is ignored; cannot be combined with page)
-func (r ApiAdvisoryGetRequest) StartCursor(startCursor string) ApiAdvisoryGetRequest {
-	r.startCursor = &startCursor
-	return r
-}
-
-// Cursor from previous response _meta.next_cursor to fetch the next page
-func (r ApiAdvisoryGetRequest) Cursor(cursor string) ApiAdvisoryGetRequest {
-	r.cursor = &cursor
-	return r
-}
-
-func (r ApiAdvisoryGetRequest) Execute() (*SearchV4AdvisoryReturnValue, *http.Response, error) {
-	return r.ApiService.AdvisoryGetExecute(r)
+func (r ApiV4ListAdvisoryFeedsRequest) Execute() (*SearchV4ListFeedReturnValue, *http.Response, error) {
+	return r.ApiService.V4ListAdvisoryFeedsExecute(r)
 }
 
 /*
-AdvisoryGet Query advisories
+V4ListAdvisoryFeeds List advisory feeds
 
-Query the VulnCheck v4 advisory index
+Return a list of available advisory feed names
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiAdvisoryGetRequest
+ @return ApiV4ListAdvisoryFeedsRequest
 */
-func (a *AdvisoryAPIService) AdvisoryGet(ctx context.Context) ApiAdvisoryGetRequest {
-	return ApiAdvisoryGetRequest{
+func (a *AdvisoryAPIService) V4ListAdvisoryFeeds(ctx context.Context) ApiV4ListAdvisoryFeedsRequest {
+	return ApiV4ListAdvisoryFeedsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SearchV4AdvisoryReturnValue
-func (a *AdvisoryAPIService) AdvisoryGetExecute(r ApiAdvisoryGetRequest) (*SearchV4AdvisoryReturnValue, *http.Response, error) {
+//  @return SearchV4ListFeedReturnValue
+func (a *AdvisoryAPIService) V4ListAdvisoryFeedsExecute(r ApiV4ListAdvisoryFeedsRequest) (*SearchV4ListFeedReturnValue, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *SearchV4AdvisoryReturnValue
+		localVarReturnValue  *SearchV4ListFeedReturnValue
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AdvisoryAPIService.AdvisoryGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AdvisoryAPIService.V4ListAdvisoryFeeds")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/advisory"
+	localVarPath := localBasePath + "/v4/advisory/list"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if r.name != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
-	}
-	if r.cveId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cve_id", r.cveId, "form", "")
-	}
-	if r.vendor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vendor", r.vendor, "form", "")
-	}
-	if r.product != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "product", r.product, "form", "")
-	}
-	if r.platform != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "platform", r.platform, "form", "")
-	}
-	if r.version != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "version", r.version, "form", "")
-	}
-	if r.cpe != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cpe", r.cpe, "form", "")
-	}
-	if r.packageName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "package_name", r.packageName, "form", "")
-	}
-	if r.purl != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "purl", r.purl, "form", "")
-	}
-	if r.referenceUrl != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "reference_url", r.referenceUrl, "form", "")
-	}
-	if r.referenceTag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "reference_tag", r.referenceTag, "form", "")
-	}
-	if r.descriptionLang != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "description_lang", r.descriptionLang, "form", "")
-	}
-	if r.updatedAfter != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAfter", r.updatedAfter, "form", "")
-	}
-	if r.updatedBefore != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedBefore", r.updatedBefore, "form", "")
-	}
-	if r.page != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	}
-	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	}
-	if r.startCursor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
-	}
-	if r.cursor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
-	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -359,51 +179,231 @@ func (a *AdvisoryAPIService) AdvisoryGetExecute(r ApiAdvisoryGetRequest) (*Searc
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiAdvisoryListGetRequest struct {
+type ApiV4QueryAdvisoriesRequest struct {
 	ctx context.Context
 	ApiService *AdvisoryAPIService
+	name *string
+	cveId *string
+	vendor *string
+	product *string
+	platform *string
+	version *string
+	cpe *string
+	packageName *string
+	purl *string
+	referenceUrl *string
+	referenceTag *string
+	descriptionLang *string
+	updatedAfter *string
+	updatedBefore *string
+	page *int32
+	limit *int32
+	startCursor *string
+	cursor *string
 }
 
-func (r ApiAdvisoryListGetRequest) Execute() (*SearchV4ListFeedReturnValue, *http.Response, error) {
-	return r.ApiService.AdvisoryListGetExecute(r)
+// Filter by advisory feed name (e.g. &#39;vulncheck&#39;)
+func (r ApiV4QueryAdvisoriesRequest) Name(name string) ApiV4QueryAdvisoriesRequest {
+	r.name = &name
+	return r
+}
+
+// Filter by CVE ID (e.g. &#39;CVE-2024-1234&#39;)
+func (r ApiV4QueryAdvisoriesRequest) CveId(cveId string) ApiV4QueryAdvisoriesRequest {
+	r.cveId = &cveId
+	return r
+}
+
+// Filter by vendor name
+func (r ApiV4QueryAdvisoriesRequest) Vendor(vendor string) ApiV4QueryAdvisoriesRequest {
+	r.vendor = &vendor
+	return r
+}
+
+// Filter by product name
+func (r ApiV4QueryAdvisoriesRequest) Product(product string) ApiV4QueryAdvisoriesRequest {
+	r.product = &product
+	return r
+}
+
+// Filter by OS/platform
+func (r ApiV4QueryAdvisoriesRequest) Platform(platform string) ApiV4QueryAdvisoriesRequest {
+	r.platform = &platform
+	return r
+}
+
+// Filter by product version (semver-aware)
+func (r ApiV4QueryAdvisoriesRequest) Version(version string) ApiV4QueryAdvisoriesRequest {
+	r.version = &version
+	return r
+}
+
+// Filter by CPE (e.g. &#39;cpe:2.3:a:vendor:product:*&#39;)
+func (r ApiV4QueryAdvisoriesRequest) Cpe(cpe string) ApiV4QueryAdvisoriesRequest {
+	r.cpe = &cpe
+	return r
+}
+
+// Filter by package name
+func (r ApiV4QueryAdvisoriesRequest) PackageName(packageName string) ApiV4QueryAdvisoriesRequest {
+	r.packageName = &packageName
+	return r
+}
+
+// Filter by package URL (PURL)
+func (r ApiV4QueryAdvisoriesRequest) Purl(purl string) ApiV4QueryAdvisoriesRequest {
+	r.purl = &purl
+	return r
+}
+
+// Filter by reference URL
+func (r ApiV4QueryAdvisoriesRequest) ReferenceUrl(referenceUrl string) ApiV4QueryAdvisoriesRequest {
+	r.referenceUrl = &referenceUrl
+	return r
+}
+
+// Filter by reference tag (e.g. &#39;patch&#39;, &#39;advisory&#39;)
+func (r ApiV4QueryAdvisoriesRequest) ReferenceTag(referenceTag string) ApiV4QueryAdvisoriesRequest {
+	r.referenceTag = &referenceTag
+	return r
+}
+
+// Filter by description language (e.g. &#39;en&#39;)
+func (r ApiV4QueryAdvisoriesRequest) DescriptionLang(descriptionLang string) ApiV4QueryAdvisoriesRequest {
+	r.descriptionLang = &descriptionLang
+	return r
+}
+
+// Return advisories updated after this date (RFC3339 or date-math e.g. &#39;now-30d&#39;)
+func (r ApiV4QueryAdvisoriesRequest) UpdatedAfter(updatedAfter string) ApiV4QueryAdvisoriesRequest {
+	r.updatedAfter = &updatedAfter
+	return r
+}
+
+// Return advisories updated before this date (RFC3339 or date-math)
+func (r ApiV4QueryAdvisoriesRequest) UpdatedBefore(updatedBefore string) ApiV4QueryAdvisoriesRequest {
+	r.updatedBefore = &updatedBefore
+	return r
+}
+
+// Page number (default: 1)
+func (r ApiV4QueryAdvisoriesRequest) Page(page int32) ApiV4QueryAdvisoriesRequest {
+	r.page = &page
+	return r
+}
+
+// Results per page, max 100 (default: 10)
+func (r ApiV4QueryAdvisoriesRequest) Limit(limit int32) ApiV4QueryAdvisoriesRequest {
+	r.limit = &limit
+	return r
+}
+
+// Presence activates cursor mode from the first page (value is ignored; cannot be combined with page)
+func (r ApiV4QueryAdvisoriesRequest) StartCursor(startCursor string) ApiV4QueryAdvisoriesRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// Cursor from previous response _meta.next_cursor to fetch the next page
+func (r ApiV4QueryAdvisoriesRequest) Cursor(cursor string) ApiV4QueryAdvisoriesRequest {
+	r.cursor = &cursor
+	return r
+}
+
+func (r ApiV4QueryAdvisoriesRequest) Execute() (*SearchV4AdvisoryReturnValue, *http.Response, error) {
+	return r.ApiService.V4QueryAdvisoriesExecute(r)
 }
 
 /*
-AdvisoryListGet List advisory feeds
+V4QueryAdvisories Query advisories
 
-Return a list of available advisory feed names
+Query the VulnCheck v4 advisory index
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiAdvisoryListGetRequest
+ @return ApiV4QueryAdvisoriesRequest
 */
-func (a *AdvisoryAPIService) AdvisoryListGet(ctx context.Context) ApiAdvisoryListGetRequest {
-	return ApiAdvisoryListGetRequest{
+func (a *AdvisoryAPIService) V4QueryAdvisories(ctx context.Context) ApiV4QueryAdvisoriesRequest {
+	return ApiV4QueryAdvisoriesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SearchV4ListFeedReturnValue
-func (a *AdvisoryAPIService) AdvisoryListGetExecute(r ApiAdvisoryListGetRequest) (*SearchV4ListFeedReturnValue, *http.Response, error) {
+//  @return SearchV4AdvisoryReturnValue
+func (a *AdvisoryAPIService) V4QueryAdvisoriesExecute(r ApiV4QueryAdvisoriesRequest) (*SearchV4AdvisoryReturnValue, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *SearchV4ListFeedReturnValue
+		localVarReturnValue  *SearchV4AdvisoryReturnValue
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AdvisoryAPIService.AdvisoryListGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AdvisoryAPIService.V4QueryAdvisories")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/advisory/list"
+	localVarPath := localBasePath + "/v4/advisory"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if r.name != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
+	}
+	if r.cveId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve_id", r.cveId, "form", "")
+	}
+	if r.vendor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "vendor", r.vendor, "form", "")
+	}
+	if r.product != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "product", r.product, "form", "")
+	}
+	if r.platform != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "platform", r.platform, "form", "")
+	}
+	if r.version != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "version", r.version, "form", "")
+	}
+	if r.cpe != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cpe", r.cpe, "form", "")
+	}
+	if r.packageName != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "package_name", r.packageName, "form", "")
+	}
+	if r.purl != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "purl", r.purl, "form", "")
+	}
+	if r.referenceUrl != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "reference_url", r.referenceUrl, "form", "")
+	}
+	if r.referenceTag != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "reference_tag", r.referenceTag, "form", "")
+	}
+	if r.descriptionLang != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "description_lang", r.descriptionLang, "form", "")
+	}
+	if r.updatedAfter != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAfter", r.updatedAfter, "form", "")
+	}
+	if r.updatedBefore != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedBefore", r.updatedBefore, "form", "")
+	}
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

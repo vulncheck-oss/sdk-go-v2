@@ -1,20 +1,20 @@
 # \EndpointsAPI
 
-All URIs are relative to *https://api.vulncheck.com/v3*
+All URIs are relative to *https://api.vulncheck.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BackupGet**](EndpointsAPI.md#BackupGet) | **Get** /backup | Return a list of indexes with backup and endpoint links
-[**BackupIndexGet**](EndpointsAPI.md#BackupIndexGet) | **Get** /backup/{index} | Retrieve a list of backups by index
-[**CpeGet**](EndpointsAPI.md#CpeGet) | **Get** /cpe | Return CVE &#39;s associated with a specific NIST CPE
-[**EntitlementsGet**](EndpointsAPI.md#EntitlementsGet) | **Get** /entitlements | Retrieve user entitlements
-[**IndexGet**](EndpointsAPI.md#IndexGet) | **Get** /index | Return a list of available indexes with endpoint links
-[**OpenapiGet**](EndpointsAPI.md#OpenapiGet) | **Get** /openapi | Return OpenAPI specification
-[**PdnsVulncheckC2Get**](EndpointsAPI.md#PdnsVulncheckC2Get) | **Get** /pdns/vulncheck-c2 | Retrieve a list of C2 Hostnames
-[**PurlGet**](EndpointsAPI.md#PurlGet) | **Get** /purl | Request vulnerabilities related to a PURL
-[**PurlsPost**](EndpointsAPI.md#PurlsPost) | **Post** /purls | Request vulnerabilities related to a list of PURLs
-[**RulesInitialAccessTypeGet**](EndpointsAPI.md#RulesInitialAccessTypeGet) | **Get** /rules/initial-access/{type} | Retrieve set of initial-access detection rules
-[**TagsVulncheckC2Get**](EndpointsAPI.md#TagsVulncheckC2Get) | **Get** /tags/vulncheck-c2 | Retrieve a list of C2 IP addresses
+[**BackupGet**](EndpointsAPI.md#BackupGet) | **Get** /v3/backup | Return a list of indexes with backup and endpoint links
+[**BackupIndexGet**](EndpointsAPI.md#BackupIndexGet) | **Get** /v3/backup/{index} | Retrieve a list of backups by index
+[**CpeGet**](EndpointsAPI.md#CpeGet) | **Get** /v3/cpe | Return CVE &#39;s associated with a specific NIST CPE
+[**EntitlementsGet**](EndpointsAPI.md#EntitlementsGet) | **Get** /v3/entitlements | Retrieve user entitlements
+[**IndexGet**](EndpointsAPI.md#IndexGet) | **Get** /v3/index | Return a list of available indexes with endpoint links
+[**OpenapiGet**](EndpointsAPI.md#OpenapiGet) | **Get** /v3/openapi | Return OpenAPI specification
+[**PdnsVulncheckC2Get**](EndpointsAPI.md#PdnsVulncheckC2Get) | **Get** /v3/pdns/vulncheck-c2 | Retrieve a list of C2 Hostnames
+[**PurlGet**](EndpointsAPI.md#PurlGet) | **Get** /v3/purl | Request vulnerabilities related to a PURL
+[**PurlsPost**](EndpointsAPI.md#PurlsPost) | **Post** /v3/purls | Request vulnerabilities related to a list of PURLs
+[**RulesInitialAccessTypeGet**](EndpointsAPI.md#RulesInitialAccessTypeGet) | **Get** /v3/rules/initial-access/{type} | Retrieve set of initial-access detection rules
+[**TagsVulncheckC2Get**](EndpointsAPI.md#TagsVulncheckC2Get) | **Get** /v3/tags/vulncheck-c2 | Retrieve a list of C2 IP addresses
 
 
 

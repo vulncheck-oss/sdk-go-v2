@@ -26,6 +26,8 @@ type AdvisorySamba struct {
 	Issues *string `json:"issues,omitempty"`
 	Patches []string `json:"patches,omitempty"`
 	References []string `json:"references,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	Url *string `json:"url,omitempty"`
 }
 
 // NewAdvisorySamba instantiates a new AdvisorySamba object
@@ -237,6 +239,70 @@ func (o *AdvisorySamba) SetReferences(v []string) {
 	o.References = v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisorySamba) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySamba) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisorySamba) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisorySamba) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
+// GetUrl returns the Url field value if set, zero value otherwise.
+func (o *AdvisorySamba) GetUrl() string {
+	if o == nil || IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
+}
+
+// GetUrlOk returns a tuple with the Url field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisorySamba) GetUrlOk() (*string, bool) {
+	if o == nil || IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
+}
+
+// HasUrl returns a boolean if a field has been set.
+func (o *AdvisorySamba) HasUrl() bool {
+	if o != nil && !IsNil(o.Url) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrl gets a reference to the given string and assigns it to the Url field.
+func (o *AdvisorySamba) SetUrl(v string) {
+	o.Url = &v
+}
+
 func (o AdvisorySamba) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -264,6 +330,12 @@ func (o AdvisorySamba) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
+	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
 	}
 	return toSerialize, nil
 }

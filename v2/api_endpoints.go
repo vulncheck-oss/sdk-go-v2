@@ -63,7 +63,7 @@ func (a *EndpointsAPIService) BackupGetExecute(r ApiBackupGetRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/backup"
+	localVarPath := localBasePath + "/v3/backup"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -200,7 +200,7 @@ func (a *EndpointsAPIService) BackupIndexGetExecute(r ApiBackupIndexGetRequest) 
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/backup/{index}"
+	localVarPath := localBasePath + "/v3/backup/{index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"index"+"}", url.PathEscape(parameterValueToString(r.index, "index")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -349,7 +349,7 @@ func (a *EndpointsAPIService) CpeGetExecute(r ApiCpeGetRequest) (*RenderResponse
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/cpe"
+	localVarPath := localBasePath + "/v3/cpe"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -490,7 +490,7 @@ func (a *EndpointsAPIService) EntitlementsGetExecute(r ApiEntitlementsGetRequest
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/entitlements"
+	localVarPath := localBasePath + "/v3/entitlements"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -624,7 +624,7 @@ func (a *EndpointsAPIService) IndexGetExecute(r ApiIndexGetRequest) (*RenderResp
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/index"
+	localVarPath := localBasePath + "/v3/index"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -758,7 +758,7 @@ func (a *EndpointsAPIService) OpenapiGetExecute(r ApiOpenapiGetRequest) (map[str
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/openapi"
+	localVarPath := localBasePath + "/v3/openapi"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -888,7 +888,7 @@ func (a *EndpointsAPIService) PdnsVulncheckC2GetExecute(r ApiPdnsVulncheckC2GetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/pdns/vulncheck-c2"
+	localVarPath := localBasePath + "/v3/pdns/vulncheck-c2"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1032,7 +1032,7 @@ func (a *EndpointsAPIService) PurlGetExecute(r ApiPurlGetRequest) (*RenderRespon
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/purl"
+	localVarPath := localBasePath + "/v3/purl"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1177,7 +1177,7 @@ func (a *EndpointsAPIService) PurlsPostExecute(r ApiPurlsPostRequest) (*RenderRe
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/purls"
+	localVarPath := localBasePath + "/v3/purls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1319,7 +1319,7 @@ func (a *EndpointsAPIService) RulesInitialAccessTypeGetExecute(r ApiRulesInitial
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/rules/initial-access/{type}"
+	localVarPath := localBasePath + "/v3/rules/initial-access/{type}"
 	localVarPath = strings.Replace(localVarPath, "{"+"type"+"}", url.PathEscape(parameterValueToString(r.type_, "type_")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -1461,7 +1461,7 @@ func (a *EndpointsAPIService) TagsVulncheckC2GetExecute(r ApiTagsVulncheckC2GetR
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/tags/vulncheck-c2"
+	localVarPath := localBasePath + "/v3/tags/vulncheck-c2"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

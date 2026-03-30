@@ -1,7 +1,7 @@
 /*
 VulnCheck API
 
-Testing AdvisoryAPIService
+Testing BackupAPIService
 
 */
 
@@ -17,16 +17,18 @@ import (
 	openapiclient "github.com/vulncheck-oss/sdk-go-v2/v2"
 )
 
-func Test_v2_AdvisoryAPIService(t *testing.T) {
+func Test_v2_BackupAPIService(t *testing.T) {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test AdvisoryAPIService V4ListAdvisoryFeeds", func(t *testing.T) {
+	t.Run("Test BackupAPIService V4GetBackupByName", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AdvisoryAPI.V4ListAdvisoryFeeds(context.Background()).Execute()
+		var index string
+
+		resp, httpRes, err := apiClient.BackupAPI.V4GetBackupByName(context.Background(), index).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -34,11 +36,11 @@ func Test_v2_AdvisoryAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AdvisoryAPIService V4QueryAdvisories", func(t *testing.T) {
+	t.Run("Test BackupAPIService V4ListBackups", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AdvisoryAPI.V4QueryAdvisories(context.Background()).Execute()
+		resp, httpRes, err := apiClient.BackupAPI.V4ListBackups(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
