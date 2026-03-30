@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **CensysLegacyRawQueries** | Pointer to **[]string** | CensysLegacyRawQueries are raw legacy queries for examining potential Internet-exposed devices &amp; applications with Censys. | [optional] 
 **CensysQueries** | Pointer to **[]string** | CensysQueries are queries for examining potential Internet-exposed devices &amp; applications with Censys in URL form. | [optional] 
 **CensysRawQueries** | Pointer to **[]string** | CensysRawQueries are raw queries for examining potential Internet-exposed devices &amp; applications with Censys. | [optional] 
+**Chain** | Pointer to **[]string** | Chain can represent the chain of exploitation. | [optional] 
 **CloneSSHURL** | Pointer to **string** | CloneSSHURL is the git URL to clone the artifact with. | [optional] 
 **DateAdded** | Pointer to **string** | DateAdded is when this artifact entry was first added to the InitialAccess data set. | [optional] 
 **DriftnetQueries** | Pointer to **[]string** | DriftnetQueries are queries for examining Internet exposed services with Driftnet. | [optional] 
@@ -26,6 +27,7 @@ Name | Type | Description | Notes
 **NmapScript** | Pointer to **bool** | NmapScript indicates whether or not an nmap script for scanning environment exists in this artifact. | [optional] 
 **Pcap** | Pointer to **bool** | PCAP indicates whether of not a package capture of the exploit PoC exploiting a vulnerable system exists in this artifact. | [optional] 
 **Product** | Pointer to **[]string** | Product are the software that has the vulnerability. | [optional] 
+**Related** | Pointer to **[]string** | Related is a set of related cves. | [optional] 
 **ShodanQueries** | Pointer to **[]string** | ShodanQueries are queries for examining potential Internet-exposed devices &amp; applications with Shodan in URL form. | [optional] 
 **ShodanRawQueries** | Pointer to **[]string** | ShodanRawQueries are raw queries for examining potential Internet-exposed devices &amp; applications with Shodan. | [optional] 
 **SigmaRule** | Pointer to **bool** | SigmaRule indicates whether or not a Sigma rule designed to detect the exploitation of the vulnerability over the network exists in this artifact. | [optional] 
@@ -259,6 +261,31 @@ SetCensysRawQueries sets CensysRawQueries field to given value.
 `func (o *ApiInitialAccessArtifact) HasCensysRawQueries() bool`
 
 HasCensysRawQueries returns a boolean if a field has been set.
+
+### GetChain
+
+`func (o *ApiInitialAccessArtifact) GetChain() []string`
+
+GetChain returns the Chain field if non-nil, zero value otherwise.
+
+### GetChainOk
+
+`func (o *ApiInitialAccessArtifact) GetChainOk() (*[]string, bool)`
+
+GetChainOk returns a tuple with the Chain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChain
+
+`func (o *ApiInitialAccessArtifact) SetChain(v []string)`
+
+SetChain sets Chain field to given value.
+
+### HasChain
+
+`func (o *ApiInitialAccessArtifact) HasChain() bool`
+
+HasChain returns a boolean if a field has been set.
 
 ### GetCloneSSHURL
 
@@ -609,6 +636,31 @@ SetProduct sets Product field to given value.
 `func (o *ApiInitialAccessArtifact) HasProduct() bool`
 
 HasProduct returns a boolean if a field has been set.
+
+### GetRelated
+
+`func (o *ApiInitialAccessArtifact) GetRelated() []string`
+
+GetRelated returns the Related field if non-nil, zero value otherwise.
+
+### GetRelatedOk
+
+`func (o *ApiInitialAccessArtifact) GetRelatedOk() (*[]string, bool)`
+
+GetRelatedOk returns a tuple with the Related field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRelated
+
+`func (o *ApiInitialAccessArtifact) SetRelated(v []string)`
+
+SetRelated sets Related field to given value.
+
+### HasRelated
+
+`func (o *ApiInitialAccessArtifact) HasRelated() bool`
+
+HasRelated returns a boolean if a field has been set.
 
 ### GetShodanQueries
 

@@ -90,3016 +90,3030 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.15/go",
+		UserAgent:        "OpenAPI-Generator/2.1.16/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
-				URL: "https://api.vulncheck.com/v3",
-				Description: "No description provided",
-			},
-			{
-				URL: "https://api.vulncheck.com/v4",
+				URL: "https://api.vulncheck.com",
 				Description: "No description provided",
 			},
 		},
 		OperationServers: map[string]ServerConfigurations{
-			"AdvisoryAPIService.AdvisoryGet": {
+			"AdvisoryAPIService.V4ListAdvisoryFeeds": {
 				{
-					URL: "https://api.vulncheck.com/v4",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
-			"AdvisoryAPIService.AdvisoryListGet": {
+			"AdvisoryAPIService.V4QueryAdvisories": {
 				{
-					URL: "https://api.vulncheck.com/v4",
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"BackupAPIService.V4GetBackupByName": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"BackupAPIService.V4ListBackups": {
+				{
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.BackupGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.BackupIndexGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.CpeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.EntitlementsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.IndexGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.OpenapiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.PdnsVulncheckC2Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.PurlGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.PurlsPost": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.RulesInitialAccessTypeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"EndpointsAPIService.TagsVulncheckC2Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.Index7zipGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexA10Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAbbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAbbottGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAbsoluteGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAcronisGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAdobeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAdvantechGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAixGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAlephResearchGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAlibabaAdvsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAlmaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAlpineGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAlpinePurlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAmazonCveGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAmazonGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAmdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAmiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAnchoreNvdOverrideGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAndroidGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheActivemqGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheArchivaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheArrowGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheCamelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheCommonsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheCouchdbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheFlinkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheGuacamoleGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheHadoopGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheHttpGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheJspwikiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheKafkaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheLoggingservicesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheNifiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheOfbizGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheOpenmeetingsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheOpenofficeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApachePulsarGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheShiroGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheSparkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheStrutsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheSubversionGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheSupersetGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheTomcatGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexApacheZookeeperGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAppcheckGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAppgateGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAppleGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexArchGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAristaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexArubaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAsrgGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAssetnoteGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAsteriskGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAstraGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAsusGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAtlassianGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAtlassianVulnsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAtredisGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAudiocodesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAuscertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAutodeskGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAvayaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAvevaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAvidmlAdvsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAvigilonGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAwsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAxisGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexAzulGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBandrGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBaxterGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBbraunGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBduGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBeckhoffGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBeckmanCoulterGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBeldenGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBeyondTrustGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBinarlyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBitdefenderGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBlackberryGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBoschGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBostonScientificGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexBotnetsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCaCyberCentreGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCanvasGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCarestreamGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCargoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCarrierGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCblMarinerGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCentosGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCertBeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCertInGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCertIrSecurityAlertsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCertSeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCertUaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCerteuGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCertfrGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexChainguardGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCheckpointGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexChromeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCienaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCisaAlertsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCisaCsafGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCisaKevGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCiscoCsafGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCiscoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCiscoKnownGoodValuesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCiscoTalosGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCitrixGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexClarotyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCloudbeesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCloudvulndbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCnnvdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCnvdBulletinsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCnvdFlawsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCocoapodsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCodesysGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCommvaultGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCompassSecurityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexComposerGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexConanGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCoreimpactGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCpeVulnerableGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCrestronGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCrowdsecGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCurlGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexCweGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDahuaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDanfossGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDassaultGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDebianDsaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDebianGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDebianPackagesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDebianPurlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDellGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDeltaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDfnCertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDjangoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDlinkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDnnGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDotcmsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDragosGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDraytekGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexDrupalGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEatonGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexElasticGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexElspecGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEmergingThreatsSnortGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEmersonGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEndoflifeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEndressGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEolAlibabaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEolGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEolMicrosoftGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEpssGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexEuvdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexExodusIntelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexExploitChainsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexExploitdbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexExploitsChangelogGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexExploitsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexF5Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFSecureGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFanucGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFastlyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFedoraGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFestoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFilecloudGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFilezillaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFlattSecurityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexForgerockGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFortinetGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFortinetIpsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFoxitGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFreebsdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexFreseniusGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGallagherGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGcpGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGeGasGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGeHealthcareGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGemGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGenGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGenetecGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGhsaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGigabyteGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGiteeExploitsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGithubExploitsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGithubSecurityAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGitlabAdvisoriesCommunityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGitlabExploitsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGlibcGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGmoCybersecurityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGnutlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGoVulndbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGolangGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGoogle0dayItwGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGoogleContainerOptimizedOsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGrafanaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexGreynoiseMetadataGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHackageGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHacktivityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHarmonyosGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHashicorpGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHaskellSadbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHclGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHexGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHikvisionGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHillromGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHitachiEnergyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHitachiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHkcertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHmsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHoneywellGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHpGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHpeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHuaweiEulerosGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHuaweiIpsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexHuaweiPsirtGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIavaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIbmGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIdemiaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIgelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIlAlertsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIlVulnerabilitiesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIncibeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexInitialAccessGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexInitialAccessGitGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIntelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIpintel10dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIpintel30dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIpintel3dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIpintel90dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIstioGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIvantiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexIvantiRssGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJenkinsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJetbrainsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJfrogGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJnjGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJohnsonControlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJuniperGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJvnGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexJvndbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexKasperskyIcsCertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexKorelogicGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexKrcertSecurityNoticesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexKrcertVulnerabilitiesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexKubernetesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexKunbusGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLantronixGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLenovoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLexmarkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLgGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLibreOfficeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLinuxGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexLolAdvsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMFilesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMacertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMaliciousPackagesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexMaliciousVscodeExtsGet": {
+				{
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexManageengineGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMavenGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMbedTlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMcafeeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMediatekGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMedtronicGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMendixGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMetaAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMetasploitGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMicrosoftCsafGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMicrosoftCvrfGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMicrosoftDriverBlockListGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMicrosoftKbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMikrotikGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMindrayGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMispThreatActorsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMitelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMitreAttackCveGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMitreCvelistV5Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMitsubishiElectricGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMongodbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMoxaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexMozillaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNaverGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNcscCvesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNcscGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNecGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNessusGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNetappGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNetatalkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNetgateGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNetgearGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNetskopeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNexposeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNginxGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNhsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNistNvd2CpematchGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNistNvd2Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNistNvd2SourcesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNistNvdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNodeSecurityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNodejsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNokiaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNotepadplusplusGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNozomiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNpmGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNtpGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNucleiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNugetGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNvdCpeDictionaryGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNvidiaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexNzAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOctopusDeployGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOktaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOmronGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOneEGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpamGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpenCvdbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpenbsdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpengearGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpenjdkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpensshGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpensslSecadvGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpenstackGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOpenwrtGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOracleCpuCsafGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOracleCpuGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOracleGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOsvGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOtrsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexOwncloudGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPacketstormGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPalantirGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPaloAltoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPanasonicGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPapercutGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPegaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPhilipsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPhoenixContactGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPhpMyAdminGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPkcertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPostgressqlGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPowerdnsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexProgressGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexProofpointGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPtcGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPubGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPureStorageGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPypaAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexPypiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexQnapGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexQqidsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexQualcommGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexQualysGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexQualysQidsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexQubesQsbGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRansomwareGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRedLionGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRedhatCvesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRedhatGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRenesasGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexReviveGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRocheGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRockwellGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRockyErrataGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRockyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRockyPurlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRsyncGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRuckusGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexRustsecAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSacertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSafranGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSaintGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSalesforceGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSambaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSandiskGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSansDshieldGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSapGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSchneiderElectricGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSchutzwerkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSecConsultGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSecuritylabGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSeebugGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSentineloneGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexServicenowGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexShadowserverExploitedGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexShielderGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSickGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSiemensGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSierraWirelessGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSigmahqSigmaRulesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSingcertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSitecoreGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSlackwareGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSolarwindsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSolrGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSonatypeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSonicwallGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSpacelabsHealthcareGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSplunkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSpringGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSsdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexStormshieldGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexStrykerGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSudoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSuseGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSuseSecurityGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSwiftGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSwisslogHealthcareGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSymfonyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSynacktivGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSyncrosoftGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSynologyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexSyssGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTailscaleGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTeamviewerGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTenableResearchAdvisoriesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTencentGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexThalesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexThemissinglinkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexThermoFisherGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexThreatActorsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTibcoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTpLinkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTraneTechnologyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTrendmicroGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTrustwaveGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexTwcertGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUbiquitiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUbuntuGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUbuntuPurlsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUnifyGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUnisocGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUsdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexUsomGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVandykeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVapidlabsGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVcCpeDictionaryGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVdeGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVeeamGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVeritasGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVirtuozzoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVlcGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVmwareGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVoidsecGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckCanaries10dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckCanaries30dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckCanaries3dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckCanaries90dGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckCanariesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckConfigGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckCvelistV5Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckKevGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckNvd2Get": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulncheckNvdGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulnerabilityAliasesGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVulnrichmentGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexVyaireGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWatchguardGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWhatsappGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWibuGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWiresharkGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWithSecureGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWolfiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWolfsslGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexWordfenceGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexXenGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexXeroxGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexXiaomiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexXylemGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexYamahaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexYokogawaGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexYubicoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZdiGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZebraGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZeroscienceGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZimbraGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZoomGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZscalerGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZusoGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},
 			"IndicesAPIService.IndexZyxelGet": {
 				{
-					URL: "https://api.vulncheck.com/v3",
+					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
 				},
 			},

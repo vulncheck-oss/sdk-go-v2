@@ -2,6 +2,7 @@
 README.md
 api/openapi.yaml
 api_advisory.go
+api_backup.go
 api_endpoints.go
 api_indices.go
 client.go
@@ -202,6 +203,7 @@ docs/AdvisoryCurlAffected.md
 docs/AdvisoryCurlCWE.md
 docs/AdvisoryCurlCredit.md
 docs/AdvisoryCurlRange.md
+docs/AdvisoryCustomCPE.md
 docs/AdvisoryCvrf.md
 docs/AdvisoryCvsssV23.md
 docs/AdvisoryCwe.md
@@ -403,6 +405,7 @@ docs/AdvisoryMSDocumentTitle.md
 docs/AdvisoryMVersion.md
 docs/AdvisoryMVulnerability.md
 docs/AdvisoryMaliciousPackage.md
+docs/AdvisoryMaliciousVSCodeExts.md
 docs/AdvisoryManageEngine.md
 docs/AdvisoryManageEngineAdvisory.md
 docs/AdvisoryMbedTLS.md
@@ -835,7 +838,11 @@ docs/ApiTemporalMetricV3.md
 docs/ApiUpdate.md
 docs/ApiVulnCheckCanary.md
 docs/ApiVulnerabilityAlias.md
+docs/BackupAPI.md
+docs/BackupBackupResponse.md
+docs/BackupFeedItem.md
 docs/BackupGet500Response.md
+docs/BackupListBackupsResponse.md
 docs/EndpointsAPI.md
 docs/IndicesAPI.md
 docs/ModelsEntitlements.md
@@ -1088,6 +1095,7 @@ docs/RenderResponseWithMetadataArrayAdvisoryLolAdvsPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryMACertPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryMFilesPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination.md
+docs/RenderResponseWithMetadataArrayAdvisoryMaliciousVSCodeExtsPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryManageEngineAdvisoryPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryMbedTLSPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryMcAfeePaginatePagination.md
@@ -1328,7 +1336,6 @@ docs/V3controllersPurlsResponseMetadata.md
 docs/V3controllersResponseMetadata.md
 go.mod
 go.sum
-model__backup_get_500_response.go
 model_advisory_a10.go
 model_advisory_abb_advisory.go
 model_advisory_abbott.go
@@ -1516,6 +1523,7 @@ model_advisory_curl_affected.go
 model_advisory_curl_credit.go
 model_advisory_curl_cwe.go
 model_advisory_curl_range.go
+model_advisory_custom_cpe.go
 model_advisory_cve_detail.go
 model_advisory_cve_details_link.go
 model_advisory_cve_reference.go
@@ -1718,6 +1726,7 @@ model_advisory_m_version.go
 model_advisory_m_vulnerability.go
 model_advisory_ma_cert.go
 model_advisory_malicious_package.go
+model_advisory_malicious_vs_code_exts.go
 model_advisory_manage_engine.go
 model_advisory_manage_engine_advisory.go
 model_advisory_mbed_tls.go
@@ -2157,6 +2166,10 @@ model_api_temporal_metric_v3.go
 model_api_update.go
 model_api_vuln_check_canary.go
 model_api_vulnerability_alias.go
+model_backup_backup_response.go
+model_backup_feed_item.go
+model_backup_get_500_response.go
+model_backup_list_backups_response.go
 model_models_entitlements.go
 model_paginate_match.go
 model_paginate_pagination.go
@@ -2407,6 +2420,7 @@ model_render_response_with_metadata_array_advisory_lol_advs_paginate_pagination.
 model_render_response_with_metadata_array_advisory_m_files_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_ma_cert_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_malicious_package_paginate_pagination.go
+model_render_response_with_metadata_array_advisory_malicious_vs_code_exts_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_manage_engine_advisory_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_mbed_tls_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_mc_afee_paginate_pagination.go
@@ -2647,6 +2661,7 @@ model_v3controllers_purls_response_metadata.go
 model_v3controllers_response_metadata.go
 response.go
 test/api_advisory_test.go
+test/api_backup_test.go
 test/api_endpoints_test.go
 test/api_indices_test.go
 utils.go

@@ -20,21 +20,20 @@ var _ MappedNullable = &AdvisoryCISAAlert{}
 
 // AdvisoryCISAAlert advisory.CISAAlert
 type AdvisoryCISAAlert struct {
-	AffectedProducts *string `json:"affectedProducts,omitempty"`
-	AlertID *string `json:"alertID,omitempty"`
-	Archived *bool `json:"archived,omitempty"`
+	AffectedProducts *string `json:"AffectedProducts,omitempty"`
+	AlertID *string `json:"AlertID,omitempty"`
+	Archived *bool `json:"Archived,omitempty"`
+	CVEExploitedITW *bool `json:"CVEExploitedITW,omitempty"`
+	CVSS *string `json:"CVSS,omitempty"`
+	ICSMA *bool `json:"ICSMA,omitempty"`
+	Mitigations *string `json:"Mitigations,omitempty"`
+	ReleaseDate *string `json:"ReleaseDate,omitempty"`
+	Title *string `json:"Title,omitempty"`
+	Url *string `json:"Url,omitempty"`
+	Vendor *string `json:"Vendor,omitempty"`
 	Cve []string `json:"cve,omitempty"`
-	CveexploitedITW *bool `json:"cveexploitedITW,omitempty"`
-	Cvss *string `json:"cvss,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
-	Icsa *bool `json:"icsa,omitempty"`
-	Icsma *bool `json:"icsma,omitempty"`
-	Mitigations *string `json:"mitigations,omitempty"`
-	ReleaseDate *string `json:"releaseDate,omitempty"`
-	Title *string `json:"title,omitempty"`
 	UpdatedAt *string `json:"updated_at,omitempty"`
-	Url *string `json:"url,omitempty"`
-	Vendor *string `json:"vendor,omitempty"`
 }
 
 // NewAdvisoryCISAAlert instantiates a new AdvisoryCISAAlert object
@@ -150,196 +149,100 @@ func (o *AdvisoryCISAAlert) SetArchived(v bool) {
 	o.Archived = &v
 }
 
-// GetCve returns the Cve field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetCve() []string {
-	if o == nil || IsNil(o.Cve) {
-		var ret []string
-		return ret
-	}
-	return o.Cve
-}
-
-// GetCveOk returns a tuple with the Cve field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetCveOk() ([]string, bool) {
-	if o == nil || IsNil(o.Cve) {
-		return nil, false
-	}
-	return o.Cve, true
-}
-
-// HasCve returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasCve() bool {
-	if o != nil && !IsNil(o.Cve) {
-		return true
-	}
-
-	return false
-}
-
-// SetCve gets a reference to the given []string and assigns it to the Cve field.
-func (o *AdvisoryCISAAlert) SetCve(v []string) {
-	o.Cve = v
-}
-
-// GetCveexploitedITW returns the CveexploitedITW field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetCveexploitedITW() bool {
-	if o == nil || IsNil(o.CveexploitedITW) {
+// GetCVEExploitedITW returns the CVEExploitedITW field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetCVEExploitedITW() bool {
+	if o == nil || IsNil(o.CVEExploitedITW) {
 		var ret bool
 		return ret
 	}
-	return *o.CveexploitedITW
+	return *o.CVEExploitedITW
 }
 
-// GetCveexploitedITWOk returns a tuple with the CveexploitedITW field value if set, nil otherwise
+// GetCVEExploitedITWOk returns a tuple with the CVEExploitedITW field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetCveexploitedITWOk() (*bool, bool) {
-	if o == nil || IsNil(o.CveexploitedITW) {
+func (o *AdvisoryCISAAlert) GetCVEExploitedITWOk() (*bool, bool) {
+	if o == nil || IsNil(o.CVEExploitedITW) {
 		return nil, false
 	}
-	return o.CveexploitedITW, true
+	return o.CVEExploitedITW, true
 }
 
-// HasCveexploitedITW returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasCveexploitedITW() bool {
-	if o != nil && !IsNil(o.CveexploitedITW) {
+// HasCVEExploitedITW returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasCVEExploitedITW() bool {
+	if o != nil && !IsNil(o.CVEExploitedITW) {
 		return true
 	}
 
 	return false
 }
 
-// SetCveexploitedITW gets a reference to the given bool and assigns it to the CveexploitedITW field.
-func (o *AdvisoryCISAAlert) SetCveexploitedITW(v bool) {
-	o.CveexploitedITW = &v
+// SetCVEExploitedITW gets a reference to the given bool and assigns it to the CVEExploitedITW field.
+func (o *AdvisoryCISAAlert) SetCVEExploitedITW(v bool) {
+	o.CVEExploitedITW = &v
 }
 
-// GetCvss returns the Cvss field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetCvss() string {
-	if o == nil || IsNil(o.Cvss) {
+// GetCVSS returns the CVSS field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetCVSS() string {
+	if o == nil || IsNil(o.CVSS) {
 		var ret string
 		return ret
 	}
-	return *o.Cvss
+	return *o.CVSS
 }
 
-// GetCvssOk returns a tuple with the Cvss field value if set, nil otherwise
+// GetCVSSOk returns a tuple with the CVSS field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetCvssOk() (*string, bool) {
-	if o == nil || IsNil(o.Cvss) {
+func (o *AdvisoryCISAAlert) GetCVSSOk() (*string, bool) {
+	if o == nil || IsNil(o.CVSS) {
 		return nil, false
 	}
-	return o.Cvss, true
+	return o.CVSS, true
 }
 
-// HasCvss returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasCvss() bool {
-	if o != nil && !IsNil(o.Cvss) {
+// HasCVSS returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasCVSS() bool {
+	if o != nil && !IsNil(o.CVSS) {
 		return true
 	}
 
 	return false
 }
 
-// SetCvss gets a reference to the given string and assigns it to the Cvss field.
-func (o *AdvisoryCISAAlert) SetCvss(v string) {
-	o.Cvss = &v
+// SetCVSS gets a reference to the given string and assigns it to the CVSS field.
+func (o *AdvisoryCISAAlert) SetCVSS(v string) {
+	o.CVSS = &v
 }
 
-// GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetDateAdded() string {
-	if o == nil || IsNil(o.DateAdded) {
-		var ret string
-		return ret
-	}
-	return *o.DateAdded
-}
-
-// GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetDateAddedOk() (*string, bool) {
-	if o == nil || IsNil(o.DateAdded) {
-		return nil, false
-	}
-	return o.DateAdded, true
-}
-
-// HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasDateAdded() bool {
-	if o != nil && !IsNil(o.DateAdded) {
-		return true
-	}
-
-	return false
-}
-
-// SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryCISAAlert) SetDateAdded(v string) {
-	o.DateAdded = &v
-}
-
-// GetIcsa returns the Icsa field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetIcsa() bool {
-	if o == nil || IsNil(o.Icsa) {
+// GetICSMA returns the ICSMA field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetICSMA() bool {
+	if o == nil || IsNil(o.ICSMA) {
 		var ret bool
 		return ret
 	}
-	return *o.Icsa
+	return *o.ICSMA
 }
 
-// GetIcsaOk returns a tuple with the Icsa field value if set, nil otherwise
+// GetICSMAOk returns a tuple with the ICSMA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetIcsaOk() (*bool, bool) {
-	if o == nil || IsNil(o.Icsa) {
+func (o *AdvisoryCISAAlert) GetICSMAOk() (*bool, bool) {
+	if o == nil || IsNil(o.ICSMA) {
 		return nil, false
 	}
-	return o.Icsa, true
+	return o.ICSMA, true
 }
 
-// HasIcsa returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasIcsa() bool {
-	if o != nil && !IsNil(o.Icsa) {
+// HasICSMA returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasICSMA() bool {
+	if o != nil && !IsNil(o.ICSMA) {
 		return true
 	}
 
 	return false
 }
 
-// SetIcsa gets a reference to the given bool and assigns it to the Icsa field.
-func (o *AdvisoryCISAAlert) SetIcsa(v bool) {
-	o.Icsa = &v
-}
-
-// GetIcsma returns the Icsma field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetIcsma() bool {
-	if o == nil || IsNil(o.Icsma) {
-		var ret bool
-		return ret
-	}
-	return *o.Icsma
-}
-
-// GetIcsmaOk returns a tuple with the Icsma field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetIcsmaOk() (*bool, bool) {
-	if o == nil || IsNil(o.Icsma) {
-		return nil, false
-	}
-	return o.Icsma, true
-}
-
-// HasIcsma returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasIcsma() bool {
-	if o != nil && !IsNil(o.Icsma) {
-		return true
-	}
-
-	return false
-}
-
-// SetIcsma gets a reference to the given bool and assigns it to the Icsma field.
-func (o *AdvisoryCISAAlert) SetIcsma(v bool) {
-	o.Icsma = &v
+// SetICSMA gets a reference to the given bool and assigns it to the ICSMA field.
+func (o *AdvisoryCISAAlert) SetICSMA(v bool) {
+	o.ICSMA = &v
 }
 
 // GetMitigations returns the Mitigations field value if set, zero value otherwise.
@@ -438,38 +341,6 @@ func (o *AdvisoryCISAAlert) SetTitle(v string) {
 	o.Title = &v
 }
 
-// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryCISAAlert) GetUpdatedAt() string {
-	if o == nil || IsNil(o.UpdatedAt) {
-		var ret string
-		return ret
-	}
-	return *o.UpdatedAt
-}
-
-// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryCISAAlert) GetUpdatedAtOk() (*string, bool) {
-	if o == nil || IsNil(o.UpdatedAt) {
-		return nil, false
-	}
-	return o.UpdatedAt, true
-}
-
-// HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryCISAAlert) HasUpdatedAt() bool {
-	if o != nil && !IsNil(o.UpdatedAt) {
-		return true
-	}
-
-	return false
-}
-
-// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryCISAAlert) SetUpdatedAt(v string) {
-	o.UpdatedAt = &v
-}
-
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *AdvisoryCISAAlert) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
@@ -534,6 +405,102 @@ func (o *AdvisoryCISAAlert) SetVendor(v string) {
 	o.Vendor = &v
 }
 
+// GetCve returns the Cve field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetCve() []string {
+	if o == nil || IsNil(o.Cve) {
+		var ret []string
+		return ret
+	}
+	return o.Cve
+}
+
+// GetCveOk returns a tuple with the Cve field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCISAAlert) GetCveOk() ([]string, bool) {
+	if o == nil || IsNil(o.Cve) {
+		return nil, false
+	}
+	return o.Cve, true
+}
+
+// HasCve returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasCve() bool {
+	if o != nil && !IsNil(o.Cve) {
+		return true
+	}
+
+	return false
+}
+
+// SetCve gets a reference to the given []string and assigns it to the Cve field.
+func (o *AdvisoryCISAAlert) SetCve(v []string) {
+	o.Cve = v
+}
+
+// GetDateAdded returns the DateAdded field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetDateAdded() string {
+	if o == nil || IsNil(o.DateAdded) {
+		var ret string
+		return ret
+	}
+	return *o.DateAdded
+}
+
+// GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCISAAlert) GetDateAddedOk() (*string, bool) {
+	if o == nil || IsNil(o.DateAdded) {
+		return nil, false
+	}
+	return o.DateAdded, true
+}
+
+// HasDateAdded returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasDateAdded() bool {
+	if o != nil && !IsNil(o.DateAdded) {
+		return true
+	}
+
+	return false
+}
+
+// SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
+func (o *AdvisoryCISAAlert) SetDateAdded(v string) {
+	o.DateAdded = &v
+}
+
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCISAAlert) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryCISAAlert) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 func (o AdvisoryCISAAlert) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -545,49 +512,46 @@ func (o AdvisoryCISAAlert) MarshalJSON() ([]byte, error) {
 func (o AdvisoryCISAAlert) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.AffectedProducts) {
-		toSerialize["affectedProducts"] = o.AffectedProducts
+		toSerialize["AffectedProducts"] = o.AffectedProducts
 	}
 	if !IsNil(o.AlertID) {
-		toSerialize["alertID"] = o.AlertID
+		toSerialize["AlertID"] = o.AlertID
 	}
 	if !IsNil(o.Archived) {
-		toSerialize["archived"] = o.Archived
+		toSerialize["Archived"] = o.Archived
+	}
+	if !IsNil(o.CVEExploitedITW) {
+		toSerialize["CVEExploitedITW"] = o.CVEExploitedITW
+	}
+	if !IsNil(o.CVSS) {
+		toSerialize["CVSS"] = o.CVSS
+	}
+	if !IsNil(o.ICSMA) {
+		toSerialize["ICSMA"] = o.ICSMA
+	}
+	if !IsNil(o.Mitigations) {
+		toSerialize["Mitigations"] = o.Mitigations
+	}
+	if !IsNil(o.ReleaseDate) {
+		toSerialize["ReleaseDate"] = o.ReleaseDate
+	}
+	if !IsNil(o.Title) {
+		toSerialize["Title"] = o.Title
+	}
+	if !IsNil(o.Url) {
+		toSerialize["Url"] = o.Url
+	}
+	if !IsNil(o.Vendor) {
+		toSerialize["Vendor"] = o.Vendor
 	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
-	if !IsNil(o.CveexploitedITW) {
-		toSerialize["cveexploitedITW"] = o.CveexploitedITW
-	}
-	if !IsNil(o.Cvss) {
-		toSerialize["cvss"] = o.Cvss
-	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
-	if !IsNil(o.Icsa) {
-		toSerialize["icsa"] = o.Icsa
-	}
-	if !IsNil(o.Icsma) {
-		toSerialize["icsma"] = o.Icsma
-	}
-	if !IsNil(o.Mitigations) {
-		toSerialize["mitigations"] = o.Mitigations
-	}
-	if !IsNil(o.ReleaseDate) {
-		toSerialize["releaseDate"] = o.ReleaseDate
-	}
-	if !IsNil(o.Title) {
-		toSerialize["title"] = o.Title
-	}
 	if !IsNil(o.UpdatedAt) {
 		toSerialize["updated_at"] = o.UpdatedAt
-	}
-	if !IsNil(o.Url) {
-		toSerialize["url"] = o.Url
-	}
-	if !IsNil(o.Vendor) {
-		toSerialize["vendor"] = o.Vendor
 	}
 	return toSerialize, nil
 }

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Affected** | Pointer to [**[]AdvisoryMAffected**](AdvisoryMAffected.md) |  | [optional] 
-**CpeApplicability** | Pointer to [**[]AdvisoryMCPEApplicability**](AdvisoryMCPEApplicability.md) |  | [optional] 
+**CpeApplicability** | Pointer to [**[]AdvisoryCustomCPE**](AdvisoryCustomCPE.md) |  | [optional] 
 **Credits** | Pointer to [**[]AdvisoryCredit**](AdvisoryCredit.md) |  | [optional] 
 **Descriptions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
 **Impacts** | Pointer to [**[]AdvisoryImpact**](AdvisoryImpact.md) |  | [optional] 
@@ -63,20 +63,20 @@ HasAffected returns a boolean if a field has been set.
 
 ### GetCpeApplicability
 
-`func (o *AdvisoryMCna) GetCpeApplicability() []AdvisoryMCPEApplicability`
+`func (o *AdvisoryMCna) GetCpeApplicability() []AdvisoryCustomCPE`
 
 GetCpeApplicability returns the CpeApplicability field if non-nil, zero value otherwise.
 
 ### GetCpeApplicabilityOk
 
-`func (o *AdvisoryMCna) GetCpeApplicabilityOk() (*[]AdvisoryMCPEApplicability, bool)`
+`func (o *AdvisoryMCna) GetCpeApplicabilityOk() (*[]AdvisoryCustomCPE, bool)`
 
 GetCpeApplicabilityOk returns a tuple with the CpeApplicability field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCpeApplicability
 
-`func (o *AdvisoryMCna) SetCpeApplicability(v []AdvisoryMCPEApplicability)`
+`func (o *AdvisoryMCna) SetCpeApplicability(v []AdvisoryCustomCPE)`
 
 SetCpeApplicability sets CpeApplicability field to given value.
 

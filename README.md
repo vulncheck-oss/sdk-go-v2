@@ -164,9 +164,6 @@ import (
 
 func main() {
   configuration := vulncheck.NewConfiguration()
-  configuration.Scheme = "https"
-  configuration.Host = "api.vulncheck.com"
-
   client := vulncheck.NewAPIClient(configuration)
 
   token := os.Getenv("VULNCHECK_API_TOKEN")
@@ -178,16 +175,14 @@ func main() {
     },
   )
 
-  req := client.EndpointsAPI.BackupIndexGet(auth, "initial-access")
+  req := client.EndpointsAPI.BackupGet(auth)
   resp, httpRes, err := req.Execute()
   if err != nil || httpRes.StatusCode != 200 {
     log.Fatal(err)
   }
 
-  data := resp.GetData()
-
-  for _, v := range data {
-    fmt.Println(v.GetUrl())
+  for _, v := range resp.GetData() {
+    fmt.Println(v.GetHref())
   }
 }
 ```

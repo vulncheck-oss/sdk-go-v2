@@ -21,7 +21,7 @@ var _ MappedNullable = &AdvisoryMCna{}
 // AdvisoryMCna advisory.MCna
 type AdvisoryMCna struct {
 	Affected []AdvisoryMAffected `json:"affected,omitempty"`
-	CpeApplicability []AdvisoryMCPEApplicability `json:"cpeApplicability,omitempty"`
+	CpeApplicability []AdvisoryCustomCPE `json:"cpeApplicability,omitempty"`
 	Credits []AdvisoryCredit `json:"credits,omitempty"`
 	Descriptions []AdvisoryMDescriptions `json:"descriptions,omitempty"`
 	Impacts []AdvisoryImpact `json:"impacts,omitempty"`
@@ -84,9 +84,9 @@ func (o *AdvisoryMCna) SetAffected(v []AdvisoryMAffected) {
 }
 
 // GetCpeApplicability returns the CpeApplicability field value if set, zero value otherwise.
-func (o *AdvisoryMCna) GetCpeApplicability() []AdvisoryMCPEApplicability {
+func (o *AdvisoryMCna) GetCpeApplicability() []AdvisoryCustomCPE {
 	if o == nil || IsNil(o.CpeApplicability) {
-		var ret []AdvisoryMCPEApplicability
+		var ret []AdvisoryCustomCPE
 		return ret
 	}
 	return o.CpeApplicability
@@ -94,7 +94,7 @@ func (o *AdvisoryMCna) GetCpeApplicability() []AdvisoryMCPEApplicability {
 
 // GetCpeApplicabilityOk returns a tuple with the CpeApplicability field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMCna) GetCpeApplicabilityOk() ([]AdvisoryMCPEApplicability, bool) {
+func (o *AdvisoryMCna) GetCpeApplicabilityOk() ([]AdvisoryCustomCPE, bool) {
 	if o == nil || IsNil(o.CpeApplicability) {
 		return nil, false
 	}
@@ -110,8 +110,8 @@ func (o *AdvisoryMCna) HasCpeApplicability() bool {
 	return false
 }
 
-// SetCpeApplicability gets a reference to the given []AdvisoryMCPEApplicability and assigns it to the CpeApplicability field.
-func (o *AdvisoryMCna) SetCpeApplicability(v []AdvisoryMCPEApplicability) {
+// SetCpeApplicability gets a reference to the given []AdvisoryCustomCPE and assigns it to the CpeApplicability field.
+func (o *AdvisoryMCna) SetCpeApplicability(v []AdvisoryCustomCPE) {
 	o.CpeApplicability = v
 }
 

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **RisksFr** | Pointer to **string** |  | [optional] 
 **SolutionFr** | Pointer to **string** |  | [optional] 
 **TitleFr** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -310,6 +311,31 @@ SetTitleFr sets TitleFr field to given value.
 `func (o *AdvisoryMACert) HasTitleFr() bool`
 
 HasTitleFr returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryMACert) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryMACert) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryMACert) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryMACert) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

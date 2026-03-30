@@ -36,6 +36,8 @@ type ApiInitialAccessArtifact struct {
 	CensysQueries []string `json:"censysQueries,omitempty"`
 	// CensysRawQueries are raw queries for examining potential Internet-exposed devices & applications with Censys.
 	CensysRawQueries []string `json:"censysRawQueries,omitempty"`
+	// Chain can represent the chain of exploitation.
+	Chain []string `json:"chain,omitempty"`
 	// CloneSSHURL is the git URL to clone the artifact with.
 	CloneSSHURL *string `json:"cloneSSHURL,omitempty"`
 	// DateAdded is when this artifact entry was first added to the InitialAccess data set.
@@ -63,6 +65,8 @@ type ApiInitialAccessArtifact struct {
 	Pcap *bool `json:"pcap,omitempty"`
 	// Product are the software that has the vulnerability.
 	Product []string `json:"product,omitempty"`
+	// Related is a set of related cves.
+	Related []string `json:"related,omitempty"`
 	// ShodanQueries are queries for examining potential Internet-exposed devices & applications with Shodan in URL form.
 	ShodanQueries []string `json:"shodanQueries,omitempty"`
 	// ShodanRawQueries are raw queries for examining potential Internet-exposed devices & applications with Shodan.
@@ -363,6 +367,38 @@ func (o *ApiInitialAccessArtifact) HasCensysRawQueries() bool {
 // SetCensysRawQueries gets a reference to the given []string and assigns it to the CensysRawQueries field.
 func (o *ApiInitialAccessArtifact) SetCensysRawQueries(v []string) {
 	o.CensysRawQueries = v
+}
+
+// GetChain returns the Chain field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetChain() []string {
+	if o == nil || IsNil(o.Chain) {
+		var ret []string
+		return ret
+	}
+	return o.Chain
+}
+
+// GetChainOk returns a tuple with the Chain field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetChainOk() ([]string, bool) {
+	if o == nil || IsNil(o.Chain) {
+		return nil, false
+	}
+	return o.Chain, true
+}
+
+// HasChain returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasChain() bool {
+	if o != nil && !IsNil(o.Chain) {
+		return true
+	}
+
+	return false
+}
+
+// SetChain gets a reference to the given []string and assigns it to the Chain field.
+func (o *ApiInitialAccessArtifact) SetChain(v []string) {
+	o.Chain = v
 }
 
 // GetCloneSSHURL returns the CloneSSHURL field value if set, zero value otherwise.
@@ -811,6 +847,38 @@ func (o *ApiInitialAccessArtifact) HasProduct() bool {
 // SetProduct gets a reference to the given []string and assigns it to the Product field.
 func (o *ApiInitialAccessArtifact) SetProduct(v []string) {
 	o.Product = v
+}
+
+// GetRelated returns the Related field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetRelated() []string {
+	if o == nil || IsNil(o.Related) {
+		var ret []string
+		return ret
+	}
+	return o.Related
+}
+
+// GetRelatedOk returns a tuple with the Related field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetRelatedOk() ([]string, bool) {
+	if o == nil || IsNil(o.Related) {
+		return nil, false
+	}
+	return o.Related, true
+}
+
+// HasRelated returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasRelated() bool {
+	if o != nil && !IsNil(o.Related) {
+		return true
+	}
+
+	return false
+}
+
+// SetRelated gets a reference to the given []string and assigns it to the Related field.
+func (o *ApiInitialAccessArtifact) SetRelated(v []string) {
+	o.Related = v
 }
 
 // GetShodanQueries returns the ShodanQueries field value if set, zero value otherwise.
@@ -1295,6 +1363,9 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.CensysRawQueries) {
 		toSerialize["censysRawQueries"] = o.CensysRawQueries
 	}
+	if !IsNil(o.Chain) {
+		toSerialize["chain"] = o.Chain
+	}
 	if !IsNil(o.CloneSSHURL) {
 		toSerialize["cloneSSHURL"] = o.CloneSSHURL
 	}
@@ -1336,6 +1407,9 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product
+	}
+	if !IsNil(o.Related) {
+		toSerialize["related"] = o.Related
 	}
 	if !IsNil(o.ShodanQueries) {
 		toSerialize["shodanQueries"] = o.ShodanQueries
