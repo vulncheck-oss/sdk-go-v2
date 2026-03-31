@@ -53,6 +53,19 @@ with open("./tests/examples/cpe.go", 'r') as f:
 ]]] -->
 <!-- [[[end]]] -->
 
+### Advisory
+
+List advisory feeds and query advisories
+
+<!-- [[[cog
+import cog
+with open("./tests/examples/advisory.go", 'r') as f:
+    content = f.read().strip()
+    lines = [l for l in content.splitlines() if not l.startswith("//go:build")]
+    cog.outl(f"```go\n{chr(10).join(lines).strip()}\n```\n")
+]]] -->
+<!-- [[[end]]] -->
+
 ### Backup
 
 Download the backup for an index
@@ -60,6 +73,19 @@ Download the backup for an index
 <!-- [[[cog
 import cog
 with open("./tests/examples/backup.go", 'r') as f:
+    content = f.read().strip()
+    lines = [l for l in content.splitlines() if not l.startswith("//go:build")]
+    cog.outl(f"```go\n{chr(10).join(lines).strip()}\n```\n")
+]]] -->
+<!-- [[[end]]] -->
+
+### Backup V4
+
+List and download v4 backups by feed name
+
+<!-- [[[cog
+import cog
+with open("./tests/examples/backupv4.go", 'r') as f:
     content = f.read().strip()
     lines = [l for l in content.splitlines() if not l.startswith("//go:build")]
     cog.outl(f"```go\n{chr(10).join(lines).strip()}\n```\n")
