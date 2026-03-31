@@ -56,54 +56,9 @@ func main() {
 
 ### Available Methods
 
-### PURL
+### Advisory
 
-Get the CVE's for a given PURL
-
-```go
-package main
-
-import (
-  "context"
-  "fmt"
-  "log"
-  "os"
-
-  vulncheck "github.com/vulncheck-oss/sdk-go-v2/v2"
-)
-
-func main() {
-  configuration := vulncheck.NewConfiguration()
-  configuration.Scheme = "https"
-  configuration.Host = "api.vulncheck.com"
-
-  client := vulncheck.NewAPIClient(configuration)
-
-  token := os.Getenv("VULNCHECK_API_TOKEN")
-  auth := context.WithValue(
-    context.Background(),
-    vulncheck.ContextAPIKeys,
-    map[string]vulncheck.APIKey{
-      "Bearer": {Key: token},
-    },
-  )
-
-  req := client.EndpointsAPI.PurlGet(auth).Purl("pkg:hex/coherence@0.1.2")
-  resp, httpRes, err := req.Execute()
-  if err != nil || httpRes.StatusCode != 200 {
-    log.Fatal(err)
-  }
-
-  data := resp.GetData()
-
-  fmt.Println(data.GetCves())
-}
-```
-
-
-### CPE
-
-Get all CPE's related to a CVE
+List advisory feeds and query advisories
 
 ```go
 package main
@@ -119,9 +74,6 @@ import (
 
 func main() {
   configuration := vulncheck.NewConfiguration()
-  configuration.Scheme = "https"
-  configuration.Host = "api.vulncheck.com"
-
   client := vulncheck.NewAPIClient(configuration)
 
   token := os.Getenv("VULNCHECK_API_TOKEN")
@@ -133,14 +85,28 @@ func main() {
     },
   )
 
-  req := client.EndpointsAPI.CpeGet(auth).Cpe("cpe:/a:microsoft:internet_explorer:8.0.6001:beta")
-  resp, httpRes, err := req.Execute()
+  // List all available advisory feeds (/v4/advisory)
+  feedsResp, httpRes, err := client.AdvisoryAPI.V4ListAdvisoryFeeds(auth).Execute()
   if err != nil || httpRes.StatusCode != 200 {
     log.Fatal(err)
   }
 
-  for _, v := range resp.GetData() {
-    fmt.Println(v)
+  fmt.Println("Available feeds:")
+  for _, feed := range feedsResp.GetData() {
+    fmt.Println(feed.GetName())
+  }
+
+  // Query advisories filtered by feed=wolfi (/v4/advisory?feed=wolfi)
+  feed := "wolfi"
+  advisoriesResp, httpRes, err := client.AdvisoryAPI.V4QueryAdvisories(auth).Name(feed).Execute()
+  if err != nil || httpRes.StatusCode != 200 {
+    log.Fatal(err)
+  }
+
+  fmt.Printf("%s advisories (page 1): %d results\n", feed, len(advisoriesResp.GetData()))
+  for _, advisory := range advisoriesResp.GetData() {
+    meta := advisory.GetCveMetadata()
+    fmt.Println(meta.GetCveId())
   }
 }
 ```
@@ -188,9 +154,80 @@ func main() {
 ```
 
 
-### Indices
+### Backup V4
 
-Get all available indices
+List and download v4 backups by feed name
+
+```go
+package main
+
+import (
+  "context"
+  "fmt"
+  "io"
+  "log"
+  "net/http"
+  "os"
+
+  vulncheck "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+  configuration := vulncheck.NewConfiguration()
+  client := vulncheck.NewAPIClient(configuration)
+
+  token := os.Getenv("VULNCHECK_API_TOKEN")
+  auth := context.WithValue(
+    context.Background(),
+    vulncheck.ContextAPIKeys,
+    map[string]vulncheck.APIKey{
+      "Bearer": {Key: token},
+    },
+  )
+
+  // List available backups (/v4/backup)
+  available, httpRes, err := client.BackupAPI.V4ListBackups(auth).Execute()
+  if err != nil || httpRes.StatusCode != 200 {
+    log.Fatal(err)
+  }
+
+  for _, b := range available.GetData() {
+    fmt.Printf("Found backup: %s\n", b.GetName())
+  }
+
+  // Get backup for the wolfi feed (/v4/backup/wolfi)
+  feed := "wolfi"
+  resp, httpRes, err := client.BackupAPI.V4GetBackupByName(auth, feed).Execute()
+  if err != nil || httpRes.StatusCode != 200 {
+    log.Fatal(err)
+  }
+
+  fmt.Printf("Downloading %s backup\n", feed)
+  filePath := feed + ".zip"
+  fileResp, err := http.Get(resp.GetUrl())
+  if err != nil {
+    log.Fatal(err)
+  }
+  defer fileResp.Body.Close()
+
+  f, err := os.Create(filePath)
+  if err != nil {
+    log.Fatal(err)
+  }
+  defer f.Close()
+
+  if _, err := io.Copy(f, fileResp.Body); err != nil {
+    log.Fatal(err)
+  }
+
+  fmt.Printf("Successfully saved to %s\n", filePath)
+}
+```
+
+
+### CPE
+
+Get all CPE's related to a CVE
 
 ```go
 package main
@@ -220,14 +257,14 @@ func main() {
     },
   )
 
-  req := client.EndpointsAPI.IndexGet(auth)
+  req := client.EndpointsAPI.CpeGet(auth).Cpe("cpe:/a:microsoft:internet_explorer:8.0.6001:beta")
   resp, httpRes, err := req.Execute()
   if err != nil || httpRes.StatusCode != 200 {
     log.Fatal(err)
   }
 
   for _, v := range resp.GetData() {
-    fmt.Println(v.GetName())
+    fmt.Println(v)
   }
 }
 ```
@@ -290,6 +327,51 @@ func main() {
     fmt.Println("")
   } else {
     fmt.Printf("Base Score: %f\n", metrics.CvssMetricV31[0].CvssData.GetBaseScore())
+  }
+}
+```
+
+
+### Indices
+
+Get all available indices
+
+```go
+package main
+
+import (
+  "context"
+  "fmt"
+  "log"
+  "os"
+
+  vulncheck "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+  configuration := vulncheck.NewConfiguration()
+  configuration.Scheme = "https"
+  configuration.Host = "api.vulncheck.com"
+
+  client := vulncheck.NewAPIClient(configuration)
+
+  token := os.Getenv("VULNCHECK_API_TOKEN")
+  auth := context.WithValue(
+    context.Background(),
+    vulncheck.ContextAPIKeys,
+    map[string]vulncheck.APIKey{
+      "Bearer": {Key: token},
+    },
+  )
+
+  req := client.EndpointsAPI.IndexGet(auth)
+  resp, httpRes, err := req.Execute()
+  if err != nil || httpRes.StatusCode != 200 {
+    log.Fatal(err)
+  }
+
+  for _, v := range resp.GetData() {
+    fmt.Println(v.GetName())
   }
 }
 ```
@@ -364,6 +446,51 @@ func main() {
     count += len(resp.Data)
     fmt.Printf("Total Items: %d/%d\n", count, total)
   }
+}
+```
+
+
+### PURL
+
+Get the CVE's for a given PURL
+
+```go
+package main
+
+import (
+  "context"
+  "fmt"
+  "log"
+  "os"
+
+  vulncheck "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+  configuration := vulncheck.NewConfiguration()
+  configuration.Scheme = "https"
+  configuration.Host = "api.vulncheck.com"
+
+  client := vulncheck.NewAPIClient(configuration)
+
+  token := os.Getenv("VULNCHECK_API_TOKEN")
+  auth := context.WithValue(
+    context.Background(),
+    vulncheck.ContextAPIKeys,
+    map[string]vulncheck.APIKey{
+      "Bearer": {Key: token},
+    },
+  )
+
+  req := client.EndpointsAPI.PurlGet(auth).Purl("pkg:hex/coherence@0.1.2")
+  resp, httpRes, err := req.Execute()
+  if err != nil || httpRes.StatusCode != 200 {
+    log.Fatal(err)
+  }
+
+  data := resp.GetData()
+
+  fmt.Println(data.GetCves())
 }
 ```
 
