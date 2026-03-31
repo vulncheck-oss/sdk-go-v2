@@ -6,7 +6,9 @@ import (
 )
 
 var examplePrograms = []string{
+	"./examples/advisory.go",
 	"./examples/backup.go",
+	"./examples/backupv4.go",
 	"./examples/connecting.go",
 	"./examples/cpe.go",
 	"./examples/index.go",
