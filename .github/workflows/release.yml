@@ -18,20 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     name: Create Release
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v3
         id: generate_token
         with:
           app-id: ${{ secrets.VULNCHECK_GITHUB_RELEASE_APP_ID }}
           private-key: ${{ secrets.VULNCHECK_GITHUB_RELEASE_APP_KEY }}
 
       - name: Check out HEAD ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
           path: head
           fetch-tags: true
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: 1.24.4
           cache-dependency-path: head/tests/go.sum
@@ -59,7 +59,7 @@ jobs:
           echo "latest_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
 
       - name: Check out previous release
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           path: previous
