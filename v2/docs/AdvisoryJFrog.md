@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Product** | Pointer to **string** |  | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
 **Summary** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **Versions** | Pointer to **[]string** |  | [optional] 
 
@@ -181,6 +182,31 @@ SetSummary sets Summary field to given value.
 `func (o *AdvisoryJFrog) HasSummary() bool`
 
 HasSummary returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryJFrog) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryJFrog) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryJFrog) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryJFrog) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetUrl
 

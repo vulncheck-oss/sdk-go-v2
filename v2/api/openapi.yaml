@@ -375,6 +375,7 @@ paths:
           - octopus-deploy
           - okta
           - omron
+          - omron-eol
           - one-e
           - opam
           - open-cvdb
@@ -538,6 +539,7 @@ paths:
           - yubico
           - zdi
           - zebra
+          - zebra-eol
           - zeroscience
           - zimbra
           - zoom
@@ -77084,6 +77086,245 @@ paths:
       summary: Return vulnerability data stored in index "omron"
       tags:
       - indices
+  /v3/index/omron-eol:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the omron-eol index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Omron End of Life Notices
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/omron-eol?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/omron-eol?cursor=<next_cursor_id>`
+      operationId: index_omron-eol_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_GenericEOL-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "omron-eol"
+      tags:
+      - indices
   /v3/index/one-e:
     get:
       description: |
@@ -115801,6 +116042,245 @@ paths:
       summary: Return vulnerability data stored in index "zebra"
       tags:
       - indices
+  /v3/index/zebra-eol:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the zebra-eol index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Zebra End of Life Notices
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/zebra-eol?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/zebra-eol?cursor=<next_cursor_id>`
+      operationId: index_zebra-eol_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_GenericEOL-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "zebra-eol"
+      tags:
+      - indices
   /v3/index/zeroscience:
     get:
       description: |
@@ -128257,6 +128737,117 @@ components:
           type: string
         url:
           type: string
+    advisory.GenericEOL:
+      description: advisory.GenericEOL
+      example:
+        core:
+          last_updated: last_updated
+          end_of_life: end_of_life
+          end_of_sales: end_of_sales
+          end_of_security_support: end_of_security_support
+        product:
+          product_version: product_version
+          vendor_name: vendor_name
+          product_name: product_name
+        vcInfo:
+          date_added: date_added
+          cve:
+          - cve
+          - cve
+          references:
+          - description: description
+            url: url
+          - description: description
+            url: url
+          updated_at: updated_at
+          replacement:
+            product_version: product_version
+            vendor_name: vendor_name
+            product_name: product_name
+          version: version
+      properties:
+        core:
+          $ref: '#/components/schemas/advisory.GenericEOLCore'
+        product:
+          $ref: '#/components/schemas/advisory.GenericEOLProduct'
+        vcInfo:
+          $ref: '#/components/schemas/advisory.GenericEOLVCInfo'
+    advisory.GenericEOLCore:
+      description: advisory.GenericEOLCore
+      example:
+        last_updated: last_updated
+        end_of_life: end_of_life
+        end_of_sales: end_of_sales
+        end_of_security_support: end_of_security_support
+      properties:
+        end_of_life:
+          type: string
+        end_of_sales:
+          type: string
+        end_of_security_support:
+          type: string
+        last_updated:
+          type: string
+    advisory.GenericEOLProduct:
+      description: advisory.GenericEOLProduct
+      example:
+        product_version: product_version
+        vendor_name: vendor_name
+        product_name: product_name
+      properties:
+        product_name:
+          type: string
+        product_version:
+          type: string
+        vendor_name:
+          type: string
+    advisory.GenericEOLReference:
+      description: advisory.GenericEOLReference
+      example:
+        description: description
+        url: url
+      properties:
+        description:
+          type: string
+        url:
+          type: string
+    advisory.GenericEOLVCInfo:
+      description: advisory.GenericEOLVCInfo
+      example:
+        date_added: date_added
+        cve:
+        - cve
+        - cve
+        references:
+        - description: description
+          url: url
+        - description: description
+          url: url
+        updated_at: updated_at
+        replacement:
+          product_version: product_version
+          vendor_name: vendor_name
+          product_name: product_name
+        version: version
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        date_added:
+          type: string
+        references:
+          items:
+            $ref: '#/components/schemas/advisory.GenericEOLReference'
+          type: array
+          uniqueItems: false
+        replacement:
+          $ref: '#/components/schemas/advisory.GenericEOLProduct'
+        updated_at:
+          type: string
+        version:
+          type: string
     advisory.Genetec:
       description: advisory.Genetec
       example:
@@ -130237,6 +130828,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         cpes:
         - vulnerable: true
           versionStartExcluding: versionStartExcluding
@@ -130274,6 +130866,8 @@ components:
         severity:
           type: string
         summary:
+          type: string
+        updated_at:
           type: string
         url:
           type: string
@@ -174024,6 +174618,106 @@ components:
             $ref: '#/components/schemas/advisory.Gen'
           type: array
           uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_GenericEOL-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_GenericEOL-paginate_Pagination
+      example:
+        data:
+        - core:
+            last_updated: last_updated
+            end_of_life: end_of_life
+            end_of_sales: end_of_sales
+            end_of_security_support: end_of_security_support
+          product:
+            product_version: product_version
+            vendor_name: vendor_name
+            product_name: product_name
+          vcInfo:
+            date_added: date_added
+            cve:
+            - cve
+            - cve
+            references:
+            - description: description
+              url: url
+            - description: description
+              url: url
+            updated_at: updated_at
+            replacement:
+              product_version: product_version
+              vendor_name: vendor_name
+              product_name: product_name
+            version: version
+        - core:
+            last_updated: last_updated
+            end_of_life: end_of_life
+            end_of_sales: end_of_sales
+            end_of_security_support: end_of_security_support
+          product:
+            product_version: product_version
+            vendor_name: vendor_name
+            product_name: product_name
+          vcInfo:
+            date_added: date_added
+            cve:
+            - cve
+            - cve
+            references:
+            - description: description
+              url: url
+            - description: description
+              url: url
+            updated_at: updated_at
+            replacement:
+              product_version: product_version
+              vendor_name: vendor_name
+              product_name: product_name
+            version: version
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.GenericEOL'
+          type: array
+          uniqueItems: false
     render.ResponseWithMetadata-array_advisory_Genetec-paginate_Pagination:
       description: render.ResponseWithMetadata-array_advisory_Genetec-paginate_Pagination
       example:
@@ -177283,6 +177977,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           cpes:
           - vulnerable: true
             versionStartExcluding: versionStartExcluding
@@ -177309,6 +178004,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           cpes:
           - vulnerable: true
             versionStartExcluding: versionStartExcluding
