@@ -3838,6 +3838,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexOmronEolGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexOmronEolGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexOmronGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -5787,6 +5799,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexZdiGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexZebraEolGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexZebraEolGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
