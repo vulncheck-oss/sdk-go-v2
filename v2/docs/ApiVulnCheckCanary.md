@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **Severity** | Pointer to **int32** |  | [optional] 
 **Signature** | Pointer to **string** |  | [optional] 
 **SignatureId** | Pointer to **int32** |  | [optional] 
+**SrcAsDomain** | Pointer to **string** |  | [optional] 
+**SrcAsName** | Pointer to **string** |  | [optional] 
+**SrcAsn** | Pointer to **string** |  | [optional] 
 **SrcCountry** | Pointer to **string** |  | [optional] 
 **SrcIp** | Pointer to **string** |  | [optional] 
 **SrcPort** | Pointer to **int32** |  | [optional] 
@@ -261,6 +264,81 @@ SetSignatureId sets SignatureId field to given value.
 `func (o *ApiVulnCheckCanary) HasSignatureId() bool`
 
 HasSignatureId returns a boolean if a field has been set.
+
+### GetSrcAsDomain
+
+`func (o *ApiVulnCheckCanary) GetSrcAsDomain() string`
+
+GetSrcAsDomain returns the SrcAsDomain field if non-nil, zero value otherwise.
+
+### GetSrcAsDomainOk
+
+`func (o *ApiVulnCheckCanary) GetSrcAsDomainOk() (*string, bool)`
+
+GetSrcAsDomainOk returns a tuple with the SrcAsDomain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcAsDomain
+
+`func (o *ApiVulnCheckCanary) SetSrcAsDomain(v string)`
+
+SetSrcAsDomain sets SrcAsDomain field to given value.
+
+### HasSrcAsDomain
+
+`func (o *ApiVulnCheckCanary) HasSrcAsDomain() bool`
+
+HasSrcAsDomain returns a boolean if a field has been set.
+
+### GetSrcAsName
+
+`func (o *ApiVulnCheckCanary) GetSrcAsName() string`
+
+GetSrcAsName returns the SrcAsName field if non-nil, zero value otherwise.
+
+### GetSrcAsNameOk
+
+`func (o *ApiVulnCheckCanary) GetSrcAsNameOk() (*string, bool)`
+
+GetSrcAsNameOk returns a tuple with the SrcAsName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcAsName
+
+`func (o *ApiVulnCheckCanary) SetSrcAsName(v string)`
+
+SetSrcAsName sets SrcAsName field to given value.
+
+### HasSrcAsName
+
+`func (o *ApiVulnCheckCanary) HasSrcAsName() bool`
+
+HasSrcAsName returns a boolean if a field has been set.
+
+### GetSrcAsn
+
+`func (o *ApiVulnCheckCanary) GetSrcAsn() string`
+
+GetSrcAsn returns the SrcAsn field if non-nil, zero value otherwise.
+
+### GetSrcAsnOk
+
+`func (o *ApiVulnCheckCanary) GetSrcAsnOk() (*string, bool)`
+
+GetSrcAsnOk returns a tuple with the SrcAsn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcAsn
+
+`func (o *ApiVulnCheckCanary) SetSrcAsn(v string)`
+
+SetSrcAsn sets SrcAsn field to given value.
+
+### HasSrcAsn
+
+`func (o *ApiVulnCheckCanary) HasSrcAsn() bool`
+
+HasSrcAsn returns a boolean if a field has been set.
 
 ### GetSrcCountry
 

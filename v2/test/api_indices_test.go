@@ -2614,11 +2614,35 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexHpEolGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexHpEolGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexHpGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexHpGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexHpeEolGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexHpeEolGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

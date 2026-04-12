@@ -29,6 +29,9 @@ type ApiVulnCheckCanary struct {
 	Severity *int32 `json:"severity,omitempty"`
 	Signature *string `json:"signature,omitempty"`
 	SignatureId *int32 `json:"signature_id,omitempty"`
+	SrcAsDomain *string `json:"src_as_domain,omitempty"`
+	SrcAsName *string `json:"src_as_name,omitempty"`
+	SrcAsn *string `json:"src_asn,omitempty"`
 	SrcCountry *string `json:"src_country,omitempty"`
 	SrcIp *string `json:"src_ip,omitempty"`
 	SrcPort *int32 `json:"src_port,omitempty"`
@@ -340,6 +343,102 @@ func (o *ApiVulnCheckCanary) SetSignatureId(v int32) {
 	o.SignatureId = &v
 }
 
+// GetSrcAsDomain returns the SrcAsDomain field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetSrcAsDomain() string {
+	if o == nil || IsNil(o.SrcAsDomain) {
+		var ret string
+		return ret
+	}
+	return *o.SrcAsDomain
+}
+
+// GetSrcAsDomainOk returns a tuple with the SrcAsDomain field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetSrcAsDomainOk() (*string, bool) {
+	if o == nil || IsNil(o.SrcAsDomain) {
+		return nil, false
+	}
+	return o.SrcAsDomain, true
+}
+
+// HasSrcAsDomain returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasSrcAsDomain() bool {
+	if o != nil && !IsNil(o.SrcAsDomain) {
+		return true
+	}
+
+	return false
+}
+
+// SetSrcAsDomain gets a reference to the given string and assigns it to the SrcAsDomain field.
+func (o *ApiVulnCheckCanary) SetSrcAsDomain(v string) {
+	o.SrcAsDomain = &v
+}
+
+// GetSrcAsName returns the SrcAsName field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetSrcAsName() string {
+	if o == nil || IsNil(o.SrcAsName) {
+		var ret string
+		return ret
+	}
+	return *o.SrcAsName
+}
+
+// GetSrcAsNameOk returns a tuple with the SrcAsName field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetSrcAsNameOk() (*string, bool) {
+	if o == nil || IsNil(o.SrcAsName) {
+		return nil, false
+	}
+	return o.SrcAsName, true
+}
+
+// HasSrcAsName returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasSrcAsName() bool {
+	if o != nil && !IsNil(o.SrcAsName) {
+		return true
+	}
+
+	return false
+}
+
+// SetSrcAsName gets a reference to the given string and assigns it to the SrcAsName field.
+func (o *ApiVulnCheckCanary) SetSrcAsName(v string) {
+	o.SrcAsName = &v
+}
+
+// GetSrcAsn returns the SrcAsn field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetSrcAsn() string {
+	if o == nil || IsNil(o.SrcAsn) {
+		var ret string
+		return ret
+	}
+	return *o.SrcAsn
+}
+
+// GetSrcAsnOk returns a tuple with the SrcAsn field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetSrcAsnOk() (*string, bool) {
+	if o == nil || IsNil(o.SrcAsn) {
+		return nil, false
+	}
+	return o.SrcAsn, true
+}
+
+// HasSrcAsn returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasSrcAsn() bool {
+	if o != nil && !IsNil(o.SrcAsn) {
+		return true
+	}
+
+	return false
+}
+
+// SetSrcAsn gets a reference to the given string and assigns it to the SrcAsn field.
+func (o *ApiVulnCheckCanary) SetSrcAsn(v string) {
+	o.SrcAsn = &v
+}
+
 // GetSrcCountry returns the SrcCountry field value if set, zero value otherwise.
 func (o *ApiVulnCheckCanary) GetSrcCountry() string {
 	if o == nil || IsNil(o.SrcCountry) {
@@ -504,6 +603,15 @@ func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.SignatureId) {
 		toSerialize["signature_id"] = o.SignatureId
+	}
+	if !IsNil(o.SrcAsDomain) {
+		toSerialize["src_as_domain"] = o.SrcAsDomain
+	}
+	if !IsNil(o.SrcAsName) {
+		toSerialize["src_as_name"] = o.SrcAsName
+	}
+	if !IsNil(o.SrcAsn) {
+		toSerialize["src_asn"] = o.SrcAsn
 	}
 	if !IsNil(o.SrcCountry) {
 		toSerialize["src_country"] = o.SrcCountry
