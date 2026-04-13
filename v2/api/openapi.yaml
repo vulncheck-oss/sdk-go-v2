@@ -273,7 +273,9 @@ paths:
           - hms
           - honeywell
           - hp
+          - hp-eol
           - hpe
+          - hpe-eol
           - huawei-euleros
           - huawei-ips
           - huawei-psirt
@@ -52548,6 +52550,245 @@ paths:
       summary: Return vulnerability data stored in index "hp"
       tags:
       - indices
+  /v3/index/hp-eol:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the hp-eol index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** End of Life Data for Hewlett-Packard Products
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/hp-eol?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/hp-eol?cursor=<next_cursor_id>`
+      operationId: index_hp-eol_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_GenericEOL-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "hp-eol"
+      tags:
+      - indices
   /v3/index/hpe:
     get:
       description: |
@@ -52785,6 +53026,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "hpe"
+      tags:
+      - indices
+  /v3/index/hpe-eol:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the hpe-eol index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Hewlett-Packard Enterprise End of Life Data
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/hpe-eol?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/hpe-eol?cursor=<next_cursor_id>`
+      operationId: index_hpe-eol_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_GenericEOL-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "hpe-eol"
       tags:
       - indices
   /v3/index/huawei-euleros:
@@ -109221,6 +109701,14 @@ paths:
         schema:
           type: string
         style: form
+      - description: Source ASN in format AS12345
+        explode: true
+        in: query
+        name: src_asn
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Specify an exact published date to filter with.
         explode: true
         in: query
@@ -109408,6 +109896,14 @@ paths:
         explode: true
         in: query
         name: src_ip
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Source ASN in format AS12345
+        explode: true
+        in: query
+        name: src_asn
         required: false
         schema:
           type: string
@@ -109603,6 +110099,14 @@ paths:
         schema:
           type: string
         style: form
+      - description: Source ASN in format AS12345
+        explode: true
+        in: query
+        name: src_asn
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Specify an exact published date to filter with.
         explode: true
         in: query
@@ -109794,6 +110298,14 @@ paths:
         schema:
           type: string
         style: form
+      - description: Source ASN in format AS12345
+        explode: true
+        in: query
+        name: src_asn
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Specify an exact published date to filter with.
         explode: true
         in: query
@@ -109981,6 +110493,14 @@ paths:
         explode: true
         in: query
         name: src_ip
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Source ASN in format AS12345
+        explode: true
+        in: query
+        name: src_asn
         required: false
         schema:
           type: string
@@ -159643,6 +160163,7 @@ components:
       example:
         dst_country: dst_country
         severity: 6
+        src_as_name: src_as_name
         signature: signature
         client_fingerprints:
           hassh: hassh
@@ -159652,7 +160173,9 @@ components:
         src_port: 5
         signature_id: 1
         cve: cve
+        src_as_domain: src_as_domain
         payload: payload
+        src_asn: src_asn
         src_country: src_country
         http:
           protocol: protocol
@@ -159681,6 +160204,12 @@ components:
           type: string
         signature_id:
           type: integer
+        src_as_domain:
+          type: string
+        src_as_name:
+          type: string
+        src_asn:
+          type: string
         src_country:
           type: string
         src_ip:
@@ -212770,6 +213299,7 @@ components:
         data:
         - dst_country: dst_country
           severity: 6
+          src_as_name: src_as_name
           signature: signature
           client_fingerprints:
             hassh: hassh
@@ -212779,7 +213309,9 @@ components:
           src_port: 5
           signature_id: 1
           cve: cve
+          src_as_domain: src_as_domain
           payload: payload
+          src_asn: src_asn
           src_country: src_country
           http:
             protocol: protocol
@@ -212791,6 +213323,7 @@ components:
           timestamp: timestamp
         - dst_country: dst_country
           severity: 6
+          src_as_name: src_as_name
           signature: signature
           client_fingerprints:
             hassh: hassh
@@ -212800,7 +213333,9 @@ components:
           src_port: 5
           signature_id: 1
           cve: cve
+          src_as_domain: src_as_domain
           payload: payload
+          src_asn: src_asn
           src_country: src_country
           http:
             protocol: protocol
