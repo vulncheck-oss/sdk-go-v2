@@ -8,7 +8,9 @@ Name | Type | Description | Notes
 **Cycle** | Pointer to **string** |  | [optional] 
 **Discontinued** | Pointer to **interface{}** |  | [optional] 
 **Eol** | Pointer to **interface{}** |  | [optional] 
+**EolDate** | Pointer to **string** |  | [optional] 
 **ExtendedSupport** | Pointer to **interface{}** |  | [optional] 
+**IsEol** | Pointer to **bool** |  | [optional] 
 **Latest** | Pointer to **string** |  | [optional] 
 **LatestReleaseDate** | Pointer to **string** |  | [optional] 
 **Link** | Pointer to **string** |  | [optional] 
@@ -156,6 +158,31 @@ HasEol returns a boolean if a field has been set.
 `func (o *AdvisoryCycle) UnsetEol()`
 
 UnsetEol ensures that no value is present for Eol, not even an explicit nil
+### GetEolDate
+
+`func (o *AdvisoryCycle) GetEolDate() string`
+
+GetEolDate returns the EolDate field if non-nil, zero value otherwise.
+
+### GetEolDateOk
+
+`func (o *AdvisoryCycle) GetEolDateOk() (*string, bool)`
+
+GetEolDateOk returns a tuple with the EolDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEolDate
+
+`func (o *AdvisoryCycle) SetEolDate(v string)`
+
+SetEolDate sets EolDate field to given value.
+
+### HasEolDate
+
+`func (o *AdvisoryCycle) HasEolDate() bool`
+
+HasEolDate returns a boolean if a field has been set.
+
 ### GetExtendedSupport
 
 `func (o *AdvisoryCycle) GetExtendedSupport() interface{}`
@@ -191,6 +218,31 @@ HasExtendedSupport returns a boolean if a field has been set.
 `func (o *AdvisoryCycle) UnsetExtendedSupport()`
 
 UnsetExtendedSupport ensures that no value is present for ExtendedSupport, not even an explicit nil
+### GetIsEol
+
+`func (o *AdvisoryCycle) GetIsEol() bool`
+
+GetIsEol returns the IsEol field if non-nil, zero value otherwise.
+
+### GetIsEolOk
+
+`func (o *AdvisoryCycle) GetIsEolOk() (*bool, bool)`
+
+GetIsEolOk returns a tuple with the IsEol field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsEol
+
+`func (o *AdvisoryCycle) SetIsEol(v bool)`
+
+SetIsEol sets IsEol field to given value.
+
+### HasIsEol
+
+`func (o *AdvisoryCycle) HasIsEol() bool`
+
+HasIsEol returns a boolean if a field has been set.
+
 ### GetLatest
 
 `func (o *AdvisoryCycle) GetLatest() string`

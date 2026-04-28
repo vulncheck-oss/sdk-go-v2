@@ -6,9 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Available** | Pointer to **bool** |  | [optional] 
 **Feed** | Pointer to **string** |  | [optional] 
-**Url** | Pointer to **string** |  | [optional] 
-**UrlDirect** | Pointer to **string** |  | [optional] 
+**Sha256** | Pointer to **string** |  | [optional] 
+**UrlApSoutheast2** | Pointer to **string** |  | [optional] 
+**UrlEuWest2** | Pointer to **string** |  | [optional] 
 **UrlExpires** | Pointer to **string** |  | [optional] 
+**UrlMrap** | Pointer to **string** |  | [optional] 
+**UrlTtlMinutes** | Pointer to **int32** |  | [optional] 
+**UrlUsEast1** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -79,55 +83,80 @@ SetFeed sets Feed field to given value.
 
 HasFeed returns a boolean if a field has been set.
 
-### GetUrl
+### GetSha256
 
-`func (o *BackupBackupResponse) GetUrl() string`
+`func (o *BackupBackupResponse) GetSha256() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetSha256 returns the Sha256 field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetSha256Ok
 
-`func (o *BackupBackupResponse) GetUrlOk() (*string, bool)`
+`func (o *BackupBackupResponse) GetSha256Ok() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetSha256Ok returns a tuple with the Sha256 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSha256
 
-`func (o *BackupBackupResponse) SetUrl(v string)`
+`func (o *BackupBackupResponse) SetSha256(v string)`
 
-SetUrl sets Url field to given value.
+SetSha256 sets Sha256 field to given value.
 
-### HasUrl
+### HasSha256
 
-`func (o *BackupBackupResponse) HasUrl() bool`
+`func (o *BackupBackupResponse) HasSha256() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasSha256 returns a boolean if a field has been set.
 
-### GetUrlDirect
+### GetUrlApSoutheast2
 
-`func (o *BackupBackupResponse) GetUrlDirect() string`
+`func (o *BackupBackupResponse) GetUrlApSoutheast2() string`
 
-GetUrlDirect returns the UrlDirect field if non-nil, zero value otherwise.
+GetUrlApSoutheast2 returns the UrlApSoutheast2 field if non-nil, zero value otherwise.
 
-### GetUrlDirectOk
+### GetUrlApSoutheast2Ok
 
-`func (o *BackupBackupResponse) GetUrlDirectOk() (*string, bool)`
+`func (o *BackupBackupResponse) GetUrlApSoutheast2Ok() (*string, bool)`
 
-GetUrlDirectOk returns a tuple with the UrlDirect field if it's non-nil, zero value otherwise
+GetUrlApSoutheast2Ok returns a tuple with the UrlApSoutheast2 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrlDirect
+### SetUrlApSoutheast2
 
-`func (o *BackupBackupResponse) SetUrlDirect(v string)`
+`func (o *BackupBackupResponse) SetUrlApSoutheast2(v string)`
 
-SetUrlDirect sets UrlDirect field to given value.
+SetUrlApSoutheast2 sets UrlApSoutheast2 field to given value.
 
-### HasUrlDirect
+### HasUrlApSoutheast2
 
-`func (o *BackupBackupResponse) HasUrlDirect() bool`
+`func (o *BackupBackupResponse) HasUrlApSoutheast2() bool`
 
-HasUrlDirect returns a boolean if a field has been set.
+HasUrlApSoutheast2 returns a boolean if a field has been set.
+
+### GetUrlEuWest2
+
+`func (o *BackupBackupResponse) GetUrlEuWest2() string`
+
+GetUrlEuWest2 returns the UrlEuWest2 field if non-nil, zero value otherwise.
+
+### GetUrlEuWest2Ok
+
+`func (o *BackupBackupResponse) GetUrlEuWest2Ok() (*string, bool)`
+
+GetUrlEuWest2Ok returns a tuple with the UrlEuWest2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlEuWest2
+
+`func (o *BackupBackupResponse) SetUrlEuWest2(v string)`
+
+SetUrlEuWest2 sets UrlEuWest2 field to given value.
+
+### HasUrlEuWest2
+
+`func (o *BackupBackupResponse) HasUrlEuWest2() bool`
+
+HasUrlEuWest2 returns a boolean if a field has been set.
 
 ### GetUrlExpires
 
@@ -153,6 +182,81 @@ SetUrlExpires sets UrlExpires field to given value.
 `func (o *BackupBackupResponse) HasUrlExpires() bool`
 
 HasUrlExpires returns a boolean if a field has been set.
+
+### GetUrlMrap
+
+`func (o *BackupBackupResponse) GetUrlMrap() string`
+
+GetUrlMrap returns the UrlMrap field if non-nil, zero value otherwise.
+
+### GetUrlMrapOk
+
+`func (o *BackupBackupResponse) GetUrlMrapOk() (*string, bool)`
+
+GetUrlMrapOk returns a tuple with the UrlMrap field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlMrap
+
+`func (o *BackupBackupResponse) SetUrlMrap(v string)`
+
+SetUrlMrap sets UrlMrap field to given value.
+
+### HasUrlMrap
+
+`func (o *BackupBackupResponse) HasUrlMrap() bool`
+
+HasUrlMrap returns a boolean if a field has been set.
+
+### GetUrlTtlMinutes
+
+`func (o *BackupBackupResponse) GetUrlTtlMinutes() int32`
+
+GetUrlTtlMinutes returns the UrlTtlMinutes field if non-nil, zero value otherwise.
+
+### GetUrlTtlMinutesOk
+
+`func (o *BackupBackupResponse) GetUrlTtlMinutesOk() (*int32, bool)`
+
+GetUrlTtlMinutesOk returns a tuple with the UrlTtlMinutes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlTtlMinutes
+
+`func (o *BackupBackupResponse) SetUrlTtlMinutes(v int32)`
+
+SetUrlTtlMinutes sets UrlTtlMinutes field to given value.
+
+### HasUrlTtlMinutes
+
+`func (o *BackupBackupResponse) HasUrlTtlMinutes() bool`
+
+HasUrlTtlMinutes returns a boolean if a field has been set.
+
+### GetUrlUsEast1
+
+`func (o *BackupBackupResponse) GetUrlUsEast1() string`
+
+GetUrlUsEast1 returns the UrlUsEast1 field if non-nil, zero value otherwise.
+
+### GetUrlUsEast1Ok
+
+`func (o *BackupBackupResponse) GetUrlUsEast1Ok() (*string, bool)`
+
+GetUrlUsEast1Ok returns a tuple with the UrlUsEast1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlUsEast1
+
+`func (o *BackupBackupResponse) SetUrlUsEast1(v string)`
+
+SetUrlUsEast1 sets UrlUsEast1 field to given value.
+
+### HasUrlUsEast1
+
+`func (o *BackupBackupResponse) HasUrlUsEast1() bool`
+
+HasUrlUsEast1 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

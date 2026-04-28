@@ -540,6 +540,7 @@ docs/AdvisoryPyPAEvent.md
 docs/AdvisoryPyPAPackage.md
 docs/AdvisoryPyPARange.md
 docs/AdvisoryPyPAReference.md
+docs/AdvisoryQCompliance.md
 docs/AdvisoryQNAPAdvisory.md
 docs/AdvisoryQQID.md
 docs/AdvisoryQSB.md
@@ -836,6 +837,7 @@ docs/ApiReferences.md
 docs/ApiReferencesExtended.md
 docs/ApiRelatedAttackPattern.md
 docs/ApiSSVC.md
+docs/ApiTargetIntel.md
 docs/ApiTemporalCVSSV2.md
 docs/ApiTemporalCVSSV3.md
 docs/ApiTemporalMetricV2.md
@@ -1322,6 +1324,7 @@ docs/RenderResponseWithMetadataArrayApiNVD20CPEMatchPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiNVD20CVEExtendedPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiNVD20CVEPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiOSSPackagePaginatePagination.md
+docs/RenderResponseWithMetadataArrayApiTargetIntelPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiUpdatePaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiVulnCheckCanaryPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiVulnerabilityAliasPaginatePagination.md
@@ -1874,6 +1877,7 @@ model_advisory_py_pa_event.go
 model_advisory_py_pa_package.go
 model_advisory_py_pa_range.go
 model_advisory_py_pa_reference.go
+model_advisory_q_compliance.go
 model_advisory_qnap_advisory.go
 model_advisory_qqid.go
 model_advisory_qsb.go
@@ -2170,6 +2174,7 @@ model_api_references.go
 model_api_references_extended.go
 model_api_related_attack_pattern.go
 model_api_ssvc.go
+model_api_target_intel.go
 model_api_temporal_cvssv2.go
 model_api_temporal_cvssv3.go
 model_api_temporal_metric_v2.go
@@ -2653,6 +2658,7 @@ model_render_response_with_metadata_array_api_nvd20_cpe_match_paginate_paginatio
 model_render_response_with_metadata_array_api_nvd20_cve_extended_paginate_pagination.go
 model_render_response_with_metadata_array_api_nvd20_cve_paginate_pagination.go
 model_render_response_with_metadata_array_api_oss_package_paginate_pagination.go
+model_render_response_with_metadata_array_api_target_intel_paginate_pagination.go
 model_render_response_with_metadata_array_api_update_paginate_pagination.go
 model_render_response_with_metadata_array_api_vuln_check_canary_paginate_pagination.go
 model_render_response_with_metadata_array_api_vulnerability_alias_paginate_pagination.go

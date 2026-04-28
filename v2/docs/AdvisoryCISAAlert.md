@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Archived** | Pointer to **bool** |  | [optional] 
 **CVEExploitedITW** | Pointer to **bool** |  | [optional] 
 **CVSS** | Pointer to **string** |  | [optional] 
+**ICSA** | Pointer to **bool** |  | [optional] 
 **ICSMA** | Pointer to **bool** |  | [optional] 
 **Mitigations** | Pointer to **string** |  | [optional] 
 **ReleaseDate** | Pointer to **string** |  | [optional] 
@@ -162,6 +163,31 @@ SetCVSS sets CVSS field to given value.
 `func (o *AdvisoryCISAAlert) HasCVSS() bool`
 
 HasCVSS returns a boolean if a field has been set.
+
+### GetICSA
+
+`func (o *AdvisoryCISAAlert) GetICSA() bool`
+
+GetICSA returns the ICSA field if non-nil, zero value otherwise.
+
+### GetICSAOk
+
+`func (o *AdvisoryCISAAlert) GetICSAOk() (*bool, bool)`
+
+GetICSAOk returns a tuple with the ICSA field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetICSA
+
+`func (o *AdvisoryCISAAlert) SetICSA(v bool)`
+
+SetICSA sets ICSA field to given value.
+
+### HasICSA
+
+`func (o *AdvisoryCISAAlert) HasICSA() bool`
+
+HasICSA returns a boolean if a field has been set.
 
 ### GetICSMA
 

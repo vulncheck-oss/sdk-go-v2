@@ -22,9 +22,13 @@ var _ MappedNullable = &BackupBackupResponse{}
 type BackupBackupResponse struct {
 	Available *bool `json:"available,omitempty"`
 	Feed *string `json:"feed,omitempty"`
-	Url *string `json:"url,omitempty"`
-	UrlDirect *string `json:"url_direct,omitempty"`
+	Sha256 *string `json:"sha256,omitempty"`
+	UrlApSoutheast2 *string `json:"url_ap-southeast-2,omitempty"`
+	UrlEuWest2 *string `json:"url_eu-west-2,omitempty"`
 	UrlExpires *string `json:"url_expires,omitempty"`
+	UrlMrap *string `json:"url_mrap,omitempty"`
+	UrlTtlMinutes *int32 `json:"url_ttl_minutes,omitempty"`
+	UrlUsEast1 *string `json:"url_us-east-1,omitempty"`
 }
 
 // NewBackupBackupResponse instantiates a new BackupBackupResponse object
@@ -108,68 +112,100 @@ func (o *BackupBackupResponse) SetFeed(v string) {
 	o.Feed = &v
 }
 
-// GetUrl returns the Url field value if set, zero value otherwise.
-func (o *BackupBackupResponse) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
+// GetSha256 returns the Sha256 field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetSha256() string {
+	if o == nil || IsNil(o.Sha256) {
 		var ret string
 		return ret
 	}
-	return *o.Url
+	return *o.Sha256
 }
 
-// GetUrlOk returns a tuple with the Url field value if set, nil otherwise
+// GetSha256Ok returns a tuple with the Sha256 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *BackupBackupResponse) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+func (o *BackupBackupResponse) GetSha256Ok() (*string, bool) {
+	if o == nil || IsNil(o.Sha256) {
 		return nil, false
 	}
-	return o.Url, true
+	return o.Sha256, true
 }
 
-// HasUrl returns a boolean if a field has been set.
-func (o *BackupBackupResponse) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+// HasSha256 returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasSha256() bool {
+	if o != nil && !IsNil(o.Sha256) {
 		return true
 	}
 
 	return false
 }
 
-// SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *BackupBackupResponse) SetUrl(v string) {
-	o.Url = &v
+// SetSha256 gets a reference to the given string and assigns it to the Sha256 field.
+func (o *BackupBackupResponse) SetSha256(v string) {
+	o.Sha256 = &v
 }
 
-// GetUrlDirect returns the UrlDirect field value if set, zero value otherwise.
-func (o *BackupBackupResponse) GetUrlDirect() string {
-	if o == nil || IsNil(o.UrlDirect) {
+// GetUrlApSoutheast2 returns the UrlApSoutheast2 field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrlApSoutheast2() string {
+	if o == nil || IsNil(o.UrlApSoutheast2) {
 		var ret string
 		return ret
 	}
-	return *o.UrlDirect
+	return *o.UrlApSoutheast2
 }
 
-// GetUrlDirectOk returns a tuple with the UrlDirect field value if set, nil otherwise
+// GetUrlApSoutheast2Ok returns a tuple with the UrlApSoutheast2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *BackupBackupResponse) GetUrlDirectOk() (*string, bool) {
-	if o == nil || IsNil(o.UrlDirect) {
+func (o *BackupBackupResponse) GetUrlApSoutheast2Ok() (*string, bool) {
+	if o == nil || IsNil(o.UrlApSoutheast2) {
 		return nil, false
 	}
-	return o.UrlDirect, true
+	return o.UrlApSoutheast2, true
 }
 
-// HasUrlDirect returns a boolean if a field has been set.
-func (o *BackupBackupResponse) HasUrlDirect() bool {
-	if o != nil && !IsNil(o.UrlDirect) {
+// HasUrlApSoutheast2 returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrlApSoutheast2() bool {
+	if o != nil && !IsNil(o.UrlApSoutheast2) {
 		return true
 	}
 
 	return false
 }
 
-// SetUrlDirect gets a reference to the given string and assigns it to the UrlDirect field.
-func (o *BackupBackupResponse) SetUrlDirect(v string) {
-	o.UrlDirect = &v
+// SetUrlApSoutheast2 gets a reference to the given string and assigns it to the UrlApSoutheast2 field.
+func (o *BackupBackupResponse) SetUrlApSoutheast2(v string) {
+	o.UrlApSoutheast2 = &v
+}
+
+// GetUrlEuWest2 returns the UrlEuWest2 field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrlEuWest2() string {
+	if o == nil || IsNil(o.UrlEuWest2) {
+		var ret string
+		return ret
+	}
+	return *o.UrlEuWest2
+}
+
+// GetUrlEuWest2Ok returns a tuple with the UrlEuWest2 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *BackupBackupResponse) GetUrlEuWest2Ok() (*string, bool) {
+	if o == nil || IsNil(o.UrlEuWest2) {
+		return nil, false
+	}
+	return o.UrlEuWest2, true
+}
+
+// HasUrlEuWest2 returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrlEuWest2() bool {
+	if o != nil && !IsNil(o.UrlEuWest2) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlEuWest2 gets a reference to the given string and assigns it to the UrlEuWest2 field.
+func (o *BackupBackupResponse) SetUrlEuWest2(v string) {
+	o.UrlEuWest2 = &v
 }
 
 // GetUrlExpires returns the UrlExpires field value if set, zero value otherwise.
@@ -204,6 +240,102 @@ func (o *BackupBackupResponse) SetUrlExpires(v string) {
 	o.UrlExpires = &v
 }
 
+// GetUrlMrap returns the UrlMrap field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrlMrap() string {
+	if o == nil || IsNil(o.UrlMrap) {
+		var ret string
+		return ret
+	}
+	return *o.UrlMrap
+}
+
+// GetUrlMrapOk returns a tuple with the UrlMrap field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *BackupBackupResponse) GetUrlMrapOk() (*string, bool) {
+	if o == nil || IsNil(o.UrlMrap) {
+		return nil, false
+	}
+	return o.UrlMrap, true
+}
+
+// HasUrlMrap returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrlMrap() bool {
+	if o != nil && !IsNil(o.UrlMrap) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlMrap gets a reference to the given string and assigns it to the UrlMrap field.
+func (o *BackupBackupResponse) SetUrlMrap(v string) {
+	o.UrlMrap = &v
+}
+
+// GetUrlTtlMinutes returns the UrlTtlMinutes field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrlTtlMinutes() int32 {
+	if o == nil || IsNil(o.UrlTtlMinutes) {
+		var ret int32
+		return ret
+	}
+	return *o.UrlTtlMinutes
+}
+
+// GetUrlTtlMinutesOk returns a tuple with the UrlTtlMinutes field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *BackupBackupResponse) GetUrlTtlMinutesOk() (*int32, bool) {
+	if o == nil || IsNil(o.UrlTtlMinutes) {
+		return nil, false
+	}
+	return o.UrlTtlMinutes, true
+}
+
+// HasUrlTtlMinutes returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrlTtlMinutes() bool {
+	if o != nil && !IsNil(o.UrlTtlMinutes) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlTtlMinutes gets a reference to the given int32 and assigns it to the UrlTtlMinutes field.
+func (o *BackupBackupResponse) SetUrlTtlMinutes(v int32) {
+	o.UrlTtlMinutes = &v
+}
+
+// GetUrlUsEast1 returns the UrlUsEast1 field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrlUsEast1() string {
+	if o == nil || IsNil(o.UrlUsEast1) {
+		var ret string
+		return ret
+	}
+	return *o.UrlUsEast1
+}
+
+// GetUrlUsEast1Ok returns a tuple with the UrlUsEast1 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *BackupBackupResponse) GetUrlUsEast1Ok() (*string, bool) {
+	if o == nil || IsNil(o.UrlUsEast1) {
+		return nil, false
+	}
+	return o.UrlUsEast1, true
+}
+
+// HasUrlUsEast1 returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrlUsEast1() bool {
+	if o != nil && !IsNil(o.UrlUsEast1) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlUsEast1 gets a reference to the given string and assigns it to the UrlUsEast1 field.
+func (o *BackupBackupResponse) SetUrlUsEast1(v string) {
+	o.UrlUsEast1 = &v
+}
+
 func (o BackupBackupResponse) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -220,14 +352,26 @@ func (o BackupBackupResponse) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Feed) {
 		toSerialize["feed"] = o.Feed
 	}
-	if !IsNil(o.Url) {
-		toSerialize["url"] = o.Url
+	if !IsNil(o.Sha256) {
+		toSerialize["sha256"] = o.Sha256
 	}
-	if !IsNil(o.UrlDirect) {
-		toSerialize["url_direct"] = o.UrlDirect
+	if !IsNil(o.UrlApSoutheast2) {
+		toSerialize["url_ap-southeast-2"] = o.UrlApSoutheast2
+	}
+	if !IsNil(o.UrlEuWest2) {
+		toSerialize["url_eu-west-2"] = o.UrlEuWest2
 	}
 	if !IsNil(o.UrlExpires) {
 		toSerialize["url_expires"] = o.UrlExpires
+	}
+	if !IsNil(o.UrlMrap) {
+		toSerialize["url_mrap"] = o.UrlMrap
+	}
+	if !IsNil(o.UrlTtlMinutes) {
+		toSerialize["url_ttl_minutes"] = o.UrlTtlMinutes
+	}
+	if !IsNil(o.UrlUsEast1) {
+		toSerialize["url_us-east-1"] = o.UrlUsEast1
 	}
 	return toSerialize, nil
 }

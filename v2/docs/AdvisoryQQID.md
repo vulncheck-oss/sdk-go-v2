@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Compliance** | Pointer to [**[]AdvisoryQCompliance**](AdvisoryQCompliance.md) |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
 **Cvss3Score** | Pointer to **string** |  | [optional] 
 **CvssScore** | Pointer to **string** |  | [optional] 
@@ -31,6 +32,31 @@ will change when the set of required properties is changed
 NewAdvisoryQQIDWithDefaults instantiates a new AdvisoryQQID object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCompliance
+
+`func (o *AdvisoryQQID) GetCompliance() []AdvisoryQCompliance`
+
+GetCompliance returns the Compliance field if non-nil, zero value otherwise.
+
+### GetComplianceOk
+
+`func (o *AdvisoryQQID) GetComplianceOk() (*[]AdvisoryQCompliance, bool)`
+
+GetComplianceOk returns a tuple with the Compliance field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCompliance
+
+`func (o *AdvisoryQQID) SetCompliance(v []AdvisoryQCompliance)`
+
+SetCompliance sets Compliance field to given value.
+
+### HasCompliance
+
+`func (o *AdvisoryQQID) HasCompliance() bool`
+
+HasCompliance returns a boolean if a field has been set.
 
 ### GetCve
 
