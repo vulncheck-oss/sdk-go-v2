@@ -24,7 +24,9 @@ type AdvisoryCycle struct {
 	Cycle *string `json:"cycle,omitempty"`
 	Discontinued interface{} `json:"discontinued,omitempty"`
 	Eol interface{} `json:"eol,omitempty"`
+	EolDate *string `json:"eolDate,omitempty"`
 	ExtendedSupport interface{} `json:"extendedSupport,omitempty"`
+	IsEol *bool `json:"isEol,omitempty"`
 	Latest *string `json:"latest,omitempty"`
 	LatestReleaseDate *string `json:"latestReleaseDate,omitempty"`
 	Link *string `json:"link,omitempty"`
@@ -181,6 +183,38 @@ func (o *AdvisoryCycle) SetEol(v interface{}) {
 	o.Eol = v
 }
 
+// GetEolDate returns the EolDate field value if set, zero value otherwise.
+func (o *AdvisoryCycle) GetEolDate() string {
+	if o == nil || IsNil(o.EolDate) {
+		var ret string
+		return ret
+	}
+	return *o.EolDate
+}
+
+// GetEolDateOk returns a tuple with the EolDate field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCycle) GetEolDateOk() (*string, bool) {
+	if o == nil || IsNil(o.EolDate) {
+		return nil, false
+	}
+	return o.EolDate, true
+}
+
+// HasEolDate returns a boolean if a field has been set.
+func (o *AdvisoryCycle) HasEolDate() bool {
+	if o != nil && !IsNil(o.EolDate) {
+		return true
+	}
+
+	return false
+}
+
+// SetEolDate gets a reference to the given string and assigns it to the EolDate field.
+func (o *AdvisoryCycle) SetEolDate(v string) {
+	o.EolDate = &v
+}
+
 // GetExtendedSupport returns the ExtendedSupport field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *AdvisoryCycle) GetExtendedSupport() interface{} {
 	if o == nil {
@@ -212,6 +246,38 @@ func (o *AdvisoryCycle) HasExtendedSupport() bool {
 // SetExtendedSupport gets a reference to the given interface{} and assigns it to the ExtendedSupport field.
 func (o *AdvisoryCycle) SetExtendedSupport(v interface{}) {
 	o.ExtendedSupport = v
+}
+
+// GetIsEol returns the IsEol field value if set, zero value otherwise.
+func (o *AdvisoryCycle) GetIsEol() bool {
+	if o == nil || IsNil(o.IsEol) {
+		var ret bool
+		return ret
+	}
+	return *o.IsEol
+}
+
+// GetIsEolOk returns a tuple with the IsEol field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCycle) GetIsEolOk() (*bool, bool) {
+	if o == nil || IsNil(o.IsEol) {
+		return nil, false
+	}
+	return o.IsEol, true
+}
+
+// HasIsEol returns a boolean if a field has been set.
+func (o *AdvisoryCycle) HasIsEol() bool {
+	if o != nil && !IsNil(o.IsEol) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsEol gets a reference to the given bool and assigns it to the IsEol field.
+func (o *AdvisoryCycle) SetIsEol(v bool) {
+	o.IsEol = &v
 }
 
 // GetLatest returns the Latest field value if set, zero value otherwise.
@@ -462,8 +528,14 @@ func (o AdvisoryCycle) ToMap() (map[string]interface{}, error) {
 	if o.Eol != nil {
 		toSerialize["eol"] = o.Eol
 	}
+	if !IsNil(o.EolDate) {
+		toSerialize["eolDate"] = o.EolDate
+	}
 	if o.ExtendedSupport != nil {
 		toSerialize["extendedSupport"] = o.ExtendedSupport
+	}
+	if !IsNil(o.IsEol) {
+		toSerialize["isEol"] = o.IsEol
 	}
 	if !IsNil(o.Latest) {
 		toSerialize["latest"] = o.Latest

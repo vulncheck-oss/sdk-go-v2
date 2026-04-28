@@ -25,6 +25,7 @@ type AdvisoryCISAAlert struct {
 	Archived *bool `json:"Archived,omitempty"`
 	CVEExploitedITW *bool `json:"CVEExploitedITW,omitempty"`
 	CVSS *string `json:"CVSS,omitempty"`
+	ICSA *bool `json:"ICSA,omitempty"`
 	ICSMA *bool `json:"ICSMA,omitempty"`
 	Mitigations *string `json:"Mitigations,omitempty"`
 	ReleaseDate *string `json:"ReleaseDate,omitempty"`
@@ -211,6 +212,38 @@ func (o *AdvisoryCISAAlert) HasCVSS() bool {
 // SetCVSS gets a reference to the given string and assigns it to the CVSS field.
 func (o *AdvisoryCISAAlert) SetCVSS(v string) {
 	o.CVSS = &v
+}
+
+// GetICSA returns the ICSA field value if set, zero value otherwise.
+func (o *AdvisoryCISAAlert) GetICSA() bool {
+	if o == nil || IsNil(o.ICSA) {
+		var ret bool
+		return ret
+	}
+	return *o.ICSA
+}
+
+// GetICSAOk returns a tuple with the ICSA field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCISAAlert) GetICSAOk() (*bool, bool) {
+	if o == nil || IsNil(o.ICSA) {
+		return nil, false
+	}
+	return o.ICSA, true
+}
+
+// HasICSA returns a boolean if a field has been set.
+func (o *AdvisoryCISAAlert) HasICSA() bool {
+	if o != nil && !IsNil(o.ICSA) {
+		return true
+	}
+
+	return false
+}
+
+// SetICSA gets a reference to the given bool and assigns it to the ICSA field.
+func (o *AdvisoryCISAAlert) SetICSA(v bool) {
+	o.ICSA = &v
 }
 
 // GetICSMA returns the ICSMA field value if set, zero value otherwise.
@@ -525,6 +558,9 @@ func (o AdvisoryCISAAlert) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.CVSS) {
 		toSerialize["CVSS"] = o.CVSS
+	}
+	if !IsNil(o.ICSA) {
+		toSerialize["ICSA"] = o.ICSA
 	}
 	if !IsNil(o.ICSMA) {
 		toSerialize["ICSMA"] = o.ICSMA

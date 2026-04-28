@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.18/go",
+		UserAgent:        "OpenAPI-Generator/2.1.19/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -256,6 +256,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexAlibabaAdvsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexAlibabacloudEolGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -1851,6 +1857,12 @@ func NewConfiguration() *Configuration {
 					Description: "No description provided",
 				},
 			},
+			"IndicesAPIService.IndexMicrosoftEolGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
 			"IndicesAPIService.IndexMicrosoftKbGet": {
 				{
 					URL: "https://api.vulncheck.com",
@@ -2722,6 +2734,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexTailscaleGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexTargetIntelGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",

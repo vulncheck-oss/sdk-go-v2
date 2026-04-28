@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryQQID{}
 
 // AdvisoryQQID advisory.QQID
 type AdvisoryQQID struct {
+	Compliance []AdvisoryQCompliance `json:"compliance,omitempty"`
 	Cve []string `json:"cve,omitempty"`
 	Cvss3Score *string `json:"cvss3_score,omitempty"`
 	CvssScore *string `json:"cvss_score,omitempty"`
@@ -45,6 +46,38 @@ func NewAdvisoryQQID() *AdvisoryQQID {
 func NewAdvisoryQQIDWithDefaults() *AdvisoryQQID {
 	this := AdvisoryQQID{}
 	return &this
+}
+
+// GetCompliance returns the Compliance field value if set, zero value otherwise.
+func (o *AdvisoryQQID) GetCompliance() []AdvisoryQCompliance {
+	if o == nil || IsNil(o.Compliance) {
+		var ret []AdvisoryQCompliance
+		return ret
+	}
+	return o.Compliance
+}
+
+// GetComplianceOk returns a tuple with the Compliance field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryQQID) GetComplianceOk() ([]AdvisoryQCompliance, bool) {
+	if o == nil || IsNil(o.Compliance) {
+		return nil, false
+	}
+	return o.Compliance, true
+}
+
+// HasCompliance returns a boolean if a field has been set.
+func (o *AdvisoryQQID) HasCompliance() bool {
+	if o != nil && !IsNil(o.Compliance) {
+		return true
+	}
+
+	return false
+}
+
+// SetCompliance gets a reference to the given []AdvisoryQCompliance and assigns it to the Compliance field.
+func (o *AdvisoryQQID) SetCompliance(v []AdvisoryQCompliance) {
+	o.Compliance = v
 }
 
 // GetCve returns the Cve field value if set, zero value otherwise.
@@ -313,6 +346,9 @@ func (o AdvisoryQQID) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryQQID) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Compliance) {
+		toSerialize["compliance"] = o.Compliance
+	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
