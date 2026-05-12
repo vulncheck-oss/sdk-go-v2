@@ -186,6 +186,7 @@ paths:
           - crestron
           - crowdsec
           - curl
+          - cves_identity_mappings
           - cwe
           - dahua
           - danfoss
@@ -481,7 +482,6 @@ paths:
           - synology
           - syss
           - tailscale
-          - target-intel
           - teamviewer
           - tenable-research-advisories
           - tencent
@@ -31758,6 +31758,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "curl"
+      tags:
+      - indices
+  /v3/index/cves_identity_mappings:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the cves_identity_mappings index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** CVE To Various IDs Mapping. This index holds cves to different ids mappings
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/cves_identity_mappings?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/cves_identity_mappings?cursor=<next_cursor_id>`
+      operationId: index_cves_identity_mappings_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_CVEIdentityMappings-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "cves_identity_mappings"
       tags:
       - indices
   /v3/index/cwe:
@@ -102425,253 +102664,6 @@ paths:
       summary: Return vulnerability data stored in index "tailscale"
       tags:
       - indices
-  /v3/index/target-intel:
-    get:
-      description: |
-        ### Overview
-        This endpoint allows you to retrieve a paginated list of all documents from the target-intel index. \
-        By default, a maximum of 100 documents are shown per page.
-
-        **Index Description:** VulnCheck Target Intel
-
-        ### Paging Over Large Data (cursor)
-        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-        "cursor" mechanism. To use the cursor, first call `GET /index/target-intel?start_cursor`, the response will
-        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-        `GET /index/target-intel?cursor=<next_cursor_id>`
-      operationId: index_target-intel_get
-      parameters:
-      - description: set the page number of the response
-        explode: true
-        in: query
-        name: page
-        required: false
-        schema:
-          type: integer
-        style: form
-      - description: limit the number of findings in the response
-        explode: true
-        in: query
-        name: limit
-        required: false
-        schema:
-          type: integer
-        style: form
-      - description: continue server-side paging using a cursor id
-        explode: true
-        in: query
-        name: cursor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: request server-side paging
-        explode: true
-        in: query
-        name: start_cursor
-        required: false
-        schema:
-          enum:
-          - "true"
-          type: string
-        style: form
-      - description: direction of the sort
-        explode: true
-        in: query
-        name: order
-        required: false
-        schema:
-          enum:
-          - asc
-          - desc
-          type: string
-        style: form
-      - description: field by which to sort the results
-        explode: true
-        in: query
-        name: sort
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an IPv4 or IPv6 CIDR
-        explode: true
-        in: query
-        name: cidr
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a CVE ID to search with.
-        explode: true
-        in: query
-        name: cve
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Country name ISO-3166?? format
-        explode: true
-        in: query
-        name: country
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Country code in ISO-3166?? format
-        explode: true
-        in: query
-        name: country_code
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Autonomous system number
-        explode: true
-        in: query
-        name: asn
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Record type
-        explode: true
-        in: query
-        name: id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: CPE string
-        explode: true
-        in: query
-        name: cpe
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Vendor name
-        explode: true
-        in: query
-        name: vendor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Product name
-        explode: true
-        in: query
-        name: product
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Product version
-        explode: true
-        in: query
-        name: version
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Record type
-        explode: true
-        in: query
-        name: type
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Protocol
-        explode: true
-        in: query
-        name: protocol
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an exact published date to filter with.
-        explode: true
-        in: query
-        name: date
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a starting 'updated-at' date to filter with.
-        explode: true
-        in: query
-        name: updatedAtStartDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ending 'updated-at' date to filter with.
-        explode: true
-        in: query
-        name: updatedAtEndDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a starting last modified date to filter with.
-        explode: true
-        in: query
-        name: lastModStartDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ending last modified date to filter with.
-        explode: true
-        in: query
-        name: lastModEndDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a starting published date to filter with.
-        explode: true
-        in: query
-        name: pubStartDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ending published date to filter with.
-        explode: true
-        in: query
-        name: pubEndDate
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination'
-          description: OK
-        "404":
-          content:
-            application/json:
-              schema:
-                type: string
-          description: Not Found
-        "500":
-          content:
-            application/json:
-              schema:
-                type: string
-          description: Internal Server Error
-      security:
-      - Bearer: []
-      servers:
-      - url: https://api.vulncheck.com
-      summary: Return vulnerability data stored in index "target-intel"
-      tags:
-      - indices
   /v3/index/teamviewer:
     get:
       description: |
@@ -119154,6 +119146,80 @@ paths:
       summary: Retrieve set of initial-access detection rules
       tags:
       - endpoints
+  /v3/search/cpe:
+    get:
+      description: "Based on the specified CPE (Common Platform Enumeration) fields,\
+        \ this endpoint will return a list of matching CPEs and the related CVE vulnerabilities."
+      operationId: search_cpe_get
+      parameters:
+      - description: CPE part to lookup
+        example: "[a]pplication, [o]perating system, [h]ardware"
+        explode: true
+        in: query
+        name: part
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: CPE vendor to lookup
+        explode: true
+        in: query
+        name: vendor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: CPE product to lookup
+        explode: true
+        in: query
+        name: product
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: CPE version to lookup
+        explode: true
+        in: query
+        name: version
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter by vulnerability status (true/false). Defaults to false
+          if not provided.
+        explode: true
+        in: query
+        name: isVulnerable
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-search_Responses-search_ResponseMetadata'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return CPEs and associated CPEs by searching CPE fields
+      tags:
+      - endpoints
   /v3/tags/vulncheck-c2:
     get:
       description: "Retrieve a list of IP addresses, identified as running Command\
@@ -125229,6 +125295,43 @@ components:
         url:
           type: string
         value:
+          type: string
+    advisory.CVEIdentityMappings:
+      description: advisory.CVEIdentityMappings
+      example:
+        mappings:
+        - id: id
+          source: source
+          url: url
+        - id: id
+          source: source
+          url: url
+        cve:
+        - cve
+        - cve
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        mappings:
+          items:
+            $ref: '#/components/schemas/advisory.CVEMapping'
+          type: array
+          uniqueItems: false
+    advisory.CVEMapping:
+      description: advisory.CVEMapping
+      example:
+        id: id
+        source: source
+        url: url
+      properties:
+        id:
+          type: string
+        source:
+          type: string
+        url:
           type: string
     advisory.CVEReference:
       description: advisory.CVEReference
@@ -155253,6 +155356,13 @@ components:
     api.CWE:
       description: api.CWE
       example:
+        relationships:
+        - cwe_label: cwe_label
+          cwe_id: cwe_id
+          type: type
+        - cwe_label: cwe_label
+          cwe_id: cwe_id
+          type: type
         weighted_score: 5.962133916683182
         vulncheck_nvd_count: 1
         weakness_name: weakness_name
@@ -155269,6 +155379,11 @@ components:
           type: string
         kev_count:
           type: integer
+        relationships:
+          items:
+            $ref: '#/components/schemas/api.CWERelationship'
+          type: array
+          uniqueItems: false
         status:
           type: string
         structure:
@@ -155281,6 +155396,19 @@ components:
           type: string
         weighted_score:
           type: number
+    api.CWERelationship:
+      description: api.CWERelationship
+      example:
+        cwe_label: cwe_label
+        cwe_id: cwe_id
+        type: type
+      properties:
+        cwe_id:
+          type: string
+        cwe_label:
+          type: string
+        type:
+          type: string
     api.CategorizationExtended:
       description: api.CategorizationExtended
       example:
@@ -156274,6 +156402,7 @@ components:
           first_exploit_published: first_exploit_published
           cisa_kev_date_due: cisa_kev_date_due
           most_recent_reported_ransomware: most_recent_reported_ransomware
+          first_reported_vulncheck_canaries: first_reported_vulncheck_canaries
           first_exploit_published_weaponized_or_higher: first_exploit_published_weaponized_or_higher
           first_reported_ransomware: first_reported_ransomware
           vulncheck_kev_date_added: vulncheck_kev_date_added
@@ -156418,6 +156547,7 @@ components:
         first_exploit_published: first_exploit_published
         cisa_kev_date_due: cisa_kev_date_due
         most_recent_reported_ransomware: most_recent_reported_ransomware
+        first_reported_vulncheck_canaries: first_reported_vulncheck_canaries
         first_exploit_published_weaponized_or_higher: first_exploit_published_weaponized_or_higher
         first_reported_ransomware: first_reported_ransomware
         vulncheck_kev_date_added: vulncheck_kev_date_added
@@ -156439,6 +156569,8 @@ components:
         first_reported_ransomware:
           type: string
         first_reported_threat_actor:
+          type: string
+        first_reported_vulncheck_canaries:
           type: string
         most_recent_exploit_published:
           type: string
@@ -160779,91 +160911,6 @@ components:
         source:
           type: string
         technicalImpact:
-          type: string
-    api.TargetIntel:
-      description: api.TargetIntel
-      example:
-        rule_source: rule_source
-        country: country
-        product: product
-        service_metadata:
-        - 5
-        - 5
-        confidence: 6.027456183070403
-        ip: ip
-        as_domain: as_domain
-        fingerprint_metadata:
-        - 1
-        - 1
-        type: type
-        version: version
-        cves:
-        - cves
-        - cves
-        rule_id: rule_id
-        country_code: country_code
-        date_added: date_added
-        protocol: protocol
-        port: 5
-        vendor: vendor
-        cpe: cpe
-        match_target: match_target
-        _timestamp: _timestamp
-        asn: asn
-        as_name: as_name
-      properties:
-        _timestamp:
-          type: string
-        as_domain:
-          type: string
-        as_name:
-          type: string
-        asn:
-          type: string
-        confidence:
-          type: number
-        country:
-          type: string
-        country_code:
-          type: string
-        cpe:
-          type: string
-        cves:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        date_added:
-          type: string
-        fingerprint_metadata:
-          items:
-            type: integer
-          type: array
-          uniqueItems: false
-        ip:
-          type: string
-        match_target:
-          type: string
-        port:
-          type: integer
-        product:
-          type: string
-        protocol:
-          type: string
-        rule_id:
-          type: string
-        rule_source:
-          type: string
-        service_metadata:
-          items:
-            type: integer
-          type: array
-          uniqueItems: false
-        type:
-          type: string
-        vendor:
-          type: string
-        version:
           type: string
     api.TemporalCVSSV2:
       description: api.TemporalCVSSV2
@@ -168919,6 +168966,76 @@ components:
         data:
           items:
             $ref: '#/components/schemas/advisory.CNVDFlaw'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_CVEIdentityMappings-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_CVEIdentityMappings-paginate_Pagination
+      example:
+        data:
+        - mappings:
+          - id: id
+            source: source
+            url: url
+          - id: id
+            source: source
+            url: url
+          cve:
+          - cve
+          - cve
+        - mappings:
+          - id: id
+            source: source
+            url: url
+          - id: id
+            source: source
+            url: url
+          cve:
+          - cve
+          - cve
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          items:
+            $ref: '#/components/schemas/advisory.CVEIdentityMappings'
           type: array
           uniqueItems: false
     render.ResponseWithMetadata-array_advisory_CanvasExploit-paginate_Pagination:
@@ -208809,7 +208926,14 @@ components:
       description: render.ResponseWithMetadata-array_api_CWE-paginate_Pagination
       example:
         data:
-        - weighted_score: 5.962133916683182
+        - relationships:
+          - cwe_label: cwe_label
+            cwe_id: cwe_id
+            type: type
+          - cwe_label: cwe_label
+            cwe_id: cwe_id
+            type: type
+          weighted_score: 5.962133916683182
           vulncheck_nvd_count: 1
           weakness_name: weakness_name
           abstraction: abstraction
@@ -208818,7 +208942,14 @@ components:
           structure: structure
           weakness_id: weakness_id
           status: status
-        - weighted_score: 5.962133916683182
+        - relationships:
+          - cwe_label: cwe_label
+            cwe_id: cwe_id
+            type: type
+          - cwe_label: cwe_label
+            cwe_id: cwe_id
+            type: type
+          weighted_score: 5.962133916683182
           vulncheck_nvd_count: 1
           weakness_name: weakness_name
           abstraction: abstraction
@@ -210515,6 +210646,7 @@ components:
             first_exploit_published: first_exploit_published
             cisa_kev_date_due: cisa_kev_date_due
             most_recent_reported_ransomware: most_recent_reported_ransomware
+            first_reported_vulncheck_canaries: first_reported_vulncheck_canaries
             first_exploit_published_weaponized_or_higher: first_exploit_published_weaponized_or_higher
             first_reported_ransomware: first_reported_ransomware
             vulncheck_kev_date_added: vulncheck_kev_date_added
@@ -210589,6 +210721,7 @@ components:
             first_exploit_published: first_exploit_published
             cisa_kev_date_due: cisa_kev_date_due
             most_recent_reported_ransomware: most_recent_reported_ransomware
+            first_reported_vulncheck_canaries: first_reported_vulncheck_canaries
             first_exploit_published_weaponized_or_higher: first_exploit_published_weaponized_or_higher
             first_reported_ransomware: first_reported_ransomware
             vulncheck_kev_date_added: vulncheck_kev_date_added
@@ -214065,112 +214198,6 @@ components:
             $ref: '#/components/schemas/api.OSSPackage'
           type: array
           uniqueItems: false
-    render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination:
-      description: render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination
-      example:
-        data:
-        - rule_source: rule_source
-          country: country
-          product: product
-          service_metadata:
-          - 5
-          - 5
-          confidence: 6.027456183070403
-          ip: ip
-          as_domain: as_domain
-          fingerprint_metadata:
-          - 1
-          - 1
-          type: type
-          version: version
-          cves:
-          - cves
-          - cves
-          rule_id: rule_id
-          country_code: country_code
-          date_added: date_added
-          protocol: protocol
-          port: 5
-          vendor: vendor
-          cpe: cpe
-          match_target: match_target
-          _timestamp: _timestamp
-          asn: asn
-          as_name: as_name
-        - rule_source: rule_source
-          country: country
-          product: product
-          service_metadata:
-          - 5
-          - 5
-          confidence: 6.027456183070403
-          ip: ip
-          as_domain: as_domain
-          fingerprint_metadata:
-          - 1
-          - 1
-          type: type
-          version: version
-          cves:
-          - cves
-          - cves
-          rule_id: rule_id
-          country_code: country_code
-          date_added: date_added
-          protocol: protocol
-          port: 5
-          vendor: vendor
-          cpe: cpe
-          match_target: match_target
-          _timestamp: _timestamp
-          asn: asn
-          as_name: as_name
-        _meta:
-          cursor: cursor
-          next_cursor: next_cursor
-          total_documents: 7
-          show_pages: true
-          first_item: 6
-          last_item: 1
-          warnings:
-          - warnings
-          - warnings
-          index: index
-          sort: sort
-          total_pages: 9
-          matches:
-          - field: field
-            value: value
-          - field: field
-            value: value
-          opensearch_query: "{}"
-          pages:
-          - pages
-          - pages
-          limit: 5
-          show_query: true
-          page: 2
-          max_pages: 5
-          parameters:
-          - format: format
-            name: name
-            filtering: filtering
-          - format: format
-            name: name
-            filtering: filtering
-          order: order
-          timestamp: timestamp
-        _benchmark: 0.8008281904610115
-      properties:
-        _benchmark:
-          type: number
-        _meta:
-          $ref: '#/components/schemas/paginate.Pagination'
-        data:
-          items:
-            $ref: '#/components/schemas/api.TargetIntel'
-          type: array
-          uniqueItems: false
     render.ResponseWithMetadata-array_api_Update-paginate_Pagination:
       description: render.ResponseWithMetadata-array_api_Update-paginate_Pagination
       example:
@@ -214564,6 +214591,56 @@ components:
             type: string
           type: array
           uniqueItems: false
+    render.ResponseWithMetadata-search_Responses-search_ResponseMetadata:
+      description: render.ResponseWithMetadata-search_Responses-search_ResponseMetadata
+      example:
+        data:
+        - cpe: cpe
+          cpe_struct:
+            target_sw: target_sw
+            other: other
+            product: product
+            sw_edition: sw_edition
+            vendor: vendor
+            part: part
+            edition: edition
+            update: update
+            language: language
+            version: version
+            target_hw: target_hw
+          cves:
+          - cves
+          - cves
+        - cpe: cpe
+          cpe_struct:
+            target_sw: target_sw
+            other: other
+            product: product
+            sw_edition: sw_edition
+            vendor: vendor
+            part: part
+            edition: edition
+            update: update
+            language: language
+            version: version
+            target_hw: target_hw
+          cves:
+          - cves
+          - cves
+        _meta:
+          total_documents: 6
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          type: number
+        _meta:
+          $ref: '#/components/schemas/search.ResponseMetadata'
+        data:
+          items:
+            $ref: '#/components/schemas/search.ResponseDataOut'
+          type: array
+          uniqueItems: false
     render.ResponseWithMetadata-v3controllers_BackupResponseData-v3controllers_BackupResponseMetadata:
       description: render.ResponseWithMetadata-v3controllers_BackupResponseData-v3controllers_BackupResponseMetadata
       example:
@@ -214729,6 +214806,45 @@ components:
             type: string
           type: array
           uniqueItems: false
+    search.ResponseDataOut:
+      description: search.ResponseDataOut
+      example:
+        cpe: cpe
+        cpe_struct:
+          target_sw: target_sw
+          other: other
+          product: product
+          sw_edition: sw_edition
+          vendor: vendor
+          part: part
+          edition: edition
+          update: update
+          language: language
+          version: version
+          target_hw: target_hw
+        cves:
+        - cves
+        - cves
+      properties:
+        cpe:
+          type: string
+        cpe_struct:
+          $ref: '#/components/schemas/api.CPE'
+        cves:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+    search.ResponseMetadata:
+      description: search.ResponseMetadata
+      example:
+        total_documents: 6
+        timestamp: timestamp
+      properties:
+        timestamp:
+          type: string
+        total_documents:
+          type: integer
     search.V4AdvisoryMeta:
       description: search.V4AdvisoryMeta
       example:

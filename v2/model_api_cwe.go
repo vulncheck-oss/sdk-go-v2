@@ -23,6 +23,7 @@ type ApiCWE struct {
 	Abstraction *string `json:"abstraction,omitempty"`
 	Description *string `json:"description,omitempty"`
 	KevCount *int32 `json:"kev_count,omitempty"`
+	Relationships []ApiCWERelationship `json:"relationships,omitempty"`
 	Status *string `json:"status,omitempty"`
 	Structure *string `json:"structure,omitempty"`
 	VulncheckNvdCount *int32 `json:"vulncheck_nvd_count,omitempty"`
@@ -142,6 +143,38 @@ func (o *ApiCWE) HasKevCount() bool {
 // SetKevCount gets a reference to the given int32 and assigns it to the KevCount field.
 func (o *ApiCWE) SetKevCount(v int32) {
 	o.KevCount = &v
+}
+
+// GetRelationships returns the Relationships field value if set, zero value otherwise.
+func (o *ApiCWE) GetRelationships() []ApiCWERelationship {
+	if o == nil || IsNil(o.Relationships) {
+		var ret []ApiCWERelationship
+		return ret
+	}
+	return o.Relationships
+}
+
+// GetRelationshipsOk returns a tuple with the Relationships field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiCWE) GetRelationshipsOk() ([]ApiCWERelationship, bool) {
+	if o == nil || IsNil(o.Relationships) {
+		return nil, false
+	}
+	return o.Relationships, true
+}
+
+// HasRelationships returns a boolean if a field has been set.
+func (o *ApiCWE) HasRelationships() bool {
+	if o != nil && !IsNil(o.Relationships) {
+		return true
+	}
+
+	return false
+}
+
+// SetRelationships gets a reference to the given []ApiCWERelationship and assigns it to the Relationships field.
+func (o *ApiCWE) SetRelationships(v []ApiCWERelationship) {
+	o.Relationships = v
 }
 
 // GetStatus returns the Status field value if set, zero value otherwise.
@@ -354,6 +387,9 @@ func (o ApiCWE) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.KevCount) {
 		toSerialize["kev_count"] = o.KevCount
+	}
+	if !IsNil(o.Relationships) {
+		toSerialize["relationships"] = o.Relationships
 	}
 	if !IsNil(o.Status) {
 		toSerialize["status"] = o.Status

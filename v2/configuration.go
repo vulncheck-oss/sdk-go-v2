@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.19/go",
+		UserAgent:        "OpenAPI-Generator/2.1.20/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -178,6 +178,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"EndpointsAPIService.RulesInitialAccessTypeGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"EndpointsAPIService.SearchCpeGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -964,6 +970,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexCurlGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexCvesIdentityMappingsGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -2734,12 +2746,6 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexTailscaleGet": {
-				{
-					URL: "https://api.vulncheck.com",
-					Description: "No description provided",
-				},
-			},
-			"IndicesAPIService.IndexTargetIntelGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",

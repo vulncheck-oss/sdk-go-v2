@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**PurlGet**](EndpointsAPI.md#PurlGet) | **Get** /v3/purl | Request vulnerabilities related to a PURL
 [**PurlsPost**](EndpointsAPI.md#PurlsPost) | **Post** /v3/purls | Request vulnerabilities related to a list of PURLs
 [**RulesInitialAccessTypeGet**](EndpointsAPI.md#RulesInitialAccessTypeGet) | **Get** /v3/rules/initial-access/{type} | Retrieve set of initial-access detection rules
+[**SearchCpeGet**](EndpointsAPI.md#SearchCpeGet) | **Get** /v3/search/cpe | Return CPEs and associated CPEs by searching CPE fields
 [**TagsVulncheckC2Get**](EndpointsAPI.md#TagsVulncheckC2Get) | **Get** /v3/tags/vulncheck-c2 | Retrieve a list of C2 IP addresses
 
 
@@ -653,6 +654,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 **string**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SearchCpeGet
+
+> RenderResponseWithMetadataSearchResponsesSearchResponseMetadata SearchCpeGet(ctx).Part(part).Vendor(vendor).Product(product).Version(version).IsVulnerable(isVulnerable).Execute()
+
+Return CPEs and associated CPEs by searching CPE fields
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+	part := "[a]pplication, [o]perating system, [h]ardware" // string | CPE part to lookup (optional)
+	vendor := "vendor_example" // string | CPE vendor to lookup (optional)
+	product := "product_example" // string | CPE product to lookup (optional)
+	version := "version_example" // string | CPE version to lookup (optional)
+	isVulnerable := "isVulnerable_example" // string | Filter by vulnerability status (true/false). Defaults to false if not provided. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EndpointsAPI.SearchCpeGet(context.Background()).Part(part).Vendor(vendor).Product(product).Version(version).IsVulnerable(isVulnerable).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EndpointsAPI.SearchCpeGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SearchCpeGet`: RenderResponseWithMetadataSearchResponsesSearchResponseMetadata
+	fmt.Fprintf(os.Stdout, "Response from `EndpointsAPI.SearchCpeGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSearchCpeGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **part** | **string** | CPE part to lookup | 
+ **vendor** | **string** | CPE vendor to lookup | 
+ **product** | **string** | CPE product to lookup | 
+ **version** | **string** | CPE version to lookup | 
+ **isVulnerable** | **string** | Filter by vulnerability status (true/false). Defaults to false if not provided. | 
+
+### Return type
+
+[**RenderResponseWithMetadataSearchResponsesSearchResponseMetadata**](RenderResponseWithMetadataSearchResponsesSearchResponseMetadata.md)
 
 ### Authorization
 
