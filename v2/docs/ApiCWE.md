@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Abstraction** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **KevCount** | Pointer to **int32** |  | [optional] 
+**Relationships** | Pointer to [**[]ApiCWERelationship**](ApiCWERelationship.md) |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **Structure** | Pointer to **string** |  | [optional] 
 **VulncheckNvdCount** | Pointer to **int32** |  | [optional] 
@@ -107,6 +108,31 @@ SetKevCount sets KevCount field to given value.
 `func (o *ApiCWE) HasKevCount() bool`
 
 HasKevCount returns a boolean if a field has been set.
+
+### GetRelationships
+
+`func (o *ApiCWE) GetRelationships() []ApiCWERelationship`
+
+GetRelationships returns the Relationships field if non-nil, zero value otherwise.
+
+### GetRelationshipsOk
+
+`func (o *ApiCWE) GetRelationshipsOk() (*[]ApiCWERelationship, bool)`
+
+GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRelationships
+
+`func (o *ApiCWE) SetRelationships(v []ApiCWERelationship)`
+
+SetRelationships sets Relationships field to given value.
+
+### HasRelationships
+
+`func (o *ApiCWE) HasRelationships() bool`
+
+HasRelationships returns a boolean if a field has been set.
 
 ### GetStatus
 
