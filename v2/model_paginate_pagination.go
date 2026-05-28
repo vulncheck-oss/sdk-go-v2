@@ -18,35 +18,47 @@ import (
 // checks if the PaginatePagination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &PaginatePagination{}
 
-// PaginatePagination paginate.Pagination
+// PaginatePagination Meta is the metadata related to the endpoint response
 type PaginatePagination struct {
-	// Cursor for the current page
+	// Cursor is an opaque string representing the current page position for cursor-based pagination. Contains encoded information about sort values and position markers. Use this value with the 'cursor' query parameter to resume pagination from this point.
 	Cursor *string `json:"cursor,omitempty"`
-	// First and last Item
+	// FirstItem is the 1-indexed position of the first item on the current page. Example: Page 1 with limit 100 → FirstItem = 1          Page 2 with limit 100 → FirstItem = 101
 	FirstItem *int32 `json:"first_item,omitempty"`
-	// The requested index
+	// Index name being queried, corresponding to the VulnCheck data feed. Examples: \"exploits\", \"vulncheck-nvd2\", \"ipintel-3d\", \"malicious-vscode-exts\"
 	Index *string `json:"index,omitempty"`
+	// LastItem is the 1-indexed position of the last item on the current page. Accounts for partial pages. Example: Page with 50 items → LastItem = FirstItem + 49 On the final page, LastItem equals TotalRows.
 	LastItem *int32 `json:"last_item,omitempty"`
-	// Per-Page limit
+	// Limit is the maximum number of items returned in this response. Range: 1-100 for standard indices, 1-10 for large indices. Default: 100 (or 10 for indices marked as \"large\" in metadata)
 	Limit *int32 `json:"limit,omitempty"`
+	// Matches shows the active filter values applied to the current query. Each match includes the field name and the value being filtered on. Helps users understand which filters are currently active.
 	Matches []PaginateMatch `json:"matches,omitempty"`
+	// MaxPages is the maximum number of pages allowed for offset-based pagination. Performance limit to prevent expensive deep pagination. Default: 6 pages. When TotalPages > MaxPages, cursor-based pagination should be used instead.
 	MaxPages *int32 `json:"max_pages,omitempty"`
-	// Cursor for the next page
+	// NextCursor is an opaque string for fetching the next page in cursor-based pagination. When empty or null, indicates no more pages are available. More efficient than offset pagination for large datasets and real-time data.
 	NextCursor *string `json:"next_cursor,omitempty"`
+	// OSQuery contains the raw OpenSearch query JSON used internally. Only included when show_query=true parameter is set. Useful for debugging complex queries and understanding performance.
 	OpensearchQuery map[string]interface{} `json:"opensearch_query,omitempty"`
+	// Order specifies the sort direction: \"asc\" (ascending) or \"desc\" (descending). Default: \"desc\" for most time-based indices to show newest items first.
 	Order *string `json:"order,omitempty"`
-	// The current Page number
+	// Page is the current page number for offset-based pagination (1-indexed). First page = 1, second page = 2, etc. Used with Limit to calculate database offset. For cursor-based pagination, this field may be omitted or estimated.
 	Page *int32 `json:"page,omitempty"`
+	// Pages contains page numbers to display in pagination UI (e.g., [1, 2, \"...\", 45]). Only populated when ShowPages=true. Includes ellipsis (\"...\") for gaps. Limited by MaxPages to prevent overwhelming UI with too many page links.
 	Pages []string `json:"pages,omitempty"`
+	// Params describes available query parameters for this index. Each parameter includes name, format constraints, and filtering capabilities. Used for building dynamic query UIs and input validation.
 	Parameters []PaginateParam `json:"parameters,omitempty"`
+	// ShowPages controls whether the Pages array should be calculated and included. Set to true for UI pagination controls, false for API-only usage to save processing.
 	ShowPages *bool `json:"show_pages,omitempty"`
+	// ShowQuery indicates whether the raw OpenSearch query should be included. When true, OSQuery field will be populated with the internal query structure.
 	ShowQuery *bool `json:"show_query,omitempty"`
+	// Sort field used for ordering results. Available fields vary by index. Common values: \"_timestamp\", \"date_added\", \"_id\", \"lastSeen\" Affects cursor generation and ensures pagination consistency.
 	Sort *string `json:"sort,omitempty"`
+	// Timestamp when the query was executed in UTC (ISO 8601 format). Used for debugging, cache management, and determining data freshness. Example: \"2024-02-23T20:35:43.732591251Z\"
 	Timestamp *string `json:"timestamp,omitempty"`
-	// The total number of items
+	// TotalRows is the total number of documents matching the query across all pages. Used for calculating total_pages and building pagination UI elements. Note: May be capped for performance on very large result sets.
 	TotalDocuments *int32 `json:"total_documents,omitempty"`
-	// The total number of pages
+	// TotalPages is the total number of pages based on TotalRows and Limit. Calculated as: ceil(TotalRows / Limit). Used for pagination UI and validation. Example: 1000 items with limit 100 = 10 total pages.
 	TotalPages *int32 `json:"total_pages,omitempty"`
+	// Warnings contains any non-fatal issues encountered during query processing. Examples: deprecated parameters, performance concerns, or data quality notes.
 	Warnings []string `json:"warnings,omitempty"`
 }
 

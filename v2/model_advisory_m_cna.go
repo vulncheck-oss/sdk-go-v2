@@ -21,17 +21,28 @@ var _ MappedNullable = &AdvisoryMCna{}
 // AdvisoryMCna advisory.MCna
 type AdvisoryMCna struct {
 	Affected []AdvisoryMAffected `json:"affected,omitempty"`
+	Configurations []AdvisoryMDescriptions `json:"configurations,omitempty"`
 	CpeApplicability []AdvisoryCustomCPE `json:"cpeApplicability,omitempty"`
 	Credits []AdvisoryCredit `json:"credits,omitempty"`
+	DateAssigned *string `json:"dateAssigned,omitempty"`
+	DatePublic *string `json:"datePublic,omitempty"`
 	Descriptions []AdvisoryMDescriptions `json:"descriptions,omitempty"`
+	Exploits []AdvisoryMDescriptions `json:"exploits,omitempty"`
 	Impacts []AdvisoryImpact `json:"impacts,omitempty"`
 	Metrics []AdvisoryMetric `json:"metrics,omitempty"`
 	ProblemTypes []AdvisoryMProblemTypes `json:"problemTypes,omitempty"`
 	ProviderMetadata *AdvisoryMProviderMetadata `json:"providerMetadata,omitempty"`
 	References []AdvisoryMReference `json:"references,omitempty"`
+	// Fields below appear only on rejected records (cveMetadata.state == \"REJECTED\").
+	RejectedReasons []AdvisoryMDescriptions `json:"rejectedReasons,omitempty"`
+	ReplacedBy []string `json:"replacedBy,omitempty"`
+	Solutions []AdvisoryMDescriptions `json:"solutions,omitempty"`
+	Source []int32 `json:"source,omitempty"`
 	Tags []string `json:"tags,omitempty"`
+	TaxonomyMappings []AdvisoryTaxonomyMapping `json:"taxonomyMappings,omitempty"`
 	Timeline []AdvisoryTimeline `json:"timeline,omitempty"`
 	Title *string `json:"title,omitempty"`
+	Workarounds []AdvisoryMDescriptions `json:"workarounds,omitempty"`
 }
 
 // NewAdvisoryMCna instantiates a new AdvisoryMCna object
@@ -81,6 +92,38 @@ func (o *AdvisoryMCna) HasAffected() bool {
 // SetAffected gets a reference to the given []AdvisoryMAffected and assigns it to the Affected field.
 func (o *AdvisoryMCna) SetAffected(v []AdvisoryMAffected) {
 	o.Affected = v
+}
+
+// GetConfigurations returns the Configurations field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetConfigurations() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Configurations) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Configurations
+}
+
+// GetConfigurationsOk returns a tuple with the Configurations field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetConfigurationsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Configurations) {
+		return nil, false
+	}
+	return o.Configurations, true
+}
+
+// HasConfigurations returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasConfigurations() bool {
+	if o != nil && !IsNil(o.Configurations) {
+		return true
+	}
+
+	return false
+}
+
+// SetConfigurations gets a reference to the given []AdvisoryMDescriptions and assigns it to the Configurations field.
+func (o *AdvisoryMCna) SetConfigurations(v []AdvisoryMDescriptions) {
+	o.Configurations = v
 }
 
 // GetCpeApplicability returns the CpeApplicability field value if set, zero value otherwise.
@@ -147,6 +190,70 @@ func (o *AdvisoryMCna) SetCredits(v []AdvisoryCredit) {
 	o.Credits = v
 }
 
+// GetDateAssigned returns the DateAssigned field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetDateAssigned() string {
+	if o == nil || IsNil(o.DateAssigned) {
+		var ret string
+		return ret
+	}
+	return *o.DateAssigned
+}
+
+// GetDateAssignedOk returns a tuple with the DateAssigned field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetDateAssignedOk() (*string, bool) {
+	if o == nil || IsNil(o.DateAssigned) {
+		return nil, false
+	}
+	return o.DateAssigned, true
+}
+
+// HasDateAssigned returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasDateAssigned() bool {
+	if o != nil && !IsNil(o.DateAssigned) {
+		return true
+	}
+
+	return false
+}
+
+// SetDateAssigned gets a reference to the given string and assigns it to the DateAssigned field.
+func (o *AdvisoryMCna) SetDateAssigned(v string) {
+	o.DateAssigned = &v
+}
+
+// GetDatePublic returns the DatePublic field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetDatePublic() string {
+	if o == nil || IsNil(o.DatePublic) {
+		var ret string
+		return ret
+	}
+	return *o.DatePublic
+}
+
+// GetDatePublicOk returns a tuple with the DatePublic field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetDatePublicOk() (*string, bool) {
+	if o == nil || IsNil(o.DatePublic) {
+		return nil, false
+	}
+	return o.DatePublic, true
+}
+
+// HasDatePublic returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasDatePublic() bool {
+	if o != nil && !IsNil(o.DatePublic) {
+		return true
+	}
+
+	return false
+}
+
+// SetDatePublic gets a reference to the given string and assigns it to the DatePublic field.
+func (o *AdvisoryMCna) SetDatePublic(v string) {
+	o.DatePublic = &v
+}
+
 // GetDescriptions returns the Descriptions field value if set, zero value otherwise.
 func (o *AdvisoryMCna) GetDescriptions() []AdvisoryMDescriptions {
 	if o == nil || IsNil(o.Descriptions) {
@@ -177,6 +284,38 @@ func (o *AdvisoryMCna) HasDescriptions() bool {
 // SetDescriptions gets a reference to the given []AdvisoryMDescriptions and assigns it to the Descriptions field.
 func (o *AdvisoryMCna) SetDescriptions(v []AdvisoryMDescriptions) {
 	o.Descriptions = v
+}
+
+// GetExploits returns the Exploits field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetExploits() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Exploits) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Exploits
+}
+
+// GetExploitsOk returns a tuple with the Exploits field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetExploitsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Exploits) {
+		return nil, false
+	}
+	return o.Exploits, true
+}
+
+// HasExploits returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasExploits() bool {
+	if o != nil && !IsNil(o.Exploits) {
+		return true
+	}
+
+	return false
+}
+
+// SetExploits gets a reference to the given []AdvisoryMDescriptions and assigns it to the Exploits field.
+func (o *AdvisoryMCna) SetExploits(v []AdvisoryMDescriptions) {
+	o.Exploits = v
 }
 
 // GetImpacts returns the Impacts field value if set, zero value otherwise.
@@ -339,6 +478,134 @@ func (o *AdvisoryMCna) SetReferences(v []AdvisoryMReference) {
 	o.References = v
 }
 
+// GetRejectedReasons returns the RejectedReasons field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetRejectedReasons() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.RejectedReasons) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.RejectedReasons
+}
+
+// GetRejectedReasonsOk returns a tuple with the RejectedReasons field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetRejectedReasonsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.RejectedReasons) {
+		return nil, false
+	}
+	return o.RejectedReasons, true
+}
+
+// HasRejectedReasons returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasRejectedReasons() bool {
+	if o != nil && !IsNil(o.RejectedReasons) {
+		return true
+	}
+
+	return false
+}
+
+// SetRejectedReasons gets a reference to the given []AdvisoryMDescriptions and assigns it to the RejectedReasons field.
+func (o *AdvisoryMCna) SetRejectedReasons(v []AdvisoryMDescriptions) {
+	o.RejectedReasons = v
+}
+
+// GetReplacedBy returns the ReplacedBy field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetReplacedBy() []string {
+	if o == nil || IsNil(o.ReplacedBy) {
+		var ret []string
+		return ret
+	}
+	return o.ReplacedBy
+}
+
+// GetReplacedByOk returns a tuple with the ReplacedBy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetReplacedByOk() ([]string, bool) {
+	if o == nil || IsNil(o.ReplacedBy) {
+		return nil, false
+	}
+	return o.ReplacedBy, true
+}
+
+// HasReplacedBy returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasReplacedBy() bool {
+	if o != nil && !IsNil(o.ReplacedBy) {
+		return true
+	}
+
+	return false
+}
+
+// SetReplacedBy gets a reference to the given []string and assigns it to the ReplacedBy field.
+func (o *AdvisoryMCna) SetReplacedBy(v []string) {
+	o.ReplacedBy = v
+}
+
+// GetSolutions returns the Solutions field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetSolutions() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Solutions) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Solutions
+}
+
+// GetSolutionsOk returns a tuple with the Solutions field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetSolutionsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Solutions) {
+		return nil, false
+	}
+	return o.Solutions, true
+}
+
+// HasSolutions returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasSolutions() bool {
+	if o != nil && !IsNil(o.Solutions) {
+		return true
+	}
+
+	return false
+}
+
+// SetSolutions gets a reference to the given []AdvisoryMDescriptions and assigns it to the Solutions field.
+func (o *AdvisoryMCna) SetSolutions(v []AdvisoryMDescriptions) {
+	o.Solutions = v
+}
+
+// GetSource returns the Source field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetSource() []int32 {
+	if o == nil || IsNil(o.Source) {
+		var ret []int32
+		return ret
+	}
+	return o.Source
+}
+
+// GetSourceOk returns a tuple with the Source field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetSourceOk() ([]int32, bool) {
+	if o == nil || IsNil(o.Source) {
+		return nil, false
+	}
+	return o.Source, true
+}
+
+// HasSource returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasSource() bool {
+	if o != nil && !IsNil(o.Source) {
+		return true
+	}
+
+	return false
+}
+
+// SetSource gets a reference to the given []int32 and assigns it to the Source field.
+func (o *AdvisoryMCna) SetSource(v []int32) {
+	o.Source = v
+}
+
 // GetTags returns the Tags field value if set, zero value otherwise.
 func (o *AdvisoryMCna) GetTags() []string {
 	if o == nil || IsNil(o.Tags) {
@@ -369,6 +636,38 @@ func (o *AdvisoryMCna) HasTags() bool {
 // SetTags gets a reference to the given []string and assigns it to the Tags field.
 func (o *AdvisoryMCna) SetTags(v []string) {
 	o.Tags = v
+}
+
+// GetTaxonomyMappings returns the TaxonomyMappings field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetTaxonomyMappings() []AdvisoryTaxonomyMapping {
+	if o == nil || IsNil(o.TaxonomyMappings) {
+		var ret []AdvisoryTaxonomyMapping
+		return ret
+	}
+	return o.TaxonomyMappings
+}
+
+// GetTaxonomyMappingsOk returns a tuple with the TaxonomyMappings field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetTaxonomyMappingsOk() ([]AdvisoryTaxonomyMapping, bool) {
+	if o == nil || IsNil(o.TaxonomyMappings) {
+		return nil, false
+	}
+	return o.TaxonomyMappings, true
+}
+
+// HasTaxonomyMappings returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasTaxonomyMappings() bool {
+	if o != nil && !IsNil(o.TaxonomyMappings) {
+		return true
+	}
+
+	return false
+}
+
+// SetTaxonomyMappings gets a reference to the given []AdvisoryTaxonomyMapping and assigns it to the TaxonomyMappings field.
+func (o *AdvisoryMCna) SetTaxonomyMappings(v []AdvisoryTaxonomyMapping) {
+	o.TaxonomyMappings = v
 }
 
 // GetTimeline returns the Timeline field value if set, zero value otherwise.
@@ -435,6 +734,38 @@ func (o *AdvisoryMCna) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetWorkarounds returns the Workarounds field value if set, zero value otherwise.
+func (o *AdvisoryMCna) GetWorkarounds() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Workarounds) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Workarounds
+}
+
+// GetWorkaroundsOk returns a tuple with the Workarounds field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCna) GetWorkaroundsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Workarounds) {
+		return nil, false
+	}
+	return o.Workarounds, true
+}
+
+// HasWorkarounds returns a boolean if a field has been set.
+func (o *AdvisoryMCna) HasWorkarounds() bool {
+	if o != nil && !IsNil(o.Workarounds) {
+		return true
+	}
+
+	return false
+}
+
+// SetWorkarounds gets a reference to the given []AdvisoryMDescriptions and assigns it to the Workarounds field.
+func (o *AdvisoryMCna) SetWorkarounds(v []AdvisoryMDescriptions) {
+	o.Workarounds = v
+}
+
 func (o AdvisoryMCna) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -448,14 +779,26 @@ func (o AdvisoryMCna) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Affected) {
 		toSerialize["affected"] = o.Affected
 	}
+	if !IsNil(o.Configurations) {
+		toSerialize["configurations"] = o.Configurations
+	}
 	if !IsNil(o.CpeApplicability) {
 		toSerialize["cpeApplicability"] = o.CpeApplicability
 	}
 	if !IsNil(o.Credits) {
 		toSerialize["credits"] = o.Credits
 	}
+	if !IsNil(o.DateAssigned) {
+		toSerialize["dateAssigned"] = o.DateAssigned
+	}
+	if !IsNil(o.DatePublic) {
+		toSerialize["datePublic"] = o.DatePublic
+	}
 	if !IsNil(o.Descriptions) {
 		toSerialize["descriptions"] = o.Descriptions
+	}
+	if !IsNil(o.Exploits) {
+		toSerialize["exploits"] = o.Exploits
 	}
 	if !IsNil(o.Impacts) {
 		toSerialize["impacts"] = o.Impacts
@@ -472,14 +815,32 @@ func (o AdvisoryMCna) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References
 	}
+	if !IsNil(o.RejectedReasons) {
+		toSerialize["rejectedReasons"] = o.RejectedReasons
+	}
+	if !IsNil(o.ReplacedBy) {
+		toSerialize["replacedBy"] = o.ReplacedBy
+	}
+	if !IsNil(o.Solutions) {
+		toSerialize["solutions"] = o.Solutions
+	}
+	if !IsNil(o.Source) {
+		toSerialize["source"] = o.Source
+	}
 	if !IsNil(o.Tags) {
 		toSerialize["tags"] = o.Tags
+	}
+	if !IsNil(o.TaxonomyMappings) {
+		toSerialize["taxonomyMappings"] = o.TaxonomyMappings
 	}
 	if !IsNil(o.Timeline) {
 		toSerialize["timeline"] = o.Timeline
 	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.Workarounds) {
+		toSerialize["workarounds"] = o.Workarounds
 	}
 	return toSerialize, nil
 }

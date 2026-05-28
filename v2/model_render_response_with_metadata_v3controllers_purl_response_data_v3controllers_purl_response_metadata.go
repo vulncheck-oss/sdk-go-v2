@@ -20,6 +20,7 @@ var _ MappedNullable = &RenderResponseWithMetadataV3controllersPurlResponseDataV
 
 // RenderResponseWithMetadataV3controllersPurlResponseDataV3controllersPurlResponseMetadata render.ResponseWithMetadata-v3controllers_PurlResponseData-v3controllers_PurlResponseMetadata
 type RenderResponseWithMetadataV3controllersPurlResponseDataV3controllersPurlResponseMetadata struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *V3controllersPurlResponseMetadata `json:"_meta,omitempty"`
 	Data *V3controllersPurlResponseData `json:"data,omitempty"`

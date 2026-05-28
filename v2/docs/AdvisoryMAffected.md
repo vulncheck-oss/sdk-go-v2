@@ -7,10 +7,13 @@ Name | Type | Description | Notes
 **CollectionURL** | Pointer to **string** |  | [optional] 
 **Cpes** | Pointer to **[]string** |  | [optional] 
 **DefaultStatus** | Pointer to **string** |  | [optional] 
+**Modules** | Pointer to **[]string** |  | [optional] 
 **PackageName** | Pointer to **string** |  | [optional] 
 **PackageURL** | Pointer to **string** |  | [optional] 
 **Platforms** | Pointer to **[]string** |  | [optional] 
 **Product** | Pointer to **string** |  | [optional] 
+**ProgramFiles** | Pointer to **[]string** |  | [optional] 
+**ProgramRoutines** | Pointer to [**[]AdvisoryProgramRoutine**](AdvisoryProgramRoutine.md) |  | [optional] 
 **Repo** | Pointer to **string** |  | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Versions** | Pointer to [**[]AdvisoryMVersion**](AdvisoryMVersion.md) |  | [optional] 
@@ -108,6 +111,31 @@ SetDefaultStatus sets DefaultStatus field to given value.
 `func (o *AdvisoryMAffected) HasDefaultStatus() bool`
 
 HasDefaultStatus returns a boolean if a field has been set.
+
+### GetModules
+
+`func (o *AdvisoryMAffected) GetModules() []string`
+
+GetModules returns the Modules field if non-nil, zero value otherwise.
+
+### GetModulesOk
+
+`func (o *AdvisoryMAffected) GetModulesOk() (*[]string, bool)`
+
+GetModulesOk returns a tuple with the Modules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModules
+
+`func (o *AdvisoryMAffected) SetModules(v []string)`
+
+SetModules sets Modules field to given value.
+
+### HasModules
+
+`func (o *AdvisoryMAffected) HasModules() bool`
+
+HasModules returns a boolean if a field has been set.
 
 ### GetPackageName
 
@@ -208,6 +236,56 @@ SetProduct sets Product field to given value.
 `func (o *AdvisoryMAffected) HasProduct() bool`
 
 HasProduct returns a boolean if a field has been set.
+
+### GetProgramFiles
+
+`func (o *AdvisoryMAffected) GetProgramFiles() []string`
+
+GetProgramFiles returns the ProgramFiles field if non-nil, zero value otherwise.
+
+### GetProgramFilesOk
+
+`func (o *AdvisoryMAffected) GetProgramFilesOk() (*[]string, bool)`
+
+GetProgramFilesOk returns a tuple with the ProgramFiles field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProgramFiles
+
+`func (o *AdvisoryMAffected) SetProgramFiles(v []string)`
+
+SetProgramFiles sets ProgramFiles field to given value.
+
+### HasProgramFiles
+
+`func (o *AdvisoryMAffected) HasProgramFiles() bool`
+
+HasProgramFiles returns a boolean if a field has been set.
+
+### GetProgramRoutines
+
+`func (o *AdvisoryMAffected) GetProgramRoutines() []AdvisoryProgramRoutine`
+
+GetProgramRoutines returns the ProgramRoutines field if non-nil, zero value otherwise.
+
+### GetProgramRoutinesOk
+
+`func (o *AdvisoryMAffected) GetProgramRoutinesOk() (*[]AdvisoryProgramRoutine, bool)`
+
+GetProgramRoutinesOk returns a tuple with the ProgramRoutines field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProgramRoutines
+
+`func (o *AdvisoryMAffected) SetProgramRoutines(v []AdvisoryProgramRoutine)`
+
+SetProgramRoutines sets ProgramRoutines field to given value.
+
+### HasProgramRoutines
+
+`func (o *AdvisoryMAffected) HasProgramRoutines() bool`
+
+HasProgramRoutines returns a boolean if a field has been set.
 
 ### GetRepo
 

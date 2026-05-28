@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryMindrayPaginatePa
 
 // RenderResponseWithMetadataArrayAdvisoryMindrayPaginatePagination render.ResponseWithMetadata-array_advisory_Mindray-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryMindrayPaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []AdvisoryMindray `json:"data,omitempty"`
 }
 

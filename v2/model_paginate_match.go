@@ -20,7 +20,9 @@ var _ MappedNullable = &PaginateMatch{}
 
 // PaginateMatch paginate.Match
 type PaginateMatch struct {
+	// Field is the name of the field being filtered on.
 	Field *string `json:"field,omitempty"`
+	// Value is the filter value being applied to the field.
 	Value *string `json:"value,omitempty"`
 }
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Lang** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
+**User** | Pointer to **string** |  | [optional] 
 **Value** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetType sets Type field to given value.
 `func (o *AdvisoryCredit) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetUser
+
+`func (o *AdvisoryCredit) GetUser() string`
+
+GetUser returns the User field if non-nil, zero value otherwise.
+
+### GetUserOk
+
+`func (o *AdvisoryCredit) GetUserOk() (*string, bool)`
+
+GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUser
+
+`func (o *AdvisoryCredit) SetUser(v string)`
+
+SetUser sets User field to given value.
+
+### HasUser
+
+`func (o *AdvisoryCredit) HasUser() bool`
+
+HasUser returns a boolean if a field has been set.
 
 ### GetValue
 

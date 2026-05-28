@@ -18,9 +18,11 @@ import (
 // checks if the V3controllersBackupResponseMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &V3controllersBackupResponseMetadata{}
 
-// V3controllersBackupResponseMetadata v3controllers.BackupResponseMetadata
+// V3controllersBackupResponseMetadata Meta is the metadata related to the endpoint response
 type V3controllersBackupResponseMetadata struct {
+	// Index name being queried, corresponding to the VulnCheck data feed.
 	Index *string `json:"index,omitempty"`
+	// Timestamp when the query was executed in UTC (ISO 8601 format).
 	Timestamp *string `json:"timestamp,omitempty"`
 }
 

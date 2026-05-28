@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryMVersion{}
 
 // AdvisoryMVersion advisory.MVersion
 type AdvisoryMVersion struct {
+	Changes []AdvisoryVersionChange `json:"changes,omitempty"`
 	LessThan *string `json:"lessThan,omitempty"`
 	LessThanOrEqual *string `json:"lessThanOrEqual,omitempty"`
 	Status *string `json:"status,omitempty"`
@@ -42,6 +43,38 @@ func NewAdvisoryMVersion() *AdvisoryMVersion {
 func NewAdvisoryMVersionWithDefaults() *AdvisoryMVersion {
 	this := AdvisoryMVersion{}
 	return &this
+}
+
+// GetChanges returns the Changes field value if set, zero value otherwise.
+func (o *AdvisoryMVersion) GetChanges() []AdvisoryVersionChange {
+	if o == nil || IsNil(o.Changes) {
+		var ret []AdvisoryVersionChange
+		return ret
+	}
+	return o.Changes
+}
+
+// GetChangesOk returns a tuple with the Changes field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMVersion) GetChangesOk() ([]AdvisoryVersionChange, bool) {
+	if o == nil || IsNil(o.Changes) {
+		return nil, false
+	}
+	return o.Changes, true
+}
+
+// HasChanges returns a boolean if a field has been set.
+func (o *AdvisoryMVersion) HasChanges() bool {
+	if o != nil && !IsNil(o.Changes) {
+		return true
+	}
+
+	return false
+}
+
+// SetChanges gets a reference to the given []AdvisoryVersionChange and assigns it to the Changes field.
+func (o *AdvisoryMVersion) SetChanges(v []AdvisoryVersionChange) {
+	o.Changes = v
 }
 
 // GetLessThan returns the LessThan field value if set, zero value otherwise.
@@ -214,6 +247,9 @@ func (o AdvisoryMVersion) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryMVersion) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Changes) {
+		toSerialize["changes"] = o.Changes
+	}
 	if !IsNil(o.LessThan) {
 		toSerialize["lessThan"] = o.LessThan
 	}

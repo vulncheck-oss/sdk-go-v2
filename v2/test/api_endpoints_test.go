@@ -158,6 +158,18 @@ func Test_v2_EndpointsAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test EndpointsAPIService SearchCveGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.EndpointsAPI.SearchCveGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test EndpointsAPIService TagsVulncheckC2Get", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test

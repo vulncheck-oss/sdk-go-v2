@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Benchmark** | Pointer to **float32** |  | [optional] 
+**Benchmark** | Pointer to **float32** | Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 &#x3D; approximately 122 milliseconds | [optional] 
 **Meta** | Pointer to [**PaginatePagination**](PaginatePagination.md) |  | [optional] 
-**Data** | Pointer to [**[]AdvisoryUbuntuCVE**](AdvisoryUbuntuCVE.md) |  | [optional] 
+**Data** | Pointer to [**[]AdvisoryUbuntuCVE**](AdvisoryUbuntuCVE.md) | Data is the data returned by the endpoint | [optional] 
 
 ## Methods
 

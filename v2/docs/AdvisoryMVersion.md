@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Changes** | Pointer to [**[]AdvisoryVersionChange**](AdvisoryVersionChange.md) |  | [optional] 
 **LessThan** | Pointer to **string** |  | [optional] 
 **LessThanOrEqual** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
@@ -28,6 +29,31 @@ will change when the set of required properties is changed
 NewAdvisoryMVersionWithDefaults instantiates a new AdvisoryMVersion object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetChanges
+
+`func (o *AdvisoryMVersion) GetChanges() []AdvisoryVersionChange`
+
+GetChanges returns the Changes field if non-nil, zero value otherwise.
+
+### GetChangesOk
+
+`func (o *AdvisoryMVersion) GetChangesOk() (*[]AdvisoryVersionChange, bool)`
+
+GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChanges
+
+`func (o *AdvisoryMVersion) SetChanges(v []AdvisoryVersionChange)`
+
+SetChanges sets Changes field to given value.
+
+### HasChanges
+
+`func (o *AdvisoryMVersion) HasChanges() bool`
+
+HasChanges returns a boolean if a field has been set.
 
 ### GetLessThan
 

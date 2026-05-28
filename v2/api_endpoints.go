@@ -1599,6 +1599,204 @@ func (a *EndpointsAPIService) SearchCpeGetExecute(r ApiSearchCpeGetRequest) (*Re
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiSearchCveGetRequest struct {
+	ctx context.Context
+	ApiService *EndpointsAPIService
+	cve *string
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+}
+
+// CVE ID to search for (e.g. CVE-2024-1234)
+func (r ApiSearchCveGetRequest) Cve(cve string) ApiSearchCveGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Page number (default: 1, page mode only)
+func (r ApiSearchCveGetRequest) Page(page int32) ApiSearchCveGetRequest {
+	r.page = &page
+	return r
+}
+
+// Maximum number of results per page (default: 500, max: 1000)
+func (r ApiSearchCveGetRequest) Limit(limit int32) ApiSearchCveGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// Continue cursor paging, or use an empty value to start cursor paging
+func (r ApiSearchCveGetRequest) Cursor(cursor string) ApiSearchCveGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// Start cursor paging
+func (r ApiSearchCveGetRequest) StartCursor(startCursor string) ApiSearchCveGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+func (r ApiSearchCveGetRequest) Execute() (*RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta, *http.Response, error) {
+	return r.ApiService.SearchCveGetExecute(r)
+}
+
+/*
+SearchCveGet Search all indices for a CVE
+
+Returns all records referencing the specified CVE across all accessible indices. Results are aggregated
+from multiple data sources including advisories, exploits, threat intelligence, and vulnerability databases.
+Metadata is returned in the _meta field.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSearchCveGetRequest
+*/
+func (a *EndpointsAPIService) SearchCveGet(ctx context.Context) ApiSearchCveGetRequest {
+	return ApiSearchCveGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta
+func (a *EndpointsAPIService) SearchCveGetExecute(r ApiSearchCveGetRequest) (*RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "EndpointsAPIService.SearchCveGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v3/search/cve"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.cve == nil {
+		return localVarReturnValue, nil, reportError("cve is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "form", "")
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 400 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiTagsVulncheckC2GetRequest struct {
 	ctx context.Context
 	ApiService *EndpointsAPIService

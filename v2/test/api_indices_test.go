@@ -778,6 +778,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexAustinHackersGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexAustinHackersGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexAutodeskGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -843,6 +855,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexAwsGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexAwsRdsGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexAwsRdsGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -1275,6 +1299,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexCienaGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexCirclGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexCirclGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -1767,6 +1803,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexDotcmsGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexDraegerGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexDraegerGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -3478,6 +3526,30 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test IndicesAPIService IndexMogwaiLabsGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexMogwaiLabsGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexMokshaGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexMokshaGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test IndicesAPIService IndexMongodbGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -3939,6 +4011,18 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.IndicesAPI.IndexOpamGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test IndicesAPIService IndexOpcFoundationGet", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.IndicesAPI.IndexOpcFoundationGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

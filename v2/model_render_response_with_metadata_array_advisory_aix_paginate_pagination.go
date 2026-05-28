@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryAIXPaginatePagina
 
 // RenderResponseWithMetadataArrayAdvisoryAIXPaginatePagination render.ResponseWithMetadata-array_advisory_AIX-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryAIXPaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []AdvisoryAIX `json:"data,omitempty"`
 }
 

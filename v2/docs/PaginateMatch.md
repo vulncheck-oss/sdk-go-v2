@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Field** | Pointer to **string** |  | [optional] 
-**Value** | Pointer to **string** |  | [optional] 
+**Field** | Pointer to **string** | Field is the name of the field being filtered on. | [optional] 
+**Value** | Pointer to **string** | Value is the filter value being applied to the field. | [optional] 
 
 ## Methods
 

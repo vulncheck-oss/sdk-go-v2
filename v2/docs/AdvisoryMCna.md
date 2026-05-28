@@ -5,17 +5,27 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Affected** | Pointer to [**[]AdvisoryMAffected**](AdvisoryMAffected.md) |  | [optional] 
+**Configurations** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
 **CpeApplicability** | Pointer to [**[]AdvisoryCustomCPE**](AdvisoryCustomCPE.md) |  | [optional] 
 **Credits** | Pointer to [**[]AdvisoryCredit**](AdvisoryCredit.md) |  | [optional] 
+**DateAssigned** | Pointer to **string** |  | [optional] 
+**DatePublic** | Pointer to **string** |  | [optional] 
 **Descriptions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
+**Exploits** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
 **Impacts** | Pointer to [**[]AdvisoryImpact**](AdvisoryImpact.md) |  | [optional] 
 **Metrics** | Pointer to [**[]AdvisoryMetric**](AdvisoryMetric.md) |  | [optional] 
 **ProblemTypes** | Pointer to [**[]AdvisoryMProblemTypes**](AdvisoryMProblemTypes.md) |  | [optional] 
 **ProviderMetadata** | Pointer to [**AdvisoryMProviderMetadata**](AdvisoryMProviderMetadata.md) |  | [optional] 
 **References** | Pointer to [**[]AdvisoryMReference**](AdvisoryMReference.md) |  | [optional] 
+**RejectedReasons** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) | Fields below appear only on rejected records (cveMetadata.state &#x3D;&#x3D; \&quot;REJECTED\&quot;). | [optional] 
+**ReplacedBy** | Pointer to **[]string** |  | [optional] 
+**Solutions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
+**Source** | Pointer to **[]int32** |  | [optional] 
 **Tags** | Pointer to **[]string** |  | [optional] 
+**TaxonomyMappings** | Pointer to [**[]AdvisoryTaxonomyMapping**](AdvisoryTaxonomyMapping.md) |  | [optional] 
 **Timeline** | Pointer to [**[]AdvisoryTimeline**](AdvisoryTimeline.md) |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
+**Workarounds** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
 
 ## Methods
 
@@ -60,6 +70,31 @@ SetAffected sets Affected field to given value.
 `func (o *AdvisoryMCna) HasAffected() bool`
 
 HasAffected returns a boolean if a field has been set.
+
+### GetConfigurations
+
+`func (o *AdvisoryMCna) GetConfigurations() []AdvisoryMDescriptions`
+
+GetConfigurations returns the Configurations field if non-nil, zero value otherwise.
+
+### GetConfigurationsOk
+
+`func (o *AdvisoryMCna) GetConfigurationsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetConfigurationsOk returns a tuple with the Configurations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfigurations
+
+`func (o *AdvisoryMCna) SetConfigurations(v []AdvisoryMDescriptions)`
+
+SetConfigurations sets Configurations field to given value.
+
+### HasConfigurations
+
+`func (o *AdvisoryMCna) HasConfigurations() bool`
+
+HasConfigurations returns a boolean if a field has been set.
 
 ### GetCpeApplicability
 
@@ -111,6 +146,56 @@ SetCredits sets Credits field to given value.
 
 HasCredits returns a boolean if a field has been set.
 
+### GetDateAssigned
+
+`func (o *AdvisoryMCna) GetDateAssigned() string`
+
+GetDateAssigned returns the DateAssigned field if non-nil, zero value otherwise.
+
+### GetDateAssignedOk
+
+`func (o *AdvisoryMCna) GetDateAssignedOk() (*string, bool)`
+
+GetDateAssignedOk returns a tuple with the DateAssigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDateAssigned
+
+`func (o *AdvisoryMCna) SetDateAssigned(v string)`
+
+SetDateAssigned sets DateAssigned field to given value.
+
+### HasDateAssigned
+
+`func (o *AdvisoryMCna) HasDateAssigned() bool`
+
+HasDateAssigned returns a boolean if a field has been set.
+
+### GetDatePublic
+
+`func (o *AdvisoryMCna) GetDatePublic() string`
+
+GetDatePublic returns the DatePublic field if non-nil, zero value otherwise.
+
+### GetDatePublicOk
+
+`func (o *AdvisoryMCna) GetDatePublicOk() (*string, bool)`
+
+GetDatePublicOk returns a tuple with the DatePublic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDatePublic
+
+`func (o *AdvisoryMCna) SetDatePublic(v string)`
+
+SetDatePublic sets DatePublic field to given value.
+
+### HasDatePublic
+
+`func (o *AdvisoryMCna) HasDatePublic() bool`
+
+HasDatePublic returns a boolean if a field has been set.
+
 ### GetDescriptions
 
 `func (o *AdvisoryMCna) GetDescriptions() []AdvisoryMDescriptions`
@@ -135,6 +220,31 @@ SetDescriptions sets Descriptions field to given value.
 `func (o *AdvisoryMCna) HasDescriptions() bool`
 
 HasDescriptions returns a boolean if a field has been set.
+
+### GetExploits
+
+`func (o *AdvisoryMCna) GetExploits() []AdvisoryMDescriptions`
+
+GetExploits returns the Exploits field if non-nil, zero value otherwise.
+
+### GetExploitsOk
+
+`func (o *AdvisoryMCna) GetExploitsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetExploitsOk returns a tuple with the Exploits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExploits
+
+`func (o *AdvisoryMCna) SetExploits(v []AdvisoryMDescriptions)`
+
+SetExploits sets Exploits field to given value.
+
+### HasExploits
+
+`func (o *AdvisoryMCna) HasExploits() bool`
+
+HasExploits returns a boolean if a field has been set.
 
 ### GetImpacts
 
@@ -261,6 +371,106 @@ SetReferences sets References field to given value.
 
 HasReferences returns a boolean if a field has been set.
 
+### GetRejectedReasons
+
+`func (o *AdvisoryMCna) GetRejectedReasons() []AdvisoryMDescriptions`
+
+GetRejectedReasons returns the RejectedReasons field if non-nil, zero value otherwise.
+
+### GetRejectedReasonsOk
+
+`func (o *AdvisoryMCna) GetRejectedReasonsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetRejectedReasonsOk returns a tuple with the RejectedReasons field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRejectedReasons
+
+`func (o *AdvisoryMCna) SetRejectedReasons(v []AdvisoryMDescriptions)`
+
+SetRejectedReasons sets RejectedReasons field to given value.
+
+### HasRejectedReasons
+
+`func (o *AdvisoryMCna) HasRejectedReasons() bool`
+
+HasRejectedReasons returns a boolean if a field has been set.
+
+### GetReplacedBy
+
+`func (o *AdvisoryMCna) GetReplacedBy() []string`
+
+GetReplacedBy returns the ReplacedBy field if non-nil, zero value otherwise.
+
+### GetReplacedByOk
+
+`func (o *AdvisoryMCna) GetReplacedByOk() (*[]string, bool)`
+
+GetReplacedByOk returns a tuple with the ReplacedBy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReplacedBy
+
+`func (o *AdvisoryMCna) SetReplacedBy(v []string)`
+
+SetReplacedBy sets ReplacedBy field to given value.
+
+### HasReplacedBy
+
+`func (o *AdvisoryMCna) HasReplacedBy() bool`
+
+HasReplacedBy returns a boolean if a field has been set.
+
+### GetSolutions
+
+`func (o *AdvisoryMCna) GetSolutions() []AdvisoryMDescriptions`
+
+GetSolutions returns the Solutions field if non-nil, zero value otherwise.
+
+### GetSolutionsOk
+
+`func (o *AdvisoryMCna) GetSolutionsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetSolutionsOk returns a tuple with the Solutions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSolutions
+
+`func (o *AdvisoryMCna) SetSolutions(v []AdvisoryMDescriptions)`
+
+SetSolutions sets Solutions field to given value.
+
+### HasSolutions
+
+`func (o *AdvisoryMCna) HasSolutions() bool`
+
+HasSolutions returns a boolean if a field has been set.
+
+### GetSource
+
+`func (o *AdvisoryMCna) GetSource() []int32`
+
+GetSource returns the Source field if non-nil, zero value otherwise.
+
+### GetSourceOk
+
+`func (o *AdvisoryMCna) GetSourceOk() (*[]int32, bool)`
+
+GetSourceOk returns a tuple with the Source field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSource
+
+`func (o *AdvisoryMCna) SetSource(v []int32)`
+
+SetSource sets Source field to given value.
+
+### HasSource
+
+`func (o *AdvisoryMCna) HasSource() bool`
+
+HasSource returns a boolean if a field has been set.
+
 ### GetTags
 
 `func (o *AdvisoryMCna) GetTags() []string`
@@ -285,6 +495,31 @@ SetTags sets Tags field to given value.
 `func (o *AdvisoryMCna) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
+
+### GetTaxonomyMappings
+
+`func (o *AdvisoryMCna) GetTaxonomyMappings() []AdvisoryTaxonomyMapping`
+
+GetTaxonomyMappings returns the TaxonomyMappings field if non-nil, zero value otherwise.
+
+### GetTaxonomyMappingsOk
+
+`func (o *AdvisoryMCna) GetTaxonomyMappingsOk() (*[]AdvisoryTaxonomyMapping, bool)`
+
+GetTaxonomyMappingsOk returns a tuple with the TaxonomyMappings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTaxonomyMappings
+
+`func (o *AdvisoryMCna) SetTaxonomyMappings(v []AdvisoryTaxonomyMapping)`
+
+SetTaxonomyMappings sets TaxonomyMappings field to given value.
+
+### HasTaxonomyMappings
+
+`func (o *AdvisoryMCna) HasTaxonomyMappings() bool`
+
+HasTaxonomyMappings returns a boolean if a field has been set.
 
 ### GetTimeline
 
@@ -335,6 +570,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryMCna) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetWorkarounds
+
+`func (o *AdvisoryMCna) GetWorkarounds() []AdvisoryMDescriptions`
+
+GetWorkarounds returns the Workarounds field if non-nil, zero value otherwise.
+
+### GetWorkaroundsOk
+
+`func (o *AdvisoryMCna) GetWorkaroundsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetWorkaroundsOk returns a tuple with the Workarounds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWorkarounds
+
+`func (o *AdvisoryMCna) SetWorkarounds(v []AdvisoryMDescriptions)`
+
+SetWorkarounds sets Workarounds field to given value.
+
+### HasWorkarounds
+
+`func (o *AdvisoryMCna) HasWorkarounds() bool`
+
+HasWorkarounds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

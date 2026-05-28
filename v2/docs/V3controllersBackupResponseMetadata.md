@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Index** | Pointer to **string** |  | [optional] 
-**Timestamp** | Pointer to **string** |  | [optional] 
+**Index** | Pointer to **string** | Index name being queried, corresponding to the VulnCheck data feed. | [optional] 
+**Timestamp** | Pointer to **string** | Timestamp when the query was executed in UTC (ISO 8601 format). | [optional] 
 
 ## Methods
 

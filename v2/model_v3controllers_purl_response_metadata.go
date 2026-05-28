@@ -18,7 +18,7 @@ import (
 // checks if the V3controllersPurlResponseMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &V3controllersPurlResponseMetadata{}
 
-// V3controllersPurlResponseMetadata v3controllers.PurlResponseMetadata
+// V3controllersPurlResponseMetadata Meta is the metadata related to the endpoint response
 type V3controllersPurlResponseMetadata struct {
 	PurlStruct *PurlPackageURLJSON `json:"purl_struct,omitempty"`
 	// time of the transaction

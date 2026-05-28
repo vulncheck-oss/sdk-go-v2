@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryForgeRockPaginate
 
 // RenderResponseWithMetadataArrayAdvisoryForgeRockPaginatePagination render.ResponseWithMetadata-array_advisory_ForgeRock-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryForgeRockPaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []AdvisoryForgeRock `json:"data,omitempty"`
 }
 

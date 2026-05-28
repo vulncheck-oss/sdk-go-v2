@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryDraytekPaginatePa
 
 // RenderResponseWithMetadataArrayAdvisoryDraytekPaginatePagination render.ResponseWithMetadata-array_advisory_Draytek-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryDraytekPaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []AdvisoryDraytek `json:"data,omitempty"`
 }
 
