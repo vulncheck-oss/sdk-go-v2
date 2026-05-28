@@ -22,6 +22,7 @@ var _ MappedNullable = &AdvisoryCredit{}
 type AdvisoryCredit struct {
 	Lang *string `json:"lang,omitempty"`
 	Type *string `json:"type,omitempty"`
+	User *string `json:"user,omitempty"`
 	Value *string `json:"value,omitempty"`
 }
 
@@ -106,6 +107,38 @@ func (o *AdvisoryCredit) SetType(v string) {
 	o.Type = &v
 }
 
+// GetUser returns the User field value if set, zero value otherwise.
+func (o *AdvisoryCredit) GetUser() string {
+	if o == nil || IsNil(o.User) {
+		var ret string
+		return ret
+	}
+	return *o.User
+}
+
+// GetUserOk returns a tuple with the User field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryCredit) GetUserOk() (*string, bool) {
+	if o == nil || IsNil(o.User) {
+		return nil, false
+	}
+	return o.User, true
+}
+
+// HasUser returns a boolean if a field has been set.
+func (o *AdvisoryCredit) HasUser() bool {
+	if o != nil && !IsNil(o.User) {
+		return true
+	}
+
+	return false
+}
+
+// SetUser gets a reference to the given string and assigns it to the User field.
+func (o *AdvisoryCredit) SetUser(v string) {
+	o.User = &v
+}
+
 // GetValue returns the Value field value if set, zero value otherwise.
 func (o *AdvisoryCredit) GetValue() string {
 	if o == nil || IsNil(o.Value) {
@@ -153,6 +186,9 @@ func (o AdvisoryCredit) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Type) {
 		toSerialize["type"] = o.Type
+	}
+	if !IsNil(o.User) {
+		toSerialize["user"] = o.User
 	}
 	if !IsNil(o.Value) {
 		toSerialize["value"] = o.Value

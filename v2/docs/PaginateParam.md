@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Filtering** | Pointer to **string** |  | [optional] 
-**Format** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
+**Filtering** | Pointer to **string** | Filtering indicates the type of filtering this parameter supports. Examples: \&quot;exact\&quot;, \&quot;range\&quot;, \&quot;wildcard\&quot;, \&quot;boolean\&quot; | [optional] 
+**Format** | Pointer to **string** | Format describes the expected parameter format or pattern. Examples: \&quot;CVE-YYYY-N{4-7}\&quot;, \&quot;YYYY-MM-DD\&quot;, \&quot;numeric\&quot; | [optional] 
+**Name** | Pointer to **string** | Name is the query parameter name (e.g., \&quot;cve\&quot;, \&quot;date\&quot;, \&quot;limit\&quot;). | [optional] 
 
 ## Methods
 

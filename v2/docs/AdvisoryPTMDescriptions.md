@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **CweId** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Lang** | Pointer to **string** |  | [optional] 
+**References** | Pointer to [**[]AdvisoryMReference**](AdvisoryMReference.md) |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -102,6 +103,31 @@ SetLang sets Lang field to given value.
 `func (o *AdvisoryPTMDescriptions) HasLang() bool`
 
 HasLang returns a boolean if a field has been set.
+
+### GetReferences
+
+`func (o *AdvisoryPTMDescriptions) GetReferences() []AdvisoryMReference`
+
+GetReferences returns the References field if non-nil, zero value otherwise.
+
+### GetReferencesOk
+
+`func (o *AdvisoryPTMDescriptions) GetReferencesOk() (*[]AdvisoryMReference, bool)`
+
+GetReferencesOk returns a tuple with the References field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReferences
+
+`func (o *AdvisoryPTMDescriptions) SetReferences(v []AdvisoryMReference)`
+
+SetReferences sets References field to given value.
+
+### HasReferences
+
+`func (o *AdvisoryPTMDescriptions) HasReferences() bool`
+
+HasReferences returns a boolean if a field has been set.
 
 ### GetType
 

@@ -23,6 +23,7 @@ type AdvisoryPTMDescriptions struct {
 	CweId *string `json:"cweId,omitempty"`
 	Description *string `json:"description,omitempty"`
 	Lang *string `json:"lang,omitempty"`
+	References []AdvisoryMReference `json:"references,omitempty"`
 	Type *string `json:"type,omitempty"`
 }
 
@@ -139,6 +140,38 @@ func (o *AdvisoryPTMDescriptions) SetLang(v string) {
 	o.Lang = &v
 }
 
+// GetReferences returns the References field value if set, zero value otherwise.
+func (o *AdvisoryPTMDescriptions) GetReferences() []AdvisoryMReference {
+	if o == nil || IsNil(o.References) {
+		var ret []AdvisoryMReference
+		return ret
+	}
+	return o.References
+}
+
+// GetReferencesOk returns a tuple with the References field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryPTMDescriptions) GetReferencesOk() ([]AdvisoryMReference, bool) {
+	if o == nil || IsNil(o.References) {
+		return nil, false
+	}
+	return o.References, true
+}
+
+// HasReferences returns a boolean if a field has been set.
+func (o *AdvisoryPTMDescriptions) HasReferences() bool {
+	if o != nil && !IsNil(o.References) {
+		return true
+	}
+
+	return false
+}
+
+// SetReferences gets a reference to the given []AdvisoryMReference and assigns it to the References field.
+func (o *AdvisoryPTMDescriptions) SetReferences(v []AdvisoryMReference) {
+	o.References = v
+}
+
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *AdvisoryPTMDescriptions) GetType() string {
 	if o == nil || IsNil(o.Type) {
@@ -189,6 +222,9 @@ func (o AdvisoryPTMDescriptions) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Lang) {
 		toSerialize["lang"] = o.Lang
+	}
+	if !IsNil(o.References) {
+		toSerialize["references"] = o.References
 	}
 	if !IsNil(o.Type) {
 		toSerialize["type"] = o.Type

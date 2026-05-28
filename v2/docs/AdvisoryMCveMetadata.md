@@ -8,8 +8,11 @@ Name | Type | Description | Notes
 **AssignerShortName** | Pointer to **string** |  | [optional] 
 **CveId** | Pointer to **string** |  | [optional] 
 **DatePublished** | Pointer to **string** |  | [optional] 
+**DateRejected** | Pointer to **string** |  | [optional] 
 **DateReserved** | Pointer to **string** |  | [optional] 
 **DateUpdated** | Pointer to **string** |  | [optional] 
+**RequesterUserId** | Pointer to **string** |  | [optional] 
+**Serial** | Pointer to **int32** |  | [optional] 
 **State** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -131,6 +134,31 @@ SetDatePublished sets DatePublished field to given value.
 
 HasDatePublished returns a boolean if a field has been set.
 
+### GetDateRejected
+
+`func (o *AdvisoryMCveMetadata) GetDateRejected() string`
+
+GetDateRejected returns the DateRejected field if non-nil, zero value otherwise.
+
+### GetDateRejectedOk
+
+`func (o *AdvisoryMCveMetadata) GetDateRejectedOk() (*string, bool)`
+
+GetDateRejectedOk returns a tuple with the DateRejected field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDateRejected
+
+`func (o *AdvisoryMCveMetadata) SetDateRejected(v string)`
+
+SetDateRejected sets DateRejected field to given value.
+
+### HasDateRejected
+
+`func (o *AdvisoryMCveMetadata) HasDateRejected() bool`
+
+HasDateRejected returns a boolean if a field has been set.
+
 ### GetDateReserved
 
 `func (o *AdvisoryMCveMetadata) GetDateReserved() string`
@@ -180,6 +208,56 @@ SetDateUpdated sets DateUpdated field to given value.
 `func (o *AdvisoryMCveMetadata) HasDateUpdated() bool`
 
 HasDateUpdated returns a boolean if a field has been set.
+
+### GetRequesterUserId
+
+`func (o *AdvisoryMCveMetadata) GetRequesterUserId() string`
+
+GetRequesterUserId returns the RequesterUserId field if non-nil, zero value otherwise.
+
+### GetRequesterUserIdOk
+
+`func (o *AdvisoryMCveMetadata) GetRequesterUserIdOk() (*string, bool)`
+
+GetRequesterUserIdOk returns a tuple with the RequesterUserId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequesterUserId
+
+`func (o *AdvisoryMCveMetadata) SetRequesterUserId(v string)`
+
+SetRequesterUserId sets RequesterUserId field to given value.
+
+### HasRequesterUserId
+
+`func (o *AdvisoryMCveMetadata) HasRequesterUserId() bool`
+
+HasRequesterUserId returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *AdvisoryMCveMetadata) GetSerial() int32`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *AdvisoryMCveMetadata) GetSerialOk() (*int32, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *AdvisoryMCveMetadata) SetSerial(v int32)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *AdvisoryMCveMetadata) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
 
 ### GetState
 

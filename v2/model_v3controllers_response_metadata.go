@@ -18,7 +18,7 @@ import (
 // checks if the V3controllersResponseMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &V3controllersResponseMetadata{}
 
-// V3controllersResponseMetadata v3controllers.ResponseMetadata
+// V3controllersResponseMetadata Meta is the metadata related to the endpoint response
 type V3controllersResponseMetadata struct {
 	Cpe *string `json:"cpe,omitempty"`
 	CpeStruct *ApiCPE `json:"cpe_struct,omitempty"`

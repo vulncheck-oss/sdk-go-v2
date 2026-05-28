@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.20/go",
+		UserAgent:        "OpenAPI-Generator/2.1.21/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -184,6 +184,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"EndpointsAPIService.SearchCpeGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"EndpointsAPIService.SearchCveGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -573,6 +579,12 @@ func NewConfiguration() *Configuration {
 					Description: "No description provided",
 				},
 			},
+			"IndicesAPIService.IndexAustinHackersGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
 			"IndicesAPIService.IndexAutodeskGet": {
 				{
 					URL: "https://api.vulncheck.com",
@@ -604,6 +616,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexAwsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexAwsRdsGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -820,6 +838,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexCienaGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexCirclGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -1066,6 +1090,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexDotcmsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexDraegerGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -1923,6 +1953,18 @@ func NewConfiguration() *Configuration {
 					Description: "No description provided",
 				},
 			},
+			"IndicesAPIService.IndexMogwaiLabsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexMokshaGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
 			"IndicesAPIService.IndexMongodbGet": {
 				{
 					URL: "https://api.vulncheck.com",
@@ -2152,6 +2194,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexOpamGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexOpcFoundationGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",

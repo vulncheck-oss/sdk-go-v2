@@ -20,8 +20,11 @@ var _ MappedNullable = &PaginateParam{}
 
 // PaginateParam paginate.Param
 type PaginateParam struct {
+	// Filtering indicates the type of filtering this parameter supports. Examples: \"exact\", \"range\", \"wildcard\", \"boolean\"
 	Filtering *string `json:"filtering,omitempty"`
+	// Format describes the expected parameter format or pattern. Examples: \"CVE-YYYY-N{4-7}\", \"YYYY-MM-DD\", \"numeric\"
 	Format *string `json:"format,omitempty"`
+	// Name is the query parameter name (e.g., \"cve\", \"date\", \"limit\").
 	Name *string `json:"name,omitempty"`
 }
 

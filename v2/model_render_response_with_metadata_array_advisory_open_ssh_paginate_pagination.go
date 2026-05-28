@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryOpenSSHPaginatePa
 
 // RenderResponseWithMetadataArrayAdvisoryOpenSSHPaginatePagination render.ResponseWithMetadata-array_advisory_OpenSSH-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryOpenSSHPaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []AdvisoryOpenSSH `json:"data,omitempty"`
 }
 

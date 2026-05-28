@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**PurlsPost**](EndpointsAPI.md#PurlsPost) | **Post** /v3/purls | Request vulnerabilities related to a list of PURLs
 [**RulesInitialAccessTypeGet**](EndpointsAPI.md#RulesInitialAccessTypeGet) | **Get** /v3/rules/initial-access/{type} | Retrieve set of initial-access detection rules
 [**SearchCpeGet**](EndpointsAPI.md#SearchCpeGet) | **Get** /v3/search/cpe | Return CPEs and associated CPEs by searching CPE fields
+[**SearchCveGet**](EndpointsAPI.md#SearchCveGet) | **Get** /v3/search/cve | Search all indices for a CVE
 [**TagsVulncheckC2Get**](EndpointsAPI.md#TagsVulncheckC2Get) | **Get** /v3/tags/vulncheck-c2 | Retrieve a list of C2 IP addresses
 
 
@@ -728,6 +729,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RenderResponseWithMetadataSearchResponsesSearchResponseMetadata**](RenderResponseWithMetadataSearchResponsesSearchResponseMetadata.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SearchCveGet
+
+> RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta SearchCveGet(ctx).Cve(cve).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Execute()
+
+Search all indices for a CVE
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/vulncheck-oss/sdk-go-v2/v2"
+)
+
+func main() {
+	cve := "cve_example" // string | CVE ID to search for (e.g. CVE-2024-1234)
+	page := int32(56) // int32 | Page number (default: 1, page mode only) (optional)
+	limit := int32(56) // int32 | Maximum number of results per page (default: 500, max: 1000) (optional)
+	cursor := "cursor_example" // string | Continue cursor paging, or use an empty value to start cursor paging (optional)
+	startCursor := "startCursor_example" // string | Start cursor paging (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.EndpointsAPI.SearchCveGet(context.Background()).Cve(cve).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `EndpointsAPI.SearchCveGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SearchCveGet`: RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta
+	fmt.Fprintf(os.Stdout, "Response from `EndpointsAPI.SearchCveGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSearchCveGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cve** | **string** | CVE ID to search for (e.g. CVE-2024-1234) | 
+ **page** | **int32** | Page number (default: 1, page mode only) | 
+ **limit** | **int32** | Maximum number of results per page (default: 500, max: 1000) | 
+ **cursor** | **string** | Continue cursor paging, or use an empty value to start cursor paging | 
+ **startCursor** | **string** | Start cursor paging | 
+
+### Return type
+
+[**RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta**](RenderResponseWithMetadataArrayIndexCveSearchHitIndexCveSearchMeta.md)
 
 ### Authorization
 

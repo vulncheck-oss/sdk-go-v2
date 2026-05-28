@@ -18,7 +18,7 @@ import (
 // checks if the V3controllersPurlResponseData type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &V3controllersPurlResponseData{}
 
-// V3controllersPurlResponseData v3controllers.PurlResponseData
+// V3controllersPurlResponseData Data is the data returned by the endpoint
 type V3controllersPurlResponseData struct {
 	// list of associated CVE 's
 	Cves []string `json:"cves,omitempty"`

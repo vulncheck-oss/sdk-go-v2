@@ -23,10 +23,13 @@ type AdvisoryMAffected struct {
 	CollectionURL *string `json:"collectionURL,omitempty"`
 	Cpes []string `json:"cpes,omitempty"`
 	DefaultStatus *string `json:"defaultStatus,omitempty"`
+	Modules []string `json:"modules,omitempty"`
 	PackageName *string `json:"packageName,omitempty"`
 	PackageURL *string `json:"packageURL,omitempty"`
 	Platforms []string `json:"platforms,omitempty"`
 	Product *string `json:"product,omitempty"`
+	ProgramFiles []string `json:"programFiles,omitempty"`
+	ProgramRoutines []AdvisoryProgramRoutine `json:"programRoutines,omitempty"`
 	Repo *string `json:"repo,omitempty"`
 	Vendor *string `json:"vendor,omitempty"`
 	Versions []AdvisoryMVersion `json:"versions,omitempty"`
@@ -143,6 +146,38 @@ func (o *AdvisoryMAffected) HasDefaultStatus() bool {
 // SetDefaultStatus gets a reference to the given string and assigns it to the DefaultStatus field.
 func (o *AdvisoryMAffected) SetDefaultStatus(v string) {
 	o.DefaultStatus = &v
+}
+
+// GetModules returns the Modules field value if set, zero value otherwise.
+func (o *AdvisoryMAffected) GetModules() []string {
+	if o == nil || IsNil(o.Modules) {
+		var ret []string
+		return ret
+	}
+	return o.Modules
+}
+
+// GetModulesOk returns a tuple with the Modules field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMAffected) GetModulesOk() ([]string, bool) {
+	if o == nil || IsNil(o.Modules) {
+		return nil, false
+	}
+	return o.Modules, true
+}
+
+// HasModules returns a boolean if a field has been set.
+func (o *AdvisoryMAffected) HasModules() bool {
+	if o != nil && !IsNil(o.Modules) {
+		return true
+	}
+
+	return false
+}
+
+// SetModules gets a reference to the given []string and assigns it to the Modules field.
+func (o *AdvisoryMAffected) SetModules(v []string) {
+	o.Modules = v
 }
 
 // GetPackageName returns the PackageName field value if set, zero value otherwise.
@@ -273,6 +308,70 @@ func (o *AdvisoryMAffected) SetProduct(v string) {
 	o.Product = &v
 }
 
+// GetProgramFiles returns the ProgramFiles field value if set, zero value otherwise.
+func (o *AdvisoryMAffected) GetProgramFiles() []string {
+	if o == nil || IsNil(o.ProgramFiles) {
+		var ret []string
+		return ret
+	}
+	return o.ProgramFiles
+}
+
+// GetProgramFilesOk returns a tuple with the ProgramFiles field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMAffected) GetProgramFilesOk() ([]string, bool) {
+	if o == nil || IsNil(o.ProgramFiles) {
+		return nil, false
+	}
+	return o.ProgramFiles, true
+}
+
+// HasProgramFiles returns a boolean if a field has been set.
+func (o *AdvisoryMAffected) HasProgramFiles() bool {
+	if o != nil && !IsNil(o.ProgramFiles) {
+		return true
+	}
+
+	return false
+}
+
+// SetProgramFiles gets a reference to the given []string and assigns it to the ProgramFiles field.
+func (o *AdvisoryMAffected) SetProgramFiles(v []string) {
+	o.ProgramFiles = v
+}
+
+// GetProgramRoutines returns the ProgramRoutines field value if set, zero value otherwise.
+func (o *AdvisoryMAffected) GetProgramRoutines() []AdvisoryProgramRoutine {
+	if o == nil || IsNil(o.ProgramRoutines) {
+		var ret []AdvisoryProgramRoutine
+		return ret
+	}
+	return o.ProgramRoutines
+}
+
+// GetProgramRoutinesOk returns a tuple with the ProgramRoutines field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMAffected) GetProgramRoutinesOk() ([]AdvisoryProgramRoutine, bool) {
+	if o == nil || IsNil(o.ProgramRoutines) {
+		return nil, false
+	}
+	return o.ProgramRoutines, true
+}
+
+// HasProgramRoutines returns a boolean if a field has been set.
+func (o *AdvisoryMAffected) HasProgramRoutines() bool {
+	if o != nil && !IsNil(o.ProgramRoutines) {
+		return true
+	}
+
+	return false
+}
+
+// SetProgramRoutines gets a reference to the given []AdvisoryProgramRoutine and assigns it to the ProgramRoutines field.
+func (o *AdvisoryMAffected) SetProgramRoutines(v []AdvisoryProgramRoutine) {
+	o.ProgramRoutines = v
+}
+
 // GetRepo returns the Repo field value if set, zero value otherwise.
 func (o *AdvisoryMAffected) GetRepo() string {
 	if o == nil || IsNil(o.Repo) {
@@ -388,6 +487,9 @@ func (o AdvisoryMAffected) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.DefaultStatus) {
 		toSerialize["defaultStatus"] = o.DefaultStatus
 	}
+	if !IsNil(o.Modules) {
+		toSerialize["modules"] = o.Modules
+	}
 	if !IsNil(o.PackageName) {
 		toSerialize["packageName"] = o.PackageName
 	}
@@ -399,6 +501,12 @@ func (o AdvisoryMAffected) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product
+	}
+	if !IsNil(o.ProgramFiles) {
+		toSerialize["programFiles"] = o.ProgramFiles
+	}
+	if !IsNil(o.ProgramRoutines) {
+		toSerialize["programRoutines"] = o.ProgramRoutines
 	}
 	if !IsNil(o.Repo) {
 		toSerialize["repo"] = o.Repo

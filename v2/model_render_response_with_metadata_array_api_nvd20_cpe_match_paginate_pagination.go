@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayApiNVD20CPEMatchPaginateP
 
 // RenderResponseWithMetadataArrayApiNVD20CPEMatchPaginatePagination render.ResponseWithMetadata-array_api_NVD20CPEMatch-paginate_Pagination
 type RenderResponseWithMetadataArrayApiNVD20CPEMatchPaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []ApiNVD20CPEMatch `json:"data,omitempty"`
 }
 

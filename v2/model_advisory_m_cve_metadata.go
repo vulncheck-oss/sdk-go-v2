@@ -24,8 +24,11 @@ type AdvisoryMCveMetadata struct {
 	AssignerShortName *string `json:"assignerShortName,omitempty"`
 	CveId *string `json:"cveId,omitempty"`
 	DatePublished *string `json:"datePublished,omitempty"`
+	DateRejected *string `json:"dateRejected,omitempty"`
 	DateReserved *string `json:"dateReserved,omitempty"`
 	DateUpdated *string `json:"dateUpdated,omitempty"`
+	RequesterUserId *string `json:"requesterUserId,omitempty"`
+	Serial *int32 `json:"serial,omitempty"`
 	State *string `json:"state,omitempty"`
 }
 
@@ -174,6 +177,38 @@ func (o *AdvisoryMCveMetadata) SetDatePublished(v string) {
 	o.DatePublished = &v
 }
 
+// GetDateRejected returns the DateRejected field value if set, zero value otherwise.
+func (o *AdvisoryMCveMetadata) GetDateRejected() string {
+	if o == nil || IsNil(o.DateRejected) {
+		var ret string
+		return ret
+	}
+	return *o.DateRejected
+}
+
+// GetDateRejectedOk returns a tuple with the DateRejected field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCveMetadata) GetDateRejectedOk() (*string, bool) {
+	if o == nil || IsNil(o.DateRejected) {
+		return nil, false
+	}
+	return o.DateRejected, true
+}
+
+// HasDateRejected returns a boolean if a field has been set.
+func (o *AdvisoryMCveMetadata) HasDateRejected() bool {
+	if o != nil && !IsNil(o.DateRejected) {
+		return true
+	}
+
+	return false
+}
+
+// SetDateRejected gets a reference to the given string and assigns it to the DateRejected field.
+func (o *AdvisoryMCveMetadata) SetDateRejected(v string) {
+	o.DateRejected = &v
+}
+
 // GetDateReserved returns the DateReserved field value if set, zero value otherwise.
 func (o *AdvisoryMCveMetadata) GetDateReserved() string {
 	if o == nil || IsNil(o.DateReserved) {
@@ -238,6 +273,70 @@ func (o *AdvisoryMCveMetadata) SetDateUpdated(v string) {
 	o.DateUpdated = &v
 }
 
+// GetRequesterUserId returns the RequesterUserId field value if set, zero value otherwise.
+func (o *AdvisoryMCveMetadata) GetRequesterUserId() string {
+	if o == nil || IsNil(o.RequesterUserId) {
+		var ret string
+		return ret
+	}
+	return *o.RequesterUserId
+}
+
+// GetRequesterUserIdOk returns a tuple with the RequesterUserId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCveMetadata) GetRequesterUserIdOk() (*string, bool) {
+	if o == nil || IsNil(o.RequesterUserId) {
+		return nil, false
+	}
+	return o.RequesterUserId, true
+}
+
+// HasRequesterUserId returns a boolean if a field has been set.
+func (o *AdvisoryMCveMetadata) HasRequesterUserId() bool {
+	if o != nil && !IsNil(o.RequesterUserId) {
+		return true
+	}
+
+	return false
+}
+
+// SetRequesterUserId gets a reference to the given string and assigns it to the RequesterUserId field.
+func (o *AdvisoryMCveMetadata) SetRequesterUserId(v string) {
+	o.RequesterUserId = &v
+}
+
+// GetSerial returns the Serial field value if set, zero value otherwise.
+func (o *AdvisoryMCveMetadata) GetSerial() int32 {
+	if o == nil || IsNil(o.Serial) {
+		var ret int32
+		return ret
+	}
+	return *o.Serial
+}
+
+// GetSerialOk returns a tuple with the Serial field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMCveMetadata) GetSerialOk() (*int32, bool) {
+	if o == nil || IsNil(o.Serial) {
+		return nil, false
+	}
+	return o.Serial, true
+}
+
+// HasSerial returns a boolean if a field has been set.
+func (o *AdvisoryMCveMetadata) HasSerial() bool {
+	if o != nil && !IsNil(o.Serial) {
+		return true
+	}
+
+	return false
+}
+
+// SetSerial gets a reference to the given int32 and assigns it to the Serial field.
+func (o *AdvisoryMCveMetadata) SetSerial(v int32) {
+	o.Serial = &v
+}
+
 // GetState returns the State field value if set, zero value otherwise.
 func (o *AdvisoryMCveMetadata) GetState() string {
 	if o == nil || IsNil(o.State) {
@@ -292,11 +391,20 @@ func (o AdvisoryMCveMetadata) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.DatePublished) {
 		toSerialize["datePublished"] = o.DatePublished
 	}
+	if !IsNil(o.DateRejected) {
+		toSerialize["dateRejected"] = o.DateRejected
+	}
 	if !IsNil(o.DateReserved) {
 		toSerialize["dateReserved"] = o.DateReserved
 	}
 	if !IsNil(o.DateUpdated) {
 		toSerialize["dateUpdated"] = o.DateUpdated
+	}
+	if !IsNil(o.RequesterUserId) {
+		toSerialize["requesterUserId"] = o.RequesterUserId
+	}
+	if !IsNil(o.Serial) {
+		toSerialize["serial"] = o.Serial
 	}
 	if !IsNil(o.State) {
 		toSerialize["state"] = o.State

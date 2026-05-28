@@ -5,15 +5,24 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Affected** | Pointer to [**[]AdvisoryMAffected**](AdvisoryMAffected.md) |  | [optional] 
-**DatePublic** | Pointer to **string** | OK | [optional] 
-**Descriptions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) | OK | [optional] 
-**Impacts** | Pointer to [**[]AdvisoryImpact**](AdvisoryImpact.md) | OK | [optional] 
-**Metrics** | Pointer to [**[]AdvisoryMetric**](AdvisoryMetric.md) | OK | [optional] 
-**ProblemTypes** | Pointer to [**[]AdvisoryMProblemTypes**](AdvisoryMProblemTypes.md) | OK | [optional] 
+**Configurations** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
+**CpeApplicability** | Pointer to [**[]AdvisoryCustomCPE**](AdvisoryCustomCPE.md) |  | [optional] 
+**Credits** | Pointer to [**[]AdvisoryCredit**](AdvisoryCredit.md) |  | [optional] 
+**DatePublic** | Pointer to **string** |  | [optional] 
+**Descriptions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
+**Exploits** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
+**Impacts** | Pointer to [**[]AdvisoryImpact**](AdvisoryImpact.md) |  | [optional] 
+**Metrics** | Pointer to [**[]AdvisoryMetric**](AdvisoryMetric.md) |  | [optional] 
+**ProblemTypes** | Pointer to [**[]AdvisoryMProblemTypes**](AdvisoryMProblemTypes.md) |  | [optional] 
 **ProviderMetadata** | Pointer to [**AdvisoryMProviderMetadata**](AdvisoryMProviderMetadata.md) |  | [optional] 
 **References** | Pointer to [**[]AdvisoryMReference**](AdvisoryMReference.md) |  | [optional] 
-**Tags** | Pointer to **[]string** | OK | [optional] 
-**Title** | Pointer to **string** | OK | [optional] 
+**Solutions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
+**Source** | Pointer to **[]int32** |  | [optional] 
+**Tags** | Pointer to **[]string** |  | [optional] 
+**TaxonomyMappings** | Pointer to [**[]AdvisoryTaxonomyMapping**](AdvisoryTaxonomyMapping.md) |  | [optional] 
+**Timeline** | Pointer to [**[]AdvisoryTimeline**](AdvisoryTimeline.md) |  | [optional] 
+**Title** | Pointer to **string** |  | [optional] 
+**Workarounds** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
 
 ## Methods
 
@@ -58,6 +67,81 @@ SetAffected sets Affected field to given value.
 `func (o *AdvisoryADPContainer) HasAffected() bool`
 
 HasAffected returns a boolean if a field has been set.
+
+### GetConfigurations
+
+`func (o *AdvisoryADPContainer) GetConfigurations() []AdvisoryMDescriptions`
+
+GetConfigurations returns the Configurations field if non-nil, zero value otherwise.
+
+### GetConfigurationsOk
+
+`func (o *AdvisoryADPContainer) GetConfigurationsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetConfigurationsOk returns a tuple with the Configurations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfigurations
+
+`func (o *AdvisoryADPContainer) SetConfigurations(v []AdvisoryMDescriptions)`
+
+SetConfigurations sets Configurations field to given value.
+
+### HasConfigurations
+
+`func (o *AdvisoryADPContainer) HasConfigurations() bool`
+
+HasConfigurations returns a boolean if a field has been set.
+
+### GetCpeApplicability
+
+`func (o *AdvisoryADPContainer) GetCpeApplicability() []AdvisoryCustomCPE`
+
+GetCpeApplicability returns the CpeApplicability field if non-nil, zero value otherwise.
+
+### GetCpeApplicabilityOk
+
+`func (o *AdvisoryADPContainer) GetCpeApplicabilityOk() (*[]AdvisoryCustomCPE, bool)`
+
+GetCpeApplicabilityOk returns a tuple with the CpeApplicability field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCpeApplicability
+
+`func (o *AdvisoryADPContainer) SetCpeApplicability(v []AdvisoryCustomCPE)`
+
+SetCpeApplicability sets CpeApplicability field to given value.
+
+### HasCpeApplicability
+
+`func (o *AdvisoryADPContainer) HasCpeApplicability() bool`
+
+HasCpeApplicability returns a boolean if a field has been set.
+
+### GetCredits
+
+`func (o *AdvisoryADPContainer) GetCredits() []AdvisoryCredit`
+
+GetCredits returns the Credits field if non-nil, zero value otherwise.
+
+### GetCreditsOk
+
+`func (o *AdvisoryADPContainer) GetCreditsOk() (*[]AdvisoryCredit, bool)`
+
+GetCreditsOk returns a tuple with the Credits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCredits
+
+`func (o *AdvisoryADPContainer) SetCredits(v []AdvisoryCredit)`
+
+SetCredits sets Credits field to given value.
+
+### HasCredits
+
+`func (o *AdvisoryADPContainer) HasCredits() bool`
+
+HasCredits returns a boolean if a field has been set.
 
 ### GetDatePublic
 
@@ -108,6 +192,31 @@ SetDescriptions sets Descriptions field to given value.
 `func (o *AdvisoryADPContainer) HasDescriptions() bool`
 
 HasDescriptions returns a boolean if a field has been set.
+
+### GetExploits
+
+`func (o *AdvisoryADPContainer) GetExploits() []AdvisoryMDescriptions`
+
+GetExploits returns the Exploits field if non-nil, zero value otherwise.
+
+### GetExploitsOk
+
+`func (o *AdvisoryADPContainer) GetExploitsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetExploitsOk returns a tuple with the Exploits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExploits
+
+`func (o *AdvisoryADPContainer) SetExploits(v []AdvisoryMDescriptions)`
+
+SetExploits sets Exploits field to given value.
+
+### HasExploits
+
+`func (o *AdvisoryADPContainer) HasExploits() bool`
+
+HasExploits returns a boolean if a field has been set.
 
 ### GetImpacts
 
@@ -234,6 +343,56 @@ SetReferences sets References field to given value.
 
 HasReferences returns a boolean if a field has been set.
 
+### GetSolutions
+
+`func (o *AdvisoryADPContainer) GetSolutions() []AdvisoryMDescriptions`
+
+GetSolutions returns the Solutions field if non-nil, zero value otherwise.
+
+### GetSolutionsOk
+
+`func (o *AdvisoryADPContainer) GetSolutionsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetSolutionsOk returns a tuple with the Solutions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSolutions
+
+`func (o *AdvisoryADPContainer) SetSolutions(v []AdvisoryMDescriptions)`
+
+SetSolutions sets Solutions field to given value.
+
+### HasSolutions
+
+`func (o *AdvisoryADPContainer) HasSolutions() bool`
+
+HasSolutions returns a boolean if a field has been set.
+
+### GetSource
+
+`func (o *AdvisoryADPContainer) GetSource() []int32`
+
+GetSource returns the Source field if non-nil, zero value otherwise.
+
+### GetSourceOk
+
+`func (o *AdvisoryADPContainer) GetSourceOk() (*[]int32, bool)`
+
+GetSourceOk returns a tuple with the Source field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSource
+
+`func (o *AdvisoryADPContainer) SetSource(v []int32)`
+
+SetSource sets Source field to given value.
+
+### HasSource
+
+`func (o *AdvisoryADPContainer) HasSource() bool`
+
+HasSource returns a boolean if a field has been set.
+
 ### GetTags
 
 `func (o *AdvisoryADPContainer) GetTags() []string`
@@ -259,6 +418,56 @@ SetTags sets Tags field to given value.
 
 HasTags returns a boolean if a field has been set.
 
+### GetTaxonomyMappings
+
+`func (o *AdvisoryADPContainer) GetTaxonomyMappings() []AdvisoryTaxonomyMapping`
+
+GetTaxonomyMappings returns the TaxonomyMappings field if non-nil, zero value otherwise.
+
+### GetTaxonomyMappingsOk
+
+`func (o *AdvisoryADPContainer) GetTaxonomyMappingsOk() (*[]AdvisoryTaxonomyMapping, bool)`
+
+GetTaxonomyMappingsOk returns a tuple with the TaxonomyMappings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTaxonomyMappings
+
+`func (o *AdvisoryADPContainer) SetTaxonomyMappings(v []AdvisoryTaxonomyMapping)`
+
+SetTaxonomyMappings sets TaxonomyMappings field to given value.
+
+### HasTaxonomyMappings
+
+`func (o *AdvisoryADPContainer) HasTaxonomyMappings() bool`
+
+HasTaxonomyMappings returns a boolean if a field has been set.
+
+### GetTimeline
+
+`func (o *AdvisoryADPContainer) GetTimeline() []AdvisoryTimeline`
+
+GetTimeline returns the Timeline field if non-nil, zero value otherwise.
+
+### GetTimelineOk
+
+`func (o *AdvisoryADPContainer) GetTimelineOk() (*[]AdvisoryTimeline, bool)`
+
+GetTimelineOk returns a tuple with the Timeline field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeline
+
+`func (o *AdvisoryADPContainer) SetTimeline(v []AdvisoryTimeline)`
+
+SetTimeline sets Timeline field to given value.
+
+### HasTimeline
+
+`func (o *AdvisoryADPContainer) HasTimeline() bool`
+
+HasTimeline returns a boolean if a field has been set.
+
 ### GetTitle
 
 `func (o *AdvisoryADPContainer) GetTitle() string`
@@ -283,6 +492,31 @@ SetTitle sets Title field to given value.
 `func (o *AdvisoryADPContainer) HasTitle() bool`
 
 HasTitle returns a boolean if a field has been set.
+
+### GetWorkarounds
+
+`func (o *AdvisoryADPContainer) GetWorkarounds() []AdvisoryMDescriptions`
+
+GetWorkarounds returns the Workarounds field if non-nil, zero value otherwise.
+
+### GetWorkaroundsOk
+
+`func (o *AdvisoryADPContainer) GetWorkaroundsOk() (*[]AdvisoryMDescriptions, bool)`
+
+GetWorkaroundsOk returns a tuple with the Workarounds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWorkarounds
+
+`func (o *AdvisoryADPContainer) SetWorkarounds(v []AdvisoryMDescriptions)`
+
+SetWorkarounds sets Workarounds field to given value.
+
+### HasWorkarounds
+
+`func (o *AdvisoryADPContainer) HasWorkarounds() bool`
+
+HasWorkarounds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

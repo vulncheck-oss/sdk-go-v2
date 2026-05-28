@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataV3controllersPurlsResponseData
 
 // RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata render.ResponseWithMetadata-v3controllers_PurlsResponseData-v3controllers_PurlsResponseMetadata
 type RenderResponseWithMetadataV3controllersPurlsResponseDataV3controllersPurlsResponseMetadata struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *V3controllersPurlsResponseMetadata `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []PurlBatchVulnFinding `json:"data,omitempty"`
 }
 

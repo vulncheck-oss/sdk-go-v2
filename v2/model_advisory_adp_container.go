@@ -21,22 +21,24 @@ var _ MappedNullable = &AdvisoryADPContainer{}
 // AdvisoryADPContainer advisory.ADPContainer
 type AdvisoryADPContainer struct {
 	Affected []AdvisoryMAffected `json:"affected,omitempty"`
-	// OK
+	Configurations []AdvisoryMDescriptions `json:"configurations,omitempty"`
+	CpeApplicability []AdvisoryCustomCPE `json:"cpeApplicability,omitempty"`
+	Credits []AdvisoryCredit `json:"credits,omitempty"`
 	DatePublic *string `json:"datePublic,omitempty"`
-	// OK
 	Descriptions []AdvisoryMDescriptions `json:"descriptions,omitempty"`
-	// OK
+	Exploits []AdvisoryMDescriptions `json:"exploits,omitempty"`
 	Impacts []AdvisoryImpact `json:"impacts,omitempty"`
-	// OK
 	Metrics []AdvisoryMetric `json:"metrics,omitempty"`
-	// OK
 	ProblemTypes []AdvisoryMProblemTypes `json:"problemTypes,omitempty"`
 	ProviderMetadata *AdvisoryMProviderMetadata `json:"providerMetadata,omitempty"`
 	References []AdvisoryMReference `json:"references,omitempty"`
-	// OK
+	Solutions []AdvisoryMDescriptions `json:"solutions,omitempty"`
+	Source []int32 `json:"source,omitempty"`
 	Tags []string `json:"tags,omitempty"`
-	// OK
+	TaxonomyMappings []AdvisoryTaxonomyMapping `json:"taxonomyMappings,omitempty"`
+	Timeline []AdvisoryTimeline `json:"timeline,omitempty"`
 	Title *string `json:"title,omitempty"`
+	Workarounds []AdvisoryMDescriptions `json:"workarounds,omitempty"`
 }
 
 // NewAdvisoryADPContainer instantiates a new AdvisoryADPContainer object
@@ -86,6 +88,102 @@ func (o *AdvisoryADPContainer) HasAffected() bool {
 // SetAffected gets a reference to the given []AdvisoryMAffected and assigns it to the Affected field.
 func (o *AdvisoryADPContainer) SetAffected(v []AdvisoryMAffected) {
 	o.Affected = v
+}
+
+// GetConfigurations returns the Configurations field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetConfigurations() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Configurations) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Configurations
+}
+
+// GetConfigurationsOk returns a tuple with the Configurations field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetConfigurationsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Configurations) {
+		return nil, false
+	}
+	return o.Configurations, true
+}
+
+// HasConfigurations returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasConfigurations() bool {
+	if o != nil && !IsNil(o.Configurations) {
+		return true
+	}
+
+	return false
+}
+
+// SetConfigurations gets a reference to the given []AdvisoryMDescriptions and assigns it to the Configurations field.
+func (o *AdvisoryADPContainer) SetConfigurations(v []AdvisoryMDescriptions) {
+	o.Configurations = v
+}
+
+// GetCpeApplicability returns the CpeApplicability field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetCpeApplicability() []AdvisoryCustomCPE {
+	if o == nil || IsNil(o.CpeApplicability) {
+		var ret []AdvisoryCustomCPE
+		return ret
+	}
+	return o.CpeApplicability
+}
+
+// GetCpeApplicabilityOk returns a tuple with the CpeApplicability field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetCpeApplicabilityOk() ([]AdvisoryCustomCPE, bool) {
+	if o == nil || IsNil(o.CpeApplicability) {
+		return nil, false
+	}
+	return o.CpeApplicability, true
+}
+
+// HasCpeApplicability returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasCpeApplicability() bool {
+	if o != nil && !IsNil(o.CpeApplicability) {
+		return true
+	}
+
+	return false
+}
+
+// SetCpeApplicability gets a reference to the given []AdvisoryCustomCPE and assigns it to the CpeApplicability field.
+func (o *AdvisoryADPContainer) SetCpeApplicability(v []AdvisoryCustomCPE) {
+	o.CpeApplicability = v
+}
+
+// GetCredits returns the Credits field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetCredits() []AdvisoryCredit {
+	if o == nil || IsNil(o.Credits) {
+		var ret []AdvisoryCredit
+		return ret
+	}
+	return o.Credits
+}
+
+// GetCreditsOk returns a tuple with the Credits field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetCreditsOk() ([]AdvisoryCredit, bool) {
+	if o == nil || IsNil(o.Credits) {
+		return nil, false
+	}
+	return o.Credits, true
+}
+
+// HasCredits returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasCredits() bool {
+	if o != nil && !IsNil(o.Credits) {
+		return true
+	}
+
+	return false
+}
+
+// SetCredits gets a reference to the given []AdvisoryCredit and assigns it to the Credits field.
+func (o *AdvisoryADPContainer) SetCredits(v []AdvisoryCredit) {
+	o.Credits = v
 }
 
 // GetDatePublic returns the DatePublic field value if set, zero value otherwise.
@@ -150,6 +248,38 @@ func (o *AdvisoryADPContainer) HasDescriptions() bool {
 // SetDescriptions gets a reference to the given []AdvisoryMDescriptions and assigns it to the Descriptions field.
 func (o *AdvisoryADPContainer) SetDescriptions(v []AdvisoryMDescriptions) {
 	o.Descriptions = v
+}
+
+// GetExploits returns the Exploits field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetExploits() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Exploits) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Exploits
+}
+
+// GetExploitsOk returns a tuple with the Exploits field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetExploitsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Exploits) {
+		return nil, false
+	}
+	return o.Exploits, true
+}
+
+// HasExploits returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasExploits() bool {
+	if o != nil && !IsNil(o.Exploits) {
+		return true
+	}
+
+	return false
+}
+
+// SetExploits gets a reference to the given []AdvisoryMDescriptions and assigns it to the Exploits field.
+func (o *AdvisoryADPContainer) SetExploits(v []AdvisoryMDescriptions) {
+	o.Exploits = v
 }
 
 // GetImpacts returns the Impacts field value if set, zero value otherwise.
@@ -312,6 +442,70 @@ func (o *AdvisoryADPContainer) SetReferences(v []AdvisoryMReference) {
 	o.References = v
 }
 
+// GetSolutions returns the Solutions field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetSolutions() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Solutions) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Solutions
+}
+
+// GetSolutionsOk returns a tuple with the Solutions field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetSolutionsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Solutions) {
+		return nil, false
+	}
+	return o.Solutions, true
+}
+
+// HasSolutions returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasSolutions() bool {
+	if o != nil && !IsNil(o.Solutions) {
+		return true
+	}
+
+	return false
+}
+
+// SetSolutions gets a reference to the given []AdvisoryMDescriptions and assigns it to the Solutions field.
+func (o *AdvisoryADPContainer) SetSolutions(v []AdvisoryMDescriptions) {
+	o.Solutions = v
+}
+
+// GetSource returns the Source field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetSource() []int32 {
+	if o == nil || IsNil(o.Source) {
+		var ret []int32
+		return ret
+	}
+	return o.Source
+}
+
+// GetSourceOk returns a tuple with the Source field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetSourceOk() ([]int32, bool) {
+	if o == nil || IsNil(o.Source) {
+		return nil, false
+	}
+	return o.Source, true
+}
+
+// HasSource returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasSource() bool {
+	if o != nil && !IsNil(o.Source) {
+		return true
+	}
+
+	return false
+}
+
+// SetSource gets a reference to the given []int32 and assigns it to the Source field.
+func (o *AdvisoryADPContainer) SetSource(v []int32) {
+	o.Source = v
+}
+
 // GetTags returns the Tags field value if set, zero value otherwise.
 func (o *AdvisoryADPContainer) GetTags() []string {
 	if o == nil || IsNil(o.Tags) {
@@ -342,6 +536,70 @@ func (o *AdvisoryADPContainer) HasTags() bool {
 // SetTags gets a reference to the given []string and assigns it to the Tags field.
 func (o *AdvisoryADPContainer) SetTags(v []string) {
 	o.Tags = v
+}
+
+// GetTaxonomyMappings returns the TaxonomyMappings field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetTaxonomyMappings() []AdvisoryTaxonomyMapping {
+	if o == nil || IsNil(o.TaxonomyMappings) {
+		var ret []AdvisoryTaxonomyMapping
+		return ret
+	}
+	return o.TaxonomyMappings
+}
+
+// GetTaxonomyMappingsOk returns a tuple with the TaxonomyMappings field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetTaxonomyMappingsOk() ([]AdvisoryTaxonomyMapping, bool) {
+	if o == nil || IsNil(o.TaxonomyMappings) {
+		return nil, false
+	}
+	return o.TaxonomyMappings, true
+}
+
+// HasTaxonomyMappings returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasTaxonomyMappings() bool {
+	if o != nil && !IsNil(o.TaxonomyMappings) {
+		return true
+	}
+
+	return false
+}
+
+// SetTaxonomyMappings gets a reference to the given []AdvisoryTaxonomyMapping and assigns it to the TaxonomyMappings field.
+func (o *AdvisoryADPContainer) SetTaxonomyMappings(v []AdvisoryTaxonomyMapping) {
+	o.TaxonomyMappings = v
+}
+
+// GetTimeline returns the Timeline field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetTimeline() []AdvisoryTimeline {
+	if o == nil || IsNil(o.Timeline) {
+		var ret []AdvisoryTimeline
+		return ret
+	}
+	return o.Timeline
+}
+
+// GetTimelineOk returns a tuple with the Timeline field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetTimelineOk() ([]AdvisoryTimeline, bool) {
+	if o == nil || IsNil(o.Timeline) {
+		return nil, false
+	}
+	return o.Timeline, true
+}
+
+// HasTimeline returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasTimeline() bool {
+	if o != nil && !IsNil(o.Timeline) {
+		return true
+	}
+
+	return false
+}
+
+// SetTimeline gets a reference to the given []AdvisoryTimeline and assigns it to the Timeline field.
+func (o *AdvisoryADPContainer) SetTimeline(v []AdvisoryTimeline) {
+	o.Timeline = v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise.
@@ -376,6 +634,38 @@ func (o *AdvisoryADPContainer) SetTitle(v string) {
 	o.Title = &v
 }
 
+// GetWorkarounds returns the Workarounds field value if set, zero value otherwise.
+func (o *AdvisoryADPContainer) GetWorkarounds() []AdvisoryMDescriptions {
+	if o == nil || IsNil(o.Workarounds) {
+		var ret []AdvisoryMDescriptions
+		return ret
+	}
+	return o.Workarounds
+}
+
+// GetWorkaroundsOk returns a tuple with the Workarounds field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryADPContainer) GetWorkaroundsOk() ([]AdvisoryMDescriptions, bool) {
+	if o == nil || IsNil(o.Workarounds) {
+		return nil, false
+	}
+	return o.Workarounds, true
+}
+
+// HasWorkarounds returns a boolean if a field has been set.
+func (o *AdvisoryADPContainer) HasWorkarounds() bool {
+	if o != nil && !IsNil(o.Workarounds) {
+		return true
+	}
+
+	return false
+}
+
+// SetWorkarounds gets a reference to the given []AdvisoryMDescriptions and assigns it to the Workarounds field.
+func (o *AdvisoryADPContainer) SetWorkarounds(v []AdvisoryMDescriptions) {
+	o.Workarounds = v
+}
+
 func (o AdvisoryADPContainer) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -389,11 +679,23 @@ func (o AdvisoryADPContainer) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Affected) {
 		toSerialize["affected"] = o.Affected
 	}
+	if !IsNil(o.Configurations) {
+		toSerialize["configurations"] = o.Configurations
+	}
+	if !IsNil(o.CpeApplicability) {
+		toSerialize["cpeApplicability"] = o.CpeApplicability
+	}
+	if !IsNil(o.Credits) {
+		toSerialize["credits"] = o.Credits
+	}
 	if !IsNil(o.DatePublic) {
 		toSerialize["datePublic"] = o.DatePublic
 	}
 	if !IsNil(o.Descriptions) {
 		toSerialize["descriptions"] = o.Descriptions
+	}
+	if !IsNil(o.Exploits) {
+		toSerialize["exploits"] = o.Exploits
 	}
 	if !IsNil(o.Impacts) {
 		toSerialize["impacts"] = o.Impacts
@@ -410,11 +712,26 @@ func (o AdvisoryADPContainer) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.References) {
 		toSerialize["references"] = o.References
 	}
+	if !IsNil(o.Solutions) {
+		toSerialize["solutions"] = o.Solutions
+	}
+	if !IsNil(o.Source) {
+		toSerialize["source"] = o.Source
+	}
 	if !IsNil(o.Tags) {
 		toSerialize["tags"] = o.Tags
 	}
+	if !IsNil(o.TaxonomyMappings) {
+		toSerialize["taxonomyMappings"] = o.TaxonomyMappings
+	}
+	if !IsNil(o.Timeline) {
+		toSerialize["timeline"] = o.Timeline
+	}
 	if !IsNil(o.Title) {
 		toSerialize["title"] = o.Title
+	}
+	if !IsNil(o.Workarounds) {
+		toSerialize["workarounds"] = o.Workarounds
 	}
 	return toSerialize, nil
 }

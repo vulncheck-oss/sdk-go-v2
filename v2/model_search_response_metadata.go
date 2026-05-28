@@ -18,7 +18,7 @@ import (
 // checks if the SearchResponseMetadata type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &SearchResponseMetadata{}
 
-// SearchResponseMetadata search.ResponseMetadata
+// SearchResponseMetadata Meta is the metadata related to the endpoint response
 type SearchResponseMetadata struct {
 	Timestamp *string `json:"timestamp,omitempty"`
 	TotalDocuments *int32 `json:"total_documents,omitempty"`

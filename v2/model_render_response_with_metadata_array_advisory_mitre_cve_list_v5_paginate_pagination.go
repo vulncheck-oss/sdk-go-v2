@@ -20,8 +20,10 @@ var _ MappedNullable = &RenderResponseWithMetadataArrayAdvisoryMitreCVEListV5Pag
 
 // RenderResponseWithMetadataArrayAdvisoryMitreCVEListV5PaginatePagination render.ResponseWithMetadata-array_advisory_MitreCVEListV5-paginate_Pagination
 type RenderResponseWithMetadataArrayAdvisoryMitreCVEListV5PaginatePagination struct {
+	// Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 = approximately 122 milliseconds
 	Benchmark *float32 `json:"_benchmark,omitempty"`
 	Meta *PaginatePagination `json:"_meta,omitempty"`
+	// Data is the data returned by the endpoint
 	Data []AdvisoryMitreCVEListV5 `json:"data,omitempty"`
 }
 
