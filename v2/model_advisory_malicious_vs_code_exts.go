@@ -20,14 +20,24 @@ var _ MappedNullable = &AdvisoryMaliciousVSCodeExts{}
 
 // AdvisoryMaliciousVSCodeExts advisory.MaliciousVSCodeExts
 type AdvisoryMaliciousVSCodeExts struct {
-	DateAdded *string `json:"date_added,omitempty"`
+	// Discoveries list of individual vulnerability reports, sorted chronologically by discovery date
+	Discoveries []AdvisoryMaliciousVSCodeDiscovery `json:"discoveries,omitempty"`
+	// FirstSeen the earliest date the vulnerability was observed or created in our system
+	FirstSeen *string `json:"first_seen,omitempty"`
+	// LastUpdated the most recent date when any discovery was added for this extension
+	LastUpdated *string `json:"last_updated,omitempty"`
+	// Marketplace list of names of the marketplaces where the extension versions are available
+	Marketplace []string `json:"marketplace,omitempty"`
+	// Name is the name of the extension
 	Name *string `json:"name,omitempty"`
+	// Publisher name of the publisher of the extension
 	Publisher *string `json:"publisher,omitempty"`
-	Type *string `json:"type,omitempty"`
-	// the data in this feed comes from manual curation. so this will likely be omitted.
-	UpdatedAt *string `json:"updated_at,omitempty"`
-	Url *string `json:"url,omitempty"`
-	Version *string `json:"version,omitempty"`
+	// Reference list of locations where the public releases about the vulnerabilities were pulled
+	References []string `json:"references,omitempty"`
+	// Types VulnCheck vulnerability classifications found for this extension
+	Types []string `json:"types,omitempty"`
+	// Versions list of vulnerable versions
+	Versions []string `json:"versions,omitempty"`
 }
 
 // NewAdvisoryMaliciousVSCodeExts instantiates a new AdvisoryMaliciousVSCodeExts object
@@ -47,36 +57,132 @@ func NewAdvisoryMaliciousVSCodeExtsWithDefaults() *AdvisoryMaliciousVSCodeExts {
 	return &this
 }
 
-// GetDateAdded returns the DateAdded field value if set, zero value otherwise.
-func (o *AdvisoryMaliciousVSCodeExts) GetDateAdded() string {
-	if o == nil || IsNil(o.DateAdded) {
-		var ret string
+// GetDiscoveries returns the Discoveries field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetDiscoveries() []AdvisoryMaliciousVSCodeDiscovery {
+	if o == nil || IsNil(o.Discoveries) {
+		var ret []AdvisoryMaliciousVSCodeDiscovery
 		return ret
 	}
-	return *o.DateAdded
+	return o.Discoveries
 }
 
-// GetDateAddedOk returns a tuple with the DateAdded field value if set, nil otherwise
+// GetDiscoveriesOk returns a tuple with the Discoveries field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMaliciousVSCodeExts) GetDateAddedOk() (*string, bool) {
-	if o == nil || IsNil(o.DateAdded) {
+func (o *AdvisoryMaliciousVSCodeExts) GetDiscoveriesOk() ([]AdvisoryMaliciousVSCodeDiscovery, bool) {
+	if o == nil || IsNil(o.Discoveries) {
 		return nil, false
 	}
-	return o.DateAdded, true
+	return o.Discoveries, true
 }
 
-// HasDateAdded returns a boolean if a field has been set.
-func (o *AdvisoryMaliciousVSCodeExts) HasDateAdded() bool {
-	if o != nil && !IsNil(o.DateAdded) {
+// HasDiscoveries returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasDiscoveries() bool {
+	if o != nil && !IsNil(o.Discoveries) {
 		return true
 	}
 
 	return false
 }
 
-// SetDateAdded gets a reference to the given string and assigns it to the DateAdded field.
-func (o *AdvisoryMaliciousVSCodeExts) SetDateAdded(v string) {
-	o.DateAdded = &v
+// SetDiscoveries gets a reference to the given []AdvisoryMaliciousVSCodeDiscovery and assigns it to the Discoveries field.
+func (o *AdvisoryMaliciousVSCodeExts) SetDiscoveries(v []AdvisoryMaliciousVSCodeDiscovery) {
+	o.Discoveries = v
+}
+
+// GetFirstSeen returns the FirstSeen field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetFirstSeen() string {
+	if o == nil || IsNil(o.FirstSeen) {
+		var ret string
+		return ret
+	}
+	return *o.FirstSeen
+}
+
+// GetFirstSeenOk returns a tuple with the FirstSeen field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMaliciousVSCodeExts) GetFirstSeenOk() (*string, bool) {
+	if o == nil || IsNil(o.FirstSeen) {
+		return nil, false
+	}
+	return o.FirstSeen, true
+}
+
+// HasFirstSeen returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasFirstSeen() bool {
+	if o != nil && !IsNil(o.FirstSeen) {
+		return true
+	}
+
+	return false
+}
+
+// SetFirstSeen gets a reference to the given string and assigns it to the FirstSeen field.
+func (o *AdvisoryMaliciousVSCodeExts) SetFirstSeen(v string) {
+	o.FirstSeen = &v
+}
+
+// GetLastUpdated returns the LastUpdated field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetLastUpdated() string {
+	if o == nil || IsNil(o.LastUpdated) {
+		var ret string
+		return ret
+	}
+	return *o.LastUpdated
+}
+
+// GetLastUpdatedOk returns a tuple with the LastUpdated field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMaliciousVSCodeExts) GetLastUpdatedOk() (*string, bool) {
+	if o == nil || IsNil(o.LastUpdated) {
+		return nil, false
+	}
+	return o.LastUpdated, true
+}
+
+// HasLastUpdated returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasLastUpdated() bool {
+	if o != nil && !IsNil(o.LastUpdated) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastUpdated gets a reference to the given string and assigns it to the LastUpdated field.
+func (o *AdvisoryMaliciousVSCodeExts) SetLastUpdated(v string) {
+	o.LastUpdated = &v
+}
+
+// GetMarketplace returns the Marketplace field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetMarketplace() []string {
+	if o == nil || IsNil(o.Marketplace) {
+		var ret []string
+		return ret
+	}
+	return o.Marketplace
+}
+
+// GetMarketplaceOk returns a tuple with the Marketplace field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryMaliciousVSCodeExts) GetMarketplaceOk() ([]string, bool) {
+	if o == nil || IsNil(o.Marketplace) {
+		return nil, false
+	}
+	return o.Marketplace, true
+}
+
+// HasMarketplace returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasMarketplace() bool {
+	if o != nil && !IsNil(o.Marketplace) {
+		return true
+	}
+
+	return false
+}
+
+// SetMarketplace gets a reference to the given []string and assigns it to the Marketplace field.
+func (o *AdvisoryMaliciousVSCodeExts) SetMarketplace(v []string) {
+	o.Marketplace = v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
@@ -143,132 +249,100 @@ func (o *AdvisoryMaliciousVSCodeExts) SetPublisher(v string) {
 	o.Publisher = &v
 }
 
-// GetType returns the Type field value if set, zero value otherwise.
-func (o *AdvisoryMaliciousVSCodeExts) GetType() string {
-	if o == nil || IsNil(o.Type) {
-		var ret string
+// GetReferences returns the References field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetReferences() []string {
+	if o == nil || IsNil(o.References) {
+		var ret []string
 		return ret
 	}
-	return *o.Type
+	return o.References
 }
 
-// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
+// GetReferencesOk returns a tuple with the References field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMaliciousVSCodeExts) GetTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.Type) {
+func (o *AdvisoryMaliciousVSCodeExts) GetReferencesOk() ([]string, bool) {
+	if o == nil || IsNil(o.References) {
 		return nil, false
 	}
-	return o.Type, true
+	return o.References, true
 }
 
-// HasType returns a boolean if a field has been set.
-func (o *AdvisoryMaliciousVSCodeExts) HasType() bool {
-	if o != nil && !IsNil(o.Type) {
+// HasReferences returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasReferences() bool {
+	if o != nil && !IsNil(o.References) {
 		return true
 	}
 
 	return false
 }
 
-// SetType gets a reference to the given string and assigns it to the Type field.
-func (o *AdvisoryMaliciousVSCodeExts) SetType(v string) {
-	o.Type = &v
+// SetReferences gets a reference to the given []string and assigns it to the References field.
+func (o *AdvisoryMaliciousVSCodeExts) SetReferences(v []string) {
+	o.References = v
 }
 
-// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *AdvisoryMaliciousVSCodeExts) GetUpdatedAt() string {
-	if o == nil || IsNil(o.UpdatedAt) {
-		var ret string
+// GetTypes returns the Types field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetTypes() []string {
+	if o == nil || IsNil(o.Types) {
+		var ret []string
 		return ret
 	}
-	return *o.UpdatedAt
+	return o.Types
 }
 
-// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// GetTypesOk returns a tuple with the Types field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMaliciousVSCodeExts) GetUpdatedAtOk() (*string, bool) {
-	if o == nil || IsNil(o.UpdatedAt) {
+func (o *AdvisoryMaliciousVSCodeExts) GetTypesOk() ([]string, bool) {
+	if o == nil || IsNil(o.Types) {
 		return nil, false
 	}
-	return o.UpdatedAt, true
+	return o.Types, true
 }
 
-// HasUpdatedAt returns a boolean if a field has been set.
-func (o *AdvisoryMaliciousVSCodeExts) HasUpdatedAt() bool {
-	if o != nil && !IsNil(o.UpdatedAt) {
+// HasTypes returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasTypes() bool {
+	if o != nil && !IsNil(o.Types) {
 		return true
 	}
 
 	return false
 }
 
-// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *AdvisoryMaliciousVSCodeExts) SetUpdatedAt(v string) {
-	o.UpdatedAt = &v
+// SetTypes gets a reference to the given []string and assigns it to the Types field.
+func (o *AdvisoryMaliciousVSCodeExts) SetTypes(v []string) {
+	o.Types = v
 }
 
-// GetUrl returns the Url field value if set, zero value otherwise.
-func (o *AdvisoryMaliciousVSCodeExts) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
-		var ret string
+// GetVersions returns the Versions field value if set, zero value otherwise.
+func (o *AdvisoryMaliciousVSCodeExts) GetVersions() []string {
+	if o == nil || IsNil(o.Versions) {
+		var ret []string
 		return ret
 	}
-	return *o.Url
+	return o.Versions
 }
 
-// GetUrlOk returns a tuple with the Url field value if set, nil otherwise
+// GetVersionsOk returns a tuple with the Versions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMaliciousVSCodeExts) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+func (o *AdvisoryMaliciousVSCodeExts) GetVersionsOk() ([]string, bool) {
+	if o == nil || IsNil(o.Versions) {
 		return nil, false
 	}
-	return o.Url, true
+	return o.Versions, true
 }
 
-// HasUrl returns a boolean if a field has been set.
-func (o *AdvisoryMaliciousVSCodeExts) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+// HasVersions returns a boolean if a field has been set.
+func (o *AdvisoryMaliciousVSCodeExts) HasVersions() bool {
+	if o != nil && !IsNil(o.Versions) {
 		return true
 	}
 
 	return false
 }
 
-// SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *AdvisoryMaliciousVSCodeExts) SetUrl(v string) {
-	o.Url = &v
-}
-
-// GetVersion returns the Version field value if set, zero value otherwise.
-func (o *AdvisoryMaliciousVSCodeExts) GetVersion() string {
-	if o == nil || IsNil(o.Version) {
-		var ret string
-		return ret
-	}
-	return *o.Version
-}
-
-// GetVersionOk returns a tuple with the Version field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AdvisoryMaliciousVSCodeExts) GetVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.Version) {
-		return nil, false
-	}
-	return o.Version, true
-}
-
-// HasVersion returns a boolean if a field has been set.
-func (o *AdvisoryMaliciousVSCodeExts) HasVersion() bool {
-	if o != nil && !IsNil(o.Version) {
-		return true
-	}
-
-	return false
-}
-
-// SetVersion gets a reference to the given string and assigns it to the Version field.
-func (o *AdvisoryMaliciousVSCodeExts) SetVersion(v string) {
-	o.Version = &v
+// SetVersions gets a reference to the given []string and assigns it to the Versions field.
+func (o *AdvisoryMaliciousVSCodeExts) SetVersions(v []string) {
+	o.Versions = v
 }
 
 func (o AdvisoryMaliciousVSCodeExts) MarshalJSON() ([]byte, error) {
@@ -281,8 +355,17 @@ func (o AdvisoryMaliciousVSCodeExts) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryMaliciousVSCodeExts) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.DateAdded) {
-		toSerialize["date_added"] = o.DateAdded
+	if !IsNil(o.Discoveries) {
+		toSerialize["discoveries"] = o.Discoveries
+	}
+	if !IsNil(o.FirstSeen) {
+		toSerialize["first_seen"] = o.FirstSeen
+	}
+	if !IsNil(o.LastUpdated) {
+		toSerialize["last_updated"] = o.LastUpdated
+	}
+	if !IsNil(o.Marketplace) {
+		toSerialize["marketplace"] = o.Marketplace
 	}
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name
@@ -290,17 +373,14 @@ func (o AdvisoryMaliciousVSCodeExts) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Publisher) {
 		toSerialize["publisher"] = o.Publisher
 	}
-	if !IsNil(o.Type) {
-		toSerialize["type"] = o.Type
+	if !IsNil(o.References) {
+		toSerialize["references"] = o.References
 	}
-	if !IsNil(o.UpdatedAt) {
-		toSerialize["updated_at"] = o.UpdatedAt
+	if !IsNil(o.Types) {
+		toSerialize["types"] = o.Types
 	}
-	if !IsNil(o.Url) {
-		toSerialize["url"] = o.Url
-	}
-	if !IsNil(o.Version) {
-		toSerialize["version"] = o.Version
+	if !IsNil(o.Versions) {
+		toSerialize["versions"] = o.Versions
 	}
 	return toSerialize, nil
 }

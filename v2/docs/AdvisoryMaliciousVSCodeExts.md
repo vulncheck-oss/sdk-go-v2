@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DateAdded** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**Publisher** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
-**UpdatedAt** | Pointer to **string** | the data in this feed comes from manual curation. so this will likely be omitted. | [optional] 
-**Url** | Pointer to **string** |  | [optional] 
-**Version** | Pointer to **string** |  | [optional] 
+**Discoveries** | Pointer to [**[]AdvisoryMaliciousVSCodeDiscovery**](AdvisoryMaliciousVSCodeDiscovery.md) | Discoveries list of individual vulnerability reports, sorted chronologically by discovery date | [optional] 
+**FirstSeen** | Pointer to **string** | FirstSeen the earliest date the vulnerability was observed or created in our system | [optional] 
+**LastUpdated** | Pointer to **string** | LastUpdated the most recent date when any discovery was added for this extension | [optional] 
+**Marketplace** | Pointer to **[]string** | Marketplace list of names of the marketplaces where the extension versions are available | [optional] 
+**Name** | Pointer to **string** | Name is the name of the extension | [optional] 
+**Publisher** | Pointer to **string** | Publisher name of the publisher of the extension | [optional] 
+**References** | Pointer to **[]string** | Reference list of locations where the public releases about the vulnerabilities were pulled | [optional] 
+**Types** | Pointer to **[]string** | Types VulnCheck vulnerability classifications found for this extension | [optional] 
+**Versions** | Pointer to **[]string** | Versions list of vulnerable versions | [optional] 
 
 ## Methods
 
@@ -31,30 +33,105 @@ NewAdvisoryMaliciousVSCodeExtsWithDefaults instantiates a new AdvisoryMaliciousV
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDateAdded
+### GetDiscoveries
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetDateAdded() string`
+`func (o *AdvisoryMaliciousVSCodeExts) GetDiscoveries() []AdvisoryMaliciousVSCodeDiscovery`
 
-GetDateAdded returns the DateAdded field if non-nil, zero value otherwise.
+GetDiscoveries returns the Discoveries field if non-nil, zero value otherwise.
 
-### GetDateAddedOk
+### GetDiscoveriesOk
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetDateAddedOk() (*string, bool)`
+`func (o *AdvisoryMaliciousVSCodeExts) GetDiscoveriesOk() (*[]AdvisoryMaliciousVSCodeDiscovery, bool)`
 
-GetDateAddedOk returns a tuple with the DateAdded field if it's non-nil, zero value otherwise
+GetDiscoveriesOk returns a tuple with the Discoveries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDateAdded
+### SetDiscoveries
 
-`func (o *AdvisoryMaliciousVSCodeExts) SetDateAdded(v string)`
+`func (o *AdvisoryMaliciousVSCodeExts) SetDiscoveries(v []AdvisoryMaliciousVSCodeDiscovery)`
 
-SetDateAdded sets DateAdded field to given value.
+SetDiscoveries sets Discoveries field to given value.
 
-### HasDateAdded
+### HasDiscoveries
 
-`func (o *AdvisoryMaliciousVSCodeExts) HasDateAdded() bool`
+`func (o *AdvisoryMaliciousVSCodeExts) HasDiscoveries() bool`
 
-HasDateAdded returns a boolean if a field has been set.
+HasDiscoveries returns a boolean if a field has been set.
+
+### GetFirstSeen
+
+`func (o *AdvisoryMaliciousVSCodeExts) GetFirstSeen() string`
+
+GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
+
+### GetFirstSeenOk
+
+`func (o *AdvisoryMaliciousVSCodeExts) GetFirstSeenOk() (*string, bool)`
+
+GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirstSeen
+
+`func (o *AdvisoryMaliciousVSCodeExts) SetFirstSeen(v string)`
+
+SetFirstSeen sets FirstSeen field to given value.
+
+### HasFirstSeen
+
+`func (o *AdvisoryMaliciousVSCodeExts) HasFirstSeen() bool`
+
+HasFirstSeen returns a boolean if a field has been set.
+
+### GetLastUpdated
+
+`func (o *AdvisoryMaliciousVSCodeExts) GetLastUpdated() string`
+
+GetLastUpdated returns the LastUpdated field if non-nil, zero value otherwise.
+
+### GetLastUpdatedOk
+
+`func (o *AdvisoryMaliciousVSCodeExts) GetLastUpdatedOk() (*string, bool)`
+
+GetLastUpdatedOk returns a tuple with the LastUpdated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdated
+
+`func (o *AdvisoryMaliciousVSCodeExts) SetLastUpdated(v string)`
+
+SetLastUpdated sets LastUpdated field to given value.
+
+### HasLastUpdated
+
+`func (o *AdvisoryMaliciousVSCodeExts) HasLastUpdated() bool`
+
+HasLastUpdated returns a boolean if a field has been set.
+
+### GetMarketplace
+
+`func (o *AdvisoryMaliciousVSCodeExts) GetMarketplace() []string`
+
+GetMarketplace returns the Marketplace field if non-nil, zero value otherwise.
+
+### GetMarketplaceOk
+
+`func (o *AdvisoryMaliciousVSCodeExts) GetMarketplaceOk() (*[]string, bool)`
+
+GetMarketplaceOk returns a tuple with the Marketplace field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMarketplace
+
+`func (o *AdvisoryMaliciousVSCodeExts) SetMarketplace(v []string)`
+
+SetMarketplace sets Marketplace field to given value.
+
+### HasMarketplace
+
+`func (o *AdvisoryMaliciousVSCodeExts) HasMarketplace() bool`
+
+HasMarketplace returns a boolean if a field has been set.
 
 ### GetName
 
@@ -106,105 +183,80 @@ SetPublisher sets Publisher field to given value.
 
 HasPublisher returns a boolean if a field has been set.
 
-### GetType
+### GetReferences
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetType() string`
+`func (o *AdvisoryMaliciousVSCodeExts) GetReferences() []string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetReferences returns the References field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetReferencesOk
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetTypeOk() (*string, bool)`
+`func (o *AdvisoryMaliciousVSCodeExts) GetReferencesOk() (*[]string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetReferencesOk returns a tuple with the References field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetReferences
 
-`func (o *AdvisoryMaliciousVSCodeExts) SetType(v string)`
+`func (o *AdvisoryMaliciousVSCodeExts) SetReferences(v []string)`
 
-SetType sets Type field to given value.
+SetReferences sets References field to given value.
 
-### HasType
+### HasReferences
 
-`func (o *AdvisoryMaliciousVSCodeExts) HasType() bool`
+`func (o *AdvisoryMaliciousVSCodeExts) HasReferences() bool`
 
-HasType returns a boolean if a field has been set.
+HasReferences returns a boolean if a field has been set.
 
-### GetUpdatedAt
+### GetTypes
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetUpdatedAt() string`
+`func (o *AdvisoryMaliciousVSCodeExts) GetTypes() []string`
 
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+GetTypes returns the Types field if non-nil, zero value otherwise.
 
-### GetUpdatedAtOk
+### GetTypesOk
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetUpdatedAtOk() (*string, bool)`
+`func (o *AdvisoryMaliciousVSCodeExts) GetTypesOk() (*[]string, bool)`
 
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+GetTypesOk returns a tuple with the Types field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedAt
+### SetTypes
 
-`func (o *AdvisoryMaliciousVSCodeExts) SetUpdatedAt(v string)`
+`func (o *AdvisoryMaliciousVSCodeExts) SetTypes(v []string)`
 
-SetUpdatedAt sets UpdatedAt field to given value.
+SetTypes sets Types field to given value.
 
-### HasUpdatedAt
+### HasTypes
 
-`func (o *AdvisoryMaliciousVSCodeExts) HasUpdatedAt() bool`
+`func (o *AdvisoryMaliciousVSCodeExts) HasTypes() bool`
 
-HasUpdatedAt returns a boolean if a field has been set.
+HasTypes returns a boolean if a field has been set.
 
-### GetUrl
+### GetVersions
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetUrl() string`
+`func (o *AdvisoryMaliciousVSCodeExts) GetVersions() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetVersions returns the Versions field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetVersionsOk
 
-`func (o *AdvisoryMaliciousVSCodeExts) GetUrlOk() (*string, bool)`
+`func (o *AdvisoryMaliciousVSCodeExts) GetVersionsOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetVersionsOk returns a tuple with the Versions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetVersions
 
-`func (o *AdvisoryMaliciousVSCodeExts) SetUrl(v string)`
+`func (o *AdvisoryMaliciousVSCodeExts) SetVersions(v []string)`
 
-SetUrl sets Url field to given value.
+SetVersions sets Versions field to given value.
 
-### HasUrl
+### HasVersions
 
-`func (o *AdvisoryMaliciousVSCodeExts) HasUrl() bool`
+`func (o *AdvisoryMaliciousVSCodeExts) HasVersions() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *AdvisoryMaliciousVSCodeExts) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *AdvisoryMaliciousVSCodeExts) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *AdvisoryMaliciousVSCodeExts) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *AdvisoryMaliciousVSCodeExts) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
+HasVersions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

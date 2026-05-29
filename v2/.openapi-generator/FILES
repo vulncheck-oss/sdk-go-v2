@@ -424,6 +424,7 @@ docs/AdvisoryMSDocumentTitle.md
 docs/AdvisoryMVersion.md
 docs/AdvisoryMVulnerability.md
 docs/AdvisoryMaliciousPackage.md
+docs/AdvisoryMaliciousVSCodeDiscovery.md
 docs/AdvisoryMaliciousVSCodeExts.md
 docs/AdvisoryManageEngine.md
 docs/AdvisoryManageEngineAdvisory.md
@@ -1796,6 +1797,7 @@ model_advisory_m_version.go
 model_advisory_m_vulnerability.go
 model_advisory_ma_cert.go
 model_advisory_malicious_package.go
+model_advisory_malicious_vs_code_discovery.go
 model_advisory_malicious_vs_code_exts.go
 model_advisory_manage_engine.go
 model_advisory_manage_engine_advisory.go
