@@ -143921,33 +143921,130 @@ components:
           type: string
         url:
           type: string
+    advisory.MaliciousVSCodeDiscovery:
+      description: advisory.MaliciousVSCodeDiscovery
+      example:
+        date: date
+        reference: reference
+        marketplace:
+        - marketplace
+        - marketplace
+        versions:
+        - versions
+        - versions
+        type: type
+      properties:
+        date:
+          description: Date the timestamp when the discovery was published (via the
+            "reference")
+          type: string
+        marketplace:
+          description: Marketplace list of names of the marketplaces where the extension
+            versions are available
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        reference:
+          description: Reference location where the initial public release of the
+            vulnerability was pulled
+          type: string
+        type:
+          description: Type VulnCheck vulnerability classification
+          type: string
+        versions:
+          description: Versions list of vulnerable versions
+          items:
+            type: string
+          type: array
+          uniqueItems: false
     advisory.MaliciousVSCodeExts:
       description: advisory.MaliciousVSCodeExts
       example:
-        date_added: date_added
-        updated_at: updated_at
+        last_updated: last_updated
+        types:
+        - types
+        - types
+        first_seen: first_seen
+        marketplace:
+        - marketplace
+        - marketplace
+        references:
+        - references
+        - references
+        discoveries:
+        - date: date
+          reference: reference
+          marketplace:
+          - marketplace
+          - marketplace
+          versions:
+          - versions
+          - versions
+          type: type
+        - date: date
+          reference: reference
+          marketplace:
+          - marketplace
+          - marketplace
+          versions:
+          - versions
+          - versions
+          type: type
+        versions:
+        - versions
+        - versions
         name: name
         publisher: publisher
-        type: type
-        version: version
-        url: url
       properties:
-        date_added:
+        discoveries:
+          description: "Discoveries list of individual vulnerability reports, sorted\
+            \ chronologically by discovery date"
+          items:
+            $ref: '#/components/schemas/advisory.MaliciousVSCodeDiscovery'
+          type: array
+          uniqueItems: false
+        first_seen:
+          description: FirstSeen the earliest date the vulnerability was observed
+            or created in our system
           type: string
+        last_updated:
+          description: LastUpdated the most recent date when any discovery was added
+            for this extension
+          type: string
+        marketplace:
+          description: Marketplace list of names of the marketplaces where the extension
+            versions are available
+          items:
+            type: string
+          type: array
+          uniqueItems: false
         name:
+          description: Name is the name of the extension
           type: string
         publisher:
+          description: Publisher name of the publisher of the extension
           type: string
-        type:
-          type: string
-        updated_at:
-          description: the data in this feed comes from manual curation. so this will
-            likely be omitted.
-          type: string
-        url:
-          type: string
-        version:
-          type: string
+        references:
+          description: Reference list of locations where the public releases about
+            the vulnerabilities were pulled
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        types:
+          description: Types VulnCheck vulnerability classifications found for this
+            extension
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        versions:
+          description: Versions list of vulnerable versions
+          items:
+            type: string
+          type: array
+          uniqueItems: false
     advisory.ManageEngine:
       description: advisory.ManageEngine
       example:
@@ -199153,20 +199250,76 @@ components:
       description: render.ResponseWithMetadata-array_advisory_MaliciousVSCodeExts-paginate_Pagination
       example:
         data:
-        - date_added: date_added
-          updated_at: updated_at
+        - last_updated: last_updated
+          types:
+          - types
+          - types
+          first_seen: first_seen
+          marketplace:
+          - marketplace
+          - marketplace
+          references:
+          - references
+          - references
+          discoveries:
+          - date: date
+            reference: reference
+            marketplace:
+            - marketplace
+            - marketplace
+            versions:
+            - versions
+            - versions
+            type: type
+          - date: date
+            reference: reference
+            marketplace:
+            - marketplace
+            - marketplace
+            versions:
+            - versions
+            - versions
+            type: type
+          versions:
+          - versions
+          - versions
           name: name
           publisher: publisher
-          type: type
-          version: version
-          url: url
-        - date_added: date_added
-          updated_at: updated_at
+        - last_updated: last_updated
+          types:
+          - types
+          - types
+          first_seen: first_seen
+          marketplace:
+          - marketplace
+          - marketplace
+          references:
+          - references
+          - references
+          discoveries:
+          - date: date
+            reference: reference
+            marketplace:
+            - marketplace
+            - marketplace
+            versions:
+            - versions
+            - versions
+            type: type
+          - date: date
+            reference: reference
+            marketplace:
+            - marketplace
+            - marketplace
+            versions:
+            - versions
+            - versions
+            type: type
+          versions:
+          - versions
+          - versions
           name: name
           publisher: publisher
-          type: type
-          version: version
-          url: url
         _meta:
           cursor: cursor
           next_cursor: next_cursor
