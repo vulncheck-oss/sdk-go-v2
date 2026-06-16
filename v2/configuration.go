@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.22/go",
+		UserAgent:        "OpenAPI-Generator/2.1.23/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -1635,6 +1635,24 @@ func NewConfiguration() *Configuration {
 					Description: "No description provided",
 				},
 			},
+			"IndicesAPIService.IndexIocBotnetsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexIocRansomwareGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexIocThreatActorsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
 			"IndicesAPIService.IndexIpintel10dGet": {
 				{
 					URL: "https://api.vulncheck.com",
@@ -2794,6 +2812,18 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexTailscaleGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexTargetIntelCveSummaryGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexTargetIntelGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
