@@ -295,6 +295,9 @@ paths:
           - initial-access
           - initial-access-git
           - intel
+          - ioc-botnets
+          - ioc-ransomware
+          - ioc-threat-actors
           - ipintel-10d
           - ipintel-30d
           - ipintel-3d
@@ -489,6 +492,8 @@ paths:
           - synology
           - syss
           - tailscale
+          - target-intel
+          - target-intel-cve-summary
           - teamviewer
           - tenable-research-advisories
           - tencent
@@ -57818,6 +57823,723 @@ paths:
       summary: Return vulnerability data stored in index "intel"
       tags:
       - indices
+  /v3/index/ioc-botnets:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the ioc-botnets index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** VulnCheck IOC Botnets
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/ioc-botnets?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/ioc-botnets?cursor=<next_cursor_id>`
+      operationId: index_ioc-botnets_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_IOCBotnetAdvisory-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "ioc-botnets"
+      tags:
+      - indices
+  /v3/index/ioc-ransomware:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the ioc-ransomware index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Vulncheck IOC Ransomware
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/ioc-ransomware?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/ioc-ransomware?cursor=<next_cursor_id>`
+      operationId: index_ioc-ransomware_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_IOCRansomwareAdvisory-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "ioc-ransomware"
+      tags:
+      - indices
+  /v3/index/ioc-threat-actors:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the ioc-threat-actors index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Vulncheck IOC Threat Actors
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/ioc-threat-actors?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/ioc-threat-actors?cursor=<next_cursor_id>`
+      operationId: index_ioc-threat-actors_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_IOCThreatActorAdvisory-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "ioc-threat-actors"
+      tags:
+      - indices
   /v3/index/ipintel-10d:
     get:
       description: |
@@ -104344,6 +105066,517 @@ paths:
       summary: Return vulnerability data stored in index "tailscale"
       tags:
       - indices
+  /v3/index/target-intel:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the target-intel index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** VulnCheck Target Intelligence
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/target-intel?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/target-intel?cursor=<next_cursor_id>`
+      operationId: index_target-intel_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IPv4 or IPv6 CIDR
+        explode: true
+        in: query
+        name: cidr
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Country name ISO-3166?? format
+        explode: true
+        in: query
+        name: country
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Country code in ISO-3166?? format
+        explode: true
+        in: query
+        name: country_code
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Autonomous system number
+        explode: true
+        in: query
+        name: asn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Record type
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: CPE string
+        explode: true
+        in: query
+        name: cpe
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Vendor name
+        explode: true
+        in: query
+        name: vendor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Product name
+        explode: true
+        in: query
+        name: product
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Product version
+        explode: true
+        in: query
+        name: version
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Protocol
+        explode: true
+        in: query
+        name: protocol
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Port number
+        explode: true
+        in: query
+        name: port
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter to records that have (true) or do not have (false) an
+          associated CVE
+        explode: true
+        in: query
+        name: contains_cve
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Match one or more classification values
+        explode: true
+        in: query
+        name: classifications
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Match a string in the hostname
+        explode: true
+        in: query
+        name: hostname
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "target-intel"
+      tags:
+      - indices
+  /v3/index/target-intel-cve-summary:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the target-intel-cve-summary index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** VulnCheck Target Intelligence CVE Summary
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/target-intel-cve-summary?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/target-intel-cve-summary?cursor=<next_cursor_id>`
+      operationId: index_target-intel-cve-summary_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_TargetIntelCVESummary-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "target-intel-cve-summary"
+      tags:
+      - indices
   /v3/index/teamviewer:
     get:
       description: |
@@ -138938,6 +140171,199 @@ components:
           type: string
         url:
           type: string
+    advisory.IOCBotnetAdvisory:
+      description: advisory.IOCBotnetAdvisory
+      example:
+        date_added: date_added
+        malicious_domains:
+        - malicious_domains
+        - malicious_domains
+        cve:
+        - cve
+        - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        botnet_name: botnet_name
+        malicious_files:
+        - sha256: sha256
+          name: name
+        - sha256: sha256
+          name: name
+        malicious_ip:
+        - malicious_ip
+        - malicious_ip
+        title: title
+        url: url
+      properties:
+        botnet_name:
+          type: string
+        cve:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        date_added:
+          type: string
+        malicious_domains:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        malicious_files:
+          items:
+            $ref: '#/components/schemas/advisory.IOCFile'
+          type: array
+          uniqueItems: false
+        malicious_ip:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        references:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+    advisory.IOCFile:
+      description: advisory.IOCFile
+      example:
+        sha256: sha256
+        name: name
+      properties:
+        name:
+          type: string
+        sha256:
+          type: string
+    advisory.IOCRansomwareAdvisory:
+      description: advisory.IOCRansomwareAdvisory
+      example:
+        date_added: date_added
+        malicious_domains:
+        - malicious_domains
+        - malicious_domains
+        cve:
+        - cve
+        - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        malicious_files:
+        - sha256: sha256
+          name: name
+        - sha256: sha256
+          name: name
+        malicious_ip:
+        - malicious_ip
+        - malicious_ip
+        ransomware_name: ransomware_name
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        date_added:
+          type: string
+        malicious_domains:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        malicious_files:
+          items:
+            $ref: '#/components/schemas/advisory.IOCFile'
+          type: array
+          uniqueItems: false
+        malicious_ip:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        ransomware_name:
+          type: string
+        references:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
+    advisory.IOCThreatActorAdvisory:
+      description: advisory.IOCThreatActorAdvisory
+      example:
+        date_added: date_added
+        malicious_domains:
+        - malicious_domains
+        - malicious_domains
+        cve:
+        - cve
+        - cve
+        references:
+        - references
+        - references
+        updated_at: updated_at
+        malicious_files:
+        - sha256: sha256
+          name: name
+        - sha256: sha256
+          name: name
+        threat_actor_name: threat_actor_name
+        malicious_ip:
+        - malicious_ip
+        - malicious_ip
+        title: title
+        url: url
+      properties:
+        cve:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        date_added:
+          type: string
+        malicious_domains:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        malicious_files:
+          items:
+            $ref: '#/components/schemas/advisory.IOCFile'
+          type: array
+          uniqueItems: false
+        malicious_ip:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        references:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        threat_actor_name:
+          type: string
+        title:
+          type: string
+        updated_at:
+          type: string
+        url:
+          type: string
     advisory.ITW:
       description: advisory.ITW
       example:
@@ -170007,6 +171433,22 @@ components:
           type: string
         vulncheck_kev_date_due:
           type: string
+    api.Fingerprint:
+      description: api.Fingerprint
+      example:
+        product: product
+        vendor: vendor
+        cpe: cpe
+        version: version
+      properties:
+        cpe:
+          type: string
+        product:
+          type: string
+        vendor:
+          type: string
+        version:
+          type: string
     api.HTTPDetails:
       description: api.HTTPDetails
       example:
@@ -174328,6 +175770,166 @@ components:
           type: string
         technicalImpact:
           type: string
+    api.TargetIntel:
+      description: api.TargetIntel
+      example:
+        country: country
+        metadata:
+        - 6
+        - 6
+        product:
+        - product
+        - product
+        ip: ip
+        as_domain: as_domain
+        version:
+        - version
+        - version
+        fingerprints:
+        - product: product
+          vendor: vendor
+          cpe: cpe
+          version: version
+        - product: product
+          vendor: vendor
+          cpe: cpe
+          version: version
+        classifications:
+        - classifications
+        - classifications
+        country_code: country_code
+        date_added: date_added
+        hostname: hostname
+        protocol: protocol
+        cve:
+        - cve
+        - cve
+        port: 1
+        contains_cve: true
+        vendor:
+        - vendor
+        - vendor
+        cpe:
+        - cpe
+        - cpe
+        asn: asn
+        as_name: as_name
+        timestamp: timestamp
+      properties:
+        as_domain:
+          type: string
+        as_name:
+          type: string
+        asn:
+          type: string
+        classifications:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        contains_cve:
+          type: boolean
+        country:
+          type: string
+        country_code:
+          type: string
+        cpe:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        cve:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        date_added:
+          type: string
+        fingerprints:
+          items:
+            $ref: '#/components/schemas/api.Fingerprint'
+          type: array
+          uniqueItems: false
+        hostname:
+          type: string
+        ip:
+          type: string
+        metadata:
+          items:
+            type: integer
+          type: array
+          uniqueItems: false
+        port:
+          type: integer
+        product:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        protocol:
+          type: string
+        timestamp:
+          type: string
+        vendor:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        version:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+    api.TargetIntelCVESummary:
+      description: api.TargetIntelCVESummary
+      example:
+        cve: cve
+        country_codes:
+        - count: 6
+          value: value
+        - count: 6
+          value: value
+        asns:
+        - count: 6
+          value: value
+        - count: 6
+          value: value
+        ports:
+        - count: 1
+          value: 5
+        - count: 1
+          value: 5
+        _timestamp: _timestamp
+        vendors:
+        - count: 6
+          value: value
+        - count: 6
+          value: value
+      properties:
+        _timestamp:
+          type: string
+        asns:
+          items:
+            $ref: '#/components/schemas/api_TargetIntelCVESummary_asns_inner'
+          type: array
+          uniqueItems: false
+        country_codes:
+          items:
+            $ref: '#/components/schemas/api_TargetIntelCVESummary_asns_inner'
+          type: array
+          uniqueItems: false
+        cve:
+          type: string
+        ports:
+          items:
+            $ref: '#/components/schemas/api_TargetIntelCVESummary_ports_inner'
+          type: array
+          uniqueItems: false
+        vendors:
+          items:
+            $ref: '#/components/schemas/api_TargetIntelCVESummary_asns_inner'
+          type: array
+          uniqueItems: false
     api.TemporalCVSSV2:
       description: api.TemporalCVSSV2
       example:
@@ -196256,6 +197858,300 @@ components:
           description: Data is the data returned by the endpoint
           items:
             $ref: '#/components/schemas/advisory.IBM'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_IOCBotnetAdvisory-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_IOCBotnetAdvisory-paginate_Pagination
+      example:
+        data:
+        - date_added: date_added
+          malicious_domains:
+          - malicious_domains
+          - malicious_domains
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          botnet_name: botnet_name
+          malicious_files:
+          - sha256: sha256
+            name: name
+          - sha256: sha256
+            name: name
+          malicious_ip:
+          - malicious_ip
+          - malicious_ip
+          title: title
+          url: url
+        - date_added: date_added
+          malicious_domains:
+          - malicious_domains
+          - malicious_domains
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          botnet_name: botnet_name
+          malicious_files:
+          - sha256: sha256
+            name: name
+          - sha256: sha256
+            name: name
+          malicious_ip:
+          - malicious_ip
+          - malicious_ip
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.IOCBotnetAdvisory'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_IOCRansomwareAdvisory-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_IOCRansomwareAdvisory-paginate_Pagination
+      example:
+        data:
+        - date_added: date_added
+          malicious_domains:
+          - malicious_domains
+          - malicious_domains
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          malicious_files:
+          - sha256: sha256
+            name: name
+          - sha256: sha256
+            name: name
+          malicious_ip:
+          - malicious_ip
+          - malicious_ip
+          ransomware_name: ransomware_name
+          title: title
+          url: url
+        - date_added: date_added
+          malicious_domains:
+          - malicious_domains
+          - malicious_domains
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          malicious_files:
+          - sha256: sha256
+            name: name
+          - sha256: sha256
+            name: name
+          malicious_ip:
+          - malicious_ip
+          - malicious_ip
+          ransomware_name: ransomware_name
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.IOCRansomwareAdvisory'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_IOCThreatActorAdvisory-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_IOCThreatActorAdvisory-paginate_Pagination
+      example:
+        data:
+        - date_added: date_added
+          malicious_domains:
+          - malicious_domains
+          - malicious_domains
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          malicious_files:
+          - sha256: sha256
+            name: name
+          - sha256: sha256
+            name: name
+          threat_actor_name: threat_actor_name
+          malicious_ip:
+          - malicious_ip
+          - malicious_ip
+          title: title
+          url: url
+        - date_added: date_added
+          malicious_domains:
+          - malicious_domains
+          - malicious_domains
+          cve:
+          - cve
+          - cve
+          references:
+          - references
+          - references
+          updated_at: updated_at
+          malicious_files:
+          - sha256: sha256
+            name: name
+          - sha256: sha256
+            name: name
+          threat_actor_name: threat_actor_name
+          malicious_ip:
+          - malicious_ip
+          - malicious_ip
+          title: title
+          url: url
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.IOCThreatActorAdvisory'
           type: array
           uniqueItems: false
     render.ResponseWithMetadata-array_advisory_ITWExploit-paginate_Pagination:
@@ -239584,6 +241480,242 @@ components:
             $ref: '#/components/schemas/api.OSSPackage'
           type: array
           uniqueItems: false
+    render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination
+      example:
+        data:
+        - country: country
+          metadata:
+          - 6
+          - 6
+          product:
+          - product
+          - product
+          ip: ip
+          as_domain: as_domain
+          version:
+          - version
+          - version
+          fingerprints:
+          - product: product
+            vendor: vendor
+            cpe: cpe
+            version: version
+          - product: product
+            vendor: vendor
+            cpe: cpe
+            version: version
+          classifications:
+          - classifications
+          - classifications
+          country_code: country_code
+          date_added: date_added
+          hostname: hostname
+          protocol: protocol
+          cve:
+          - cve
+          - cve
+          port: 1
+          contains_cve: true
+          vendor:
+          - vendor
+          - vendor
+          cpe:
+          - cpe
+          - cpe
+          asn: asn
+          as_name: as_name
+          timestamp: timestamp
+        - country: country
+          metadata:
+          - 6
+          - 6
+          product:
+          - product
+          - product
+          ip: ip
+          as_domain: as_domain
+          version:
+          - version
+          - version
+          fingerprints:
+          - product: product
+            vendor: vendor
+            cpe: cpe
+            version: version
+          - product: product
+            vendor: vendor
+            cpe: cpe
+            version: version
+          classifications:
+          - classifications
+          - classifications
+          country_code: country_code
+          date_added: date_added
+          hostname: hostname
+          protocol: protocol
+          cve:
+          - cve
+          - cve
+          port: 1
+          contains_cve: true
+          vendor:
+          - vendor
+          - vendor
+          cpe:
+          - cpe
+          - cpe
+          asn: asn
+          as_name: as_name
+          timestamp: timestamp
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/api.TargetIntel'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_api_TargetIntelCVESummary-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_api_TargetIntelCVESummary-paginate_Pagination
+      example:
+        data:
+        - cve: cve
+          country_codes:
+          - count: 6
+            value: value
+          - count: 6
+            value: value
+          asns:
+          - count: 6
+            value: value
+          - count: 6
+            value: value
+          ports:
+          - count: 1
+            value: 5
+          - count: 1
+            value: 5
+          _timestamp: _timestamp
+          vendors:
+          - count: 6
+            value: value
+          - count: 6
+            value: value
+        - cve: cve
+          country_codes:
+          - count: 6
+            value: value
+          - count: 6
+            value: value
+          asns:
+          - count: 6
+            value: value
+          - count: 6
+            value: value
+          ports:
+          - count: 1
+            value: 5
+          - count: 1
+            value: 5
+          _timestamp: _timestamp
+          vendors:
+          - count: 6
+            value: value
+          - count: 6
+            value: value
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/api.TargetIntelCVESummary'
+          type: array
+          uniqueItems: false
     render.ResponseWithMetadata-array_api_Update-paginate_Pagination:
       description: render.ResponseWithMetadata-array_api_Update-paginate_Pagination
       example:
@@ -243298,6 +245430,24 @@ components:
       oneOf:
       - type: string
       - type: string
+    api_TargetIntelCVESummary_asns_inner:
+      example:
+        count: 6
+        value: value
+      properties:
+        count:
+          type: integer
+        value:
+          type: string
+    api_TargetIntelCVESummary_ports_inner:
+      example:
+        count: 1
+        value: 5
+      properties:
+        count:
+          type: integer
+        value:
+          type: integer
   securitySchemes:
     Bearer:
       in: header
