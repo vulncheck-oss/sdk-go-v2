@@ -15,6 +15,7 @@ jobs:
           go-version: 1.24.4
           cache-dependency-path: tests/go.sum
       - name: Test
+        if: github.actor != 'dependabot[bot]'
         working-directory: tests
         env:
           VULNCHECK_API_TOKEN: ${{ secrets.VULNCHECK_TOKEN }}
