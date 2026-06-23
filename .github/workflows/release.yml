@@ -25,7 +25,7 @@ jobs:
           private-key: ${{ secrets.VULNCHECK_GITHUB_RELEASE_APP_KEY }}
 
       - name: Check out HEAD ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
@@ -59,7 +59,7 @@ jobs:
           echo "latest_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
 
       - name: Check out previous release
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           path: previous
