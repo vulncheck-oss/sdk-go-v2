@@ -34,7 +34,7 @@ jobs:
             echo "changes=false" >> $GITHUB_OUTPUT
           fi
 
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v7
         if: steps.generate.outputs.changes == 'true'
         with:
           go-version: 1.24.4
