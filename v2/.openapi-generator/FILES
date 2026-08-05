@@ -60,6 +60,7 @@ docs/AdvisoryAndroidEvent.md
 docs/AdvisoryAndroidPackage.md
 docs/AdvisoryAndroidRange.md
 docs/AdvisoryAndroidReference.md
+docs/AdvisoryAnthropicCVD.md
 docs/AdvisoryApacheActiveMQ.md
 docs/AdvisoryApacheArchiva.md
 docs/AdvisoryApacheArrow.md
@@ -152,6 +153,8 @@ docs/AdvisoryCSAFReference.md
 docs/AdvisoryCSAFRelationship.md
 docs/AdvisoryCSAFScore.md
 docs/AdvisoryCSAFVulnerability.md
+docs/AdvisoryCVDSeverityCompare.md
+docs/AdvisoryCVDSnapshot.md
 docs/AdvisoryCVEDetail.md
 docs/AdvisoryCVEDetailsLink.md
 docs/AdvisoryCVEIdentityMappings.md
@@ -786,10 +789,12 @@ docs/AdvisoryZuso.md
 docs/AdvisoryZyxel.md
 docs/ApiBaseMetricV2.md
 docs/ApiBaseMetricV3.md
+docs/ApiC2Frequency.md
 docs/ApiCPE.md
 docs/ApiCPEMatch.md
 docs/ApiCPEName.md
 docs/ApiCVE.md
+docs/ApiCVEConfirmed.md
 docs/ApiCVEDataMeta.md
 docs/ApiCVEDataMetaExtended.md
 docs/ApiCVEExtended.md
@@ -820,6 +825,8 @@ docs/ApiImpact.md
 docs/ApiImpactExtended.md
 docs/ApiInitialAccess.md
 docs/ApiInitialAccessArtifact.md
+docs/ApiInitialAccessGoExploit.md
+docs/ApiInitialAccessGoExploitCustomFlag.md
 docs/ApiMitreAttackTech.md
 docs/ApiMitreAttackToCVE.md
 docs/ApiMitreD3fendTechnique.md
@@ -873,9 +880,6 @@ docs/ApiReferencesExtended.md
 docs/ApiRelatedAttackPattern.md
 docs/ApiSSVC.md
 docs/ApiTargetIntel.md
-docs/ApiTargetIntelCVESummary.md
-docs/ApiTargetIntelCVESummaryAsnsInner.md
-docs/ApiTargetIntelCVESummaryPortsInner.md
 docs/ApiTemporalCVSSV2.md
 docs/ApiTemporalCVSSV3.md
 docs/ApiTemporalMetricV2.md
@@ -930,6 +934,7 @@ docs/RenderResponseWithMetadataArrayAdvisoryAlpineLinuxSecDBPaginatePagination.m
 docs/RenderResponseWithMetadataArrayAdvisoryAmazonCVEPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryAnchoreNVDOverridePaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryAndroidAdvisoryPaginatePagination.md
+docs/RenderResponseWithMetadataArrayAdvisoryAnthropicCVDPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryApacheActiveMQPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryApacheArchivaPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryApacheArrowPaginatePagination.md
@@ -1376,7 +1381,6 @@ docs/RenderResponseWithMetadataArrayApiNVD20CPEMatchPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiNVD20CVEExtendedPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiNVD20CVEPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiOSSPackagePaginatePagination.md
-docs/RenderResponseWithMetadataArrayApiTargetIntelCVESummaryPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiTargetIntelPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiUpdatePaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiVulnCheckCanaryPaginatePagination.md
@@ -1450,6 +1454,7 @@ model_advisory_android_event.go
 model_advisory_android_package.go
 model_advisory_android_range.go
 model_advisory_android_reference.go
+model_advisory_anthropic_cvd.go
 model_advisory_apache_active_mq.go
 model_advisory_apache_archiva.go
 model_advisory_apache_arrow.go
@@ -1601,6 +1606,8 @@ model_advisory_curl_credit.go
 model_advisory_curl_cwe.go
 model_advisory_curl_range.go
 model_advisory_custom_cpe.go
+model_advisory_cvd_severity_compare.go
+model_advisory_cvd_snapshot.go
 model_advisory_cve_detail.go
 model_advisory_cve_details_link.go
 model_advisory_cve_identity_mappings.go
@@ -2180,6 +2187,7 @@ model_advisory_zuso.go
 model_advisory_zyxel.go
 model_api_base_metric_v2.go
 model_api_base_metric_v3.go
+model_api_c2_frequency.go
 model_api_categorization_extended.go
 model_api_client_fingerprints.go
 model_api_configurations.go
@@ -2187,6 +2195,7 @@ model_api_cpe.go
 model_api_cpe_match.go
 model_api_cpe_name.go
 model_api_cve.go
+model_api_cve_confirmed.go
 model_api_cve_data_meta.go
 model_api_cve_data_meta_extended.go
 model_api_cve_extended.go
@@ -2214,6 +2223,8 @@ model_api_impact.go
 model_api_impact_extended.go
 model_api_initial_access.go
 model_api_initial_access_artifact.go
+model_api_initial_access_go_exploit.go
+model_api_initial_access_go_exploit_custom_flag.go
 model_api_mitre_attack_tech.go
 model_api_mitre_attack_to_cve.go
 model_api_mitre_d3fend_technique.go
@@ -2267,9 +2278,6 @@ model_api_references_extended.go
 model_api_related_attack_pattern.go
 model_api_ssvc.go
 model_api_target_intel.go
-model_api_target_intel_cve_summary.go
-model_api_target_intel_cve_summary_asns_inner.go
-model_api_target_intel_cve_summary_ports_inner.go
 model_api_temporal_cvssv2.go
 model_api_temporal_cvssv3.go
 model_api_temporal_metric_v2.go
@@ -2317,6 +2325,7 @@ model_render_response_with_metadata_array_advisory_amd_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_ami_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_anchore_nvd_override_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_android_advisory_paginate_pagination.go
+model_render_response_with_metadata_array_advisory_anthropic_cvd_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_apache_active_mq_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_apache_archiva_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_apache_arrow_paginate_pagination.go
@@ -2767,7 +2776,6 @@ model_render_response_with_metadata_array_api_nvd20_cpe_match_paginate_paginatio
 model_render_response_with_metadata_array_api_nvd20_cve_extended_paginate_pagination.go
 model_render_response_with_metadata_array_api_nvd20_cve_paginate_pagination.go
 model_render_response_with_metadata_array_api_oss_package_paginate_pagination.go
-model_render_response_with_metadata_array_api_target_intel_cve_summary_paginate_pagination.go
 model_render_response_with_metadata_array_api_target_intel_paginate_pagination.go
 model_render_response_with_metadata_array_api_update_paginate_pagination.go
 model_render_response_with_metadata_array_api_vuln_check_canary_paginate_pagination.go

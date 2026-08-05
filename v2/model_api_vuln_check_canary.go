@@ -20,12 +20,16 @@ var _ MappedNullable = &ApiVulnCheckCanary{}
 
 // ApiVulnCheckCanary api.VulnCheckCanary
 type ApiVulnCheckCanary struct {
+	C2Frequency3d []ApiC2Frequency `json:"c2_frequency_3d,omitempty"`
+	C2Location []string `json:"c2_location,omitempty"`
 	Category *string `json:"category,omitempty"`
 	ClientFingerprints *ApiClientFingerprints `json:"client_fingerprints,omitempty"`
 	Cve *string `json:"cve,omitempty"`
 	DstCountry *string `json:"dst_country,omitempty"`
 	Http *ApiHTTPDetails `json:"http,omitempty"`
 	Payload *string `json:"payload,omitempty"`
+	PayloadTlsh *string `json:"payload_tlsh,omitempty"`
+	PayloadTooling []string `json:"payload_tooling,omitempty"`
 	Severity *int32 `json:"severity,omitempty"`
 	Signature *string `json:"signature,omitempty"`
 	SignatureId *int32 `json:"signature_id,omitempty"`
@@ -34,7 +38,11 @@ type ApiVulnCheckCanary struct {
 	SrcAsn *string `json:"src_asn,omitempty"`
 	SrcCountry *string `json:"src_country,omitempty"`
 	SrcIp *string `json:"src_ip,omitempty"`
+	SrcIpFreq3d *int32 `json:"src_ip_freq_3d,omitempty"`
+	SrcIpFreq3dCanary *int32 `json:"src_ip_freq_3d_canary,omitempty"`
+	SrcIpTypeFindings []string `json:"src_ip_type_findings,omitempty"`
 	SrcPort *int32 `json:"src_port,omitempty"`
+	TechVertical []string `json:"tech_vertical,omitempty"`
 	Timestamp *string `json:"timestamp,omitempty"`
 }
 
@@ -53,6 +61,70 @@ func NewApiVulnCheckCanary() *ApiVulnCheckCanary {
 func NewApiVulnCheckCanaryWithDefaults() *ApiVulnCheckCanary {
 	this := ApiVulnCheckCanary{}
 	return &this
+}
+
+// GetC2Frequency3d returns the C2Frequency3d field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetC2Frequency3d() []ApiC2Frequency {
+	if o == nil || IsNil(o.C2Frequency3d) {
+		var ret []ApiC2Frequency
+		return ret
+	}
+	return o.C2Frequency3d
+}
+
+// GetC2Frequency3dOk returns a tuple with the C2Frequency3d field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetC2Frequency3dOk() ([]ApiC2Frequency, bool) {
+	if o == nil || IsNil(o.C2Frequency3d) {
+		return nil, false
+	}
+	return o.C2Frequency3d, true
+}
+
+// HasC2Frequency3d returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasC2Frequency3d() bool {
+	if o != nil && !IsNil(o.C2Frequency3d) {
+		return true
+	}
+
+	return false
+}
+
+// SetC2Frequency3d gets a reference to the given []ApiC2Frequency and assigns it to the C2Frequency3d field.
+func (o *ApiVulnCheckCanary) SetC2Frequency3d(v []ApiC2Frequency) {
+	o.C2Frequency3d = v
+}
+
+// GetC2Location returns the C2Location field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetC2Location() []string {
+	if o == nil || IsNil(o.C2Location) {
+		var ret []string
+		return ret
+	}
+	return o.C2Location
+}
+
+// GetC2LocationOk returns a tuple with the C2Location field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetC2LocationOk() ([]string, bool) {
+	if o == nil || IsNil(o.C2Location) {
+		return nil, false
+	}
+	return o.C2Location, true
+}
+
+// HasC2Location returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasC2Location() bool {
+	if o != nil && !IsNil(o.C2Location) {
+		return true
+	}
+
+	return false
+}
+
+// SetC2Location gets a reference to the given []string and assigns it to the C2Location field.
+func (o *ApiVulnCheckCanary) SetC2Location(v []string) {
+	o.C2Location = v
 }
 
 // GetCategory returns the Category field value if set, zero value otherwise.
@@ -245,6 +317,70 @@ func (o *ApiVulnCheckCanary) HasPayload() bool {
 // SetPayload gets a reference to the given string and assigns it to the Payload field.
 func (o *ApiVulnCheckCanary) SetPayload(v string) {
 	o.Payload = &v
+}
+
+// GetPayloadTlsh returns the PayloadTlsh field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetPayloadTlsh() string {
+	if o == nil || IsNil(o.PayloadTlsh) {
+		var ret string
+		return ret
+	}
+	return *o.PayloadTlsh
+}
+
+// GetPayloadTlshOk returns a tuple with the PayloadTlsh field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetPayloadTlshOk() (*string, bool) {
+	if o == nil || IsNil(o.PayloadTlsh) {
+		return nil, false
+	}
+	return o.PayloadTlsh, true
+}
+
+// HasPayloadTlsh returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasPayloadTlsh() bool {
+	if o != nil && !IsNil(o.PayloadTlsh) {
+		return true
+	}
+
+	return false
+}
+
+// SetPayloadTlsh gets a reference to the given string and assigns it to the PayloadTlsh field.
+func (o *ApiVulnCheckCanary) SetPayloadTlsh(v string) {
+	o.PayloadTlsh = &v
+}
+
+// GetPayloadTooling returns the PayloadTooling field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetPayloadTooling() []string {
+	if o == nil || IsNil(o.PayloadTooling) {
+		var ret []string
+		return ret
+	}
+	return o.PayloadTooling
+}
+
+// GetPayloadToolingOk returns a tuple with the PayloadTooling field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetPayloadToolingOk() ([]string, bool) {
+	if o == nil || IsNil(o.PayloadTooling) {
+		return nil, false
+	}
+	return o.PayloadTooling, true
+}
+
+// HasPayloadTooling returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasPayloadTooling() bool {
+	if o != nil && !IsNil(o.PayloadTooling) {
+		return true
+	}
+
+	return false
+}
+
+// SetPayloadTooling gets a reference to the given []string and assigns it to the PayloadTooling field.
+func (o *ApiVulnCheckCanary) SetPayloadTooling(v []string) {
+	o.PayloadTooling = v
 }
 
 // GetSeverity returns the Severity field value if set, zero value otherwise.
@@ -503,6 +639,102 @@ func (o *ApiVulnCheckCanary) SetSrcIp(v string) {
 	o.SrcIp = &v
 }
 
+// GetSrcIpFreq3d returns the SrcIpFreq3d field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetSrcIpFreq3d() int32 {
+	if o == nil || IsNil(o.SrcIpFreq3d) {
+		var ret int32
+		return ret
+	}
+	return *o.SrcIpFreq3d
+}
+
+// GetSrcIpFreq3dOk returns a tuple with the SrcIpFreq3d field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetSrcIpFreq3dOk() (*int32, bool) {
+	if o == nil || IsNil(o.SrcIpFreq3d) {
+		return nil, false
+	}
+	return o.SrcIpFreq3d, true
+}
+
+// HasSrcIpFreq3d returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasSrcIpFreq3d() bool {
+	if o != nil && !IsNil(o.SrcIpFreq3d) {
+		return true
+	}
+
+	return false
+}
+
+// SetSrcIpFreq3d gets a reference to the given int32 and assigns it to the SrcIpFreq3d field.
+func (o *ApiVulnCheckCanary) SetSrcIpFreq3d(v int32) {
+	o.SrcIpFreq3d = &v
+}
+
+// GetSrcIpFreq3dCanary returns the SrcIpFreq3dCanary field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetSrcIpFreq3dCanary() int32 {
+	if o == nil || IsNil(o.SrcIpFreq3dCanary) {
+		var ret int32
+		return ret
+	}
+	return *o.SrcIpFreq3dCanary
+}
+
+// GetSrcIpFreq3dCanaryOk returns a tuple with the SrcIpFreq3dCanary field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetSrcIpFreq3dCanaryOk() (*int32, bool) {
+	if o == nil || IsNil(o.SrcIpFreq3dCanary) {
+		return nil, false
+	}
+	return o.SrcIpFreq3dCanary, true
+}
+
+// HasSrcIpFreq3dCanary returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasSrcIpFreq3dCanary() bool {
+	if o != nil && !IsNil(o.SrcIpFreq3dCanary) {
+		return true
+	}
+
+	return false
+}
+
+// SetSrcIpFreq3dCanary gets a reference to the given int32 and assigns it to the SrcIpFreq3dCanary field.
+func (o *ApiVulnCheckCanary) SetSrcIpFreq3dCanary(v int32) {
+	o.SrcIpFreq3dCanary = &v
+}
+
+// GetSrcIpTypeFindings returns the SrcIpTypeFindings field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetSrcIpTypeFindings() []string {
+	if o == nil || IsNil(o.SrcIpTypeFindings) {
+		var ret []string
+		return ret
+	}
+	return o.SrcIpTypeFindings
+}
+
+// GetSrcIpTypeFindingsOk returns a tuple with the SrcIpTypeFindings field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetSrcIpTypeFindingsOk() ([]string, bool) {
+	if o == nil || IsNil(o.SrcIpTypeFindings) {
+		return nil, false
+	}
+	return o.SrcIpTypeFindings, true
+}
+
+// HasSrcIpTypeFindings returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasSrcIpTypeFindings() bool {
+	if o != nil && !IsNil(o.SrcIpTypeFindings) {
+		return true
+	}
+
+	return false
+}
+
+// SetSrcIpTypeFindings gets a reference to the given []string and assigns it to the SrcIpTypeFindings field.
+func (o *ApiVulnCheckCanary) SetSrcIpTypeFindings(v []string) {
+	o.SrcIpTypeFindings = v
+}
+
 // GetSrcPort returns the SrcPort field value if set, zero value otherwise.
 func (o *ApiVulnCheckCanary) GetSrcPort() int32 {
 	if o == nil || IsNil(o.SrcPort) {
@@ -533,6 +765,38 @@ func (o *ApiVulnCheckCanary) HasSrcPort() bool {
 // SetSrcPort gets a reference to the given int32 and assigns it to the SrcPort field.
 func (o *ApiVulnCheckCanary) SetSrcPort(v int32) {
 	o.SrcPort = &v
+}
+
+// GetTechVertical returns the TechVertical field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetTechVertical() []string {
+	if o == nil || IsNil(o.TechVertical) {
+		var ret []string
+		return ret
+	}
+	return o.TechVertical
+}
+
+// GetTechVerticalOk returns a tuple with the TechVertical field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetTechVerticalOk() ([]string, bool) {
+	if o == nil || IsNil(o.TechVertical) {
+		return nil, false
+	}
+	return o.TechVertical, true
+}
+
+// HasTechVertical returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasTechVertical() bool {
+	if o != nil && !IsNil(o.TechVertical) {
+		return true
+	}
+
+	return false
+}
+
+// SetTechVertical gets a reference to the given []string and assigns it to the TechVertical field.
+func (o *ApiVulnCheckCanary) SetTechVertical(v []string) {
+	o.TechVertical = v
 }
 
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise.
@@ -577,6 +841,12 @@ func (o ApiVulnCheckCanary) MarshalJSON() ([]byte, error) {
 
 func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.C2Frequency3d) {
+		toSerialize["c2_frequency_3d"] = o.C2Frequency3d
+	}
+	if !IsNil(o.C2Location) {
+		toSerialize["c2_location"] = o.C2Location
+	}
 	if !IsNil(o.Category) {
 		toSerialize["category"] = o.Category
 	}
@@ -594,6 +864,12 @@ func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Payload) {
 		toSerialize["payload"] = o.Payload
+	}
+	if !IsNil(o.PayloadTlsh) {
+		toSerialize["payload_tlsh"] = o.PayloadTlsh
+	}
+	if !IsNil(o.PayloadTooling) {
+		toSerialize["payload_tooling"] = o.PayloadTooling
 	}
 	if !IsNil(o.Severity) {
 		toSerialize["severity"] = o.Severity
@@ -619,8 +895,20 @@ func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.SrcIp) {
 		toSerialize["src_ip"] = o.SrcIp
 	}
+	if !IsNil(o.SrcIpFreq3d) {
+		toSerialize["src_ip_freq_3d"] = o.SrcIpFreq3d
+	}
+	if !IsNil(o.SrcIpFreq3dCanary) {
+		toSerialize["src_ip_freq_3d_canary"] = o.SrcIpFreq3dCanary
+	}
+	if !IsNil(o.SrcIpTypeFindings) {
+		toSerialize["src_ip_type_findings"] = o.SrcIpTypeFindings
+	}
 	if !IsNil(o.SrcPort) {
 		toSerialize["src_port"] = o.SrcPort
+	}
+	if !IsNil(o.TechVertical) {
+		toSerialize["tech_vertical"] = o.TechVertical
 	}
 	if !IsNil(o.Timestamp) {
 		toSerialize["timestamp"] = o.Timestamp

@@ -51,6 +51,7 @@ type ApiInitialAccessArtifact struct {
 	// FOFAQueries are raw queries for examining potential Internet-exposed devices & applications with FOFA.
 	FofaQueries []string `json:"fofaQueries,omitempty"`
 	FofaRawQueries []string `json:"fofaRawQueries,omitempty"`
+	Goexploit *ApiInitialAccessGoExploit `json:"goexploit,omitempty"`
 	// google queries
 	GoogleQueries []string `json:"googleQueries,omitempty"`
 	// raw google queries
@@ -83,6 +84,8 @@ type ApiInitialAccessArtifact struct {
 	TargetEncryptedComms *string `json:"targetEncryptedComms,omitempty"`
 	// TargetService indicates the service (HTTP, FTP, etc) that this exploit targets.
 	TargetService *string `json:"targetService,omitempty"`
+	// VCTargetIntelQuery are URLs to the VulnCheck target intel index for this artifact's vendor/product.
+	VcTargetIntelQuery []string `json:"vcTargetIntelQuery,omitempty"`
 	// Vendor of the vulnerable product
 	Vendor *string `json:"vendor,omitempty"`
 	// VersionScanner indicates whether or not the exploit PoC can determine if target system is vulnerable without sending exploit payload in this artifact.
@@ -625,6 +628,38 @@ func (o *ApiInitialAccessArtifact) SetFofaRawQueries(v []string) {
 	o.FofaRawQueries = v
 }
 
+// GetGoexploit returns the Goexploit field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetGoexploit() ApiInitialAccessGoExploit {
+	if o == nil || IsNil(o.Goexploit) {
+		var ret ApiInitialAccessGoExploit
+		return ret
+	}
+	return *o.Goexploit
+}
+
+// GetGoexploitOk returns a tuple with the Goexploit field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetGoexploitOk() (*ApiInitialAccessGoExploit, bool) {
+	if o == nil || IsNil(o.Goexploit) {
+		return nil, false
+	}
+	return o.Goexploit, true
+}
+
+// HasGoexploit returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasGoexploit() bool {
+	if o != nil && !IsNil(o.Goexploit) {
+		return true
+	}
+
+	return false
+}
+
+// SetGoexploit gets a reference to the given ApiInitialAccessGoExploit and assigns it to the Goexploit field.
+func (o *ApiInitialAccessArtifact) SetGoexploit(v ApiInitialAccessGoExploit) {
+	o.Goexploit = &v
+}
+
 // GetGoogleQueries returns the GoogleQueries field value if set, zero value otherwise.
 func (o *ApiInitialAccessArtifact) GetGoogleQueries() []string {
 	if o == nil || IsNil(o.GoogleQueries) {
@@ -1137,6 +1172,38 @@ func (o *ApiInitialAccessArtifact) SetTargetService(v string) {
 	o.TargetService = &v
 }
 
+// GetVcTargetIntelQuery returns the VcTargetIntelQuery field value if set, zero value otherwise.
+func (o *ApiInitialAccessArtifact) GetVcTargetIntelQuery() []string {
+	if o == nil || IsNil(o.VcTargetIntelQuery) {
+		var ret []string
+		return ret
+	}
+	return o.VcTargetIntelQuery
+}
+
+// GetVcTargetIntelQueryOk returns a tuple with the VcTargetIntelQuery field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccessArtifact) GetVcTargetIntelQueryOk() ([]string, bool) {
+	if o == nil || IsNil(o.VcTargetIntelQuery) {
+		return nil, false
+	}
+	return o.VcTargetIntelQuery, true
+}
+
+// HasVcTargetIntelQuery returns a boolean if a field has been set.
+func (o *ApiInitialAccessArtifact) HasVcTargetIntelQuery() bool {
+	if o != nil && !IsNil(o.VcTargetIntelQuery) {
+		return true
+	}
+
+	return false
+}
+
+// SetVcTargetIntelQuery gets a reference to the given []string and assigns it to the VcTargetIntelQuery field.
+func (o *ApiInitialAccessArtifact) SetVcTargetIntelQuery(v []string) {
+	o.VcTargetIntelQuery = v
+}
+
 // GetVendor returns the Vendor field value if set, zero value otherwise.
 func (o *ApiInitialAccessArtifact) GetVendor() string {
 	if o == nil || IsNil(o.Vendor) {
@@ -1387,6 +1454,9 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.FofaRawQueries) {
 		toSerialize["fofaRawQueries"] = o.FofaRawQueries
 	}
+	if !IsNil(o.Goexploit) {
+		toSerialize["goexploit"] = o.Goexploit
+	}
 	if !IsNil(o.GoogleQueries) {
 		toSerialize["googleQueries"] = o.GoogleQueries
 	}
@@ -1434,6 +1504,9 @@ func (o ApiInitialAccessArtifact) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.TargetService) {
 		toSerialize["targetService"] = o.TargetService
+	}
+	if !IsNil(o.VcTargetIntelQuery) {
+		toSerialize["vcTargetIntelQuery"] = o.VcTargetIntelQuery
 	}
 	if !IsNil(o.Vendor) {
 		toSerialize["vendor"] = o.Vendor
