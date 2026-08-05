@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Cve** | Pointer to **[]string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
@@ -30,6 +31,31 @@ will change when the set of required properties is changed
 NewAdvisoryAVIDMLAdvsWithDefaults instantiates a new AdvisoryAVIDMLAdvs object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCve
+
+`func (o *AdvisoryAVIDMLAdvs) GetCve() []string`
+
+GetCve returns the Cve field if non-nil, zero value otherwise.
+
+### GetCveOk
+
+`func (o *AdvisoryAVIDMLAdvs) GetCveOk() (*[]string, bool)`
+
+GetCveOk returns a tuple with the Cve field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCve
+
+`func (o *AdvisoryAVIDMLAdvs) SetCve(v []string)`
+
+SetCve sets Cve field to given value.
+
+### HasCve
+
+`func (o *AdvisoryAVIDMLAdvs) HasCve() bool`
+
+HasCve returns a boolean if a field has been set.
 
 ### GetDateAdded
 

@@ -20,6 +20,7 @@ var _ MappedNullable = &AdvisoryAVIDMLAdvs{}
 
 // AdvisoryAVIDMLAdvs advisory.AVIDMLAdvs
 type AdvisoryAVIDMLAdvs struct {
+	Cve []string `json:"cve,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Description *string `json:"description,omitempty"`
 	Id *string `json:"id,omitempty"`
@@ -44,6 +45,38 @@ func NewAdvisoryAVIDMLAdvs() *AdvisoryAVIDMLAdvs {
 func NewAdvisoryAVIDMLAdvsWithDefaults() *AdvisoryAVIDMLAdvs {
 	this := AdvisoryAVIDMLAdvs{}
 	return &this
+}
+
+// GetCve returns the Cve field value if set, zero value otherwise.
+func (o *AdvisoryAVIDMLAdvs) GetCve() []string {
+	if o == nil || IsNil(o.Cve) {
+		var ret []string
+		return ret
+	}
+	return o.Cve
+}
+
+// GetCveOk returns a tuple with the Cve field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryAVIDMLAdvs) GetCveOk() ([]string, bool) {
+	if o == nil || IsNil(o.Cve) {
+		return nil, false
+	}
+	return o.Cve, true
+}
+
+// HasCve returns a boolean if a field has been set.
+func (o *AdvisoryAVIDMLAdvs) HasCve() bool {
+	if o != nil && !IsNil(o.Cve) {
+		return true
+	}
+
+	return false
+}
+
+// SetCve gets a reference to the given []string and assigns it to the Cve field.
+func (o *AdvisoryAVIDMLAdvs) SetCve(v []string) {
+	o.Cve = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
@@ -280,6 +313,9 @@ func (o AdvisoryAVIDMLAdvs) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryAVIDMLAdvs) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Cve) {
+		toSerialize["cve"] = o.Cve
+	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}

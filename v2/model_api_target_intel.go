@@ -29,6 +29,7 @@ type ApiTargetIntel struct {
 	CountryCode *string `json:"country_code,omitempty"`
 	Cpe []string `json:"cpe,omitempty"`
 	Cve []string `json:"cve,omitempty"`
+	CveConfirmed []ApiCVEConfirmed `json:"cve_confirmed,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Fingerprints []ApiFingerprint `json:"fingerprints,omitempty"`
 	Hostname *string `json:"hostname,omitempty"`
@@ -38,6 +39,7 @@ type ApiTargetIntel struct {
 	Product []string `json:"product,omitempty"`
 	Protocol *string `json:"protocol,omitempty"`
 	Timestamp *string `json:"timestamp,omitempty"`
+	Transport *string `json:"transport,omitempty"`
 	Vendor []string `json:"vendor,omitempty"`
 	Version []string `json:"version,omitempty"`
 }
@@ -347,6 +349,38 @@ func (o *ApiTargetIntel) SetCve(v []string) {
 	o.Cve = v
 }
 
+// GetCveConfirmed returns the CveConfirmed field value if set, zero value otherwise.
+func (o *ApiTargetIntel) GetCveConfirmed() []ApiCVEConfirmed {
+	if o == nil || IsNil(o.CveConfirmed) {
+		var ret []ApiCVEConfirmed
+		return ret
+	}
+	return o.CveConfirmed
+}
+
+// GetCveConfirmedOk returns a tuple with the CveConfirmed field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiTargetIntel) GetCveConfirmedOk() ([]ApiCVEConfirmed, bool) {
+	if o == nil || IsNil(o.CveConfirmed) {
+		return nil, false
+	}
+	return o.CveConfirmed, true
+}
+
+// HasCveConfirmed returns a boolean if a field has been set.
+func (o *ApiTargetIntel) HasCveConfirmed() bool {
+	if o != nil && !IsNil(o.CveConfirmed) {
+		return true
+	}
+
+	return false
+}
+
+// SetCveConfirmed gets a reference to the given []ApiCVEConfirmed and assigns it to the CveConfirmed field.
+func (o *ApiTargetIntel) SetCveConfirmed(v []ApiCVEConfirmed) {
+	o.CveConfirmed = v
+}
+
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
 func (o *ApiTargetIntel) GetDateAdded() string {
 	if o == nil || IsNil(o.DateAdded) {
@@ -635,6 +669,38 @@ func (o *ApiTargetIntel) SetTimestamp(v string) {
 	o.Timestamp = &v
 }
 
+// GetTransport returns the Transport field value if set, zero value otherwise.
+func (o *ApiTargetIntel) GetTransport() string {
+	if o == nil || IsNil(o.Transport) {
+		var ret string
+		return ret
+	}
+	return *o.Transport
+}
+
+// GetTransportOk returns a tuple with the Transport field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiTargetIntel) GetTransportOk() (*string, bool) {
+	if o == nil || IsNil(o.Transport) {
+		return nil, false
+	}
+	return o.Transport, true
+}
+
+// HasTransport returns a boolean if a field has been set.
+func (o *ApiTargetIntel) HasTransport() bool {
+	if o != nil && !IsNil(o.Transport) {
+		return true
+	}
+
+	return false
+}
+
+// SetTransport gets a reference to the given string and assigns it to the Transport field.
+func (o *ApiTargetIntel) SetTransport(v string) {
+	o.Transport = &v
+}
+
 // GetVendor returns the Vendor field value if set, zero value otherwise.
 func (o *ApiTargetIntel) GetVendor() []string {
 	if o == nil || IsNil(o.Vendor) {
@@ -736,6 +802,9 @@ func (o ApiTargetIntel) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
 	}
+	if !IsNil(o.CveConfirmed) {
+		toSerialize["cve_confirmed"] = o.CveConfirmed
+	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded
 	}
@@ -762,6 +831,9 @@ func (o ApiTargetIntel) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Timestamp) {
 		toSerialize["timestamp"] = o.Timestamp
+	}
+	if !IsNil(o.Transport) {
+		toSerialize["transport"] = o.Transport
 	}
 	if !IsNil(o.Vendor) {
 		toSerialize["vendor"] = o.Vendor

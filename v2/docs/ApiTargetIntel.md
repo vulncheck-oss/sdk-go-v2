@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **CountryCode** | Pointer to **string** |  | [optional] 
 **Cpe** | Pointer to **[]string** |  | [optional] 
 **Cve** | Pointer to **[]string** |  | [optional] 
+**CveConfirmed** | Pointer to [**[]ApiCVEConfirmed**](ApiCVEConfirmed.md) |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Fingerprints** | Pointer to [**[]ApiFingerprint**](ApiFingerprint.md) |  | [optional] 
 **Hostname** | Pointer to **string** |  | [optional] 
@@ -22,6 +23,7 @@ Name | Type | Description | Notes
 **Product** | Pointer to **[]string** |  | [optional] 
 **Protocol** | Pointer to **string** |  | [optional] 
 **Timestamp** | Pointer to **string** |  | [optional] 
+**Transport** | Pointer to **string** |  | [optional] 
 **Vendor** | Pointer to **[]string** |  | [optional] 
 **Version** | Pointer to **[]string** |  | [optional] 
 
@@ -269,6 +271,31 @@ SetCve sets Cve field to given value.
 
 HasCve returns a boolean if a field has been set.
 
+### GetCveConfirmed
+
+`func (o *ApiTargetIntel) GetCveConfirmed() []ApiCVEConfirmed`
+
+GetCveConfirmed returns the CveConfirmed field if non-nil, zero value otherwise.
+
+### GetCveConfirmedOk
+
+`func (o *ApiTargetIntel) GetCveConfirmedOk() (*[]ApiCVEConfirmed, bool)`
+
+GetCveConfirmedOk returns a tuple with the CveConfirmed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCveConfirmed
+
+`func (o *ApiTargetIntel) SetCveConfirmed(v []ApiCVEConfirmed)`
+
+SetCveConfirmed sets CveConfirmed field to given value.
+
+### HasCveConfirmed
+
+`func (o *ApiTargetIntel) HasCveConfirmed() bool`
+
+HasCveConfirmed returns a boolean if a field has been set.
+
 ### GetDateAdded
 
 `func (o *ApiTargetIntel) GetDateAdded() string`
@@ -493,6 +520,31 @@ SetTimestamp sets Timestamp field to given value.
 `func (o *ApiTargetIntel) HasTimestamp() bool`
 
 HasTimestamp returns a boolean if a field has been set.
+
+### GetTransport
+
+`func (o *ApiTargetIntel) GetTransport() string`
+
+GetTransport returns the Transport field if non-nil, zero value otherwise.
+
+### GetTransportOk
+
+`func (o *ApiTargetIntel) GetTransportOk() (*string, bool)`
+
+GetTransportOk returns a tuple with the Transport field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTransport
+
+`func (o *ApiTargetIntel) SetTransport(v string)`
+
+SetTransport sets Transport field to given value.
+
+### HasTransport
+
+`func (o *ApiTargetIntel) HasTransport() bool`
+
+HasTransport returns a boolean if a field has been set.
 
 ### GetVendor
 

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **Exploit** | Pointer to **bool** | Exploit indicates whether or not an exploit is available in this artifact. | [optional] 
 **FofaQueries** | Pointer to **[]string** | FOFAQueries are raw queries for examining potential Internet-exposed devices &amp; applications with FOFA. | [optional] 
 **FofaRawQueries** | Pointer to **[]string** |  | [optional] 
+**Goexploit** | Pointer to [**ApiInitialAccessGoExploit**](ApiInitialAccessGoExploit.md) |  | [optional] 
 **GoogleQueries** | Pointer to **[]string** | google queries | [optional] 
 **GoogleRawQueries** | Pointer to **[]string** | raw google queries | [optional] 
 **GreynoiseQueries** | Pointer to **[]string** | GreynoiseQueries are queries for finding the vulnerability via honeypot data. | [optional] 
@@ -36,6 +37,7 @@ Name | Type | Description | Notes
 **TargetDocker** | Pointer to **bool** | TargetDocker indicates whether or not there is an available docker image with the vulnerability. | [optional] 
 **TargetEncryptedComms** | Pointer to **string** | Encrypted communications? | [optional] 
 **TargetService** | Pointer to **string** | TargetService indicates the service (HTTP, FTP, etc) that this exploit targets. | [optional] 
+**VcTargetIntelQuery** | Pointer to **[]string** | VCTargetIntelQuery are URLs to the VulnCheck target intel index for this artifact&#39;s vendor/product. | [optional] 
 **Vendor** | Pointer to **string** | Vendor of the vulnerable product | [optional] 
 **VersionScanner** | Pointer to **bool** | VersionScanner indicates whether or not the exploit PoC can determine if target system is vulnerable without sending exploit payload in this artifact. | [optional] 
 **Yara** | Pointer to **bool** | YARA indicates whether or not a YARA rule designed to detect the exploit on an endpoint exists in this artifact. | [optional] 
@@ -462,6 +464,31 @@ SetFofaRawQueries sets FofaRawQueries field to given value.
 
 HasFofaRawQueries returns a boolean if a field has been set.
 
+### GetGoexploit
+
+`func (o *ApiInitialAccessArtifact) GetGoexploit() ApiInitialAccessGoExploit`
+
+GetGoexploit returns the Goexploit field if non-nil, zero value otherwise.
+
+### GetGoexploitOk
+
+`func (o *ApiInitialAccessArtifact) GetGoexploitOk() (*ApiInitialAccessGoExploit, bool)`
+
+GetGoexploitOk returns a tuple with the Goexploit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGoexploit
+
+`func (o *ApiInitialAccessArtifact) SetGoexploit(v ApiInitialAccessGoExploit)`
+
+SetGoexploit sets Goexploit field to given value.
+
+### HasGoexploit
+
+`func (o *ApiInitialAccessArtifact) HasGoexploit() bool`
+
+HasGoexploit returns a boolean if a field has been set.
+
 ### GetGoogleQueries
 
 `func (o *ApiInitialAccessArtifact) GetGoogleQueries() []string`
@@ -861,6 +888,31 @@ SetTargetService sets TargetService field to given value.
 `func (o *ApiInitialAccessArtifact) HasTargetService() bool`
 
 HasTargetService returns a boolean if a field has been set.
+
+### GetVcTargetIntelQuery
+
+`func (o *ApiInitialAccessArtifact) GetVcTargetIntelQuery() []string`
+
+GetVcTargetIntelQuery returns the VcTargetIntelQuery field if non-nil, zero value otherwise.
+
+### GetVcTargetIntelQueryOk
+
+`func (o *ApiInitialAccessArtifact) GetVcTargetIntelQueryOk() (*[]string, bool)`
+
+GetVcTargetIntelQueryOk returns a tuple with the VcTargetIntelQuery field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVcTargetIntelQuery
+
+`func (o *ApiInitialAccessArtifact) SetVcTargetIntelQuery(v []string)`
+
+SetVcTargetIntelQuery sets VcTargetIntelQuery field to given value.
+
+### HasVcTargetIntelQuery
+
+`func (o *ApiInitialAccessArtifact) HasVcTargetIntelQuery() bool`
+
+HasVcTargetIntelQuery returns a boolean if a field has been set.
 
 ### GetVendor
 

@@ -4,12 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**C2Frequency3d** | Pointer to [**[]ApiC2Frequency**](ApiC2Frequency.md) |  | [optional] 
+**C2Location** | Pointer to **[]string** |  | [optional] 
 **Category** | Pointer to **string** |  | [optional] 
 **ClientFingerprints** | Pointer to [**ApiClientFingerprints**](ApiClientFingerprints.md) |  | [optional] 
 **Cve** | Pointer to **string** |  | [optional] 
 **DstCountry** | Pointer to **string** |  | [optional] 
 **Http** | Pointer to [**ApiHTTPDetails**](ApiHTTPDetails.md) |  | [optional] 
 **Payload** | Pointer to **string** |  | [optional] 
+**PayloadTlsh** | Pointer to **string** |  | [optional] 
+**PayloadTooling** | Pointer to **[]string** |  | [optional] 
 **Severity** | Pointer to **int32** |  | [optional] 
 **Signature** | Pointer to **string** |  | [optional] 
 **SignatureId** | Pointer to **int32** |  | [optional] 
@@ -18,7 +22,11 @@ Name | Type | Description | Notes
 **SrcAsn** | Pointer to **string** |  | [optional] 
 **SrcCountry** | Pointer to **string** |  | [optional] 
 **SrcIp** | Pointer to **string** |  | [optional] 
+**SrcIpFreq3d** | Pointer to **int32** |  | [optional] 
+**SrcIpFreq3dCanary** | Pointer to **int32** |  | [optional] 
+**SrcIpTypeFindings** | Pointer to **[]string** |  | [optional] 
 **SrcPort** | Pointer to **int32** |  | [optional] 
+**TechVertical** | Pointer to **[]string** |  | [optional] 
 **Timestamp** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -39,6 +47,56 @@ will change when the set of required properties is changed
 NewApiVulnCheckCanaryWithDefaults instantiates a new ApiVulnCheckCanary object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetC2Frequency3d
+
+`func (o *ApiVulnCheckCanary) GetC2Frequency3d() []ApiC2Frequency`
+
+GetC2Frequency3d returns the C2Frequency3d field if non-nil, zero value otherwise.
+
+### GetC2Frequency3dOk
+
+`func (o *ApiVulnCheckCanary) GetC2Frequency3dOk() (*[]ApiC2Frequency, bool)`
+
+GetC2Frequency3dOk returns a tuple with the C2Frequency3d field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetC2Frequency3d
+
+`func (o *ApiVulnCheckCanary) SetC2Frequency3d(v []ApiC2Frequency)`
+
+SetC2Frequency3d sets C2Frequency3d field to given value.
+
+### HasC2Frequency3d
+
+`func (o *ApiVulnCheckCanary) HasC2Frequency3d() bool`
+
+HasC2Frequency3d returns a boolean if a field has been set.
+
+### GetC2Location
+
+`func (o *ApiVulnCheckCanary) GetC2Location() []string`
+
+GetC2Location returns the C2Location field if non-nil, zero value otherwise.
+
+### GetC2LocationOk
+
+`func (o *ApiVulnCheckCanary) GetC2LocationOk() (*[]string, bool)`
+
+GetC2LocationOk returns a tuple with the C2Location field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetC2Location
+
+`func (o *ApiVulnCheckCanary) SetC2Location(v []string)`
+
+SetC2Location sets C2Location field to given value.
+
+### HasC2Location
+
+`func (o *ApiVulnCheckCanary) HasC2Location() bool`
+
+HasC2Location returns a boolean if a field has been set.
 
 ### GetCategory
 
@@ -189,6 +247,56 @@ SetPayload sets Payload field to given value.
 `func (o *ApiVulnCheckCanary) HasPayload() bool`
 
 HasPayload returns a boolean if a field has been set.
+
+### GetPayloadTlsh
+
+`func (o *ApiVulnCheckCanary) GetPayloadTlsh() string`
+
+GetPayloadTlsh returns the PayloadTlsh field if non-nil, zero value otherwise.
+
+### GetPayloadTlshOk
+
+`func (o *ApiVulnCheckCanary) GetPayloadTlshOk() (*string, bool)`
+
+GetPayloadTlshOk returns a tuple with the PayloadTlsh field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTlsh
+
+`func (o *ApiVulnCheckCanary) SetPayloadTlsh(v string)`
+
+SetPayloadTlsh sets PayloadTlsh field to given value.
+
+### HasPayloadTlsh
+
+`func (o *ApiVulnCheckCanary) HasPayloadTlsh() bool`
+
+HasPayloadTlsh returns a boolean if a field has been set.
+
+### GetPayloadTooling
+
+`func (o *ApiVulnCheckCanary) GetPayloadTooling() []string`
+
+GetPayloadTooling returns the PayloadTooling field if non-nil, zero value otherwise.
+
+### GetPayloadToolingOk
+
+`func (o *ApiVulnCheckCanary) GetPayloadToolingOk() (*[]string, bool)`
+
+GetPayloadToolingOk returns a tuple with the PayloadTooling field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTooling
+
+`func (o *ApiVulnCheckCanary) SetPayloadTooling(v []string)`
+
+SetPayloadTooling sets PayloadTooling field to given value.
+
+### HasPayloadTooling
+
+`func (o *ApiVulnCheckCanary) HasPayloadTooling() bool`
+
+HasPayloadTooling returns a boolean if a field has been set.
 
 ### GetSeverity
 
@@ -390,6 +498,81 @@ SetSrcIp sets SrcIp field to given value.
 
 HasSrcIp returns a boolean if a field has been set.
 
+### GetSrcIpFreq3d
+
+`func (o *ApiVulnCheckCanary) GetSrcIpFreq3d() int32`
+
+GetSrcIpFreq3d returns the SrcIpFreq3d field if non-nil, zero value otherwise.
+
+### GetSrcIpFreq3dOk
+
+`func (o *ApiVulnCheckCanary) GetSrcIpFreq3dOk() (*int32, bool)`
+
+GetSrcIpFreq3dOk returns a tuple with the SrcIpFreq3d field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcIpFreq3d
+
+`func (o *ApiVulnCheckCanary) SetSrcIpFreq3d(v int32)`
+
+SetSrcIpFreq3d sets SrcIpFreq3d field to given value.
+
+### HasSrcIpFreq3d
+
+`func (o *ApiVulnCheckCanary) HasSrcIpFreq3d() bool`
+
+HasSrcIpFreq3d returns a boolean if a field has been set.
+
+### GetSrcIpFreq3dCanary
+
+`func (o *ApiVulnCheckCanary) GetSrcIpFreq3dCanary() int32`
+
+GetSrcIpFreq3dCanary returns the SrcIpFreq3dCanary field if non-nil, zero value otherwise.
+
+### GetSrcIpFreq3dCanaryOk
+
+`func (o *ApiVulnCheckCanary) GetSrcIpFreq3dCanaryOk() (*int32, bool)`
+
+GetSrcIpFreq3dCanaryOk returns a tuple with the SrcIpFreq3dCanary field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcIpFreq3dCanary
+
+`func (o *ApiVulnCheckCanary) SetSrcIpFreq3dCanary(v int32)`
+
+SetSrcIpFreq3dCanary sets SrcIpFreq3dCanary field to given value.
+
+### HasSrcIpFreq3dCanary
+
+`func (o *ApiVulnCheckCanary) HasSrcIpFreq3dCanary() bool`
+
+HasSrcIpFreq3dCanary returns a boolean if a field has been set.
+
+### GetSrcIpTypeFindings
+
+`func (o *ApiVulnCheckCanary) GetSrcIpTypeFindings() []string`
+
+GetSrcIpTypeFindings returns the SrcIpTypeFindings field if non-nil, zero value otherwise.
+
+### GetSrcIpTypeFindingsOk
+
+`func (o *ApiVulnCheckCanary) GetSrcIpTypeFindingsOk() (*[]string, bool)`
+
+GetSrcIpTypeFindingsOk returns a tuple with the SrcIpTypeFindings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcIpTypeFindings
+
+`func (o *ApiVulnCheckCanary) SetSrcIpTypeFindings(v []string)`
+
+SetSrcIpTypeFindings sets SrcIpTypeFindings field to given value.
+
+### HasSrcIpTypeFindings
+
+`func (o *ApiVulnCheckCanary) HasSrcIpTypeFindings() bool`
+
+HasSrcIpTypeFindings returns a boolean if a field has been set.
+
 ### GetSrcPort
 
 `func (o *ApiVulnCheckCanary) GetSrcPort() int32`
@@ -414,6 +597,31 @@ SetSrcPort sets SrcPort field to given value.
 `func (o *ApiVulnCheckCanary) HasSrcPort() bool`
 
 HasSrcPort returns a boolean if a field has been set.
+
+### GetTechVertical
+
+`func (o *ApiVulnCheckCanary) GetTechVertical() []string`
+
+GetTechVertical returns the TechVertical field if non-nil, zero value otherwise.
+
+### GetTechVerticalOk
+
+`func (o *ApiVulnCheckCanary) GetTechVerticalOk() (*[]string, bool)`
+
+GetTechVerticalOk returns a tuple with the TechVertical field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTechVertical
+
+`func (o *ApiVulnCheckCanary) SetTechVertical(v []string)`
+
+SetTechVertical sets TechVertical field to given value.
+
+### HasTechVertical
+
+`func (o *ApiVulnCheckCanary) HasTechVertical() bool`
+
+HasTechVertical returns a boolean if a field has been set.
 
 ### GetTimestamp
 

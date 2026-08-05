@@ -20,9 +20,9 @@ var _ MappedNullable = &ApiHTTPDetails{}
 
 // ApiHTTPDetails api.HTTPDetails
 type ApiHTTPDetails struct {
+	HttpMethod *string `json:"http_method,omitempty"`
 	HttpRequestBody *string `json:"http_request_body,omitempty"`
 	HttpUserAgent *string `json:"http_user_agent,omitempty"`
-	Method *string `json:"method,omitempty"`
 	Protocol *string `json:"protocol,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
@@ -42,6 +42,38 @@ func NewApiHTTPDetails() *ApiHTTPDetails {
 func NewApiHTTPDetailsWithDefaults() *ApiHTTPDetails {
 	this := ApiHTTPDetails{}
 	return &this
+}
+
+// GetHttpMethod returns the HttpMethod field value if set, zero value otherwise.
+func (o *ApiHTTPDetails) GetHttpMethod() string {
+	if o == nil || IsNil(o.HttpMethod) {
+		var ret string
+		return ret
+	}
+	return *o.HttpMethod
+}
+
+// GetHttpMethodOk returns a tuple with the HttpMethod field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiHTTPDetails) GetHttpMethodOk() (*string, bool) {
+	if o == nil || IsNil(o.HttpMethod) {
+		return nil, false
+	}
+	return o.HttpMethod, true
+}
+
+// HasHttpMethod returns a boolean if a field has been set.
+func (o *ApiHTTPDetails) HasHttpMethod() bool {
+	if o != nil && !IsNil(o.HttpMethod) {
+		return true
+	}
+
+	return false
+}
+
+// SetHttpMethod gets a reference to the given string and assigns it to the HttpMethod field.
+func (o *ApiHTTPDetails) SetHttpMethod(v string) {
+	o.HttpMethod = &v
 }
 
 // GetHttpRequestBody returns the HttpRequestBody field value if set, zero value otherwise.
@@ -106,38 +138,6 @@ func (o *ApiHTTPDetails) HasHttpUserAgent() bool {
 // SetHttpUserAgent gets a reference to the given string and assigns it to the HttpUserAgent field.
 func (o *ApiHTTPDetails) SetHttpUserAgent(v string) {
 	o.HttpUserAgent = &v
-}
-
-// GetMethod returns the Method field value if set, zero value otherwise.
-func (o *ApiHTTPDetails) GetMethod() string {
-	if o == nil || IsNil(o.Method) {
-		var ret string
-		return ret
-	}
-	return *o.Method
-}
-
-// GetMethodOk returns a tuple with the Method field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *ApiHTTPDetails) GetMethodOk() (*string, bool) {
-	if o == nil || IsNil(o.Method) {
-		return nil, false
-	}
-	return o.Method, true
-}
-
-// HasMethod returns a boolean if a field has been set.
-func (o *ApiHTTPDetails) HasMethod() bool {
-	if o != nil && !IsNil(o.Method) {
-		return true
-	}
-
-	return false
-}
-
-// SetMethod gets a reference to the given string and assigns it to the Method field.
-func (o *ApiHTTPDetails) SetMethod(v string) {
-	o.Method = &v
 }
 
 // GetProtocol returns the Protocol field value if set, zero value otherwise.
@@ -214,14 +214,14 @@ func (o ApiHTTPDetails) MarshalJSON() ([]byte, error) {
 
 func (o ApiHTTPDetails) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.HttpMethod) {
+		toSerialize["http_method"] = o.HttpMethod
+	}
 	if !IsNil(o.HttpRequestBody) {
 		toSerialize["http_request_body"] = o.HttpRequestBody
 	}
 	if !IsNil(o.HttpUserAgent) {
 		toSerialize["http_user_agent"] = o.HttpUserAgent
-	}
-	if !IsNil(o.Method) {
-		toSerialize["method"] = o.Method
 	}
 	if !IsNil(o.Protocol) {
 		toSerialize["protocol"] = o.Protocol

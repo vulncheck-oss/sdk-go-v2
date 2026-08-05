@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Artifacts** | Pointer to [**[]ApiInitialAccessArtifact**](ApiInitialAccessArtifact.md) | Artifacts holds the set of available artifacts for this vulnerability, such as exploit, shodan queries, PCAP traces, and others. | [optional] 
 **Cve** | Pointer to **string** | CVE identifier for the given initial access record. | [optional] 
+**Id** | Pointer to **string** | ID is the unique identifier for this initial access record. | [optional] 
 **InKEV** | Pointer to **bool** | InKEV is true if this artifact is in CISA&#39;s Known Exploited Vulnerabilities (KEV) data set; otherwise, false. | [optional] 
 **InVCKEV** | Pointer to **bool** | InVCKEV is true if this artifact is in VulnCheck&#39;s Known Exploited Vulnerabilities (VCKEV) data set; otherwise, false. | [optional] 
 **VulnerableCpes** | Pointer to **[]string** | VulnerableCPEs is the list of vulnerable CPE strings associated with this CVE and artifact(s). | [optional] 
@@ -78,6 +79,31 @@ SetCve sets Cve field to given value.
 `func (o *ApiInitialAccess) HasCve() bool`
 
 HasCve returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *ApiInitialAccess) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *ApiInitialAccess) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *ApiInitialAccess) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *ApiInitialAccess) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetInKEV
 

@@ -24,6 +24,8 @@ type ApiInitialAccess struct {
 	Artifacts []ApiInitialAccessArtifact `json:"artifacts,omitempty"`
 	// CVE identifier for the given initial access record.
 	Cve *string `json:"cve,omitempty"`
+	// ID is the unique identifier for this initial access record.
+	Id *string `json:"id,omitempty"`
 	// InKEV is true if this artifact is in CISA's Known Exploited Vulnerabilities (KEV) data set; otherwise, false.
 	InKEV *bool `json:"inKEV,omitempty"`
 	// InVCKEV is true if this artifact is in VulnCheck's Known Exploited Vulnerabilities (VCKEV) data set; otherwise, false.
@@ -111,6 +113,38 @@ func (o *ApiInitialAccess) HasCve() bool {
 // SetCve gets a reference to the given string and assigns it to the Cve field.
 func (o *ApiInitialAccess) SetCve(v string) {
 	o.Cve = &v
+}
+
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *ApiInitialAccess) GetId() string {
+	if o == nil || IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
+}
+
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiInitialAccess) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
+}
+
+// HasId returns a boolean if a field has been set.
+func (o *ApiInitialAccess) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
+		return true
+	}
+
+	return false
+}
+
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *ApiInitialAccess) SetId(v string) {
+	o.Id = &v
 }
 
 // GetInKEV returns the InKEV field value if set, zero value otherwise.
@@ -224,6 +258,9 @@ func (o ApiInitialAccess) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Cve) {
 		toSerialize["cve"] = o.Cve
+	}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
 	}
 	if !IsNil(o.InKEV) {
 		toSerialize["inKEV"] = o.InKEV

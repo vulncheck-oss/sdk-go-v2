@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**HttpMethod** | Pointer to **string** |  | [optional] 
 **HttpRequestBody** | Pointer to **string** |  | [optional] 
 **HttpUserAgent** | Pointer to **string** |  | [optional] 
-**Method** | Pointer to **string** |  | [optional] 
 **Protocol** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 
@@ -28,6 +28,31 @@ will change when the set of required properties is changed
 NewApiHTTPDetailsWithDefaults instantiates a new ApiHTTPDetails object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetHttpMethod
+
+`func (o *ApiHTTPDetails) GetHttpMethod() string`
+
+GetHttpMethod returns the HttpMethod field if non-nil, zero value otherwise.
+
+### GetHttpMethodOk
+
+`func (o *ApiHTTPDetails) GetHttpMethodOk() (*string, bool)`
+
+GetHttpMethodOk returns a tuple with the HttpMethod field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHttpMethod
+
+`func (o *ApiHTTPDetails) SetHttpMethod(v string)`
+
+SetHttpMethod sets HttpMethod field to given value.
+
+### HasHttpMethod
+
+`func (o *ApiHTTPDetails) HasHttpMethod() bool`
+
+HasHttpMethod returns a boolean if a field has been set.
 
 ### GetHttpRequestBody
 
@@ -78,31 +103,6 @@ SetHttpUserAgent sets HttpUserAgent field to given value.
 `func (o *ApiHTTPDetails) HasHttpUserAgent() bool`
 
 HasHttpUserAgent returns a boolean if a field has been set.
-
-### GetMethod
-
-`func (o *ApiHTTPDetails) GetMethod() string`
-
-GetMethod returns the Method field if non-nil, zero value otherwise.
-
-### GetMethodOk
-
-`func (o *ApiHTTPDetails) GetMethodOk() (*string, bool)`
-
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMethod
-
-`func (o *ApiHTTPDetails) SetMethod(v string)`
-
-SetMethod sets Method field to given value.
-
-### HasMethod
-
-`func (o *ApiHTTPDetails) HasMethod() bool`
-
-HasMethod returns a boolean if a field has been set.
 
 ### GetProtocol
 
