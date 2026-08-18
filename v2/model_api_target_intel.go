@@ -24,11 +24,14 @@ type ApiTargetIntel struct {
 	AsName *string `json:"as_name,omitempty"`
 	Asn *string `json:"asn,omitempty"`
 	Classifications []string `json:"classifications,omitempty"`
+	// Deprecated: use Summary.ContainsCVE instead.
 	ContainsCve *bool `json:"contains_cve,omitempty"`
 	Country *string `json:"country,omitempty"`
 	CountryCode *string `json:"country_code,omitempty"`
 	Cpe []string `json:"cpe,omitempty"`
+	// Deprecated: use Fingerprints[].CVEs for per-fingerprint attribution, or Summary for the aggregate count.
 	Cve []string `json:"cve,omitempty"`
+	// Deprecated: use Fingerprints[].CVEs for per-fingerprint attribution, or Summary for the aggregate confirmed count.
 	CveConfirmed []ApiCVEConfirmed `json:"cve_confirmed,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Fingerprints []ApiFingerprint `json:"fingerprints,omitempty"`
@@ -38,6 +41,7 @@ type ApiTargetIntel struct {
 	Port *int32 `json:"port,omitempty"`
 	Product []string `json:"product,omitempty"`
 	Protocol *string `json:"protocol,omitempty"`
+	Summary *ApiTargetIntelSummary `json:"summary,omitempty"`
 	Timestamp *string `json:"timestamp,omitempty"`
 	Transport *string `json:"transport,omitempty"`
 	Vendor []string `json:"vendor,omitempty"`
@@ -637,6 +641,38 @@ func (o *ApiTargetIntel) SetProtocol(v string) {
 	o.Protocol = &v
 }
 
+// GetSummary returns the Summary field value if set, zero value otherwise.
+func (o *ApiTargetIntel) GetSummary() ApiTargetIntelSummary {
+	if o == nil || IsNil(o.Summary) {
+		var ret ApiTargetIntelSummary
+		return ret
+	}
+	return *o.Summary
+}
+
+// GetSummaryOk returns a tuple with the Summary field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiTargetIntel) GetSummaryOk() (*ApiTargetIntelSummary, bool) {
+	if o == nil || IsNil(o.Summary) {
+		return nil, false
+	}
+	return o.Summary, true
+}
+
+// HasSummary returns a boolean if a field has been set.
+func (o *ApiTargetIntel) HasSummary() bool {
+	if o != nil && !IsNil(o.Summary) {
+		return true
+	}
+
+	return false
+}
+
+// SetSummary gets a reference to the given ApiTargetIntelSummary and assigns it to the Summary field.
+func (o *ApiTargetIntel) SetSummary(v ApiTargetIntelSummary) {
+	o.Summary = &v
+}
+
 // GetTimestamp returns the Timestamp field value if set, zero value otherwise.
 func (o *ApiTargetIntel) GetTimestamp() string {
 	if o == nil || IsNil(o.Timestamp) {
@@ -828,6 +864,9 @@ func (o ApiTargetIntel) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Protocol) {
 		toSerialize["protocol"] = o.Protocol
+	}
+	if !IsNil(o.Summary) {
+		toSerialize["summary"] = o.Summary
 	}
 	if !IsNil(o.Timestamp) {
 		toSerialize["timestamp"] = o.Timestamp

@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Affected** | Pointer to [**[]ApiNVD20Affected**](ApiNVD20Affected.md) |  | [optional] 
 **CisaActionDue** | Pointer to **string** |  | [optional] 
 **CisaExploitAdd** | Pointer to **string** |  | [optional] 
 **CisaRequiredAction** | Pointer to **string** |  | [optional] 
 **CisaVulnerabilityName** | Pointer to **string** |  | [optional] 
 **Configurations** | Pointer to [**[]AdvisoryNVD20Configuration**](AdvisoryNVD20Configuration.md) |  | [optional] 
+**CveTags** | Pointer to [**[]ApiNVD20CVETag**](ApiNVD20CVETag.md) |  | [optional] 
 **Descriptions** | Pointer to [**[]ApiNVD20Description**](ApiNVD20Description.md) |  | [optional] 
 **EvaluatorComment** | Pointer to **string** |  | [optional] 
 **EvaluatorImpact** | Pointer to **string** |  | [optional] 
@@ -43,6 +45,31 @@ will change when the set of required properties is changed
 NewApiNVD20CVEWithDefaults instantiates a new ApiNVD20CVE object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAffected
+
+`func (o *ApiNVD20CVE) GetAffected() []ApiNVD20Affected`
+
+GetAffected returns the Affected field if non-nil, zero value otherwise.
+
+### GetAffectedOk
+
+`func (o *ApiNVD20CVE) GetAffectedOk() (*[]ApiNVD20Affected, bool)`
+
+GetAffectedOk returns a tuple with the Affected field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffected
+
+`func (o *ApiNVD20CVE) SetAffected(v []ApiNVD20Affected)`
+
+SetAffected sets Affected field to given value.
+
+### HasAffected
+
+`func (o *ApiNVD20CVE) HasAffected() bool`
+
+HasAffected returns a boolean if a field has been set.
 
 ### GetCisaActionDue
 
@@ -168,6 +195,31 @@ SetConfigurations sets Configurations field to given value.
 `func (o *ApiNVD20CVE) HasConfigurations() bool`
 
 HasConfigurations returns a boolean if a field has been set.
+
+### GetCveTags
+
+`func (o *ApiNVD20CVE) GetCveTags() []ApiNVD20CVETag`
+
+GetCveTags returns the CveTags field if non-nil, zero value otherwise.
+
+### GetCveTagsOk
+
+`func (o *ApiNVD20CVE) GetCveTagsOk() (*[]ApiNVD20CVETag, bool)`
+
+GetCveTagsOk returns a tuple with the CveTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCveTags
+
+`func (o *ApiNVD20CVE) SetCveTags(v []ApiNVD20CVETag)`
+
+SetCveTags sets CveTags field to given value.
+
+### HasCveTags
+
+`func (o *ApiNVD20CVE) HasCveTags() bool`
+
+HasCveTags returns a boolean if a field has been set.
 
 ### GetDescriptions
 

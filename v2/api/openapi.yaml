@@ -374,6 +374,7 @@ paths:
           - nist-nvd
           - nist-nvd2
           - nist-nvd2-cpematch
+          - nist-nvd2-cvehist
           - nist-nvd2-sources
           - node-security
           - nodejs
@@ -76864,6 +76865,245 @@ paths:
       summary: Return vulnerability data stored in index "nist-nvd2-cpematch"
       tags:
       - indices
+  /v3/index/nist-nvd2-cvehist:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the nist-nvd2-cvehist index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Change History of NIST NVD 2.0 CVE Data
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/nist-nvd2-cvehist?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/nist-nvd2-cvehist?cursor=<next_cursor_id>`
+      operationId: index_nist-nvd2-cvehist_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_NVD20Change-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "nist-nvd2-cvehist"
+      tags:
+      - indices
   /v3/index/nist-nvd2-sources:
     get:
       description: |
@@ -122974,9 +123214,7 @@ components:
             value: value
           - lang: lang
             value: value
-        source:
-        - 2
-        - 2
+        source: "{}"
         title: title
         affected:
         - product: product
@@ -123372,10 +123610,7 @@ components:
           type: array
           uniqueItems: false
         source:
-          items:
-            type: integer
-          type: array
-          uniqueItems: false
+          type: object
         tags:
           items:
             type: string
@@ -129701,7 +129936,7 @@ components:
               - vulnerabilitylookup_history
             vulnId: vulnId
             dateRejected: dateRejected
-            serial: 7
+            serial: 2
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -130312,9 +130547,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -130772,9 +131005,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -132321,9 +132552,7 @@ components:
               value: value
             - lang: lang
               value: value
-          source:
-          - 2
-          - 2
+          source: "{}"
           title: title
           affected:
           - product: product
@@ -132781,9 +133010,7 @@ components:
               value: value
             - lang: lang
               value: value
-          source:
-          - 2
-          - 2
+          source: "{}"
           title: title
           affected:
           - product: product
@@ -133137,7 +133364,7 @@ components:
           - vulnerabilitylookup_history
         vulnId: vulnId
         dateRejected: dateRejected
-        serial: 7
+        serial: 2
         requesterUserId: requesterUserId
         assignerOrgId: assignerOrgId
         cveId: cveId
@@ -133187,7 +133414,7 @@ components:
             - vulnerabilitylookup_history
           vulnId: vulnId
           dateRejected: dateRejected
-          serial: 7
+          serial: 2
           requesterUserId: requesterUserId
           assignerOrgId: assignerOrgId
           cveId: cveId
@@ -133798,9 +134025,7 @@ components:
                 value: value
               - lang: lang
                 value: value
-            source:
-            - 2
-            - 2
+            source: "{}"
             title: title
             affected:
             - product: product
@@ -134258,9 +134483,7 @@ components:
                 value: value
               - lang: lang
                 value: value
-            source:
-            - 2
-            - 2
+            source: "{}"
             title: title
             affected:
             - product: product
@@ -136622,6 +136845,7 @@ components:
           release: release
           arch: arch
           version: version
+        source_name: source_name
       properties:
         binary:
           type: boolean
@@ -136641,6 +136865,14 @@ components:
           items:
             $ref: '#/components/schemas/advisory.SecFix'
           type: array
+        source_name:
+          description: |-
+            SourceName is the source (SRPM) package this binary was built from, when it
+            differs from Name. Distros whose advisories key fixes by source name (e.g.
+            CBL-Mariner/Azure Linux OVAL: source "python-jinja2" → binary
+            "python3-jinja2") need it to attach a source-keyed fix to the binary purl a
+            customer actually queries. Empty when unknown or equal to Name.
+          type: string
         versions:
           items:
             $ref: '#/components/schemas/advisory.DistroVersion'
@@ -141426,6 +141658,7 @@ components:
         - cve
         - cve
         notes: notes
+        updated_at: updated_at
         dueDate: dueDate
         vendorProject: vendorProject
         knownRansomwareCampaignUse: knownRansomwareCampaignUse
@@ -141458,6 +141691,8 @@ components:
         requiredAction:
           type: string
         shortDescription:
+          type: string
+        updated_at:
           type: string
         vendorProject:
           type: string
@@ -142315,9 +142550,7 @@ components:
             value: value
           - lang: lang
             value: value
-        source:
-        - 6
-        - 6
+        source: "{}"
         title: title
         affected:
         - product: product
@@ -142733,10 +142966,7 @@ components:
           type: array
           uniqueItems: false
         source:
-          items:
-            type: integer
-          type: array
-          uniqueItems: false
+          type: object
         tags:
           items:
             type: string
@@ -142889,9 +143119,7 @@ components:
               value: value
             - lang: lang
               value: value
-          source:
-          - 6
-          - 6
+          source: "{}"
           title: title
           affected:
           - product: product
@@ -143356,9 +143584,7 @@ components:
               value: value
             - lang: lang
               value: value
-          source:
-          - 2
-          - 2
+          source: "{}"
           title: title
           affected:
           - product: product
@@ -143816,9 +144042,7 @@ components:
               value: value
             - lang: lang
               value: value
-          source:
-          - 2
-          - 2
+          source: "{}"
           title: title
           affected:
           - product: product
@@ -144166,7 +144390,7 @@ components:
       example:
         datePublished: datePublished
         dateRejected: dateRejected
-        serial: 1
+        serial: 6
         requesterUserId: requesterUserId
         assignerOrgId: assignerOrgId
         cveId: cveId
@@ -147469,7 +147693,7 @@ components:
           cveMetadata:
             datePublished: datePublished
             dateRejected: dateRejected
-            serial: 1
+            serial: 6
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -147607,9 +147831,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 6
-              - 6
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -148074,9 +148296,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -148534,9 +148754,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -148902,7 +149120,7 @@ components:
         cveMetadata:
           datePublished: datePublished
           dateRejected: dateRejected
-          serial: 1
+          serial: 6
           requesterUserId: requesterUserId
           assignerOrgId: assignerOrgId
           cveId: cveId
@@ -149040,9 +149258,7 @@ components:
                 value: value
               - lang: lang
                 value: value
-            source:
-            - 6
-            - 6
+            source: "{}"
             title: title
             affected:
             - product: product
@@ -149507,9 +149723,7 @@ components:
                 value: value
               - lang: lang
                 value: value
-            source:
-            - 2
-            - 2
+            source: "{}"
             title: title
             affected:
             - product: product
@@ -149967,9 +150181,7 @@ components:
                 value: value
               - lang: lang
                 value: value
-            source:
-            - 2
-            - 2
+            source: "{}"
             title: title
             affected:
             - product: product
@@ -150452,7 +150664,7 @@ components:
           cveMetadata:
             datePublished: datePublished
             dateRejected: dateRejected
-            serial: 1
+            serial: 6
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -150590,9 +150802,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 6
-              - 6
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -151057,9 +151267,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -151517,9 +151725,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -164912,7 +165118,7 @@ components:
           cveMetadata:
             datePublished: datePublished
             dateRejected: dateRejected
-            serial: 1
+            serial: 6
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -165050,9 +165256,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 6
-              - 6
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -165517,9 +165721,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -165977,9 +166179,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -166457,6 +166657,7 @@ components:
         cve:
         - cve
         - cve
+        updated_at: updated_at
         vulncheck_xdb:
         - exploit_type: exploit_type
           xdb_id: xdb_id
@@ -166498,6 +166699,8 @@ components:
         required_action:
           type: string
         shortDescription:
+          type: string
+        updated_at:
           type: string
         vendorProject:
           type: string
@@ -166636,7 +166839,7 @@ components:
           cveMetadata:
             datePublished: datePublished
             dateRejected: dateRejected
-            serial: 1
+            serial: 6
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -166774,9 +166977,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 6
-              - 6
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -167377,7 +167578,7 @@ components:
         cveMetadata:
           datePublished: datePublished
           dateRejected: dateRejected
-          serial: 1
+          serial: 6
           requesterUserId: requesterUserId
           assignerOrgId: assignerOrgId
           cveId: cveId
@@ -167515,9 +167716,7 @@ components:
                 value: value
               - lang: lang
                 value: value
-            source:
-            - 6
-            - 6
+            source: "{}"
             title: title
             affected:
             - product: product
@@ -168238,9 +168437,7 @@ components:
               value: value
             - lang: lang
               value: value
-          source:
-          - 6
-          - 6
+          source: "{}"
           title: title
           affected:
           - product: product
@@ -171393,6 +171590,7 @@ components:
           url: url
           exploit_availability: exploit_availability
           exploit_maturity: exploit_maturity
+          validation_level: validation_level
         - exploit_type: exploit_type
           date_added: date_added
           refsource: refsource
@@ -171404,6 +171602,7 @@ components:
           url: url
           exploit_availability: exploit_availability
           exploit_maturity: exploit_maturity
+          validation_level: validation_level
         commercial_exploit_found: true
         date_added: date_added
         reported_exploited_by_ransomware: true
@@ -171613,9 +171812,20 @@ components:
         vendor: vendor
         cpe: cpe
         version: version
+        cves:
+        - cve_id: cve_id
+          confirmed: true
+        - cve_id: cve_id
+          confirmed: true
       properties:
         cpe:
           type: string
+        cves:
+          description: CVEs attributed to this specific fingerprint's CPE.
+          items:
+            $ref: '#/components/schemas/api.CVEConfirmed'
+          type: array
+          uniqueItems: false
         product:
           type: string
         vendor:
@@ -172728,6 +172938,245 @@ components:
           type: string
         mitigation_url:
           type: string
+    api.NVD20Affected:
+      description: api.NVD20Affected
+      example:
+        source: source
+        affectedData:
+        - product: product
+          repo: repo
+          programFiles:
+          - programFiles
+          - programFiles
+          modules:
+          - modules
+          - modules
+          platforms:
+          - platforms
+          - platforms
+          defaultStatus: defaultStatus
+          cpes:
+          - cpes
+          - cpes
+          versions:
+          - versionType: versionType
+            lessThan: lessThan
+            lessThanOrEqual: lessThanOrEqual
+            changes:
+            - at: at
+              status: status
+            - at: at
+              status: status
+            version: version
+            status: status
+          - versionType: versionType
+            lessThan: lessThan
+            lessThanOrEqual: lessThanOrEqual
+            changes:
+            - at: at
+              status: status
+            - at: at
+              status: status
+            version: version
+            status: status
+          packageURL: packageURL
+          vendor: vendor
+          programRoutines:
+          - name: name
+          - name: name
+          packageName: packageName
+          collectionURL: collectionURL
+        - product: product
+          repo: repo
+          programFiles:
+          - programFiles
+          - programFiles
+          modules:
+          - modules
+          - modules
+          platforms:
+          - platforms
+          - platforms
+          defaultStatus: defaultStatus
+          cpes:
+          - cpes
+          - cpes
+          versions:
+          - versionType: versionType
+            lessThan: lessThan
+            lessThanOrEqual: lessThanOrEqual
+            changes:
+            - at: at
+              status: status
+            - at: at
+              status: status
+            version: version
+            status: status
+          - versionType: versionType
+            lessThan: lessThan
+            lessThanOrEqual: lessThanOrEqual
+            changes:
+            - at: at
+              status: status
+            - at: at
+              status: status
+            version: version
+            status: status
+          packageURL: packageURL
+          vendor: vendor
+          programRoutines:
+          - name: name
+          - name: name
+          packageName: packageName
+          collectionURL: collectionURL
+      properties:
+        affectedData:
+          items:
+            $ref: '#/components/schemas/api.NVD20AffectedProduct'
+          type: array
+          uniqueItems: false
+        source:
+          type: string
+    api.NVD20AffectedProduct:
+      description: api.NVD20AffectedProduct
+      example:
+        product: product
+        repo: repo
+        programFiles:
+        - programFiles
+        - programFiles
+        modules:
+        - modules
+        - modules
+        platforms:
+        - platforms
+        - platforms
+        defaultStatus: defaultStatus
+        cpes:
+        - cpes
+        - cpes
+        versions:
+        - versionType: versionType
+          lessThan: lessThan
+          lessThanOrEqual: lessThanOrEqual
+          changes:
+          - at: at
+            status: status
+          - at: at
+            status: status
+          version: version
+          status: status
+        - versionType: versionType
+          lessThan: lessThan
+          lessThanOrEqual: lessThanOrEqual
+          changes:
+          - at: at
+            status: status
+          - at: at
+            status: status
+          version: version
+          status: status
+        packageURL: packageURL
+        vendor: vendor
+        programRoutines:
+        - name: name
+        - name: name
+        packageName: packageName
+        collectionURL: collectionURL
+      properties:
+        collectionURL:
+          type: string
+        cpes:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        defaultStatus:
+          description: |-
+            DefaultStatus is the status for versions not otherwise listed: one of
+            "affected", "unaffected", or "unknown".
+          type: string
+        modules:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        packageName:
+          type: string
+        packageURL:
+          type: string
+        platforms:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        product:
+          type: string
+        programFiles:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        programRoutines:
+          items:
+            $ref: '#/components/schemas/api.NVD20AffectedProgramRoutine'
+          type: array
+          uniqueItems: false
+        repo:
+          type: string
+        vendor:
+          type: string
+        versions:
+          items:
+            $ref: '#/components/schemas/api.NVD20AffectedVersion'
+          type: array
+          uniqueItems: false
+    api.NVD20AffectedProgramRoutine:
+      description: api.NVD20AffectedProgramRoutine
+      example:
+        name: name
+      properties:
+        name:
+          type: string
+    api.NVD20AffectedVersion:
+      description: api.NVD20AffectedVersion
+      example:
+        versionType: versionType
+        lessThan: lessThan
+        lessThanOrEqual: lessThanOrEqual
+        changes:
+        - at: at
+          status: status
+        - at: at
+          status: status
+        version: version
+        status: status
+      properties:
+        changes:
+          items:
+            $ref: '#/components/schemas/api.NVD20AffectedVersionChange'
+          type: array
+          uniqueItems: false
+        lessThan:
+          type: string
+        lessThanOrEqual:
+          type: string
+        status:
+          type: string
+        version:
+          type: string
+        versionType:
+          type: string
+    api.NVD20AffectedVersionChange:
+      description: api.NVD20AffectedVersionChange
+      example:
+        at: at
+        status: status
+      properties:
+        at:
+          type: string
+        status:
+          type: string
     api.NVD20CPEMatch:
       description: api.NVD20CPEMatch
       example:
@@ -172886,11 +173335,197 @@ components:
         cisaExploitAdd: cisaExploitAdd
         published: published
         vulnStatus: vulnStatus
+        affected:
+        - source: source
+          affectedData:
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
+        - source: source
+          affectedData:
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
         descriptions:
         - lang: lang
           value: value
         - lang: lang
           value: value
+        cveTags:
+        - sourceIdentifier: sourceIdentifier
+          tags:
+          - tags
+          - tags
+        - sourceIdentifier: sourceIdentifier
+          tags:
+          - tags
+          - tags
         cisaActionDue: cisaActionDue
         cisaVulnerabilityName: cisaVulnerabilityName
         vcConfigurations:
@@ -173130,6 +173765,135 @@ components:
             source: source
             impactScore: 4.145608029883936
             type: type
+          ssvcV203:
+          - ssvcData:
+              role: role
+              $schema: $schema
+              computed: computed
+              decisionTree:
+                decision_points:
+                - children:
+                  - label: label
+                    key: key
+                  - label: label
+                    key: key
+                  decision_type: decision_type
+                  options:
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  label: label
+                  key: key
+                - children:
+                  - label: label
+                    key: key
+                  - label: label
+                    key: key
+                  decision_type: decision_type
+                  options:
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  label: label
+                  key: key
+                decisions_table:
+                - - 7
+                  - 7
+                - - 7
+                  - 7
+                roles:
+                - roles
+                - roles
+                lang: lang
+                title: title
+                version: version
+              options:
+              - exploitation: exploitation
+                automatable: automatable
+                technicalImpact: technicalImpact
+              - exploitation: exploitation
+                automatable: automatable
+                technicalImpact: technicalImpact
+              generator: generator
+              id: id
+              decisionTreeUrl: decisionTreeUrl
+              version: version
+              timestamp: timestamp
+            source: source
+          - ssvcData:
+              role: role
+              $schema: $schema
+              computed: computed
+              decisionTree:
+                decision_points:
+                - children:
+                  - label: label
+                    key: key
+                  - label: label
+                    key: key
+                  decision_type: decision_type
+                  options:
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  label: label
+                  key: key
+                - children:
+                  - label: label
+                    key: key
+                  - label: label
+                    key: key
+                  decision_type: decision_type
+                  options:
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  - color: color
+                    description: description
+                    label: label
+                    key: key
+                  label: label
+                  key: key
+                decisions_table:
+                - - 7
+                  - 7
+                - - 7
+                  - 7
+                roles:
+                - roles
+                - roles
+                lang: lang
+                title: title
+                version: version
+              options:
+              - exploitation: exploitation
+                automatable: automatable
+                technicalImpact: technicalImpact
+              - exploitation: exploitation
+                automatable: automatable
+                technicalImpact: technicalImpact
+              generator: generator
+              id: id
+              decisionTreeUrl: decisionTreeUrl
+              version: version
+              timestamp: timestamp
+            source: source
           cvssMetricV40:
           - cvssData:
               modifiedSubConfidentialityImpact: modifiedSubConfidentialityImpact
@@ -173272,6 +174036,11 @@ components:
             obtainUserPrivilege: true
         evaluatorComment: evaluatorComment
       properties:
+        affected:
+          items:
+            $ref: '#/components/schemas/api.NVD20Affected'
+          type: array
+          uniqueItems: false
         cisaActionDue:
           type: string
         cisaExploitAdd:
@@ -173283,6 +174052,11 @@ components:
         configurations:
           items:
             $ref: '#/components/schemas/advisory.NVD20Configuration'
+          type: array
+          uniqueItems: false
+        cveTags:
+          items:
+            $ref: '#/components/schemas/api.NVD20CVETag'
           type: array
           uniqueItems: false
         descriptions:
@@ -173529,6 +174303,15 @@ components:
           value: value
         - lang: lang
           value: value
+        cveTags:
+        - sourceIdentifier: sourceIdentifier
+          tags:
+          - tags
+          - tags
+        - sourceIdentifier: sourceIdentifier
+          tags:
+          - tags
+          - tags
         cisaActionDue: cisaActionDue
         cisaVulnerabilityName: cisaVulnerabilityName
         STATUS: STATUS
@@ -173651,6 +174434,183 @@ components:
         evaluatorSolution: evaluatorSolution
         published: published
         vulnStatus: vulnStatus
+        affected:
+        - source: source
+          affectedData:
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
+        - source: source
+          affectedData:
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
+          - product: product
+            repo: repo
+            programFiles:
+            - programFiles
+            - programFiles
+            modules:
+            - modules
+            - modules
+            platforms:
+            - platforms
+            - platforms
+            defaultStatus: defaultStatus
+            cpes:
+            - cpes
+            - cpes
+            versions:
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            - versionType: versionType
+              lessThan: lessThan
+              lessThanOrEqual: lessThanOrEqual
+              changes:
+              - at: at
+                status: status
+              - at: at
+                status: status
+              version: version
+              status: status
+            packageURL: packageURL
+            vendor: vendor
+            programRoutines:
+            - name: name
+            - name: name
+            packageName: packageName
+            collectionURL: collectionURL
         date_added: date_added
         vulnerableCPEs:
         - vulnerableCPEs
@@ -174082,6 +175042,11 @@ components:
           description: the deep tag instructs deep.Equal to ignore this field (used
             during OpenSearch loading)
           type: string
+        affected:
+          items:
+            $ref: '#/components/schemas/api.NVD20Affected'
+          type: array
+          uniqueItems: false
         categorization:
           $ref: '#/components/schemas/api.CategorizationExtended'
         cisaActionDue:
@@ -174095,6 +175060,11 @@ components:
         configurations:
           items:
             $ref: '#/components/schemas/advisory.NVD20Configuration'
+          type: array
+          uniqueItems: false
+        cveTags:
+          items:
+            $ref: '#/components/schemas/api.NVD20CVETag'
           type: array
           uniqueItems: false
         date_added:
@@ -174166,6 +175136,82 @@ components:
             $ref: '#/components/schemas/api.NVD20WeaknessExtended'
           type: array
           uniqueItems: false
+    api.NVD20CVETag:
+      description: api.NVD20CVETag
+      example:
+        sourceIdentifier: sourceIdentifier
+        tags:
+        - tags
+        - tags
+      properties:
+        sourceIdentifier:
+          type: string
+        tags:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+    api.NVD20Change:
+      description: api.NVD20Change
+      example:
+        sourceIdentifier: sourceIdentifier
+        created: created
+        cveId: cveId
+        eventName: eventName
+        details:
+        - newValue: ""
+          oldTypes:
+          - oldTypes
+          - oldTypes
+          oldUrl: oldUrl
+          newUrl: newUrl
+          newCwes:
+          - newCwes
+          - newCwes
+          newTypes:
+          - newTypes
+          - newTypes
+          action: action
+          oldCwes:
+          - oldCwes
+          - oldCwes
+          oldValue: ""
+          type: type
+        - newValue: ""
+          oldTypes:
+          - oldTypes
+          - oldTypes
+          oldUrl: oldUrl
+          newUrl: newUrl
+          newCwes:
+          - newCwes
+          - newCwes
+          newTypes:
+          - newTypes
+          - newTypes
+          action: action
+          oldCwes:
+          - oldCwes
+          - oldCwes
+          oldValue: ""
+          type: type
+        cveChangeId: cveChangeId
+      properties:
+        created:
+          type: string
+        cveChangeId:
+          type: string
+        cveId:
+          type: string
+        details:
+          items:
+            $ref: '#/components/schemas/api.NVD20DetailsExtended'
+          type: array
+          uniqueItems: false
+        eventName:
+          type: string
+        sourceIdentifier:
+          type: string
     api.NVD20CvssDataV2:
       description: api.NVD20CvssDataV2
       example:
@@ -174485,6 +175531,58 @@ components:
           type: string
         value:
           type: string
+    api.NVD20DetailsExtended:
+      description: api.NVD20DetailsExtended
+      example:
+        newValue: ""
+        oldTypes:
+        - oldTypes
+        - oldTypes
+        oldUrl: oldUrl
+        newUrl: newUrl
+        newCwes:
+        - newCwes
+        - newCwes
+        newTypes:
+        - newTypes
+        - newTypes
+        action: action
+        oldCwes:
+        - oldCwes
+        - oldCwes
+        oldValue: ""
+        type: type
+      properties:
+        action:
+          type: string
+        newCwes:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        newTypes:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        newUrl:
+          type: string
+        newValue: {}
+        oldCwes:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        oldTypes:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        oldUrl:
+          type: string
+        oldValue: {}
+        type:
+          type: string
     api.NVD20Metric:
       description: api.NVD20Metric
       example:
@@ -174630,6 +175728,135 @@ components:
           source: source
           impactScore: 4.145608029883936
           type: type
+        ssvcV203:
+        - ssvcData:
+            role: role
+            $schema: $schema
+            computed: computed
+            decisionTree:
+              decision_points:
+              - children:
+                - label: label
+                  key: key
+                - label: label
+                  key: key
+                decision_type: decision_type
+                options:
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                label: label
+                key: key
+              - children:
+                - label: label
+                  key: key
+                - label: label
+                  key: key
+                decision_type: decision_type
+                options:
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                label: label
+                key: key
+              decisions_table:
+              - - 7
+                - 7
+              - - 7
+                - 7
+              roles:
+              - roles
+              - roles
+              lang: lang
+              title: title
+              version: version
+            options:
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+            generator: generator
+            id: id
+            decisionTreeUrl: decisionTreeUrl
+            version: version
+            timestamp: timestamp
+          source: source
+        - ssvcData:
+            role: role
+            $schema: $schema
+            computed: computed
+            decisionTree:
+              decision_points:
+              - children:
+                - label: label
+                  key: key
+                - label: label
+                  key: key
+                decision_type: decision_type
+                options:
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                label: label
+                key: key
+              - children:
+                - label: label
+                  key: key
+                - label: label
+                  key: key
+                decision_type: decision_type
+                options:
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                - color: color
+                  description: description
+                  label: label
+                  key: key
+                label: label
+                key: key
+              decisions_table:
+              - - 7
+                - 7
+              - - 7
+                - 7
+              roles:
+              - roles
+              - roles
+              lang: lang
+              title: title
+              version: version
+            options:
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+            generator: generator
+            id: id
+            decisionTreeUrl: decisionTreeUrl
+            version: version
+            timestamp: timestamp
+          source: source
         cvssMetricV40:
         - cvssData:
             modifiedSubConfidentialityImpact: modifiedSubConfidentialityImpact
@@ -174789,6 +176016,11 @@ components:
         cvssMetricV40:
           items:
             $ref: '#/components/schemas/api.NVD20CvssMetricV40'
+          type: array
+          uniqueItems: false
+        ssvcV203:
+          items:
+            $ref: '#/components/schemas/api.NVD20SsvcMetricV203'
           type: array
           uniqueItems: false
     api.NVD20MetricExtended:
@@ -175321,6 +176553,320 @@ components:
           uniqueItems: false
         url:
           type: string
+    api.NVD20SsvcDataV203:
+      description: api.NVD20SsvcDataV203
+      example:
+        role: role
+        $schema: $schema
+        computed: computed
+        decisionTree:
+          decision_points:
+          - children:
+            - label: label
+              key: key
+            - label: label
+              key: key
+            decision_type: decision_type
+            options:
+            - color: color
+              description: description
+              label: label
+              key: key
+            - color: color
+              description: description
+              label: label
+              key: key
+            label: label
+            key: key
+          - children:
+            - label: label
+              key: key
+            - label: label
+              key: key
+            decision_type: decision_type
+            options:
+            - color: color
+              description: description
+              label: label
+              key: key
+            - color: color
+              description: description
+              label: label
+              key: key
+            label: label
+            key: key
+          decisions_table:
+          - - 7
+            - 7
+          - - 7
+            - 7
+          roles:
+          - roles
+          - roles
+          lang: lang
+          title: title
+          version: version
+        options:
+        - exploitation: exploitation
+          automatable: automatable
+          technicalImpact: technicalImpact
+        - exploitation: exploitation
+          automatable: automatable
+          technicalImpact: technicalImpact
+        generator: generator
+        id: id
+        decisionTreeUrl: decisionTreeUrl
+        version: version
+        timestamp: timestamp
+      properties:
+        $schema:
+          type: string
+        computed:
+          type: string
+        decisionTree:
+          $ref: '#/components/schemas/api.NVD20SsvcDecisionTree'
+        decisionTreeUrl:
+          type: string
+        generator:
+          type: string
+        id:
+          type: string
+        options:
+          items:
+            $ref: '#/components/schemas/api.NVD20SsvcOption'
+          type: array
+          uniqueItems: false
+        role:
+          type: string
+        timestamp:
+          type: string
+        version:
+          type: string
+    api.NVD20SsvcDecisionPoint:
+      description: api.NVD20SsvcDecisionPoint
+      example:
+        children:
+        - label: label
+          key: key
+        - label: label
+          key: key
+        decision_type: decision_type
+        options:
+        - color: color
+          description: description
+          label: label
+          key: key
+        - color: color
+          description: description
+          label: label
+          key: key
+        label: label
+        key: key
+      properties:
+        children:
+          items:
+            $ref: '#/components/schemas/api.NVD20SsvcDecisionPointChild'
+          type: array
+          uniqueItems: false
+        decision_type:
+          type: string
+        key:
+          type: string
+        label:
+          type: string
+        options:
+          items:
+            $ref: '#/components/schemas/api.NVD20SsvcDecisionPointOption'
+          type: array
+          uniqueItems: false
+    api.NVD20SsvcDecisionPointChild:
+      description: api.NVD20SsvcDecisionPointChild
+      example:
+        label: label
+        key: key
+      properties:
+        key:
+          type: string
+        label:
+          type: string
+    api.NVD20SsvcDecisionPointOption:
+      description: api.NVD20SsvcDecisionPointOption
+      example:
+        color: color
+        description: description
+        label: label
+        key: key
+      properties:
+        color:
+          type: string
+        description:
+          type: string
+        key:
+          type: string
+        label:
+          type: string
+    api.NVD20SsvcDecisionTree:
+      description: nvd doesn't populate this field. at least as of this commit.
+      example:
+        decision_points:
+        - children:
+          - label: label
+            key: key
+          - label: label
+            key: key
+          decision_type: decision_type
+          options:
+          - color: color
+            description: description
+            label: label
+            key: key
+          - color: color
+            description: description
+            label: label
+            key: key
+          label: label
+          key: key
+        - children:
+          - label: label
+            key: key
+          - label: label
+            key: key
+          decision_type: decision_type
+          options:
+          - color: color
+            description: description
+            label: label
+            key: key
+          - color: color
+            description: description
+            label: label
+            key: key
+          label: label
+          key: key
+        decisions_table:
+        - - 7
+          - 7
+        - - 7
+          - 7
+        roles:
+        - roles
+        - roles
+        lang: lang
+        title: title
+        version: version
+      properties:
+        decision_points:
+          items:
+            $ref: '#/components/schemas/api.NVD20SsvcDecisionPoint'
+          type: array
+          uniqueItems: false
+        decisions_table:
+          description: |-
+            DecisionsTable is an array of objects with no declared properties, so
+            there is nothing to model. In practice each entry maps decision point
+            labels to the chosen option, plus the resulting outcome.
+          items:
+            items:
+              type: integer
+            type: array
+          type: array
+          uniqueItems: false
+        lang:
+          type: string
+        roles:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        title:
+          type: string
+        version:
+          type: string
+    api.NVD20SsvcMetricV203:
+      description: api.NVD20SsvcMetricV203
+      example:
+        ssvcData:
+          role: role
+          $schema: $schema
+          computed: computed
+          decisionTree:
+            decision_points:
+            - children:
+              - label: label
+                key: key
+              - label: label
+                key: key
+              decision_type: decision_type
+              options:
+              - color: color
+                description: description
+                label: label
+                key: key
+              - color: color
+                description: description
+                label: label
+                key: key
+              label: label
+              key: key
+            - children:
+              - label: label
+                key: key
+              - label: label
+                key: key
+              decision_type: decision_type
+              options:
+              - color: color
+                description: description
+                label: label
+                key: key
+              - color: color
+                description: description
+                label: label
+                key: key
+              label: label
+              key: key
+            decisions_table:
+            - - 7
+              - 7
+            - - 7
+              - 7
+            roles:
+            - roles
+            - roles
+            lang: lang
+            title: title
+            version: version
+          options:
+          - exploitation: exploitation
+            automatable: automatable
+            technicalImpact: technicalImpact
+          - exploitation: exploitation
+            automatable: automatable
+            technicalImpact: technicalImpact
+          generator: generator
+          id: id
+          decisionTreeUrl: decisionTreeUrl
+          version: version
+          timestamp: timestamp
+        source: source
+      properties:
+        source:
+          type: string
+        ssvcData:
+          $ref: '#/components/schemas/api.NVD20SsvcDataV203'
+    api.NVD20SsvcOption:
+      description: api.NVD20SsvcOption
+      example:
+        exploitation: exploitation
+        automatable: automatable
+        technicalImpact: technicalImpact
+      properties:
+        automatable:
+          type: string
+        exploitation:
+          type: string
+        technicalImpact:
+          type: string
     api.NVD20TemporalAssociatedBaseMetric:
       description: api.NVD20TemporalAssociatedBaseMetric
       example:
@@ -175558,6 +177104,7 @@ components:
         url: url
         exploit_availability: exploit_availability
         exploit_maturity: exploit_maturity
+        validation_level: validation_level
       properties:
         clone_ssh_url:
           type: string
@@ -175580,6 +177127,8 @@ components:
         repo_id:
           type: string
         url:
+          type: string
+        validation_level:
           type: string
     api.NormalizedReportV3Entry:
       description: api.NormalizedReportV3Entry
@@ -176123,6 +177672,11 @@ components:
     api.TargetIntel:
       description: api.TargetIntel
       example:
+        summary:
+          contains_cve: true
+          confirmed_count: 5
+          cve_count: 5
+          fingerprint_count: 2
         country: country
         metadata:
         - 6
@@ -176146,10 +177700,20 @@ components:
           vendor: vendor
           cpe: cpe
           version: version
+          cves:
+          - cve_id: cve_id
+            confirmed: true
+          - cve_id: cve_id
+            confirmed: true
         - product: product
           vendor: vendor
           cpe: cpe
           version: version
+          cves:
+          - cve_id: cve_id
+            confirmed: true
+          - cve_id: cve_id
+            confirmed: true
         classifications:
         - classifications
         - classifications
@@ -176184,6 +177748,7 @@ components:
           type: array
           uniqueItems: false
         contains_cve:
+          description: "Deprecated: use Summary.ContainsCVE instead."
           type: boolean
         country:
           type: string
@@ -176195,11 +177760,17 @@ components:
           type: array
           uniqueItems: false
         cve:
+          description: |-
+            Deprecated: use Fingerprints[].CVEs for per-fingerprint attribution, or
+            Summary for the aggregate count.
           items:
             type: string
           type: array
           uniqueItems: false
         cve_confirmed:
+          description: |-
+            Deprecated: use Fingerprints[].CVEs for per-fingerprint attribution, or
+            Summary for the aggregate confirmed count.
           items:
             $ref: '#/components/schemas/api.CVEConfirmed'
           type: array
@@ -176229,6 +177800,8 @@ components:
           uniqueItems: false
         protocol:
           type: string
+        summary:
+          $ref: '#/components/schemas/api.TargetIntelSummary'
         timestamp:
           type: string
         transport:
@@ -176243,6 +177816,22 @@ components:
             type: string
           type: array
           uniqueItems: false
+    api.TargetIntelSummary:
+      description: Summary is a pre-computed rollup of the CVE/fingerprint data above.
+      example:
+        contains_cve: true
+        confirmed_count: 5
+        cve_count: 5
+        fingerprint_count: 2
+      properties:
+        confirmed_count:
+          type: integer
+        contains_cve:
+          type: boolean
+        cve_count:
+          type: integer
+        fingerprint_count:
+          type: integer
     api.TemporalCVSSV2:
       description: api.TemporalCVSSV2
       example:
@@ -186261,7 +187850,7 @@ components:
                 - vulnerabilitylookup_history
               vulnId: vulnId
               dateRejected: dateRejected
-              serial: 7
+              serial: 2
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -186872,9 +188461,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -187332,9 +188919,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -187691,7 +189276,7 @@ components:
                 - vulnerabilitylookup_history
               vulnId: vulnId
               dateRejected: dateRejected
-              serial: 7
+              serial: 2
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -188302,9 +189887,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -188762,9 +190345,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -192298,6 +193879,7 @@ components:
             release: release
             arch: arch
             version: version
+          source_name: source_name
         - license:
           - license
           - license
@@ -192328,6 +193910,7 @@ components:
             release: release
             arch: arch
             version: version
+          source_name: source_name
         _meta:
           cursor: cursor
           next_cursor: next_cursor
@@ -200317,6 +201900,7 @@ components:
           - cve
           - cve
           notes: notes
+          updated_at: updated_at
           dueDate: dueDate
           vendorProject: vendorProject
           knownRansomwareCampaignUse: knownRansomwareCampaignUse
@@ -200332,6 +201916,7 @@ components:
           - cve
           - cve
           notes: notes
+          updated_at: updated_at
           dueDate: dueDate
           vendorProject: vendorProject
           knownRansomwareCampaignUse: knownRansomwareCampaignUse
@@ -204863,7 +206448,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -205001,9 +206586,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -205468,9 +207051,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -205928,9 +207509,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -206280,7 +207859,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -206418,9 +207997,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -206885,9 +208462,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -207345,9 +208920,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -207913,7 +209486,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -208051,9 +209624,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -208518,9 +210089,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -208978,9 +210547,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -209335,7 +210902,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -209473,9 +211040,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -209940,9 +211505,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -210400,9 +211963,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -229865,7 +231426,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -230003,9 +231564,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -230470,9 +232029,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -230930,9 +232487,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -231282,7 +232837,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -231420,9 +232975,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -231887,9 +233440,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -232347,9 +233898,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 2
-                - 2
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -232972,6 +234521,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vulncheck_xdb:
           - exploit_type: exploit_type
             xdb_id: xdb_id
@@ -233005,6 +234555,7 @@ components:
           cve:
           - cve
           - cve
+          updated_at: updated_at
           vulncheck_xdb:
           - exploit_type: exploit_type
             xdb_id: xdb_id
@@ -233256,7 +234807,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -233394,9 +234945,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -233987,7 +235536,7 @@ components:
             cveMetadata:
               datePublished: datePublished
               dateRejected: dateRejected
-              serial: 1
+              serial: 6
               requesterUserId: requesterUserId
               assignerOrgId: assignerOrgId
               cveId: cveId
@@ -234125,9 +235674,7 @@ components:
                     value: value
                   - lang: lang
                     value: value
-                source:
-                - 6
-                - 6
+                source: "{}"
                 title: title
                 affected:
                 - product: product
@@ -238378,6 +239925,7 @@ components:
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            validation_level: validation_level
           - exploit_type: exploit_type
             date_added: date_added
             refsource: refsource
@@ -238389,6 +239937,7 @@ components:
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            validation_level: validation_level
           commercial_exploit_found: true
           date_added: date_added
           reported_exploited_by_ransomware: true
@@ -238453,6 +240002,7 @@ components:
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            validation_level: validation_level
           - exploit_type: exploit_type
             date_added: date_added
             refsource: refsource
@@ -238464,6 +240014,7 @@ components:
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            validation_level: validation_level
           commercial_exploit_found: true
           date_added: date_added
           reported_exploited_by_ransomware: true
@@ -239451,11 +241002,197 @@ components:
           cisaExploitAdd: cisaExploitAdd
           published: published
           vulnStatus: vulnStatus
+          affected:
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
           descriptions:
           - lang: lang
             value: value
           - lang: lang
             value: value
+          cveTags:
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
           cisaActionDue: cisaActionDue
           cisaVulnerabilityName: cisaVulnerabilityName
           vcConfigurations:
@@ -239695,6 +241432,135 @@ components:
               source: source
               impactScore: 4.145608029883936
               type: type
+            ssvcV203:
+            - ssvcData:
+                role: role
+                $schema: $schema
+                computed: computed
+                decisionTree:
+                  decision_points:
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  decisions_table:
+                  - - 7
+                    - 7
+                  - - 7
+                    - 7
+                  roles:
+                  - roles
+                  - roles
+                  lang: lang
+                  title: title
+                  version: version
+                options:
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                generator: generator
+                id: id
+                decisionTreeUrl: decisionTreeUrl
+                version: version
+                timestamp: timestamp
+              source: source
+            - ssvcData:
+                role: role
+                $schema: $schema
+                computed: computed
+                decisionTree:
+                  decision_points:
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  decisions_table:
+                  - - 7
+                    - 7
+                  - - 7
+                    - 7
+                  roles:
+                  - roles
+                  - roles
+                  lang: lang
+                  title: title
+                  version: version
+                options:
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                generator: generator
+                id: id
+                decisionTreeUrl: decisionTreeUrl
+                version: version
+                timestamp: timestamp
+              source: source
             cvssMetricV40:
             - cvssData:
                 modifiedSubConfidentialityImpact: modifiedSubConfidentialityImpact
@@ -239937,11 +241803,197 @@ components:
           cisaExploitAdd: cisaExploitAdd
           published: published
           vulnStatus: vulnStatus
+          affected:
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
           descriptions:
           - lang: lang
             value: value
           - lang: lang
             value: value
+          cveTags:
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
           cisaActionDue: cisaActionDue
           cisaVulnerabilityName: cisaVulnerabilityName
           vcConfigurations:
@@ -240181,6 +242233,135 @@ components:
               source: source
               impactScore: 4.145608029883936
               type: type
+            ssvcV203:
+            - ssvcData:
+                role: role
+                $schema: $schema
+                computed: computed
+                decisionTree:
+                  decision_points:
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  decisions_table:
+                  - - 7
+                    - 7
+                  - - 7
+                    - 7
+                  roles:
+                  - roles
+                  - roles
+                  lang: lang
+                  title: title
+                  version: version
+                options:
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                generator: generator
+                id: id
+                decisionTreeUrl: decisionTreeUrl
+                version: version
+                timestamp: timestamp
+              source: source
+            - ssvcData:
+                role: role
+                $schema: $schema
+                computed: computed
+                decisionTree:
+                  decision_points:
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  - children:
+                    - label: label
+                      key: key
+                    - label: label
+                      key: key
+                    decision_type: decision_type
+                    options:
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    - color: color
+                      description: description
+                      label: label
+                      key: key
+                    label: label
+                    key: key
+                  decisions_table:
+                  - - 7
+                    - 7
+                  - - 7
+                    - 7
+                  roles:
+                  - roles
+                  - roles
+                  lang: lang
+                  title: title
+                  version: version
+                options:
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                - exploitation: exploitation
+                  automatable: automatable
+                  technicalImpact: technicalImpact
+                generator: generator
+                id: id
+                decisionTreeUrl: decisionTreeUrl
+                version: version
+                timestamp: timestamp
+              source: source
             cvssMetricV40:
             - cvssData:
                 modifiedSubConfidentialityImpact: modifiedSubConfidentialityImpact
@@ -240569,6 +242750,15 @@ components:
             value: value
           - lang: lang
             value: value
+          cveTags:
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
           cisaActionDue: cisaActionDue
           cisaVulnerabilityName: cisaVulnerabilityName
           STATUS: STATUS
@@ -240691,6 +242881,183 @@ components:
           evaluatorSolution: evaluatorSolution
           published: published
           vulnStatus: vulnStatus
+          affected:
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
           date_added: date_added
           vulnerableCPEs:
           - vulnerableCPEs
@@ -241306,6 +243673,15 @@ components:
             value: value
           - lang: lang
             value: value
+          cveTags:
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
+          - sourceIdentifier: sourceIdentifier
+            tags:
+            - tags
+            - tags
           cisaActionDue: cisaActionDue
           cisaVulnerabilityName: cisaVulnerabilityName
           STATUS: STATUS
@@ -241428,6 +243804,183 @@ components:
           evaluatorSolution: evaluatorSolution
           published: published
           vulnStatus: vulnStatus
+          affected:
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+          - source: source
+            affectedData:
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
+            - product: product
+              repo: repo
+              programFiles:
+              - programFiles
+              - programFiles
+              modules:
+              - modules
+              - modules
+              platforms:
+              - platforms
+              - platforms
+              defaultStatus: defaultStatus
+              cpes:
+              - cpes
+              - cpes
+              versions:
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              - versionType: versionType
+                lessThan: lessThan
+                lessThanOrEqual: lessThanOrEqual
+                changes:
+                - at: at
+                  status: status
+                - at: at
+                  status: status
+                version: version
+                status: status
+              packageURL: packageURL
+              vendor: vendor
+              programRoutines:
+              - name: name
+              - name: name
+              packageName: packageName
+              collectionURL: collectionURL
           date_added: date_added
           vulnerableCPEs:
           - vulnerableCPEs
@@ -241900,6 +244453,144 @@ components:
             $ref: '#/components/schemas/api.NVD20CVEExtended'
           type: array
           uniqueItems: false
+    render.ResponseWithMetadata-array_api_NVD20Change-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_api_NVD20Change-paginate_Pagination
+      example:
+        data:
+        - sourceIdentifier: sourceIdentifier
+          created: created
+          cveId: cveId
+          eventName: eventName
+          details:
+          - newValue: ""
+            oldTypes:
+            - oldTypes
+            - oldTypes
+            oldUrl: oldUrl
+            newUrl: newUrl
+            newCwes:
+            - newCwes
+            - newCwes
+            newTypes:
+            - newTypes
+            - newTypes
+            action: action
+            oldCwes:
+            - oldCwes
+            - oldCwes
+            oldValue: ""
+            type: type
+          - newValue: ""
+            oldTypes:
+            - oldTypes
+            - oldTypes
+            oldUrl: oldUrl
+            newUrl: newUrl
+            newCwes:
+            - newCwes
+            - newCwes
+            newTypes:
+            - newTypes
+            - newTypes
+            action: action
+            oldCwes:
+            - oldCwes
+            - oldCwes
+            oldValue: ""
+            type: type
+          cveChangeId: cveChangeId
+        - sourceIdentifier: sourceIdentifier
+          created: created
+          cveId: cveId
+          eventName: eventName
+          details:
+          - newValue: ""
+            oldTypes:
+            - oldTypes
+            - oldTypes
+            oldUrl: oldUrl
+            newUrl: newUrl
+            newCwes:
+            - newCwes
+            - newCwes
+            newTypes:
+            - newTypes
+            - newTypes
+            action: action
+            oldCwes:
+            - oldCwes
+            - oldCwes
+            oldValue: ""
+            type: type
+          - newValue: ""
+            oldTypes:
+            - oldTypes
+            - oldTypes
+            oldUrl: oldUrl
+            newUrl: newUrl
+            newCwes:
+            - newCwes
+            - newCwes
+            newTypes:
+            - newTypes
+            - newTypes
+            action: action
+            oldCwes:
+            - oldCwes
+            - oldCwes
+            oldValue: ""
+            type: type
+          cveChangeId: cveChangeId
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/api.NVD20Change'
+          type: array
+          uniqueItems: false
     render.ResponseWithMetadata-array_api_OSSPackage-paginate_Pagination:
       description: render.ResponseWithMetadata-array_api_OSSPackage-paginate_Pagination
       example:
@@ -242092,7 +244783,12 @@ components:
       description: render.ResponseWithMetadata-array_api_TargetIntel-paginate_Pagination
       example:
         data:
-        - country: country
+        - summary:
+            contains_cve: true
+            confirmed_count: 5
+            cve_count: 5
+            fingerprint_count: 2
+          country: country
           metadata:
           - 6
           - 6
@@ -242115,10 +244811,20 @@ components:
             vendor: vendor
             cpe: cpe
             version: version
+            cves:
+            - cve_id: cve_id
+              confirmed: true
+            - cve_id: cve_id
+              confirmed: true
           - product: product
             vendor: vendor
             cpe: cpe
             version: version
+            cves:
+            - cve_id: cve_id
+              confirmed: true
+            - cve_id: cve_id
+              confirmed: true
           classifications:
           - classifications
           - classifications
@@ -242140,7 +244846,12 @@ components:
           asn: asn
           as_name: as_name
           timestamp: timestamp
-        - country: country
+        - summary:
+            contains_cve: true
+            confirmed_count: 5
+            cve_count: 5
+            fingerprint_count: 2
+          country: country
           metadata:
           - 6
           - 6
@@ -242163,10 +244874,20 @@ components:
             vendor: vendor
             cpe: cpe
             version: version
+            cves:
+            - cve_id: cve_id
+              confirmed: true
+            - cve_id: cve_id
+              confirmed: true
           - product: product
             vendor: vendor
             cpe: cpe
             version: version
+            cves:
+            - cve_id: cve_id
+              confirmed: true
+            - cve_id: cve_id
+              confirmed: true
           classifications:
           - classifications
           - classifications
@@ -243035,7 +245756,7 @@ components:
         - cveMetadata:
             datePublished: datePublished
             dateRejected: dateRejected
-            serial: 1
+            serial: 6
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -243173,9 +245894,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 6
-              - 6
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -243640,9 +246359,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -244100,9 +246817,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -244440,7 +247155,7 @@ components:
         - cveMetadata:
             datePublished: datePublished
             dateRejected: dateRejected
-            serial: 1
+            serial: 6
             requesterUserId: requesterUserId
             assignerOrgId: assignerOrgId
             cveId: cveId
@@ -244578,9 +247293,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 6
-              - 6
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -245045,9 +247758,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product
@@ -245505,9 +248216,7 @@ components:
                   value: value
                 - lang: lang
                   value: value
-              source:
-              - 2
-              - 2
+              source: "{}"
               title: title
               affected:
               - product: product

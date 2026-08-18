@@ -25,6 +25,8 @@ type AdvisoryDistroPackage struct {
 	License []string `json:"license,omitempty"`
 	Name *string `json:"name,omitempty"`
 	SecFixes []AdvisorySecFix `json:"secFixes,omitempty"`
+	// SourceName is the source (SRPM) package this binary was built from, when it differs from Name. Distros whose advisories key fixes by source name (e.g. CBL-Mariner/Azure Linux OVAL: source \"python-jinja2\" → binary \"python3-jinja2\") need it to attach a source-keyed fix to the binary purl a customer actually queries. Empty when unknown or equal to Name.
+	SourceName *string `json:"source_name,omitempty"`
 	Versions []AdvisoryDistroVersion `json:"versions,omitempty"`
 }
 
@@ -205,6 +207,38 @@ func (o *AdvisoryDistroPackage) SetSecFixes(v []AdvisorySecFix) {
 	o.SecFixes = v
 }
 
+// GetSourceName returns the SourceName field value if set, zero value otherwise.
+func (o *AdvisoryDistroPackage) GetSourceName() string {
+	if o == nil || IsNil(o.SourceName) {
+		var ret string
+		return ret
+	}
+	return *o.SourceName
+}
+
+// GetSourceNameOk returns a tuple with the SourceName field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryDistroPackage) GetSourceNameOk() (*string, bool) {
+	if o == nil || IsNil(o.SourceName) {
+		return nil, false
+	}
+	return o.SourceName, true
+}
+
+// HasSourceName returns a boolean if a field has been set.
+func (o *AdvisoryDistroPackage) HasSourceName() bool {
+	if o != nil && !IsNil(o.SourceName) {
+		return true
+	}
+
+	return false
+}
+
+// SetSourceName gets a reference to the given string and assigns it to the SourceName field.
+func (o *AdvisoryDistroPackage) SetSourceName(v string) {
+	o.SourceName = &v
+}
+
 // GetVersions returns the Versions field value if set, zero value otherwise.
 func (o *AdvisoryDistroPackage) GetVersions() []AdvisoryDistroVersion {
 	if o == nil || IsNil(o.Versions) {
@@ -261,6 +295,9 @@ func (o AdvisoryDistroPackage) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.SecFixes) {
 		toSerialize["secFixes"] = o.SecFixes
+	}
+	if !IsNil(o.SourceName) {
+		toSerialize["source_name"] = o.SourceName
 	}
 	if !IsNil(o.Versions) {
 		toSerialize["versions"] = o.Versions

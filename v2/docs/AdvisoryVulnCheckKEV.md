@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ReportedExploitedByVulncheckCanaries** | Pointer to **bool** |  | [optional] 
 **RequiredAction** | Pointer to **string** |  | [optional] 
 **ShortDescription** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **VendorProject** | Pointer to **string** |  | [optional] 
 **VulncheckReportedExploitation** | Pointer to [**[]AdvisoryReportedExploit**](AdvisoryReportedExploit.md) |  | [optional] 
 **VulncheckXdb** | Pointer to [**[]AdvisoryXDB**](AdvisoryXDB.md) |  | [optional] 
@@ -313,6 +314,31 @@ SetShortDescription sets ShortDescription field to given value.
 `func (o *AdvisoryVulnCheckKEV) HasShortDescription() bool`
 
 HasShortDescription returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *AdvisoryVulnCheckKEV) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *AdvisoryVulnCheckKEV) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *AdvisoryVulnCheckKEV) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *AdvisoryVulnCheckKEV) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetVendorProject
 

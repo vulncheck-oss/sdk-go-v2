@@ -24,12 +24,14 @@ type ApiNVD20CVEExtended struct {
 	STATUS *string `json:"STATUS,omitempty"`
 	// the deep tag instructs deep.Equal to ignore this field (used during OpenSearch loading)
 	Timestamp *string `json:"_timestamp,omitempty"`
+	Affected []ApiNVD20Affected `json:"affected,omitempty"`
 	Categorization *ApiCategorizationExtended `json:"categorization,omitempty"`
 	CisaActionDue *string `json:"cisaActionDue,omitempty"`
 	CisaExploitAdd *string `json:"cisaExploitAdd,omitempty"`
 	CisaRequiredAction *string `json:"cisaRequiredAction,omitempty"`
 	CisaVulnerabilityName *string `json:"cisaVulnerabilityName,omitempty"`
 	Configurations []AdvisoryNVD20Configuration `json:"configurations,omitempty"`
+	CveTags []ApiNVD20CVETag `json:"cveTags,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	Descriptions []ApiNVD20Description `json:"descriptions,omitempty"`
 	DocumentGenerationDate *string `json:"documentGenerationDate,omitempty"`
@@ -164,6 +166,38 @@ func (o *ApiNVD20CVEExtended) HasTimestamp() bool {
 // SetTimestamp gets a reference to the given string and assigns it to the Timestamp field.
 func (o *ApiNVD20CVEExtended) SetTimestamp(v string) {
 	o.Timestamp = &v
+}
+
+// GetAffected returns the Affected field value if set, zero value otherwise.
+func (o *ApiNVD20CVEExtended) GetAffected() []ApiNVD20Affected {
+	if o == nil || IsNil(o.Affected) {
+		var ret []ApiNVD20Affected
+		return ret
+	}
+	return o.Affected
+}
+
+// GetAffectedOk returns a tuple with the Affected field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiNVD20CVEExtended) GetAffectedOk() ([]ApiNVD20Affected, bool) {
+	if o == nil || IsNil(o.Affected) {
+		return nil, false
+	}
+	return o.Affected, true
+}
+
+// HasAffected returns a boolean if a field has been set.
+func (o *ApiNVD20CVEExtended) HasAffected() bool {
+	if o != nil && !IsNil(o.Affected) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffected gets a reference to the given []ApiNVD20Affected and assigns it to the Affected field.
+func (o *ApiNVD20CVEExtended) SetAffected(v []ApiNVD20Affected) {
+	o.Affected = v
 }
 
 // GetCategorization returns the Categorization field value if set, zero value otherwise.
@@ -356,6 +390,38 @@ func (o *ApiNVD20CVEExtended) HasConfigurations() bool {
 // SetConfigurations gets a reference to the given []AdvisoryNVD20Configuration and assigns it to the Configurations field.
 func (o *ApiNVD20CVEExtended) SetConfigurations(v []AdvisoryNVD20Configuration) {
 	o.Configurations = v
+}
+
+// GetCveTags returns the CveTags field value if set, zero value otherwise.
+func (o *ApiNVD20CVEExtended) GetCveTags() []ApiNVD20CVETag {
+	if o == nil || IsNil(o.CveTags) {
+		var ret []ApiNVD20CVETag
+		return ret
+	}
+	return o.CveTags
+}
+
+// GetCveTagsOk returns a tuple with the CveTags field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiNVD20CVEExtended) GetCveTagsOk() ([]ApiNVD20CVETag, bool) {
+	if o == nil || IsNil(o.CveTags) {
+		return nil, false
+	}
+	return o.CveTags, true
+}
+
+// HasCveTags returns a boolean if a field has been set.
+func (o *ApiNVD20CVEExtended) HasCveTags() bool {
+	if o != nil && !IsNil(o.CveTags) {
+		return true
+	}
+
+	return false
+}
+
+// SetCveTags gets a reference to the given []ApiNVD20CVETag and assigns it to the CveTags field.
+func (o *ApiNVD20CVEExtended) SetCveTags(v []ApiNVD20CVETag) {
+	o.CveTags = v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
@@ -1049,6 +1115,9 @@ func (o ApiNVD20CVEExtended) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Timestamp) {
 		toSerialize["_timestamp"] = o.Timestamp
 	}
+	if !IsNil(o.Affected) {
+		toSerialize["affected"] = o.Affected
+	}
 	if !IsNil(o.Categorization) {
 		toSerialize["categorization"] = o.Categorization
 	}
@@ -1066,6 +1135,9 @@ func (o ApiNVD20CVEExtended) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Configurations) {
 		toSerialize["configurations"] = o.Configurations
+	}
+	if !IsNil(o.CveTags) {
+		toSerialize["cveTags"] = o.CveTags
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded

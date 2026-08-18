@@ -1,0 +1,108 @@
+# RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Benchmark** | Pointer to **float32** | Benchmark is the server-side processing time for the request in seconds. Example: 0.122322 &#x3D; approximately 122 milliseconds | [optional] 
+**Meta** | Pointer to [**PaginatePagination**](PaginatePagination.md) |  | [optional] 
+**Data** | Pointer to [**[]ApiNVD20Change**](ApiNVD20Change.md) | Data is the data returned by the endpoint | [optional] 
+
+## Methods
+
+### NewRenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination
+
+`func NewRenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination() *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination`
+
+NewRenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination instantiates a new RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewRenderResponseWithMetadataArrayApiNVD20ChangePaginatePaginationWithDefaults
+
+`func NewRenderResponseWithMetadataArrayApiNVD20ChangePaginatePaginationWithDefaults() *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination`
+
+NewRenderResponseWithMetadataArrayApiNVD20ChangePaginatePaginationWithDefaults instantiates a new RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetBenchmark
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) GetBenchmark() float32`
+
+GetBenchmark returns the Benchmark field if non-nil, zero value otherwise.
+
+### GetBenchmarkOk
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) GetBenchmarkOk() (*float32, bool)`
+
+GetBenchmarkOk returns a tuple with the Benchmark field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBenchmark
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) SetBenchmark(v float32)`
+
+SetBenchmark sets Benchmark field to given value.
+
+### HasBenchmark
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) HasBenchmark() bool`
+
+HasBenchmark returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) GetMeta() PaginatePagination`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) GetMetaOk() (*PaginatePagination, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) SetMeta(v PaginatePagination)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
+
+### GetData
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) GetData() []ApiNVD20Change`
+
+GetData returns the Data field if non-nil, zero value otherwise.
+
+### GetDataOk
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) GetDataOk() (*[]ApiNVD20Change, bool)`
+
+GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetData
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) SetData(v []ApiNVD20Change)`
+
+SetData sets Data field to given value.
+
+### HasData
+
+`func (o *RenderResponseWithMetadataArrayApiNVD20ChangePaginatePagination) HasData() bool`
+
+HasData returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **RejectedReasons** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) | Fields below appear only on rejected records (cveMetadata.state &#x3D;&#x3D; \&quot;REJECTED\&quot;). | [optional] 
 **ReplacedBy** | Pointer to **[]string** |  | [optional] 
 **Solutions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
-**Source** | Pointer to **[]int32** |  | [optional] 
+**Source** | Pointer to **map[string]interface{}** |  | [optional] 
 **Tags** | Pointer to **[]string** |  | [optional] 
 **TaxonomyMappings** | Pointer to [**[]AdvisoryTaxonomyMapping**](AdvisoryTaxonomyMapping.md) |  | [optional] 
 **Timeline** | Pointer to [**[]AdvisoryTimeline**](AdvisoryTimeline.md) |  | [optional] 
@@ -448,20 +448,20 @@ HasSolutions returns a boolean if a field has been set.
 
 ### GetSource
 
-`func (o *AdvisoryMCna) GetSource() []int32`
+`func (o *AdvisoryMCna) GetSource() map[string]interface{}`
 
 GetSource returns the Source field if non-nil, zero value otherwise.
 
 ### GetSourceOk
 
-`func (o *AdvisoryMCna) GetSourceOk() (*[]int32, bool)`
+`func (o *AdvisoryMCna) GetSourceOk() (*map[string]interface{}, bool)`
 
 GetSourceOk returns a tuple with the Source field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSource
 
-`func (o *AdvisoryMCna) SetSource(v []int32)`
+`func (o *AdvisoryMCna) SetSource(v map[string]interface{})`
 
 SetSource sets Source field to given value.
 

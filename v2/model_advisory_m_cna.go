@@ -37,7 +37,7 @@ type AdvisoryMCna struct {
 	RejectedReasons []AdvisoryMDescriptions `json:"rejectedReasons,omitempty"`
 	ReplacedBy []string `json:"replacedBy,omitempty"`
 	Solutions []AdvisoryMDescriptions `json:"solutions,omitempty"`
-	Source []int32 `json:"source,omitempty"`
+	Source map[string]interface{} `json:"source,omitempty"`
 	Tags []string `json:"tags,omitempty"`
 	TaxonomyMappings []AdvisoryTaxonomyMapping `json:"taxonomyMappings,omitempty"`
 	Timeline []AdvisoryTimeline `json:"timeline,omitempty"`
@@ -575,9 +575,9 @@ func (o *AdvisoryMCna) SetSolutions(v []AdvisoryMDescriptions) {
 }
 
 // GetSource returns the Source field value if set, zero value otherwise.
-func (o *AdvisoryMCna) GetSource() []int32 {
+func (o *AdvisoryMCna) GetSource() map[string]interface{} {
 	if o == nil || IsNil(o.Source) {
-		var ret []int32
+		var ret map[string]interface{}
 		return ret
 	}
 	return o.Source
@@ -585,9 +585,9 @@ func (o *AdvisoryMCna) GetSource() []int32 {
 
 // GetSourceOk returns a tuple with the Source field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *AdvisoryMCna) GetSourceOk() ([]int32, bool) {
+func (o *AdvisoryMCna) GetSourceOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Source) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Source, true
 }
@@ -601,8 +601,8 @@ func (o *AdvisoryMCna) HasSource() bool {
 	return false
 }
 
-// SetSource gets a reference to the given []int32 and assigns it to the Source field.
-func (o *AdvisoryMCna) SetSource(v []int32) {
+// SetSource gets a reference to the given map[string]interface{} and assigns it to the Source field.
+func (o *AdvisoryMCna) SetSource(v map[string]interface{}) {
 	o.Source = v
 }
 

@@ -7,12 +7,14 @@ Name | Type | Description | Notes
 **ALIAS** | Pointer to **string** |  | [optional] 
 **STATUS** | Pointer to **string** |  | [optional] 
 **Timestamp** | Pointer to **string** | the deep tag instructs deep.Equal to ignore this field (used during OpenSearch loading) | [optional] 
+**Affected** | Pointer to [**[]ApiNVD20Affected**](ApiNVD20Affected.md) |  | [optional] 
 **Categorization** | Pointer to [**ApiCategorizationExtended**](ApiCategorizationExtended.md) |  | [optional] 
 **CisaActionDue** | Pointer to **string** |  | [optional] 
 **CisaExploitAdd** | Pointer to **string** |  | [optional] 
 **CisaRequiredAction** | Pointer to **string** |  | [optional] 
 **CisaVulnerabilityName** | Pointer to **string** |  | [optional] 
 **Configurations** | Pointer to [**[]AdvisoryNVD20Configuration**](AdvisoryNVD20Configuration.md) |  | [optional] 
+**CveTags** | Pointer to [**[]ApiNVD20CVETag**](ApiNVD20CVETag.md) |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Descriptions** | Pointer to [**[]ApiNVD20Description**](ApiNVD20Description.md) |  | [optional] 
 **DocumentGenerationDate** | Pointer to **string** |  | [optional] 
@@ -128,6 +130,31 @@ SetTimestamp sets Timestamp field to given value.
 `func (o *ApiNVD20CVEExtended) HasTimestamp() bool`
 
 HasTimestamp returns a boolean if a field has been set.
+
+### GetAffected
+
+`func (o *ApiNVD20CVEExtended) GetAffected() []ApiNVD20Affected`
+
+GetAffected returns the Affected field if non-nil, zero value otherwise.
+
+### GetAffectedOk
+
+`func (o *ApiNVD20CVEExtended) GetAffectedOk() (*[]ApiNVD20Affected, bool)`
+
+GetAffectedOk returns a tuple with the Affected field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAffected
+
+`func (o *ApiNVD20CVEExtended) SetAffected(v []ApiNVD20Affected)`
+
+SetAffected sets Affected field to given value.
+
+### HasAffected
+
+`func (o *ApiNVD20CVEExtended) HasAffected() bool`
+
+HasAffected returns a boolean if a field has been set.
 
 ### GetCategorization
 
@@ -278,6 +305,31 @@ SetConfigurations sets Configurations field to given value.
 `func (o *ApiNVD20CVEExtended) HasConfigurations() bool`
 
 HasConfigurations returns a boolean if a field has been set.
+
+### GetCveTags
+
+`func (o *ApiNVD20CVEExtended) GetCveTags() []ApiNVD20CVETag`
+
+GetCveTags returns the CveTags field if non-nil, zero value otherwise.
+
+### GetCveTagsOk
+
+`func (o *ApiNVD20CVEExtended) GetCveTagsOk() (*[]ApiNVD20CVETag, bool)`
+
+GetCveTagsOk returns a tuple with the CveTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCveTags
+
+`func (o *ApiNVD20CVEExtended) SetCveTags(v []ApiNVD20CVETag)`
+
+SetCveTags sets CveTags field to given value.
+
+### HasCveTags
+
+`func (o *ApiNVD20CVEExtended) HasCveTags() bool`
+
+HasCveTags returns a boolean if a field has been set.
 
 ### GetDateAdded
 

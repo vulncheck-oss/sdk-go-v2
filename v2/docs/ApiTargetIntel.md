@@ -8,12 +8,12 @@ Name | Type | Description | Notes
 **AsName** | Pointer to **string** |  | [optional] 
 **Asn** | Pointer to **string** |  | [optional] 
 **Classifications** | Pointer to **[]string** |  | [optional] 
-**ContainsCve** | Pointer to **bool** |  | [optional] 
+**ContainsCve** | Pointer to **bool** | Deprecated: use Summary.ContainsCVE instead. | [optional] 
 **Country** | Pointer to **string** |  | [optional] 
 **CountryCode** | Pointer to **string** |  | [optional] 
 **Cpe** | Pointer to **[]string** |  | [optional] 
-**Cve** | Pointer to **[]string** |  | [optional] 
-**CveConfirmed** | Pointer to [**[]ApiCVEConfirmed**](ApiCVEConfirmed.md) |  | [optional] 
+**Cve** | Pointer to **[]string** | Deprecated: use Fingerprints[].CVEs for per-fingerprint attribution, or Summary for the aggregate count. | [optional] 
+**CveConfirmed** | Pointer to [**[]ApiCVEConfirmed**](ApiCVEConfirmed.md) | Deprecated: use Fingerprints[].CVEs for per-fingerprint attribution, or Summary for the aggregate confirmed count. | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **Fingerprints** | Pointer to [**[]ApiFingerprint**](ApiFingerprint.md) |  | [optional] 
 **Hostname** | Pointer to **string** |  | [optional] 
@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **Port** | Pointer to **int32** |  | [optional] 
 **Product** | Pointer to **[]string** |  | [optional] 
 **Protocol** | Pointer to **string** |  | [optional] 
+**Summary** | Pointer to [**ApiTargetIntelSummary**](ApiTargetIntelSummary.md) |  | [optional] 
 **Timestamp** | Pointer to **string** |  | [optional] 
 **Transport** | Pointer to **string** |  | [optional] 
 **Vendor** | Pointer to **[]string** |  | [optional] 
@@ -495,6 +496,31 @@ SetProtocol sets Protocol field to given value.
 `func (o *ApiTargetIntel) HasProtocol() bool`
 
 HasProtocol returns a boolean if a field has been set.
+
+### GetSummary
+
+`func (o *ApiTargetIntel) GetSummary() ApiTargetIntelSummary`
+
+GetSummary returns the Summary field if non-nil, zero value otherwise.
+
+### GetSummaryOk
+
+`func (o *ApiTargetIntel) GetSummaryOk() (*ApiTargetIntelSummary, bool)`
+
+GetSummaryOk returns a tuple with the Summary field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSummary
+
+`func (o *ApiTargetIntel) SetSummary(v ApiTargetIntelSummary)`
+
+SetSummary sets Summary field to given value.
+
+### HasSummary
+
+`func (o *ApiTargetIntel) HasSummary() bool`
+
+HasSummary returns a boolean if a field has been set.
 
 ### GetTimestamp
 
