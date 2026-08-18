@@ -20,11 +20,13 @@ var _ MappedNullable = &ApiNVD20CVE{}
 
 // ApiNVD20CVE api.NVD20CVE
 type ApiNVD20CVE struct {
+	Affected []ApiNVD20Affected `json:"affected,omitempty"`
 	CisaActionDue *string `json:"cisaActionDue,omitempty"`
 	CisaExploitAdd *string `json:"cisaExploitAdd,omitempty"`
 	CisaRequiredAction *string `json:"cisaRequiredAction,omitempty"`
 	CisaVulnerabilityName *string `json:"cisaVulnerabilityName,omitempty"`
 	Configurations []AdvisoryNVD20Configuration `json:"configurations,omitempty"`
+	CveTags []ApiNVD20CVETag `json:"cveTags,omitempty"`
 	Descriptions []ApiNVD20Description `json:"descriptions,omitempty"`
 	EvaluatorComment *string `json:"evaluatorComment,omitempty"`
 	EvaluatorImpact *string `json:"evaluatorImpact,omitempty"`
@@ -57,6 +59,38 @@ func NewApiNVD20CVE() *ApiNVD20CVE {
 func NewApiNVD20CVEWithDefaults() *ApiNVD20CVE {
 	this := ApiNVD20CVE{}
 	return &this
+}
+
+// GetAffected returns the Affected field value if set, zero value otherwise.
+func (o *ApiNVD20CVE) GetAffected() []ApiNVD20Affected {
+	if o == nil || IsNil(o.Affected) {
+		var ret []ApiNVD20Affected
+		return ret
+	}
+	return o.Affected
+}
+
+// GetAffectedOk returns a tuple with the Affected field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiNVD20CVE) GetAffectedOk() ([]ApiNVD20Affected, bool) {
+	if o == nil || IsNil(o.Affected) {
+		return nil, false
+	}
+	return o.Affected, true
+}
+
+// HasAffected returns a boolean if a field has been set.
+func (o *ApiNVD20CVE) HasAffected() bool {
+	if o != nil && !IsNil(o.Affected) {
+		return true
+	}
+
+	return false
+}
+
+// SetAffected gets a reference to the given []ApiNVD20Affected and assigns it to the Affected field.
+func (o *ApiNVD20CVE) SetAffected(v []ApiNVD20Affected) {
+	o.Affected = v
 }
 
 // GetCisaActionDue returns the CisaActionDue field value if set, zero value otherwise.
@@ -217,6 +251,38 @@ func (o *ApiNVD20CVE) HasConfigurations() bool {
 // SetConfigurations gets a reference to the given []AdvisoryNVD20Configuration and assigns it to the Configurations field.
 func (o *ApiNVD20CVE) SetConfigurations(v []AdvisoryNVD20Configuration) {
 	o.Configurations = v
+}
+
+// GetCveTags returns the CveTags field value if set, zero value otherwise.
+func (o *ApiNVD20CVE) GetCveTags() []ApiNVD20CVETag {
+	if o == nil || IsNil(o.CveTags) {
+		var ret []ApiNVD20CVETag
+		return ret
+	}
+	return o.CveTags
+}
+
+// GetCveTagsOk returns a tuple with the CveTags field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiNVD20CVE) GetCveTagsOk() ([]ApiNVD20CVETag, bool) {
+	if o == nil || IsNil(o.CveTags) {
+		return nil, false
+	}
+	return o.CveTags, true
+}
+
+// HasCveTags returns a boolean if a field has been set.
+func (o *ApiNVD20CVE) HasCveTags() bool {
+	if o != nil && !IsNil(o.CveTags) {
+		return true
+	}
+
+	return false
+}
+
+// SetCveTags gets a reference to the given []ApiNVD20CVETag and assigns it to the CveTags field.
+func (o *ApiNVD20CVE) SetCveTags(v []ApiNVD20CVETag) {
+	o.CveTags = v
 }
 
 // GetDescriptions returns the Descriptions field value if set, zero value otherwise.
@@ -709,6 +775,9 @@ func (o ApiNVD20CVE) MarshalJSON() ([]byte, error) {
 
 func (o ApiNVD20CVE) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Affected) {
+		toSerialize["affected"] = o.Affected
+	}
 	if !IsNil(o.CisaActionDue) {
 		toSerialize["cisaActionDue"] = o.CisaActionDue
 	}
@@ -723,6 +792,9 @@ func (o ApiNVD20CVE) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Configurations) {
 		toSerialize["configurations"] = o.Configurations
+	}
+	if !IsNil(o.CveTags) {
+		toSerialize["cveTags"] = o.CveTags
 	}
 	if !IsNil(o.Descriptions) {
 		toSerialize["descriptions"] = o.Descriptions

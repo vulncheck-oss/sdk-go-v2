@@ -31,6 +31,7 @@ type AdvisoryVulnCheckKEV struct {
 	ReportedExploitedByVulncheckCanaries *bool `json:"reported_exploited_by_vulncheck_canaries,omitempty"`
 	RequiredAction *string `json:"required_action,omitempty"`
 	ShortDescription *string `json:"shortDescription,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	VendorProject *string `json:"vendorProject,omitempty"`
 	VulncheckReportedExploitation []AdvisoryReportedExploit `json:"vulncheck_reported_exploitation,omitempty"`
 	VulncheckXdb []AdvisoryXDB `json:"vulncheck_xdb,omitempty"`
@@ -406,6 +407,38 @@ func (o *AdvisoryVulnCheckKEV) SetShortDescription(v string) {
 	o.ShortDescription = &v
 }
 
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *AdvisoryVulnCheckKEV) GetUpdatedAt() string {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret string
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryVulnCheckKEV) GetUpdatedAtOk() (*string, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *AdvisoryVulnCheckKEV) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *AdvisoryVulnCheckKEV) SetUpdatedAt(v string) {
+	o.UpdatedAt = &v
+}
+
 // GetVendorProject returns the VendorProject field value if set, zero value otherwise.
 func (o *AdvisoryVulnCheckKEV) GetVendorProject() string {
 	if o == nil || IsNil(o.VendorProject) {
@@ -576,6 +609,9 @@ func (o AdvisoryVulnCheckKEV) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ShortDescription) {
 		toSerialize["shortDescription"] = o.ShortDescription
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updated_at"] = o.UpdatedAt
 	}
 	if !IsNil(o.VendorProject) {
 		toSerialize["vendorProject"] = o.VendorProject

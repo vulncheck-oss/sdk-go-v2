@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **ProviderMetadata** | Pointer to [**AdvisoryMProviderMetadata**](AdvisoryMProviderMetadata.md) |  | [optional] 
 **References** | Pointer to [**[]AdvisoryMReference**](AdvisoryMReference.md) |  | [optional] 
 **Solutions** | Pointer to [**[]AdvisoryMDescriptions**](AdvisoryMDescriptions.md) |  | [optional] 
-**Source** | Pointer to **[]int32** |  | [optional] 
+**Source** | Pointer to **map[string]interface{}** |  | [optional] 
 **Tags** | Pointer to **[]string** |  | [optional] 
 **TaxonomyMappings** | Pointer to [**[]AdvisoryTaxonomyMapping**](AdvisoryTaxonomyMapping.md) |  | [optional] 
 **Timeline** | Pointer to [**[]AdvisoryTimeline**](AdvisoryTimeline.md) |  | [optional] 
@@ -370,20 +370,20 @@ HasSolutions returns a boolean if a field has been set.
 
 ### GetSource
 
-`func (o *AdvisoryADPContainer) GetSource() []int32`
+`func (o *AdvisoryADPContainer) GetSource() map[string]interface{}`
 
 GetSource returns the Source field if non-nil, zero value otherwise.
 
 ### GetSourceOk
 
-`func (o *AdvisoryADPContainer) GetSourceOk() (*[]int32, bool)`
+`func (o *AdvisoryADPContainer) GetSourceOk() (*map[string]interface{}, bool)`
 
 GetSourceOk returns a tuple with the Source field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSource
 
-`func (o *AdvisoryADPContainer) SetSource(v []int32)`
+`func (o *AdvisoryADPContainer) SetSource(v map[string]interface{})`
 
 SetSource sets Source field to given value.
 

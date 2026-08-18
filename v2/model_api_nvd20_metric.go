@@ -24,6 +24,7 @@ type ApiNVD20Metric struct {
 	CvssMetricV30 []ApiNVD20CvssMetricV3 `json:"cvssMetricV30,omitempty"`
 	CvssMetricV31 []ApiNVD20CvssMetricV3 `json:"cvssMetricV31,omitempty"`
 	CvssMetricV40 []ApiNVD20CvssMetricV40 `json:"cvssMetricV40,omitempty"`
+	SsvcV203 []ApiNVD20SsvcMetricV203 `json:"ssvcV203,omitempty"`
 }
 
 // NewApiNVD20Metric instantiates a new ApiNVD20Metric object
@@ -171,6 +172,38 @@ func (o *ApiNVD20Metric) SetCvssMetricV40(v []ApiNVD20CvssMetricV40) {
 	o.CvssMetricV40 = v
 }
 
+// GetSsvcV203 returns the SsvcV203 field value if set, zero value otherwise.
+func (o *ApiNVD20Metric) GetSsvcV203() []ApiNVD20SsvcMetricV203 {
+	if o == nil || IsNil(o.SsvcV203) {
+		var ret []ApiNVD20SsvcMetricV203
+		return ret
+	}
+	return o.SsvcV203
+}
+
+// GetSsvcV203Ok returns a tuple with the SsvcV203 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiNVD20Metric) GetSsvcV203Ok() ([]ApiNVD20SsvcMetricV203, bool) {
+	if o == nil || IsNil(o.SsvcV203) {
+		return nil, false
+	}
+	return o.SsvcV203, true
+}
+
+// HasSsvcV203 returns a boolean if a field has been set.
+func (o *ApiNVD20Metric) HasSsvcV203() bool {
+	if o != nil && !IsNil(o.SsvcV203) {
+		return true
+	}
+
+	return false
+}
+
+// SetSsvcV203 gets a reference to the given []ApiNVD20SsvcMetricV203 and assigns it to the SsvcV203 field.
+func (o *ApiNVD20Metric) SetSsvcV203(v []ApiNVD20SsvcMetricV203) {
+	o.SsvcV203 = v
+}
+
 func (o ApiNVD20Metric) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -192,6 +225,9 @@ func (o ApiNVD20Metric) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.CvssMetricV40) {
 		toSerialize["cvssMetricV40"] = o.CvssMetricV40
+	}
+	if !IsNil(o.SsvcV203) {
+		toSerialize["ssvcV203"] = o.SsvcV203
 	}
 	return toSerialize, nil
 }

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **CvssMetricV30** | Pointer to [**[]ApiNVD20CvssMetricV3**](ApiNVD20CvssMetricV3.md) |  | [optional] 
 **CvssMetricV31** | Pointer to [**[]ApiNVD20CvssMetricV3**](ApiNVD20CvssMetricV3.md) |  | [optional] 
 **CvssMetricV40** | Pointer to [**[]ApiNVD20CvssMetricV40**](ApiNVD20CvssMetricV40.md) |  | [optional] 
+**SsvcV203** | Pointer to [**[]ApiNVD20SsvcMetricV203**](ApiNVD20SsvcMetricV203.md) |  | [optional] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetCvssMetricV40 sets CvssMetricV40 field to given value.
 `func (o *ApiNVD20Metric) HasCvssMetricV40() bool`
 
 HasCvssMetricV40 returns a boolean if a field has been set.
+
+### GetSsvcV203
+
+`func (o *ApiNVD20Metric) GetSsvcV203() []ApiNVD20SsvcMetricV203`
+
+GetSsvcV203 returns the SsvcV203 field if non-nil, zero value otherwise.
+
+### GetSsvcV203Ok
+
+`func (o *ApiNVD20Metric) GetSsvcV203Ok() (*[]ApiNVD20SsvcMetricV203, bool)`
+
+GetSsvcV203Ok returns a tuple with the SsvcV203 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsvcV203
+
+`func (o *ApiNVD20Metric) SetSsvcV203(v []ApiNVD20SsvcMetricV203)`
+
+SetSsvcV203 sets SsvcV203 field to given value.
+
+### HasSsvcV203
+
+`func (o *ApiNVD20Metric) HasSsvcV203() bool`
+
+HasSsvcV203 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

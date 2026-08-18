@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.24/go",
+		UserAgent:        "OpenAPI-Generator/2.1.25/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -2092,6 +2092,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexNistNvd2CpematchGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexNistNvd2CvehistGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",

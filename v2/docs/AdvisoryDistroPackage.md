@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **License** | Pointer to **[]string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **SecFixes** | Pointer to [**[]AdvisorySecFix**](AdvisorySecFix.md) |  | [optional] 
+**SourceName** | Pointer to **string** | SourceName is the source (SRPM) package this binary was built from, when it differs from Name. Distros whose advisories key fixes by source name (e.g. CBL-Mariner/Azure Linux OVAL: source \&quot;python-jinja2\&quot; → binary \&quot;python3-jinja2\&quot;) need it to attach a source-keyed fix to the binary purl a customer actually queries. Empty when unknown or equal to Name. | [optional] 
 **Versions** | Pointer to [**[]AdvisoryDistroVersion**](AdvisoryDistroVersion.md) |  | [optional] 
 
 ## Methods
@@ -154,6 +155,31 @@ SetSecFixes sets SecFixes field to given value.
 `func (o *AdvisoryDistroPackage) HasSecFixes() bool`
 
 HasSecFixes returns a boolean if a field has been set.
+
+### GetSourceName
+
+`func (o *AdvisoryDistroPackage) GetSourceName() string`
+
+GetSourceName returns the SourceName field if non-nil, zero value otherwise.
+
+### GetSourceNameOk
+
+`func (o *AdvisoryDistroPackage) GetSourceNameOk() (*string, bool)`
+
+GetSourceNameOk returns a tuple with the SourceName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSourceName
+
+`func (o *AdvisoryDistroPackage) SetSourceName(v string)`
+
+SetSourceName sets SourceName field to given value.
+
+### HasSourceName
+
+`func (o *AdvisoryDistroPackage) HasSourceName() bool`
+
+HasSourceName returns a boolean if a field has been set.
 
 ### GetVersions
 

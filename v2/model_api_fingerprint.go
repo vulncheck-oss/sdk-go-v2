@@ -21,6 +21,8 @@ var _ MappedNullable = &ApiFingerprint{}
 // ApiFingerprint api.Fingerprint
 type ApiFingerprint struct {
 	Cpe *string `json:"cpe,omitempty"`
+	// CVEs attributed to this specific fingerprint's CPE.
+	Cves []ApiCVEConfirmed `json:"cves,omitempty"`
 	Product *string `json:"product,omitempty"`
 	Vendor *string `json:"vendor,omitempty"`
 	Version *string `json:"version,omitempty"`
@@ -73,6 +75,38 @@ func (o *ApiFingerprint) HasCpe() bool {
 // SetCpe gets a reference to the given string and assigns it to the Cpe field.
 func (o *ApiFingerprint) SetCpe(v string) {
 	o.Cpe = &v
+}
+
+// GetCves returns the Cves field value if set, zero value otherwise.
+func (o *ApiFingerprint) GetCves() []ApiCVEConfirmed {
+	if o == nil || IsNil(o.Cves) {
+		var ret []ApiCVEConfirmed
+		return ret
+	}
+	return o.Cves
+}
+
+// GetCvesOk returns a tuple with the Cves field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiFingerprint) GetCvesOk() ([]ApiCVEConfirmed, bool) {
+	if o == nil || IsNil(o.Cves) {
+		return nil, false
+	}
+	return o.Cves, true
+}
+
+// HasCves returns a boolean if a field has been set.
+func (o *ApiFingerprint) HasCves() bool {
+	if o != nil && !IsNil(o.Cves) {
+		return true
+	}
+
+	return false
+}
+
+// SetCves gets a reference to the given []ApiCVEConfirmed and assigns it to the Cves field.
+func (o *ApiFingerprint) SetCves(v []ApiCVEConfirmed) {
+	o.Cves = v
 }
 
 // GetProduct returns the Product field value if set, zero value otherwise.
@@ -183,6 +217,9 @@ func (o ApiFingerprint) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Cpe) {
 		toSerialize["cpe"] = o.Cpe
+	}
+	if !IsNil(o.Cves) {
+		toSerialize["cves"] = o.Cves
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product

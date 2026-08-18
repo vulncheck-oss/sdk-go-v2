@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Cpe** | Pointer to **string** |  | [optional] 
+**Cves** | Pointer to [**[]ApiCVEConfirmed**](ApiCVEConfirmed.md) | CVEs attributed to this specific fingerprint&#39;s CPE. | [optional] 
 **Product** | Pointer to **string** |  | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Version** | Pointer to **string** |  | [optional] 
@@ -52,6 +53,31 @@ SetCpe sets Cpe field to given value.
 `func (o *ApiFingerprint) HasCpe() bool`
 
 HasCpe returns a boolean if a field has been set.
+
+### GetCves
+
+`func (o *ApiFingerprint) GetCves() []ApiCVEConfirmed`
+
+GetCves returns the Cves field if non-nil, zero value otherwise.
+
+### GetCvesOk
+
+`func (o *ApiFingerprint) GetCvesOk() (*[]ApiCVEConfirmed, bool)`
+
+GetCvesOk returns a tuple with the Cves field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCves
+
+`func (o *ApiFingerprint) SetCves(v []ApiCVEConfirmed)`
+
+SetCves sets Cves field to given value.
+
+### HasCves
+
+`func (o *ApiFingerprint) HasCves() bool`
+
+HasCves returns a boolean if a field has been set.
 
 ### GetProduct
 
