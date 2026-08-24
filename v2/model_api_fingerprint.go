@@ -23,6 +23,8 @@ type ApiFingerprint struct {
 	Cpe *string `json:"cpe,omitempty"`
 	// CVEs attributed to this specific fingerprint's CPE.
 	Cves []ApiCVEConfirmed `json:"cves,omitempty"`
+	// Deprecated marks a fingerprint superseded by a newer alias from the same host.
+	Deprecated *bool `json:"deprecated,omitempty"`
 	Product *string `json:"product,omitempty"`
 	Vendor *string `json:"vendor,omitempty"`
 	Version *string `json:"version,omitempty"`
@@ -107,6 +109,38 @@ func (o *ApiFingerprint) HasCves() bool {
 // SetCves gets a reference to the given []ApiCVEConfirmed and assigns it to the Cves field.
 func (o *ApiFingerprint) SetCves(v []ApiCVEConfirmed) {
 	o.Cves = v
+}
+
+// GetDeprecated returns the Deprecated field value if set, zero value otherwise.
+func (o *ApiFingerprint) GetDeprecated() bool {
+	if o == nil || IsNil(o.Deprecated) {
+		var ret bool
+		return ret
+	}
+	return *o.Deprecated
+}
+
+// GetDeprecatedOk returns a tuple with the Deprecated field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiFingerprint) GetDeprecatedOk() (*bool, bool) {
+	if o == nil || IsNil(o.Deprecated) {
+		return nil, false
+	}
+	return o.Deprecated, true
+}
+
+// HasDeprecated returns a boolean if a field has been set.
+func (o *ApiFingerprint) HasDeprecated() bool {
+	if o != nil && !IsNil(o.Deprecated) {
+		return true
+	}
+
+	return false
+}
+
+// SetDeprecated gets a reference to the given bool and assigns it to the Deprecated field.
+func (o *ApiFingerprint) SetDeprecated(v bool) {
+	o.Deprecated = &v
 }
 
 // GetProduct returns the Product field value if set, zero value otherwise.
@@ -220,6 +254,9 @@ func (o ApiFingerprint) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Cves) {
 		toSerialize["cves"] = o.Cves
+	}
+	if !IsNil(o.Deprecated) {
+		toSerialize["deprecated"] = o.Deprecated
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product

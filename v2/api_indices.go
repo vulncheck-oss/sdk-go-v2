@@ -65493,6 +65493,10 @@ type ApiIndexExploitsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	maxExploitMaturity *string
+	validationLevel *string
+	inKev *bool
+	inVckev *bool
 	date *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
@@ -65601,6 +65605,30 @@ func (r ApiIndexExploitsGetRequest) Botnet(botnet string) ApiIndexExploitsGetReq
 // Specify a published date
 func (r ApiIndexExploitsGetRequest) Published(published string) ApiIndexExploitsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify the highest exploit maturity reached by any exploit for the record.
+func (r ApiIndexExploitsGetRequest) MaxExploitMaturity(maxExploitMaturity string) ApiIndexExploitsGetRequest {
+	r.maxExploitMaturity = &maxExploitMaturity
+	return r
+}
+
+// Specify one or more exploit validation levels (comma-delimited) to search with. A record matches when any of its exploits carries the level.
+func (r ApiIndexExploitsGetRequest) ValidationLevel(validationLevel string) ApiIndexExploitsGetRequest {
+	r.validationLevel = &validationLevel
+	return r
+}
+
+// Filter to records that are (true) or are not (false) in the CISA KEV catalog.
+func (r ApiIndexExploitsGetRequest) InKev(inKev bool) ApiIndexExploitsGetRequest {
+	r.inKev = &inKev
+	return r
+}
+
+// Filter to records that are (true) or are not (false) in the VulnCheck KEV catalog.
+func (r ApiIndexExploitsGetRequest) InVckev(inVckev bool) ApiIndexExploitsGetRequest {
+	r.inVckev = &inVckev
 	return r
 }
 
@@ -65747,6 +65775,18 @@ func (a *IndicesAPIService) IndexExploitsGetExecute(r ApiIndexExploitsGetRequest
 	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
+	}
+	if r.maxExploitMaturity != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "max_exploit_maturity", r.maxExploitMaturity, "form", "")
+	}
+	if r.validationLevel != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "validation_level", r.validationLevel, "form", "")
+	}
+	if r.inKev != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "in_kev", r.inKev, "form", "")
+	}
+	if r.inVckev != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "in_vckev", r.inVckev, "form", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")

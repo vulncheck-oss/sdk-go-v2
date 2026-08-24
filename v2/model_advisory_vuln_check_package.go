@@ -26,6 +26,8 @@ type AdvisoryVulnCheckPackage struct {
 	Md5 *string `json:"md5,omitempty"`
 	Name *string `json:"name,omitempty"`
 	Purl *string `json:"purl,omitempty"`
+	// Release is the rpm release field (the \"-release\" tail of an EVR), when the upstream advisory carries it separately from the version. Distro feeds that backport fixes (SUSE, the RHEL family) pin the fix at the release level with the upstream version unchanged, so a release-aware EVR compare needs this as its own field rather than folded into Version. Empty when the source only provides a bare version.
+	Release *string `json:"release,omitempty"`
 	Version *string `json:"version,omitempty"`
 }
 
@@ -238,6 +240,38 @@ func (o *AdvisoryVulnCheckPackage) SetPurl(v string) {
 	o.Purl = &v
 }
 
+// GetRelease returns the Release field value if set, zero value otherwise.
+func (o *AdvisoryVulnCheckPackage) GetRelease() string {
+	if o == nil || IsNil(o.Release) {
+		var ret string
+		return ret
+	}
+	return *o.Release
+}
+
+// GetReleaseOk returns a tuple with the Release field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryVulnCheckPackage) GetReleaseOk() (*string, bool) {
+	if o == nil || IsNil(o.Release) {
+		return nil, false
+	}
+	return o.Release, true
+}
+
+// HasRelease returns a boolean if a field has been set.
+func (o *AdvisoryVulnCheckPackage) HasRelease() bool {
+	if o != nil && !IsNil(o.Release) {
+		return true
+	}
+
+	return false
+}
+
+// SetRelease gets a reference to the given string and assigns it to the Release field.
+func (o *AdvisoryVulnCheckPackage) SetRelease(v string) {
+	o.Release = &v
+}
+
 // GetVersion returns the Version field value if set, zero value otherwise.
 func (o *AdvisoryVulnCheckPackage) GetVersion() string {
 	if o == nil || IsNil(o.Version) {
@@ -297,6 +331,9 @@ func (o AdvisoryVulnCheckPackage) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Purl) {
 		toSerialize["purl"] = o.Purl
+	}
+	if !IsNil(o.Release) {
+		toSerialize["release"] = o.Release
 	}
 	if !IsNil(o.Version) {
 		toSerialize["version"] = o.Version

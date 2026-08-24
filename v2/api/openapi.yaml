@@ -41251,6 +41251,42 @@ paths:
         schema:
           type: string
         style: form
+      - description: Specify the highest exploit maturity reached by any exploit for
+          the record.
+        explode: true
+        in: query
+        name: max_exploit_maturity
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify one or more exploit validation levels (comma-delimited)
+          to search with. A record matches when any of its exploits carries the level.
+        explode: true
+        in: query
+        name: validation_level
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter to records that are (true) or are not (false) in the CISA
+          KEV catalog.
+        explode: true
+        in: query
+        name: in_kev
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Filter to records that are (true) or are not (false) in the VulnCheck
+          KEV catalog.
+        explode: true
+        in: query
+        name: in_vckev
+        required: false
+        schema:
+          type: boolean
+        style: form
       - description: Specify an exact published date to filter with.
         explode: true
         in: query
@@ -146333,6 +146369,7 @@ components:
         packages:
         - distro: distro
           filename: filename
+          release: release
           name: name
           arch: arch
           purl: purl
@@ -146340,6 +146377,7 @@ components:
           md5: md5
         - distro: distro
           filename: filename
+          release: release
           name: name
           arch: arch
           purl: purl
@@ -158602,6 +158640,7 @@ components:
         packages:
         - distro: distro
           filename: filename
+          release: release
           name: name
           arch: arch
           purl: purl
@@ -158609,6 +158648,7 @@ components:
           md5: md5
         - distro: distro
           filename: filename
+          release: release
           name: name
           arch: arch
           purl: purl
@@ -166721,6 +166761,7 @@ components:
       example:
         distro: distro
         filename: filename
+        release: release
         name: name
         arch: arch
         purl: purl
@@ -166738,6 +166779,15 @@ components:
         name:
           type: string
         purl:
+          type: string
+        release:
+          description: |-
+            Release is the rpm release field (the "-release" tail of an EVR), when the
+            upstream advisory carries it separately from the version. Distro feeds that
+            backport fixes (SUSE, the RHEL family) pin the fix at the release level with
+            the upstream version unchanged, so a release-aware EVR compare needs this as
+            its own field rather than folded into Version. Empty when the source only
+            provides a bare version.
           type: string
         version:
           type: string
@@ -171810,6 +171860,7 @@ components:
       example:
         product: product
         vendor: vendor
+        deprecated: true
         cpe: cpe
         version: version
         cves:
@@ -171826,6 +171877,10 @@ components:
             $ref: '#/components/schemas/api.CVEConfirmed'
           type: array
           uniqueItems: false
+        deprecated:
+          description: Deprecated marks a fingerprint superseded by a newer alias
+            from the same host.
+          type: boolean
         product:
           type: string
         vendor:
@@ -177698,6 +177753,7 @@ components:
         fingerprints:
         - product: product
           vendor: vendor
+          deprecated: true
           cpe: cpe
           version: version
           cves:
@@ -177707,6 +177763,7 @@ components:
             confirmed: true
         - product: product
           vendor: vendor
+          deprecated: true
           cpe: cpe
           version: version
           cves:
@@ -204162,6 +204219,7 @@ components:
           packages:
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -204169,6 +204227,7 @@ components:
             md5: md5
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -204202,6 +204261,7 @@ components:
           packages:
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -204209,6 +204269,7 @@ components:
             md5: md5
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -221499,6 +221560,7 @@ components:
           packages:
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -221506,6 +221568,7 @@ components:
             md5: md5
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -221557,6 +221620,7 @@ components:
           packages:
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -221564,6 +221628,7 @@ components:
             md5: md5
           - distro: distro
             filename: filename
+            release: release
             name: name
             arch: arch
             purl: purl
@@ -244809,6 +244874,7 @@ components:
           fingerprints:
           - product: product
             vendor: vendor
+            deprecated: true
             cpe: cpe
             version: version
             cves:
@@ -244818,6 +244884,7 @@ components:
               confirmed: true
           - product: product
             vendor: vendor
+            deprecated: true
             cpe: cpe
             version: version
             cves:
@@ -244872,6 +244939,7 @@ components:
           fingerprints:
           - product: product
             vendor: vendor
+            deprecated: true
             cpe: cpe
             version: version
             cves:
@@ -244881,6 +244949,7 @@ components:
               confirmed: true
           - product: product
             vendor: vendor
+            deprecated: true
             cpe: cpe
             version: version
             cves:
