@@ -19557,7 +19557,7 @@ Name | Type | Description  | Notes
 
 ## IndexExploitsGet
 
-> RenderResponseWithMetadataArrayApiExploitV3ResultPaginatePagination IndexExploitsGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+> RenderResponseWithMetadataArrayApiExploitV3ResultPaginatePagination IndexExploitsGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).MaxExploitMaturity(maxExploitMaturity).ValidationLevel(validationLevel).InKev(inKev).InVckev(inVckev).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 
 Return vulnerability data stored in index \"exploits\"
 
@@ -19593,6 +19593,10 @@ func main() {
 	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
 	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
 	published := "published_example" // string | Specify a published date (optional)
+	maxExploitMaturity := "maxExploitMaturity_example" // string | Specify the highest exploit maturity reached by any exploit for the record. (optional)
+	validationLevel := "validationLevel_example" // string | Specify one or more exploit validation levels (comma-delimited) to search with. A record matches when any of its exploits carries the level. (optional)
+	inKev := true // bool | Filter to records that are (true) or are not (false) in the CISA KEV catalog. (optional)
+	inVckev := true // bool | Filter to records that are (true) or are not (false) in the VulnCheck KEV catalog. (optional)
 	date := "date_example" // string | Specify an exact published date to filter with. (optional)
 	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
 	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
@@ -19603,7 +19607,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IndicesAPI.IndexExploitsGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	resp, r, err := apiClient.IndicesAPI.IndexExploitsGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).MaxExploitMaturity(maxExploitMaturity).ValidationLevel(validationLevel).InKev(inKev).InVckev(inVckev).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexExploitsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -19641,6 +19645,10 @@ Name | Type | Description  | Notes
  **ransomware** | **string** | Specify a ransomeware family name to search with. | 
  **botnet** | **string** | Specify a botnet name to search with. | 
  **published** | **string** | Specify a published date | 
+ **maxExploitMaturity** | **string** | Specify the highest exploit maturity reached by any exploit for the record. | 
+ **validationLevel** | **string** | Specify one or more exploit validation levels (comma-delimited) to search with. A record matches when any of its exploits carries the level. | 
+ **inKev** | **bool** | Filter to records that are (true) or are not (false) in the CISA KEV catalog. | 
+ **inVckev** | **bool** | Filter to records that are (true) or are not (false) in the VulnCheck KEV catalog. | 
  **date** | **string** | Specify an exact published date to filter with. | 
  **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
  **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 

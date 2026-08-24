@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Md5** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Purl** | Pointer to **string** |  | [optional] 
+**Release** | Pointer to **string** | Release is the rpm release field (the \&quot;-release\&quot; tail of an EVR), when the upstream advisory carries it separately from the version. Distro feeds that backport fixes (SUSE, the RHEL family) pin the fix at the release level with the upstream version unchanged, so a release-aware EVR compare needs this as its own field rather than folded into Version. Empty when the source only provides a bare version. | [optional] 
 **Version** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -180,6 +181,31 @@ SetPurl sets Purl field to given value.
 `func (o *AdvisoryVulnCheckPackage) HasPurl() bool`
 
 HasPurl returns a boolean if a field has been set.
+
+### GetRelease
+
+`func (o *AdvisoryVulnCheckPackage) GetRelease() string`
+
+GetRelease returns the Release field if non-nil, zero value otherwise.
+
+### GetReleaseOk
+
+`func (o *AdvisoryVulnCheckPackage) GetReleaseOk() (*string, bool)`
+
+GetReleaseOk returns a tuple with the Release field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRelease
+
+`func (o *AdvisoryVulnCheckPackage) SetRelease(v string)`
+
+SetRelease sets Release field to given value.
+
+### HasRelease
+
+`func (o *AdvisoryVulnCheckPackage) HasRelease() bool`
+
+HasRelease returns a boolean if a field has been set.
 
 ### GetVersion
 
