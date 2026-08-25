@@ -1455,7 +1455,7 @@ func (r ApiSearchCpeGetRequest) IsVulnerable(isVulnerable string) ApiSearchCpeGe
 	return r
 }
 
-func (r ApiSearchCpeGetRequest) Execute() (*RenderResponseWithMetadataSearchResponsesSearchResponseMetadata, *http.Response, error) {
+func (r ApiSearchCpeGetRequest) Execute() (*RenderResponseWithMetadataSearchResponsesPaginatePagination, *http.Response, error) {
 	return r.ApiService.SearchCpeGetExecute(r)
 }
 
@@ -1475,13 +1475,13 @@ func (a *EndpointsAPIService) SearchCpeGet(ctx context.Context) ApiSearchCpeGetR
 }
 
 // Execute executes the request
-//  @return RenderResponseWithMetadataSearchResponsesSearchResponseMetadata
-func (a *EndpointsAPIService) SearchCpeGetExecute(r ApiSearchCpeGetRequest) (*RenderResponseWithMetadataSearchResponsesSearchResponseMetadata, *http.Response, error) {
+//  @return RenderResponseWithMetadataSearchResponsesPaginatePagination
+func (a *EndpointsAPIService) SearchCpeGetExecute(r ApiSearchCpeGetRequest) (*RenderResponseWithMetadataSearchResponsesPaginatePagination, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *RenderResponseWithMetadataSearchResponsesSearchResponseMetadata
+		localVarReturnValue  *RenderResponseWithMetadataSearchResponsesPaginatePagination
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "EndpointsAPIService.SearchCpeGet")

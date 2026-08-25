@@ -51633,6 +51633,7 @@ type ApiIndexCvesIdentityMappingsGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	xrefId *string
 	date *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
@@ -51741,6 +51742,12 @@ func (r ApiIndexCvesIdentityMappingsGetRequest) Botnet(botnet string) ApiIndexCv
 // Specify a published date
 func (r ApiIndexCvesIdentityMappingsGetRequest) Published(published string) ApiIndexCvesIdentityMappingsGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a cross-reference ID (GHSA, JVNDB, EUVD, …) to reverse-look-up its CVE.
+func (r ApiIndexCvesIdentityMappingsGetRequest) XrefId(xrefId string) ApiIndexCvesIdentityMappingsGetRequest {
+	r.xrefId = &xrefId
 	return r
 }
 
@@ -51887,6 +51894,9 @@ func (a *IndicesAPIService) IndexCvesIdentityMappingsGetExecute(r ApiIndexCvesId
 	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
+	}
+	if r.xrefId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "xref_id", r.xrefId, "form", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")

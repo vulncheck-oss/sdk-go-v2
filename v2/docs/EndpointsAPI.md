@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 
 ## SearchCpeGet
 
-> RenderResponseWithMetadataSearchResponsesSearchResponseMetadata SearchCpeGet(ctx).Part(part).Vendor(vendor).Product(product).Version(version).IsVulnerable(isVulnerable).Execute()
+> RenderResponseWithMetadataSearchResponsesPaginatePagination SearchCpeGet(ctx).Part(part).Vendor(vendor).Product(product).Version(version).IsVulnerable(isVulnerable).Execute()
 
 Return CPEs and associated CPEs by searching CPE fields
 
@@ -704,7 +704,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `EndpointsAPI.SearchCpeGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SearchCpeGet`: RenderResponseWithMetadataSearchResponsesSearchResponseMetadata
+	// response from `SearchCpeGet`: RenderResponseWithMetadataSearchResponsesPaginatePagination
 	fmt.Fprintf(os.Stdout, "Response from `EndpointsAPI.SearchCpeGet`: %v\n", resp)
 }
 ```
@@ -728,7 +728,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RenderResponseWithMetadataSearchResponsesSearchResponseMetadata**](RenderResponseWithMetadataSearchResponsesSearchResponseMetadata.md)
+[**RenderResponseWithMetadataSearchResponsesPaginatePagination**](RenderResponseWithMetadataSearchResponsesPaginatePagination.md)
 
 ### Authorization
 
