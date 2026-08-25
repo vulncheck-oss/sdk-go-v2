@@ -37,7 +37,7 @@ type ApiTargetIntel struct {
 	Fingerprints []ApiFingerprint `json:"fingerprints,omitempty"`
 	Hostname *string `json:"hostname,omitempty"`
 	Ip *string `json:"ip,omitempty"`
-	Metadata []int32 `json:"metadata,omitempty"`
+	Metadata map[string]interface{} `json:"metadata,omitempty"`
 	Port *int32 `json:"port,omitempty"`
 	Product []string `json:"product,omitempty"`
 	Protocol *string `json:"protocol,omitempty"`
@@ -514,9 +514,9 @@ func (o *ApiTargetIntel) SetIp(v string) {
 }
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
-func (o *ApiTargetIntel) GetMetadata() []int32 {
+func (o *ApiTargetIntel) GetMetadata() map[string]interface{} {
 	if o == nil || IsNil(o.Metadata) {
-		var ret []int32
+		var ret map[string]interface{}
 		return ret
 	}
 	return o.Metadata
@@ -524,9 +524,9 @@ func (o *ApiTargetIntel) GetMetadata() []int32 {
 
 // GetMetadataOk returns a tuple with the Metadata field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiTargetIntel) GetMetadataOk() ([]int32, bool) {
+func (o *ApiTargetIntel) GetMetadataOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Metadata) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
 	return o.Metadata, true
 }
@@ -540,8 +540,8 @@ func (o *ApiTargetIntel) HasMetadata() bool {
 	return false
 }
 
-// SetMetadata gets a reference to the given []int32 and assigns it to the Metadata field.
-func (o *ApiTargetIntel) SetMetadata(v []int32) {
+// SetMetadata gets a reference to the given map[string]interface{} and assigns it to the Metadata field.
+func (o *ApiTargetIntel) SetMetadata(v map[string]interface{}) {
 	o.Metadata = v
 }
 

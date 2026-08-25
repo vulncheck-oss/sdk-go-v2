@@ -32886,6 +32886,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: "Specify a cross-reference ID (GHSA, JVNDB, EUVD, …) to reverse-look-up\
+          \ its CVE."
+        explode: true
+        in: query
+        name: xref_id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Specify an exact published date to filter with.
         explode: true
         in: query
@@ -122446,7 +122455,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/render.ResponseWithMetadata-search_Responses-search_ResponseMetadata'
+                $ref: '#/components/schemas/render.ResponseWithMetadata-search_Responses-paginate_Pagination'
           description: OK
         "404":
           content:
@@ -177729,13 +177738,11 @@ components:
       example:
         summary:
           contains_cve: true
-          confirmed_count: 5
+          confirmed_count: 1
           cve_count: 5
-          fingerprint_count: 2
+          fingerprint_count: 5
         country: country
-        metadata:
-        - 6
-        - 6
+        metadata: "{}"
         product:
         - product
         - product
@@ -177781,7 +177788,7 @@ components:
         cve:
         - cve
         - cve
-        port: 1
+        port: 6
         contains_cve: true
         vendor:
         - vendor
@@ -177844,10 +177851,7 @@ components:
         ip:
           type: string
         metadata:
-          items:
-            type: integer
-          type: array
-          uniqueItems: false
+          type: object
         port:
           type: integer
         product:
@@ -177877,9 +177881,9 @@ components:
       description: Summary is a pre-computed rollup of the CVE/fingerprint data above.
       example:
         contains_cve: true
-        confirmed_count: 5
+        confirmed_count: 1
         cve_count: 5
-        fingerprint_count: 2
+        fingerprint_count: 5
       properties:
         confirmed_count:
           type: integer
@@ -244850,13 +244854,11 @@ components:
         data:
         - summary:
             contains_cve: true
-            confirmed_count: 5
+            confirmed_count: 1
             cve_count: 5
-            fingerprint_count: 2
+            fingerprint_count: 5
           country: country
-          metadata:
-          - 6
-          - 6
+          metadata: "{}"
           product:
           - product
           - product
@@ -244902,7 +244904,7 @@ components:
           cve:
           - cve
           - cve
-          port: 1
+          port: 6
           contains_cve: true
           vendor:
           - vendor
@@ -244915,13 +244917,11 @@ components:
           timestamp: timestamp
         - summary:
             contains_cve: true
-            confirmed_count: 5
+            confirmed_count: 1
             cve_count: 5
-            fingerprint_count: 2
+            fingerprint_count: 5
           country: country
-          metadata:
-          - 6
-          - 6
+          metadata: "{}"
           product:
           - product
           - product
@@ -244967,7 +244967,7 @@ components:
           cve:
           - cve
           - cve
-          port: 1
+          port: 6
           contains_cve: true
           vendor:
           - vendor
@@ -245524,8 +245524,8 @@ components:
             type: string
           type: array
           uniqueItems: false
-    render.ResponseWithMetadata-search_Responses-search_ResponseMetadata:
-      description: render.ResponseWithMetadata-search_Responses-search_ResponseMetadata
+    render.ResponseWithMetadata-search_Responses-paginate_Pagination:
+      description: render.ResponseWithMetadata-search_Responses-paginate_Pagination
       example:
         data:
         - cpe: cpe
@@ -245561,7 +245561,39 @@ components:
           - cves
           - cves
         _meta:
-          total_documents: 6
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
           timestamp: timestamp
         _benchmark: 0.8008281904610115
       properties:
@@ -245571,7 +245603,7 @@ components:
             Example: 0.122322 = approximately 122 milliseconds
           type: number
         _meta:
-          $ref: '#/components/schemas/search.ResponseMetadata'
+          $ref: '#/components/schemas/paginate.Pagination'
         data:
           description: Data is the data returned by the endpoint
           items:
@@ -245783,16 +245815,6 @@ components:
             type: string
           type: array
           uniqueItems: false
-    search.ResponseMetadata:
-      description: Meta is the metadata related to the endpoint response
-      example:
-        total_documents: 6
-        timestamp: timestamp
-      properties:
-        timestamp:
-          type: string
-        total_documents:
-          type: integer
     search.V4AdvisoryMeta:
       description: search.V4AdvisoryMeta
       example:

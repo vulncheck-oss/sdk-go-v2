@@ -15525,7 +15525,7 @@ Name | Type | Description  | Notes
 
 ## IndexCvesIdentityMappingsGet
 
-> RenderResponseWithMetadataArrayAdvisoryCVEIdentityMappingsPaginatePagination IndexCvesIdentityMappingsGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+> RenderResponseWithMetadataArrayAdvisoryCVEIdentityMappingsPaginatePagination IndexCvesIdentityMappingsGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).XrefId(xrefId).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 
 Return vulnerability data stored in index \"cves_identity_mappings\"
 
@@ -15561,6 +15561,7 @@ func main() {
 	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
 	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
 	published := "published_example" // string | Specify a published date (optional)
+	xrefId := "xrefId_example" // string | Specify a cross-reference ID (GHSA, JVNDB, EUVD, …) to reverse-look-up its CVE. (optional)
 	date := "date_example" // string | Specify an exact published date to filter with. (optional)
 	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
 	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
@@ -15571,7 +15572,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IndicesAPI.IndexCvesIdentityMappingsGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	resp, r, err := apiClient.IndicesAPI.IndexCvesIdentityMappingsGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).XrefId(xrefId).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexCvesIdentityMappingsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -15609,6 +15610,7 @@ Name | Type | Description  | Notes
  **ransomware** | **string** | Specify a ransomeware family name to search with. | 
  **botnet** | **string** | Specify a botnet name to search with. | 
  **published** | **string** | Specify a published date | 
+ **xrefId** | **string** | Specify a cross-reference ID (GHSA, JVNDB, EUVD, …) to reverse-look-up its CVE. | 
  **date** | **string** | Specify an exact published date to filter with. | 
  **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
  **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 

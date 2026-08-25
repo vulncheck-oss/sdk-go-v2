@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **Fingerprints** | Pointer to [**[]ApiFingerprint**](ApiFingerprint.md) |  | [optional] 
 **Hostname** | Pointer to **string** |  | [optional] 
 **Ip** | Pointer to **string** |  | [optional] 
-**Metadata** | Pointer to **[]int32** |  | [optional] 
+**Metadata** | Pointer to **map[string]interface{}** |  | [optional] 
 **Port** | Pointer to **int32** |  | [optional] 
 **Product** | Pointer to **[]string** |  | [optional] 
 **Protocol** | Pointer to **string** |  | [optional] 
@@ -399,20 +399,20 @@ HasIp returns a boolean if a field has been set.
 
 ### GetMetadata
 
-`func (o *ApiTargetIntel) GetMetadata() []int32`
+`func (o *ApiTargetIntel) GetMetadata() map[string]interface{}`
 
 GetMetadata returns the Metadata field if non-nil, zero value otherwise.
 
 ### GetMetadataOk
 
-`func (o *ApiTargetIntel) GetMetadataOk() (*[]int32, bool)`
+`func (o *ApiTargetIntel) GetMetadataOk() (*map[string]interface{}, bool)`
 
 GetMetadataOk returns a tuple with the Metadata field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadata
 
-`func (o *ApiTargetIntel) SetMetadata(v []int32)`
+`func (o *ApiTargetIntel) SetMetadata(v map[string]interface{})`
 
 SetMetadata sets Metadata field to given value.
 
