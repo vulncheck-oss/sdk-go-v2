@@ -7,7 +7,9 @@ Name | Type | Description | Notes
 **Available** | Pointer to **bool** |  | [optional] 
 **Feed** | Pointer to **string** |  | [optional] 
 **Sha256** | Pointer to **string** |  | [optional] 
+**Url** | Pointer to **string** |  | [optional] 
 **UrlApSoutheast2** | Pointer to **string** |  | [optional] 
+**UrlCloudfront** | Pointer to **string** |  | [optional] 
 **UrlEuWest2** | Pointer to **string** |  | [optional] 
 **UrlExpires** | Pointer to **string** |  | [optional] 
 **UrlMrap** | Pointer to **string** |  | [optional] 
@@ -108,6 +110,31 @@ SetSha256 sets Sha256 field to given value.
 
 HasSha256 returns a boolean if a field has been set.
 
+### GetUrl
+
+`func (o *BackupBackupResponse) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *BackupBackupResponse) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *BackupBackupResponse) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *BackupBackupResponse) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
 ### GetUrlApSoutheast2
 
 `func (o *BackupBackupResponse) GetUrlApSoutheast2() string`
@@ -132,6 +159,31 @@ SetUrlApSoutheast2 sets UrlApSoutheast2 field to given value.
 `func (o *BackupBackupResponse) HasUrlApSoutheast2() bool`
 
 HasUrlApSoutheast2 returns a boolean if a field has been set.
+
+### GetUrlCloudfront
+
+`func (o *BackupBackupResponse) GetUrlCloudfront() string`
+
+GetUrlCloudfront returns the UrlCloudfront field if non-nil, zero value otherwise.
+
+### GetUrlCloudfrontOk
+
+`func (o *BackupBackupResponse) GetUrlCloudfrontOk() (*string, bool)`
+
+GetUrlCloudfrontOk returns a tuple with the UrlCloudfront field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlCloudfront
+
+`func (o *BackupBackupResponse) SetUrlCloudfront(v string)`
+
+SetUrlCloudfront sets UrlCloudfront field to given value.
+
+### HasUrlCloudfront
+
+`func (o *BackupBackupResponse) HasUrlCloudfront() bool`
+
+HasUrlCloudfront returns a boolean if a field has been set.
 
 ### GetUrlEuWest2
 

@@ -23,6 +23,7 @@ type ApiImpact struct {
 	BaseMetricV2 *ApiBaseMetricV2 `json:"baseMetricV2,omitempty"`
 	BaseMetricV3 *ApiBaseMetricV3 `json:"baseMetricV3,omitempty"`
 	MetricV40 *AdvisoryCVSSV40 `json:"metricV40,omitempty"`
+	Ssvc []ApiSSVC `json:"ssvc,omitempty"`
 }
 
 // NewApiImpact instantiates a new ApiImpact object
@@ -138,6 +139,38 @@ func (o *ApiImpact) SetMetricV40(v AdvisoryCVSSV40) {
 	o.MetricV40 = &v
 }
 
+// GetSsvc returns the Ssvc field value if set, zero value otherwise.
+func (o *ApiImpact) GetSsvc() []ApiSSVC {
+	if o == nil || IsNil(o.Ssvc) {
+		var ret []ApiSSVC
+		return ret
+	}
+	return o.Ssvc
+}
+
+// GetSsvcOk returns a tuple with the Ssvc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiImpact) GetSsvcOk() ([]ApiSSVC, bool) {
+	if o == nil || IsNil(o.Ssvc) {
+		return nil, false
+	}
+	return o.Ssvc, true
+}
+
+// HasSsvc returns a boolean if a field has been set.
+func (o *ApiImpact) HasSsvc() bool {
+	if o != nil && !IsNil(o.Ssvc) {
+		return true
+	}
+
+	return false
+}
+
+// SetSsvc gets a reference to the given []ApiSSVC and assigns it to the Ssvc field.
+func (o *ApiImpact) SetSsvc(v []ApiSSVC) {
+	o.Ssvc = v
+}
+
 func (o ApiImpact) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -156,6 +189,9 @@ func (o ApiImpact) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.MetricV40) {
 		toSerialize["metricV40"] = o.MetricV40
+	}
+	if !IsNil(o.Ssvc) {
+		toSerialize["ssvc"] = o.Ssvc
 	}
 	return toSerialize, nil
 }

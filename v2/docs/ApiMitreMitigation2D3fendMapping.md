@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**D3fendtechniques** | Pointer to [**[]ApiMitreD3fendTechnique**](ApiMitreD3fendTechnique.md) |  | [optional] 
+**D3fendtechniques** | Pointer to [**[]AdvisoryMitreD3fendTechnique**](AdvisoryMitreD3fendTechnique.md) |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetD3fendtechniques
 
-`func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniques() []ApiMitreD3fendTechnique`
+`func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniques() []AdvisoryMitreD3fendTechnique`
 
 GetD3fendtechniques returns the D3fendtechniques field if non-nil, zero value otherwise.
 
 ### GetD3fendtechniquesOk
 
-`func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniquesOk() (*[]ApiMitreD3fendTechnique, bool)`
+`func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniquesOk() (*[]AdvisoryMitreD3fendTechnique, bool)`
 
 GetD3fendtechniquesOk returns a tuple with the D3fendtechniques field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetD3fendtechniques
 
-`func (o *ApiMitreMitigation2D3fendMapping) SetD3fendtechniques(v []ApiMitreD3fendTechnique)`
+`func (o *ApiMitreMitigation2D3fendMapping) SetD3fendtechniques(v []AdvisoryMitreD3fendTechnique)`
 
 SetD3fendtechniques sets D3fendtechniques field to given value.
 

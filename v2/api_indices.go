@@ -126938,391 +126938,6 @@ func (a *IndicesAPIService) IndexNugetGetExecute(r ApiIndexNugetGetRequest) (*Re
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiIndexNvdCpeDictionaryGetRequest struct {
-	ctx context.Context
-	ApiService *IndicesAPIService
-	page *int32
-	limit *int32
-	cursor *string
-	startCursor *string
-	order *string
-	sort *string
-	cve *string
-	alias *string
-	iava *string
-	jvndb *string
-	ilvn *string
-	threatActor *string
-	mitreId *string
-	mispId *string
-	ransomware *string
-	botnet *string
-	published *string
-	date *string
-	updatedAtStartDate *string
-	updatedAtEndDate *string
-	lastModStartDate *string
-	lastModEndDate *string
-	pubStartDate *string
-	pubEndDate *string
-}
-
-// set the page number of the response
-func (r ApiIndexNvdCpeDictionaryGetRequest) Page(page int32) ApiIndexNvdCpeDictionaryGetRequest {
-	r.page = &page
-	return r
-}
-
-// limit the number of findings in the response
-func (r ApiIndexNvdCpeDictionaryGetRequest) Limit(limit int32) ApiIndexNvdCpeDictionaryGetRequest {
-	r.limit = &limit
-	return r
-}
-
-// continue server-side paging using a cursor id
-func (r ApiIndexNvdCpeDictionaryGetRequest) Cursor(cursor string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.cursor = &cursor
-	return r
-}
-
-// request server-side paging
-func (r ApiIndexNvdCpeDictionaryGetRequest) StartCursor(startCursor string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.startCursor = &startCursor
-	return r
-}
-
-// direction of the sort
-func (r ApiIndexNvdCpeDictionaryGetRequest) Order(order string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.order = &order
-	return r
-}
-
-// field by which to sort the results
-func (r ApiIndexNvdCpeDictionaryGetRequest) Sort(sort string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.sort = &sort
-	return r
-}
-
-// Specify a CVE ID to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Cve(cve string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.cve = &cve
-	return r
-}
-
-// Specify a vulnerability alias to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Alias(alias string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.alias = &alias
-	return r
-}
-
-// Specify an IAVA ID to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Iava(iava string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.iava = &iava
-	return r
-}
-
-// Specify a JVNDB ID to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Jvndb(jvndb string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.jvndb = &jvndb
-	return r
-}
-
-// Specify an ILVN ID to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Ilvn(ilvn string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.ilvn = &ilvn
-	return r
-}
-
-// Specify a threat actor name to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) ThreatActor(threatActor string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.threatActor = &threatActor
-	return r
-}
-
-// Specify a MITRE ID to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) MitreId(mitreId string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.mitreId = &mitreId
-	return r
-}
-
-// Specify a MISP ID to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) MispId(mispId string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.mispId = &mispId
-	return r
-}
-
-// Specify a ransomeware family name to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Ransomware(ransomware string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.ransomware = &ransomware
-	return r
-}
-
-// Specify a botnet name to search with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Botnet(botnet string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.botnet = &botnet
-	return r
-}
-
-// Specify a published date
-func (r ApiIndexNvdCpeDictionaryGetRequest) Published(published string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.published = &published
-	return r
-}
-
-// Specify an exact published date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) Date(date string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.date = &date
-	return r
-}
-
-// Specify a starting &#39;updated-at&#39; date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.updatedAtStartDate = &updatedAtStartDate
-	return r
-}
-
-// Specify an ending &#39;updated-at&#39; date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.updatedAtEndDate = &updatedAtEndDate
-	return r
-}
-
-// Specify a starting last modified date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) LastModStartDate(lastModStartDate string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.lastModStartDate = &lastModStartDate
-	return r
-}
-
-// Specify an ending last modified date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) LastModEndDate(lastModEndDate string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.lastModEndDate = &lastModEndDate
-	return r
-}
-
-// Specify a starting published date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) PubStartDate(pubStartDate string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.pubStartDate = &pubStartDate
-	return r
-}
-
-// Specify an ending published date to filter with.
-func (r ApiIndexNvdCpeDictionaryGetRequest) PubEndDate(pubEndDate string) ApiIndexNvdCpeDictionaryGetRequest {
-	r.pubEndDate = &pubEndDate
-	return r
-}
-
-func (r ApiIndexNvdCpeDictionaryGetRequest) Execute() (*RenderResponseWithMetadataArrayAdvisoryNVDCPEDictionaryPaginatePagination, *http.Response, error) {
-	return r.ApiService.IndexNvdCpeDictionaryGetExecute(r)
-}
-
-/*
-IndexNvdCpeDictionaryGet Return vulnerability data stored in index \"nvd-cpe-dictionary\"
-
-### Overview
-This endpoint allows you to retrieve a paginated list of all documents from the nvd-cpe-dictionary index. \
-By default, a maximum of 100 documents are shown per page.
-
-**Index Description:** NVD's CPE Dictionary
-
-### Paging Over Large Data (cursor)
-In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-"cursor" mechanism. To use the cursor, first call `GET /index/nvd-cpe-dictionary?start_cursor`, the response will
-have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-`GET /index/nvd-cpe-dictionary?cursor=<next_cursor_id>`
-
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIndexNvdCpeDictionaryGetRequest
-*/
-func (a *IndicesAPIService) IndexNvdCpeDictionaryGet(ctx context.Context) ApiIndexNvdCpeDictionaryGetRequest {
-	return ApiIndexNvdCpeDictionaryGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-//  @return RenderResponseWithMetadataArrayAdvisoryNVDCPEDictionaryPaginatePagination
-func (a *IndicesAPIService) IndexNvdCpeDictionaryGetExecute(r ApiIndexNvdCpeDictionaryGetRequest) (*RenderResponseWithMetadataArrayAdvisoryNVDCPEDictionaryPaginatePagination, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *RenderResponseWithMetadataArrayAdvisoryNVDCPEDictionaryPaginatePagination
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexNvdCpeDictionaryGet")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/v3/index/nvd-cpe-dictionary"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.page != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	}
-	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
-	}
-	if r.cursor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
-	}
-	if r.startCursor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
-	}
-	if r.order != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	}
-	if r.sort != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "form", "")
-	}
-	if r.cve != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "form", "")
-	}
-	if r.alias != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "form", "")
-	}
-	if r.iava != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "form", "")
-	}
-	if r.jvndb != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "form", "")
-	}
-	if r.ilvn != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "form", "")
-	}
-	if r.threatActor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "form", "")
-	}
-	if r.mitreId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "form", "")
-	}
-	if r.mispId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "form", "")
-	}
-	if r.ransomware != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "form", "")
-	}
-	if r.botnet != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "form", "")
-	}
-	if r.published != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
-	}
-	if r.date != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
-	}
-	if r.updatedAtStartDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "form", "")
-	}
-	if r.updatedAtEndDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "form", "")
-	}
-	if r.lastModStartDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "form", "")
-	}
-	if r.lastModEndDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "form", "")
-	}
-	if r.pubStartDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "form", "")
-	}
-	if r.pubEndDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "form", "")
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Bearer"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["Authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 404 {
-			var v string
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 500 {
-			var v string
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiIndexNvidiaGetRequest struct {
 	ctx context.Context
 	ApiService *IndicesAPIService
@@ -147177,6 +146792,391 @@ func (a *IndicesAPIService) IndexRedhatGetExecute(r ApiIndexRedhatGetRequest) (*
 	}
 
 	localVarPath := localBasePath + "/v3/index/redhat"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
+	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "form", "")
+	}
+	if r.cve != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "form", "")
+	}
+	if r.alias != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "alias", r.alias, "form", "")
+	}
+	if r.iava != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "iava", r.iava, "form", "")
+	}
+	if r.jvndb != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "jvndb", r.jvndb, "form", "")
+	}
+	if r.ilvn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ilvn", r.ilvn, "form", "")
+	}
+	if r.threatActor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "threat_actor", r.threatActor, "form", "")
+	}
+	if r.mitreId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mitre_id", r.mitreId, "form", "")
+	}
+	if r.mispId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "misp_id", r.mispId, "form", "")
+	}
+	if r.ransomware != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ransomware", r.ransomware, "form", "")
+	}
+	if r.botnet != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "botnet", r.botnet, "form", "")
+	}
+	if r.published != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "form", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "form", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "form", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "form", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "form", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexRedhatPurlsGetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	order *string
+	sort *string
+	cve *string
+	alias *string
+	iava *string
+	jvndb *string
+	ilvn *string
+	threatActor *string
+	mitreId *string
+	mispId *string
+	ransomware *string
+	botnet *string
+	published *string
+	date *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexRedhatPurlsGetRequest) Page(page int32) ApiIndexRedhatPurlsGetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexRedhatPurlsGetRequest) Limit(limit int32) ApiIndexRedhatPurlsGetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexRedhatPurlsGetRequest) Cursor(cursor string) ApiIndexRedhatPurlsGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexRedhatPurlsGetRequest) StartCursor(startCursor string) ApiIndexRedhatPurlsGetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexRedhatPurlsGetRequest) Order(order string) ApiIndexRedhatPurlsGetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexRedhatPurlsGetRequest) Sort(sort string) ApiIndexRedhatPurlsGetRequest {
+	r.sort = &sort
+	return r
+}
+
+// Specify a CVE ID to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Cve(cve string) ApiIndexRedhatPurlsGetRequest {
+	r.cve = &cve
+	return r
+}
+
+// Specify a vulnerability alias to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Alias(alias string) ApiIndexRedhatPurlsGetRequest {
+	r.alias = &alias
+	return r
+}
+
+// Specify an IAVA ID to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Iava(iava string) ApiIndexRedhatPurlsGetRequest {
+	r.iava = &iava
+	return r
+}
+
+// Specify a JVNDB ID to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Jvndb(jvndb string) ApiIndexRedhatPurlsGetRequest {
+	r.jvndb = &jvndb
+	return r
+}
+
+// Specify an ILVN ID to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Ilvn(ilvn string) ApiIndexRedhatPurlsGetRequest {
+	r.ilvn = &ilvn
+	return r
+}
+
+// Specify a threat actor name to search with.
+func (r ApiIndexRedhatPurlsGetRequest) ThreatActor(threatActor string) ApiIndexRedhatPurlsGetRequest {
+	r.threatActor = &threatActor
+	return r
+}
+
+// Specify a MITRE ID to search with.
+func (r ApiIndexRedhatPurlsGetRequest) MitreId(mitreId string) ApiIndexRedhatPurlsGetRequest {
+	r.mitreId = &mitreId
+	return r
+}
+
+// Specify a MISP ID to search with.
+func (r ApiIndexRedhatPurlsGetRequest) MispId(mispId string) ApiIndexRedhatPurlsGetRequest {
+	r.mispId = &mispId
+	return r
+}
+
+// Specify a ransomeware family name to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Ransomware(ransomware string) ApiIndexRedhatPurlsGetRequest {
+	r.ransomware = &ransomware
+	return r
+}
+
+// Specify a botnet name to search with.
+func (r ApiIndexRedhatPurlsGetRequest) Botnet(botnet string) ApiIndexRedhatPurlsGetRequest {
+	r.botnet = &botnet
+	return r
+}
+
+// Specify a published date
+func (r ApiIndexRedhatPurlsGetRequest) Published(published string) ApiIndexRedhatPurlsGetRequest {
+	r.published = &published
+	return r
+}
+
+// Specify an exact published date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) Date(date string) ApiIndexRedhatPurlsGetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexRedhatPurlsGetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexRedhatPurlsGetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) LastModStartDate(lastModStartDate string) ApiIndexRedhatPurlsGetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) LastModEndDate(lastModEndDate string) ApiIndexRedhatPurlsGetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) PubStartDate(pubStartDate string) ApiIndexRedhatPurlsGetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexRedhatPurlsGetRequest) PubEndDate(pubEndDate string) ApiIndexRedhatPurlsGetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexRedhatPurlsGetRequest) Execute() (*RenderResponseWithMetadataArrayPurlsPurlResponsePaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexRedhatPurlsGetExecute(r)
+}
+
+/*
+IndexRedhatPurlsGet Return vulnerability data stored in index \"redhat-purls\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the redhat-purls index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** Red Hat Purls
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/redhat-purls?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/redhat-purls?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexRedhatPurlsGetRequest
+*/
+func (a *IndicesAPIService) IndexRedhatPurlsGet(ctx context.Context) ApiIndexRedhatPurlsGetRequest {
+	return ApiIndexRedhatPurlsGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayPurlsPurlResponsePaginatePagination
+func (a *IndicesAPIService) IndexRedhatPurlsGetExecute(r ApiIndexRedhatPurlsGetRequest) (*RenderResponseWithMetadataArrayPurlsPurlResponsePaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayPurlsPurlResponsePaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexRedhatPurlsGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v3/index/redhat-purls"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -181172,6 +181172,361 @@ func (a *IndicesAPIService) IndexVoidsecGetExecute(r ApiIndexVoidsecGetRequest) 
 	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
+	}
+	if r.date != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
+	}
+	if r.updatedAtStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtStartDate", r.updatedAtStartDate, "form", "")
+	}
+	if r.updatedAtEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "updatedAtEndDate", r.updatedAtEndDate, "form", "")
+	}
+	if r.lastModStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModStartDate", r.lastModStartDate, "form", "")
+	}
+	if r.lastModEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "lastModEndDate", r.lastModEndDate, "form", "")
+	}
+	if r.pubStartDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubStartDate", r.pubStartDate, "form", "")
+	}
+	if r.pubEndDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pubEndDate", r.pubEndDate, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["Bearer"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v string
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiIndexVulncheckC2GetRequest struct {
+	ctx context.Context
+	ApiService *IndicesAPIService
+	page *int32
+	limit *int32
+	cursor *string
+	startCursor *string
+	order *string
+	sort *string
+	ip *string
+	hostname *string
+	port *string
+	asn *string
+	country *string
+	countryCode *string
+	classifications *string
+	source *string
+	date *string
+	updatedAtStartDate *string
+	updatedAtEndDate *string
+	lastModStartDate *string
+	lastModEndDate *string
+	pubStartDate *string
+	pubEndDate *string
+}
+
+// set the page number of the response
+func (r ApiIndexVulncheckC2GetRequest) Page(page int32) ApiIndexVulncheckC2GetRequest {
+	r.page = &page
+	return r
+}
+
+// limit the number of findings in the response
+func (r ApiIndexVulncheckC2GetRequest) Limit(limit int32) ApiIndexVulncheckC2GetRequest {
+	r.limit = &limit
+	return r
+}
+
+// continue server-side paging using a cursor id
+func (r ApiIndexVulncheckC2GetRequest) Cursor(cursor string) ApiIndexVulncheckC2GetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+// request server-side paging
+func (r ApiIndexVulncheckC2GetRequest) StartCursor(startCursor string) ApiIndexVulncheckC2GetRequest {
+	r.startCursor = &startCursor
+	return r
+}
+
+// direction of the sort
+func (r ApiIndexVulncheckC2GetRequest) Order(order string) ApiIndexVulncheckC2GetRequest {
+	r.order = &order
+	return r
+}
+
+// field by which to sort the results
+func (r ApiIndexVulncheckC2GetRequest) Sort(sort string) ApiIndexVulncheckC2GetRequest {
+	r.sort = &sort
+	return r
+}
+
+// C2 IP address
+func (r ApiIndexVulncheckC2GetRequest) Ip(ip string) ApiIndexVulncheckC2GetRequest {
+	r.ip = &ip
+	return r
+}
+
+// Match a string in the hostname
+func (r ApiIndexVulncheckC2GetRequest) Hostname(hostname string) ApiIndexVulncheckC2GetRequest {
+	r.hostname = &hostname
+	return r
+}
+
+// Port number
+func (r ApiIndexVulncheckC2GetRequest) Port(port string) ApiIndexVulncheckC2GetRequest {
+	r.port = &port
+	return r
+}
+
+// Autonomous system number
+func (r ApiIndexVulncheckC2GetRequest) Asn(asn string) ApiIndexVulncheckC2GetRequest {
+	r.asn = &asn
+	return r
+}
+
+// Country name ISO-3166?? format
+func (r ApiIndexVulncheckC2GetRequest) Country(country string) ApiIndexVulncheckC2GetRequest {
+	r.country = &country
+	return r
+}
+
+// Country code in ISO-3166?? format
+func (r ApiIndexVulncheckC2GetRequest) CountryCode(countryCode string) ApiIndexVulncheckC2GetRequest {
+	r.countryCode = &countryCode
+	return r
+}
+
+// Match one or more classification values
+func (r ApiIndexVulncheckC2GetRequest) Classifications(classifications string) ApiIndexVulncheckC2GetRequest {
+	r.classifications = &classifications
+	return r
+}
+
+// Match one or more source values
+func (r ApiIndexVulncheckC2GetRequest) Source(source string) ApiIndexVulncheckC2GetRequest {
+	r.source = &source
+	return r
+}
+
+// Specify an exact published date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) Date(date string) ApiIndexVulncheckC2GetRequest {
+	r.date = &date
+	return r
+}
+
+// Specify a starting &#39;updated-at&#39; date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexVulncheckC2GetRequest {
+	r.updatedAtStartDate = &updatedAtStartDate
+	return r
+}
+
+// Specify an ending &#39;updated-at&#39; date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexVulncheckC2GetRequest {
+	r.updatedAtEndDate = &updatedAtEndDate
+	return r
+}
+
+// Specify a starting last modified date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) LastModStartDate(lastModStartDate string) ApiIndexVulncheckC2GetRequest {
+	r.lastModStartDate = &lastModStartDate
+	return r
+}
+
+// Specify an ending last modified date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) LastModEndDate(lastModEndDate string) ApiIndexVulncheckC2GetRequest {
+	r.lastModEndDate = &lastModEndDate
+	return r
+}
+
+// Specify a starting published date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) PubStartDate(pubStartDate string) ApiIndexVulncheckC2GetRequest {
+	r.pubStartDate = &pubStartDate
+	return r
+}
+
+// Specify an ending published date to filter with.
+func (r ApiIndexVulncheckC2GetRequest) PubEndDate(pubEndDate string) ApiIndexVulncheckC2GetRequest {
+	r.pubEndDate = &pubEndDate
+	return r
+}
+
+func (r ApiIndexVulncheckC2GetRequest) Execute() (*RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexVulncheckC2GetExecute(r)
+}
+
+/*
+IndexVulncheckC2Get Return vulnerability data stored in index \"vulncheck-c2\"
+
+### Overview
+This endpoint allows you to retrieve a paginated list of all documents from the vulncheck-c2 index. \
+By default, a maximum of 100 documents are shown per page.
+
+**Index Description:** VulnCheck Community C2 Intelligence
+
+### Paging Over Large Data (cursor)
+In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+"cursor" mechanism. To use the cursor, first call `GET /index/vulncheck-c2?start_cursor`, the response will
+have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+`GET /index/vulncheck-c2?cursor=<next_cursor_id>`
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiIndexVulncheckC2GetRequest
+*/
+func (a *IndicesAPIService) IndexVulncheckC2Get(ctx context.Context) ApiIndexVulncheckC2GetRequest {
+	return ApiIndexVulncheckC2GetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination
+func (a *IndicesAPIService) IndexVulncheckC2GetExecute(r ApiIndexVulncheckC2GetRequest) (*RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexVulncheckC2Get")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v3/index/vulncheck-c2"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.cursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cursor", r.cursor, "form", "")
+	}
+	if r.startCursor != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "start_cursor", r.startCursor, "form", "")
+	}
+	if r.order != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
+	}
+	if r.sort != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sort", r.sort, "form", "")
+	}
+	if r.ip != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ip", r.ip, "form", "")
+	}
+	if r.hostname != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hostname", r.hostname, "form", "")
+	}
+	if r.port != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "port", r.port, "form", "")
+	}
+	if r.asn != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "asn", r.asn, "form", "")
+	}
+	if r.country != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "country", r.country, "form", "")
+	}
+	if r.countryCode != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "country_code", r.countryCode, "form", "")
+	}
+	if r.classifications != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "classifications", r.classifications, "form", "")
+	}
+	if r.source != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "source", r.source, "form", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")

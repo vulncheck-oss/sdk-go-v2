@@ -25,6 +25,7 @@ type AdvisoryVulnCheck struct {
 	Cve []string `json:"cve,omitempty"`
 	Cvss *string `json:"cvss,omitempty"`
 	CvssV3Vector *string `json:"cvss_v3_vector,omitempty"`
+	CvssV4Vector *string `json:"cvss_v4_vector,omitempty"`
 	DateAdded *string `json:"date_added,omitempty"`
 	References []string `json:"references,omitempty"`
 	Severity *string `json:"severity,omitempty"`
@@ -208,6 +209,38 @@ func (o *AdvisoryVulnCheck) HasCvssV3Vector() bool {
 // SetCvssV3Vector gets a reference to the given string and assigns it to the CvssV3Vector field.
 func (o *AdvisoryVulnCheck) SetCvssV3Vector(v string) {
 	o.CvssV3Vector = &v
+}
+
+// GetCvssV4Vector returns the CvssV4Vector field value if set, zero value otherwise.
+func (o *AdvisoryVulnCheck) GetCvssV4Vector() string {
+	if o == nil || IsNil(o.CvssV4Vector) {
+		var ret string
+		return ret
+	}
+	return *o.CvssV4Vector
+}
+
+// GetCvssV4VectorOk returns a tuple with the CvssV4Vector field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryVulnCheck) GetCvssV4VectorOk() (*string, bool) {
+	if o == nil || IsNil(o.CvssV4Vector) {
+		return nil, false
+	}
+	return o.CvssV4Vector, true
+}
+
+// HasCvssV4Vector returns a boolean if a field has been set.
+func (o *AdvisoryVulnCheck) HasCvssV4Vector() bool {
+	if o != nil && !IsNil(o.CvssV4Vector) {
+		return true
+	}
+
+	return false
+}
+
+// SetCvssV4Vector gets a reference to the given string and assigns it to the CvssV4Vector field.
+func (o *AdvisoryVulnCheck) SetCvssV4Vector(v string) {
+	o.CvssV4Vector = &v
 }
 
 // GetDateAdded returns the DateAdded field value if set, zero value otherwise.
@@ -426,6 +459,9 @@ func (o AdvisoryVulnCheck) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.CvssV3Vector) {
 		toSerialize["cvss_v3_vector"] = o.CvssV3Vector
+	}
+	if !IsNil(o.CvssV4Vector) {
+		toSerialize["cvss_v4_vector"] = o.CvssV4Vector
 	}
 	if !IsNil(o.DateAdded) {
 		toSerialize["date_added"] = o.DateAdded

@@ -24,6 +24,10 @@ type V3controllersPurlsResponseMetadata struct {
 	Timestamp *string `json:"timestamp,omitempty"`
 	// number of results found
 	TotalDocuments *int32 `json:"total_documents,omitempty"`
+	// number of purls in the request
+	TotalSubmitted *int32 `json:"total_submitted,omitempty"`
+	// Unprocessed lists purls we could not look up. Not inferable from the counts above: purls with no vulnerabilities are omitted from data too.
+	Unprocessed []PurlUnprocessedPurl `json:"unprocessed,omitempty"`
 }
 
 // NewV3controllersPurlsResponseMetadata instantiates a new V3controllersPurlsResponseMetadata object
@@ -107,6 +111,70 @@ func (o *V3controllersPurlsResponseMetadata) SetTotalDocuments(v int32) {
 	o.TotalDocuments = &v
 }
 
+// GetTotalSubmitted returns the TotalSubmitted field value if set, zero value otherwise.
+func (o *V3controllersPurlsResponseMetadata) GetTotalSubmitted() int32 {
+	if o == nil || IsNil(o.TotalSubmitted) {
+		var ret int32
+		return ret
+	}
+	return *o.TotalSubmitted
+}
+
+// GetTotalSubmittedOk returns a tuple with the TotalSubmitted field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V3controllersPurlsResponseMetadata) GetTotalSubmittedOk() (*int32, bool) {
+	if o == nil || IsNil(o.TotalSubmitted) {
+		return nil, false
+	}
+	return o.TotalSubmitted, true
+}
+
+// HasTotalSubmitted returns a boolean if a field has been set.
+func (o *V3controllersPurlsResponseMetadata) HasTotalSubmitted() bool {
+	if o != nil && !IsNil(o.TotalSubmitted) {
+		return true
+	}
+
+	return false
+}
+
+// SetTotalSubmitted gets a reference to the given int32 and assigns it to the TotalSubmitted field.
+func (o *V3controllersPurlsResponseMetadata) SetTotalSubmitted(v int32) {
+	o.TotalSubmitted = &v
+}
+
+// GetUnprocessed returns the Unprocessed field value if set, zero value otherwise.
+func (o *V3controllersPurlsResponseMetadata) GetUnprocessed() []PurlUnprocessedPurl {
+	if o == nil || IsNil(o.Unprocessed) {
+		var ret []PurlUnprocessedPurl
+		return ret
+	}
+	return o.Unprocessed
+}
+
+// GetUnprocessedOk returns a tuple with the Unprocessed field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V3controllersPurlsResponseMetadata) GetUnprocessedOk() ([]PurlUnprocessedPurl, bool) {
+	if o == nil || IsNil(o.Unprocessed) {
+		return nil, false
+	}
+	return o.Unprocessed, true
+}
+
+// HasUnprocessed returns a boolean if a field has been set.
+func (o *V3controllersPurlsResponseMetadata) HasUnprocessed() bool {
+	if o != nil && !IsNil(o.Unprocessed) {
+		return true
+	}
+
+	return false
+}
+
+// SetUnprocessed gets a reference to the given []PurlUnprocessedPurl and assigns it to the Unprocessed field.
+func (o *V3controllersPurlsResponseMetadata) SetUnprocessed(v []PurlUnprocessedPurl) {
+	o.Unprocessed = v
+}
+
 func (o V3controllersPurlsResponseMetadata) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -122,6 +190,12 @@ func (o V3controllersPurlsResponseMetadata) ToMap() (map[string]interface{}, err
 	}
 	if !IsNil(o.TotalDocuments) {
 		toSerialize["total_documents"] = o.TotalDocuments
+	}
+	if !IsNil(o.TotalSubmitted) {
+		toSerialize["total_submitted"] = o.TotalSubmitted
+	}
+	if !IsNil(o.Unprocessed) {
+		toSerialize["unprocessed"] = o.Unprocessed
 	}
 	return toSerialize, nil
 }

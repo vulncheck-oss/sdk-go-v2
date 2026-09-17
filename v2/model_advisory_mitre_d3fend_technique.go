@@ -15,34 +15,34 @@ import (
 	"encoding/json"
 )
 
-// checks if the ApiMitreD3fendTechnique type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &ApiMitreD3fendTechnique{}
+// checks if the AdvisoryMitreD3fendTechnique type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &AdvisoryMitreD3fendTechnique{}
 
-// ApiMitreD3fendTechnique api.MitreD3fendTechnique
-type ApiMitreD3fendTechnique struct {
+// AdvisoryMitreD3fendTechnique advisory.MitreD3fendTechnique
+type AdvisoryMitreD3fendTechnique struct {
 	Id *string `json:"id,omitempty"`
 	Url *string `json:"url,omitempty"`
 }
 
-// NewApiMitreD3fendTechnique instantiates a new ApiMitreD3fendTechnique object
+// NewAdvisoryMitreD3fendTechnique instantiates a new AdvisoryMitreD3fendTechnique object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewApiMitreD3fendTechnique() *ApiMitreD3fendTechnique {
-	this := ApiMitreD3fendTechnique{}
+func NewAdvisoryMitreD3fendTechnique() *AdvisoryMitreD3fendTechnique {
+	this := AdvisoryMitreD3fendTechnique{}
 	return &this
 }
 
-// NewApiMitreD3fendTechniqueWithDefaults instantiates a new ApiMitreD3fendTechnique object
+// NewAdvisoryMitreD3fendTechniqueWithDefaults instantiates a new AdvisoryMitreD3fendTechnique object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewApiMitreD3fendTechniqueWithDefaults() *ApiMitreD3fendTechnique {
-	this := ApiMitreD3fendTechnique{}
+func NewAdvisoryMitreD3fendTechniqueWithDefaults() *AdvisoryMitreD3fendTechnique {
+	this := AdvisoryMitreD3fendTechnique{}
 	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
-func (o *ApiMitreD3fendTechnique) GetId() string {
+func (o *AdvisoryMitreD3fendTechnique) GetId() string {
 	if o == nil || IsNil(o.Id) {
 		var ret string
 		return ret
@@ -52,7 +52,7 @@ func (o *ApiMitreD3fendTechnique) GetId() string {
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiMitreD3fendTechnique) GetIdOk() (*string, bool) {
+func (o *AdvisoryMitreD3fendTechnique) GetIdOk() (*string, bool) {
 	if o == nil || IsNil(o.Id) {
 		return nil, false
 	}
@@ -60,7 +60,7 @@ func (o *ApiMitreD3fendTechnique) GetIdOk() (*string, bool) {
 }
 
 // HasId returns a boolean if a field has been set.
-func (o *ApiMitreD3fendTechnique) HasId() bool {
+func (o *AdvisoryMitreD3fendTechnique) HasId() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -69,12 +69,12 @@ func (o *ApiMitreD3fendTechnique) HasId() bool {
 }
 
 // SetId gets a reference to the given string and assigns it to the Id field.
-func (o *ApiMitreD3fendTechnique) SetId(v string) {
+func (o *AdvisoryMitreD3fendTechnique) SetId(v string) {
 	o.Id = &v
 }
 
 // GetUrl returns the Url field value if set, zero value otherwise.
-func (o *ApiMitreD3fendTechnique) GetUrl() string {
+func (o *AdvisoryMitreD3fendTechnique) GetUrl() string {
 	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
@@ -84,7 +84,7 @@ func (o *ApiMitreD3fendTechnique) GetUrl() string {
 
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiMitreD3fendTechnique) GetUrlOk() (*string, bool) {
+func (o *AdvisoryMitreD3fendTechnique) GetUrlOk() (*string, bool) {
 	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
@@ -92,7 +92,7 @@ func (o *ApiMitreD3fendTechnique) GetUrlOk() (*string, bool) {
 }
 
 // HasUrl returns a boolean if a field has been set.
-func (o *ApiMitreD3fendTechnique) HasUrl() bool {
+func (o *AdvisoryMitreD3fendTechnique) HasUrl() bool {
 	if o != nil && !IsNil(o.Url) {
 		return true
 	}
@@ -101,11 +101,11 @@ func (o *ApiMitreD3fendTechnique) HasUrl() bool {
 }
 
 // SetUrl gets a reference to the given string and assigns it to the Url field.
-func (o *ApiMitreD3fendTechnique) SetUrl(v string) {
+func (o *AdvisoryMitreD3fendTechnique) SetUrl(v string) {
 	o.Url = &v
 }
 
-func (o ApiMitreD3fendTechnique) MarshalJSON() ([]byte, error) {
+func (o AdvisoryMitreD3fendTechnique) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -113,7 +113,7 @@ func (o ApiMitreD3fendTechnique) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o ApiMitreD3fendTechnique) ToMap() (map[string]interface{}, error) {
+func (o AdvisoryMitreD3fendTechnique) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
@@ -124,38 +124,38 @@ func (o ApiMitreD3fendTechnique) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableApiMitreD3fendTechnique struct {
-	value *ApiMitreD3fendTechnique
+type NullableAdvisoryMitreD3fendTechnique struct {
+	value *AdvisoryMitreD3fendTechnique
 	isSet bool
 }
 
-func (v NullableApiMitreD3fendTechnique) Get() *ApiMitreD3fendTechnique {
+func (v NullableAdvisoryMitreD3fendTechnique) Get() *AdvisoryMitreD3fendTechnique {
 	return v.value
 }
 
-func (v *NullableApiMitreD3fendTechnique) Set(val *ApiMitreD3fendTechnique) {
+func (v *NullableAdvisoryMitreD3fendTechnique) Set(val *AdvisoryMitreD3fendTechnique) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableApiMitreD3fendTechnique) IsSet() bool {
+func (v NullableAdvisoryMitreD3fendTechnique) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableApiMitreD3fendTechnique) Unset() {
+func (v *NullableAdvisoryMitreD3fendTechnique) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableApiMitreD3fendTechnique(val *ApiMitreD3fendTechnique) *NullableApiMitreD3fendTechnique {
-	return &NullableApiMitreD3fendTechnique{value: val, isSet: true}
+func NewNullableAdvisoryMitreD3fendTechnique(val *AdvisoryMitreD3fendTechnique) *NullableAdvisoryMitreD3fendTechnique {
+	return &NullableAdvisoryMitreD3fendTechnique{value: val, isSet: true}
 }
 
-func (v NullableApiMitreD3fendTechnique) MarshalJSON() ([]byte, error) {
+func (v NullableAdvisoryMitreD3fendTechnique) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableApiMitreD3fendTechnique) UnmarshalJSON(src []byte) error {
+func (v *NullableAdvisoryMitreD3fendTechnique) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
