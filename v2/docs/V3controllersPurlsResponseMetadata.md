@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Timestamp** | Pointer to **string** | time of the transaction | [optional] 
 **TotalDocuments** | Pointer to **int32** | number of results found | [optional] 
+**TotalSubmitted** | Pointer to **int32** | number of purls in the request | [optional] 
+**Unprocessed** | Pointer to [**[]PurlUnprocessedPurl**](PurlUnprocessedPurl.md) | Unprocessed lists purls we could not look up. Not inferable from the counts above: purls with no vulnerabilities are omitted from data too. | [optional] 
 
 ## Methods
 
@@ -75,6 +77,56 @@ SetTotalDocuments sets TotalDocuments field to given value.
 `func (o *V3controllersPurlsResponseMetadata) HasTotalDocuments() bool`
 
 HasTotalDocuments returns a boolean if a field has been set.
+
+### GetTotalSubmitted
+
+`func (o *V3controllersPurlsResponseMetadata) GetTotalSubmitted() int32`
+
+GetTotalSubmitted returns the TotalSubmitted field if non-nil, zero value otherwise.
+
+### GetTotalSubmittedOk
+
+`func (o *V3controllersPurlsResponseMetadata) GetTotalSubmittedOk() (*int32, bool)`
+
+GetTotalSubmittedOk returns a tuple with the TotalSubmitted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTotalSubmitted
+
+`func (o *V3controllersPurlsResponseMetadata) SetTotalSubmitted(v int32)`
+
+SetTotalSubmitted sets TotalSubmitted field to given value.
+
+### HasTotalSubmitted
+
+`func (o *V3controllersPurlsResponseMetadata) HasTotalSubmitted() bool`
+
+HasTotalSubmitted returns a boolean if a field has been set.
+
+### GetUnprocessed
+
+`func (o *V3controllersPurlsResponseMetadata) GetUnprocessed() []PurlUnprocessedPurl`
+
+GetUnprocessed returns the Unprocessed field if non-nil, zero value otherwise.
+
+### GetUnprocessedOk
+
+`func (o *V3controllersPurlsResponseMetadata) GetUnprocessedOk() (*[]PurlUnprocessedPurl, bool)`
+
+GetUnprocessedOk returns a tuple with the Unprocessed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnprocessed
+
+`func (o *V3controllersPurlsResponseMetadata) SetUnprocessed(v []PurlUnprocessedPurl)`
+
+SetUnprocessed sets Unprocessed field to given value.
+
+### HasUnprocessed
+
+`func (o *V3controllersPurlsResponseMetadata) HasUnprocessed() bool`
+
+HasUnprocessed returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

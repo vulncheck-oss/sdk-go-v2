@@ -23,7 +23,9 @@ type BackupBackupResponse struct {
 	Available *bool `json:"available,omitempty"`
 	Feed *string `json:"feed,omitempty"`
 	Sha256 *string `json:"sha256,omitempty"`
+	Url *string `json:"url,omitempty"`
 	UrlApSoutheast2 *string `json:"url_ap-southeast-2,omitempty"`
+	UrlCloudfront *string `json:"url_cloudfront,omitempty"`
 	UrlEuWest2 *string `json:"url_eu-west-2,omitempty"`
 	UrlExpires *string `json:"url_expires,omitempty"`
 	UrlMrap *string `json:"url_mrap,omitempty"`
@@ -144,6 +146,38 @@ func (o *BackupBackupResponse) SetSha256(v string) {
 	o.Sha256 = &v
 }
 
+// GetUrl returns the Url field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrl() string {
+	if o == nil || IsNil(o.Url) {
+		var ret string
+		return ret
+	}
+	return *o.Url
+}
+
+// GetUrlOk returns a tuple with the Url field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *BackupBackupResponse) GetUrlOk() (*string, bool) {
+	if o == nil || IsNil(o.Url) {
+		return nil, false
+	}
+	return o.Url, true
+}
+
+// HasUrl returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrl() bool {
+	if o != nil && !IsNil(o.Url) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrl gets a reference to the given string and assigns it to the Url field.
+func (o *BackupBackupResponse) SetUrl(v string) {
+	o.Url = &v
+}
+
 // GetUrlApSoutheast2 returns the UrlApSoutheast2 field value if set, zero value otherwise.
 func (o *BackupBackupResponse) GetUrlApSoutheast2() string {
 	if o == nil || IsNil(o.UrlApSoutheast2) {
@@ -174,6 +208,38 @@ func (o *BackupBackupResponse) HasUrlApSoutheast2() bool {
 // SetUrlApSoutheast2 gets a reference to the given string and assigns it to the UrlApSoutheast2 field.
 func (o *BackupBackupResponse) SetUrlApSoutheast2(v string) {
 	o.UrlApSoutheast2 = &v
+}
+
+// GetUrlCloudfront returns the UrlCloudfront field value if set, zero value otherwise.
+func (o *BackupBackupResponse) GetUrlCloudfront() string {
+	if o == nil || IsNil(o.UrlCloudfront) {
+		var ret string
+		return ret
+	}
+	return *o.UrlCloudfront
+}
+
+// GetUrlCloudfrontOk returns a tuple with the UrlCloudfront field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *BackupBackupResponse) GetUrlCloudfrontOk() (*string, bool) {
+	if o == nil || IsNil(o.UrlCloudfront) {
+		return nil, false
+	}
+	return o.UrlCloudfront, true
+}
+
+// HasUrlCloudfront returns a boolean if a field has been set.
+func (o *BackupBackupResponse) HasUrlCloudfront() bool {
+	if o != nil && !IsNil(o.UrlCloudfront) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlCloudfront gets a reference to the given string and assigns it to the UrlCloudfront field.
+func (o *BackupBackupResponse) SetUrlCloudfront(v string) {
+	o.UrlCloudfront = &v
 }
 
 // GetUrlEuWest2 returns the UrlEuWest2 field value if set, zero value otherwise.
@@ -355,8 +421,14 @@ func (o BackupBackupResponse) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Sha256) {
 		toSerialize["sha256"] = o.Sha256
 	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
 	if !IsNil(o.UrlApSoutheast2) {
 		toSerialize["url_ap-southeast-2"] = o.UrlApSoutheast2
+	}
+	if !IsNil(o.UrlCloudfront) {
+		toSerialize["url_cloudfront"] = o.UrlCloudfront
 	}
 	if !IsNil(o.UrlEuWest2) {
 		toSerialize["url_eu-west-2"] = o.UrlEuWest2

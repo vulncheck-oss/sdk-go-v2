@@ -25,6 +25,7 @@ type ParamsIndexBackup struct {
 	Sha256 *string `json:"sha256,omitempty"`
 	Url *string `json:"url,omitempty"`
 	UrlApSoutheast2 *string `json:"url_ap-southeast-2,omitempty"`
+	UrlCloudfront *string `json:"url_cloudfront,omitempty"`
 	UrlEuWest2 *string `json:"url_eu-west-2,omitempty"`
 	UrlExpires *string `json:"url_expires,omitempty"`
 	UrlIlCentral1 *string `json:"url_il-central-1,omitempty"`
@@ -210,6 +211,38 @@ func (o *ParamsIndexBackup) HasUrlApSoutheast2() bool {
 // SetUrlApSoutheast2 gets a reference to the given string and assigns it to the UrlApSoutheast2 field.
 func (o *ParamsIndexBackup) SetUrlApSoutheast2(v string) {
 	o.UrlApSoutheast2 = &v
+}
+
+// GetUrlCloudfront returns the UrlCloudfront field value if set, zero value otherwise.
+func (o *ParamsIndexBackup) GetUrlCloudfront() string {
+	if o == nil || IsNil(o.UrlCloudfront) {
+		var ret string
+		return ret
+	}
+	return *o.UrlCloudfront
+}
+
+// GetUrlCloudfrontOk returns a tuple with the UrlCloudfront field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ParamsIndexBackup) GetUrlCloudfrontOk() (*string, bool) {
+	if o == nil || IsNil(o.UrlCloudfront) {
+		return nil, false
+	}
+	return o.UrlCloudfront, true
+}
+
+// HasUrlCloudfront returns a boolean if a field has been set.
+func (o *ParamsIndexBackup) HasUrlCloudfront() bool {
+	if o != nil && !IsNil(o.UrlCloudfront) {
+		return true
+	}
+
+	return false
+}
+
+// SetUrlCloudfront gets a reference to the given string and assigns it to the UrlCloudfront field.
+func (o *ParamsIndexBackup) SetUrlCloudfront(v string) {
+	o.UrlCloudfront = &v
 }
 
 // GetUrlEuWest2 returns the UrlEuWest2 field value if set, zero value otherwise.
@@ -492,6 +525,9 @@ func (o ParamsIndexBackup) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.UrlApSoutheast2) {
 		toSerialize["url_ap-southeast-2"] = o.UrlApSoutheast2
+	}
+	if !IsNil(o.UrlCloudfront) {
+		toSerialize["url_cloudfront"] = o.UrlCloudfront
 	}
 	if !IsNil(o.UrlEuWest2) {
 		toSerialize["url_eu-west-2"] = o.UrlEuWest2

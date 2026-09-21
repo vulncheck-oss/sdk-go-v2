@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **[]string** |  | [optional] 
 **Cvss** | Pointer to **string** |  | [optional] 
 **CvssV3Vector** | Pointer to **string** |  | [optional] 
+**CvssV4Vector** | Pointer to **string** |  | [optional] 
 **DateAdded** | Pointer to **string** |  | [optional] 
 **References** | Pointer to **[]string** |  | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
@@ -159,6 +160,31 @@ SetCvssV3Vector sets CvssV3Vector field to given value.
 `func (o *AdvisoryVulnCheck) HasCvssV3Vector() bool`
 
 HasCvssV3Vector returns a boolean if a field has been set.
+
+### GetCvssV4Vector
+
+`func (o *AdvisoryVulnCheck) GetCvssV4Vector() string`
+
+GetCvssV4Vector returns the CvssV4Vector field if non-nil, zero value otherwise.
+
+### GetCvssV4VectorOk
+
+`func (o *AdvisoryVulnCheck) GetCvssV4VectorOk() (*string, bool)`
+
+GetCvssV4VectorOk returns a tuple with the CvssV4Vector field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCvssV4Vector
+
+`func (o *AdvisoryVulnCheck) SetCvssV4Vector(v string)`
+
+SetCvssV4Vector sets CvssV4Vector field to given value.
+
+### HasCvssV4Vector
+
+`func (o *AdvisoryVulnCheck) HasCvssV4Vector() bool`
+
+HasCvssV4Vector returns a boolean if a field has been set.
 
 ### GetDateAdded
 

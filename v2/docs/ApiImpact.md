@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **BaseMetricV2** | Pointer to [**ApiBaseMetricV2**](ApiBaseMetricV2.md) |  | [optional] 
 **BaseMetricV3** | Pointer to [**ApiBaseMetricV3**](ApiBaseMetricV3.md) |  | [optional] 
 **MetricV40** | Pointer to [**AdvisoryCVSSV40**](AdvisoryCVSSV40.md) |  | [optional] 
+**Ssvc** | Pointer to [**[]ApiSSVC**](ApiSSVC.md) |  | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetMetricV40 sets MetricV40 field to given value.
 `func (o *ApiImpact) HasMetricV40() bool`
 
 HasMetricV40 returns a boolean if a field has been set.
+
+### GetSsvc
+
+`func (o *ApiImpact) GetSsvc() []ApiSSVC`
+
+GetSsvc returns the Ssvc field if non-nil, zero value otherwise.
+
+### GetSsvcOk
+
+`func (o *ApiImpact) GetSsvcOk() (*[]ApiSSVC, bool)`
+
+GetSsvcOk returns a tuple with the Ssvc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsvc
+
+`func (o *ApiImpact) SetSsvc(v []ApiSSVC)`
+
+SetSsvc sets Ssvc field to given value.
+
+### HasSsvc
+
+`func (o *ApiImpact) HasSsvc() bool`
+
+HasSsvc returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

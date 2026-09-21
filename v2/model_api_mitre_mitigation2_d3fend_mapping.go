@@ -20,7 +20,7 @@ var _ MappedNullable = &ApiMitreMitigation2D3fendMapping{}
 
 // ApiMitreMitigation2D3fendMapping api.MitreMitigation2D3fendMapping
 type ApiMitreMitigation2D3fendMapping struct {
-	D3fendtechniques []ApiMitreD3fendTechnique `json:"d3fendtechniques,omitempty"`
+	D3fendtechniques []AdvisoryMitreD3fendTechnique `json:"d3fendtechniques,omitempty"`
 	Id *string `json:"id,omitempty"`
 }
 
@@ -42,9 +42,9 @@ func NewApiMitreMitigation2D3fendMappingWithDefaults() *ApiMitreMitigation2D3fen
 }
 
 // GetD3fendtechniques returns the D3fendtechniques field value if set, zero value otherwise.
-func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniques() []ApiMitreD3fendTechnique {
+func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniques() []AdvisoryMitreD3fendTechnique {
 	if o == nil || IsNil(o.D3fendtechniques) {
-		var ret []ApiMitreD3fendTechnique
+		var ret []AdvisoryMitreD3fendTechnique
 		return ret
 	}
 	return o.D3fendtechniques
@@ -52,7 +52,7 @@ func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniques() []ApiMitreD3fen
 
 // GetD3fendtechniquesOk returns a tuple with the D3fendtechniques field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniquesOk() ([]ApiMitreD3fendTechnique, bool) {
+func (o *ApiMitreMitigation2D3fendMapping) GetD3fendtechniquesOk() ([]AdvisoryMitreD3fendTechnique, bool) {
 	if o == nil || IsNil(o.D3fendtechniques) {
 		return nil, false
 	}
@@ -68,8 +68,8 @@ func (o *ApiMitreMitigation2D3fendMapping) HasD3fendtechniques() bool {
 	return false
 }
 
-// SetD3fendtechniques gets a reference to the given []ApiMitreD3fendTechnique and assigns it to the D3fendtechniques field.
-func (o *ApiMitreMitigation2D3fendMapping) SetD3fendtechniques(v []ApiMitreD3fendTechnique) {
+// SetD3fendtechniques gets a reference to the given []AdvisoryMitreD3fendTechnique and assigns it to the D3fendtechniques field.
+func (o *ApiMitreMitigation2D3fendMapping) SetD3fendtechniques(v []AdvisoryMitreD3fendTechnique) {
 	o.D3fendtechniques = v
 }
 

@@ -385,7 +385,6 @@ paths:
           - ntp
           - nuclei
           - nuget
-          - nvd-cpe-dictionary
           - nvidia
           - nz-advisories
           - octopus-deploy
@@ -438,6 +437,7 @@ paths:
           - red-lion
           - redhat
           - redhat-cves
+          - redhat-purls
           - renesas
           - revive
           - roche
@@ -527,6 +527,7 @@ paths:
           - vmware
           - voidsec
           - vulncheck
+          - vulncheck-c2
           - vulncheck-canaries
           - vulncheck-canaries-10d
           - vulncheck-canaries-30d
@@ -79539,245 +79540,6 @@ paths:
       summary: Return vulnerability data stored in index "nuget"
       tags:
       - indices
-  /v3/index/nvd-cpe-dictionary:
-    get:
-      description: |
-        ### Overview
-        This endpoint allows you to retrieve a paginated list of all documents from the nvd-cpe-dictionary index. \
-        By default, a maximum of 100 documents are shown per page.
-
-        **Index Description:** NVD's CPE Dictionary
-
-        ### Paging Over Large Data (cursor)
-        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-        "cursor" mechanism. To use the cursor, first call `GET /index/nvd-cpe-dictionary?start_cursor`, the response will
-        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-        `GET /index/nvd-cpe-dictionary?cursor=<next_cursor_id>`
-      operationId: index_nvd-cpe-dictionary_get
-      parameters:
-      - description: set the page number of the response
-        explode: true
-        in: query
-        name: page
-        required: false
-        schema:
-          type: integer
-        style: form
-      - description: limit the number of findings in the response
-        explode: true
-        in: query
-        name: limit
-        required: false
-        schema:
-          type: integer
-        style: form
-      - description: continue server-side paging using a cursor id
-        explode: true
-        in: query
-        name: cursor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: request server-side paging
-        explode: true
-        in: query
-        name: start_cursor
-        required: false
-        schema:
-          enum:
-          - "true"
-          type: string
-        style: form
-      - description: direction of the sort
-        explode: true
-        in: query
-        name: order
-        required: false
-        schema:
-          enum:
-          - asc
-          - desc
-          type: string
-        style: form
-      - description: field by which to sort the results
-        explode: true
-        in: query
-        name: sort
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a CVE ID to search with.
-        explode: true
-        in: query
-        name: cve
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a vulnerability alias to search with.
-        explode: true
-        in: query
-        name: alias
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an IAVA ID to search with.
-        explode: true
-        in: query
-        name: iava
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a JVNDB ID to search with.
-        explode: true
-        in: query
-        name: jvndb
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ILVN ID to search with.
-        explode: true
-        in: query
-        name: ilvn
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a threat actor name to search with.
-        explode: true
-        in: query
-        name: threat_actor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a MITRE ID to search with.
-        explode: true
-        in: query
-        name: mitre_id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a MISP ID to search with.
-        explode: true
-        in: query
-        name: misp_id
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a ransomeware family name to search with.
-        explode: true
-        in: query
-        name: ransomware
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a botnet name to search with.
-        explode: true
-        in: query
-        name: botnet
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a published date
-        explode: true
-        in: query
-        name: published
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an exact published date to filter with.
-        explode: true
-        in: query
-        name: date
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a starting 'updated-at' date to filter with.
-        explode: true
-        in: query
-        name: updatedAtStartDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ending 'updated-at' date to filter with.
-        explode: true
-        in: query
-        name: updatedAtEndDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a starting last modified date to filter with.
-        explode: true
-        in: query
-        name: lastModStartDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ending last modified date to filter with.
-        explode: true
-        in: query
-        name: lastModEndDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify a starting published date to filter with.
-        explode: true
-        in: query
-        name: pubStartDate
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Specify an ending published date to filter with.
-        explode: true
-        in: query
-        name: pubEndDate
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_NVDCPEDictionary-paginate_Pagination'
-          description: OK
-        "404":
-          content:
-            application/json:
-              schema:
-                type: string
-          description: Not Found
-        "500":
-          content:
-            application/json:
-              schema:
-                type: string
-          description: Internal Server Error
-      security:
-      - Bearer: []
-      servers:
-      - url: https://api.vulncheck.com
-      summary: Return vulnerability data stored in index "nvd-cpe-dictionary"
-      tags:
-      - indices
   /v3/index/nvidia:
     get:
       description: |
@@ -92204,6 +91966,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "redhat-cves"
+      tags:
+      - indices
+  /v3/index/redhat-purls:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the redhat-purls index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Red Hat Purls
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/redhat-purls?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/redhat-purls?cursor=<next_cursor_id>`
+      operationId: index_redhat-purls_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_purls_PurlResponse-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "redhat-purls"
       tags:
       - indices
   /v3/index/renesas:
@@ -113526,6 +113527,221 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "vulncheck"
+      tags:
+      - indices
+  /v3/index/vulncheck-c2:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the vulncheck-c2 index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** VulnCheck Community C2 Intelligence
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/vulncheck-c2?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/vulncheck-c2?cursor=<next_cursor_id>`
+      operationId: index_vulncheck-c2_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: C2 IP address
+        explode: true
+        in: query
+        name: ip
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Match a string in the hostname
+        explode: true
+        in: query
+        name: hostname
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Port number
+        explode: true
+        in: query
+        name: port
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Autonomous system number
+        explode: true
+        in: query
+        name: asn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Country name ISO-3166?? format
+        explode: true
+        in: query
+        name: country
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Country code in ISO-3166?? format
+        explode: true
+        in: query
+        name: country_code
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Match one or more classification values
+        explode: true
+        in: query
+        name: classifications
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Match one or more source values
+        explode: true
+        in: query
+        name: source
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_C2Community-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "vulncheck-c2"
       tags:
       - indices
   /v3/index/vulncheck-canaries:
@@ -139137,11 +139353,13 @@ components:
         reference_url: reference_url
         stars: 1
         clone_https_url: clone_https_url
+        commit_hash: commit_hash
         exploit_type: exploit_type
         date_added: date_added
         date_last_revised: date_last_revised
         refsource: refsource
         cve: cve
+        date_cached: date_cached
         repo_id: repo_id
         html_url: html_url
         repo_name: repo_name
@@ -139154,11 +139372,15 @@ components:
           type: string
         clone_ssh_url_cached:
           type: string
+        commit_hash:
+          type: string
         currently_trending:
           type: boolean
         cve:
           type: string
         date_added:
+          type: string
+        date_cached:
           type: string
         date_last_revised:
           type: string
@@ -139197,11 +139419,13 @@ components:
         reference_url: reference_url
         stars: 1
         clone_https_url: clone_https_url
+        commit_hash: commit_hash
         exploit_type: exploit_type
         date_added: date_added
         date_last_revised: date_last_revised
         refsource: refsource
         cve: cve
+        date_cached: date_cached
         repo_id: repo_id
         html_url: html_url
         repo_name: repo_name
@@ -139213,9 +139437,13 @@ components:
           type: string
         clone_ssh_url_cached:
           type: string
+        commit_hash:
+          type: string
         cve:
           type: string
         date_added:
+          type: string
+        date_cached:
           type: string
         date_last_revised:
           type: string
@@ -139252,11 +139480,13 @@ components:
         reference_url: reference_url
         stars: 1
         clone_https_url: clone_https_url
+        commit_hash: commit_hash
         exploit_type: exploit_type
         date_added: date_added
         date_last_revised: date_last_revised
         refsource: refsource
         cve: cve
+        date_cached: date_cached
         repo_id: repo_id
         html_url: html_url
         repo_name: repo_name
@@ -139268,9 +139498,13 @@ components:
           type: string
         clone_ssh_url_cached:
           type: string
+        commit_hash:
+          type: string
         cve:
           type: string
         date_added:
+          type: string
+        date_cached:
           type: string
         date_last_revised:
           type: string
@@ -150572,6 +150806,16 @@ components:
           type: string
         dataVersion:
           type: string
+    advisory.MitreD3fendTechnique:
+      description: advisory.MitreD3fendTechnique
+      example:
+        id: id
+        url: url
+      properties:
+        id:
+          type: string
+        url:
+          type: string
     advisory.MitreGroupCTI:
       description: advisory.MitreGroupCTI
       example:
@@ -153502,13 +153746,6 @@ components:
           uniqueItems: false
         v3AcceptanceLevel:
           $ref: '#/components/schemas/advisory.V3AcceptanceLevel'
-    advisory.NVDCPEDictionary:
-      description: advisory.NVDCPEDictionary
-      example:
-        backupOnly: backupOnly
-      properties:
-        backupOnly:
-          type: string
     advisory.NZAdvisory:
       description: advisory.NZAdvisory
       example:
@@ -165115,6 +165352,7 @@ components:
         title: title
         type: type
         cvss: cvss
+        cvss_v4_vector: cvss_v4_vector
         url: url
       properties:
         affecting:
@@ -165135,6 +165373,8 @@ components:
         cvss:
           type: string
         cvss_v3_vector:
+          type: string
+        cvss_v4_vector:
           type: string
         date_added:
           type: string
@@ -170282,6 +170522,56 @@ components:
           type: number
         impactScore:
           type: number
+    api.C2Community:
+      description: api.C2Community
+      example:
+        classifications:
+        - classifications
+        - classifications
+        country: country
+        country_code: country_code
+        hostname: hostname
+        first_seen: first_seen
+        last_seen: last_seen
+        updated_at: updated_at
+        port: 6
+        ip: ip
+        source:
+        - source
+        - source
+        asn: asn
+        as_name: as_name
+      properties:
+        as_name:
+          type: string
+        asn:
+          type: string
+        classifications:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        country:
+          type: string
+        country_code:
+          type: string
+        first_seen:
+          type: string
+        hostname:
+          type: string
+        ip:
+          type: string
+        last_seen:
+          type: string
+        port:
+          type: integer
+        source:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        updated_at:
+          type: string
     api.C2Frequency:
       description: api.C2Frequency
       example:
@@ -171006,6 +171296,15 @@ components:
             attackRequirements: attackRequirements
             vulnIntegrityImpact: vulnIntegrityImpact
             modifiedAttackRequirements: modifiedAttackRequirements
+          ssvc:
+          - exploitation: exploitation
+            automatable: automatable
+            technicalImpact: technicalImpact
+            source: source
+          - exploitation: exploitation
+            automatable: automatable
+            technicalImpact: technicalImpact
+            source: source
           baseMetricV2:
             severity: severity
             exploitabilityScore: 1.4658129805029452
@@ -171638,29 +171937,33 @@ components:
         inKEV: true
         max_exploit_maturity: max_exploit_maturity
         exploits:
-        - exploit_type: exploit_type
-          date_added: date_added
-          refsource: refsource
-          clone_ssh_url: clone_ssh_url
-          repo_id: repo_id
+        - clone_ssh_url: clone_ssh_url
           clone_ssh_url_cached: clone_ssh_url_cached
-          name: name
           reference_url: reference_url
+          commit_hash: commit_hash
           url: url
           exploit_availability: exploit_availability
           exploit_maturity: exploit_maturity
+          exploit_type: exploit_type
+          date_added: date_added
+          refsource: refsource
+          date_cached: date_cached
+          repo_id: repo_id
+          name: name
           validation_level: validation_level
-        - exploit_type: exploit_type
-          date_added: date_added
-          refsource: refsource
-          clone_ssh_url: clone_ssh_url
-          repo_id: repo_id
+        - clone_ssh_url: clone_ssh_url
           clone_ssh_url_cached: clone_ssh_url_cached
-          name: name
           reference_url: reference_url
+          commit_hash: commit_hash
           url: url
           exploit_availability: exploit_availability
           exploit_maturity: exploit_maturity
+          exploit_type: exploit_type
+          date_added: date_added
+          refsource: refsource
+          date_cached: date_cached
+          repo_id: repo_id
+          name: name
           validation_level: validation_level
         commercial_exploit_found: true
         date_added: date_added
@@ -171955,6 +172258,15 @@ components:
           attackRequirements: attackRequirements
           vulnIntegrityImpact: vulnIntegrityImpact
           modifiedAttackRequirements: modifiedAttackRequirements
+        ssvc:
+        - exploitation: exploitation
+          automatable: automatable
+          technicalImpact: technicalImpact
+          source: source
+        - exploitation: exploitation
+          automatable: automatable
+          technicalImpact: technicalImpact
+          source: source
         baseMetricV2:
           severity: severity
           exploitabilityScore: 1.4658129805029452
@@ -171997,6 +172309,11 @@ components:
           $ref: '#/components/schemas/api.BaseMetricV3'
         metricV40:
           $ref: '#/components/schemas/advisory.CVSSV40'
+        ssvc:
+          items:
+            $ref: '#/components/schemas/api.SSVC'
+          type: array
+          uniqueItems: false
     api.ImpactExtended:
       description: api.ImpactExtended
       example:
@@ -172946,16 +173263,6 @@ components:
           type: string
         technique_id:
           $ref: '#/components/schemas/api.MitreAttackTech'
-    api.MitreD3fendTechnique:
-      description: api.MitreD3fendTechnique
-      example:
-        id: id
-        url: url
-      properties:
-        id:
-          type: string
-        url:
-          type: string
     api.MitreDetectionTech:
       description: api.MitreDetectionTech
       example:
@@ -172984,7 +173291,7 @@ components:
       properties:
         d3fendtechniques:
           items:
-            $ref: '#/components/schemas/api.MitreD3fendTechnique'
+            $ref: '#/components/schemas/advisory.MitreD3fendTechnique'
           type: array
           uniqueItems: false
         id:
@@ -177157,24 +177464,30 @@ components:
     api.NormalizedExploitV3Entry:
       description: api.NormalizedExploitV3Entry
       example:
-        exploit_type: exploit_type
-        date_added: date_added
-        refsource: refsource
         clone_ssh_url: clone_ssh_url
-        repo_id: repo_id
         clone_ssh_url_cached: clone_ssh_url_cached
-        name: name
         reference_url: reference_url
+        commit_hash: commit_hash
         url: url
         exploit_availability: exploit_availability
         exploit_maturity: exploit_maturity
+        exploit_type: exploit_type
+        date_added: date_added
+        refsource: refsource
+        date_cached: date_cached
+        repo_id: repo_id
+        name: name
         validation_level: validation_level
       properties:
         clone_ssh_url:
           type: string
         clone_ssh_url_cached:
           type: string
+        commit_hash:
+          type: string
         date_added:
+          type: string
+        date_cached:
           type: string
         exploit_availability:
           type: string
@@ -178171,8 +178484,10 @@ components:
         sha256: sha256
         url_us-east-1: url_us-east-1
         available: true
+        url_cloudfront: url_cloudfront
         url_expires: url_expires
         url_mrap: url_mrap
+        url: url
         url_ap-southeast-2: url_ap-southeast-2
       properties:
         available:
@@ -178181,7 +178496,11 @@ components:
           type: string
         sha256:
           type: string
+        url:
+          type: string
         url_ap-southeast-2:
+          type: string
+        url_cloudfront:
           type: string
         url_eu-west-2:
           type: string
@@ -178548,6 +178867,7 @@ components:
         date_added: date_added
         url_ttl_minutes: 6
         filename: filename
+        url_cloudfront: url_cloudfront
         url_expires: url_expires
       properties:
         date_added:
@@ -178559,6 +178879,8 @@ components:
         url:
           type: string
         url_ap-southeast-2:
+          type: string
+        url_cloudfront:
           type: string
         url_eu-west-2:
           type: string
@@ -178692,6 +179014,23 @@ components:
         key:
           type: string
         value:
+          type: string
+    purl.UnprocessedPurl:
+      description: purl.UnprocessedPurl
+      example:
+        reason: reason
+        purl: purl
+      properties:
+        purl:
+          description: The purl exactly as submitted.
+          type: string
+        reason:
+          description: |-
+            Why this purl was not looked up. One of: "unsupported_type" (a valid purl
+            for an ecosystem VulnCheck does not index), "unparseable" (not a valid
+            purl), "unsupported_distro" (a distro-scoped purl whose distro qualifier is
+            missing or unrecognised, e.g. pkg:deb/debian/curl with no distro=). Treat
+            this as an open set: further values may be added.
           type: string
     purls.Artifact:
       description: purls.Artifact
@@ -197597,11 +197936,13 @@ components:
           reference_url: reference_url
           stars: 1
           clone_https_url: clone_https_url
+          commit_hash: commit_hash
           exploit_type: exploit_type
           date_added: date_added
           date_last_revised: date_last_revised
           refsource: refsource
           cve: cve
+          date_cached: date_cached
           repo_id: repo_id
           html_url: html_url
           repo_name: repo_name
@@ -197616,11 +197957,13 @@ components:
           reference_url: reference_url
           stars: 1
           clone_https_url: clone_https_url
+          commit_hash: commit_hash
           exploit_type: exploit_type
           date_added: date_added
           date_last_revised: date_last_revised
           refsource: refsource
           cve: cve
+          date_cached: date_cached
           repo_id: repo_id
           html_url: html_url
           repo_name: repo_name
@@ -197688,11 +198031,13 @@ components:
           reference_url: reference_url
           stars: 1
           clone_https_url: clone_https_url
+          commit_hash: commit_hash
           exploit_type: exploit_type
           date_added: date_added
           date_last_revised: date_last_revised
           refsource: refsource
           cve: cve
+          date_cached: date_cached
           repo_id: repo_id
           html_url: html_url
           repo_name: repo_name
@@ -197705,11 +198050,13 @@ components:
           reference_url: reference_url
           stars: 1
           clone_https_url: clone_https_url
+          commit_hash: commit_hash
           exploit_type: exploit_type
           date_added: date_added
           date_last_revised: date_last_revised
           refsource: refsource
           cve: cve
+          date_cached: date_cached
           repo_id: repo_id
           html_url: html_url
           repo_name: repo_name
@@ -197776,11 +198123,13 @@ components:
           reference_url: reference_url
           stars: 1
           clone_https_url: clone_https_url
+          commit_hash: commit_hash
           exploit_type: exploit_type
           date_added: date_added
           date_last_revised: date_last_revised
           refsource: refsource
           cve: cve
+          date_cached: date_cached
           repo_id: repo_id
           html_url: html_url
           repo_name: repo_name
@@ -197793,11 +198142,13 @@ components:
           reference_url: reference_url
           stars: 1
           clone_https_url: clone_https_url
+          commit_hash: commit_hash
           exploit_type: exploit_type
           date_added: date_added
           date_last_revised: date_last_revised
           refsource: refsource
           cve: cve
+          date_cached: date_cached
           repo_id: repo_id
           html_url: html_url
           repo_name: repo_name
@@ -214828,62 +215179,6 @@ components:
             $ref: '#/components/schemas/advisory.NVD20Source'
           type: array
           uniqueItems: false
-    render.ResponseWithMetadata-array_advisory_NVDCPEDictionary-paginate_Pagination:
-      description: render.ResponseWithMetadata-array_advisory_NVDCPEDictionary-paginate_Pagination
-      example:
-        data:
-        - backupOnly: backupOnly
-        - backupOnly: backupOnly
-        _meta:
-          cursor: cursor
-          next_cursor: next_cursor
-          total_documents: 7
-          show_pages: true
-          first_item: 6
-          last_item: 1
-          warnings:
-          - warnings
-          - warnings
-          index: index
-          sort: sort
-          total_pages: 9
-          matches:
-          - field: field
-            value: value
-          - field: field
-            value: value
-          opensearch_query: "{}"
-          pages:
-          - pages
-          - pages
-          limit: 5
-          show_query: true
-          page: 2
-          max_pages: 5
-          parameters:
-          - format: format
-            name: name
-            filtering: filtering
-          - format: format
-            name: name
-            filtering: filtering
-          order: order
-          timestamp: timestamp
-        _benchmark: 0.8008281904610115
-      properties:
-        _benchmark:
-          description: |-
-            Benchmark is the server-side processing time for the request in seconds.
-            Example: 0.122322 = approximately 122 milliseconds
-          type: number
-        _meta:
-          $ref: '#/components/schemas/paginate.Pagination'
-        data:
-          description: Data is the data returned by the endpoint
-          items:
-            $ref: '#/components/schemas/advisory.NVDCPEDictionary'
-          type: array
-          uniqueItems: false
     render.ResponseWithMetadata-array_advisory_NZAdvisory-paginate_Pagination:
       description: render.ResponseWithMetadata-array_advisory_NZAdvisory-paginate_Pagination
       example:
@@ -231408,6 +231703,7 @@ components:
           title: title
           type: type
           cvss: cvss
+          cvss_v4_vector: cvss_v4_vector
           url: url
         - severity: severity
           date_added: date_added
@@ -231427,6 +231723,7 @@ components:
           title: title
           type: type
           cvss: cvss
+          cvss_v4_vector: cvss_v4_vector
           url: url
         _meta:
           cursor: cursor
@@ -238274,6 +238571,92 @@ components:
             $ref: '#/components/schemas/advisory.Zyxel'
           type: array
           uniqueItems: false
+    render.ResponseWithMetadata-array_api_C2Community-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_api_C2Community-paginate_Pagination
+      example:
+        data:
+        - classifications:
+          - classifications
+          - classifications
+          country: country
+          country_code: country_code
+          hostname: hostname
+          first_seen: first_seen
+          last_seen: last_seen
+          updated_at: updated_at
+          port: 6
+          ip: ip
+          source:
+          - source
+          - source
+          asn: asn
+          as_name: as_name
+        - classifications:
+          - classifications
+          - classifications
+          country: country
+          country_code: country_code
+          hostname: hostname
+          first_seen: first_seen
+          last_seen: last_seen
+          updated_at: updated_at
+          port: 6
+          ip: ip
+          source:
+          - source
+          - source
+          asn: asn
+          as_name: as_name
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/api.C2Community'
+          type: array
+          uniqueItems: false
     render.ResponseWithMetadata-array_api_CWE-paginate_Pagination:
       description: render.ResponseWithMetadata-array_api_CWE-paginate_Pagination
       example:
@@ -238583,6 +238966,15 @@ components:
               attackRequirements: attackRequirements
               vulnIntegrityImpact: vulnIntegrityImpact
               modifiedAttackRequirements: modifiedAttackRequirements
+            ssvc:
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+              source: source
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+              source: source
             baseMetricV2:
               severity: severity
               exploitabilityScore: 1.4658129805029452
@@ -238838,6 +239230,15 @@ components:
               attackRequirements: attackRequirements
               vulnIntegrityImpact: vulnIntegrityImpact
               modifiedAttackRequirements: modifiedAttackRequirements
+            ssvc:
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+              source: source
+            - exploitation: exploitation
+              automatable: automatable
+              technicalImpact: technicalImpact
+              source: source
             baseMetricV2:
               severity: severity
               exploitabilityScore: 1.4658129805029452
@@ -239983,29 +240384,33 @@ components:
           inKEV: true
           max_exploit_maturity: max_exploit_maturity
           exploits:
-          - exploit_type: exploit_type
-            date_added: date_added
-            refsource: refsource
-            clone_ssh_url: clone_ssh_url
-            repo_id: repo_id
+          - clone_ssh_url: clone_ssh_url
             clone_ssh_url_cached: clone_ssh_url_cached
-            name: name
             reference_url: reference_url
+            commit_hash: commit_hash
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            exploit_type: exploit_type
+            date_added: date_added
+            refsource: refsource
+            date_cached: date_cached
+            repo_id: repo_id
+            name: name
             validation_level: validation_level
-          - exploit_type: exploit_type
-            date_added: date_added
-            refsource: refsource
-            clone_ssh_url: clone_ssh_url
-            repo_id: repo_id
+          - clone_ssh_url: clone_ssh_url
             clone_ssh_url_cached: clone_ssh_url_cached
-            name: name
             reference_url: reference_url
+            commit_hash: commit_hash
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            exploit_type: exploit_type
+            date_added: date_added
+            refsource: refsource
+            date_cached: date_cached
+            repo_id: repo_id
+            name: name
             validation_level: validation_level
           commercial_exploit_found: true
           date_added: date_added
@@ -240060,29 +240465,33 @@ components:
           inKEV: true
           max_exploit_maturity: max_exploit_maturity
           exploits:
-          - exploit_type: exploit_type
-            date_added: date_added
-            refsource: refsource
-            clone_ssh_url: clone_ssh_url
-            repo_id: repo_id
+          - clone_ssh_url: clone_ssh_url
             clone_ssh_url_cached: clone_ssh_url_cached
-            name: name
             reference_url: reference_url
+            commit_hash: commit_hash
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            exploit_type: exploit_type
+            date_added: date_added
+            refsource: refsource
+            date_cached: date_cached
+            repo_id: repo_id
+            name: name
             validation_level: validation_level
-          - exploit_type: exploit_type
-            date_added: date_added
-            refsource: refsource
-            clone_ssh_url: clone_ssh_url
-            repo_id: repo_id
+          - clone_ssh_url: clone_ssh_url
             clone_ssh_url_cached: clone_ssh_url_cached
-            name: name
             reference_url: reference_url
+            commit_hash: commit_hash
             url: url
             exploit_availability: exploit_availability
             exploit_maturity: exploit_maturity
+            exploit_type: exploit_type
+            date_added: date_added
+            refsource: refsource
+            date_cached: date_cached
+            repo_id: repo_id
+            name: name
             validation_level: validation_level
           commercial_exploit_found: true
           date_added: date_added
@@ -245626,6 +246035,7 @@ components:
           date_added: date_added
           url_ttl_minutes: 6
           filename: filename
+          url_cloudfront: url_cloudfront
           url_expires: url_expires
         - sha256: sha256
           url_us-west-2: url_us-west-2
@@ -245639,6 +246049,7 @@ components:
           date_added: date_added
           url_ttl_minutes: 6
           filename: filename
+          url_cloudfront: url_cloudfront
           url_expires: url_expires
         _meta:
           index: index
@@ -245755,6 +246166,12 @@ components:
           - cves
         _meta:
           total_documents: 6
+          unprocessed:
+          - reason: reason
+            purl: purl
+          - reason: reason
+            purl: purl
+          total_submitted: 1
           timestamp: timestamp
         _benchmark: 0.8008281904610115
       properties:
@@ -248753,6 +249170,12 @@ components:
       description: Meta is the metadata related to the endpoint response
       example:
         total_documents: 6
+        unprocessed:
+        - reason: reason
+          purl: purl
+        - reason: reason
+          purl: purl
+        total_submitted: 1
         timestamp: timestamp
       properties:
         timestamp:
@@ -248761,6 +249184,17 @@ components:
         total_documents:
           description: number of results found
           type: integer
+        total_submitted:
+          description: number of purls in the request
+          type: integer
+        unprocessed:
+          description: |-
+            Unprocessed lists purls we could not look up. Not inferable from the
+            counts above: purls with no vulnerabilities are omitted from data too.
+          items:
+            $ref: '#/components/schemas/purl.UnprocessedPurl'
+          type: array
+          uniqueItems: false
     v3controllers.ResponseMetadata:
       description: Meta is the metadata related to the endpoint response
       example:

@@ -463,6 +463,7 @@ docs/AdvisoryMitreAttackTechWithRefs.md
 docs/AdvisoryMitreAttackTechnique.md
 docs/AdvisoryMitreCVEListV5.md
 docs/AdvisoryMitreCVEListV5Ref.md
+docs/AdvisoryMitreD3fendTechnique.md
 docs/AdvisoryMitreGroupCTI.md
 docs/AdvisoryMitsubishiElectricAdvisory.md
 docs/AdvisoryMogwaiLabsAdvisory.md
@@ -482,7 +483,6 @@ docs/AdvisoryNVD20CVECPEMatch.md
 docs/AdvisoryNVD20Configuration.md
 docs/AdvisoryNVD20Node.md
 docs/AdvisoryNVD20Source.md
-docs/AdvisoryNVDCPEDictionary.md
 docs/AdvisoryNZAdvisory.md
 docs/AdvisoryNaver.md
 docs/AdvisoryNessus.md
@@ -789,6 +789,7 @@ docs/AdvisoryZuso.md
 docs/AdvisoryZyxel.md
 docs/ApiBaseMetricV2.md
 docs/ApiBaseMetricV3.md
+docs/ApiC2Community.md
 docs/ApiC2Frequency.md
 docs/ApiCPE.md
 docs/ApiCPEMatch.md
@@ -829,7 +830,6 @@ docs/ApiInitialAccessGoExploit.md
 docs/ApiInitialAccessGoExploitCustomFlag.md
 docs/ApiMitreAttackTech.md
 docs/ApiMitreAttackToCVE.md
-docs/ApiMitreD3fendTechnique.md
 docs/ApiMitreDetectionTech.md
 docs/ApiMitreMitigation2D3fendMapping.md
 docs/ApiMitreMitigationTech.md
@@ -923,6 +923,7 @@ docs/ParamsIndexList.md
 docs/PurlBatchVulnFinding.md
 docs/PurlPackageURLJSON.md
 docs/PurlQualifierJSON.md
+docs/PurlUnprocessedPurl.md
 docs/PurlsPurlResponse.md
 docs/PurlsVulnerability.md
 docs/RenderResponseArrayParamsIndexBackupList.md
@@ -1205,7 +1206,6 @@ docs/RenderResponseWithMetadataArrayAdvisoryNHSPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryNIPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryNTPPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryNVD20SourcePaginatePagination.md
-docs/RenderResponseWithMetadataArrayAdvisoryNVDCPEDictionaryPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryNZAdvisoryPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryNaverPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryNessusPaginatePagination.md
@@ -1384,6 +1384,7 @@ docs/RenderResponseWithMetadataArrayAdvisoryZoomPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryZscalerPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryZusoPaginatePagination.md
 docs/RenderResponseWithMetadataArrayAdvisoryZyxelPaginatePagination.md
+docs/RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiCWEPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiCveItemsExtendedPaginatePagination.md
 docs/RenderResponseWithMetadataArrayApiCveItemsPaginatePagination.md
@@ -1875,6 +1876,7 @@ model_advisory_mitre_attack_tech_with_refs.go
 model_advisory_mitre_attack_technique.go
 model_advisory_mitre_cve_list_v5.go
 model_advisory_mitre_cve_list_v5_ref.go
+model_advisory_mitre_d3fend_technique.go
 model_advisory_mitre_group_cti.go
 model_advisory_mitsubishi_electric_advisory.go
 model_advisory_mogwai_labs_advisory.go
@@ -1913,7 +1915,6 @@ model_advisory_nvd20_configuration.go
 model_advisory_nvd20_cvecpe_match.go
 model_advisory_nvd20_node.go
 model_advisory_nvd20_source.go
-model_advisory_nvdcpe_dictionary.go
 model_advisory_nvidia_revision.go
 model_advisory_nz_advisory.go
 model_advisory_o_curl.go
@@ -2203,6 +2204,7 @@ model_advisory_zuso.go
 model_advisory_zyxel.go
 model_api_base_metric_v2.go
 model_api_base_metric_v3.go
+model_api_c2_community.go
 model_api_c2_frequency.go
 model_api_categorization_extended.go
 model_api_client_fingerprints.go
@@ -2243,7 +2245,6 @@ model_api_initial_access_go_exploit.go
 model_api_initial_access_go_exploit_custom_flag.go
 model_api_mitre_attack_tech.go
 model_api_mitre_attack_to_cve.go
-model_api_mitre_d3fend_technique.go
 model_api_mitre_detection_tech.go
 model_api_mitre_mitigation2_d3fend_mapping.go
 model_api_mitre_mitigation_tech.go
@@ -2334,6 +2335,7 @@ model_params_index_list.go
 model_purl_batch_vuln_finding.go
 model_purl_package_urljson.go
 model_purl_qualifier_json.go
+model_purl_unprocessed_purl.go
 model_purls_purl_response.go
 model_purls_vulnerability.go
 model_render_response_array_params_index_backup_list.go
@@ -2631,7 +2633,6 @@ model_render_response_with_metadata_array_advisory_nozomi_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_ntp_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_nuclei_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_nvd20_source_paginate_pagination.go
-model_render_response_with_metadata_array_advisory_nvdcpe_dictionary_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_nz_advisory_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_octopus_deploy_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_okta_paginate_pagination.go
@@ -2795,6 +2796,7 @@ model_render_response_with_metadata_array_advisory_zoom_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_zscaler_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_zuso_paginate_pagination.go
 model_render_response_with_metadata_array_advisory_zyxel_paginate_pagination.go
+model_render_response_with_metadata_array_api_c2_community_paginate_pagination.go
 model_render_response_with_metadata_array_api_cve_items_extended_paginate_pagination.go
 model_render_response_with_metadata_array_api_cve_items_paginate_pagination.go
 model_render_response_with_metadata_array_api_cwe_paginate_pagination.go

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Sha256** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **UrlApSoutheast2** | Pointer to **string** |  | [optional] 
+**UrlCloudfront** | Pointer to **string** |  | [optional] 
 **UrlEuWest2** | Pointer to **string** |  | [optional] 
 **UrlExpires** | Pointer to **string** |  | [optional] 
 **UrlIlCentral1** | Pointer to **string** |  | [optional] 
@@ -161,6 +162,31 @@ SetUrlApSoutheast2 sets UrlApSoutheast2 field to given value.
 `func (o *ParamsIndexBackup) HasUrlApSoutheast2() bool`
 
 HasUrlApSoutheast2 returns a boolean if a field has been set.
+
+### GetUrlCloudfront
+
+`func (o *ParamsIndexBackup) GetUrlCloudfront() string`
+
+GetUrlCloudfront returns the UrlCloudfront field if non-nil, zero value otherwise.
+
+### GetUrlCloudfrontOk
+
+`func (o *ParamsIndexBackup) GetUrlCloudfrontOk() (*string, bool)`
+
+GetUrlCloudfrontOk returns a tuple with the UrlCloudfront field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlCloudfront
+
+`func (o *ParamsIndexBackup) SetUrlCloudfront(v string)`
+
+SetUrlCloudfront sets UrlCloudfront field to given value.
+
+### HasUrlCloudfront
+
+`func (o *ParamsIndexBackup) HasUrlCloudfront() bool`
+
+HasUrlCloudfront returns a boolean if a field has been set.
 
 ### GetUrlEuWest2
 
