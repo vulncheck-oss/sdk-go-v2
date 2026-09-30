@@ -527,7 +527,7 @@ paths:
           - vmware
           - voidsec
           - vulncheck
-          - vulncheck-c2
+          - vulncheck-attacker-infrastructure
           - vulncheck-canaries
           - vulncheck-canaries-10d
           - vulncheck-canaries-30d
@@ -113529,21 +113529,21 @@ paths:
       summary: Return vulnerability data stored in index "vulncheck"
       tags:
       - indices
-  /v3/index/vulncheck-c2:
+  /v3/index/vulncheck-attacker-infrastructure:
     get:
       description: |
         ### Overview
-        This endpoint allows you to retrieve a paginated list of all documents from the vulncheck-c2 index. \
+        This endpoint allows you to retrieve a paginated list of all documents from the vulncheck-attacker-infrastructure index. \
         By default, a maximum of 100 documents are shown per page.
 
-        **Index Description:** VulnCheck Community C2 Intelligence
+        **Index Description:** VulnCheck Attacker Infrastructure Intelligence
 
         ### Paging Over Large Data (cursor)
         In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-        "cursor" mechanism. To use the cursor, first call `GET /index/vulncheck-c2?start_cursor`, the response will
+        "cursor" mechanism. To use the cursor, first call `GET /index/vulncheck-attacker-infrastructure?start_cursor`, the response will
         have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-        `GET /index/vulncheck-c2?cursor=<next_cursor_id>`
-      operationId: index_vulncheck-c2_get
+        `GET /index/vulncheck-attacker-infrastructure?cursor=<next_cursor_id>`
+      operationId: index_vulncheck-attacker-infrastructure_get
       parameters:
       - description: set the page number of the response
         explode: true
@@ -113723,7 +113723,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_C2Community-paginate_Pagination'
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_AttackerInfrastructure-paginate_Pagination'
           description: OK
         "404":
           content:
@@ -113741,7 +113741,7 @@ paths:
       - Bearer: []
       servers:
       - url: https://api.vulncheck.com
-      summary: Return vulnerability data stored in index "vulncheck-c2"
+      summary: Return vulnerability data stored in index "vulncheck-attacker-infrastructure"
       tags:
       - indices
   /v3/index/vulncheck-canaries:
@@ -122557,6 +122557,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/render.ResponseWithMetadata-v3controllers_PurlsResponseData-v3controllers_PurlsResponseMetadata'
           description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Bad Request
         "404":
           content:
             application/json:
@@ -170457,6 +170463,56 @@ components:
           type: string
         url:
           type: string
+    api.AttackerInfrastructure:
+      description: api.AttackerInfrastructure
+      example:
+        classifications:
+        - classifications
+        - classifications
+        country: country
+        country_code: country_code
+        hostname: hostname
+        first_seen: first_seen
+        last_seen: last_seen
+        updated_at: updated_at
+        port: 6
+        ip: ip
+        source:
+        - source
+        - source
+        asn: asn
+        as_name: as_name
+      properties:
+        as_name:
+          type: string
+        asn:
+          type: string
+        classifications:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        country:
+          type: string
+        country_code:
+          type: string
+        first_seen:
+          type: string
+        hostname:
+          type: string
+        ip:
+          type: string
+        last_seen:
+          type: string
+        port:
+          type: integer
+        source:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        updated_at:
+          type: string
     api.BaseMetricV2:
       description: api.BaseMetricV2
       example:
@@ -170522,56 +170578,6 @@ components:
           type: number
         impactScore:
           type: number
-    api.C2Community:
-      description: api.C2Community
-      example:
-        classifications:
-        - classifications
-        - classifications
-        country: country
-        country_code: country_code
-        hostname: hostname
-        first_seen: first_seen
-        last_seen: last_seen
-        updated_at: updated_at
-        port: 6
-        ip: ip
-        source:
-        - source
-        - source
-        asn: asn
-        as_name: as_name
-      properties:
-        as_name:
-          type: string
-        asn:
-          type: string
-        classifications:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        country:
-          type: string
-        country_code:
-          type: string
-        first_seen:
-          type: string
-        hostname:
-          type: string
-        ip:
-          type: string
-        last_seen:
-          type: string
-        port:
-          type: integer
-        source:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        updated_at:
-          type: string
     api.C2Frequency:
       description: api.C2Frequency
       example:
@@ -178354,31 +178360,45 @@ components:
     api.VulnCheckCanary:
       description: api.VulnCheckCanary
       example:
+        src_as_name: src_as_name
+        signature: signature
+        src_ip_freq_3d_canary: 2
+        src_ip: src_ip
+        signature_id: 5
+        cve: cve
+        payload: payload
+        c2_frequency_3d:
+        - src: src
+          count: 6
+        - src: src
+          count: 6
+        timestamp: timestamp
         dst_country: dst_country
         severity: 1
+        attacker_infrastructure_frequency_3d:
+        - src: src
+          count: 6
+        - src: src
+          count: 6
         payload_tooling:
         - payload_tooling
         - payload_tooling
-        src_as_name: src_as_name
         tech_vertical:
         - tech_vertical
         - tech_vertical
-        signature: signature
         src_ip_type_findings:
         - src_ip_type_findings
         - src_ip_type_findings
-        src_ip_freq_3d_canary: 2
         src_ip_freq_3d: 5
         client_fingerprints:
           hassh: hassh
           ja4: ja4
           ja3: ja3
-        src_ip: src_ip
+        attacker_infrastructure:
+        - attacker_infrastructure
+        - attacker_infrastructure
         src_port: 7
-        signature_id: 5
-        cve: cve
         src_as_domain: src_as_domain
-        payload: payload
         src_asn: src_asn
         src_country: src_country
         payload_tlsh: payload_tlsh
@@ -178391,14 +178411,18 @@ components:
         c2_location:
         - c2_location
         - c2_location
-        c2_frequency_3d:
-        - src: src
-          count: 6
-        - src: src
-          count: 6
         category: category
-        timestamp: timestamp
       properties:
+        attacker_infrastructure:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        attacker_infrastructure_frequency_3d:
+          items:
+            $ref: '#/components/schemas/api.C2Frequency'
+          type: array
+          uniqueItems: false
         c2_frequency_3d:
           items:
             $ref: '#/components/schemas/api.C2Frequency'
@@ -238571,8 +238595,8 @@ components:
             $ref: '#/components/schemas/advisory.Zyxel'
           type: array
           uniqueItems: false
-    render.ResponseWithMetadata-array_api_C2Community-paginate_Pagination:
-      description: render.ResponseWithMetadata-array_api_C2Community-paginate_Pagination
+    render.ResponseWithMetadata-array_api_AttackerInfrastructure-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_api_AttackerInfrastructure-paginate_Pagination
       example:
         data:
         - classifications:
@@ -238654,7 +238678,7 @@ components:
         data:
           description: Data is the data returned by the endpoint
           items:
-            $ref: '#/components/schemas/api.C2Community'
+            $ref: '#/components/schemas/api.AttackerInfrastructure'
           type: array
           uniqueItems: false
     render.ResponseWithMetadata-array_api_CWE-paginate_Pagination:
@@ -245561,31 +245585,45 @@ components:
       description: render.ResponseWithMetadata-array_api_VulnCheckCanary-paginate_Pagination
       example:
         data:
-        - dst_country: dst_country
+        - src_as_name: src_as_name
+          signature: signature
+          src_ip_freq_3d_canary: 2
+          src_ip: src_ip
+          signature_id: 5
+          cve: cve
+          payload: payload
+          c2_frequency_3d:
+          - src: src
+            count: 6
+          - src: src
+            count: 6
+          timestamp: timestamp
+          dst_country: dst_country
           severity: 1
+          attacker_infrastructure_frequency_3d:
+          - src: src
+            count: 6
+          - src: src
+            count: 6
           payload_tooling:
           - payload_tooling
           - payload_tooling
-          src_as_name: src_as_name
           tech_vertical:
           - tech_vertical
           - tech_vertical
-          signature: signature
           src_ip_type_findings:
           - src_ip_type_findings
           - src_ip_type_findings
-          src_ip_freq_3d_canary: 2
           src_ip_freq_3d: 5
           client_fingerprints:
             hassh: hassh
             ja4: ja4
             ja3: ja3
-          src_ip: src_ip
+          attacker_infrastructure:
+          - attacker_infrastructure
+          - attacker_infrastructure
           src_port: 7
-          signature_id: 5
-          cve: cve
           src_as_domain: src_as_domain
-          payload: payload
           src_asn: src_asn
           src_country: src_country
           payload_tlsh: payload_tlsh
@@ -245598,38 +245636,46 @@ components:
           c2_location:
           - c2_location
           - c2_location
+          category: category
+        - src_as_name: src_as_name
+          signature: signature
+          src_ip_freq_3d_canary: 2
+          src_ip: src_ip
+          signature_id: 5
+          cve: cve
+          payload: payload
           c2_frequency_3d:
           - src: src
             count: 6
           - src: src
             count: 6
-          category: category
           timestamp: timestamp
-        - dst_country: dst_country
+          dst_country: dst_country
           severity: 1
+          attacker_infrastructure_frequency_3d:
+          - src: src
+            count: 6
+          - src: src
+            count: 6
           payload_tooling:
           - payload_tooling
           - payload_tooling
-          src_as_name: src_as_name
           tech_vertical:
           - tech_vertical
           - tech_vertical
-          signature: signature
           src_ip_type_findings:
           - src_ip_type_findings
           - src_ip_type_findings
-          src_ip_freq_3d_canary: 2
           src_ip_freq_3d: 5
           client_fingerprints:
             hassh: hassh
             ja4: ja4
             ja3: ja3
-          src_ip: src_ip
+          attacker_infrastructure:
+          - attacker_infrastructure
+          - attacker_infrastructure
           src_port: 7
-          signature_id: 5
-          cve: cve
           src_as_domain: src_as_domain
-          payload: payload
           src_asn: src_asn
           src_country: src_country
           payload_tlsh: payload_tlsh
@@ -245642,13 +245688,7 @@ components:
           c2_location:
           - c2_location
           - c2_location
-          c2_frequency_3d:
-          - src: src
-            count: 6
-          - src: src
-            count: 6
           category: category
-          timestamp: timestamp
         _meta:
           cursor: cursor
           next_cursor: next_cursor

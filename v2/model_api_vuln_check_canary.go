@@ -20,6 +20,8 @@ var _ MappedNullable = &ApiVulnCheckCanary{}
 
 // ApiVulnCheckCanary api.VulnCheckCanary
 type ApiVulnCheckCanary struct {
+	AttackerInfrastructure []string `json:"attacker_infrastructure,omitempty"`
+	AttackerInfrastructureFrequency3d []ApiC2Frequency `json:"attacker_infrastructure_frequency_3d,omitempty"`
 	C2Frequency3d []ApiC2Frequency `json:"c2_frequency_3d,omitempty"`
 	C2Location []string `json:"c2_location,omitempty"`
 	Category *string `json:"category,omitempty"`
@@ -61,6 +63,70 @@ func NewApiVulnCheckCanary() *ApiVulnCheckCanary {
 func NewApiVulnCheckCanaryWithDefaults() *ApiVulnCheckCanary {
 	this := ApiVulnCheckCanary{}
 	return &this
+}
+
+// GetAttackerInfrastructure returns the AttackerInfrastructure field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetAttackerInfrastructure() []string {
+	if o == nil || IsNil(o.AttackerInfrastructure) {
+		var ret []string
+		return ret
+	}
+	return o.AttackerInfrastructure
+}
+
+// GetAttackerInfrastructureOk returns a tuple with the AttackerInfrastructure field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetAttackerInfrastructureOk() ([]string, bool) {
+	if o == nil || IsNil(o.AttackerInfrastructure) {
+		return nil, false
+	}
+	return o.AttackerInfrastructure, true
+}
+
+// HasAttackerInfrastructure returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasAttackerInfrastructure() bool {
+	if o != nil && !IsNil(o.AttackerInfrastructure) {
+		return true
+	}
+
+	return false
+}
+
+// SetAttackerInfrastructure gets a reference to the given []string and assigns it to the AttackerInfrastructure field.
+func (o *ApiVulnCheckCanary) SetAttackerInfrastructure(v []string) {
+	o.AttackerInfrastructure = v
+}
+
+// GetAttackerInfrastructureFrequency3d returns the AttackerInfrastructureFrequency3d field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetAttackerInfrastructureFrequency3d() []ApiC2Frequency {
+	if o == nil || IsNil(o.AttackerInfrastructureFrequency3d) {
+		var ret []ApiC2Frequency
+		return ret
+	}
+	return o.AttackerInfrastructureFrequency3d
+}
+
+// GetAttackerInfrastructureFrequency3dOk returns a tuple with the AttackerInfrastructureFrequency3d field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetAttackerInfrastructureFrequency3dOk() ([]ApiC2Frequency, bool) {
+	if o == nil || IsNil(o.AttackerInfrastructureFrequency3d) {
+		return nil, false
+	}
+	return o.AttackerInfrastructureFrequency3d, true
+}
+
+// HasAttackerInfrastructureFrequency3d returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasAttackerInfrastructureFrequency3d() bool {
+	if o != nil && !IsNil(o.AttackerInfrastructureFrequency3d) {
+		return true
+	}
+
+	return false
+}
+
+// SetAttackerInfrastructureFrequency3d gets a reference to the given []ApiC2Frequency and assigns it to the AttackerInfrastructureFrequency3d field.
+func (o *ApiVulnCheckCanary) SetAttackerInfrastructureFrequency3d(v []ApiC2Frequency) {
+	o.AttackerInfrastructureFrequency3d = v
 }
 
 // GetC2Frequency3d returns the C2Frequency3d field value if set, zero value otherwise.
@@ -841,6 +907,12 @@ func (o ApiVulnCheckCanary) MarshalJSON() ([]byte, error) {
 
 func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AttackerInfrastructure) {
+		toSerialize["attacker_infrastructure"] = o.AttackerInfrastructure
+	}
+	if !IsNil(o.AttackerInfrastructureFrequency3d) {
+		toSerialize["attacker_infrastructure_frequency_3d"] = o.AttackerInfrastructureFrequency3d
+	}
 	if !IsNil(o.C2Frequency3d) {
 		toSerialize["c2_frequency_3d"] = o.C2Frequency3d
 	}

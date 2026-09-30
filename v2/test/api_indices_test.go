@@ -5662,11 +5662,11 @@ func Test_v2_IndicesAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test IndicesAPIService IndexVulncheckC2Get", func(t *testing.T) {
+	t.Run("Test IndicesAPIService IndexVulncheckAttackerInfrastructureGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.IndicesAPI.IndexVulncheckC2Get(context.Background()).Execute()
+		resp, httpRes, err := apiClient.IndicesAPI.IndexVulncheckAttackerInfrastructureGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AttackerInfrastructure** | Pointer to **[]string** |  | [optional] 
+**AttackerInfrastructureFrequency3d** | Pointer to [**[]ApiC2Frequency**](ApiC2Frequency.md) |  | [optional] 
 **C2Frequency3d** | Pointer to [**[]ApiC2Frequency**](ApiC2Frequency.md) |  | [optional] 
 **C2Location** | Pointer to **[]string** |  | [optional] 
 **Category** | Pointer to **string** |  | [optional] 
@@ -47,6 +49,56 @@ will change when the set of required properties is changed
 NewApiVulnCheckCanaryWithDefaults instantiates a new ApiVulnCheckCanary object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAttackerInfrastructure
+
+`func (o *ApiVulnCheckCanary) GetAttackerInfrastructure() []string`
+
+GetAttackerInfrastructure returns the AttackerInfrastructure field if non-nil, zero value otherwise.
+
+### GetAttackerInfrastructureOk
+
+`func (o *ApiVulnCheckCanary) GetAttackerInfrastructureOk() (*[]string, bool)`
+
+GetAttackerInfrastructureOk returns a tuple with the AttackerInfrastructure field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAttackerInfrastructure
+
+`func (o *ApiVulnCheckCanary) SetAttackerInfrastructure(v []string)`
+
+SetAttackerInfrastructure sets AttackerInfrastructure field to given value.
+
+### HasAttackerInfrastructure
+
+`func (o *ApiVulnCheckCanary) HasAttackerInfrastructure() bool`
+
+HasAttackerInfrastructure returns a boolean if a field has been set.
+
+### GetAttackerInfrastructureFrequency3d
+
+`func (o *ApiVulnCheckCanary) GetAttackerInfrastructureFrequency3d() []ApiC2Frequency`
+
+GetAttackerInfrastructureFrequency3d returns the AttackerInfrastructureFrequency3d field if non-nil, zero value otherwise.
+
+### GetAttackerInfrastructureFrequency3dOk
+
+`func (o *ApiVulnCheckCanary) GetAttackerInfrastructureFrequency3dOk() (*[]ApiC2Frequency, bool)`
+
+GetAttackerInfrastructureFrequency3dOk returns a tuple with the AttackerInfrastructureFrequency3d field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAttackerInfrastructureFrequency3d
+
+`func (o *ApiVulnCheckCanary) SetAttackerInfrastructureFrequency3d(v []ApiC2Frequency)`
+
+SetAttackerInfrastructureFrequency3d sets AttackerInfrastructureFrequency3d field to given value.
+
+### HasAttackerInfrastructureFrequency3d
+
+`func (o *ApiVulnCheckCanary) HasAttackerInfrastructureFrequency3d() bool`
+
+HasAttackerInfrastructureFrequency3d returns a boolean if a field has been set.
 
 ### GetC2Frequency3d
 
