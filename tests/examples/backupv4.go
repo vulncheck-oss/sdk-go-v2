@@ -45,7 +45,7 @@ func main() {
 
   fmt.Printf("Downloading %s backup\n", feed)
   filePath := feed + ".zip"
-  fileResp, err := http.Get(resp.GetUrlMrap())
+  fileResp, err := http.Get(resp.GetUrl())
   if err != nil {
     log.Fatal(err)
   }
