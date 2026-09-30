@@ -15,11 +15,11 @@ import (
 	"encoding/json"
 )
 
-// checks if the ApiC2Community type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &ApiC2Community{}
+// checks if the ApiAttackerInfrastructure type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &ApiAttackerInfrastructure{}
 
-// ApiC2Community api.C2Community
-type ApiC2Community struct {
+// ApiAttackerInfrastructure api.AttackerInfrastructure
+type ApiAttackerInfrastructure struct {
 	AsName *string `json:"as_name,omitempty"`
 	Asn *string `json:"asn,omitempty"`
 	Classifications []string `json:"classifications,omitempty"`
@@ -34,25 +34,25 @@ type ApiC2Community struct {
 	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
-// NewApiC2Community instantiates a new ApiC2Community object
+// NewApiAttackerInfrastructure instantiates a new ApiAttackerInfrastructure object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewApiC2Community() *ApiC2Community {
-	this := ApiC2Community{}
+func NewApiAttackerInfrastructure() *ApiAttackerInfrastructure {
+	this := ApiAttackerInfrastructure{}
 	return &this
 }
 
-// NewApiC2CommunityWithDefaults instantiates a new ApiC2Community object
+// NewApiAttackerInfrastructureWithDefaults instantiates a new ApiAttackerInfrastructure object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewApiC2CommunityWithDefaults() *ApiC2Community {
-	this := ApiC2Community{}
+func NewApiAttackerInfrastructureWithDefaults() *ApiAttackerInfrastructure {
+	this := ApiAttackerInfrastructure{}
 	return &this
 }
 
 // GetAsName returns the AsName field value if set, zero value otherwise.
-func (o *ApiC2Community) GetAsName() string {
+func (o *ApiAttackerInfrastructure) GetAsName() string {
 	if o == nil || IsNil(o.AsName) {
 		var ret string
 		return ret
@@ -62,7 +62,7 @@ func (o *ApiC2Community) GetAsName() string {
 
 // GetAsNameOk returns a tuple with the AsName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetAsNameOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetAsNameOk() (*string, bool) {
 	if o == nil || IsNil(o.AsName) {
 		return nil, false
 	}
@@ -70,7 +70,7 @@ func (o *ApiC2Community) GetAsNameOk() (*string, bool) {
 }
 
 // HasAsName returns a boolean if a field has been set.
-func (o *ApiC2Community) HasAsName() bool {
+func (o *ApiAttackerInfrastructure) HasAsName() bool {
 	if o != nil && !IsNil(o.AsName) {
 		return true
 	}
@@ -79,12 +79,12 @@ func (o *ApiC2Community) HasAsName() bool {
 }
 
 // SetAsName gets a reference to the given string and assigns it to the AsName field.
-func (o *ApiC2Community) SetAsName(v string) {
+func (o *ApiAttackerInfrastructure) SetAsName(v string) {
 	o.AsName = &v
 }
 
 // GetAsn returns the Asn field value if set, zero value otherwise.
-func (o *ApiC2Community) GetAsn() string {
+func (o *ApiAttackerInfrastructure) GetAsn() string {
 	if o == nil || IsNil(o.Asn) {
 		var ret string
 		return ret
@@ -94,7 +94,7 @@ func (o *ApiC2Community) GetAsn() string {
 
 // GetAsnOk returns a tuple with the Asn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetAsnOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetAsnOk() (*string, bool) {
 	if o == nil || IsNil(o.Asn) {
 		return nil, false
 	}
@@ -102,7 +102,7 @@ func (o *ApiC2Community) GetAsnOk() (*string, bool) {
 }
 
 // HasAsn returns a boolean if a field has been set.
-func (o *ApiC2Community) HasAsn() bool {
+func (o *ApiAttackerInfrastructure) HasAsn() bool {
 	if o != nil && !IsNil(o.Asn) {
 		return true
 	}
@@ -111,12 +111,12 @@ func (o *ApiC2Community) HasAsn() bool {
 }
 
 // SetAsn gets a reference to the given string and assigns it to the Asn field.
-func (o *ApiC2Community) SetAsn(v string) {
+func (o *ApiAttackerInfrastructure) SetAsn(v string) {
 	o.Asn = &v
 }
 
 // GetClassifications returns the Classifications field value if set, zero value otherwise.
-func (o *ApiC2Community) GetClassifications() []string {
+func (o *ApiAttackerInfrastructure) GetClassifications() []string {
 	if o == nil || IsNil(o.Classifications) {
 		var ret []string
 		return ret
@@ -126,7 +126,7 @@ func (o *ApiC2Community) GetClassifications() []string {
 
 // GetClassificationsOk returns a tuple with the Classifications field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetClassificationsOk() ([]string, bool) {
+func (o *ApiAttackerInfrastructure) GetClassificationsOk() ([]string, bool) {
 	if o == nil || IsNil(o.Classifications) {
 		return nil, false
 	}
@@ -134,7 +134,7 @@ func (o *ApiC2Community) GetClassificationsOk() ([]string, bool) {
 }
 
 // HasClassifications returns a boolean if a field has been set.
-func (o *ApiC2Community) HasClassifications() bool {
+func (o *ApiAttackerInfrastructure) HasClassifications() bool {
 	if o != nil && !IsNil(o.Classifications) {
 		return true
 	}
@@ -143,12 +143,12 @@ func (o *ApiC2Community) HasClassifications() bool {
 }
 
 // SetClassifications gets a reference to the given []string and assigns it to the Classifications field.
-func (o *ApiC2Community) SetClassifications(v []string) {
+func (o *ApiAttackerInfrastructure) SetClassifications(v []string) {
 	o.Classifications = v
 }
 
 // GetCountry returns the Country field value if set, zero value otherwise.
-func (o *ApiC2Community) GetCountry() string {
+func (o *ApiAttackerInfrastructure) GetCountry() string {
 	if o == nil || IsNil(o.Country) {
 		var ret string
 		return ret
@@ -158,7 +158,7 @@ func (o *ApiC2Community) GetCountry() string {
 
 // GetCountryOk returns a tuple with the Country field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetCountryOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetCountryOk() (*string, bool) {
 	if o == nil || IsNil(o.Country) {
 		return nil, false
 	}
@@ -166,7 +166,7 @@ func (o *ApiC2Community) GetCountryOk() (*string, bool) {
 }
 
 // HasCountry returns a boolean if a field has been set.
-func (o *ApiC2Community) HasCountry() bool {
+func (o *ApiAttackerInfrastructure) HasCountry() bool {
 	if o != nil && !IsNil(o.Country) {
 		return true
 	}
@@ -175,12 +175,12 @@ func (o *ApiC2Community) HasCountry() bool {
 }
 
 // SetCountry gets a reference to the given string and assigns it to the Country field.
-func (o *ApiC2Community) SetCountry(v string) {
+func (o *ApiAttackerInfrastructure) SetCountry(v string) {
 	o.Country = &v
 }
 
 // GetCountryCode returns the CountryCode field value if set, zero value otherwise.
-func (o *ApiC2Community) GetCountryCode() string {
+func (o *ApiAttackerInfrastructure) GetCountryCode() string {
 	if o == nil || IsNil(o.CountryCode) {
 		var ret string
 		return ret
@@ -190,7 +190,7 @@ func (o *ApiC2Community) GetCountryCode() string {
 
 // GetCountryCodeOk returns a tuple with the CountryCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetCountryCodeOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetCountryCodeOk() (*string, bool) {
 	if o == nil || IsNil(o.CountryCode) {
 		return nil, false
 	}
@@ -198,7 +198,7 @@ func (o *ApiC2Community) GetCountryCodeOk() (*string, bool) {
 }
 
 // HasCountryCode returns a boolean if a field has been set.
-func (o *ApiC2Community) HasCountryCode() bool {
+func (o *ApiAttackerInfrastructure) HasCountryCode() bool {
 	if o != nil && !IsNil(o.CountryCode) {
 		return true
 	}
@@ -207,12 +207,12 @@ func (o *ApiC2Community) HasCountryCode() bool {
 }
 
 // SetCountryCode gets a reference to the given string and assigns it to the CountryCode field.
-func (o *ApiC2Community) SetCountryCode(v string) {
+func (o *ApiAttackerInfrastructure) SetCountryCode(v string) {
 	o.CountryCode = &v
 }
 
 // GetFirstSeen returns the FirstSeen field value if set, zero value otherwise.
-func (o *ApiC2Community) GetFirstSeen() string {
+func (o *ApiAttackerInfrastructure) GetFirstSeen() string {
 	if o == nil || IsNil(o.FirstSeen) {
 		var ret string
 		return ret
@@ -222,7 +222,7 @@ func (o *ApiC2Community) GetFirstSeen() string {
 
 // GetFirstSeenOk returns a tuple with the FirstSeen field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetFirstSeenOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetFirstSeenOk() (*string, bool) {
 	if o == nil || IsNil(o.FirstSeen) {
 		return nil, false
 	}
@@ -230,7 +230,7 @@ func (o *ApiC2Community) GetFirstSeenOk() (*string, bool) {
 }
 
 // HasFirstSeen returns a boolean if a field has been set.
-func (o *ApiC2Community) HasFirstSeen() bool {
+func (o *ApiAttackerInfrastructure) HasFirstSeen() bool {
 	if o != nil && !IsNil(o.FirstSeen) {
 		return true
 	}
@@ -239,12 +239,12 @@ func (o *ApiC2Community) HasFirstSeen() bool {
 }
 
 // SetFirstSeen gets a reference to the given string and assigns it to the FirstSeen field.
-func (o *ApiC2Community) SetFirstSeen(v string) {
+func (o *ApiAttackerInfrastructure) SetFirstSeen(v string) {
 	o.FirstSeen = &v
 }
 
 // GetHostname returns the Hostname field value if set, zero value otherwise.
-func (o *ApiC2Community) GetHostname() string {
+func (o *ApiAttackerInfrastructure) GetHostname() string {
 	if o == nil || IsNil(o.Hostname) {
 		var ret string
 		return ret
@@ -254,7 +254,7 @@ func (o *ApiC2Community) GetHostname() string {
 
 // GetHostnameOk returns a tuple with the Hostname field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetHostnameOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetHostnameOk() (*string, bool) {
 	if o == nil || IsNil(o.Hostname) {
 		return nil, false
 	}
@@ -262,7 +262,7 @@ func (o *ApiC2Community) GetHostnameOk() (*string, bool) {
 }
 
 // HasHostname returns a boolean if a field has been set.
-func (o *ApiC2Community) HasHostname() bool {
+func (o *ApiAttackerInfrastructure) HasHostname() bool {
 	if o != nil && !IsNil(o.Hostname) {
 		return true
 	}
@@ -271,12 +271,12 @@ func (o *ApiC2Community) HasHostname() bool {
 }
 
 // SetHostname gets a reference to the given string and assigns it to the Hostname field.
-func (o *ApiC2Community) SetHostname(v string) {
+func (o *ApiAttackerInfrastructure) SetHostname(v string) {
 	o.Hostname = &v
 }
 
 // GetIp returns the Ip field value if set, zero value otherwise.
-func (o *ApiC2Community) GetIp() string {
+func (o *ApiAttackerInfrastructure) GetIp() string {
 	if o == nil || IsNil(o.Ip) {
 		var ret string
 		return ret
@@ -286,7 +286,7 @@ func (o *ApiC2Community) GetIp() string {
 
 // GetIpOk returns a tuple with the Ip field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetIpOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetIpOk() (*string, bool) {
 	if o == nil || IsNil(o.Ip) {
 		return nil, false
 	}
@@ -294,7 +294,7 @@ func (o *ApiC2Community) GetIpOk() (*string, bool) {
 }
 
 // HasIp returns a boolean if a field has been set.
-func (o *ApiC2Community) HasIp() bool {
+func (o *ApiAttackerInfrastructure) HasIp() bool {
 	if o != nil && !IsNil(o.Ip) {
 		return true
 	}
@@ -303,12 +303,12 @@ func (o *ApiC2Community) HasIp() bool {
 }
 
 // SetIp gets a reference to the given string and assigns it to the Ip field.
-func (o *ApiC2Community) SetIp(v string) {
+func (o *ApiAttackerInfrastructure) SetIp(v string) {
 	o.Ip = &v
 }
 
 // GetLastSeen returns the LastSeen field value if set, zero value otherwise.
-func (o *ApiC2Community) GetLastSeen() string {
+func (o *ApiAttackerInfrastructure) GetLastSeen() string {
 	if o == nil || IsNil(o.LastSeen) {
 		var ret string
 		return ret
@@ -318,7 +318,7 @@ func (o *ApiC2Community) GetLastSeen() string {
 
 // GetLastSeenOk returns a tuple with the LastSeen field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetLastSeenOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetLastSeenOk() (*string, bool) {
 	if o == nil || IsNil(o.LastSeen) {
 		return nil, false
 	}
@@ -326,7 +326,7 @@ func (o *ApiC2Community) GetLastSeenOk() (*string, bool) {
 }
 
 // HasLastSeen returns a boolean if a field has been set.
-func (o *ApiC2Community) HasLastSeen() bool {
+func (o *ApiAttackerInfrastructure) HasLastSeen() bool {
 	if o != nil && !IsNil(o.LastSeen) {
 		return true
 	}
@@ -335,12 +335,12 @@ func (o *ApiC2Community) HasLastSeen() bool {
 }
 
 // SetLastSeen gets a reference to the given string and assigns it to the LastSeen field.
-func (o *ApiC2Community) SetLastSeen(v string) {
+func (o *ApiAttackerInfrastructure) SetLastSeen(v string) {
 	o.LastSeen = &v
 }
 
 // GetPort returns the Port field value if set, zero value otherwise.
-func (o *ApiC2Community) GetPort() int32 {
+func (o *ApiAttackerInfrastructure) GetPort() int32 {
 	if o == nil || IsNil(o.Port) {
 		var ret int32
 		return ret
@@ -350,7 +350,7 @@ func (o *ApiC2Community) GetPort() int32 {
 
 // GetPortOk returns a tuple with the Port field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetPortOk() (*int32, bool) {
+func (o *ApiAttackerInfrastructure) GetPortOk() (*int32, bool) {
 	if o == nil || IsNil(o.Port) {
 		return nil, false
 	}
@@ -358,7 +358,7 @@ func (o *ApiC2Community) GetPortOk() (*int32, bool) {
 }
 
 // HasPort returns a boolean if a field has been set.
-func (o *ApiC2Community) HasPort() bool {
+func (o *ApiAttackerInfrastructure) HasPort() bool {
 	if o != nil && !IsNil(o.Port) {
 		return true
 	}
@@ -367,12 +367,12 @@ func (o *ApiC2Community) HasPort() bool {
 }
 
 // SetPort gets a reference to the given int32 and assigns it to the Port field.
-func (o *ApiC2Community) SetPort(v int32) {
+func (o *ApiAttackerInfrastructure) SetPort(v int32) {
 	o.Port = &v
 }
 
 // GetSource returns the Source field value if set, zero value otherwise.
-func (o *ApiC2Community) GetSource() []string {
+func (o *ApiAttackerInfrastructure) GetSource() []string {
 	if o == nil || IsNil(o.Source) {
 		var ret []string
 		return ret
@@ -382,7 +382,7 @@ func (o *ApiC2Community) GetSource() []string {
 
 // GetSourceOk returns a tuple with the Source field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetSourceOk() ([]string, bool) {
+func (o *ApiAttackerInfrastructure) GetSourceOk() ([]string, bool) {
 	if o == nil || IsNil(o.Source) {
 		return nil, false
 	}
@@ -390,7 +390,7 @@ func (o *ApiC2Community) GetSourceOk() ([]string, bool) {
 }
 
 // HasSource returns a boolean if a field has been set.
-func (o *ApiC2Community) HasSource() bool {
+func (o *ApiAttackerInfrastructure) HasSource() bool {
 	if o != nil && !IsNil(o.Source) {
 		return true
 	}
@@ -399,12 +399,12 @@ func (o *ApiC2Community) HasSource() bool {
 }
 
 // SetSource gets a reference to the given []string and assigns it to the Source field.
-func (o *ApiC2Community) SetSource(v []string) {
+func (o *ApiAttackerInfrastructure) SetSource(v []string) {
 	o.Source = v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *ApiC2Community) GetUpdatedAt() string {
+func (o *ApiAttackerInfrastructure) GetUpdatedAt() string {
 	if o == nil || IsNil(o.UpdatedAt) {
 		var ret string
 		return ret
@@ -414,7 +414,7 @@ func (o *ApiC2Community) GetUpdatedAt() string {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApiC2Community) GetUpdatedAtOk() (*string, bool) {
+func (o *ApiAttackerInfrastructure) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || IsNil(o.UpdatedAt) {
 		return nil, false
 	}
@@ -422,7 +422,7 @@ func (o *ApiC2Community) GetUpdatedAtOk() (*string, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *ApiC2Community) HasUpdatedAt() bool {
+func (o *ApiAttackerInfrastructure) HasUpdatedAt() bool {
 	if o != nil && !IsNil(o.UpdatedAt) {
 		return true
 	}
@@ -431,11 +431,11 @@ func (o *ApiC2Community) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
-func (o *ApiC2Community) SetUpdatedAt(v string) {
+func (o *ApiAttackerInfrastructure) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 
-func (o ApiC2Community) MarshalJSON() ([]byte, error) {
+func (o ApiAttackerInfrastructure) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
@@ -443,7 +443,7 @@ func (o ApiC2Community) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o ApiC2Community) ToMap() (map[string]interface{}, error) {
+func (o ApiAttackerInfrastructure) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.AsName) {
 		toSerialize["as_name"] = o.AsName
@@ -484,38 +484,38 @@ func (o ApiC2Community) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-type NullableApiC2Community struct {
-	value *ApiC2Community
+type NullableApiAttackerInfrastructure struct {
+	value *ApiAttackerInfrastructure
 	isSet bool
 }
 
-func (v NullableApiC2Community) Get() *ApiC2Community {
+func (v NullableApiAttackerInfrastructure) Get() *ApiAttackerInfrastructure {
 	return v.value
 }
 
-func (v *NullableApiC2Community) Set(val *ApiC2Community) {
+func (v *NullableApiAttackerInfrastructure) Set(val *ApiAttackerInfrastructure) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableApiC2Community) IsSet() bool {
+func (v NullableApiAttackerInfrastructure) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableApiC2Community) Unset() {
+func (v *NullableApiAttackerInfrastructure) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableApiC2Community(val *ApiC2Community) *NullableApiC2Community {
-	return &NullableApiC2Community{value: val, isSet: true}
+func NewNullableApiAttackerInfrastructure(val *ApiAttackerInfrastructure) *NullableApiAttackerInfrastructure {
+	return &NullableApiAttackerInfrastructure{value: val, isSet: true}
 }
 
-func (v NullableApiC2Community) MarshalJSON() ([]byte, error) {
+func (v NullableApiAttackerInfrastructure) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableApiC2Community) UnmarshalJSON(src []byte) error {
+func (v *NullableApiAttackerInfrastructure) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

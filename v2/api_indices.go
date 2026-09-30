@@ -181283,7 +181283,7 @@ func (a *IndicesAPIService) IndexVoidsecGetExecute(r ApiIndexVoidsecGetRequest) 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiIndexVulncheckC2GetRequest struct {
+type ApiIndexVulncheckAttackerInfrastructureGetRequest struct {
 	ctx context.Context
 	ApiService *IndicesAPIService
 	page *int32
@@ -181310,177 +181310,177 @@ type ApiIndexVulncheckC2GetRequest struct {
 }
 
 // set the page number of the response
-func (r ApiIndexVulncheckC2GetRequest) Page(page int32) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Page(page int32) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.page = &page
 	return r
 }
 
 // limit the number of findings in the response
-func (r ApiIndexVulncheckC2GetRequest) Limit(limit int32) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Limit(limit int32) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.limit = &limit
 	return r
 }
 
 // continue server-side paging using a cursor id
-func (r ApiIndexVulncheckC2GetRequest) Cursor(cursor string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Cursor(cursor string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.cursor = &cursor
 	return r
 }
 
 // request server-side paging
-func (r ApiIndexVulncheckC2GetRequest) StartCursor(startCursor string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) StartCursor(startCursor string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.startCursor = &startCursor
 	return r
 }
 
 // direction of the sort
-func (r ApiIndexVulncheckC2GetRequest) Order(order string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Order(order string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.order = &order
 	return r
 }
 
 // field by which to sort the results
-func (r ApiIndexVulncheckC2GetRequest) Sort(sort string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Sort(sort string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.sort = &sort
 	return r
 }
 
 // C2 IP address
-func (r ApiIndexVulncheckC2GetRequest) Ip(ip string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Ip(ip string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.ip = &ip
 	return r
 }
 
 // Match a string in the hostname
-func (r ApiIndexVulncheckC2GetRequest) Hostname(hostname string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Hostname(hostname string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.hostname = &hostname
 	return r
 }
 
 // Port number
-func (r ApiIndexVulncheckC2GetRequest) Port(port string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Port(port string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.port = &port
 	return r
 }
 
 // Autonomous system number
-func (r ApiIndexVulncheckC2GetRequest) Asn(asn string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Asn(asn string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.asn = &asn
 	return r
 }
 
 // Country name ISO-3166?? format
-func (r ApiIndexVulncheckC2GetRequest) Country(country string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Country(country string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.country = &country
 	return r
 }
 
 // Country code in ISO-3166?? format
-func (r ApiIndexVulncheckC2GetRequest) CountryCode(countryCode string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) CountryCode(countryCode string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.countryCode = &countryCode
 	return r
 }
 
 // Match one or more classification values
-func (r ApiIndexVulncheckC2GetRequest) Classifications(classifications string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Classifications(classifications string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.classifications = &classifications
 	return r
 }
 
 // Match one or more source values
-func (r ApiIndexVulncheckC2GetRequest) Source(source string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Source(source string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.source = &source
 	return r
 }
 
 // Specify an exact published date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) Date(date string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Date(date string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.date = &date
 	return r
 }
 
 // Specify a starting &#39;updated-at&#39; date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) UpdatedAtStartDate(updatedAtStartDate string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.updatedAtStartDate = &updatedAtStartDate
 	return r
 }
 
 // Specify an ending &#39;updated-at&#39; date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) UpdatedAtEndDate(updatedAtEndDate string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.updatedAtEndDate = &updatedAtEndDate
 	return r
 }
 
 // Specify a starting last modified date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) LastModStartDate(lastModStartDate string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) LastModStartDate(lastModStartDate string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.lastModStartDate = &lastModStartDate
 	return r
 }
 
 // Specify an ending last modified date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) LastModEndDate(lastModEndDate string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) LastModEndDate(lastModEndDate string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.lastModEndDate = &lastModEndDate
 	return r
 }
 
 // Specify a starting published date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) PubStartDate(pubStartDate string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) PubStartDate(pubStartDate string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.pubStartDate = &pubStartDate
 	return r
 }
 
 // Specify an ending published date to filter with.
-func (r ApiIndexVulncheckC2GetRequest) PubEndDate(pubEndDate string) ApiIndexVulncheckC2GetRequest {
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) PubEndDate(pubEndDate string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.pubEndDate = &pubEndDate
 	return r
 }
 
-func (r ApiIndexVulncheckC2GetRequest) Execute() (*RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination, *http.Response, error) {
-	return r.ApiService.IndexVulncheckC2GetExecute(r)
+func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Execute() (*RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination, *http.Response, error) {
+	return r.ApiService.IndexVulncheckAttackerInfrastructureGetExecute(r)
 }
 
 /*
-IndexVulncheckC2Get Return vulnerability data stored in index \"vulncheck-c2\"
+IndexVulncheckAttackerInfrastructureGet Return vulnerability data stored in index \"vulncheck-attacker-infrastructure\"
 
 ### Overview
-This endpoint allows you to retrieve a paginated list of all documents from the vulncheck-c2 index. \
+This endpoint allows you to retrieve a paginated list of all documents from the vulncheck-attacker-infrastructure index. \
 By default, a maximum of 100 documents are shown per page.
 
-**Index Description:** VulnCheck Community C2 Intelligence
+**Index Description:** VulnCheck Attacker Infrastructure Intelligence
 
 ### Paging Over Large Data (cursor)
 In order to allow users to iterate over large index datasets, this endpoint provides a server-side
-"cursor" mechanism. To use the cursor, first call `GET /index/vulncheck-c2?start_cursor`, the response will
+"cursor" mechanism. To use the cursor, first call `GET /index/vulncheck-attacker-infrastructure?start_cursor`, the response will
 have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
-`GET /index/vulncheck-c2?cursor=<next_cursor_id>`
+`GET /index/vulncheck-attacker-infrastructure?cursor=<next_cursor_id>`
 
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIndexVulncheckC2GetRequest
+ @return ApiIndexVulncheckAttackerInfrastructureGetRequest
 */
-func (a *IndicesAPIService) IndexVulncheckC2Get(ctx context.Context) ApiIndexVulncheckC2GetRequest {
-	return ApiIndexVulncheckC2GetRequest{
+func (a *IndicesAPIService) IndexVulncheckAttackerInfrastructureGet(ctx context.Context) ApiIndexVulncheckAttackerInfrastructureGetRequest {
+	return ApiIndexVulncheckAttackerInfrastructureGetRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination
-func (a *IndicesAPIService) IndexVulncheckC2GetExecute(r ApiIndexVulncheckC2GetRequest) (*RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination, *http.Response, error) {
+//  @return RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination
+func (a *IndicesAPIService) IndexVulncheckAttackerInfrastructureGetExecute(r ApiIndexVulncheckAttackerInfrastructureGetRequest) (*RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination
+		localVarReturnValue  *RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexVulncheckC2Get")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IndicesAPIService.IndexVulncheckAttackerInfrastructureGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/v3/index/vulncheck-c2"
+	localVarPath := localBasePath + "/v3/index/vulncheck-attacker-infrastructure"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

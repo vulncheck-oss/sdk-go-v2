@@ -474,7 +474,7 @@ Method | HTTP request | Description
 [**IndexVlcGet**](IndicesAPI.md#IndexVlcGet) | **Get** /v3/index/vlc | Return vulnerability data stored in index \&quot;vlc\&quot;
 [**IndexVmwareGet**](IndicesAPI.md#IndexVmwareGet) | **Get** /v3/index/vmware | Return vulnerability data stored in index \&quot;vmware\&quot;
 [**IndexVoidsecGet**](IndicesAPI.md#IndexVoidsecGet) | **Get** /v3/index/voidsec | Return vulnerability data stored in index \&quot;voidsec\&quot;
-[**IndexVulncheckC2Get**](IndicesAPI.md#IndexVulncheckC2Get) | **Get** /v3/index/vulncheck-c2 | Return vulnerability data stored in index \&quot;vulncheck-c2\&quot;
+[**IndexVulncheckAttackerInfrastructureGet**](IndicesAPI.md#IndexVulncheckAttackerInfrastructureGet) | **Get** /v3/index/vulncheck-attacker-infrastructure | Return vulnerability data stored in index \&quot;vulncheck-attacker-infrastructure\&quot;
 [**IndexVulncheckCanaries10dGet**](IndicesAPI.md#IndexVulncheckCanaries10dGet) | **Get** /v3/index/vulncheck-canaries-10d | Return vulnerability data stored in index \&quot;vulncheck-canaries-10d\&quot;
 [**IndexVulncheckCanaries30dGet**](IndicesAPI.md#IndexVulncheckCanaries30dGet) | **Get** /v3/index/vulncheck-canaries-30d | Return vulnerability data stored in index \&quot;vulncheck-canaries-30d\&quot;
 [**IndexVulncheckCanaries3dGet**](IndicesAPI.md#IndexVulncheckCanaries3dGet) | **Get** /v3/index/vulncheck-canaries-3d | Return vulnerability data stored in index \&quot;vulncheck-canaries-3d\&quot;
@@ -53218,11 +53218,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## IndexVulncheckC2Get
+## IndexVulncheckAttackerInfrastructureGet
 
-> RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination IndexVulncheckC2Get(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Ip(ip).Hostname(hostname).Port(port).Asn(asn).Country(country).CountryCode(countryCode).Classifications(classifications).Source(source).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+> RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination IndexVulncheckAttackerInfrastructureGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Ip(ip).Hostname(hostname).Port(port).Asn(asn).Country(country).CountryCode(countryCode).Classifications(classifications).Source(source).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 
-Return vulnerability data stored in index \"vulncheck-c2\"
+Return vulnerability data stored in index \"vulncheck-attacker-infrastructure\"
 
 
 
@@ -53263,13 +53263,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IndicesAPI.IndexVulncheckC2Get(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Ip(ip).Hostname(hostname).Port(port).Asn(asn).Country(country).CountryCode(countryCode).Classifications(classifications).Source(source).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	resp, r, err := apiClient.IndicesAPI.IndexVulncheckAttackerInfrastructureGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Ip(ip).Hostname(hostname).Port(port).Asn(asn).Country(country).CountryCode(countryCode).Classifications(classifications).Source(source).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexVulncheckC2Get``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexVulncheckAttackerInfrastructureGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `IndexVulncheckC2Get`: RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination
-	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexVulncheckC2Get`: %v\n", resp)
+	// response from `IndexVulncheckAttackerInfrastructureGet`: RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination
+	fmt.Fprintf(os.Stdout, "Response from `IndicesAPI.IndexVulncheckAttackerInfrastructureGet`: %v\n", resp)
 }
 ```
 
@@ -53279,7 +53279,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiIndexVulncheckC2GetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiIndexVulncheckAttackerInfrastructureGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -53308,7 +53308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination**](RenderResponseWithMetadataArrayApiC2CommunityPaginatePagination.md)
+[**RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination**](RenderResponseWithMetadataArrayApiAttackerInfrastructurePaginatePagination.md)
 
 ### Authorization
 
