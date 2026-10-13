@@ -13,6 +13,7 @@ var examplePrograms = []string{
 	"./examples/cpe.go",
 	"./examples/index.go",
 	"./examples/indices.go",
+	"./examples/nvd.go",
 	"./examples/pagination.go",
 	"./examples/purl.go",
 }
