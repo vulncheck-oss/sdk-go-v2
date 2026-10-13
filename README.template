@@ -105,6 +105,21 @@ with open("./tests/examples/indices.go", 'r') as f:
 ]]] -->
 <!-- [[[end]]] -->
 
+### NVD API 2.0 compatibility
+
+Query the NVD API 2.0 compatible endpoints under `/rest/json`. They take NVD's parameters and return NVD's response shapes, served from VulnCheck's data, and work with any VulnCheck API token, including community. `NvdAPI` covers CVEs, CVE change history, CPEs, CPE match criteria and sources.
+
+Look up `CVE-2021-44228`, then page through a date range using `cursor`
+
+<!-- [[[cog
+import cog
+with open("./tests/examples/nvd.go", 'r') as f:
+    content = f.read().strip()
+    lines = [l for l in content.splitlines() if not l.startswith("//go:build")]
+    cog.outl(f"```go\n{chr(10).join(lines).strip()}\n```\n")
+]]] -->
+<!-- [[[end]]] -->
+
 ### Pagination
 
 Paginate over results for a query to VulnCheck-KEV using `cursor`

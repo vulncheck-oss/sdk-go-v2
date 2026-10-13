@@ -132,4 +132,69 @@ func TestSDK(t *testing.T) {
 			validateResponse(t, data, ok, httpRes, err)
 		})
 	})
+
+	t.Run("nvd api", func(t *testing.T) {
+		const cveID = "CVE-2021-44228"
+
+		t.Run("cves", func(t *testing.T) {
+			res, httpRes, err := client.NvdAPI.NvdCvesGet(auth).CveId(cveID).Execute()
+
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.Equal(t, int32(1), res.TotalResults)
+			assert.Equal(t, cveID, res.Vulnerabilities[0].Cve.GetId())
+		})
+
+		t.Run("cves cursor", func(t *testing.T) {
+			req := client.NvdAPI.NvdCvesGet(auth).CveTag("disputed").ResultsPerPage(5)
+
+			first, httpRes, err := req.Cursor("").Execute()
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.NotEmpty(t, first.GetNextCursor())
+
+			second, httpRes, err := req.Cursor(first.GetNextCursor()).Execute()
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.NotEqual(t,
+				first.Vulnerabilities[0].Cve.GetId(),
+				second.Vulnerabilities[0].Cve.GetId(),
+			)
+		})
+
+		t.Run("cve history", func(t *testing.T) {
+			res, httpRes, err := client.NvdAPI.NvdCveHistoryGet(auth).CveId(cveID).Execute()
+
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.NotEmpty(t, res.CveChanges)
+		})
+
+		t.Run("cpes", func(t *testing.T) {
+			res, httpRes, err := client.NvdAPI.NvdCpesGet(auth).
+				CpeMatchString("cpe:2.3:a:apache:log4j").
+				ResultsPerPage(5).
+				Execute()
+
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.NotEmpty(t, res.Products)
+		})
+
+		t.Run("cpe match", func(t *testing.T) {
+			res, httpRes, err := client.NvdAPI.NvdCpeMatchGet(auth).CveId(cveID).ResultsPerPage(5).Execute()
+
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.NotEmpty(t, res.MatchStrings)
+		})
+
+		t.Run("source", func(t *testing.T) {
+			res, httpRes, err := client.NvdAPI.NvdSourceGet(auth).ResultsPerPage(5).Execute()
+
+			assert.NoError(t, err)
+			assert.Equal(t, http.StatusOK, httpRes.StatusCode)
+			assert.NotEmpty(t, res.Sources)
+		})
+	})
 }
