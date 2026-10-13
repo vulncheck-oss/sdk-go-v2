@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.29/go",
+		UserAgent:        "OpenAPI-Generator/2.1.30/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -3250,6 +3250,36 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexZyxelGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"NvdAPIService.NvdCpeMatchGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"NvdAPIService.NvdCpesGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"NvdAPIService.NvdCveHistoryGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"NvdAPIService.NvdCvesGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"NvdAPIService.NvdSourceGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",

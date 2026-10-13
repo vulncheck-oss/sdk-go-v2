@@ -57,6 +57,8 @@ type APIClient struct {
 	EndpointsAPI *EndpointsAPIService
 
 	IndicesAPI *IndicesAPIService
+
+	NvdAPI *NvdAPIService
 }
 
 type service struct {
@@ -79,6 +81,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.BackupAPI = (*BackupAPIService)(&c.common)
 	c.EndpointsAPI = (*EndpointsAPIService)(&c.common)
 	c.IndicesAPI = (*IndicesAPIService)(&c.common)
+	c.NvdAPI = (*NvdAPIService)(&c.common)
 
 	return c
 }
