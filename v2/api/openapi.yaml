@@ -794,6 +794,7 @@ paths:
           - aws-rds
           - axis
           - azul
+          - azure-linux-purls
           - bandr
           - baxter
           - bbraun
@@ -804,6 +805,7 @@ paths:
           - belden
           - beyond-trust
           - binarly
+          - bitbucket-exploits
           - bitdefender
           - blackberry
           - bls
@@ -844,6 +846,7 @@ paths:
           - cnvd-bulletins
           - cnvd-flaws
           - cocoapods
+          - codeberg-exploits
           - codesys
           - commvault
           - compass-security
@@ -958,6 +961,7 @@ paths:
           - il-vulnerabilities
           - incibe
           - initial-access
+          - initial-access-community
           - initial-access-git
           - intel
           - ioc-botnets
@@ -19054,6 +19058,245 @@ paths:
       summary: Return vulnerability data stored in index "azul"
       tags:
       - indices
+  /v3/index/azure-linux-purls:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the azure-linux-purls index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Azure Linux Purls
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/azure-linux-purls?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/azure-linux-purls?cursor=<next_cursor_id>`
+      operationId: index_azure-linux-purls_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_purls_PurlResponse-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "azure-linux-purls"
+      tags:
+      - indices
   /v3/index/bandr:
     get:
       description: |
@@ -21442,6 +21685,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "binarly"
+      tags:
+      - indices
+  /v3/index/bitbucket-exploits:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the bitbucket-exploits index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Bitbucket Exploits
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/bitbucket-exploits?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/bitbucket-exploits?cursor=<next_cursor_id>`
+      operationId: index_bitbucket-exploits_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_BitBucketExploit-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "bitbucket-exploits"
       tags:
       - indices
   /v3/index/bitdefender:
@@ -31002,6 +31484,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "cocoapods"
+      tags:
+      - indices
+  /v3/index/codeberg-exploits:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the codeberg-exploits index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Codeberg Exploits
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/codeberg-exploits?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/codeberg-exploits?cursor=<next_cursor_id>`
+      operationId: index_codeberg-exploits_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_CodebergExploit-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "codeberg-exploits"
       tags:
       - indices
   /v3/index/codesys:
@@ -58293,6 +59014,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "initial-access"
+      tags:
+      - indices
+  /v3/index/initial-access-community:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the initial-access-community index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** VulnCheck Initial Access Intelligence Community Edition
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/initial-access-community?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/initial-access-community?cursor=<next_cursor_id>`
+      operationId: index_initial-access-community_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_InitialAccess-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "initial-access-community"
       tags:
       - indices
   /v3/index/initial-access-git:
@@ -128376,6 +129336,67 @@ components:
           type: string
         url:
           type: string
+    advisory.BitBucketExploit:
+      description: advisory.BitBucketExploit
+      example:
+        forks: 6
+        clone_ssh_url: clone_ssh_url
+        clone_ssh_url_cached: clone_ssh_url_cached
+        repo_full_path: repo_full_path
+        language: language
+        reference_url: reference_url
+        stars: 1
+        clone_https_url: clone_https_url
+        commit_hash: commit_hash
+        exploit_type: exploit_type
+        date_added: date_added
+        date_last_revised: date_last_revised
+        refsource: refsource
+        cve: cve
+        date_cached: date_cached
+        repo_id: repo_id
+        html_url: html_url
+        repo_name: repo_name
+        repo_owner: repo_owner
+      properties:
+        clone_https_url:
+          type: string
+        clone_ssh_url:
+          type: string
+        clone_ssh_url_cached:
+          type: string
+        commit_hash:
+          type: string
+        cve:
+          type: string
+        date_added:
+          type: string
+        date_cached:
+          type: string
+        date_last_revised:
+          type: string
+        exploit_type:
+          type: string
+        forks:
+          type: integer
+        html_url:
+          type: string
+        language:
+          type: string
+        reference_url:
+          type: string
+        refsource:
+          type: string
+        repo_full_path:
+          type: string
+        repo_id:
+          type: string
+        repo_name:
+          type: string
+        repo_owner:
+          type: string
+        stars:
+          type: integer
     advisory.BitDefender:
       description: advisory.BitDefender
       example:
@@ -136560,6 +137581,67 @@ components:
           type: array
         title:
           type: string
+    advisory.CodebergExploit:
+      description: advisory.CodebergExploit
+      example:
+        forks: 6
+        clone_ssh_url: clone_ssh_url
+        clone_ssh_url_cached: clone_ssh_url_cached
+        repo_full_path: repo_full_path
+        language: language
+        reference_url: reference_url
+        stars: 1
+        clone_https_url: clone_https_url
+        commit_hash: commit_hash
+        exploit_type: exploit_type
+        date_added: date_added
+        date_last_revised: date_last_revised
+        refsource: refsource
+        cve: cve
+        date_cached: date_cached
+        repo_id: repo_id
+        html_url: html_url
+        repo_name: repo_name
+        repo_owner: repo_owner
+      properties:
+        clone_https_url:
+          type: string
+        clone_ssh_url:
+          type: string
+        clone_ssh_url_cached:
+          type: string
+        commit_hash:
+          type: string
+        cve:
+          type: string
+        date_added:
+          type: string
+        date_cached:
+          type: string
+        date_last_revised:
+          type: string
+        exploit_type:
+          type: string
+        forks:
+          type: integer
+        html_url:
+          type: string
+        language:
+          type: string
+        reference_url:
+          type: string
+        refsource:
+          type: string
+        repo_full_path:
+          type: string
+        repo_id:
+          type: string
+        repo_name:
+          type: string
+        repo_owner:
+          type: string
+        stars:
+          type: integer
     advisory.CodesysAdvisory:
       description: advisory.CodesysAdvisory
       example:
@@ -188456,6 +189538,98 @@ components:
             $ref: '#/components/schemas/advisory.Binarly'
           type: array
           uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_BitBucketExploit-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_BitBucketExploit-paginate_Pagination
+      example:
+        data:
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.BitBucketExploit'
+          type: array
+          uniqueItems: false
     render.ResponseWithMetadata-array_advisory_BitDefender-paginate_Pagination:
       description: render.ResponseWithMetadata-array_advisory_BitDefender-paginate_Pagination
       example:
@@ -195270,6 +196444,98 @@ components:
           description: Data is the data returned by the endpoint
           items:
             $ref: '#/components/schemas/advisory.CloudVulnDBAdvisory'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_CodebergExploit-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_CodebergExploit-paginate_Pagination
+      example:
+        data:
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.CodebergExploit'
           type: array
           uniqueItems: false
     render.ResponseWithMetadata-array_advisory_CodesysAdvisory-paginate_Pagination:

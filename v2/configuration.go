@@ -90,7 +90,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/2.1.30/go",
+		UserAgent:        "OpenAPI-Generator/2.1.31/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
@@ -645,6 +645,12 @@ func NewConfiguration() *Configuration {
 					Description: "No description provided",
 				},
 			},
+			"IndicesAPIService.IndexAzureLinuxPurlsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
 			"IndicesAPIService.IndexBandrGet": {
 				{
 					URL: "https://api.vulncheck.com",
@@ -700,6 +706,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexBinarlyGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexBitbucketExploitsGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -940,6 +952,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexCocoapodsGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexCodebergExploitsGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
@@ -1618,6 +1636,12 @@ func NewConfiguration() *Configuration {
 				},
 			},
 			"IndicesAPIService.IndexIncibeGet": {
+				{
+					URL: "https://api.vulncheck.com",
+					Description: "No description provided",
+				},
+			},
+			"IndicesAPIService.IndexInitialAccessCommunityGet": {
 				{
 					URL: "https://api.vulncheck.com",
 					Description: "No description provided",
