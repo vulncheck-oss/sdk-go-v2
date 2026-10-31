@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FixedVersion** | Pointer to **string** |  | [optional] 
+**FixedVersion** | Pointer to **string** | FixedVersion is the first fixed build. The vulnerable range ends below it. | [optional] 
+**FixedVersions** | Pointer to **[]string** | FixedVersions lists every fixed build Google names for the channel, starting with FixedVersion. A paired release (\&quot;155.0.8059.84/.85 for Windows and Mac\&quot;) lists both builds; a single release lists one. | [optional] 
 **Product** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -50,6 +51,31 @@ SetFixedVersion sets FixedVersion field to given value.
 `func (o *AdvisoryAffectedChrome) HasFixedVersion() bool`
 
 HasFixedVersion returns a boolean if a field has been set.
+
+### GetFixedVersions
+
+`func (o *AdvisoryAffectedChrome) GetFixedVersions() []string`
+
+GetFixedVersions returns the FixedVersions field if non-nil, zero value otherwise.
+
+### GetFixedVersionsOk
+
+`func (o *AdvisoryAffectedChrome) GetFixedVersionsOk() (*[]string, bool)`
+
+GetFixedVersionsOk returns a tuple with the FixedVersions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedVersions
+
+`func (o *AdvisoryAffectedChrome) SetFixedVersions(v []string)`
+
+SetFixedVersions sets FixedVersions field to given value.
+
+### HasFixedVersions
+
+`func (o *AdvisoryAffectedChrome) HasFixedVersions() bool`
+
+HasFixedVersions returns a boolean if a field has been set.
 
 ### GetProduct
 

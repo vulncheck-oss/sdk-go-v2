@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **References** | Pointer to [**[]ApiNVD20Reference**](ApiNVD20Reference.md) |  | [optional] 
 **SourceIdentifier** | Pointer to **string** |  | [optional] 
 **VcConfigurations** | Pointer to [**[]AdvisoryNVD20Configuration**](AdvisoryNVD20Configuration.md) |  | [optional] 
+**VcConfigurationsWithPlatforms** | Pointer to [**[]AdvisoryNVD20Configuration**](AdvisoryNVD20Configuration.md) | VCConfigurationsWithPlatforms is VCConfigurations with NVD-style platform (\&quot;running on\&quot;) nodes: a configuration whose product needs a platform is AND{the vulnerable node, a node of vulnerable:false platform CPEs}. Only set when at least one configuration has a platform. | [optional] 
 **VcVulnerableCPEs** | Pointer to **[]string** |  | [optional] 
 **VendorComments** | Pointer to [**[]ApiNVD20VendorComment**](ApiNVD20VendorComment.md) |  | [optional] 
 **VulnStatus** | Pointer to **string** |  | [optional] 
@@ -495,6 +496,31 @@ SetVcConfigurations sets VcConfigurations field to given value.
 `func (o *ApiNVD20CVE) HasVcConfigurations() bool`
 
 HasVcConfigurations returns a boolean if a field has been set.
+
+### GetVcConfigurationsWithPlatforms
+
+`func (o *ApiNVD20CVE) GetVcConfigurationsWithPlatforms() []AdvisoryNVD20Configuration`
+
+GetVcConfigurationsWithPlatforms returns the VcConfigurationsWithPlatforms field if non-nil, zero value otherwise.
+
+### GetVcConfigurationsWithPlatformsOk
+
+`func (o *ApiNVD20CVE) GetVcConfigurationsWithPlatformsOk() (*[]AdvisoryNVD20Configuration, bool)`
+
+GetVcConfigurationsWithPlatformsOk returns a tuple with the VcConfigurationsWithPlatforms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVcConfigurationsWithPlatforms
+
+`func (o *ApiNVD20CVE) SetVcConfigurationsWithPlatforms(v []AdvisoryNVD20Configuration)`
+
+SetVcConfigurationsWithPlatforms sets VcConfigurationsWithPlatforms field to given value.
+
+### HasVcConfigurationsWithPlatforms
+
+`func (o *ApiNVD20CVE) HasVcConfigurationsWithPlatforms() bool`
+
+HasVcConfigurationsWithPlatforms returns a boolean if a field has been set.
 
 ### GetVcVulnerableCPEs
 

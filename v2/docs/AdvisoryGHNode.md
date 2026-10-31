@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**FirstPatchedVersion** | Pointer to **string** | FirstPatchedVersion is GitHub&#39;s stated fix for this range. nil means it was not collected; \&quot;\&quot; means GitHub says there is no fix. | [optional] 
 **Package** | Pointer to [**AdvisoryGHPackage**](AdvisoryGHPackage.md) |  | [optional] 
 **Severity** | Pointer to **string** |  | [optional] 
 **UpdatedAt** | Pointer to **string** |  | [optional] 
@@ -27,6 +28,31 @@ will change when the set of required properties is changed
 NewAdvisoryGHNodeWithDefaults instantiates a new AdvisoryGHNode object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetFirstPatchedVersion
+
+`func (o *AdvisoryGHNode) GetFirstPatchedVersion() string`
+
+GetFirstPatchedVersion returns the FirstPatchedVersion field if non-nil, zero value otherwise.
+
+### GetFirstPatchedVersionOk
+
+`func (o *AdvisoryGHNode) GetFirstPatchedVersionOk() (*string, bool)`
+
+GetFirstPatchedVersionOk returns a tuple with the FirstPatchedVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirstPatchedVersion
+
+`func (o *AdvisoryGHNode) SetFirstPatchedVersion(v string)`
+
+SetFirstPatchedVersion sets FirstPatchedVersion field to given value.
+
+### HasFirstPatchedVersion
+
+`func (o *AdvisoryGHNode) HasFirstPatchedVersion() bool`
+
+HasFirstPatchedVersion returns a boolean if a field has been set.
 
 ### GetPackage
 

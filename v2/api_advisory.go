@@ -35,7 +35,7 @@ func (r ApiV4ListAdvisoryFeedsRequest) Execute() (*SearchV4ListFeedReturnValue, 
 /*
 V4ListAdvisoryFeeds List advisory feeds
 
-Return a list of available advisory feed names
+Return the advisory feed names your subscription includes
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV4ListAdvisoryFeedsRequest
@@ -317,7 +317,7 @@ func (r ApiV4QueryAdvisoriesRequest) Execute() (*SearchV4AdvisoryReturnValue, *h
 /*
 V4QueryAdvisories Query advisories
 
-Query the VulnCheck v4 advisory index
+Query the VulnCheck v4 advisory index. Only feeds your subscription includes are searched, and naming one it doesn't include returns 402.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV4QueryAdvisoriesRequest
