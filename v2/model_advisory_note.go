@@ -20,6 +20,8 @@ var _ MappedNullable = &AdvisoryNote{}
 
 // AdvisoryNote advisory.Note
 type AdvisoryNote struct {
+	// Value is the note's text in MSRC's JSON CVRF, which names it Value; Text only ever held it in the XML form.
+	Value *string `json:"Value,omitempty"`
 	Ordinal *string `json:"ordinal,omitempty"`
 	Text *string `json:"text,omitempty"`
 	Title *string `json:"title,omitempty"`
@@ -41,6 +43,38 @@ func NewAdvisoryNote() *AdvisoryNote {
 func NewAdvisoryNoteWithDefaults() *AdvisoryNote {
 	this := AdvisoryNote{}
 	return &this
+}
+
+// GetValue returns the Value field value if set, zero value otherwise.
+func (o *AdvisoryNote) GetValue() string {
+	if o == nil || IsNil(o.Value) {
+		var ret string
+		return ret
+	}
+	return *o.Value
+}
+
+// GetValueOk returns a tuple with the Value field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryNote) GetValueOk() (*string, bool) {
+	if o == nil || IsNil(o.Value) {
+		return nil, false
+	}
+	return o.Value, true
+}
+
+// HasValue returns a boolean if a field has been set.
+func (o *AdvisoryNote) HasValue() bool {
+	if o != nil && !IsNil(o.Value) {
+		return true
+	}
+
+	return false
+}
+
+// SetValue gets a reference to the given string and assigns it to the Value field.
+func (o *AdvisoryNote) SetValue(v string) {
+	o.Value = &v
 }
 
 // GetOrdinal returns the Ordinal field value if set, zero value otherwise.
@@ -181,6 +215,9 @@ func (o AdvisoryNote) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryNote) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Value) {
+		toSerialize["Value"] = o.Value
+	}
 	if !IsNil(o.Ordinal) {
 		toSerialize["ordinal"] = o.Ordinal
 	}

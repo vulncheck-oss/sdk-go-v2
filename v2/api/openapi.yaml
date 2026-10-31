@@ -356,7 +356,7 @@ paths:
   /rest/json/cves/2.0:
     get:
       description: |-
-        NVD API 2.0 compatible CVE search, mirroring NVD's GET /rest/json/cves/2.0. Each record also carries VulnCheck's vcConfigurations.
+        NVD API 2.0 compatible CVE search, mirroring NVD's GET /rest/json/cves/2.0. Each record also carries VulnCheck's vcConfigurations, and vcConfigurationsWithPlatforms when a configuration applies only on a platform (NVD-style: an AND of the vulnerable node and a node of vulnerable:false platform CPEs).
 
         Not yet supported, and rejected with a 400 naming the parameter: keywordSearch, keywordExactMatch, cvssV2Metrics, cvssV2Severity, cvssV3Metrics, cvssV3Severity, cvssV4Metrics, cvssV4Severity, cweId, hasCertAlerts, hasCertNotes, hasOval, kevStartDate, kevEndDate.
       operationId: nvd_cves_get
@@ -794,6 +794,7 @@ paths:
           - aws-rds
           - axis
           - azul
+          - azure-linux-purls
           - bandr
           - baxter
           - bbraun
@@ -804,6 +805,7 @@ paths:
           - belden
           - beyond-trust
           - binarly
+          - bitbucket-exploits
           - bitdefender
           - blackberry
           - bls
@@ -844,6 +846,7 @@ paths:
           - cnvd-bulletins
           - cnvd-flaws
           - cocoapods
+          - codeberg-exploits
           - codesys
           - commvault
           - compass-security
@@ -958,6 +961,7 @@ paths:
           - il-vulnerabilities
           - incibe
           - initial-access
+          - initial-access-community
           - initial-access-git
           - intel
           - ioc-botnets
@@ -19054,6 +19058,245 @@ paths:
       summary: Return vulnerability data stored in index "azul"
       tags:
       - indices
+  /v3/index/azure-linux-purls:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the azure-linux-purls index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Azure Linux Purls
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/azure-linux-purls?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/azure-linux-purls?cursor=<next_cursor_id>`
+      operationId: index_azure-linux-purls_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_purls_PurlResponse-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "azure-linux-purls"
+      tags:
+      - indices
   /v3/index/bandr:
     get:
       description: |
@@ -21442,6 +21685,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "binarly"
+      tags:
+      - indices
+  /v3/index/bitbucket-exploits:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the bitbucket-exploits index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Bitbucket Exploits
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/bitbucket-exploits?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/bitbucket-exploits?cursor=<next_cursor_id>`
+      operationId: index_bitbucket-exploits_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_BitBucketExploit-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "bitbucket-exploits"
       tags:
       - indices
   /v3/index/bitdefender:
@@ -31002,6 +31484,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "cocoapods"
+      tags:
+      - indices
+  /v3/index/codeberg-exploits:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the codeberg-exploits index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** Codeberg Exploits
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/codeberg-exploits?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/codeberg-exploits?cursor=<next_cursor_id>`
+      operationId: index_codeberg-exploits_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_advisory_CodebergExploit-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "codeberg-exploits"
       tags:
       - indices
   /v3/index/codesys:
@@ -58293,6 +59014,245 @@ paths:
       servers:
       - url: https://api.vulncheck.com
       summary: Return vulnerability data stored in index "initial-access"
+      tags:
+      - indices
+  /v3/index/initial-access-community:
+    get:
+      description: |
+        ### Overview
+        This endpoint allows you to retrieve a paginated list of all documents from the initial-access-community index. \
+        By default, a maximum of 100 documents are shown per page.
+
+        **Index Description:** VulnCheck Initial Access Intelligence Community Edition
+
+        ### Paging Over Large Data (cursor)
+        In order to allow users to iterate over large index datasets, this endpoint provides a server-side
+        "cursor" mechanism. To use the cursor, first call `GET /index/initial-access-community?start_cursor`, the response will
+        have a `next_cursor` id that clients will need to pass as a query parameter to the next request like
+        `GET /index/initial-access-community?cursor=<next_cursor_id>`
+      operationId: index_initial-access-community_get
+      parameters:
+      - description: set the page number of the response
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: limit the number of findings in the response
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: continue server-side paging using a cursor id
+        explode: true
+        in: query
+        name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: request server-side paging
+        explode: true
+        in: query
+        name: start_cursor
+        required: false
+        schema:
+          enum:
+          - "true"
+          type: string
+        style: form
+      - description: direction of the sort
+        explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          enum:
+          - asc
+          - desc
+          type: string
+        style: form
+      - description: field by which to sort the results
+        explode: true
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a CVE ID to search with.
+        explode: true
+        in: query
+        name: cve
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a vulnerability alias to search with.
+        explode: true
+        in: query
+        name: alias
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an IAVA ID to search with.
+        explode: true
+        in: query
+        name: iava
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a JVNDB ID to search with.
+        explode: true
+        in: query
+        name: jvndb
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ILVN ID to search with.
+        explode: true
+        in: query
+        name: ilvn
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a threat actor name to search with.
+        explode: true
+        in: query
+        name: threat_actor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MITRE ID to search with.
+        explode: true
+        in: query
+        name: mitre_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a MISP ID to search with.
+        explode: true
+        in: query
+        name: misp_id
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a ransomeware family name to search with.
+        explode: true
+        in: query
+        name: ransomware
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a botnet name to search with.
+        explode: true
+        in: query
+        name: botnet
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a published date
+        explode: true
+        in: query
+        name: published
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an exact published date to filter with.
+        explode: true
+        in: query
+        name: date
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending 'updated-at' date to filter with.
+        explode: true
+        in: query
+        name: updatedAtEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending last modified date to filter with.
+        explode: true
+        in: query
+        name: lastModEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify a starting published date to filter with.
+        explode: true
+        in: query
+        name: pubStartDate
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specify an ending published date to filter with.
+        explode: true
+        in: query
+        name: pubEndDate
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/render.ResponseWithMetadata-array_api_InitialAccess-paginate_Pagination'
+          description: OK
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal Server Error
+      security:
+      - Bearer: []
+      servers:
+      - url: https://api.vulncheck.com
+      summary: Return vulnerability data stored in index "initial-access-community"
       tags:
       - indices
   /v3/index/initial-access-git:
@@ -123489,7 +124449,8 @@ paths:
       - endpoints
   /v4/advisory:
     get:
-      description: Query the VulnCheck v4 advisory index
+      description: "Query the VulnCheck v4 advisory index. Only feeds your subscription\
+        \ includes are searched, and naming one it doesn't include returns 402."
       operationId: v4QueryAdvisories
       parameters:
       - description: Filter by advisory feed name (e.g. 'vulncheck')
@@ -123679,7 +124640,7 @@ paths:
       - advisory
   /v4/advisory/list:
     get:
-      description: Return a list of available advisory feed names
+      description: Return the advisory feed names your subscription includes
       operationId: v4ListAdvisoryFeeds
       responses:
         "200":
@@ -125219,9 +126180,23 @@ components:
       example:
         product: product
         fixed_version: fixed_version
+        fixed_versions:
+        - fixed_versions
+        - fixed_versions
       properties:
         fixed_version:
+          description: FixedVersion is the first fixed build. The vulnerable range
+            ends below it.
           type: string
+        fixed_versions:
+          description: |-
+            FixedVersions lists every fixed build Google names for the channel,
+            starting with FixedVersion. A paired release ("155.0.8059.84/.85 for
+            Windows and Mac") lists both builds; a single release lists one.
+          items:
+            type: string
+          type: array
+          uniqueItems: false
         product:
           type: string
     advisory.AffectedDebianPackage:
@@ -128376,6 +129351,67 @@ components:
           type: string
         url:
           type: string
+    advisory.BitBucketExploit:
+      description: advisory.BitBucketExploit
+      example:
+        forks: 6
+        clone_ssh_url: clone_ssh_url
+        clone_ssh_url_cached: clone_ssh_url_cached
+        repo_full_path: repo_full_path
+        language: language
+        reference_url: reference_url
+        stars: 1
+        clone_https_url: clone_https_url
+        commit_hash: commit_hash
+        exploit_type: exploit_type
+        date_added: date_added
+        date_last_revised: date_last_revised
+        refsource: refsource
+        cve: cve
+        date_cached: date_cached
+        repo_id: repo_id
+        html_url: html_url
+        repo_name: repo_name
+        repo_owner: repo_owner
+      properties:
+        clone_https_url:
+          type: string
+        clone_ssh_url:
+          type: string
+        clone_ssh_url_cached:
+          type: string
+        commit_hash:
+          type: string
+        cve:
+          type: string
+        date_added:
+          type: string
+        date_cached:
+          type: string
+        date_last_revised:
+          type: string
+        exploit_type:
+          type: string
+        forks:
+          type: integer
+        html_url:
+          type: string
+        language:
+          type: string
+        reference_url:
+          type: string
+        refsource:
+          type: string
+        repo_full_path:
+          type: string
+        repo_id:
+          type: string
+        repo_name:
+          type: string
+        repo_owner:
+          type: string
+        stars:
+          type: integer
     advisory.BitDefender:
       description: advisory.BitDefender
       example:
@@ -130782,8 +131818,14 @@ components:
         affected:
         - product: product
           fixed_version: fixed_version
+          fixed_versions:
+          - fixed_versions
+          - fixed_versions
         - product: product
           fixed_version: fixed_version
+          fixed_versions:
+          - fixed_versions
+          - fixed_versions
         url: url
       properties:
         affected:
@@ -136560,6 +137602,67 @@ components:
           type: array
         title:
           type: string
+    advisory.CodebergExploit:
+      description: advisory.CodebergExploit
+      example:
+        forks: 6
+        clone_ssh_url: clone_ssh_url
+        clone_ssh_url_cached: clone_ssh_url_cached
+        repo_full_path: repo_full_path
+        language: language
+        reference_url: reference_url
+        stars: 1
+        clone_https_url: clone_https_url
+        commit_hash: commit_hash
+        exploit_type: exploit_type
+        date_added: date_added
+        date_last_revised: date_last_revised
+        refsource: refsource
+        cve: cve
+        date_cached: date_cached
+        repo_id: repo_id
+        html_url: html_url
+        repo_name: repo_name
+        repo_owner: repo_owner
+      properties:
+        clone_https_url:
+          type: string
+        clone_ssh_url:
+          type: string
+        clone_ssh_url_cached:
+          type: string
+        commit_hash:
+          type: string
+        cve:
+          type: string
+        date_added:
+          type: string
+        date_cached:
+          type: string
+        date_last_revised:
+          type: string
+        exploit_type:
+          type: string
+        forks:
+          type: integer
+        html_url:
+          type: string
+        language:
+          type: string
+        reference_url:
+          type: string
+        refsource:
+          type: string
+        repo_full_path:
+          type: string
+        repo_id:
+          type: string
+        repo_name:
+          type: string
+        repo_owner:
+          type: string
+        stars:
+          type: integer
     advisory.CodesysAdvisory:
       description: advisory.CodesysAdvisory
       example:
@@ -139385,12 +140488,14 @@ components:
             package:
               ecosystem: ecosystem
               name: name
+            firstPatchedVersion: firstPatchedVersion
             vulnerableVersionRange: vulnerableVersionRange
             updatedAt: updatedAt
           - severity: severity
             package:
               ecosystem: ecosystem
               name: name
+            firstPatchedVersion: firstPatchedVersion
             vulnerableVersionRange: vulnerableVersionRange
             updatedAt: updatedAt
           totalCount: 5
@@ -139477,9 +140582,15 @@ components:
         package:
           ecosystem: ecosystem
           name: name
+        firstPatchedVersion: firstPatchedVersion
         vulnerableVersionRange: vulnerableVersionRange
         updatedAt: updatedAt
       properties:
+        firstPatchedVersion:
+          description: |-
+            FirstPatchedVersion is GitHub's stated fix for this range. nil means it
+            was not collected; "" means GitHub says there is no fix.
+          type: string
         package:
           $ref: '#/components/schemas/advisory.GHPackage'
         severity:
@@ -139728,12 +140839,14 @@ components:
           package:
             ecosystem: ecosystem
             name: name
+          firstPatchedVersion: firstPatchedVersion
           vulnerableVersionRange: vulnerableVersionRange
           updatedAt: updatedAt
         - severity: severity
           package:
             ecosystem: ecosystem
             name: name
+          firstPatchedVersion: firstPatchedVersion
           vulnerableVersionRange: vulnerableVersionRange
           updatedAt: updatedAt
         totalCount: 5
@@ -146059,11 +147172,13 @@ components:
             type: 7
           cve: cve
           notes:
-          - text: text
+          - Value: Value
+            text: text
             title: title
             type: 2
             ordinal: ordinal
-          - text: text
+          - Value: Value
+            text: text
             title: title
             type: 2
             ordinal: ordinal
@@ -146168,11 +147283,13 @@ components:
             type: 7
           cve: cve
           notes:
-          - text: text
+          - Value: Value
+            text: text
             title: title
             type: 2
             ordinal: ordinal
-          - text: text
+          - Value: Value
+            text: text
             title: title
             type: 2
             ordinal: ordinal
@@ -146423,11 +147540,13 @@ components:
           type: 7
         cve: cve
         notes:
-        - text: text
+        - Value: Value
+          text: text
           title: title
           type: 2
           ordinal: ordinal
-        - text: text
+        - Value: Value
+          text: text
           title: title
           type: 2
           ordinal: ordinal
@@ -147932,11 +149051,13 @@ components:
               type: 7
             cve: cve
             notes:
-            - text: text
+            - Value: Value
+              text: text
               title: title
               type: 2
               ordinal: ordinal
-            - text: text
+            - Value: Value
+              text: text
               title: title
               type: 2
               ordinal: ordinal
@@ -148041,11 +149162,13 @@ components:
               type: 7
             cve: cve
             notes:
-            - text: text
+            - Value: Value
+              text: text
               title: title
               type: 2
               ordinal: ordinal
-            - text: text
+            - Value: Value
+              text: text
               title: title
               type: 2
               ordinal: ordinal
@@ -154945,11 +156068,17 @@ components:
     advisory.Note:
       description: advisory.Note
       example:
+        Value: Value
         text: text
         title: title
         type: 2
         ordinal: ordinal
       properties:
+        Value:
+          description: |-
+            Value is the note's text in MSRC's JSON CVRF, which names it Value; Text only ever held it in
+            the XML form.
+          type: string
         ordinal:
           type: string
         text:
@@ -174289,6 +175418,81 @@ components:
           tags:
           - tags
           - tags
+        vcConfigurationsWithPlatforms:
+        - nodes:
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          negate: true
+          operator: operator
+        - nodes:
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          negate: true
+          operator: operator
         configurations:
         - nodes:
           - negate: true
@@ -175130,6 +176334,15 @@ components:
             $ref: '#/components/schemas/advisory.NVD20Configuration'
           type: array
           uniqueItems: false
+        vcConfigurationsWithPlatforms:
+          description: |-
+            VCConfigurationsWithPlatforms is VCConfigurations with NVD-style platform ("running on")
+            nodes: a configuration whose product needs a platform is AND{the vulnerable node, a node of
+            vulnerable:false platform CPEs}. Only set when at least one configuration has a platform.
+          items:
+            $ref: '#/components/schemas/advisory.NVD20Configuration'
+          type: array
+          uniqueItems: false
         vcVulnerableCPEs:
           items:
             type: string
@@ -175179,6 +176392,81 @@ components:
           tags:
           - tags
           - tags
+        vcConfigurationsWithPlatforms:
+        - nodes:
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          negate: true
+          operator: operator
+        - nodes:
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          negate: true
+          operator: operator
         configurations:
         - nodes:
           - negate: true
@@ -176148,6 +177436,15 @@ components:
         sourceIdentifier:
           type: string
         vcConfigurations:
+          items:
+            $ref: '#/components/schemas/advisory.NVD20Configuration'
+          type: array
+          uniqueItems: false
+        vcConfigurationsWithPlatforms:
+          description: |-
+            VCConfigurationsWithPlatforms is VCConfigurations with NVD-style platform ("running on")
+            nodes: a configuration whose product needs a platform is AND{the vulnerable node, a node of
+            vulnerable:false platform CPEs}. Only set when at least one configuration has a platform.
           items:
             $ref: '#/components/schemas/advisory.NVD20Configuration'
           type: array
@@ -179557,6 +180854,81 @@ components:
             tags:
             - tags
             - tags
+          vcConfigurationsWithPlatforms:
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
           configurations:
           - nodes:
             - negate: true
@@ -180364,6 +181736,81 @@ components:
           tags:
           - tags
           - tags
+        vcConfigurationsWithPlatforms:
+        - nodes:
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          negate: true
+          operator: operator
+        - nodes:
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          - negate: true
+            operator: operator
+            cpeMatch:
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+            - vulnerable: true
+              versionStartExcluding: versionStartExcluding
+              criteria: criteria
+              versionEndExcluding: versionEndExcluding
+              versionEndIncluding: versionEndIncluding
+              matchCriteriaId: matchCriteriaId
+              versionStartIncluding: versionStartIncluding
+          negate: true
+          operator: operator
         configurations:
         - nodes:
           - negate: true
@@ -181205,6 +182652,15 @@ components:
             $ref: '#/components/schemas/advisory.NVD20Configuration'
           type: array
           uniqueItems: false
+        vcConfigurationsWithPlatforms:
+          description: |-
+            VCConfigurationsWithPlatforms is VCConfigurations with NVD-style platform ("running on")
+            nodes: a configuration whose product needs a platform is AND{the vulnerable node, a node of
+            vulnerable:false platform CPEs}. Only set when at least one configuration has a platform.
+          items:
+            $ref: '#/components/schemas/advisory.NVD20Configuration'
+          type: array
+          uniqueItems: false
         vcVulnerableCPEs:
           items:
             type: string
@@ -181296,6 +182752,7 @@ components:
         - warnings
         - warnings
         index: index
+        truncated: true
         sort: sort
         total_pages: 9
         matches:
@@ -181440,6 +182897,11 @@ components:
             Calculated as: ceil(TotalRows / Limit). Used for pagination UI and validation.
             Example: 1000 items with limit 100 = 10 total pages.
           type: integer
+        truncated:
+          description: |-
+            Truncated is true when a cursor page holds fewer records than Limit because it reached the
+            response size cap. More records follow: keep requesting with NextCursor.
+          type: boolean
         warnings:
           description: |-
             Warnings contains any non-fatal issues encountered during query processing.
@@ -181823,6 +183285,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -181899,6 +183362,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -181979,6 +183443,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182049,6 +183514,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182117,6 +183583,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182201,6 +183668,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182279,6 +183747,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182357,6 +183826,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182427,6 +183897,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182497,6 +183968,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182567,6 +184039,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182639,6 +184112,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182749,6 +184223,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182819,6 +184294,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182911,6 +184387,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -182993,6 +184470,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183061,6 +184539,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183163,6 +184642,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183331,6 +184811,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183433,6 +184914,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183535,6 +185017,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183701,6 +185184,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -183885,6 +185369,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184021,6 +185506,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184091,6 +185577,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184161,6 +185648,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184231,6 +185719,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184301,6 +185790,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184375,6 +185865,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184445,6 +185936,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184519,6 +186011,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184587,6 +186080,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184653,6 +186147,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184725,6 +186220,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184795,6 +186291,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184865,6 +186362,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -184943,6 +186441,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185021,6 +186520,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185095,6 +186595,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185165,6 +186666,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185233,6 +186735,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185309,6 +186812,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185375,6 +186879,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185445,6 +186950,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185527,6 +187033,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185595,6 +187102,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185665,6 +187173,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185731,6 +187240,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185799,6 +187309,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185867,6 +187378,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -185939,6 +187451,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186041,6 +187554,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186141,6 +187655,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186219,6 +187734,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186291,6 +187807,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186365,6 +187882,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186443,6 +187961,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186525,6 +188044,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186595,6 +188115,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186691,6 +188212,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186789,6 +188311,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186875,6 +188398,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -186945,6 +188469,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187023,6 +188548,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187115,6 +188641,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187185,6 +188712,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187259,6 +188787,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187329,6 +188858,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187399,6 +188929,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187495,6 +189026,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187585,6 +189117,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187733,6 +189266,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187807,6 +189341,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187883,6 +189418,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -187953,6 +189489,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188037,6 +189574,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188107,6 +189645,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188189,6 +189728,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188269,6 +189809,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188341,6 +189882,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188417,6 +189959,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188454,6 +189997,99 @@ components:
           description: Data is the data returned by the endpoint
           items:
             $ref: '#/components/schemas/advisory.Binarly'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_BitBucketExploit-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_BitBucketExploit-paginate_Pagination
+      example:
+        data:
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          truncated: true
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.BitBucketExploit'
           type: array
           uniqueItems: false
     render.ResponseWithMetadata-array_advisory_BitDefender-paginate_Pagination:
@@ -188497,6 +190133,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188567,6 +190204,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188643,6 +190281,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -188715,6 +190354,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189003,6 +190643,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189075,6 +190716,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189151,6 +190793,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189241,6 +190884,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189337,6 +190981,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189425,6 +191070,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189513,6 +191159,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189599,6 +191246,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189709,6 +191357,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189783,6 +191432,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189853,6 +191503,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189925,6 +191576,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -189997,6 +191649,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190091,6 +191744,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190175,6 +191829,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190251,6 +191906,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190325,6 +191981,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190393,6 +192050,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190467,6 +192125,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190577,6 +192236,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190655,6 +192315,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190706,8 +192367,14 @@ components:
           affected:
           - product: product
             fixed_version: fixed_version
+            fixed_versions:
+            - fixed_versions
+            - fixed_versions
           - product: product
             fixed_version: fixed_version
+            fixed_versions:
+            - fixed_versions
+            - fixed_versions
           url: url
         - date_added: date_added
           cve:
@@ -190717,8 +192384,14 @@ components:
           affected:
           - product: product
             fixed_version: fixed_version
+            fixed_versions:
+            - fixed_versions
+            - fixed_versions
           - product: product
             fixed_version: fixed_version
+            fixed_versions:
+            - fixed_versions
+            - fixed_versions
           url: url
         _meta:
           cursor: cursor
@@ -190731,6 +192404,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -190813,6 +192487,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -193719,6 +195394,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -194589,6 +196265,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -194687,6 +196364,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -194759,6 +196437,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -194837,6 +196516,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -194917,6 +196597,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -194995,6 +196676,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195089,6 +196771,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195159,6 +196842,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195233,6 +196917,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195270,6 +196955,99 @@ components:
           description: Data is the data returned by the endpoint
           items:
             $ref: '#/components/schemas/advisory.CloudVulnDBAdvisory'
+          type: array
+          uniqueItems: false
+    render.ResponseWithMetadata-array_advisory_CodebergExploit-paginate_Pagination:
+      description: render.ResponseWithMetadata-array_advisory_CodebergExploit-paginate_Pagination
+      example:
+        data:
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        - forks: 6
+          clone_ssh_url: clone_ssh_url
+          clone_ssh_url_cached: clone_ssh_url_cached
+          repo_full_path: repo_full_path
+          language: language
+          reference_url: reference_url
+          stars: 1
+          clone_https_url: clone_https_url
+          commit_hash: commit_hash
+          exploit_type: exploit_type
+          date_added: date_added
+          date_last_revised: date_last_revised
+          refsource: refsource
+          cve: cve
+          date_cached: date_cached
+          repo_id: repo_id
+          html_url: html_url
+          repo_name: repo_name
+          repo_owner: repo_owner
+        _meta:
+          cursor: cursor
+          next_cursor: next_cursor
+          total_documents: 7
+          show_pages: true
+          first_item: 6
+          last_item: 1
+          warnings:
+          - warnings
+          - warnings
+          index: index
+          truncated: true
+          sort: sort
+          total_pages: 9
+          matches:
+          - field: field
+            value: value
+          - field: field
+            value: value
+          opensearch_query: "{}"
+          pages:
+          - pages
+          - pages
+          limit: 5
+          show_query: true
+          page: 2
+          max_pages: 5
+          parameters:
+          - format: format
+            name: name
+            filtering: filtering
+          - format: format
+            name: name
+            filtering: filtering
+          order: order
+          timestamp: timestamp
+        _benchmark: 0.8008281904610115
+      properties:
+        _benchmark:
+          description: |-
+            Benchmark is the server-side processing time for the request in seconds.
+            Example: 0.122322 = approximately 122 milliseconds
+          type: number
+        _meta:
+          $ref: '#/components/schemas/paginate.Pagination'
+        data:
+          description: Data is the data returned by the endpoint
+          items:
+            $ref: '#/components/schemas/advisory.CodebergExploit'
           type: array
           uniqueItems: false
     render.ResponseWithMetadata-array_advisory_CodesysAdvisory-paginate_Pagination:
@@ -195313,6 +197091,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195469,6 +197248,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195555,6 +197335,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195683,6 +197464,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195751,6 +197533,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195823,6 +197606,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -195895,6 +197679,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196071,6 +197856,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196131,6 +197917,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196201,6 +197988,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196273,6 +198061,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196345,6 +198134,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196415,6 +198205,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196513,6 +198304,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196589,6 +198381,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196667,6 +198460,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196755,6 +198549,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196833,6 +198628,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -196949,6 +198745,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197021,6 +198818,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197105,6 +198903,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197173,6 +198972,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197241,6 +199041,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197313,6 +199114,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197389,6 +199191,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197461,6 +199264,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197543,6 +199347,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197657,6 +199462,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197777,6 +199583,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197851,6 +199658,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197919,6 +199727,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -197991,6 +199800,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198071,6 +199881,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198139,6 +199950,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198263,6 +200075,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198339,6 +200152,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198413,6 +200227,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198483,6 +200298,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198555,6 +200371,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198625,6 +200442,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198701,6 +200519,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198771,6 +200590,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198845,6 +200665,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198919,6 +200740,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -198989,6 +200811,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199057,6 +200880,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199133,6 +200957,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199227,6 +201052,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199309,6 +201135,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199387,6 +201214,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199467,6 +201295,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199545,6 +201374,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199615,6 +201445,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199695,6 +201526,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -199770,12 +201602,14 @@ components:
               package:
                 ecosystem: ecosystem
                 name: name
+              firstPatchedVersion: firstPatchedVersion
               vulnerableVersionRange: vulnerableVersionRange
               updatedAt: updatedAt
             - severity: severity
               package:
                 ecosystem: ecosystem
                 name: name
+              firstPatchedVersion: firstPatchedVersion
               vulnerableVersionRange: vulnerableVersionRange
               updatedAt: updatedAt
             totalCount: 5
@@ -199817,12 +201651,14 @@ components:
               package:
                 ecosystem: ecosystem
                 name: name
+              firstPatchedVersion: firstPatchedVersion
               vulnerableVersionRange: vulnerableVersionRange
               updatedAt: updatedAt
             - severity: severity
               package:
                 ecosystem: ecosystem
                 name: name
+              firstPatchedVersion: firstPatchedVersion
               vulnerableVersionRange: vulnerableVersionRange
               updatedAt: updatedAt
             totalCount: 5
@@ -199843,6 +201679,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200045,6 +201882,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200117,6 +201955,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200195,6 +202034,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200271,6 +202111,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200375,6 +202216,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200443,6 +202285,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200511,6 +202354,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200607,6 +202451,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200699,6 +202544,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200791,6 +202637,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200917,6 +202764,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -200991,6 +202839,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201065,6 +202914,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201279,6 +203129,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201347,6 +203198,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201457,6 +203309,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201527,6 +203380,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201599,6 +203453,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201687,6 +203542,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201765,6 +203621,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201835,6 +203692,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201909,6 +203767,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -201981,6 +203840,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202049,6 +203909,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202129,6 +203990,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202285,6 +204147,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202359,6 +204222,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202439,6 +204303,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202519,6 +204384,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202591,6 +204457,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202663,6 +204530,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202745,6 +204613,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202821,6 +204690,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202883,6 +204753,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -202949,6 +204820,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203047,6 +204919,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203145,6 +205018,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203243,6 +205117,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203337,6 +205212,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203407,6 +205283,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203483,6 +205360,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203563,6 +205441,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203633,6 +205512,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203735,6 +205615,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203813,6 +205694,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203885,6 +205767,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -203955,6 +205838,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204025,6 +205909,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204093,6 +205978,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204201,6 +206087,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204267,6 +206154,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204361,6 +206249,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204497,6 +206386,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204567,6 +206457,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204645,6 +206536,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204729,6 +206621,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204819,6 +206712,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204889,6 +206783,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -204975,6 +206870,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205051,6 +206947,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205125,6 +207022,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205201,6 +207099,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205273,6 +207172,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205341,6 +207241,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205415,6 +207316,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205491,6 +207393,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205591,6 +207494,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205667,6 +207571,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205735,6 +207640,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205817,6 +207723,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205905,6 +207812,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -205975,6 +207883,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206233,6 +208142,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206357,6 +208267,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206477,6 +208388,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206547,6 +208459,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206635,6 +208548,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206719,6 +208633,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206799,6 +208714,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -206883,6 +208799,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -207131,6 +209048,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -207269,6 +209187,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -207341,6 +209260,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -208201,6 +210121,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -208294,11 +210215,13 @@ components:
                 type: 7
               cve: cve
               notes:
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
@@ -208403,11 +210326,13 @@ components:
                 type: 7
               cve: cve
               notes:
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
@@ -208628,11 +210553,13 @@ components:
                 type: 7
               cve: cve
               notes:
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
@@ -208737,11 +210664,13 @@ components:
                 type: 7
               cve: cve
               notes:
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
-              - text: text
+              - Value: Value
+                text: text
                 title: title
                 type: 2
                 ordinal: ordinal
@@ -208923,6 +210852,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -208995,6 +210925,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -209101,6 +211032,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -209169,6 +211101,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -209237,6 +211170,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -209357,6 +211291,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -209435,6 +211370,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -212311,6 +214247,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -212389,6 +214326,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -212479,6 +214417,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -215365,6 +217304,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -215435,6 +217375,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -215505,6 +217446,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -215639,6 +217581,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -216507,6 +218450,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217373,6 +219317,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217447,6 +219392,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217525,6 +219471,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217601,6 +219548,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217687,6 +219635,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217767,6 +219716,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217847,6 +219797,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -217915,6 +219866,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218003,6 +219955,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218083,6 +220036,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218167,6 +220121,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218235,6 +220190,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218309,6 +220265,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218379,6 +220336,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218455,6 +220413,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218541,6 +220500,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218613,6 +220573,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218723,6 +220684,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218799,6 +220761,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218867,6 +220830,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -218941,6 +220905,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -219015,6 +220980,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -219943,6 +221909,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220199,6 +222166,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220275,6 +222243,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220345,6 +222314,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220427,6 +222397,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220497,6 +222468,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220565,6 +222537,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220637,6 +222610,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220731,6 +222705,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220813,6 +222788,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -220889,6 +222865,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -221017,6 +222994,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -221101,6 +223079,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -221171,6 +223150,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -221237,6 +223217,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222093,6 +224074,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222161,6 +224143,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222237,6 +224220,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222309,6 +224293,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222377,6 +224362,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222461,6 +224447,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222535,6 +224522,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222643,6 +224631,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222713,6 +224702,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222789,6 +224779,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222859,6 +224850,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -222935,6 +224927,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223015,6 +225008,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223093,6 +225087,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223163,6 +225158,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223231,6 +225227,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223301,6 +225298,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223375,6 +225373,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223547,6 +225546,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223627,6 +225627,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223711,6 +225712,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223787,6 +225789,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223863,6 +225866,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -223937,6 +225941,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -224065,6 +226070,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -224353,6 +226359,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -224421,6 +226428,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -224595,6 +226603,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -224663,6 +226672,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -224743,6 +226753,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -225601,6 +227612,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -225685,6 +227697,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -225787,6 +227800,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -225959,6 +227973,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226027,6 +228042,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226099,6 +228115,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226239,6 +228256,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226321,6 +228339,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226393,6 +228412,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226465,6 +228485,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226545,6 +228566,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226611,6 +228633,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226687,6 +228710,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226757,6 +228781,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226839,6 +228864,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226909,6 +228935,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -226981,6 +229008,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227083,6 +229111,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227155,6 +229184,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227323,6 +229353,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227393,6 +229424,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227483,6 +229515,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227553,6 +229586,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227625,6 +229659,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227699,6 +229734,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227767,6 +229803,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227857,6 +229894,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -227925,6 +229963,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -228001,6 +230040,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -228607,6 +230647,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -228677,6 +230718,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -228817,6 +230859,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -228893,6 +230936,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -228973,6 +231017,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229043,6 +231088,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229121,6 +231167,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229189,6 +231236,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229257,6 +231305,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229357,6 +231406,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229423,6 +231473,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229517,6 +231568,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229593,6 +231645,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229661,6 +231714,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229735,6 +231789,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229811,6 +231866,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229879,6 +231935,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -229957,6 +232014,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230027,6 +232085,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230099,6 +232158,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230179,6 +232239,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230267,6 +232328,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230345,6 +232407,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230417,6 +232480,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230487,6 +232551,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230573,6 +232638,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230641,6 +232707,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230709,6 +232776,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230783,6 +232851,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230863,6 +232932,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -230931,6 +233001,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231005,6 +233076,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231077,6 +233149,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231147,6 +233220,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231597,6 +233671,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231669,6 +233744,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231743,6 +233819,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231823,6 +233900,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231899,6 +233977,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -231971,6 +234050,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232051,6 +234131,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232133,6 +234214,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232323,6 +234405,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232395,6 +234478,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232481,6 +234565,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232601,6 +234686,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232663,6 +234749,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -232725,6 +234812,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -233597,6 +235685,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -233667,6 +235756,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -233747,6 +235837,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -233813,6 +235904,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -233887,6 +235979,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -233965,6 +236058,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -234041,6 +236135,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -234109,6 +236204,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -234195,6 +236291,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -234269,6 +236366,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -234363,6 +236461,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -237239,6 +239338,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -237451,6 +239551,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -237573,6 +239674,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -237749,6 +239851,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239261,6 +241364,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239345,6 +241449,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239421,6 +241526,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239487,6 +241593,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239557,6 +241664,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239637,6 +241745,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239707,6 +241816,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239775,6 +241885,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239885,6 +241996,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -239977,6 +242089,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240049,6 +242162,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240117,6 +242231,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240191,6 +242306,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240267,6 +242383,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240341,6 +242458,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240419,6 +242537,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240491,6 +242610,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240561,6 +242681,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240705,6 +242826,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240795,6 +242917,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240873,6 +242996,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -240953,6 +243077,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -241021,6 +243146,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -241091,6 +243217,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -241159,6 +243286,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -241245,6 +243373,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -241331,6 +243460,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -241913,6 +244043,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -242819,6 +244950,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -242881,6 +245013,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -242949,6 +245082,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -243165,6 +245299,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -243243,6 +245378,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -243741,6 +245877,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -243879,6 +246016,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -243963,6 +246101,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -244021,6 +246160,81 @@ components:
             tags:
             - tags
             - tags
+          vcConfigurationsWithPlatforms:
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
           configurations:
           - nodes:
             - negate: true
@@ -244822,6 +247036,81 @@ components:
             tags:
             - tags
             - tags
+          vcConfigurationsWithPlatforms:
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
           configurations:
           - nodes:
             - negate: true
@@ -245619,6 +247908,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -245691,6 +247981,81 @@ components:
             tags:
             - tags
             - tags
+          vcConfigurationsWithPlatforms:
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
           configurations:
           - nodes:
             - negate: true
@@ -246614,6 +248979,81 @@ components:
             tags:
             - tags
             - tags
+          vcConfigurationsWithPlatforms:
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
+          - nodes:
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            - negate: true
+              operator: operator
+              cpeMatch:
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+              - vulnerable: true
+                versionStartExcluding: versionStartExcluding
+                criteria: criteria
+                versionEndExcluding: versionEndExcluding
+                versionEndIncluding: versionEndIncluding
+                matchCriteriaId: matchCriteriaId
+                versionStartIncluding: versionStartIncluding
+            negate: true
+            operator: operator
           configurations:
           - nodes:
             - negate: true
@@ -247519,6 +249959,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -247657,6 +250098,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -247845,6 +250287,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -248025,6 +250468,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -248145,6 +250589,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -248303,6 +250748,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -248363,6 +250809,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -248500,6 +250947,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -248623,6 +251071,7 @@ components:
           - warnings
           - warnings
           index: index
+          truncated: true
           sort: sort
           total_pages: 9
           matches:
@@ -249176,6 +251625,81 @@ components:
               tags:
               - tags
               - tags
+            vcConfigurationsWithPlatforms:
+            - nodes:
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              negate: true
+              operator: operator
+            - nodes:
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              negate: true
+              operator: operator
             configurations:
             - nodes:
               - negate: true
@@ -249978,6 +252502,81 @@ components:
               tags:
               - tags
               - tags
+            vcConfigurationsWithPlatforms:
+            - nodes:
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              negate: true
+              operator: operator
+            - nodes:
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              - negate: true
+                operator: operator
+                cpeMatch:
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+                - vulnerable: true
+                  versionStartExcluding: versionStartExcluding
+                  criteria: criteria
+                  versionEndExcluding: versionEndExcluding
+                  versionEndIncluding: versionEndIncluding
+                  matchCriteriaId: matchCriteriaId
+                  versionStartIncluding: versionStartIncluding
+              negate: true
+              operator: operator
             configurations:
             - nodes:
               - negate: true

@@ -20,7 +20,10 @@ var _ MappedNullable = &AdvisoryAffectedChrome{}
 
 // AdvisoryAffectedChrome advisory.AffectedChrome
 type AdvisoryAffectedChrome struct {
+	// FixedVersion is the first fixed build. The vulnerable range ends below it.
 	FixedVersion *string `json:"fixed_version,omitempty"`
+	// FixedVersions lists every fixed build Google names for the channel, starting with FixedVersion. A paired release (\"155.0.8059.84/.85 for Windows and Mac\") lists both builds; a single release lists one.
+	FixedVersions []string `json:"fixed_versions,omitempty"`
 	Product *string `json:"product,omitempty"`
 }
 
@@ -73,6 +76,38 @@ func (o *AdvisoryAffectedChrome) SetFixedVersion(v string) {
 	o.FixedVersion = &v
 }
 
+// GetFixedVersions returns the FixedVersions field value if set, zero value otherwise.
+func (o *AdvisoryAffectedChrome) GetFixedVersions() []string {
+	if o == nil || IsNil(o.FixedVersions) {
+		var ret []string
+		return ret
+	}
+	return o.FixedVersions
+}
+
+// GetFixedVersionsOk returns a tuple with the FixedVersions field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryAffectedChrome) GetFixedVersionsOk() ([]string, bool) {
+	if o == nil || IsNil(o.FixedVersions) {
+		return nil, false
+	}
+	return o.FixedVersions, true
+}
+
+// HasFixedVersions returns a boolean if a field has been set.
+func (o *AdvisoryAffectedChrome) HasFixedVersions() bool {
+	if o != nil && !IsNil(o.FixedVersions) {
+		return true
+	}
+
+	return false
+}
+
+// SetFixedVersions gets a reference to the given []string and assigns it to the FixedVersions field.
+func (o *AdvisoryAffectedChrome) SetFixedVersions(v []string) {
+	o.FixedVersions = v
+}
+
 // GetProduct returns the Product field value if set, zero value otherwise.
 func (o *AdvisoryAffectedChrome) GetProduct() string {
 	if o == nil || IsNil(o.Product) {
@@ -117,6 +152,9 @@ func (o AdvisoryAffectedChrome) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.FixedVersion) {
 		toSerialize["fixed_version"] = o.FixedVersion
+	}
+	if !IsNil(o.FixedVersions) {
+		toSerialize["fixed_versions"] = o.FixedVersions
 	}
 	if !IsNil(o.Product) {
 		toSerialize["product"] = o.Product
