@@ -38,6 +38,8 @@ type NvdcvesNvdCveExtended struct {
 	References []ApiNVD20Reference `json:"references,omitempty"`
 	SourceIdentifier *string `json:"sourceIdentifier,omitempty"`
 	VcConfigurations []AdvisoryNVD20Configuration `json:"vcConfigurations,omitempty"`
+	// VCConfigurationsWithPlatforms is VCConfigurations with NVD-style platform (\"running on\") nodes: a configuration whose product needs a platform is AND{the vulnerable node, a node of vulnerable:false platform CPEs}. Only set when at least one configuration has a platform.
+	VcConfigurationsWithPlatforms []AdvisoryNVD20Configuration `json:"vcConfigurationsWithPlatforms,omitempty"`
 	VcVulnerableCPEs []string `json:"vcVulnerableCPEs,omitempty"`
 	VendorComments []ApiNVD20VendorComment `json:"vendorComments,omitempty"`
 	VulnStatus *string `json:"vulnStatus,omitempty"`
@@ -637,6 +639,38 @@ func (o *NvdcvesNvdCveExtended) SetVcConfigurations(v []AdvisoryNVD20Configurati
 	o.VcConfigurations = v
 }
 
+// GetVcConfigurationsWithPlatforms returns the VcConfigurationsWithPlatforms field value if set, zero value otherwise.
+func (o *NvdcvesNvdCveExtended) GetVcConfigurationsWithPlatforms() []AdvisoryNVD20Configuration {
+	if o == nil || IsNil(o.VcConfigurationsWithPlatforms) {
+		var ret []AdvisoryNVD20Configuration
+		return ret
+	}
+	return o.VcConfigurationsWithPlatforms
+}
+
+// GetVcConfigurationsWithPlatformsOk returns a tuple with the VcConfigurationsWithPlatforms field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *NvdcvesNvdCveExtended) GetVcConfigurationsWithPlatformsOk() ([]AdvisoryNVD20Configuration, bool) {
+	if o == nil || IsNil(o.VcConfigurationsWithPlatforms) {
+		return nil, false
+	}
+	return o.VcConfigurationsWithPlatforms, true
+}
+
+// HasVcConfigurationsWithPlatforms returns a boolean if a field has been set.
+func (o *NvdcvesNvdCveExtended) HasVcConfigurationsWithPlatforms() bool {
+	if o != nil && !IsNil(o.VcConfigurationsWithPlatforms) {
+		return true
+	}
+
+	return false
+}
+
+// SetVcConfigurationsWithPlatforms gets a reference to the given []AdvisoryNVD20Configuration and assigns it to the VcConfigurationsWithPlatforms field.
+func (o *NvdcvesNvdCveExtended) SetVcConfigurationsWithPlatforms(v []AdvisoryNVD20Configuration) {
+	o.VcConfigurationsWithPlatforms = v
+}
+
 // GetVcVulnerableCPEs returns the VcVulnerableCPEs field value if set, zero value otherwise.
 func (o *NvdcvesNvdCveExtended) GetVcVulnerableCPEs() []string {
 	if o == nil || IsNil(o.VcVulnerableCPEs) {
@@ -828,6 +862,9 @@ func (o NvdcvesNvdCveExtended) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.VcConfigurations) {
 		toSerialize["vcConfigurations"] = o.VcConfigurations
+	}
+	if !IsNil(o.VcConfigurationsWithPlatforms) {
+		toSerialize["vcConfigurationsWithPlatforms"] = o.VcConfigurationsWithPlatforms
 	}
 	if !IsNil(o.VcVulnerableCPEs) {
 		toSerialize["vcVulnerableCPEs"] = o.VcVulnerableCPEs

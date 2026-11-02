@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Value** | Pointer to **string** | Value is the note&#39;s text in MSRC&#39;s JSON CVRF, which names it Value; Text only ever held it in the XML form. | [optional] 
 **Ordinal** | Pointer to **string** |  | [optional] 
 **Text** | Pointer to **string** |  | [optional] 
 **Title** | Pointer to **string** |  | [optional] 
@@ -27,6 +28,31 @@ will change when the set of required properties is changed
 NewAdvisoryNoteWithDefaults instantiates a new AdvisoryNote object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetValue
+
+`func (o *AdvisoryNote) GetValue() string`
+
+GetValue returns the Value field if non-nil, zero value otherwise.
+
+### GetValueOk
+
+`func (o *AdvisoryNote) GetValueOk() (*string, bool)`
+
+GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetValue
+
+`func (o *AdvisoryNote) SetValue(v string)`
+
+SetValue sets Value field to given value.
+
+### HasValue
+
+`func (o *AdvisoryNote) HasValue() bool`
+
+HasValue returns a boolean if a field has been set.
 
 ### GetOrdinal
 

@@ -58,6 +58,8 @@ type PaginatePagination struct {
 	TotalDocuments *int32 `json:"total_documents,omitempty"`
 	// TotalPages is the total number of pages based on TotalRows and Limit. Calculated as: ceil(TotalRows / Limit). Used for pagination UI and validation. Example: 1000 items with limit 100 = 10 total pages.
 	TotalPages *int32 `json:"total_pages,omitempty"`
+	// Truncated is true when a cursor page holds fewer records than Limit because it reached the response size cap. More records follow: keep requesting with NextCursor.
+	Truncated *bool `json:"truncated,omitempty"`
 	// Warnings contains any non-fatal issues encountered during query processing. Examples: deprecated parameters, performance concerns, or data quality notes.
 	Warnings []string `json:"warnings,omitempty"`
 }
@@ -687,6 +689,38 @@ func (o *PaginatePagination) SetTotalPages(v int32) {
 	o.TotalPages = &v
 }
 
+// GetTruncated returns the Truncated field value if set, zero value otherwise.
+func (o *PaginatePagination) GetTruncated() bool {
+	if o == nil || IsNil(o.Truncated) {
+		var ret bool
+		return ret
+	}
+	return *o.Truncated
+}
+
+// GetTruncatedOk returns a tuple with the Truncated field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PaginatePagination) GetTruncatedOk() (*bool, bool) {
+	if o == nil || IsNil(o.Truncated) {
+		return nil, false
+	}
+	return o.Truncated, true
+}
+
+// HasTruncated returns a boolean if a field has been set.
+func (o *PaginatePagination) HasTruncated() bool {
+	if o != nil && !IsNil(o.Truncated) {
+		return true
+	}
+
+	return false
+}
+
+// SetTruncated gets a reference to the given bool and assigns it to the Truncated field.
+func (o *PaginatePagination) SetTruncated(v bool) {
+	o.Truncated = &v
+}
+
 // GetWarnings returns the Warnings field value if set, zero value otherwise.
 func (o *PaginatePagination) GetWarnings() []string {
 	if o == nil || IsNil(o.Warnings) {
@@ -785,6 +819,9 @@ func (o PaginatePagination) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.TotalPages) {
 		toSerialize["total_pages"] = o.TotalPages
+	}
+	if !IsNil(o.Truncated) {
+		toSerialize["truncated"] = o.Truncated
 	}
 	if !IsNil(o.Warnings) {
 		toSerialize["warnings"] = o.Warnings

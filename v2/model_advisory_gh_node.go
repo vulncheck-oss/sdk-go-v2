@@ -20,6 +20,8 @@ var _ MappedNullable = &AdvisoryGHNode{}
 
 // AdvisoryGHNode advisory.GHNode
 type AdvisoryGHNode struct {
+	// FirstPatchedVersion is GitHub's stated fix for this range. nil means it was not collected; \"\" means GitHub says there is no fix.
+	FirstPatchedVersion *string `json:"firstPatchedVersion,omitempty"`
 	Package *AdvisoryGHPackage `json:"package,omitempty"`
 	Severity *string `json:"severity,omitempty"`
 	UpdatedAt *string `json:"updatedAt,omitempty"`
@@ -41,6 +43,38 @@ func NewAdvisoryGHNode() *AdvisoryGHNode {
 func NewAdvisoryGHNodeWithDefaults() *AdvisoryGHNode {
 	this := AdvisoryGHNode{}
 	return &this
+}
+
+// GetFirstPatchedVersion returns the FirstPatchedVersion field value if set, zero value otherwise.
+func (o *AdvisoryGHNode) GetFirstPatchedVersion() string {
+	if o == nil || IsNil(o.FirstPatchedVersion) {
+		var ret string
+		return ret
+	}
+	return *o.FirstPatchedVersion
+}
+
+// GetFirstPatchedVersionOk returns a tuple with the FirstPatchedVersion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvisoryGHNode) GetFirstPatchedVersionOk() (*string, bool) {
+	if o == nil || IsNil(o.FirstPatchedVersion) {
+		return nil, false
+	}
+	return o.FirstPatchedVersion, true
+}
+
+// HasFirstPatchedVersion returns a boolean if a field has been set.
+func (o *AdvisoryGHNode) HasFirstPatchedVersion() bool {
+	if o != nil && !IsNil(o.FirstPatchedVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetFirstPatchedVersion gets a reference to the given string and assigns it to the FirstPatchedVersion field.
+func (o *AdvisoryGHNode) SetFirstPatchedVersion(v string) {
+	o.FirstPatchedVersion = &v
 }
 
 // GetPackage returns the Package field value if set, zero value otherwise.
@@ -181,6 +215,9 @@ func (o AdvisoryGHNode) MarshalJSON() ([]byte, error) {
 
 func (o AdvisoryGHNode) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.FirstPatchedVersion) {
+		toSerialize["firstPatchedVersion"] = o.FirstPatchedVersion
+	}
 	if !IsNil(o.Package) {
 		toSerialize["package"] = o.Package
 	}
