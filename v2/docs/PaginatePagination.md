@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **Timestamp** | Pointer to **string** | Timestamp when the query was executed in UTC (ISO 8601 format). Used for debugging, cache management, and determining data freshness. Example: \&quot;2024-02-23T20:35:43.732591251Z\&quot; | [optional] 
 **TotalDocuments** | Pointer to **int32** | TotalRows is the total number of documents matching the query across all pages. Used for calculating total_pages and building pagination UI elements. Note: May be capped for performance on very large result sets. | [optional] 
 **TotalPages** | Pointer to **int32** | TotalPages is the total number of pages based on TotalRows and Limit. Calculated as: ceil(TotalRows / Limit). Used for pagination UI and validation. Example: 1000 items with limit 100 &#x3D; 10 total pages. | [optional] 
-**Truncated** | Pointer to **bool** | Truncated is true when a cursor page holds fewer records than Limit because it reached the response size cap. More records follow: keep requesting with NextCursor. | [optional] 
+**Truncated** | Pointer to **bool** | Truncated is true when a cursor page holds fewer records than Limit because it reached the response size cap, or because it would otherwise end between records that sort equally. More records follow: keep requesting with NextCursor. | [optional] 
 **Warnings** | Pointer to **[]string** | Warnings contains any non-fatal issues encountered during query processing. Examples: deprecated parameters, performance concerns, or data quality notes. | [optional] 
 
 ## Methods

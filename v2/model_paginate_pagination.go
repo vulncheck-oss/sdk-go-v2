@@ -58,7 +58,7 @@ type PaginatePagination struct {
 	TotalDocuments *int32 `json:"total_documents,omitempty"`
 	// TotalPages is the total number of pages based on TotalRows and Limit. Calculated as: ceil(TotalRows / Limit). Used for pagination UI and validation. Example: 1000 items with limit 100 = 10 total pages.
 	TotalPages *int32 `json:"total_pages,omitempty"`
-	// Truncated is true when a cursor page holds fewer records than Limit because it reached the response size cap. More records follow: keep requesting with NextCursor.
+	// Truncated is true when a cursor page holds fewer records than Limit because it reached the response size cap, or because it would otherwise end between records that sort equally. More records follow: keep requesting with NextCursor.
 	Truncated *bool `json:"truncated,omitempty"`
 	// Warnings contains any non-fatal issues encountered during query processing. Examples: deprecated parameters, performance concerns, or data quality notes.
 	Warnings []string `json:"warnings,omitempty"`
