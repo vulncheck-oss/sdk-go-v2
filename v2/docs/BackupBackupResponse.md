@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **UrlCloudfront** | Pointer to **string** |  | [optional] 
 **UrlEuWest2** | Pointer to **string** |  | [optional] 
 **UrlExpires** | Pointer to **string** |  | [optional] 
-**UrlMrap** | Pointer to **string** |  | [optional] 
 **UrlTtlMinutes** | Pointer to **int32** |  | [optional] 
 **UrlUsEast1** | Pointer to **string** |  | [optional] 
 
@@ -234,31 +233,6 @@ SetUrlExpires sets UrlExpires field to given value.
 `func (o *BackupBackupResponse) HasUrlExpires() bool`
 
 HasUrlExpires returns a boolean if a field has been set.
-
-### GetUrlMrap
-
-`func (o *BackupBackupResponse) GetUrlMrap() string`
-
-GetUrlMrap returns the UrlMrap field if non-nil, zero value otherwise.
-
-### GetUrlMrapOk
-
-`func (o *BackupBackupResponse) GetUrlMrapOk() (*string, bool)`
-
-GetUrlMrapOk returns a tuple with the UrlMrap field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrlMrap
-
-`func (o *BackupBackupResponse) SetUrlMrap(v string)`
-
-SetUrlMrap sets UrlMrap field to given value.
-
-### HasUrlMrap
-
-`func (o *BackupBackupResponse) HasUrlMrap() bool`
-
-HasUrlMrap returns a boolean if a field has been set.
 
 ### GetUrlTtlMinutes
 

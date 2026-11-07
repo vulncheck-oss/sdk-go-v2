@@ -180470,7 +180470,6 @@ components:
         available: true
         url_cloudfront: url_cloudfront
         url_expires: url_expires
-        url_mrap: url_mrap
         url: url
         url_ap-southeast-2: url_ap-southeast-2
       properties:
@@ -180489,8 +180488,6 @@ components:
         url_eu-west-2:
           type: string
         url_expires:
-          type: string
-        url_mrap:
           type: string
         url_ttl_minutes:
           type: integer
@@ -180561,6 +180558,7 @@ components:
         total_count: 9
         limit: 5
         queried_index_count: 2
+        truncated: true
         page: 5
         total_pages: 3
         timestamp: timestamp
@@ -180586,7 +180584,7 @@ components:
         next_cursor:
           description: |-
             NextCursor is the cursor for fetching the next page of results.
-            Empty if there are no more results (current_count < limit).
+            Empty if there are no more results.
           type: string
         page:
           description: Page is the current page number (only set in page-based pagination
@@ -180613,6 +180611,11 @@ components:
           description: TotalPages is the total number of pages (only set in page-based
             pagination mode).
           type: integer
+        truncated:
+          description: |-
+            Truncated is true when this cursor page holds fewer records than Limit so that it doesn't
+            end between records that sort equally. More records follow: keep requesting with NextCursor.
+          type: boolean
     index.IndexCountEntry:
       description: index.IndexCountEntry
       example:
@@ -182900,7 +182903,8 @@ components:
         truncated:
           description: |-
             Truncated is true when a cursor page holds fewer records than Limit because it reached the
-            response size cap. More records follow: keep requesting with NextCursor.
+            response size cap, or because it would otherwise end between records that sort equally.
+            More records follow: keep requesting with NextCursor.
           type: boolean
         warnings:
           description: |-
@@ -182934,20 +182938,17 @@ components:
     params.IndexBackup:
       description: params.IndexBackup
       example:
-        sha256: sha256
-        url_us-west-2: url_us-west-2
-        url_us-east-1: url_us-east-1
-        url_me-central-1: url_me-central-1
-        url_il-central-1: url_il-central-1
-        url_mrap: url_mrap
-        url: url
-        url_ap-southeast-2: url_ap-southeast-2
         url_eu-west-2: url_eu-west-2
         date_added: date_added
         url_ttl_minutes: 6
         filename: filename
+        sha256: sha256
+        url_us-west-2: url_us-west-2
+        url_us-east-1: url_us-east-1
         url_cloudfront: url_cloudfront
         url_expires: url_expires
+        url: url
+        url_ap-southeast-2: url_ap-southeast-2
       properties:
         date_added:
           type: string
@@ -182964,12 +182965,6 @@ components:
         url_eu-west-2:
           type: string
         url_expires:
-          type: string
-        url_il-central-1:
-          type: string
-        url_me-central-1:
-          type: string
-        url_mrap:
           type: string
         url_ttl_minutes:
           type: integer
@@ -250869,6 +250864,7 @@ components:
           total_count: 9
           limit: 5
           queried_index_count: 2
+          truncated: true
           page: 5
           total_pages: 3
           timestamp: timestamp
@@ -251115,34 +251111,28 @@ components:
       description: render.ResponseWithMetadata-v3controllers_BackupResponseData-v3controllers_BackupResponseMetadata
       example:
         data:
-        - sha256: sha256
-          url_us-west-2: url_us-west-2
-          url_us-east-1: url_us-east-1
-          url_me-central-1: url_me-central-1
-          url_il-central-1: url_il-central-1
-          url_mrap: url_mrap
-          url: url
-          url_ap-southeast-2: url_ap-southeast-2
-          url_eu-west-2: url_eu-west-2
+        - url_eu-west-2: url_eu-west-2
           date_added: date_added
           url_ttl_minutes: 6
           filename: filename
-          url_cloudfront: url_cloudfront
-          url_expires: url_expires
-        - sha256: sha256
+          sha256: sha256
           url_us-west-2: url_us-west-2
           url_us-east-1: url_us-east-1
-          url_me-central-1: url_me-central-1
-          url_il-central-1: url_il-central-1
-          url_mrap: url_mrap
+          url_cloudfront: url_cloudfront
+          url_expires: url_expires
           url: url
           url_ap-southeast-2: url_ap-southeast-2
-          url_eu-west-2: url_eu-west-2
+        - url_eu-west-2: url_eu-west-2
           date_added: date_added
           url_ttl_minutes: 6
           filename: filename
+          sha256: sha256
+          url_us-west-2: url_us-west-2
+          url_us-east-1: url_us-east-1
           url_cloudfront: url_cloudfront
           url_expires: url_expires
+          url: url
+          url_ap-southeast-2: url_ap-southeast-2
         _meta:
           index: index
           timestamp: timestamp
