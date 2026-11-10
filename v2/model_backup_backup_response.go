@@ -28,7 +28,6 @@ type BackupBackupResponse struct {
 	UrlCloudfront *string `json:"url_cloudfront,omitempty"`
 	UrlEuWest2 *string `json:"url_eu-west-2,omitempty"`
 	UrlExpires *string `json:"url_expires,omitempty"`
-	UrlMrap *string `json:"url_mrap,omitempty"`
 	UrlTtlMinutes *int32 `json:"url_ttl_minutes,omitempty"`
 	UrlUsEast1 *string `json:"url_us-east-1,omitempty"`
 }
@@ -306,38 +305,6 @@ func (o *BackupBackupResponse) SetUrlExpires(v string) {
 	o.UrlExpires = &v
 }
 
-// GetUrlMrap returns the UrlMrap field value if set, zero value otherwise.
-func (o *BackupBackupResponse) GetUrlMrap() string {
-	if o == nil || IsNil(o.UrlMrap) {
-		var ret string
-		return ret
-	}
-	return *o.UrlMrap
-}
-
-// GetUrlMrapOk returns a tuple with the UrlMrap field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *BackupBackupResponse) GetUrlMrapOk() (*string, bool) {
-	if o == nil || IsNil(o.UrlMrap) {
-		return nil, false
-	}
-	return o.UrlMrap, true
-}
-
-// HasUrlMrap returns a boolean if a field has been set.
-func (o *BackupBackupResponse) HasUrlMrap() bool {
-	if o != nil && !IsNil(o.UrlMrap) {
-		return true
-	}
-
-	return false
-}
-
-// SetUrlMrap gets a reference to the given string and assigns it to the UrlMrap field.
-func (o *BackupBackupResponse) SetUrlMrap(v string) {
-	o.UrlMrap = &v
-}
-
 // GetUrlTtlMinutes returns the UrlTtlMinutes field value if set, zero value otherwise.
 func (o *BackupBackupResponse) GetUrlTtlMinutes() int32 {
 	if o == nil || IsNil(o.UrlTtlMinutes) {
@@ -435,9 +402,6 @@ func (o BackupBackupResponse) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.UrlExpires) {
 		toSerialize["url_expires"] = o.UrlExpires
-	}
-	if !IsNil(o.UrlMrap) {
-		toSerialize["url_mrap"] = o.UrlMrap
 	}
 	if !IsNil(o.UrlTtlMinutes) {
 		toSerialize["url_ttl_minutes"] = o.UrlTtlMinutes
