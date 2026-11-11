@@ -8,13 +8,14 @@ Name | Type | Description | Notes
 **Cve** | Pointer to **string** | CVE is the CVE identifier that was searched for. | [optional] 
 **IndicesWithHits** | Pointer to **int32** | IndicesWithHits is the number of indices that contained at least one match. | [optional] 
 **Limit** | Pointer to **int32** | Limit is the maximum number of results requested per page. | [optional] 
-**NextCursor** | Pointer to **string** | NextCursor is the cursor for fetching the next page of results. Empty if there are no more results (current_count &lt; limit). | [optional] 
+**NextCursor** | Pointer to **string** | NextCursor is the cursor for fetching the next page of results. Empty if there are no more results. | [optional] 
 **Page** | Pointer to **int32** | Page is the current page number (only set in page-based pagination mode). | [optional] 
 **QueriedIndexCount** | Pointer to **int32** | QueriedIndexCount is the number of indices that were searched. | [optional] 
 **Timestamp** | Pointer to **string** | Timestamp is the UTC time when the search was executed. | [optional] 
 **TopIndexCounts** | Pointer to [**[]IndexIndexCountEntry**](IndexIndexCountEntry.md) | TopIndexCounts contains the top indices by document count (up to 10). | [optional] 
 **TotalCount** | Pointer to **int32** | TotalCount is the total number of matching documents across all queried indices. | [optional] 
 **TotalPages** | Pointer to **int32** | TotalPages is the total number of pages (only set in page-based pagination mode). | [optional] 
+**Truncated** | Pointer to **bool** | Truncated is true when this cursor page holds fewer records than Limit so that it doesn&#39;t end between records that sort equally. More records follow: keep requesting with NextCursor. | [optional] 
 
 ## Methods
 
@@ -309,6 +310,31 @@ SetTotalPages sets TotalPages field to given value.
 `func (o *IndexCveSearchMeta) HasTotalPages() bool`
 
 HasTotalPages returns a boolean if a field has been set.
+
+### GetTruncated
+
+`func (o *IndexCveSearchMeta) GetTruncated() bool`
+
+GetTruncated returns the Truncated field if non-nil, zero value otherwise.
+
+### GetTruncatedOk
+
+`func (o *IndexCveSearchMeta) GetTruncatedOk() (*bool, bool)`
+
+GetTruncatedOk returns a tuple with the Truncated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTruncated
+
+`func (o *IndexCveSearchMeta) SetTruncated(v bool)`
+
+SetTruncated sets Truncated field to given value.
+
+### HasTruncated
+
+`func (o *IndexCveSearchMeta) HasTruncated() bool`
+
+HasTruncated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

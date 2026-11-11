@@ -28,7 +28,7 @@ type IndexCveSearchMeta struct {
 	IndicesWithHits *int32 `json:"indices_with_hits,omitempty"`
 	// Limit is the maximum number of results requested per page.
 	Limit *int32 `json:"limit,omitempty"`
-	// NextCursor is the cursor for fetching the next page of results. Empty if there are no more results (current_count < limit).
+	// NextCursor is the cursor for fetching the next page of results. Empty if there are no more results.
 	NextCursor *string `json:"next_cursor,omitempty"`
 	// Page is the current page number (only set in page-based pagination mode).
 	Page *int32 `json:"page,omitempty"`
@@ -42,6 +42,8 @@ type IndexCveSearchMeta struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 	// TotalPages is the total number of pages (only set in page-based pagination mode).
 	TotalPages *int32 `json:"total_pages,omitempty"`
+	// Truncated is true when this cursor page holds fewer records than Limit so that it doesn't end between records that sort equally. More records follow: keep requesting with NextCursor.
+	Truncated *bool `json:"truncated,omitempty"`
 }
 
 // NewIndexCveSearchMeta instantiates a new IndexCveSearchMeta object
@@ -413,6 +415,38 @@ func (o *IndexCveSearchMeta) SetTotalPages(v int32) {
 	o.TotalPages = &v
 }
 
+// GetTruncated returns the Truncated field value if set, zero value otherwise.
+func (o *IndexCveSearchMeta) GetTruncated() bool {
+	if o == nil || IsNil(o.Truncated) {
+		var ret bool
+		return ret
+	}
+	return *o.Truncated
+}
+
+// GetTruncatedOk returns a tuple with the Truncated field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IndexCveSearchMeta) GetTruncatedOk() (*bool, bool) {
+	if o == nil || IsNil(o.Truncated) {
+		return nil, false
+	}
+	return o.Truncated, true
+}
+
+// HasTruncated returns a boolean if a field has been set.
+func (o *IndexCveSearchMeta) HasTruncated() bool {
+	if o != nil && !IsNil(o.Truncated) {
+		return true
+	}
+
+	return false
+}
+
+// SetTruncated gets a reference to the given bool and assigns it to the Truncated field.
+func (o *IndexCveSearchMeta) SetTruncated(v bool) {
+	o.Truncated = &v
+}
+
 func (o IndexCveSearchMeta) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -455,6 +489,9 @@ func (o IndexCveSearchMeta) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.TotalPages) {
 		toSerialize["total_pages"] = o.TotalPages
+	}
+	if !IsNil(o.Truncated) {
+		toSerialize["truncated"] = o.Truncated
 	}
 	return toSerialize, nil
 }
