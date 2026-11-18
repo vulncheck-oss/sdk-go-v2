@@ -24,10 +24,17 @@ type ApiVulnCheckCanary struct {
 	AttackerInfrastructureFrequency3d []ApiC2Frequency `json:"attacker_infrastructure_frequency_3d,omitempty"`
 	C2Frequency3d []ApiC2Frequency `json:"c2_frequency_3d,omitempty"`
 	C2Location []string `json:"c2_location,omitempty"`
+	CanaryCves []string `json:"canary_cves,omitempty"`
+	// CanaryID is a correlation ID (UUID) bound to the canary that observed the event.
+	CanaryId *string `json:"canary_id,omitempty"`
+	CanaryProduct *string `json:"canary_product,omitempty"`
+	CanaryVendor *string `json:"canary_vendor,omitempty"`
 	Category *string `json:"category,omitempty"`
 	ClientFingerprints *ApiClientFingerprints `json:"client_fingerprints,omitempty"`
 	Cve *string `json:"cve,omitempty"`
 	DstCountry *string `json:"dst_country,omitempty"`
+	// EventID is a unique correlation ID (UUID) bound to a single event.
+	EventId *string `json:"event_id,omitempty"`
 	Http *ApiHTTPDetails `json:"http,omitempty"`
 	Payload *string `json:"payload,omitempty"`
 	PayloadTlsh *string `json:"payload_tlsh,omitempty"`
@@ -193,6 +200,134 @@ func (o *ApiVulnCheckCanary) SetC2Location(v []string) {
 	o.C2Location = v
 }
 
+// GetCanaryCves returns the CanaryCves field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetCanaryCves() []string {
+	if o == nil || IsNil(o.CanaryCves) {
+		var ret []string
+		return ret
+	}
+	return o.CanaryCves
+}
+
+// GetCanaryCvesOk returns a tuple with the CanaryCves field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetCanaryCvesOk() ([]string, bool) {
+	if o == nil || IsNil(o.CanaryCves) {
+		return nil, false
+	}
+	return o.CanaryCves, true
+}
+
+// HasCanaryCves returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasCanaryCves() bool {
+	if o != nil && !IsNil(o.CanaryCves) {
+		return true
+	}
+
+	return false
+}
+
+// SetCanaryCves gets a reference to the given []string and assigns it to the CanaryCves field.
+func (o *ApiVulnCheckCanary) SetCanaryCves(v []string) {
+	o.CanaryCves = v
+}
+
+// GetCanaryId returns the CanaryId field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetCanaryId() string {
+	if o == nil || IsNil(o.CanaryId) {
+		var ret string
+		return ret
+	}
+	return *o.CanaryId
+}
+
+// GetCanaryIdOk returns a tuple with the CanaryId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetCanaryIdOk() (*string, bool) {
+	if o == nil || IsNil(o.CanaryId) {
+		return nil, false
+	}
+	return o.CanaryId, true
+}
+
+// HasCanaryId returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasCanaryId() bool {
+	if o != nil && !IsNil(o.CanaryId) {
+		return true
+	}
+
+	return false
+}
+
+// SetCanaryId gets a reference to the given string and assigns it to the CanaryId field.
+func (o *ApiVulnCheckCanary) SetCanaryId(v string) {
+	o.CanaryId = &v
+}
+
+// GetCanaryProduct returns the CanaryProduct field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetCanaryProduct() string {
+	if o == nil || IsNil(o.CanaryProduct) {
+		var ret string
+		return ret
+	}
+	return *o.CanaryProduct
+}
+
+// GetCanaryProductOk returns a tuple with the CanaryProduct field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetCanaryProductOk() (*string, bool) {
+	if o == nil || IsNil(o.CanaryProduct) {
+		return nil, false
+	}
+	return o.CanaryProduct, true
+}
+
+// HasCanaryProduct returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasCanaryProduct() bool {
+	if o != nil && !IsNil(o.CanaryProduct) {
+		return true
+	}
+
+	return false
+}
+
+// SetCanaryProduct gets a reference to the given string and assigns it to the CanaryProduct field.
+func (o *ApiVulnCheckCanary) SetCanaryProduct(v string) {
+	o.CanaryProduct = &v
+}
+
+// GetCanaryVendor returns the CanaryVendor field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetCanaryVendor() string {
+	if o == nil || IsNil(o.CanaryVendor) {
+		var ret string
+		return ret
+	}
+	return *o.CanaryVendor
+}
+
+// GetCanaryVendorOk returns a tuple with the CanaryVendor field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetCanaryVendorOk() (*string, bool) {
+	if o == nil || IsNil(o.CanaryVendor) {
+		return nil, false
+	}
+	return o.CanaryVendor, true
+}
+
+// HasCanaryVendor returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasCanaryVendor() bool {
+	if o != nil && !IsNil(o.CanaryVendor) {
+		return true
+	}
+
+	return false
+}
+
+// SetCanaryVendor gets a reference to the given string and assigns it to the CanaryVendor field.
+func (o *ApiVulnCheckCanary) SetCanaryVendor(v string) {
+	o.CanaryVendor = &v
+}
+
 // GetCategory returns the Category field value if set, zero value otherwise.
 func (o *ApiVulnCheckCanary) GetCategory() string {
 	if o == nil || IsNil(o.Category) {
@@ -319,6 +454,38 @@ func (o *ApiVulnCheckCanary) HasDstCountry() bool {
 // SetDstCountry gets a reference to the given string and assigns it to the DstCountry field.
 func (o *ApiVulnCheckCanary) SetDstCountry(v string) {
 	o.DstCountry = &v
+}
+
+// GetEventId returns the EventId field value if set, zero value otherwise.
+func (o *ApiVulnCheckCanary) GetEventId() string {
+	if o == nil || IsNil(o.EventId) {
+		var ret string
+		return ret
+	}
+	return *o.EventId
+}
+
+// GetEventIdOk returns a tuple with the EventId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiVulnCheckCanary) GetEventIdOk() (*string, bool) {
+	if o == nil || IsNil(o.EventId) {
+		return nil, false
+	}
+	return o.EventId, true
+}
+
+// HasEventId returns a boolean if a field has been set.
+func (o *ApiVulnCheckCanary) HasEventId() bool {
+	if o != nil && !IsNil(o.EventId) {
+		return true
+	}
+
+	return false
+}
+
+// SetEventId gets a reference to the given string and assigns it to the EventId field.
+func (o *ApiVulnCheckCanary) SetEventId(v string) {
+	o.EventId = &v
 }
 
 // GetHttp returns the Http field value if set, zero value otherwise.
@@ -919,6 +1086,18 @@ func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.C2Location) {
 		toSerialize["c2_location"] = o.C2Location
 	}
+	if !IsNil(o.CanaryCves) {
+		toSerialize["canary_cves"] = o.CanaryCves
+	}
+	if !IsNil(o.CanaryId) {
+		toSerialize["canary_id"] = o.CanaryId
+	}
+	if !IsNil(o.CanaryProduct) {
+		toSerialize["canary_product"] = o.CanaryProduct
+	}
+	if !IsNil(o.CanaryVendor) {
+		toSerialize["canary_vendor"] = o.CanaryVendor
+	}
 	if !IsNil(o.Category) {
 		toSerialize["category"] = o.Category
 	}
@@ -930,6 +1109,9 @@ func (o ApiVulnCheckCanary) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.DstCountry) {
 		toSerialize["dst_country"] = o.DstCountry
+	}
+	if !IsNil(o.EventId) {
+		toSerialize["event_id"] = o.EventId
 	}
 	if !IsNil(o.Http) {
 		toSerialize["http"] = o.Http

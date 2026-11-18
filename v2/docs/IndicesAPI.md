@@ -31596,7 +31596,7 @@ Name | Type | Description  | Notes
 
 ## IndexMaliciousPackagesGet
 
-> RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination IndexMaliciousPackagesGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+> RenderResponseWithMetadataArrayAdvisoryMaliciousPackagePaginatePagination IndexMaliciousPackagesGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Id(id).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 
 Return vulnerability data stored in index \"malicious-packages\"
 
@@ -31632,6 +31632,7 @@ func main() {
 	ransomware := "ransomware_example" // string | Specify a ransomeware family name to search with. (optional)
 	botnet := "botnet_example" // string | Specify a botnet name to search with. (optional)
 	published := "published_example" // string | Specify a published date (optional)
+	id := "id_example" // string | Specify a record ID to search with. (optional)
 	date := "date_example" // string | Specify an exact published date to filter with. (optional)
 	updatedAtStartDate := "updatedAtStartDate_example" // string | Specify a starting 'updated-at' date to filter with. (optional)
 	updatedAtEndDate := "updatedAtEndDate_example" // string | Specify an ending 'updated-at' date to filter with. (optional)
@@ -31642,7 +31643,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IndicesAPI.IndexMaliciousPackagesGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	resp, r, err := apiClient.IndicesAPI.IndexMaliciousPackagesGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cve(cve).Alias(alias).Iava(iava).Jvndb(jvndb).Ilvn(ilvn).ThreatActor(threatActor).MitreId(mitreId).MispId(mispId).Ransomware(ransomware).Botnet(botnet).Published(published).Id(id).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexMaliciousPackagesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -31680,6 +31681,7 @@ Name | Type | Description  | Notes
  **ransomware** | **string** | Specify a ransomeware family name to search with. | 
  **botnet** | **string** | Specify a botnet name to search with. | 
  **published** | **string** | Specify a published date | 
+ **id** | **string** | Specify a record ID to search with. | 
  **date** | **string** | Specify an exact published date to filter with. | 
  **updatedAtStartDate** | **string** | Specify a starting &#39;updated-at&#39; date to filter with. | 
  **updatedAtEndDate** | **string** | Specify an ending &#39;updated-at&#39; date to filter with. | 
@@ -50076,7 +50078,7 @@ Name | Type | Description  | Notes
 
 ## IndexTargetIntelGet
 
-> RenderResponseWithMetadataArrayApiTargetIntelPaginatePagination IndexTargetIntelGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cidr(cidr).Cve(cve).Country(country).CountryCode(countryCode).Asn(asn).Cpe(cpe).Vendor(vendor).Product(product).Version(version).Protocol(protocol).Transport(transport).Port(port).ContainsCve(containsCve).Confirmed(confirmed).Classifications(classifications).Hostname(hostname).Domain(domain).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+> RenderResponseWithMetadataArrayApiTargetIntelPaginatePagination IndexTargetIntelGet(ctx).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cidr(cidr).Ip(ip).Cve(cve).Country(country).CountryCode(countryCode).Asn(asn).Cpe(cpe).Vendor(vendor).Product(product).Version(version).Protocol(protocol).Transport(transport).Port(port).ContainsCve(containsCve).Confirmed(confirmed).Classifications(classifications).Hostname(hostname).Domain(domain).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 
 Return vulnerability data stored in index \"target-intel\"
 
@@ -50102,6 +50104,7 @@ func main() {
 	order := "order_example" // string | direction of the sort (optional)
 	sort := "sort_example" // string | field by which to sort the results (optional)
 	cidr := "cidr_example" // string | Specify an IPv4 or IPv6 CIDR (optional)
+	ip := "ip_example" // string | Specify one or more IPv4 or IPv6 addresses (comma-delimited) (optional)
 	cve := "cve_example" // string | Specify a CVE ID to search with. (optional)
 	country := "country_example" // string | Country name ISO-3166?? format (optional)
 	countryCode := "countryCode_example" // string | Country code in ISO-3166?? format (optional)
@@ -50128,7 +50131,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IndicesAPI.IndexTargetIntelGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cidr(cidr).Cve(cve).Country(country).CountryCode(countryCode).Asn(asn).Cpe(cpe).Vendor(vendor).Product(product).Version(version).Protocol(protocol).Transport(transport).Port(port).ContainsCve(containsCve).Confirmed(confirmed).Classifications(classifications).Hostname(hostname).Domain(domain).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
+	resp, r, err := apiClient.IndicesAPI.IndexTargetIntelGet(context.Background()).Page(page).Limit(limit).Cursor(cursor).StartCursor(startCursor).Order(order).Sort(sort).Cidr(cidr).Ip(ip).Cve(cve).Country(country).CountryCode(countryCode).Asn(asn).Cpe(cpe).Vendor(vendor).Product(product).Version(version).Protocol(protocol).Transport(transport).Port(port).ContainsCve(containsCve).Confirmed(confirmed).Classifications(classifications).Hostname(hostname).Domain(domain).Date(date).UpdatedAtStartDate(updatedAtStartDate).UpdatedAtEndDate(updatedAtEndDate).LastModStartDate(lastModStartDate).LastModEndDate(lastModEndDate).PubStartDate(pubStartDate).PubEndDate(pubEndDate).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IndicesAPI.IndexTargetIntelGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -50156,6 +50159,7 @@ Name | Type | Description  | Notes
  **order** | **string** | direction of the sort | 
  **sort** | **string** | field by which to sort the results | 
  **cidr** | **string** | Specify an IPv4 or IPv6 CIDR | 
+ **ip** | **string** | Specify one or more IPv4 or IPv6 addresses (comma-delimited) | 
  **cve** | **string** | Specify a CVE ID to search with. | 
  **country** | **string** | Country name ISO-3166?? format | 
  **countryCode** | **string** | Country code in ISO-3166?? format | 
@@ -53697,7 +53701,7 @@ func main() {
 	startCursor := "startCursor_example" // string | request server-side paging (optional)
 	order := "order_example" // string | direction of the sort (optional)
 	sort := "sort_example" // string | field by which to sort the results (optional)
-	ip := "ip_example" // string | C2 IP address (optional)
+	ip := "ip_example" // string | Specify one or more IPv4 or IPv6 addresses (comma-delimited) (optional)
 	hostname := "hostname_example" // string | Match a string in the hostname (optional)
 	port := "port_example" // string | Port number (optional)
 	asn := "asn_example" // string | Autonomous system number (optional)
@@ -53742,7 +53746,7 @@ Name | Type | Description  | Notes
  **startCursor** | **string** | request server-side paging | 
  **order** | **string** | direction of the sort | 
  **sort** | **string** | field by which to sort the results | 
- **ip** | **string** | C2 IP address | 
+ **ip** | **string** | Specify one or more IPv4 or IPv6 addresses (comma-delimited) | 
  **hostname** | **string** | Match a string in the hostname | 
  **port** | **string** | Port number | 
  **asn** | **string** | Autonomous system number | 

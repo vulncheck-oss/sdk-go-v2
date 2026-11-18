@@ -106938,6 +106938,7 @@ type ApiIndexMaliciousPackagesGetRequest struct {
 	ransomware *string
 	botnet *string
 	published *string
+	id *string
 	date *string
 	updatedAtStartDate *string
 	updatedAtEndDate *string
@@ -107046,6 +107047,12 @@ func (r ApiIndexMaliciousPackagesGetRequest) Botnet(botnet string) ApiIndexMalic
 // Specify a published date
 func (r ApiIndexMaliciousPackagesGetRequest) Published(published string) ApiIndexMaliciousPackagesGetRequest {
 	r.published = &published
+	return r
+}
+
+// Specify a record ID to search with.
+func (r ApiIndexMaliciousPackagesGetRequest) Id(id string) ApiIndexMaliciousPackagesGetRequest {
+	r.id = &id
 	return r
 }
 
@@ -107192,6 +107199,9 @@ func (a *IndicesAPIService) IndexMaliciousPackagesGetExecute(r ApiIndexMalicious
 	}
 	if r.published != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "published", r.published, "form", "")
+	}
+	if r.id != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "form", "")
 	}
 	if r.date != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "date", r.date, "form", "")
@@ -170453,6 +170463,7 @@ type ApiIndexTargetIntelGetRequest struct {
 	order *string
 	sort *string
 	cidr *string
+	ip *string
 	cve *string
 	country *string
 	countryCode *string
@@ -170517,6 +170528,12 @@ func (r ApiIndexTargetIntelGetRequest) Sort(sort string) ApiIndexTargetIntelGetR
 // Specify an IPv4 or IPv6 CIDR
 func (r ApiIndexTargetIntelGetRequest) Cidr(cidr string) ApiIndexTargetIntelGetRequest {
 	r.cidr = &cidr
+	return r
+}
+
+// Specify one or more IPv4 or IPv6 addresses (comma-delimited)
+func (r ApiIndexTargetIntelGetRequest) Ip(ip string) ApiIndexTargetIntelGetRequest {
+	r.ip = &ip
 	return r
 }
 
@@ -170729,6 +170746,9 @@ func (a *IndicesAPIService) IndexTargetIntelGetExecute(r ApiIndexTargetIntelGetR
 	}
 	if r.cidr != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cidr", r.cidr, "form", "")
+	}
+	if r.ip != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "ip", r.ip, "form", "")
 	}
 	if r.cve != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cve", r.cve, "form", "")
@@ -182885,7 +182905,7 @@ func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Sort(sort string) Api
 	return r
 }
 
-// C2 IP address
+// Specify one or more IPv4 or IPv6 addresses (comma-delimited)
 func (r ApiIndexVulncheckAttackerInfrastructureGetRequest) Ip(ip string) ApiIndexVulncheckAttackerInfrastructureGetRequest {
 	r.ip = &ip
 	return r
