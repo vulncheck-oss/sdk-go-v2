@@ -67937,6 +67937,14 @@ paths:
         schema:
           type: string
         style: form
+      - description: Specify a record ID to search with.
+        explode: true
+        in: query
+        name: id
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Specify an exact published date to filter with.
         explode: true
         in: query
@@ -107292,6 +107300,14 @@ paths:
         schema:
           type: string
         style: form
+      - description: Specify one or more IPv4 or IPv6 addresses (comma-delimited)
+        explode: true
+        in: query
+        name: ip
+        required: false
+        schema:
+          type: string
+        style: form
       - description: Specify a CVE ID to search with.
         explode: true
         in: query
@@ -115222,7 +115238,7 @@ paths:
         schema:
           type: string
         style: form
-      - description: C2 IP address
+      - description: Specify one or more IPv4 or IPv6 addresses (comma-delimited)
         explode: true
         in: query
         name: ip
@@ -179504,10 +179520,14 @@ components:
           abandoned: true
           squatted_package: squatted_package
         vulnerabilities:
-        - detection: detection
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
-        - detection: detection
+          subscription: subscription
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
+          subscription: subscription
         purl:
         - purl
         - purl
@@ -179713,12 +179733,27 @@ components:
     api.OSSPackageVulnerability:
       description: api.OSSPackageVulnerability
       example:
+        remediation: remediation
         detection: detection
         fixed_version: fixed_version
+        subscription: subscription
       properties:
         detection:
           type: string
         fixed_version:
+          type: string
+        remediation:
+          description: |-
+            Remediation says why a distro's affected package has no fixed version:
+            "wontfix" (the distro won't fix it), "deferred" (the fix is postponed)
+            or "investigating". Unset when there is a fix or the distro gives no
+            reason.
+          type: string
+        subscription:
+          description: |-
+            Subscription names the paid channel that ships FixedVersion: Ubuntu
+            Pro's "esm-infra" or "esm-apps", or Freexian's Debian ELTS
+            "freexian-elts". Unset when the distro's free archive ships the fix.
           type: string
     api.Package:
       description: api.Package
@@ -180075,6 +180110,7 @@ components:
         cpe:
         - cpe
         - cpe
+        scan_id: scan_id
         asn: asn
         as_name: as_name
         timestamp: timestamp
@@ -180139,6 +180175,10 @@ components:
           type: array
           uniqueItems: false
         protocol:
+          type: string
+        scan_id:
+          description: ScanID is the rescan request that produced this record; empty
+            for catalog scans.
           type: string
         summary:
           $ref: '#/components/schemas/api.TargetIntelSummary'
@@ -180320,13 +180360,19 @@ components:
     api.VulnCheckCanary:
       description: api.VulnCheckCanary
       example:
+        canary_cves:
+        - canary_cves
+        - canary_cves
         src_as_name: src_as_name
+        canary_vendor: canary_vendor
         signature: signature
         src_ip_freq_3d_canary: 2
         src_ip: src_ip
         signature_id: 5
         cve: cve
         payload: payload
+        canary_id: canary_id
+        canary_product: canary_product
         c2_frequency_3d:
         - src: src
           count: 6
@@ -180358,6 +180404,7 @@ components:
         - attacker_infrastructure
         - attacker_infrastructure
         src_port: 7
+        event_id: event_id
         src_as_domain: src_as_domain
         src_asn: src_asn
         src_country: src_country
@@ -180393,6 +180440,19 @@ components:
             type: string
           type: array
           uniqueItems: false
+        canary_cves:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        canary_id:
+          description: CanaryID is a correlation ID (UUID) bound to the canary that
+            observed the event.
+          type: string
+        canary_product:
+          type: string
+        canary_vendor:
+          type: string
         category:
           type: string
         client_fingerprints:
@@ -180400,6 +180460,10 @@ components:
         cve:
           type: string
         dst_country:
+          type: string
+        event_id:
+          description: EventID is a unique correlation ID (UUID) bound to a single
+            event.
           type: string
         http:
           $ref: '#/components/schemas/api.HTTPDetails'
@@ -183022,10 +183086,14 @@ components:
           abandoned: true
           squatted_package: squatted_package
         vulnerabilities:
-        - detection: detection
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
-        - detection: detection
+          subscription: subscription
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
+          subscription: subscription
         purl: purl
         cves:
         - cves
@@ -183117,12 +183185,16 @@ components:
         - licenses
         name: name
         vulnerabilities:
-        - detection: detection
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
           arch: arch
-        - detection: detection
+          subscription: subscription
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
           arch: arch
+          subscription: subscription
         purl:
         - purl
         - purl
@@ -183165,15 +183237,30 @@ components:
     purls.Vulnerability:
       description: purls.Vulnerability
       example:
+        remediation: remediation
         detection: detection
         fixed_version: fixed_version
         arch: arch
+        subscription: subscription
       properties:
         arch:
           type: string
         detection:
           type: string
         fixed_version:
+          type: string
+        remediation:
+          description: |-
+            Remediation says why a distro's affected package has no fixed version:
+            "wontfix" (the distro won't fix it), "deferred" (the fix is postponed)
+            or "investigating". Unset when there is a fix or the distro gives no
+            reason.
+          type: string
+        subscription:
+          description: |-
+            Subscription names the paid channel that ships FixedVersion: Ubuntu
+            Pro's "esm-infra" or "esm-apps", or Freexian's Debian ELTS
+            "freexian-elts". Unset when the distro's free archive ships the fix.
           type: string
     render.NvdErrorBody:
       description: render.NvdErrorBody
@@ -250149,10 +250236,14 @@ components:
             abandoned: true
             squatted_package: squatted_package
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
+            subscription: subscription
           purl:
           - purl
           - purl
@@ -250216,10 +250307,14 @@ components:
             abandoned: true
             squatted_package: squatted_package
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
+            subscription: subscription
           purl:
           - purl
           - purl
@@ -250386,6 +250481,7 @@ components:
           cpe:
           - cpe
           - cpe
+          scan_id: scan_id
           asn: asn
           as_name: as_name
           timestamp: timestamp
@@ -250449,6 +250545,7 @@ components:
           cpe:
           - cpe
           - cpe
+          scan_id: scan_id
           asn: asn
           as_name: as_name
           timestamp: timestamp
@@ -250628,13 +250725,19 @@ components:
       description: render.ResponseWithMetadata-array_api_VulnCheckCanary-paginate_Pagination
       example:
         data:
-        - src_as_name: src_as_name
+        - canary_cves:
+          - canary_cves
+          - canary_cves
+          src_as_name: src_as_name
+          canary_vendor: canary_vendor
           signature: signature
           src_ip_freq_3d_canary: 2
           src_ip: src_ip
           signature_id: 5
           cve: cve
           payload: payload
+          canary_id: canary_id
+          canary_product: canary_product
           c2_frequency_3d:
           - src: src
             count: 6
@@ -250666,6 +250769,7 @@ components:
           - attacker_infrastructure
           - attacker_infrastructure
           src_port: 7
+          event_id: event_id
           src_as_domain: src_as_domain
           src_asn: src_asn
           src_country: src_country
@@ -250680,13 +250784,19 @@ components:
           - c2_location
           - c2_location
           category: category
-        - src_as_name: src_as_name
+        - canary_cves:
+          - canary_cves
+          - canary_cves
+          src_as_name: src_as_name
+          canary_vendor: canary_vendor
           signature: signature
           src_ip_freq_3d_canary: 2
           src_ip: src_ip
           signature_id: 5
           cve: cve
           payload: payload
+          canary_id: canary_id
+          canary_product: canary_product
           c2_frequency_3d:
           - src: src
             count: 6
@@ -250718,6 +250828,7 @@ components:
           - attacker_infrastructure
           - attacker_infrastructure
           src_port: 7
+          event_id: event_id
           src_as_domain: src_as_domain
           src_asn: src_asn
           src_country: src_country
@@ -250897,12 +251008,16 @@ components:
           - licenses
           name: name
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
             arch: arch
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
             arch: arch
+            subscription: subscription
           purl:
           - purl
           - purl
@@ -250917,12 +251032,16 @@ components:
           - licenses
           name: name
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
             arch: arch
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
             arch: arch
+            subscription: subscription
           purl:
           - purl
           - purl
@@ -251156,10 +251275,14 @@ components:
       example:
         data:
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
+            subscription: subscription
           cves:
           - cves
           - cves
@@ -251211,10 +251334,14 @@ components:
             abandoned: true
             squatted_package: squatted_package
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
+            subscription: subscription
           purl: purl
           cves:
           - cves
@@ -251238,10 +251365,14 @@ components:
             abandoned: true
             squatted_package: squatted_package
           vulnerabilities:
-          - detection: detection
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
-          - detection: detection
+            subscription: subscription
+          - remediation: remediation
+            detection: detection
             fixed_version: fixed_version
+            subscription: subscription
           purl: purl
           cves:
           - cves
@@ -256396,10 +256527,14 @@ components:
       description: Data is the data returned by the endpoint
       example:
         vulnerabilities:
-        - detection: detection
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
-        - detection: detection
+          subscription: subscription
+        - remediation: remediation
+          detection: detection
           fixed_version: fixed_version
+          subscription: subscription
         cves:
         - cves
         - cves

@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **Port** | Pointer to **int32** |  | [optional] 
 **Product** | Pointer to **[]string** |  | [optional] 
 **Protocol** | Pointer to **string** |  | [optional] 
+**ScanId** | Pointer to **string** | ScanID is the rescan request that produced this record; empty for catalog scans. | [optional] 
 **Summary** | Pointer to [**ApiTargetIntelSummary**](ApiTargetIntelSummary.md) |  | [optional] 
 **Timestamp** | Pointer to **string** |  | [optional] 
 **Transport** | Pointer to **string** |  | [optional] 
@@ -496,6 +497,31 @@ SetProtocol sets Protocol field to given value.
 `func (o *ApiTargetIntel) HasProtocol() bool`
 
 HasProtocol returns a boolean if a field has been set.
+
+### GetScanId
+
+`func (o *ApiTargetIntel) GetScanId() string`
+
+GetScanId returns the ScanId field if non-nil, zero value otherwise.
+
+### GetScanIdOk
+
+`func (o *ApiTargetIntel) GetScanIdOk() (*string, bool)`
+
+GetScanIdOk returns a tuple with the ScanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScanId
+
+`func (o *ApiTargetIntel) SetScanId(v string)`
+
+SetScanId sets ScanId field to given value.
+
+### HasScanId
+
+`func (o *ApiTargetIntel) HasScanId() bool`
+
+HasScanId returns a boolean if a field has been set.
 
 ### GetSummary
 

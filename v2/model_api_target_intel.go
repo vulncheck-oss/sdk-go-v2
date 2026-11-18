@@ -41,6 +41,8 @@ type ApiTargetIntel struct {
 	Port *int32 `json:"port,omitempty"`
 	Product []string `json:"product,omitempty"`
 	Protocol *string `json:"protocol,omitempty"`
+	// ScanID is the rescan request that produced this record; empty for catalog scans.
+	ScanId *string `json:"scan_id,omitempty"`
 	Summary *ApiTargetIntelSummary `json:"summary,omitempty"`
 	Timestamp *string `json:"timestamp,omitempty"`
 	Transport *string `json:"transport,omitempty"`
@@ -641,6 +643,38 @@ func (o *ApiTargetIntel) SetProtocol(v string) {
 	o.Protocol = &v
 }
 
+// GetScanId returns the ScanId field value if set, zero value otherwise.
+func (o *ApiTargetIntel) GetScanId() string {
+	if o == nil || IsNil(o.ScanId) {
+		var ret string
+		return ret
+	}
+	return *o.ScanId
+}
+
+// GetScanIdOk returns a tuple with the ScanId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApiTargetIntel) GetScanIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ScanId) {
+		return nil, false
+	}
+	return o.ScanId, true
+}
+
+// HasScanId returns a boolean if a field has been set.
+func (o *ApiTargetIntel) HasScanId() bool {
+	if o != nil && !IsNil(o.ScanId) {
+		return true
+	}
+
+	return false
+}
+
+// SetScanId gets a reference to the given string and assigns it to the ScanId field.
+func (o *ApiTargetIntel) SetScanId(v string) {
+	o.ScanId = &v
+}
+
 // GetSummary returns the Summary field value if set, zero value otherwise.
 func (o *ApiTargetIntel) GetSummary() ApiTargetIntelSummary {
 	if o == nil || IsNil(o.Summary) {
@@ -864,6 +898,9 @@ func (o ApiTargetIntel) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Protocol) {
 		toSerialize["protocol"] = o.Protocol
+	}
+	if !IsNil(o.ScanId) {
+		toSerialize["scan_id"] = o.ScanId
 	}
 	if !IsNil(o.Summary) {
 		toSerialize["summary"] = o.Summary

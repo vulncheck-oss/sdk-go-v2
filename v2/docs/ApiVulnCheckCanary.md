@@ -8,10 +8,15 @@ Name | Type | Description | Notes
 **AttackerInfrastructureFrequency3d** | Pointer to [**[]ApiC2Frequency**](ApiC2Frequency.md) |  | [optional] 
 **C2Frequency3d** | Pointer to [**[]ApiC2Frequency**](ApiC2Frequency.md) |  | [optional] 
 **C2Location** | Pointer to **[]string** |  | [optional] 
+**CanaryCves** | Pointer to **[]string** |  | [optional] 
+**CanaryId** | Pointer to **string** | CanaryID is a correlation ID (UUID) bound to the canary that observed the event. | [optional] 
+**CanaryProduct** | Pointer to **string** |  | [optional] 
+**CanaryVendor** | Pointer to **string** |  | [optional] 
 **Category** | Pointer to **string** |  | [optional] 
 **ClientFingerprints** | Pointer to [**ApiClientFingerprints**](ApiClientFingerprints.md) |  | [optional] 
 **Cve** | Pointer to **string** |  | [optional] 
 **DstCountry** | Pointer to **string** |  | [optional] 
+**EventId** | Pointer to **string** | EventID is a unique correlation ID (UUID) bound to a single event. | [optional] 
 **Http** | Pointer to [**ApiHTTPDetails**](ApiHTTPDetails.md) |  | [optional] 
 **Payload** | Pointer to **string** |  | [optional] 
 **PayloadTlsh** | Pointer to **string** |  | [optional] 
@@ -150,6 +155,106 @@ SetC2Location sets C2Location field to given value.
 
 HasC2Location returns a boolean if a field has been set.
 
+### GetCanaryCves
+
+`func (o *ApiVulnCheckCanary) GetCanaryCves() []string`
+
+GetCanaryCves returns the CanaryCves field if non-nil, zero value otherwise.
+
+### GetCanaryCvesOk
+
+`func (o *ApiVulnCheckCanary) GetCanaryCvesOk() (*[]string, bool)`
+
+GetCanaryCvesOk returns a tuple with the CanaryCves field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCanaryCves
+
+`func (o *ApiVulnCheckCanary) SetCanaryCves(v []string)`
+
+SetCanaryCves sets CanaryCves field to given value.
+
+### HasCanaryCves
+
+`func (o *ApiVulnCheckCanary) HasCanaryCves() bool`
+
+HasCanaryCves returns a boolean if a field has been set.
+
+### GetCanaryId
+
+`func (o *ApiVulnCheckCanary) GetCanaryId() string`
+
+GetCanaryId returns the CanaryId field if non-nil, zero value otherwise.
+
+### GetCanaryIdOk
+
+`func (o *ApiVulnCheckCanary) GetCanaryIdOk() (*string, bool)`
+
+GetCanaryIdOk returns a tuple with the CanaryId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCanaryId
+
+`func (o *ApiVulnCheckCanary) SetCanaryId(v string)`
+
+SetCanaryId sets CanaryId field to given value.
+
+### HasCanaryId
+
+`func (o *ApiVulnCheckCanary) HasCanaryId() bool`
+
+HasCanaryId returns a boolean if a field has been set.
+
+### GetCanaryProduct
+
+`func (o *ApiVulnCheckCanary) GetCanaryProduct() string`
+
+GetCanaryProduct returns the CanaryProduct field if non-nil, zero value otherwise.
+
+### GetCanaryProductOk
+
+`func (o *ApiVulnCheckCanary) GetCanaryProductOk() (*string, bool)`
+
+GetCanaryProductOk returns a tuple with the CanaryProduct field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCanaryProduct
+
+`func (o *ApiVulnCheckCanary) SetCanaryProduct(v string)`
+
+SetCanaryProduct sets CanaryProduct field to given value.
+
+### HasCanaryProduct
+
+`func (o *ApiVulnCheckCanary) HasCanaryProduct() bool`
+
+HasCanaryProduct returns a boolean if a field has been set.
+
+### GetCanaryVendor
+
+`func (o *ApiVulnCheckCanary) GetCanaryVendor() string`
+
+GetCanaryVendor returns the CanaryVendor field if non-nil, zero value otherwise.
+
+### GetCanaryVendorOk
+
+`func (o *ApiVulnCheckCanary) GetCanaryVendorOk() (*string, bool)`
+
+GetCanaryVendorOk returns a tuple with the CanaryVendor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCanaryVendor
+
+`func (o *ApiVulnCheckCanary) SetCanaryVendor(v string)`
+
+SetCanaryVendor sets CanaryVendor field to given value.
+
+### HasCanaryVendor
+
+`func (o *ApiVulnCheckCanary) HasCanaryVendor() bool`
+
+HasCanaryVendor returns a boolean if a field has been set.
+
 ### GetCategory
 
 `func (o *ApiVulnCheckCanary) GetCategory() string`
@@ -249,6 +354,31 @@ SetDstCountry sets DstCountry field to given value.
 `func (o *ApiVulnCheckCanary) HasDstCountry() bool`
 
 HasDstCountry returns a boolean if a field has been set.
+
+### GetEventId
+
+`func (o *ApiVulnCheckCanary) GetEventId() string`
+
+GetEventId returns the EventId field if non-nil, zero value otherwise.
+
+### GetEventIdOk
+
+`func (o *ApiVulnCheckCanary) GetEventIdOk() (*string, bool)`
+
+GetEventIdOk returns a tuple with the EventId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEventId
+
+`func (o *ApiVulnCheckCanary) SetEventId(v string)`
+
+SetEventId sets EventId field to given value.
+
+### HasEventId
+
+`func (o *ApiVulnCheckCanary) HasEventId() bool`
+
+HasEventId returns a boolean if a field has been set.
 
 ### GetHttp
 
